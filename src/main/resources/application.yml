@@ -1,0 +1,50 @@
+spring:
+  main:
+    web-application-type: none
+    banner-mode: off
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY:}
+      chat:
+        options:
+          model: claude-opus-4-7
+    openai:
+      api-key: ${OPENAI_API_KEY:}
+      chat:
+        options:
+          model: gpt-4o
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        options:
+          model: llama3.2
+    vertex:
+      ai:
+        gemini:
+          project-id: ${GOOGLE_PROJECT_ID:}
+          location: ${GOOGLE_LOCATION:us-central1}
+          chat:
+            options:
+              model: gemini-2.0-flash
+  messages:
+    encoding: UTF-8
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      indent-output: true
+
+experiment:
+  # Providers to run. Available: anthropic, openai, ollama, gemini
+  enabled-providers:
+    - anthropic
+  # BCP 47 language tags. 12 supported: en, es, fr, de, it, pt, ja, zh, ko, ar, ru, ca
+  enabled-languages:
+    - en
+  output-dir: results
+  dry-run: false
+
+logging:
+  level:
+    com.sfryslie: INFO
+    org.springframework.ai: WARN
+    org.springframework: WARN
