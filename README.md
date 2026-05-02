@@ -20,7 +20,7 @@ There's a lot of interesting cases that can be made in favor of both red and blu
 
 Red pressers may typically argue that humans are self-interested with basic survival instincts, and that anyone pressing blue is either acting emotionally/irrationally or they're simply too dumb to understand it's the "Kill Yourself" button unless at least 50% of everyone else picks blue, and that it follows that Blue is certain death because humans are fundamentally selfish.
 
-Blue pressers may argue that humans, while flawed, generally speaking are cooperative and will act in the benefit of the group because we're well-trained that the group's best interests are also your best interests typically. Our species wouldn't have dominate and persevered this long if we didn't tend towards cooperation and trust to some degree, among other arguments. Doing the right thing at some risk is often better than being a betrayer.
+Blue pressers may argue that humans, while flawed, generally speaking are cooperative and will act in the benefit of the group because we're well-trained that the group's best interests are also your best interests typically. Our species wouldn't have survived and thrived for this long if we didn't tend towards cooperation and trust to some degree, among other arguments. Doing the right thing at some risk is often better than being a betrayer.
 
 There are quite a few arguments that I saw for both sides beyond those basic ones. Ultimately, I'd say that there is no one right or wrong answer per se: the "right" answer is the one that you can justify to yourself and others with evidence and conviction.
 
