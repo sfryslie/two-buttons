@@ -11,7 +11,6 @@ import org.springframework.context.MessageSource
 import org.springframework.ai.chat.model.ChatModel
 import org.springframework.ai.ollama.OllamaChatModel
 import org.springframework.ai.openai.OpenAiChatModel
-import org.springframework.ai.vertexai.gemini.VertexAiGeminiChatModel
 import org.springframework.beans.factory.ObjectProvider
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
@@ -29,7 +28,6 @@ class ExperimentRunner(
     private val anthropicProvider: ObjectProvider<AnthropicChatModel>,
     private val openAiProvider: ObjectProvider<OpenAiChatModel>,
     private val ollamaProvider: ObjectProvider<OllamaChatModel>,
-    private val geminiProvider: ObjectProvider<VertexAiGeminiChatModel>
 ) : ApplicationRunner {
 
     private val log = LoggerFactory.getLogger(javaClass)
@@ -49,10 +47,12 @@ class ExperimentRunner(
         val sessions = mutableListOf<SessionResult>()
 
         for (providerName in properties.enabledProviders) {
-            val (modelId, chatModel) = availableModels[providerName] ?: run {
+            val entry = availableModels[providerName]
+            if (entry == null) {
                 log.warn("Provider '$providerName' is listed but not configured — skipping.")
                 continue
             }
+            val (modelId, chatModel) = entry
 
             for (language in properties.enabledLanguages) {
                 val locale = Locale.forLanguageTag(language)
@@ -103,7 +103,6 @@ class ExperimentRunner(
         anthropicProvider.ifAvailable { map["anthropic"] = label to it }
         openAiProvider.ifAvailable { map["openai"] = label to it }
         ollamaProvider.ifAvailable { map["ollama"] = label to it }
-        geminiProvider.ifAvailable { map["gemini"] = label to it }
         return map
     }
 

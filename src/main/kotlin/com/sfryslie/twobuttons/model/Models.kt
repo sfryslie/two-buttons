@@ -29,3 +29,11 @@ data class ExperimentResult(
     val prompts: Map<String, Map<String, String>>,
     val sessions: List<SessionResult>
 )
+
+/** Written as the actual file on disk — one file per locale per model run. */
+data class SessionOutput(
+    val modelLabel: String,
+    // prompts[questionIndex] = exact localised text sent for this session
+    val prompts: Map<String, String>,
+    val session: SessionResult
+)
