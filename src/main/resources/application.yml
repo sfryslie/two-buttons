@@ -45,6 +45,21 @@ experiment:
   output-dir: results
   dry-run: false
 
+scoring:
+  # Set to true to run the scorer instead of (or after) the experiment.
+  # Pair with --experiment.enabled-providers= to skip the experiment runner.
+  # Example: ./gradlew bootRun --args='--scoring.enabled=true --scoring.target-models=claude-haiku-4-5-20251001 --scoring.scorer-model=claude-opus-4-7'
+  enabled: false
+  scorer-model: claude-opus-4-7
+  scorer-provider: anthropic
+  input-dir: results
+  output-dir: scores
+  # Which model labels to score. Empty = all models found in input-dir.
+  target-models: []
+  # Which locales to score. Defaults to English only to keep costs down.
+  target-locales:
+    - en
+
 logging:
   level:
     com.sfryslie: INFO
