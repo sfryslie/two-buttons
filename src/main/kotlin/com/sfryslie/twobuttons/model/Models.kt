@@ -22,7 +22,10 @@ data class SessionResult(
 
 data class ExperimentResult(
     val experimentId: String,
+    val modelLabel: String,
     val startedAt: Instant,
     val completedAt: Instant,
+    // prompts[locale][questionIndex] = exact text sent to the model
+    val prompts: Map<String, Map<String, String>>,
     val sessions: List<SessionResult>
 )

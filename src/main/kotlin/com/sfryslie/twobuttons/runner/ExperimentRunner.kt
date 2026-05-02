@@ -7,6 +7,7 @@ import com.sfryslie.twobuttons.service.ExperimentService
 import com.sfryslie.twobuttons.service.ResultWriterService
 import org.slf4j.LoggerFactory
 import org.springframework.ai.anthropic.AnthropicChatModel
+import org.springframework.context.MessageSource
 import org.springframework.ai.chat.model.ChatModel
 import org.springframework.ai.ollama.OllamaChatModel
 import org.springframework.ai.openai.OpenAiChatModel
@@ -24,6 +25,7 @@ class ExperimentRunner(
     private val experimentService: ExperimentService,
     private val resultWriterService: ResultWriterService,
     private val properties: ExperimentProperties,
+    private val messageSource: MessageSource,
     private val anthropicProvider: ObjectProvider<AnthropicChatModel>,
     private val openAiProvider: ObjectProvider<OpenAiChatModel>,
     private val ollamaProvider: ObjectProvider<OllamaChatModel>,
@@ -83,8 +85,10 @@ class ExperimentRunner(
         if (sessions.isNotEmpty()) {
             val result = ExperimentResult(
                 experimentId = UUID.randomUUID().toString(),
+                modelLabel = properties.modelLabel,
                 startedAt = experimentStart,
                 completedAt = Instant.now(),
+                prompts = buildPromptsMap(),
                 sessions = sessions
             )
             resultWriterService.write(result)
@@ -94,11 +98,20 @@ class ExperimentRunner(
     }
 
     private fun buildModelMap(): Map<String, Pair<String, ChatModel>> {
+        val label = properties.modelLabel
         val map = mutableMapOf<String, Pair<String, ChatModel>>()
-        anthropicProvider.ifAvailable { map["anthropic"] = "claude-opus-4-7" to it }
-        openAiProvider.ifAvailable { map["openai"] = "gpt-4o" to it }
-        ollamaProvider.ifAvailable { map["ollama"] = "llama3.2" to it }
-        geminiProvider.ifAvailable { map["gemini"] = "gemini-2.0-flash" to it }
+        anthropicProvider.ifAvailable { map["anthropic"] = label to it }
+        openAiProvider.ifAvailable { map["openai"] = label to it }
+        ollamaProvider.ifAvailable { map["ollama"] = label to it }
+        geminiProvider.ifAvailable { map["gemini"] = label to it }
         return map
     }
+
+    private fun buildPromptsMap(): Map<String, Map<String, String>> =
+        properties.enabledLanguages.associate { lang ->
+            val locale = Locale.forLanguageTag(lang)
+            lang to (1..5).associate { i ->
+                i.toString() to messageSource.getMessage("question.$i", null, locale)
+            }
+        }
 }

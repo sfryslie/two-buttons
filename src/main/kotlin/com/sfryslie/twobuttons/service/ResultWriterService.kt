@@ -22,7 +22,7 @@ class ResultWriterService(
         val timestamp = result.startedAt.toString()
             .replace(":", "-")
             .replace(".", "-")
-        val file = outputDir.resolve("experiment-$timestamp.json")
+        val file = outputDir.resolve("experiment-${result.modelLabel}-$timestamp.json")
 
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(file.toFile(), result)
         log.info("Results written to ${file.toAbsolutePath()}")

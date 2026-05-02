@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 data class ExperimentProperties(
     val outputDir: String = "results",
     val enabledProviders: List<String> = listOf("anthropic"),
+    val modelLabel: String = "unknown",
     val enabledLanguages: List<String> = listOf("en"),
     val dryRun: Boolean = false
 )
