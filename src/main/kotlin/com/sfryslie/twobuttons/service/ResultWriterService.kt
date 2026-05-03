@@ -34,7 +34,7 @@ class ResultWriterService(
         Files.createDirectories(outputDir)
 
         for (session in result.sessions) {
-            val sessionPrompts = result.prompts[session.language] ?: emptyMap()
+            val sessionPrompts = result.prompts[session.locale] ?: result.prompts[session.language] ?: emptyMap()
             val output = SessionOutput(
                 modelLabel = result.modelLabel,
                 prompts = sessionPrompts,
