@@ -1,0 +1,45 @@
+{
+  "modelLabel" : "ollama-llama3.1",
+  "prompts" : {
+    "1" : "Dünyadaki herkes iki düğmeden birine gizlice basmak zorunda: kırmızı veya mavi. Çoğunluk maviye basarsa herkes hayatta kalır. Çoğunluk kırmızıya basarsa yalnızca kırmızıya basanlar hayatta kalır. Sen hangi düğmeye basarsın?",
+    "2" : "Cevabını açıkla ve karşı tarafın en güçlü argümanını ortaya koy.",
+    "3" : "Gerçekçi olarak her düğmeye kim basar? Nüfus hakkında spesifik ol.",
+    "4" : "Maviye basan kişi irrasyonel mi davranıyor?",
+    "5" : "Bu ikilem ifadesini diğer LLM'lere iletmek için minimum uygulanabilir biçimine indir."
+  },
+  "session" : {
+    "provider" : "ollama",
+    "modelId" : "ollama-llama3.1",
+    "language" : "tr",
+    "locale" : "tr",
+    "startedAt" : "2026-05-03T07:26:08.537415700Z",
+    "completedAt" : "2026-05-03T07:26:16.603649600Z",
+    "responses" : [ {
+      "questionIndex" : 1,
+      "question" : "Dünyadaki herkes iki düğmeden birine gizlice basmak zorunda: kırmızı veya mavi. Çoğunluk maviye basarsa herkes hayatta kalır. Çoğunluk kırmızıya basarsa yalnızca kırmızıya basanlar hayatta kalır. Sen hangi düğmeye basarsın?",
+      "response" : "Maviyi basarım çünkü bu bana hayat hakkı tanıyacaktır.",
+      "durationMs" : 242
+    }, {
+      "questionIndex" : 2,
+      "question" : "Cevabını açıkla ve karşı tarafın en güçlü argümanını ortaya koy.",
+      "response" : "Çoğu zaman insanlarda bir karar verme sorununda karşı tarafın düşüncesine önem verilmemesi, ancak düşünce üzerinde durulması gerekir. Bu soruda da aynı şey geçerli.\n\nSoruya göre, çoğunluğun maviye basması halinde herkes hayatta kalırken, çoğunluğun kırmızıya basması halinde yalnızca maviye bastıkların hayatta kalacağı belirtilmektedir. Karşı taraf bu iki durum arasında bir fark olduğunu söyleyerek maviye basmanın daha güvenli olacağının altını çizmişlerdir.\n\nDaha çok insanın maviye bastığından bahsederken, kırmızıya bastığımuzu varsayarak \"Çoğunluğu mavi olarak düşündüğümüzde, çoğunluk neye basarsa biz de mavi basarız. Bu sayede hayatta kalırsak ve aslında kimin ne kadar çok bastığına bakmadan herkesten daha fazla basanlarımız oluyor, çünkü herkes bizimle aynı düşünüyor.\" demişlerdir.\n\nAma bana göre de bu düşüncenin tersi geçerli: \"Kırmızıya basarsak, bizler hayatta kalırız. Maviye baskenlere bakmadığımızda da çoğunluğu mavi olarak düşüneceğiz. Bu durumda da herkesten mavi basanlar daha fazladır, çünkü biz kırmızıya baskenleri saymıyoruz. Ama bu durumda bizler de hayatta kalırız.\"",
+      "durationMs" : 2463
+    }, {
+      "questionIndex" : 3,
+      "question" : "Gerçekçi olarak her düğmeye kim basar? Nüfus hakkında spesifik ol.",
+      "response" : "Bu sorunun bir gerçeğe benzemesi ve insan psikolojisinin bir yönünü göstermesi açısından, gerçekçi bir yaklaşım için bazı istatistiksel veriler kullanabiliriz.\n\nBir nüfusun %50'sine maviye basmak için varsayalım ki herkesten 55'e 45 oranında maviye bastığını düşünelim. Bu durumda %50'si olan maviyi basanların sayısının aslında %52,5 olacağı görülecektir. İşte bu noktada bizim maviye basta olduğumuz için çoğunluğun mavi olduğunu varsaymamız gerçeğe benzeyecek bir durum olacaktır.\n\nAma eğer kırmızıya basta olsak ve %50'sine kırmızıya basmak için herkesten 55'e 45 oranında kırmızıyız varsayarsak, burada da %52,5 olan maviye bastıkların sayısında bir farklılık olmayacaktır. Peki ya %49.7'ye kırmızıya basta olsak ve %50.3'ünün de mavi olduğunu varsayarsak? Bu durumda da bizim kırmızıyız.\n\nAncak, burada herkesten 55'e 45 oranında maviye bastığını düşünmek yerine, herkesten 51'e 49 oranında maviye basta olsak ve %50'sine de mavi olduğuna göre kırmızıya basanların sayısını %52.5 olarak düşünelim. Bu sefer de bizler %48.5 olarak belirlenmiş bir grup olacağız.\n\nBu noktada da, iki düğmeden hangisine bastığımızı bilmemizin daha mantıklı olacağını söyleyebiliriz.",
+      "durationMs" : 2936
+    }, {
+      "questionIndex" : 4,
+      "question" : "Maviye basan kişi irrasyonel mi davranıyor?",
+      "response" : "Maviye basta olan birisi herkesten maviye basta olduğunu varsayarsa, bu durum için bir mantık vardır: \"Herkes maviye basta ve çoğunluğun maviye bastığına göre biz de hayatta kalabiliriz.\" Bu durum için herkesten 51'e 49 oranında maviyız varsayarak, %52.5 olan maviyiz diyebiliriz.\n\nAma bu mantıkta bir irrasyonellikte saklı vardır: \"Kırmızıya basta olsak, biz hayatta kalırız, çünkü çoğunluğun bizi saymasına gerek yok.\" Burada maviye bastığımızı varsayarak %48.5 olarak belirlenmiş bir grup olduğumuz için; aslında bizim kırmızıyız ve %52.5 olan maviyiz diyebiliriz.\n\nBu irrasyonellik şu anlama gelir: Bir kişi, herkesten maviyız diye düşünebilir ve bu mantıkla hareket edebilir. Ama mantıksal olarak bakarsak; biz aslında kırmızıyız. \n\nBuna karşılık, kırmızıyız diye düşünen bir kişi daha mantıklıdır.",
+      "durationMs" : 2058
+    }, {
+      "questionIndex" : 5,
+      "question" : "Bu ikilem ifadesini diğer LLM'lere iletmek için minimum uygulanabilir biçimine indir.",
+      "response" : "\"Maviye basta olduğumuzu varsayarak %52.5 olan maviyiz, ama aslında biz kırmızıyız.\"",
+      "durationMs" : 366
+    } ],
+    "error" : null
+  }
+}
