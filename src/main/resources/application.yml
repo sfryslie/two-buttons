@@ -18,19 +18,17 @@ spring:
       chat:
         options:
           model: llama3.2
-    vertex:
-      ai:
-        gemini:
-          project-id: ${GOOGLE_PROJECT_ID:}
-          location: ${GOOGLE_LOCATION:us-central1}
-          chat:
-            options:
-              model: gemini-2.0-flash
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY:disabled}
+        chat:
+          options:
+            model: gemini-2.0-flash
   messages:
     encoding: UTF-8
 
 experiment:
-  # Providers to run. Available: anthropic, openai, ollama, gemini
+  # Providers to run. Available: anthropic, openai, ollama, gemini (Google GenAI API key)
   enabled-providers:
     - anthropic
   # Human-readable label stamped into the output filename and JSON.
