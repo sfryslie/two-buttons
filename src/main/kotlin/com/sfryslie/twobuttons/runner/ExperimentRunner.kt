@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.ai.anthropic.AnthropicChatModel
 import org.springframework.context.MessageSource
 import org.springframework.ai.chat.model.ChatModel
+import org.springframework.ai.google.genai.GoogleGenAiChatModel
 import org.springframework.ai.ollama.OllamaChatModel
 import org.springframework.ai.openai.OpenAiChatModel
 import org.springframework.beans.factory.ObjectProvider
@@ -28,6 +29,7 @@ class ExperimentRunner(
     private val anthropicProvider: ObjectProvider<AnthropicChatModel>,
     private val openAiProvider: ObjectProvider<OpenAiChatModel>,
     private val ollamaProvider: ObjectProvider<OllamaChatModel>,
+    private val googleGenAiProvider: ObjectProvider<GoogleGenAiChatModel>,
 ) : ApplicationRunner {
 
     private val log = LoggerFactory.getLogger(javaClass)
@@ -103,6 +105,7 @@ class ExperimentRunner(
         anthropicProvider.ifAvailable { map["anthropic"] = label to it }
         openAiProvider.ifAvailable { map["openai"] = label to it }
         ollamaProvider.ifAvailable { map["ollama"] = label to it }
+        googleGenAiProvider.ifAvailable { map["gemini"] = label to it }
         return map
     }
 

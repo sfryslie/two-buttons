@@ -33,8 +33,7 @@ dependencies {
     implementation("org.springframework.ai:spring-ai-starter-model-anthropic")
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
     implementation("org.springframework.ai:spring-ai-starter-model-ollama")
-    // TODO: verify correct artifact name for Vertex AI Gemini in Spring AI 2.0.0-M5
-    // implementation("org.springframework.ai:spring-ai-starter-model-vertex-ai-gemini")
+    implementation("org.springframework.ai:spring-ai-starter-model-google-genai")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
