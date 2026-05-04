@@ -35,7 +35,8 @@ if (Test-Path .env) {
     Write-Host "[sweep] .env loaded" -ForegroundColor DarkGray
 }
 
-$ollamaBase = if ($env:OLLAMA_BASE_URL) { $env:OLLAMA_BASE_URL.TrimEnd('/') } else { "http://localhost:11434" }
+$ollamaBase = "http://localhost:11434"
+if ($env:OLLAMA_BASE_URL) { $ollamaBase = $env:OLLAMA_BASE_URL.TrimEnd('/') }
 
 $models = @(
     @{ Model = "llama3.2";       Label = "ollama-llama3.2" },
@@ -62,11 +63,9 @@ Write-Host ""
 function Invoke-OllamaKeepAlive($baseUrl, $modelName, $keepAlive) {
     $body = "{`"model`": `"$modelName`", `"prompt`": `"`", `"keep_alive`": $keepAlive, `"stream`": false}"
     try {
-        Invoke-RestMethod -Uri "$baseUrl/api/generate" `
-            -Method Post -ContentType "application/json" `
-            -Body $body -TimeoutSec 60 | Out-Null
+        Invoke-RestMethod -Uri "$baseUrl/api/generate" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 60 | Out-Null
     } catch {
-        Write-Host "  WARNING: Ollama API call failed — $($_.Exception.Message)" -ForegroundColor Yellow
+        Write-Host "  WARNING: Ollama API call failed - $($_.Exception.Message)" -ForegroundColor Yellow
     }
 }
 
@@ -98,9 +97,16 @@ foreach ($m in $models) {
         $gradlewBat = "$projectDir\gradlew.bat"
 
         $jobs += Start-Job -ScriptBlock {
-            param($gradlew, $sa, $log)
+            param($gradlew, $sa, $log, $envFile)
+            if (Test-Path $envFile) {
+                Get-Content $envFile | ForEach-Object {
+                    if ($_ -match '^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$') {
+                        [System.Environment]::SetEnvironmentVariable($Matches[1], $Matches[2], 'Process')
+                    }
+                }
+            }
             & $gradlew bootRun "--args=$sa" 2>&1 | Out-File -FilePath $log -Encoding utf8
-        } -ArgumentList $gradlewBat, $springArgs, $logFile
+        } -ArgumentList $gradlewBat, $springArgs, $logFile, "$projectDir\.env"
 
         Write-Host "  Started $lang" -ForegroundColor Yellow
     }
