@@ -86,6 +86,7 @@ foreach ($m in $models) {
         if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
 
         $springArgs = "--experiment.enabled-providers=ollama " +
+                      "--spring.ai.ollama.base-url=$ollamaBase " +
                       "--spring.ai.ollama.chat.options.model=$($m.Model) " +
                       "--experiment.model-label=$($m.Label) " +
                       "--experiment.enabled-languages=$lang " +
