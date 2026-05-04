@@ -2,6 +2,7 @@
 .SYNOPSIS
   Runs a single language N times for each model in a provider, writing to reruns/{lang}/.
   Models run in parallel up to -MaxParallel (default 4). Set to 1 for Ollama.
+  The experiment.runs parameter handles N repetitions inside a single JVM process.
 
   API providers (Anthropic, OpenAI, Gemini) can run in separate terminals in parallel.
   Ollama must use -MaxParallel 1 (single GPU).
@@ -99,10 +100,8 @@ $modelRunBlock = {
         [System.Environment]::SetEnvironmentVariable($kv.Key, $kv.Value, 'Process')
     }
 
-    for ($i = 1; $i -le $runs; $i++) {
-        $springArgs = "--experiment.enabled-providers=$providerArg --spring.ai.$modelKey.chat.options.model=$modelName --experiment.model-label=$label --experiment.enabled-languages=$language --experiment.output-dir=$outputDir"
-        & "$projectDir\gradlew.bat" bootRun "--args=$springArgs" 2>&1 | Out-File -FilePath "$logBase-run$i.log" -Encoding utf8
-    }
+    $springArgs = "--experiment.enabled-providers=$providerArg --spring.ai.$modelKey.chat.options.model=$modelName --experiment.model-label=$label --experiment.enabled-languages=$language --experiment.output-dir=$outputDir --experiment.runs=$runs"
+    & "$projectDir\gradlew.bat" bootRun "--args=$springArgs" 2>&1 | Out-File -FilePath "$logBase.log" -Encoding utf8
 
     return $label
 }
