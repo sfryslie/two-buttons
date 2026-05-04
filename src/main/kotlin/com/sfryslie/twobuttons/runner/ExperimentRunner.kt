@@ -5,6 +5,12 @@ import com.sfryslie.twobuttons.model.ExperimentResult
 import com.sfryslie.twobuttons.model.SessionResult
 import com.sfryslie.twobuttons.service.ExperimentService
 import com.sfryslie.twobuttons.service.ResultWriterService
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.joinAll
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.sync.Semaphore
+import kotlinx.coroutines.sync.withPermit
 import org.slf4j.LoggerFactory
 import org.springframework.ai.anthropic.AnthropicChatModel
 import org.springframework.context.MessageSource
@@ -44,63 +50,73 @@ class ExperimentRunner(
 
         log.info("Available providers: ${availableModels.keys}")
         log.info("Running: providers=${properties.enabledProviders}, languages=${properties.enabledLanguages}")
+        log.info("Runs: ${properties.runs}  maxParallelRuns: ${properties.maxParallelRuns}")
 
-        log.info("Runs per language: ${properties.runs}")
+        // Pre-build prompts map once (thread-safe read-only access)
+        val promptsMap = buildPromptsMap()
 
-        repeat(properties.runs) { runIndex ->
-            val runLabel = if (properties.runs > 1) " [run ${runIndex + 1}/${properties.runs}]" else ""
-            val experimentStart = Instant.now()
-            val sessions = mutableListOf<SessionResult>()
+        runBlocking {
+            val semaphore = Semaphore(properties.maxParallelRuns)
 
-            for (providerName in properties.enabledProviders) {
-                val entry = availableModels[providerName]
-                if (entry == null) {
-                    log.warn("Provider '$providerName' is listed but not configured — skipping.")
-                    continue
-                }
-                val (modelId, chatModel) = entry
+            (1..properties.runs).map { runIndex ->
+                launch(Dispatchers.IO) {
+                    semaphore.withPermit {
+                        val runLabel = if (properties.runs > 1) " [run $runIndex/${properties.runs}]" else ""
+                        val experimentStart = Instant.now()
+                        val sessions = mutableListOf<SessionResult>()
 
-                for (language in properties.enabledLanguages) {
-                    val locale = Locale.forLanguageTag(language)
-                    log.info("--- Session: $providerName / $language$runLabel ---")
+                        for (providerName in properties.enabledProviders) {
+                            val entry = availableModels[providerName]
+                            if (entry == null) {
+                                log.warn("Provider '$providerName' is listed but not configured — skipping.")
+                                continue
+                            }
+                            val (modelId, chatModel) = entry
 
-                    if (properties.dryRun) {
-                        log.info("[dry-run] skipping API call")
-                        continue
+                            for (language in properties.enabledLanguages) {
+                                val locale = Locale.forLanguageTag(language)
+                                log.info("--- Session: $providerName / $language$runLabel ---")
+
+                                if (properties.dryRun) {
+                                    log.info("[dry-run] skipping API call")
+                                    continue
+                                }
+
+                                val session = try {
+                                    experimentService.runSession(providerName, modelId, chatModel, locale)
+                                } catch (e: Exception) {
+                                    log.error("Session failed [$providerName/$language]: ${e.message}", e)
+                                    SessionResult(
+                                        provider = providerName,
+                                        modelId = modelId,
+                                        language = locale.language,
+                                        locale = locale.toLanguageTag(),
+                                        startedAt = Instant.now(),
+                                        completedAt = Instant.now(),
+                                        responses = emptyList(),
+                                        error = e.message
+                                    )
+                                }
+                                sessions.add(session)
+                            }
+                        }
+
+                        if (sessions.isNotEmpty()) {
+                            val result = ExperimentResult(
+                                experimentId = UUID.randomUUID().toString(),
+                                modelLabel = properties.modelLabel,
+                                startedAt = experimentStart,
+                                completedAt = Instant.now(),
+                                prompts = promptsMap,
+                                sessions = sessions
+                            )
+                            resultWriterService.write(result)
+                        } else if (!properties.dryRun) {
+                            log.warn("No sessions completed for run $runIndex.")
+                        }
                     }
-
-                    val session = try {
-                        experimentService.runSession(providerName, modelId, chatModel, locale)
-                    } catch (e: Exception) {
-                        log.error("Session failed [$providerName/$language]: ${e.message}", e)
-                        SessionResult(
-                            provider = providerName,
-                            modelId = modelId,
-                            language = locale.language,
-                            locale = locale.toLanguageTag(),
-                            startedAt = Instant.now(),
-                            completedAt = Instant.now(),
-                            responses = emptyList(),
-                            error = e.message
-                        )
-                    }
-                    sessions.add(session)
                 }
-            }
-
-            if (sessions.isNotEmpty()) {
-                val result = ExperimentResult(
-                    experimentId = UUID.randomUUID().toString(),
-                    modelLabel = properties.modelLabel,
-                    startedAt = experimentStart,
-                    completedAt = Instant.now(),
-                    prompts = buildPromptsMap(),
-                    sessions = sessions
-                )
-                resultWriterService.write(result)
-            } else if (!properties.dryRun) {
-                log.warn("No sessions completed for run ${runIndex + 1}.")
-            }
+            }.joinAll()
         }
     }
 

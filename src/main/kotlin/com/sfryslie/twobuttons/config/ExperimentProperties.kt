@@ -9,5 +9,6 @@ data class ExperimentProperties(
     val modelLabel: String = "unknown",
     val enabledLanguages: List<String> = listOf("en"),
     val dryRun: Boolean = false,
-    val runs: Int = 1
+    val runs: Int = 1,
+    val maxParallelRuns: Int = 10
 )
