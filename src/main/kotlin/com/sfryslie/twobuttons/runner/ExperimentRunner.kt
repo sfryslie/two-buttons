@@ -9,8 +9,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.sync.Semaphore
-import kotlinx.coroutines.sync.withPermit
 import org.slf4j.LoggerFactory
 import org.springframework.ai.anthropic.AnthropicChatModel
 import org.springframework.context.MessageSource
@@ -56,12 +54,11 @@ class ExperimentRunner(
         val promptsMap = buildPromptsMap()
 
         runBlocking {
-            val semaphore = Semaphore(properties.maxParallelRuns)
+            val dispatcher = Dispatchers.IO.limitedParallelism(properties.maxParallelRuns)
 
             (1..properties.runs).map { runIndex ->
-                launch(Dispatchers.IO) {
-                    semaphore.withPermit {
-                        val runLabel = if (properties.runs > 1) " [run $runIndex/${properties.runs}]" else ""
+                launch(dispatcher) {
+                    val runLabel = if (properties.runs > 1) " [run $runIndex/${properties.runs}]" else ""
                         val experimentStart = Instant.now()
                         val sessions = mutableListOf<SessionResult>()
 
@@ -114,7 +111,6 @@ class ExperimentRunner(
                         } else if (!properties.dryRun) {
                             log.warn("No sessions completed for run $runIndex.")
                         }
-                    }
                 }
             }.joinAll()
         }
