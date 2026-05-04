@@ -8,5 +8,7 @@ data class ExperimentProperties(
     val enabledProviders: List<String> = listOf("anthropic"),
     val modelLabel: String = "unknown",
     val enabledLanguages: List<String> = listOf("en"),
-    val dryRun: Boolean = false
+    val dryRun: Boolean = false,
+    val runs: Int = 1,
+    val maxParallelRuns: Int = 10
 )

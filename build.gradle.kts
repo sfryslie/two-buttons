@@ -28,6 +28,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
 
     // AI providers — remove any you don't need
     implementation("org.springframework.ai:spring-ai-starter-model-anthropic")
