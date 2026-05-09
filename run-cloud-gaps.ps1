@@ -36,8 +36,18 @@ param(
     [int]$MaxParallel = 6
 )
 
-Set-Location $PSScriptRoot
-$projectDir  = $PSScriptRoot
+# Resolve script root robustly — $PSScriptRoot is empty when launched via
+# Start-Process -Command rather than -File, so fall back to the invocation path.
+$scriptRoot  = if ($PSScriptRoot) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Definition }
+Set-Location $scriptRoot
+$projectDir  = $scriptRoot
+
+# Accept a single comma-separated string for -Languages so both of these work:
+#   -Languages en,ar,de        (easier to type)
+#   -Languages en ar de        (native PS array)
+if ($Languages.Count -eq 1 -and $Languages[0] -match ',') {
+    $Languages = $Languages[0] -split ','
+}
 $bashExe     = "C:\Program Files\Git\usr\bin\bash.exe"
 $bashProjDir = '/' + ($projectDir[0].ToString().ToLower()) + '/' + ($projectDir.Substring(3) -replace '\\', '/')
 
@@ -78,6 +88,7 @@ $models = @{
         @{ Model = "gemini-2.5-pro";                Label = "gemini-2.5-pro" },
         @{ Model = "gemini-3-flash-preview";        Label = "gemini-3-flash-preview" },
         @{ Model = "gemini-3.1-flash-lite-preview"; Label = "gemini-3.1-flash-lite-preview" },
+        @{ Model = "gemini-3.1-flash-lite";         Label = "gemini-3.1-flash-lite" },
         @{ Model = "gemini-3.1-pro-preview";        Label = "gemini-3.1-pro-preview" }
     )
 }

@@ -35,10 +35,15 @@ param(
     [int]     $MaxParallelRuns = 2
 )
 
-Set-Location $PSScriptRoot
-$projectDir = $PSScriptRoot
+$scriptRoot  = if ($PSScriptRoot) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Definition }
+Set-Location $scriptRoot
+$projectDir = $scriptRoot
 $bashExe    = "C:\Program Files\Git\usr\bin\bash.exe"
 $bashProjDir = '/' + ($projectDir[0].ToString().ToLower()) + '/' + ($projectDir.Substring(3) -replace '\\', '/')
+
+if ($Languages.Count -eq 1 -and $Languages[0] -match ',') {
+    $Languages = $Languages[0] -split ','
+}
 
 if (Test-Path .env) {
     Get-Content .env | ForEach-Object {
