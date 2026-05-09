@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
   Ollama model sweep: loads one model at a time, fans out target languages in parallel,
-  then evicts before moving to the next model. Only runs the deficit to reach Target —
+  then evicts before moving to the next model. Only runs the deficit to reach Target -
   safe to re-run after interruption.
 
   Strategy per model:
@@ -20,7 +20,7 @@
 
 .PARAMETER MaxParallelRuns
   Concurrent experiment runs within each language JVM. Default 2.
-  Keep this low for Ollama — the server serializes inference, so high parallelism
+  Keep this low for Ollama - the server serializes inference, so high parallelism
   just floods the request queue and causes timeouts. With 6 languages fanning out
   in parallel, 2 per JVM = 12 simultaneous requests to Ollama at most.
 
@@ -78,7 +78,7 @@ function Invoke-OllamaKeepAlive([string]$BaseUrl, [string]$ModelName, $KeepAlive
         Invoke-RestMethod -Uri "$BaseUrl/api/generate" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 60 | Out-Null
         return $true
     } catch {
-        Write-Host "  WARNING: Ollama API call failed — $($_.Exception.Message)" -ForegroundColor Yellow
+        Write-Host "  WARNING: Ollama API call failed - $($_.Exception.Message)" -ForegroundColor Yellow
         return $false
     }
 }
@@ -87,10 +87,10 @@ function Test-OllamaHealth([string]$BaseUrl) {
     try {
         $tags = Invoke-RestMethod -Uri "$BaseUrl/api/tags" -Method Get -TimeoutSec 10
         $modelCount = if ($tags.models) { $tags.models.Count } else { 0 }
-        Write-Host "  Ollama health OK — $modelCount model(s) loaded" -ForegroundColor DarkGray
+        Write-Host "  Ollama health OK - $modelCount model(s) loaded" -ForegroundColor DarkGray
         return $true
     } catch {
-        Write-Host "  ERROR: Ollama at $BaseUrl is unreachable — $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "  ERROR: Ollama at $BaseUrl is unreachable - $($_.Exception.Message)" -ForegroundColor Red
         return $false
     }
 }
@@ -125,13 +125,13 @@ Write-Host "  Grand total: $grandTotal runs needed" -ForegroundColor Cyan
 Write-Host ""
 
 if ($grandTotal -eq 0) {
-    Write-Host "Nothing to do — all model+language combos are at target." -ForegroundColor Green
+    Write-Host "Nothing to do - all model+language combos are at target." -ForegroundColor Green
     exit 0
 }
 
 Write-Host "Checking Ollama server..." -ForegroundColor DarkGray
 if (-not (Test-OllamaHealth $ollamaBase)) {
-    Write-Host "Aborting — Ollama server is not reachable at $ollamaBase" -ForegroundColor Red
+    Write-Host "Aborting - Ollama server is not reachable at $ollamaBase" -ForegroundColor Red
     exit 1
 }
 
@@ -151,12 +151,12 @@ foreach ($m in $models) {
     }
 
     if ($modelTotal -eq 0) {
-        Write-Host "[$mi/$($models.Count)] $($m.Label) — complete, skipping" -ForegroundColor Green
+        Write-Host "[$mi/$($models.Count)] $($m.Label) - complete, skipping" -ForegroundColor Green
         continue
     }
 
     Write-Host ""
-    Write-Host "[$mi/$($models.Count)] $($m.Label) — $modelTotal runs needed" -ForegroundColor Cyan
+    Write-Host "[$mi/$($models.Count)] $($m.Label) - $modelTotal runs needed" -ForegroundColor Cyan
 
     # Preload model into VRAM
     Write-Host "  Preloading into VRAM..." -ForegroundColor DarkGray
@@ -227,14 +227,14 @@ foreach ($m in $models) {
         $postCount = Get-ExistingRuns $lang $m.Label
         $written   = $postCount - $preRunCounts[$lang]
         if ($written -lt $deficit) {
-            Write-Host "  WARNING: $lang wrote $written/$deficit expected files — shortfall of $($deficit - $written)" -ForegroundColor Red
+            Write-Host "  WARNING: $lang wrote $written/$deficit expected files - shortfall of $($deficit - $written)" -ForegroundColor Red
             $anyShortfall = $true
         } else {
             Write-Host "  $lang`: $written/$deficit files written" -ForegroundColor Green
         }
     }
     if ($anyShortfall) {
-        Write-Host "  Re-run this script to fill shortfalls — the gap-check will handle it." -ForegroundColor Yellow
+        Write-Host "  Re-run this script to fill shortfalls - the gap-check will handle it." -ForegroundColor Yellow
         Write-Host "  Checking Ollama health before next model..." -ForegroundColor DarkGray
         Test-OllamaHealth $ollamaBase | Out-Null
     }
