@@ -98,7 +98,7 @@ class ScoringService(
                             OpenAiChatOptions.builder()
                                 .model(config.model)
                                 .temperature(0.0)
-                                .maxTokens(200)
+                                .maxCompletionTokens(200)
                         )
                         .call()
                         .content()

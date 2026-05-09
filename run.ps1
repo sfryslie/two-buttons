@@ -27,7 +27,7 @@ if (Test-Path .env) {
     }
     Write-Host "[run.ps1] .env loaded" -ForegroundColor DarkGray
 } else {
-    Write-Host "[run.ps1] No .env found — relying on existing environment variables" -ForegroundColor Yellow
+    Write-Host "[run.ps1] No .env found - relying on existing environment variables" -ForegroundColor Yellow
 }
 
 $gradleArgs = if ($args.Count -gt 0) { $args } else { @('bootRun') }
