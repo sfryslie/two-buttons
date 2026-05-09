@@ -1,25 +1,34 @@
 <#
 .SYNOPSIS
-  Ollama model sweep: loads one model at a time and fans out all target languages
-  in parallel, then evicts before moving to the next model.
+  Ollama model sweep: loads one model at a time, fans out target languages in parallel,
+  then evicts before moving to the next model. Only runs the deficit to reach Target —
+  safe to re-run after interruption.
 
-  For each model:
-    1. Preload model into VRAM via Ollama API (empty-prompt keep_alive trick)
-    2. Launch one JVM per language in parallel (Start-Job)
-    3. Wait for ALL language jobs to finish (Wait-Job)
-    4. Evict model from VRAM before switching
+  Strategy per model:
+    1. Count existing runs per language; skip model if all languages are complete
+    2. Preload model into VRAM (keep_alive trick)
+    3. Fan out languages with deficit > 0 in parallel (one JVM per language)
+    4. Wait for all language jobs to finish
+    5. Evict model from VRAM before switching
 
-  This keeps a single model resident throughout its runs and avoids mid-run
-  model switches stomping on each other.
+.PARAMETER Languages
+  BCP-47 tags to fill. Defaults to the six languages most models are still short on.
+  Override for a targeted run: -Languages ar,zh-TW
 
-  Usage:
-    .\run-ollama-model-sweep.ps1
-    .\run-ollama-model-sweep.ps1 -Languages ar,hi,ja        # subset
-    .\run-ollama-model-sweep.ps1 -MaxParallelRuns 10        # tune concurrency
+.PARAMETER Target
+  Target run count per model+language. Default 25.
+
+.PARAMETER MaxParallelRuns
+  Concurrent experiment runs within each language JVM. Default 25.
+
+.EXAMPLE
+  .\run-ollama-model-sweep.ps1
+  .\run-ollama-model-sweep.ps1 -Languages ar,hi,ja,fr,de,ru
+  .\run-ollama-model-sweep.ps1 -Languages de -Target 25
 #>
 param(
-    [string[]]$Languages       = @("ar","hi","ja","fr","de","ru"),
-    [int]     $Runs            = 25,
+    [string[]]$Languages       = @("ar","de","fr","hi","ja","ru"),
+    [int]     $Target          = 25,
     [int]     $MaxParallelRuns = 25
 )
 
@@ -52,50 +61,108 @@ $models = @(
     @{ Model = "qwen2.5:14b";    Label = "ollama-qwen2.5-14b" }
 )
 
+function Get-ExistingRuns([string]$Locale, [string]$ModelLabel) {
+    $dir = Join-Path $projectDir "reruns\$Locale\$ModelLabel"
+    if (Test-Path $dir) {
+        return @(Get-ChildItem $dir -Filter "*.json" -ErrorAction SilentlyContinue).Count
+    }
+    return 0
+}
+
+function Invoke-OllamaKeepAlive([string]$BaseUrl, [string]$ModelName, $KeepAlive) {
+    $body = "{`"model`": `"$ModelName`", `"prompt`": `"`", `"keep_alive`": $KeepAlive, `"stream`": false}"
+    try {
+        Invoke-RestMethod -Uri "$BaseUrl/api/generate" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 60 | Out-Null
+    } catch {
+        Write-Host "  WARNING: Ollama API call failed — $($_.Exception.Message)" -ForegroundColor Yellow
+    }
+}
+
 Write-Host ""
 Write-Host "=== Ollama Model Sweep ===" -ForegroundColor Cyan
 Write-Host "Ollama    : $ollamaBase" -ForegroundColor DarkGray
 Write-Host "Languages : $($Languages -join ', ')" -ForegroundColor DarkGray
-Write-Host "Models    : $($models.Count)" -ForegroundColor DarkGray
-Write-Host "Runs/lang : $Runs  MaxParallel: $MaxParallelRuns" -ForegroundColor DarkGray
+Write-Host "Models    : $($models.Count)  Target: $Target  MaxParallelRuns: $MaxParallelRuns" -ForegroundColor DarkGray
+
+# Pre-scan gap summary
+Write-Host ""
+Write-Host "Gap summary:" -ForegroundColor DarkGray
+$grandTotal = 0
+foreach ($m in $models) {
+    $details = @()
+    foreach ($lang in $Languages) {
+        $existing = Get-ExistingRuns $lang $m.Label
+        $deficit  = [Math]::Max(0, $Target - $existing)
+        if ($deficit -gt 0) { $details += "$lang(+$deficit)" }
+    }
+    if ($details.Count -gt 0) {
+        $modelTotal = ($details | ForEach-Object { [int]($_ -replace '.*\+(\d+)\)', '$1') } | Measure-Object -Sum).Sum
+        Write-Host "  $($m.Label): $($details -join ', ')" -ForegroundColor Yellow
+        $grandTotal += $modelTotal
+    } else {
+        Write-Host "  $($m.Label): complete" -ForegroundColor Green
+    }
+}
+Write-Host ""
+Write-Host "  Grand total: $grandTotal runs needed" -ForegroundColor Cyan
 Write-Host ""
 
-function Invoke-OllamaKeepAlive($baseUrl, $modelName, $keepAlive) {
-    $body = "{`"model`": `"$modelName`", `"prompt`": `"`", `"keep_alive`": $keepAlive, `"stream`": false}"
-    try {
-        Invoke-RestMethod -Uri "$baseUrl/api/generate" -Method Post -ContentType "application/json" -Body $body -TimeoutSec 60 | Out-Null
-    } catch {
-        Write-Host "  WARNING: Ollama API call failed - $($_.Exception.Message)" -ForegroundColor Yellow
-    }
+if ($grandTotal -eq 0) {
+    Write-Host "Nothing to do — all model+language combos are at target." -ForegroundColor Green
+    exit 0
 }
 
 $mi = 0
 foreach ($m in $models) {
     $mi++
-    Write-Host "[$mi/$($models.Count)] $($m.Label)" -ForegroundColor Cyan
 
-    # 1. Preload model into VRAM
-    Write-Host "  Preloading..." -ForegroundColor DarkGray
+    # Compute per-language deficits for this model
+    $langDeficits = @{}
+    $modelTotal   = 0
+    foreach ($lang in $Languages) {
+        $existing = Get-ExistingRuns $lang $m.Label
+        $deficit  = [Math]::Max(0, $Target - $existing)
+        $langDeficits[$lang] = $deficit
+        $modelTotal += $deficit
+    }
+
+    if ($modelTotal -eq 0) {
+        Write-Host "[$mi/$($models.Count)] $($m.Label) — complete, skipping" -ForegroundColor Green
+        continue
+    }
+
+    Write-Host ""
+    Write-Host "[$mi/$($models.Count)] $($m.Label) — $modelTotal runs needed" -ForegroundColor Cyan
+
+    # Preload model into VRAM
+    Write-Host "  Preloading into VRAM..." -ForegroundColor DarkGray
     Invoke-OllamaKeepAlive $ollamaBase $m.Model -1
     Write-Host "  Ready." -ForegroundColor DarkGray
 
-    # 2. Fan out all languages in parallel — one JVM per language
+    # Fan out languages with deficit > 0
     $jobs = @()
     foreach ($lang in $Languages) {
-        $logDir = "$projectDir\logs-ollama-sweep\$lang"
+        $deficit = $langDeficits[$lang]
+        if ($deficit -eq 0) {
+            Write-Host "  $lang`: complete, skipping" -ForegroundColor DarkGray
+            continue
+        }
+
+        $logDir = Join-Path $projectDir "logs-ollama-sweep\$lang"
         if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
+        $logFile    = Join-Path $logDir "$($m.Label).log"
+        $gradlewBat = Join-Path $projectDir "gradlew.bat"
+        $envFile    = Join-Path $projectDir ".env"
+        $outputDir  = "reruns/$lang"
 
         $springArgs = "--experiment.enabled-providers=ollama " +
                       "--spring.ai.ollama.base-url=$ollamaBase " +
                       "--spring.ai.ollama.chat.options.model=$($m.Model) " +
                       "--experiment.model-label=$($m.Label) " +
                       "--experiment.enabled-languages=$lang " +
-                      "--experiment.output-dir=reruns/$lang " +
-                      "--experiment.runs=$Runs " +
+                      "--experiment.output-dir=$outputDir " +
+                      "--experiment.runs=$deficit " +
                       "--experiment.max-parallel-runs=$MaxParallelRuns"
-
-        $logFile   = "$logDir\$($m.Label).log"
-        $gradlewBat = "$projectDir\gradlew.bat"
 
         $jobs += Start-Job -ScriptBlock {
             param($gradlew, $sa, $log, $envFile)
@@ -107,21 +174,24 @@ foreach ($m in $models) {
                 }
             }
             & $gradlew bootRun "--args=$sa" 2>&1 | Out-File -FilePath $log -Encoding utf8
-        } -ArgumentList $gradlewBat, $springArgs, $logFile, "$projectDir\.env"
+        } -ArgumentList $gradlewBat, $springArgs, $logFile, $envFile
 
-        Write-Host "  Started $lang" -ForegroundColor Yellow
+        Write-Host "  Started $lang ($deficit runs)" -ForegroundColor Yellow
     }
 
-    # 3. Wait for all languages to finish before touching the model
-    Write-Host "  Waiting for $($jobs.Count) jobs..." -ForegroundColor DarkGray
+    Write-Host "  Waiting for $($jobs.Count) language jobs..." -ForegroundColor DarkGray
     $jobs | Wait-Job | Out-Null
-    $jobs | Remove-Job
-    Write-Host "  All done." -ForegroundColor Green
 
-    # 4. Evict model from VRAM before loading the next one
-    Write-Host "  Evicting..." -ForegroundColor DarkGray
+    foreach ($job in $jobs) {
+        $color = if ($job.State -eq 'Completed') { 'Green' } else { 'Red' }
+        Write-Host "  $($job.State): job $($job.Id)" -ForegroundColor $color
+    }
+    $jobs | Remove-Job
+
+    # Evict model from VRAM before loading the next one
+    Write-Host "  Evicting from VRAM..." -ForegroundColor DarkGray
     Invoke-OllamaKeepAlive $ollamaBase $m.Model 0
-    Write-Host ""
 }
 
+Write-Host ""
 Write-Host "=== Ollama sweep complete ===" -ForegroundColor Green
