@@ -45,7 +45,8 @@ class ResultWriterService(
                 .replace(":", "-")
                 .replace(".", "-")
             val locale = session.locale.replace("-", "_")
-            val file = outputDir.resolve("two-buttons-$locale-${result.modelLabel}-$timestamp.json")
+            val unique = java.util.UUID.randomUUID().toString().take(8)
+            val file = outputDir.resolve("two-buttons-$locale-${result.modelLabel}-$timestamp-$unique.json")
 
             objectMapper.writeValue(file.toFile(), output)
             log.info("Results written to ${file.toAbsolutePath()}")
