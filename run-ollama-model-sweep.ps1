@@ -166,6 +166,7 @@ foreach ($m in $models) {
 
         $jobs += Start-Job -ScriptBlock {
             param($gradlew, $sa, $log, $envFile)
+            Set-Location (Split-Path $gradlew -Parent)
             if (Test-Path $envFile) {
                 Get-Content $envFile | ForEach-Object {
                     if ($_ -match '^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$') {
