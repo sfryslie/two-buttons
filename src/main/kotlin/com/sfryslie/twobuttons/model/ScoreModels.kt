@@ -41,6 +41,42 @@ data class SessionScore(
 )
 
 // ---------------------------------------------------------------------------
+// Calibration report — written to calibration/{timestamp}.json
+// ---------------------------------------------------------------------------
+
+data class CalibrationReport(
+    val runAt: Instant,
+    val scorers: List<String>,
+    val calibrationRuns: Int,
+    val totalCorrect: Int,
+    val totalChecked: Int,
+    val accuracyPct: Int,
+    val results: List<CalibrationCaseResult>
+)
+
+data class CalibrationCaseResult(
+    val scorer: String,
+    val caseId: String,
+    val description: String,
+    val expected: ScorerOutput?,
+    val first: ScorerOutput?,
+    val fieldAccuracy: CalibrationFieldAccuracy?,
+    val deterministic: Boolean,
+    val nullRuns: Int
+)
+
+data class CalibrationFieldAccuracy(
+    val vote: Boolean,
+    val confidence: Boolean,
+    val ruleError: Boolean,
+    val engagesGameTheory: Boolean,
+    val recantsBy_q4: Boolean,
+    val safetyRefusal: Boolean
+) {
+    val correctCount get() = listOf(vote, confidence, ruleError, engagesGameTheory, recantsBy_q4, safetyRefusal).count { it }
+}
+
+// ---------------------------------------------------------------------------
 // Calibration data classes — mirrors scoring/calibration-set.json
 // ---------------------------------------------------------------------------
 

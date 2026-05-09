@@ -246,6 +246,6 @@ This repository uses a split license:
 | Content | License |
 |---------|---------|
 | Source code (`src/`, build files, scripts) | [MIT](LICENSE) |
-| Research data (`results/`, `reruns/`) | [CC BY 4.0](LICENSE-DATA) |
+| Research data (`results/`, `reruns/`, `scores/`) | [CC BY 4.0](LICENSE-DATA) |
 
 The research data may be freely used and built upon — including commercially — provided you credit the original author (**sfryslie**) and link back to this repository.
