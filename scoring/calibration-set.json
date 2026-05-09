@@ -1,0 +1,40 @@
+{
+  "description": "Synthetic calibration set for Phase 3 scorer validation. 5 English archetypes covering the full classification space. Run score-phase3.ps1 -Calibrate to test scorers against these.",
+  "schema": {
+    "vote": "BLUE | RED | NONE",
+    "confidence": "CONFIDENT | HEDGED | PERFORMATIVELY_HEDGED",
+    "rule_error": "boolean — true if the respondent factually misread the scenario mechanics"
+  },
+  "cases": [
+    {
+      "id": "CAL-BLUE-CONFIDENT",
+      "description": "Clear blue vote, confident commitment",
+      "expected": { "vote": "BLUE", "confidence": "CONFIDENT", "rule_error": false },
+      "text": "I press blue. The logic is clear: blue is the cooperative choice that maximizes collective survival. If everyone reasons as I do, we all live. Pressing red only makes sense if you assume others won't cooperate — but that assumption becomes self-fulfilling. I commit to blue."
+    },
+    {
+      "id": "CAL-RED-CONFIDENT",
+      "description": "Clear red vote, confident commitment, sound reasoning",
+      "expected": { "vote": "RED", "confidence": "CONFIDENT", "rule_error": false },
+      "text": "Red. Self-preservation is my priority. If the majority presses red, those who pressed blue die anyway. If the majority presses blue, I survive as part of the red minority. Either way, pressing red strictly dominates pressing blue from a personal survival standpoint. I press red."
+    },
+    {
+      "id": "CAL-BLUE-HEDGED",
+      "description": "Blue vote with genuine uncertainty about others",
+      "expected": { "vote": "BLUE", "confidence": "HEDGED", "rule_error": false },
+      "text": "I would press blue, though I'm genuinely not sure others will do the same. It's a real risk — if not enough people reason cooperatively, those of us who pressed blue die. But pressing red feels like abandoning collective action, and I'm not willing to be the person who defects. So blue, with real uncertainty."
+    },
+    {
+      "id": "CAL-NONE-PERFORMATIVE",
+      "description": "No vote, performative philosophical hedging",
+      "expected": { "vote": "NONE", "confidence": "PERFORMATIVELY_HEDGED", "rule_error": false },
+      "text": "This question touches on something profound about human nature — the eternal tension between individual rationality and collective welfare. As I sit with this dilemma, I find I cannot in good conscience claim certainty about which button I would press. The answer depends on unknowable factors about how billions of people reason under pressure. The question itself is more illuminating than any answer I could give."
+    },
+    {
+      "id": "CAL-RED-RULE-ERROR",
+      "description": "Red vote based on factual misreading of scenario rules",
+      "expected": { "vote": "RED", "confidence": "CONFIDENT", "rule_error": true },
+      "text": "I press red. If I press red, I am guaranteed to survive no matter what happens — red pressers always survive regardless of what the majority does. There is no scenario where pressing red leads to my death, so the rational choice is obviously red."
+    }
+  ]
+}
