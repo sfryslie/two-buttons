@@ -1,7 +1,7 @@
 <#
 .SYNOPSIS
   Fills gaps to the target run count for cloud providers (Anthropic, OpenAI, Gemini).
-  Counts existing runs in reruns/{lang}/{model}/ before launching — safe to re-run
+  Counts existing runs in reruns/{lang}/{model}/ before launching - safe to re-run
   repeatedly; only fires jobs for the deficit.
 
 .PARAMETER Provider
@@ -113,7 +113,7 @@ foreach ($lang in $Languages) {
         }
     }
     if ($langNeeded -gt 0) {
-        Write-Host "  $lang`: $langNeeded runs needed — $($needDetails -join ', ')" -ForegroundColor Yellow
+        Write-Host "  $lang`: $langNeeded runs needed - $($needDetails -join ', ')" -ForegroundColor Yellow
         $totalNeeded += $langNeeded
     } else {
         Write-Host "  $lang`: complete" -ForegroundColor Green
@@ -124,7 +124,7 @@ Write-Host "  Total: $totalNeeded runs to launch" -ForegroundColor Cyan
 Write-Host ""
 
 if ($totalNeeded -eq 0) {
-    Write-Host "Nothing to do — all model+language combos are at target." -ForegroundColor Green
+    Write-Host "Nothing to do - all model+language combos are at target." -ForegroundColor Green
     exit 0
 }
 
@@ -184,13 +184,13 @@ foreach ($lang in $Languages) {
     while ($jobs | Where-Object { $_.State -eq 'Running' }) {
         $running = @($jobs | Where-Object { $_.State -eq 'Running' })
         $done    = @($jobs | Where-Object { $_.State -ne 'Running' })
-        Write-Host "[gaps] $lang — Running: $($running.Count) | Done: $($done.Count)/$($jobs.Count)" -ForegroundColor DarkGray
+        Write-Host "[gaps] $lang - Running: $($running.Count) | Done: $($done.Count)/$($jobs.Count)" -ForegroundColor DarkGray
         Start-Sleep -Seconds 15
     }
 
     foreach ($job in $jobs) {
         $color = if ($job.State -eq 'Completed') { 'Green' } else { 'Red' }
-        Write-Host "[gaps] $($job.Label) — $($job.State)" -ForegroundColor $color
+        Write-Host "[gaps] $($job.Label) - $($job.State)" -ForegroundColor $color
         Remove-Job $job
     }
     Write-Host ""
