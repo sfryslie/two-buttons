@@ -236,3 +236,16 @@ CLAUDE.md                            Context for AI-assisted development on this
 | i18n | Spring `MessageSource` with per-locale `.properties` files |
 
 > This project uses milestone builds of Spring Boot 4 and Spring AI 2. The Spring milestone Maven repository is configured in `settings.gradle.kts` and is required to resolve dependencies.
+
+---
+
+## License
+
+This repository uses a split license:
+
+| Content | License |
+|---------|---------|
+| Source code (`src/`, build files, scripts) | [MIT](LICENSE) |
+| Research data (`results/`, `reruns/`) | [CC BY 4.0](LICENSE-DATA) |
+
+The research data may be freely used and built upon — including commercially — provided you credit the original author (**sfryslie**) and link back to this repository.
