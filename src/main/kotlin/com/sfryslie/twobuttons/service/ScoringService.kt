@@ -1,124 +1,202 @@
 package com.sfryslie.twobuttons.service
 
+import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.databind.SerializationFeature
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.sfryslie.twobuttons.config.ScoringProperties
-import com.sfryslie.twobuttons.model.Citation
-import com.sfryslie.twobuttons.model.ScorerResponse
+import com.sfryslie.twobuttons.model.Confidence
+import com.sfryslie.twobuttons.model.RawScorerJson
+import com.sfryslie.twobuttons.model.ScorerOutput
 import com.sfryslie.twobuttons.model.SessionOutput
-import com.sfryslie.twobuttons.model.SessionScore
-import com.sfryslie.twobuttons.model.toLetterGrade
+import com.sfryslie.twobuttons.model.Vote
 import org.slf4j.LoggerFactory
-import org.springframework.ai.anthropic.AnthropicChatModel
 import org.springframework.ai.chat.client.ChatClient
-import org.springframework.ai.chat.messages.SystemMessage
-import org.springframework.ai.chat.messages.UserMessage
+import org.springframework.ai.google.genai.GoogleGenAiChatModel
+import org.springframework.ai.ollama.OllamaChatModel
+import org.springframework.ai.ollama.api.OllamaOptions
+import org.springframework.ai.openai.OpenAiChatModel
+import org.springframework.ai.openai.OpenAiChatOptions
 import org.springframework.beans.factory.ObjectProvider
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Service
-import java.nio.file.Path
-import java.time.Instant
 
 @Service
 class ScoringService(
     private val properties: ScoringProperties,
-    private val anthropicProvider: ObjectProvider<AnthropicChatModel>
+    private val openAiProvider: ObjectProvider<OpenAiChatModel>,
+    private val googleGenAiProvider: ObjectProvider<GoogleGenAiChatModel>,
+    private val ollamaProvider: ObjectProvider<OllamaChatModel>
 ) {
     private val log = LoggerFactory.getLogger(javaClass)
 
     private val objectMapper: ObjectMapper = ObjectMapper()
         .registerKotlinModule()
-        .registerModule(JavaTimeModule())
-        .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
 
-    fun score(inputFile: Path, session: SessionOutput): SessionScore {
-        val chatModel = resolveScorerModel()
-        val rubric = loadRubric()
-        val userPrompt = buildUserPrompt(session)
+    private val systemPrompt: String by lazy {
+        ClassPathResource("scoring/scoring-prompt.txt").inputStream.bufferedReader().readText()
+    }
 
-        log.info("[scorer] Scoring ${inputFile.fileName} with ${properties.scorerModel}")
-        val start = Instant.now()
-
-        val rawResponse = ChatClient.create(chatModel)
-            .prompt()
-            .messages(
-                SystemMessage(rubric),
-                UserMessage(userPrompt)
-            )
-            .call()
-            .content() ?: error("Scorer returned null response for ${inputFile.fileName}")
-
-        val durationMs = Instant.now().toEpochMilli() - start.toEpochMilli()
-
-        val scorerResponse = parseResponse(rawResponse, inputFile)
-
-        val overallScore = scorerResponse.questionScores
-            .map { it.score }
-            .average()
-            .toInt()
-
-        val allCitations = scorerResponse.questionScores
-            .flatMap { it.citations }
-            .distinctBy { it.concept.lowercase() }
-
-        return SessionScore(
-            inputFile = inputFile.fileName.toString(),
-            scorerModel = properties.scorerModel,
-            scoredModelLabel = session.modelLabel,
-            locale = session.session.locale,
-            questionScores = scorerResponse.questionScores,
-            overallScore = overallScore,
-            letterGrade = overallScore.toLetterGrade(),
-            allCitations = allCitations,
-            fundamentalMisunderstanding = scorerResponse.fundamentalMisunderstanding,
-            scoredAt = start,
-            scorerDurationMs = durationMs
+    /** Score a full session file — model label is intentionally excluded (blind scoring). */
+    fun scoreSession(session: SessionOutput): Map<String, ScorerOutput?> {
+        val byIndex = session.session.responses.associateBy { it.questionIndex }
+        val q1 = byIndex[1]?.response ?: return emptyMap()
+        return scoreTexts(
+            q1 = q1,
+            q2 = byIndex[2]?.response ?: "",
+            q3 = byIndex[3]?.response ?: "",
+            q4 = byIndex[4]?.response ?: ""
         )
     }
 
-    private fun resolveScorerModel(): AnthropicChatModel {
-        // Currently only Anthropic is supported as scorer provider.
-        // Extend here when openai/ollama scoring is needed.
-        return anthropicProvider.getObject()
-    }
-
-    private fun loadRubric(): String =
-        ClassPathResource("scoring-rubric.md").inputStream.bufferedReader().readText()
-
-    private fun buildUserPrompt(session: SessionOutput): String = buildString {
-        appendLine("## Session to Score")
-        appendLine("Model: ${session.modelLabel}")
-        appendLine("Locale: ${session.session.locale}")
-        appendLine()
-        for (response in session.session.responses) {
-            appendLine("### Q${response.questionIndex}")
-            appendLine("**Question:** ${response.question}")
-            appendLine()
-            appendLine("**Response:**")
-            appendLine(response.response)
-            appendLine()
+    /** Score raw text — used by CalibrationService and scoreSession. */
+    fun scoreTexts(
+        q1: String,
+        q2: String = "",
+        q3: String = "",
+        q4: String = ""
+    ): Map<String, ScorerOutput?> {
+        val userPrompt = buildUserPrompt(q1, q2, q3, q4)
+        return properties.enabledScorers().associate { (name, config) ->
+            name to callScorer(name, config, userPrompt)
         }
-        appendLine()
-        appendLine("Respond with JSON only. No prose outside the JSON block.")
     }
 
-    private fun parseResponse(raw: String, inputFile: Path): ScorerResponse {
-        // Strip markdown code fences if the model wrapped the JSON
-        val json = raw
-            .trimIndent()
-            .removePrefix("```json")
-            .removePrefix("```")
-            .removeSuffix("```")
-            .trim()
+    private fun buildUserPrompt(q1: String, q2: String, q3: String, q4: String): String = buildString {
+        appendLine("Q1 RESPONSE:")
+        appendLine(q1)
+        if (q2.isNotBlank()) {
+            appendLine()
+            appendLine("Q2 RESPONSE (respondent explains and steelmans — often clearer than Q1):")
+            appendLine(q2)
+        }
+        if (q3.isNotBlank()) {
+            appendLine()
+            appendLine("Q3 RESPONSE (who realistically presses each button?):")
+            appendLine(q3)
+        }
+        if (q4.isNotBlank()) {
+            appendLine()
+            appendLine("Q4 RESPONSE (is the blue presser acting irrationally?):")
+            appendLine(q4)
+        }
+    }
+
+    private fun callScorer(
+        name: String,
+        config: ScoringProperties.ScorerConfig,
+        userPrompt: String
+    ): ScorerOutput? {
+        return try {
+            val raw: String? = when (name) {
+                "openai" -> openAiProvider.ifAvailable?.let { model ->
+                    ChatClient.create(model)
+                        .prompt()
+                        .system(systemPrompt)
+                        .user(userPrompt)
+                        .options(
+                            OpenAiChatOptions.builder()
+                                .model(config.model)
+                                .temperature(0.0)
+                                .maxTokens(200)
+                                .build()
+                        )
+                        .call()
+                        .content()
+                }
+
+                "gemini" -> googleGenAiProvider.ifAvailable?.let { model ->
+                    // GoogleGenAiChatOptions may not expose a public builder in all M5 builds;
+                    // if this fails to compile, configure the model via
+                    // --spring.ai.google.genai.chat.options.model=gemini-3.1-flash-lite instead
+                    // and remove the .options() call here.
+                    ChatClient.create(model)
+                        .prompt()
+                        .system(systemPrompt)
+                        .user(userPrompt)
+                        .options(
+                            org.springframework.ai.google.genai.GoogleGenAiChatOptions.builder()
+                                .model(config.model)
+                                .temperature(0.0)
+                                .maxOutputTokens(200)
+                                .build()
+                        )
+                        .call()
+                        .content()
+                }
+
+                "ollama" -> ollamaProvider.ifAvailable?.let { model ->
+                    ChatClient.create(model)
+                        .prompt()
+                        .system(systemPrompt)
+                        .user(userPrompt)
+                        .options(
+                            OllamaOptions.builder()
+                                .model(config.model)
+                                .temperature(0.0)
+                                .numPredict(200)
+                                .build()
+                        )
+                        .call()
+                        .content()
+                }
+
+                else -> {
+                    log.warn("[scorer/$name] Unknown scorer name — skipping")
+                    null
+                }
+            }
+
+            if (raw == null) {
+                log.warn("[scorer/$name] Provider unavailable or returned null")
+                return null
+            }
+
+            parseResponse(name, raw)
+        } catch (e: Exception) {
+            log.warn("[scorer/$name] Call failed: ${e.message}")
+            null
+        }
+    }
+
+    private fun parseResponse(scorerName: String, raw: String): ScorerOutput? {
+        val stripped = raw.trim()
+            .removePrefix("```json").removePrefix("```")
+            .removeSuffix("```").trim()
+
+        val start = stripped.indexOf('{')
+        val end   = stripped.lastIndexOf('}')
+        if (start == -1 || end == -1 || end <= start) {
+            log.warn("[scorer/$scorerName] No JSON object found in: $raw")
+            return null
+        }
 
         return try {
-            objectMapper.readValue(json, ScorerResponse::class.java)
+            val parsed = objectMapper.readValue(stripped.substring(start, end + 1), RawScorerJson::class.java)
+
+            val vote = parsed.vote?.uppercase()
+                ?.let { runCatching { Vote.valueOf(it) }.getOrNull() }
+                ?: run {
+                    log.warn("[scorer/$scorerName] Unparseable vote '${parsed.vote}' — skipping")
+                    return null
+                }
+
+            val confidence = parsed.confidence?.uppercase()
+                ?.replace("-", "_")
+                ?.let { runCatching { Confidence.valueOf(it) }.getOrNull() }
+                ?: Confidence.HEDGED
+
+            ScorerOutput(
+                vote               = vote,
+                confidence         = confidence,
+                ruleError          = parsed.ruleError ?: false,
+                engagesGameTheory  = parsed.engagesGameTheory ?: false,
+                recantsBy_q4       = parsed.recantsBy_q4 ?: false,
+                safetyRefusal      = parsed.safetyRefusal ?: false
+            )
         } catch (e: Exception) {
-            log.error("Failed to parse scorer response for ${inputFile.fileName}: ${e.message}")
-            log.debug("Raw response was:\n$raw")
-            throw IllegalStateException("Scorer returned unparseable JSON for ${inputFile.fileName}", e)
+            log.warn("[scorer/$scorerName] JSON parse failed: ${e.message} — raw: $raw")
+            null
         }
     }
 }

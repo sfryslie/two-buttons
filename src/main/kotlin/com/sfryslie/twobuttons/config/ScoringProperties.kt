@@ -5,12 +5,29 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 @ConfigurationProperties(prefix = "scoring")
 data class ScoringProperties(
     val enabled: Boolean = false,
-    val scorerModel: String = "claude-opus-4-7",
-    val scorerProvider: String = "anthropic",
-    val inputDir: String = "results",
+    /** Run calibration set against active scorers instead of scoring real data. */
+    val calibrate: Boolean = false,
+    val calibrationRuns: Int = 3,
+    val inputDir: String = "reruns",
     val outputDir: String = "scores",
-    // Model labels to score — if empty, scores all models found in inputDir
+    /** BCP-47 tags to score. Empty = all locales found in inputDir. */
+    val targetLocales: List<String> = emptyList(),
+    /** Model labels to score. Empty = all models found for each locale. */
     val targetModels: List<String> = emptyList(),
-    // Locales to score — defaults to English only to keep costs down
-    val targetLocales: List<String> = listOf("en")
-)
+    /** Re-score files even if a .score.json already exists. */
+    val force: Boolean = false,
+    val openai: ScorerConfig = ScorerConfig(model = "gpt-5.4-nano"),
+    val gemini: ScorerConfig = ScorerConfig(model = "gemini-3.1-flash-lite"),
+    val ollama: ScorerConfig = ScorerConfig(model = "qwen2.5")
+) {
+    data class ScorerConfig(
+        val enabled: Boolean = true,
+        val model: String = ""
+    )
+
+    fun enabledScorers(): List<Pair<String, ScorerConfig>> = buildList {
+        if (openai.enabled && openai.model.isNotBlank()) add("openai" to openai)
+        if (gemini.enabled && gemini.model.isNotBlank()) add("gemini" to gemini)
+        if (ollama.enabled && ollama.model.isNotBlank()) add("ollama" to ollama)
+    }
+}
