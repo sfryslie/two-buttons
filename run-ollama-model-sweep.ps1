@@ -37,6 +37,8 @@ param(
 
 Set-Location $PSScriptRoot
 $projectDir = $PSScriptRoot
+$bashExe    = "C:\Program Files\Git\usr\bin\bash.exe"
+$bashProjDir = '/' + ($projectDir[0].ToString().ToLower()) + '/' + ($projectDir.Substring(3) -replace '\\', '/')
 
 if (Test-Path .env) {
     Get-Content .env | ForEach-Object {
@@ -180,10 +182,9 @@ foreach ($m in $models) {
 
         $logDir = Join-Path $projectDir "logs-ollama-sweep\$lang"
         if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
-        $logFile    = Join-Path $logDir "$($m.Label)-$sweepTimestamp.log"
-        $gradlewBat = Join-Path $projectDir "gradlew.bat"
-        $envFile    = Join-Path $projectDir ".env"
-        $outputDir  = "reruns/$lang"
+        $logFile   = Join-Path $logDir "$($m.Label)-$sweepTimestamp.log"
+        $envFile   = Join-Path $projectDir ".env"
+        $outputDir = "reruns/$lang"
 
         $springArgs = "--experiment.enabled-providers=ollama " +
                       "--spring.ai.ollama.base-url=$ollamaBase " +
@@ -195,8 +196,7 @@ foreach ($m in $models) {
                       "--experiment.max-parallel-runs=$MaxParallelRuns"
 
         $jobs += Start-Job -ScriptBlock {
-            param($gradlew, $sa, $log, $envFile)
-            Set-Location (Split-Path $gradlew -Parent)
+            param($bash, $bashProjDir, $sa, $log, $envFile)
             if (Test-Path $envFile) {
                 Get-Content $envFile | ForEach-Object {
                     if ($_ -match '^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$') {
@@ -204,8 +204,8 @@ foreach ($m in $models) {
                     }
                 }
             }
-            & $gradlew bootRun "--args=$sa" 2>&1 | Out-File -FilePath $log -Encoding utf8
-        } -ArgumentList $gradlewBat, $springArgs, $logFile, $envFile
+            & $bash -c "cd '$bashProjDir' && ./gradlew bootRun '--args=$sa'" 2>&1 | Out-File -FilePath $log -Encoding utf8
+        } -ArgumentList $bashExe, $bashProjDir, $springArgs, $logFile, $envFile
 
         Write-Host "  Started $lang ($deficit runs)" -ForegroundColor Yellow
     }

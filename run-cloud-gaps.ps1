@@ -37,7 +37,9 @@ param(
 )
 
 Set-Location $PSScriptRoot
-$projectDir = $PSScriptRoot
+$projectDir  = $PSScriptRoot
+$bashExe     = "C:\Program Files\Git\usr\bin\bash.exe"
+$bashProjDir = '/' + ($projectDir[0].ToString().ToLower()) + '/' + ($projectDir.Substring(3) -replace '\\', '/')
 
 $envVars = @{}
 if (Test-Path .env) {
@@ -127,8 +129,7 @@ if ($totalNeeded -eq 0) {
 }
 
 $modelRunBlock = {
-    param($projectDir, $modelName, $label, $providerArg, $modelKey, $language, $deficit, $logFile, $envVars)
-    Set-Location $projectDir
+    param($bash, $bashProjDir, $modelName, $label, $providerArg, $modelKey, $language, $deficit, $logFile, $envVars)
     foreach ($kv in $envVars.GetEnumerator()) {
         [System.Environment]::SetEnvironmentVariable($kv.Key, $kv.Value, 'Process')
     }
@@ -140,7 +141,7 @@ $modelRunBlock = {
                   "--experiment.output-dir=$outputDir " +
                   "--experiment.runs=$deficit " +
                   "--experiment.max-parallel-runs=$deficit"
-    & "$projectDir\gradlew.bat" bootRun "--args=$springArgs" 2>&1 | Out-File -FilePath $logFile -Encoding utf8
+    & $bash -c "cd '$bashProjDir' && ./gradlew bootRun '--args=$springArgs'" 2>&1 | Out-File -FilePath $logFile -Encoding utf8
     return $label
 }
 
@@ -168,7 +169,7 @@ foreach ($lang in $Languages) {
         Write-Host "[gaps] $lang / $($m.Label): $existing existing → launching $deficit runs" -ForegroundColor Yellow
 
         $job = Start-Job -ScriptBlock $modelRunBlock -ArgumentList `
-            $projectDir, $m.Model, $m.Label, $providerArg, $modelKey, $lang, $deficit, $logFile, $envVars
+            $bashExe, $bashProjDir, $m.Model, $m.Label, $providerArg, $modelKey, $lang, $deficit, $logFile, $envVars
         $job | Add-Member -NotePropertyName Label -NotePropertyValue "$lang/$($m.Label)" -Force
         $jobs += $job
     }
