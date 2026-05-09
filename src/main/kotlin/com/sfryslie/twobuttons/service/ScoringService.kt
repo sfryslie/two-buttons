@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.google.genai.GoogleGenAiChatModel
 import org.springframework.ai.ollama.OllamaChatModel
-import org.springframework.ai.ollama.api.OllamaOptions
+import org.springframework.ai.ollama.api.OllamaChatOptions
 import org.springframework.ai.openai.OpenAiChatModel
 import org.springframework.ai.openai.OpenAiChatOptions
 import org.springframework.beans.factory.ObjectProvider
@@ -99,7 +99,6 @@ class ScoringService(
                                 .model(config.model)
                                 .temperature(0.0)
                                 .maxTokens(200)
-                                .build()
                         )
                         .call()
                         .content()
@@ -119,7 +118,6 @@ class ScoringService(
                                 .model(config.model)
                                 .temperature(0.0)
                                 .maxOutputTokens(200)
-                                .build()
                         )
                         .call()
                         .content()
@@ -131,11 +129,10 @@ class ScoringService(
                         .system(systemPrompt)
                         .user(userPrompt)
                         .options(
-                            OllamaOptions.builder()
+                            OllamaChatOptions.builder()
                                 .model(config.model)
                                 .temperature(0.0)
                                 .numPredict(200)
-                                .build()
                         )
                         .call()
                         .content()

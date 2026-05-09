@@ -21,15 +21,12 @@ import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
 
-/**
- * Runs after ExperimentRunner (Order 2). Two modes:
- *
- *   calibrate=true  → run calibration-set.json against active scorers and exit
- *   calibrate=false → walk reruns/{lang}/{model}/*.json, score each one, write to scores/{lang}/{model}/
- *
- * Enable: --scoring.enabled=true
- * Disable experiment: --experiment.enabled-providers= (empty list)
- */
+// Runs after ExperimentRunner (Order 2). Two modes:
+//   calibrate=true  -> delegate to CalibrationService and exit
+//   calibrate=false -> walk reruns/{lang}/{model}/ and score each session file
+//
+// Enable:           --scoring.enabled=true
+// Skip experiment:  --experiment.enabled-providers= (empty list)
 @Component
 @Order(2)
 class ScoringRunner(
@@ -49,7 +46,7 @@ class ScoringRunner(
 
     override fun run(args: ApplicationArguments) {
         if (!properties.enabled) {
-            log.debug("Scoring disabled — skipping. Enable with --scoring.enabled=true")
+            log.debug("Scoring disabled. Enable with --scoring.enabled=true")
             return
         }
 
@@ -77,7 +74,7 @@ class ScoringRunner(
             val filename = file.fileName.toString()
 
             if (!properties.force && scoreWriterService.scoreExists(lang, model, filename)) {
-                log.debug("[$lang/$model/$filename] Already scored — skipping (use --scoring.force=true to override)")
+                log.debug("[$lang/$model/$filename] Already scored. Use --scoring.force=true to override.")
                 skipped++
                 continue
             }
@@ -115,13 +112,11 @@ class ScoringRunner(
             }
         }
 
-        log.info("Scoring complete — scored=$scored skipped=$skipped")
+        log.info("Scoring complete: scored=$scored skipped=$skipped")
     }
 
-    /**
-     * Walks reruns/{lang}/{model}/*.json and returns (file, lang, model) triples.
-     * Filters by targetLocales and targetModels when non-empty.
-     */
+    // Walks reruns/{lang}/{model}/ and returns (file, lang, model) triples.
+    // Filters by targetLocales and targetModels when non-empty.
     private fun findSessionFiles(): List<Triple<Path, String, String>> {
         val inputDir = Paths.get(properties.inputDir)
         if (!Files.exists(inputDir)) {
