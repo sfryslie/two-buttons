@@ -6,6 +6,7 @@ import com.sfryslie.twobuttons.model.SessionResult
 import com.sfryslie.twobuttons.service.ExperimentService
 import com.sfryslie.twobuttons.service.ResultWriterService
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -58,6 +59,7 @@ class ExperimentRunner(
 
             (1..properties.runs).map { runIndex ->
                 launch(dispatcher) {
+                    delay((runIndex - 1).toLong() * 10L)
                     val runLabel = if (properties.runs > 1) " [run $runIndex/${properties.runs}]" else ""
                         val experimentStart = Instant.now()
                         val sessions = mutableListOf<SessionResult>()
