@@ -38,6 +38,7 @@ class ExperimentService(private val messageSource: MessageSource) {
 
             val duration = System.currentTimeMillis() - t0
             log.info("[$providerName/$locale] Q$i: answered in ${duration}ms (${text.length} chars)")
+            log.info("[$providerName/$locale] Q$i response: $text")
 
             history.add(AssistantMessage(text))
             responses.add(QuestionResponse(i, question, text, duration))
