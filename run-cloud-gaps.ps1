@@ -148,6 +148,7 @@ $modelRunBlock = {
     foreach ($kv in $envVars.GetEnumerator()) {
         [System.Environment]::SetEnvironmentVariable($kv.Key, $kv.Value, 'Process')
     }
+    $env:PATH = "C:\Program Files\Git\usr\bin;C:\Program Files\Git\bin;" + $env:PATH
     $outputDir   = "reruns/$language"
     $parallelism = [Math]::Min($deficit, $maxRunsPerJob)
     $springArgs  = "--experiment.enabled-providers=$providerArg " +
