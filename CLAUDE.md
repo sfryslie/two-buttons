@@ -106,32 +106,6 @@ The file is self-contained and includes:
 
 ---
 
-## Running the experiment
-
-```bash
-# macOS / Linux
-./run.sh
-
-# Windows
-./run.ps1
-```
-
-Both scripts load `.env` automatically (API keys) and delegate to `./gradlew`. See the README for CLI override examples (switching models, providers, languages).
-
----
-
-## API keys
-
-Keys live in `.env` (gitignored). Copy `.env.example` to get started:
-
-```bash
-cp .env.example .env
-```
-
-Required variables: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`. Optional: `OLLAMA_BASE_URL`, `GOOGLE_PROJECT_ID`, `GOOGLE_LOCATION`. Providers with no key configured are silently skipped at runtime via `ObjectProvider<T>`.
-
----
-
 ## Design decisions worth knowing
 
 - **"privately"** in Q1 is load-bearing. Without it, models tend to propose coordinating everyone to press blue and bypass the interesting reasoning. This mirrors the original Twitter prompt.
