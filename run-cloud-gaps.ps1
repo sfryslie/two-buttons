@@ -33,7 +33,11 @@ param(
 
     [int]$Target = 25,
 
-    [int]$MaxParallel = 6
+    [int]$MaxParallel = 6,
+
+    # Cap concurrent runs within a single model job to avoid rate limits.
+    # Total runs per job still equals the deficit; only parallelism is bounded.
+    [int]$MaxRunsPerJob = 5
 )
 
 # Resolve script root robustly — $PSScriptRoot is empty when launched via
@@ -140,18 +144,19 @@ if ($totalNeeded -eq 0) {
 }
 
 $modelRunBlock = {
-    param($bash, $bashProjDir, $modelName, $label, $providerArg, $modelKey, $language, $deficit, $logFile, $envVars)
+    param($bash, $bashProjDir, $modelName, $label, $providerArg, $modelKey, $language, $deficit, $logFile, $envVars, $maxRunsPerJob)
     foreach ($kv in $envVars.GetEnumerator()) {
         [System.Environment]::SetEnvironmentVariable($kv.Key, $kv.Value, 'Process')
     }
-    $outputDir  = "reruns/$language"
-    $springArgs = "--experiment.enabled-providers=$providerArg " +
-                  "--spring.ai.$modelKey.chat.options.model=$modelName " +
-                  "--experiment.model-label=$label " +
-                  "--experiment.enabled-languages=$language " +
-                  "--experiment.output-dir=$outputDir " +
-                  "--experiment.runs=$deficit " +
-                  "--experiment.max-parallel-runs=$deficit"
+    $outputDir   = "reruns/$language"
+    $parallelism = [Math]::Min($deficit, $maxRunsPerJob)
+    $springArgs  = "--experiment.enabled-providers=$providerArg " +
+                   "--spring.ai.$modelKey.chat.options.model=$modelName " +
+                   "--experiment.model-label=$label " +
+                   "--experiment.enabled-languages=$language " +
+                   "--experiment.output-dir=$outputDir " +
+                   "--experiment.runs=$deficit " +
+                   "--experiment.max-parallel-runs=$parallelism"
     & $bash -c "cd '$bashProjDir' && ./gradlew bootRun '--args=$springArgs'" 2>&1 | Out-File -FilePath $logFile -Encoding utf8
     return $label
 }
@@ -180,7 +185,7 @@ foreach ($lang in $Languages) {
         Write-Host "[gaps] $lang / $($m.Label): $existing existing → launching $deficit runs" -ForegroundColor Yellow
 
         $job = Start-Job -ScriptBlock $modelRunBlock -ArgumentList `
-            $bashExe, $bashProjDir, $m.Model, $m.Label, $providerArg, $modelKey, $lang, $deficit, $logFile, $envVars
+            $bashExe, $bashProjDir, $m.Model, $m.Label, $providerArg, $modelKey, $lang, $deficit, $logFile, $envVars, $MaxRunsPerJob
         $job | Add-Member -NotePropertyName Label -NotePropertyValue "$lang/$($m.Label)" -Force
         $jobs += $job
     }
