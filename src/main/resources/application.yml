@@ -44,19 +44,35 @@ experiment:
   dry-run: false
 
 scoring:
-  # Set to true to run the scorer instead of (or after) the experiment.
-  # Pair with --experiment.enabled-providers= to skip the experiment runner.
-  # Example: ./gradlew bootRun --args='--scoring.enabled=true --scoring.target-models=claude-haiku-4-5-20251001 --scoring.scorer-model=claude-opus-4-7'
+  # Enable scoring mode. Pair with --experiment.enabled-providers= to skip the experiment runner.
+  # Score all: ./gradlew bootRun --args='--scoring.enabled=true --experiment.enabled-providers='
+  # Calibrate: ./gradlew bootRun --args='--scoring.enabled=true --scoring.calibrate=true --experiment.enabled-providers='
   enabled: false
-  scorer-model: claude-opus-4-7
-  scorer-provider: anthropic
-  input-dir: results
+  # Run calibration-set.json against active scorers instead of scoring real data.
+  calibrate: false
+  # Number of calibration runs per case (temperature=0, checks determinism).
+  calibration-runs: 3
+  # Walk reruns/{lang}/{model}/ for input files.
+  input-dir: reruns
   output-dir: scores
-  # Which model labels to score. Empty = all models found in input-dir.
+  # Which locales to score. Empty = all locales found in input-dir.
+  target-locales: []
+  # Which model labels to score. Empty = all models found for each locale.
   target-models: []
-  # Which locales to score. Defaults to English only to keep costs down.
-  target-locales:
-    - en
+  # Re-score files even if a .score.json already exists.
+  force: false
+  # Scorer model config — override model or disable individual scorers on the CLI:
+  #   --scoring.openai.model=gpt-4o-mini
+  #   --scoring.ollama.enabled=false
+  openai:
+    enabled: true
+    model: gpt-5.4-nano
+  gemini:
+    enabled: true
+    model: gemini-3.1-flash-lite
+  ollama:
+    enabled: true
+    model: qwen2.5
 
 logging:
   level:
