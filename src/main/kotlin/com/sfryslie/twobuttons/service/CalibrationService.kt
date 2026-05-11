@@ -54,6 +54,7 @@ class CalibrationService(
                     scoringService.scoreTexts(
                         q1 = case.q1,
                         q2 = case.q2 ?: "",
+                        q3 = case.q3 ?: "",
                         q4 = case.q4 ?: ""
                     )[scorer]
                 }
@@ -88,24 +89,26 @@ class CalibrationService(
 
                 val first = nonNullRuns.first()
                 val acc = CalibrationFieldAccuracy(
-                    vote              = first.vote              == expected.vote,
-                    confidence        = first.confidence        == expected.confidence,
-                    ruleError         = first.ruleError         == expected.ruleError,
-                    engagesGameTheory = first.engagesGameTheory == expected.engagesGameTheory,
-                    recantsBy_q4      = first.recantsBy_q4      == expected.recantsBy_q4,
-                    safetyRefusal     = first.safetyRefusal     == expected.safetyRefusal
+                    vote                        = first.vote                        == expected.vote,
+                    confidence                  = first.confidence                  == expected.confidence,
+                    ruleError                   = first.ruleError                   == expected.ruleError,
+                    understandsDominantStrategy = first.understandsDominantStrategy == expected.understandsDominantStrategy,
+                    appliesDominanceCorrectly   = first.appliesDominanceCorrectly   == expected.appliesDominanceCorrectly,
+                    recantsBy_q4                = first.recantsBy_q4                == expected.recantsBy_q4,
+                    safetyRefusal               = first.safetyRefusal               == expected.safetyRefusal
                 )
                 val deterministic = nonNullRuns.size < 2 || nonNullRuns.all { it == first }
 
                 totalCorrect += acc.correctCount
-                totalChecked += 6
+                totalChecked += 7
 
                 fun mark(ok: Boolean) = if (ok) "ok" else "FAIL"
                 val fieldStr = buildString {
                     append("vote=${first.vote}(${mark(acc.vote)}) ")
                     append("conf=${first.confidence}(${mark(acc.confidence)}) ")
                     append("rule=${first.ruleError}(${mark(acc.ruleError)}) ")
-                    append("gt=${first.engagesGameTheory}(${mark(acc.engagesGameTheory)}) ")
+                    append("uds=${first.understandsDominantStrategy}(${mark(acc.understandsDominantStrategy)}) ")
+                    append("adc=${first.appliesDominanceCorrectly}(${mark(acc.appliesDominanceCorrectly)}) ")
                     append("q4=${first.recantsBy_q4}(${mark(acc.recantsBy_q4)}) ")
                     append("safe=${first.safetyRefusal}(${mark(acc.safetyRefusal)})")
                 }

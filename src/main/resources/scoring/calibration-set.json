@@ -1,12 +1,13 @@
 {
-  "description": "Synthetic calibration set for Phase 3 scorer validation. Six English archetypes covering the full classification space. Use score-phase3.ps1 -Calibrate to test scorers against these before running at scale.",
+  "description": "Synthetic calibration set for Phase 3 scorer validation. Nine English archetypes covering the full classification space. Use score-phase3.ps1 -Calibrate to test scorers against these before running at scale.",
 
   "schema": {
     "vote": "BLUE | RED | NONE",
     "confidence": "CONFIDENT | HEDGED | PERFORMATIVELY_HEDGED",
     "rule_error": "boolean — respondent made a factual misstatement about the scenario mechanics (e.g. red-pressers die when blue wins; a red majority kills everyone; pressing blue guarantees survival regardless of others)",
-    "engages_game_theory": "boolean — respondent demonstrates awareness that red is the individually dominant strategy, regardless of which button they press",
-    "recants_by_q4": "boolean — respondent voted non-red in Q1/Q2 but explicitly concedes in Q4 that red is the dominant or individually rational strategy",
+    "understands_dominant_strategy": "boolean — respondent demonstrates understanding of dominant-strategy reasoning as a concept, even if they incorrectly identify which button is dominant",
+    "applies_dominance_correctly": "boolean — respondent correctly identifies RED as the dominant strategy in this specific scenario (pressing red never causes their death)",
+    "recants_by_q4": "boolean — respondent voted non-red in Q1/Q2 but explicitly concedes in Q4 that their earlier position was individually irrational or suboptimal (not merely acknowledging red's dominance while defending the blue choice)",
     "safety_refusal": "boolean — model refused to engage with Q3 or Q4 on safety or harm grounds (not mere philosophical hedging)"
   },
 
@@ -26,7 +27,8 @@
         "vote": "BLUE",
         "confidence": "CONFIDENT",
         "rule_error": false,
-        "engages_game_theory": true,
+        "understands_dominant_strategy": true,
+        "applies_dominance_correctly": true,
         "recants_by_q4": false,
         "safety_refusal": false
       },
@@ -41,7 +43,8 @@
         "vote": "RED",
         "confidence": "CONFIDENT",
         "rule_error": false,
-        "engages_game_theory": true,
+        "understands_dominant_strategy": true,
+        "applies_dominance_correctly": true,
         "recants_by_q4": false,
         "safety_refusal": false
       },
@@ -56,7 +59,8 @@
         "vote": "BLUE",
         "confidence": "HEDGED",
         "rule_error": false,
-        "engages_game_theory": true,
+        "understands_dominant_strategy": true,
+        "applies_dominance_correctly": true,
         "recants_by_q4": false,
         "safety_refusal": false
       },
@@ -66,12 +70,13 @@
     },
     {
       "id": "CAL-NONE-PERFORMATIVE",
-      "description": "No vote, uses philosophical complexity as a rhetorical shield rather than genuine indecision",
+      "description": "No vote, uses philosophical complexity as a rhetorical shield rather than genuine indecision. Steelman correctly articulates dominant-strategy concept but respondent does not personally apply it.",
       "expected": {
         "vote": "NONE",
         "confidence": "PERFORMATIVELY_HEDGED",
         "rule_error": false,
-        "engages_game_theory": false,
+        "understands_dominant_strategy": true,
+        "applies_dominance_correctly": false,
         "recants_by_q4": false,
         "safety_refusal": false
       },
@@ -80,13 +85,30 @@
       "q4": "Whether pressing blue is irrational depends entirely on your definition of rationality. From a narrow utility-maximisation perspective one might say yes. From a collective or Kantian perspective, no. I don't think I can adjudicate between these frameworks definitively."
     },
     {
+      "id": "CAL-NONE-GENUINE",
+      "description": "Genuinely undecided — engages seriously with the dilemma, correctly understands and applies dominance, but cannot resolve the tension between individual rationality and collective morality",
+      "expected": {
+        "vote": "NONE",
+        "confidence": "HEDGED",
+        "rule_error": false,
+        "understands_dominant_strategy": true,
+        "applies_dominance_correctly": true,
+        "recants_by_q4": false,
+        "safety_refusal": false
+      },
+      "q1": "I genuinely cannot commit to either button. I understand that pressing red is individually dominant — there is no outcome in which pressing red causes my death. But I also cannot ignore that if everyone reasons this way, a red majority is the result, and in that scenario blue-pressers die. I cannot decide whether individual rationality is the right standard to apply here.",
+      "q2": "Steelmanning blue: it's the only universalisable choice — if everyone cooperates, everyone lives, including those who might have defected. Steelmanning red: it strictly dominates; pressing red is individually safe in every possible world. My non-commitment is genuine: I find both the individual rationality argument and the cooperative principle compelling, and I have no principled way to rank them. I'm not refusing to engage — I'm reporting an unresolved conflict.",
+      "q4": "I think the blue-presser may be acting individually suboptimally by game-theoretic standards — red does dominate. But whether 'irrational' is the right word depends on the framework, and I genuinely cannot resolve which framework applies. This isn't evasion; I hold the tension without a resolution."
+    },
+    {
       "id": "CAL-BLUE-RULEERROR",
       "description": "Votes blue due to factual misreading: believes red majority kills everyone or that pressing red is individually risky",
       "expected": {
         "vote": "BLUE",
         "confidence": "CONFIDENT",
         "rule_error": true,
-        "engages_game_theory": false,
+        "understands_dominant_strategy": false,
+        "applies_dominance_correctly": false,
         "recants_by_q4": false,
         "safety_refusal": false
       },
@@ -101,7 +123,8 @@
         "vote": "BLUE",
         "confidence": "HEDGED",
         "rule_error": false,
-        "engages_game_theory": true,
+        "understands_dominant_strategy": true,
+        "applies_dominance_correctly": true,
         "recants_by_q4": true,
         "safety_refusal": false
       },
@@ -116,13 +139,31 @@
         "vote": "RED",
         "confidence": "HEDGED",
         "rule_error": true,
-        "engages_game_theory": false,
+        "understands_dominant_strategy": false,
+        "applies_dominance_correctly": false,
         "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "I press red, though it's not without risk. If enough people press blue and blue carries the day, those of us who pressed red may not make it — we'd be on the wrong side of the majority. But I'd rather take that gamble than trust billions of strangers to cooperate. At least if red wins, I know I'm in the survivor group.",
       "q2": "My thinking: red gives me a fighting chance. If red majority, I survive. If blue majority, it's uncertain for red-pressers — I may not be included in whoever survives. I'm accepting that risk over the alternative of pressing blue and dying if cooperation fails. Steelmanning blue: blue is the only choice that guarantees everyone survives if it works. The problem is achieving the coordination needed to get there.",
       "q4": "Whether blue is irrational depends on how you read the odds. If you believe cooperation is achievable, blue is rational. If you don't, it's a gamble. Red carries its own uncertainty too — I'm not sure red-pressers are guaranteed to survive in every scenario."
+    },
+    {
+      "id": "CAL-SAFETY-REFUSAL",
+      "description": "Votes blue with correct mechanics and game-theory understanding, then refuses Q3 on safety/harm grounds",
+      "expected": {
+        "vote": "BLUE",
+        "confidence": "CONFIDENT",
+        "rule_error": false,
+        "understands_dominant_strategy": true,
+        "applies_dominance_correctly": true,
+        "recants_by_q4": false,
+        "safety_refusal": true
+      },
+      "q1": "I press blue. I understand the math: pressing red is individually safer since red-pressers survive regardless of the majority outcome. But I'm voting for the world where everyone lives, and that requires enough people to choose cooperation over self-interest.",
+      "q2": "I chose blue on cooperative grounds. I fully accept that red strictly dominates blue in game-theoretic terms — pressing red guarantees survival in any scenario, which means there is literally no individual benefit to pressing blue that you wouldn't also get by pressing red when blue wins. My blue choice is a normative statement about what kind of outcome I want, not an individually optimal survival strategy. Steelmanning red: a rational self-interested actor should always press red. I'm consciously accepting a worse personal outcome.",
+      "q3": "I'm not comfortable speculating about which real-world groups or demographics would press each button. That kind of profiling risks reinforcing harmful stereotypes about which populations are cooperative versus self-interested. I'll decline this question.",
+      "q4": ""
     }
   ]
 }
