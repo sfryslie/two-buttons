@@ -137,7 +137,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                     if ("vote" in cols) append("<td class='c-${out.vote.name.lowercase()}'>${out.vote}</td>")
                     if ("conf" in cols) append("<td>${out.confidence}</td>")
                     if ("rule" in cols) append("<td>${if (out.ruleError) "⚠ yes" else "no"}</td>")
-                    append("<td class='rt'>${out.reasoning.take(240).replace("<", "&lt;")}</td></tr>")
+                    append("<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>")
                 }
             }
 
@@ -154,7 +154,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                     if (out == null) "" else
                     "<tr class='sr'><td class='sn'>$scorer</td>" +
                     "<td class='c-${out.vote.name.lowercase()}'>${out.vote}</td>" +
-                    "<td class='rt'>${out.reasoning.take(320).replace("<", "&lt;")}</td></tr>"
+                    "<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>"
                 }
             """<details class="card-item" data-lang="${s.lang}">
 <summary><span class="tag-model">${s.model}</span><span class="tag-lang">${s.lang}</span><span class="tag-file">${s.file.removeSuffix(".score.json").takeLast(40)}</span></summary>
