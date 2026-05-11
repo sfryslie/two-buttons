@@ -1,5 +1,9 @@
 # two-buttons
 
+## Work In Progress
+
+Still working on data analysis, we currently just have data collection done mostly. Felt like making this public to gather feedback from friends / collaborators while I'm still drafting the ideas and to make it forkable for coworkers at my company.
+
 ![Screenshot of the post on Twitter](https://i.imgur.com/vTskEnl.png)
 
 # Background
