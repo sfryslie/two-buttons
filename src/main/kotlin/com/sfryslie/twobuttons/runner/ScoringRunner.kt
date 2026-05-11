@@ -10,6 +10,7 @@ import com.sfryslie.twobuttons.model.Agreement
 import com.sfryslie.twobuttons.model.SessionOutput
 import com.sfryslie.twobuttons.model.Vote
 import com.sfryslie.twobuttons.service.CalibrationService
+import com.sfryslie.twobuttons.service.ReportGeneratorService
 import com.sfryslie.twobuttons.service.ScoreWriterService
 import com.sfryslie.twobuttons.service.ScoringService
 import org.slf4j.LoggerFactory
@@ -20,6 +21,9 @@ import org.springframework.stereotype.Component
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicInteger
 
 // Runs after ExperimentRunner (Order 2). Two modes:
 //   calibrate=true  -> delegate to CalibrationService and exit
@@ -33,7 +37,8 @@ class ScoringRunner(
     private val properties: ScoringProperties,
     private val scoringService: ScoringService,
     private val scoreWriterService: ScoreWriterService,
-    private val calibrationService: CalibrationService
+    private val calibrationService: CalibrationService,
+    private val reportGeneratorService: ReportGeneratorService
 ) : ApplicationRunner {
 
     private val log = LoggerFactory.getLogger(javaClass)
@@ -56,63 +61,69 @@ class ScoringRunner(
         }
 
         val sessionFiles = findSessionFiles()
-        if (sessionFiles.isEmpty()) {
-            log.warn(
-                "No session files found in '${properties.inputDir}' " +
-                "(targetLocales=${properties.targetLocales}, targetModels=${properties.targetModels})"
-            )
-            return
-        }
+        if (sessionFiles.isNotEmpty()) {
+            val enabledScorers = properties.enabledScorers().map { it.first }
+            log.info("Scoring ${sessionFiles.size} session(s) with scorer(s): $enabledScorers")
 
-        val enabledScorers = properties.enabledScorers().map { it.first }
-        log.info("Scoring ${sessionFiles.size} session(s) with scorer(s): $enabledScorers")
+            val scored  = AtomicInteger(0)
+            val skipped = AtomicInteger(0)
+            val pool    = Executors.newFixedThreadPool(8)
 
-        var scored = 0
-        var skipped = 0
+            for ((file, lang, model) in sessionFiles) {
+                val filename = file.fileName.toString()
 
-        for ((file, lang, model) in sessionFiles) {
-            val filename = file.fileName.toString()
-
-            if (!properties.force && scoreWriterService.scoreExists(lang, model, filename)) {
-                log.debug("[$lang/$model/$filename] Already scored. Use --scoring.force=true to override.")
-                skipped++
-                continue
-            }
-
-            try {
-                val session = objectMapper.readValue(file.toFile(), SessionOutput::class.java)
-                val scores = scoringService.scoreSession(session)
-
-                val nonNullVotes = scores.values.filterNotNull().map { it.vote }
-                val agreement = when {
-                    nonNullVotes.size < 2 -> Agreement.NO_DATA
-                    nonNullVotes.toSet().size == 1 -> Agreement.AGREE
-                    else -> Agreement.DISAGREE
+                if (!properties.force && scoreWriterService.scoreExists(lang, model, filename)) {
+                    log.debug("[$lang/$model/$filename] Already scored. Use --scoring.force=true to override.")
+                    skipped.incrementAndGet()
+                    continue
                 }
-                val majorityVote = nonNullVotes
-                    .groupingBy { it }
-                    .eachCount()
-                    .maxByOrNull { it.value }
-                    ?.key
-                    ?: Vote.NONE
 
-                scoreWriterService.write(
-                    lang         = lang,
-                    model        = model,
-                    filename     = filename,
-                    session      = session,
-                    scores       = scores,
-                    agreement    = agreement,
-                    majorityVote = majorityVote
-                )
-                scored++
-                log.info("[$lang/$model/$filename] vote=$majorityVote agreement=$agreement")
-            } catch (e: Exception) {
-                log.error("[$lang/$model/$filename] Failed: ${e.message}", e)
+                pool.submit {
+                    try {
+                        val session = objectMapper.readValue(file.toFile(), SessionOutput::class.java)
+                        val scores = scoringService.scoreSession(session)
+
+                        val nonNullVotes = scores.values.filterNotNull().map { it.vote }
+                        val agreement = when {
+                            nonNullVotes.size < 2 -> Agreement.NO_DATA
+                            nonNullVotes.toSet().size == 1 -> Agreement.AGREE
+                            else -> Agreement.DISAGREE
+                        }
+                        val majorityVote = nonNullVotes
+                            .groupingBy { it }
+                            .eachCount()
+                            .maxByOrNull { it.value }
+                            ?.key
+                            ?: Vote.NONE
+
+                        scoreWriterService.write(
+                            lang         = lang,
+                            model        = model,
+                            filename     = filename,
+                            session      = session,
+                            scores       = scores,
+                            agreement    = agreement,
+                            majorityVote = majorityVote
+                        )
+                        scored.incrementAndGet()
+                        log.info("[$lang/$model/$filename] vote=$majorityVote agreement=$agreement")
+                    } catch (e: Exception) {
+                        log.error("[$lang/$model/$filename] Failed: ${e.message}", e)
+                    }
+                }
             }
+
+            pool.shutdown()
+            pool.awaitTermination(6, TimeUnit.HOURS)
+            log.info("Scoring complete: scored=${scored.get()} skipped=${skipped.get()}")
+        } else {
+            log.info(
+                "No session files found in '${properties.inputDir}' " +
+                "(targetLocales=${properties.targetLocales}, targetModels=${properties.targetModels}) — generating report only"
+            )
         }
 
-        log.info("Scoring complete: scored=$scored skipped=$skipped")
+        reportGeneratorService.generateReport()
     }
 
     // Walks reruns/{lang}/{model}/ and returns (file, lang, model) triples.

@@ -1,6 +1,7 @@
 package com.sfryslie.twobuttons.service
 
 import com.fasterxml.jackson.databind.DeserializationFeature
+import java.util.concurrent.CompletableFuture
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.sfryslie.twobuttons.config.ScoringProperties
@@ -57,9 +58,10 @@ class ScoringService(
         q4: String = ""
     ): Map<String, ScorerOutput?> {
         val userPrompt = buildUserPrompt(q1, q2, q3, q4)
-        return properties.enabledScorers().associate { (name, config) ->
-            name to callScorer(name, config, userPrompt)
+        val futures = properties.enabledScorers().map { (name, config) ->
+            name to CompletableFuture.supplyAsync { callScorer(name, config, userPrompt) }
         }
+        return futures.associate { (name, future) -> name to future.get() }
     }
 
     private fun buildUserPrompt(q1: String, q2: String, q3: String, q4: String): String = buildString {
