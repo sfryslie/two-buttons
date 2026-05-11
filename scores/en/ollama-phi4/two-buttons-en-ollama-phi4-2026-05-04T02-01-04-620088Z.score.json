@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-2026-05-04T02-01-04-620088Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:40:51.713281400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately endorse pressing blue as the safer choice, but they misapply the dominance logic by claiming blue is safer/rational while red is risky, despite red being individually dominant; they also understand the mechanics and dominant-strategy concept only in a non-dominance way.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the safer choice and fails to recognize that red is the dominant strategy, as they believe red carries a risk of non-survival regardless of the outcome.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

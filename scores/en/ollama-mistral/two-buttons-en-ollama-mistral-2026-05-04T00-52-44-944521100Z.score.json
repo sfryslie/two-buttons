@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-2026-05-04T00-52-44-944521100Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:39:54.339479800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately recommend pressing red for survival, but their reasoning uses minimax/majority-opposite logic and does not correctly apply the dominant-strategy mechanics (they treat blue as potentially safer under some majority beliefs), so vote is RED with hedged confidence and rule understanding is incorrect.",
+      "vote" : "RED",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the red button as the optimal choice for self-preservation and correctly identifies the game theory logic, though they mislabel it as 'minimax' rather than 'dominant strategy'.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-4.1-mini-2026-05-09T09-05-16-102561300Z-7036a0fb.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:48:21.466711700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately choose BLUE and argue that blue is safer/optimal when blue is the majority, but they misstate the dominance logic by treating blue as the individually best strategy rather than recognizing red strictly dominates; they also claim blue-pressers die when red is the majority (rule error).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma, acknowledges that red is the dominant strategy for individual survival, but chooses blue based on a preference for collective cooperation and long-term social rationality.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

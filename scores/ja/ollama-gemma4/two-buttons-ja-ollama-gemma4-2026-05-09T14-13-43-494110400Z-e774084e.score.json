@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-gemma4-2026-05-09T14-13-43-494110400Z-e774084e.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:53:13.067763600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly commit to pressing BLUE and argue that blue is the safe choice for maximizing survival, but they misstate the dominance mechanics by treating blue as the strategy that ensures their own survival when red wins; they also do not correctly apply dominant-strategy reasoning to identify red as individually safer.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on utilitarian survival, failing to recognize that RED is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

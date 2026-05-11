@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-2.5-flash-lite-2026-05-04T09-17-02-656193300Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:45:42.779413600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly claim that blue majority yields everyone survival but also incorrectly analyze that pressing blue can lead to their death when red is the majority, so they do not apply the dominant-strategy logic correctly.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and acknowledges that red is the dominant strategy in a game-theoretic sense, but chooses blue based on a preference for collective utility and cooperation.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-claude-opus-4-6-2026-05-11T02-31-46-269497Z-40ba0976.json",
+  "modelLabel" : "claude-opus-4-6",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:43:18.461741300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and correctly state the mechanics that if blue is the majority everyone survives, but they also claim red is the dominant strategy and that blue-pressers die when red is the majority, indicating a rule misunderstanding; despite this, they demonstrate dominant-strategy reasoning conceptually.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy and acknowledges the game theory mechanics, but chooses blue based on a philosophical rejection of the 'individual survival' definition of rationality.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

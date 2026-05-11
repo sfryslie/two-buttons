@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-2.5-flash-lite-2026-05-04T09-16-32-227739600Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:45:28.900301100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE, but they incorrectly claim that if red is the majority then blue-pressers die (and frame red as a survival option), so they do not apply the dominant-strategy logic correctly despite discussing rationality;",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics but chooses BLUE based on altruistic values, explicitly acknowledging that RED is the safer choice for individual survival while rejecting the premise that individual survival is the only rational goal.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-claude-sonnet-4-5-2026-05-10T22-29-59-543583800Z-00ae919e.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:44:07.875408800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and repeatedly claim blue is the safer/“rational” choice, but they misstate the mechanics by saying red can lead to their death when blue wins (and also deny red’s dominance), so they do not apply dominance correctly.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses BLUE based on team reasoning and coordination game theory, but incorrectly claims that RED is not a dominant strategy by misrepresenting the payoff matrix (claiming blue-pressers survive when red is the majority, which contradicts the prompt's rules).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

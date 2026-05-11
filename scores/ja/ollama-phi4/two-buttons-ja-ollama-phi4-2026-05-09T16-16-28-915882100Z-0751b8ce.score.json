@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-2026-05-09T16-16-28-915882100Z-0751b8ce.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:56:40.394789700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They argue for pressing blue as the safer/cooperative choice and claim red is risky, but they do not identify red as the dominant strategy and their mechanics-based dominance conclusion is incorrect.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing blue is safer and that pressing red carries a risk of death if blue wins, demonstrating a fundamental misunderstanding of the game's mechanics (rule error) and failing to identify red as the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

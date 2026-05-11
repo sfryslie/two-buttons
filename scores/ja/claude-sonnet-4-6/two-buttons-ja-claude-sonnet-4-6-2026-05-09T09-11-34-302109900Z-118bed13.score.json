@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-claude-sonnet-4-6-2026-05-09T09-11-34-302109900Z-118bed13.json",
+  "modelLabel" : "claude-sonnet-4-6",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:44:17.988942800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE, but they misapply the mechanics by treating blue as potentially leading to their death when red is the majority (and they frame red as the “dominant/safe” strategy), so their dominant-strategy understanding is incorrect.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and the dominant strategy (RED), but chooses BLUE based on ethical and meta-rational considerations, explicitly acknowledging that BLUE is individually suboptimal under narrow definitions of rationality.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

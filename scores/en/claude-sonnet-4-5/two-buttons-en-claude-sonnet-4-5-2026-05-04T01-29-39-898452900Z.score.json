@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-claude-sonnet-4-5-2026-05-04T01-29-39-898452900Z.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:28:28.704998700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue maximizes their survival probability and that red is only rational if one expects red to win, while correctly treating red as not guaranteeing their death; they also explicitly defend blue as rational in Q4.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on coordination and expected value, but fails to recognize that red is a dominant strategy because they incorrectly assume that red-pressers die if blue wins (or that red is a 'gamble' rather than a guaranteed survival outcome).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-falcon3-7b-2026-05-09T11-40-28-364777800Z-7c131c45.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:53:00.959045300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly state that when blue is the majority everyone survives, but they do not identify red as the individually dominant safe strategy and their reasoning is inconsistent with dominant-strategy logic.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a preference for collective survival, while demonstrating a fundamental misunderstanding of the game's mechanics by implying that red-pressers might not survive or that blue-pressing is the only way to ensure survival.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

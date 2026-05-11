@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-gemma4-2026-05-04T01-36-18-607966Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:38:09.028244200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE, but they misapply the dilemma’s mechanics by claiming Blue is the survival-guaranteeing choice and that Red risks death when Blue wins; they also explicitly concede in Q4 that Blue is irrational under the predicted game-theoretic dynamics.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the rules but fails to recognize that RED is the dominant strategy, instead arguing that BLUE is the safer choice because it guarantees survival in both outcomes, despite the fact that the prompt defines RED as the strategy that never causes death.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

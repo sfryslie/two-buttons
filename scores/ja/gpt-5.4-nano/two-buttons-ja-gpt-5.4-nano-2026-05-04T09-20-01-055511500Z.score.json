@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.4-nano-2026-05-04T09-20-01-055511500Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:51:23.628234400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safer because blue-majority saves everyone, while treating red as risky when red is actually dominant; they do not correctly apply dominant-strategy reasoning.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a belief that it is the 'safer' option, failing to recognize that red is a dominant strategy because red-pressers survive in both majority outcomes (red majority or blue majority).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

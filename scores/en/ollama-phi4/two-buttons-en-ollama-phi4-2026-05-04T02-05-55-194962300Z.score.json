@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-2026-05-04T02-05-55-194962300Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:41:20.603643400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately argue for pressing blue as the safer/collectively beneficial choice and never identify red as the dominant strategy that guarantees individual survival, indicating incorrect dominance application.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies blue as the preferred choice based on a desire for collective survival, but fails to recognize that red is the dominant strategy because they incorrectly believe red-pressers risk extinction if the majority chooses blue.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

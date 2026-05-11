@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-gemma4-2026-05-09T13-04-17-539759Z-4b171652.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:53:07.613702600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is the safer choice because it maximizes the chance of everyone surviving, without any rule-mechanics misunderstanding.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on utilitarian and social-psychological reasoning, failing to recognize that red is the dominant strategy because they incorrectly assume that red-pressers die if blue wins (a rule error).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

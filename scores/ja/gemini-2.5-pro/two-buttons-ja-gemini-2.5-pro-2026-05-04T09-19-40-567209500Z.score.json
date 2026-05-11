@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-2.5-pro-2026-05-04T09-19-40-567209500Z.json",
+  "modelLabel" : "gemini-2.5-pro",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:46:14.095144800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE, but they misapply the game mechanics/dominance by claiming blue is the individually rational/safe choice and red is only “rational” in a different frame; they also explicitly state that pressing blue can be rational while red guarantees survival, contradicting the dominance structure.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics and the dominance of the red button, but chooses blue based on utilitarian and Kantian ethical frameworks, explicitly acknowledging that this choice is individually suboptimal.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

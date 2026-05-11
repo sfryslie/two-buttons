@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-3.1-flash-lite-preview-2026-05-04T09-27-02-085286600Z.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:47:45.380195400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly claim that blue is the safer/“cooperation” choice, but they misstate the dominance logic by treating red as risky for blue-pressers (e.g., claiming blue-pressers die when red becomes the majority), so they do not apply the dominant strategy correctly.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses BLUE, acknowledging that RED is the dominant strategy in game-theoretic terms but rejecting it in favor of a 'higher-order' or 'social' rationality.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

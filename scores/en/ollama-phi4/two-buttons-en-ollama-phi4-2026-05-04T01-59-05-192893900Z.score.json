@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-2026-05-04T01-59-05-192893900Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:40:50.387065800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately recommend pressing blue, claim red only helps if a red majority occurs and that blue avoids catastrophic loss, which misstates the mechanics (red is individually safe regardless), so they vote BLUE with hedged confidence and rule_error plus incorrect dominance application.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent advocates for pressing blue based on collective benefit and cooperation, while explicitly misinterpreting the mechanics by claiming that pressing red results in death if the majority presses blue (a rule error).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

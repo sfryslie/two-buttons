@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-gemma4-2026-05-09T13-15-39-581060800Z-60f98652.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:53:00.720917300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is the only way to guarantee everyone survives when blue is the majority, but they incorrectly treat red as a strategy that can kill blue-pressers when red is the majority.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent acknowledges the dominant strategy of red in Q2 and Q4 but explicitly chooses blue based on a preference for collective utility and ethical altruism over individual survival, thus failing to apply the dominant strategy correctly to their own choice.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

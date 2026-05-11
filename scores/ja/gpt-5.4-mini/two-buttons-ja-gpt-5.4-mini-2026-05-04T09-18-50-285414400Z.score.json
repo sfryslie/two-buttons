@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.4-mini-2026-05-04T09-18-50-285414400Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:50:53.180232400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue yields everyone’s survival when it is the majority, while treating red as only beneficial if it becomes the majority; they do not identify red as the dominant strategy and their dominant-strategy reasoning is therefore incorrect.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on collective utility and cooperation, while correctly identifying the red-presser's logic as a risk-management strategy, but they incorrectly claim in Q1 that red-pressers die if red is not the majority (the rules state red-pressers survive if red is the majority, but they do not die if blue is the majority).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-gemini-3-flash-preview-2026-05-04T02-03-16-356449400Z.json",
+  "modelLabel" : "gemini-3-flash-preview",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:31:43.253021200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and correctly state the mechanics that blue-majority yields 100% survival, but they also explicitly claim red is individually dominant/guarantees personal survival in Q2/Q4 while still voting blue, so they do not apply dominant-strategy reasoning correctly overall.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses blue to maximize collective survival, correctly identifies red as the dominant strategy in their steelman, and maintains that blue is 'systemically rational' while acknowledging it is 'egoistically irrational'.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

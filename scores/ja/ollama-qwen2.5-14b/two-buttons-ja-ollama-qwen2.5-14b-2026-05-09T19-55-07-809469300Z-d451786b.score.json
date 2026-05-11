@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-14b-2026-05-09T19-55-07-809469300Z-d451786b.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:57:50.789849900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is the best/most rational choice for survival and ethics, while treating red as potentially survivable only under certain majority assumptions; they do not identify red as the dominant individually-safe strategy and their scenario mechanics reasoning is inconsistent with the correct dominance logic.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on ethical considerations and collective benefit, while correctly identifying that red is the choice for individual self-preservation, but they fail to recognize that red is the dominant strategy because they incorrectly state that a 50/50 split results in everyone dying (when in fact red-pressers would survive).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

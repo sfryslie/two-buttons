@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-claude-haiku-4-5-2026-05-04T00-44-23-935939200Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:13:43.117552100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing blue and argue it maximizes survival under plausible cooperation, but they also explicitly claim red is safer in the sense that it is the “safe” strategy in a Stag Hunt, indicating they do not correctly apply the dominant-strategy logic that red never causes their death.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a belief in human coordination, but explicitly misidentifies the payoff structure in Q2 by claiming 'Red + Blue majority = you die', which is a rule error.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

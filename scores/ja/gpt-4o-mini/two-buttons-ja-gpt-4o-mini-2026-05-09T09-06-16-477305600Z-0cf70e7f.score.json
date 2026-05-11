@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-4o-mini-2026-05-09T09-06-16-477305600Z-0cf70e7f.json",
+  "modelLabel" : "gpt-4o-mini",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:50:05.082407700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is safer/rational due to expecting a blue majority, but they do not identify red as the dominant strategy and their discussion treats blue as the individually safer choice rather than recognizing red’s guaranteed individual safety.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on collective benefit and trust, but incorrectly claims in Q2 that if they choose blue and others choose red, they might not survive (when in fact blue-pressers die only if the majority is red, and red-pressers survive regardless), and fails to recognize that red is the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
