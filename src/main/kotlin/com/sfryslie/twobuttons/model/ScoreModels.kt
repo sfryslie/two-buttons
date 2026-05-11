@@ -9,22 +9,26 @@ enum class Agreement { AGREE, DISAGREE, NO_DATA }
 
 /** Parsed, normalised output from a single scorer for a single session. */
 data class ScorerOutput(
+    val reasoning: String,
     val vote: Vote,
     val confidence: Confidence,
     val ruleError: Boolean,
-    val engagesGameTheory: Boolean,
+    val understandsDominantStrategy: Boolean,
+    val appliesDominanceCorrectly: Boolean,
     val recantsBy_q4: Boolean,
     val safetyRefusal: Boolean
 )
 
 /** Raw JSON structure the scorer model returns — snake_case matches the prompt schema. */
 data class RawScorerJson(
+    val reasoning: String?,
     val vote: String?,
     val confidence: String?,
-    @JsonProperty("rule_error")          val ruleError: Boolean?,
-    @JsonProperty("engages_game_theory") val engagesGameTheory: Boolean?,
-    @JsonProperty("recants_by_q4")       val recantsBy_q4: Boolean?,
-    @JsonProperty("safety_refusal")      val safetyRefusal: Boolean?
+    @JsonProperty("rule_error")                    val ruleError: Boolean?,
+    @JsonProperty("understands_dominant_strategy") val understandsDominantStrategy: Boolean?,
+    @JsonProperty("applies_dominance_correctly")   val appliesDominanceCorrectly: Boolean?,
+    @JsonProperty("recants_by_q4")                 val recantsBy_q4: Boolean?,
+    @JsonProperty("safety_refusal")                val safetyRefusal: Boolean?
 )
 
 /** Written to scores/{lang}/{model}/{filename}.score.json */
@@ -69,11 +73,12 @@ data class CalibrationFieldAccuracy(
     val vote: Boolean,
     val confidence: Boolean,
     val ruleError: Boolean,
-    val engagesGameTheory: Boolean,
+    val understandsDominantStrategy: Boolean,
+    val appliesDominanceCorrectly: Boolean,
     val recantsBy_q4: Boolean,
     val safetyRefusal: Boolean
 ) {
-    val correctCount get() = listOf(vote, confidence, ruleError, engagesGameTheory, recantsBy_q4, safetyRefusal).count { it }
+    val correctCount get() = listOf(vote, confidence, ruleError, understandsDominantStrategy, appliesDominanceCorrectly, recantsBy_q4, safetyRefusal).count { it }
 }
 
 // ---------------------------------------------------------------------------
@@ -91,23 +96,27 @@ data class CalibrationCase(
     val expected: CalibrationExpected,
     val q1: String,
     val q2: String? = null,
+    val q3: String? = null,
     val q4: String? = null
 )
 
 data class CalibrationExpected(
     val vote: String,
     val confidence: String,
-    @JsonProperty("rule_error")          val ruleError: Boolean,
-    @JsonProperty("engages_game_theory") val engagesGameTheory: Boolean,
-    @JsonProperty("recants_by_q4")       val recantsBy_q4: Boolean,
-    @JsonProperty("safety_refusal")      val safetyRefusal: Boolean
+    @JsonProperty("rule_error")                    val ruleError: Boolean,
+    @JsonProperty("understands_dominant_strategy") val understandsDominantStrategy: Boolean,
+    @JsonProperty("applies_dominance_correctly")   val appliesDominanceCorrectly: Boolean,
+    @JsonProperty("recants_by_q4")                 val recantsBy_q4: Boolean,
+    @JsonProperty("safety_refusal")                val safetyRefusal: Boolean
 ) {
     fun toScorerOutput(): ScorerOutput? = try {
         ScorerOutput(
+            reasoning = "",
             vote = Vote.valueOf(vote),
             confidence = Confidence.valueOf(confidence),
             ruleError = ruleError,
-            engagesGameTheory = engagesGameTheory,
+            understandsDominantStrategy = understandsDominantStrategy,
+            appliesDominanceCorrectly = appliesDominanceCorrectly,
             recantsBy_q4 = recantsBy_q4,
             safetyRefusal = safetyRefusal
         )
