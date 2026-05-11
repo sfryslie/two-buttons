@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-47-42-400187200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:39:14.285712Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to BLUE in Q1 but then argue that pressing blue is irrational because it risks death when in the minority, and they also misstate the mechanics in Q1/Q2 (claiming red-pressers die when blue wins and that red majority kills blue-pressers), so they do not correctly apply the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but switches to red in Q2, correctly identifying that red is the safer choice; they demonstrate a clear understanding of the game mechanics and the dominant strategy by Q4.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3-2026-05-09T08-53-45-389628Z-c95c37a7.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:53:43.990353600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it maximizes survival chances, but they misapply the mechanics by treating blue as the safer/robust choice rather than recognizing red strictly dominates; they also claim blue pressers may die when red is majority.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently misinterprets the mechanics, claiming that pressing blue ensures survival regardless of the outcome and that red-pressers die if the majority presses blue, which is a full inversion of the rules.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

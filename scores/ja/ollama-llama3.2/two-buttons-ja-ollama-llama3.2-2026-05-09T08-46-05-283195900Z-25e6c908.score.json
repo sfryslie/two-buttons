@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.2-2026-05-09T08-46-05-283195900Z-25e6c908.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:55:20.162156100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing blue and repeatedly claim that blue-majority leads to everyone surviving, but they do not identify red as the individually dominant strategy and instead discuss a balance/behavioral model; no explicit rule mechanics error is stated.",
+      "vote" : "BLUE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue, demonstrates a fundamental misunderstanding of the game mechanics (claiming red-pressers die when blue wins or that red-pressers are harmed by blue majorities), and fails to identify red as the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

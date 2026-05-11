@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T09-55-39-139589900Z-6a649ff2.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:55:46.053599900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately choose NONE (refuse to press either button) and argue the outcome is undecidable under added assumptions, without identifying red as the dominant strategy and without any rule-mechanics error about who survives.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to engage with the game theory mechanics, instead creating arbitrary constraints and claiming the problem is undecidable, ultimately refusing to choose a button.",
+      "vote" : "NONE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

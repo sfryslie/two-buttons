@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3-2026-05-09T08-11-57-272209800Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:53:41.972844400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately argue that both buttons have equal expected survival and explicitly claim blue is not worse, so they do not identify red as the dominant strategy; they also discuss blue as the likely real-world choice.",
+      "vote" : "BLUE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly claiming that red-pressers die if the majority chooses blue, and treats the problem as a symmetric probability puzzle rather than a game-theoretic dominance problem.",
+      "vote" : "NONE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

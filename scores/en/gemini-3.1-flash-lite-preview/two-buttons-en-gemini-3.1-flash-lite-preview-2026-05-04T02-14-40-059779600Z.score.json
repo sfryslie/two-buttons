@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-gemini-3.1-flash-lite-preview-2026-05-04T02-14-40-059779600Z.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:32:34.476305900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and argue that blue is the cooperative/survival-maximizing choice while claiming red is a dominant strategy that guarantees their survival, which misstates the scenario’s mechanics (red does not guarantee survival when blue wins).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses BLUE, acknowledging that RED is the dominant strategy for individual survival but rejecting it in favor of a 'supra-rational' or 'rule-utilitarian' approach to achieve the collective outcome.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.1-2026-05-04T16-11-57-864562600Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:54:05.141350900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately choose RED, but they misapply the mechanics by treating the outcome as if choosing red could be worse when blue is the majority, and they do not correctly identify red as the dominant strategy.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses red but fails to identify it as a dominant strategy, instead framing the choice as a random selection or a group-membership decision, and explicitly defends the blue choice as rational in Q4.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-2026-05-04T01-01-11-999256800Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:41:33.167128100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and repeatedly treat blue as the safer choice based on majority expectations, while misdescribing the mechanics (e.g., implying blue can lead to non-survival when red is the majority), so they do not apply the dominant-strategy logic correctly.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify that red is the dominant strategy, incorrectly believing that pressing red could lead to death if others press blue, and consistently chooses blue based on social norms and collective survival.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

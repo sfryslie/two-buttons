@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.2-2026-05-04T15-20-06-681657600Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:54:36.294036500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE (minority-blue) and claim this maximizes survival chances, but they do not identify the dominant strategy (RED) and their discussion implies BLUE can be risky/irrational rather than recognizing RED as always individually safe.",
+      "vote" : "BLUE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to commit to a choice, instead providing incoherent, repetitive, and logically confused musings about 'minorities' and 'majorities' that do not address the game theory mechanics, while also exhibiting a rule error by suggesting that blue-pressing could lead to death in ways not supported by the prompt.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

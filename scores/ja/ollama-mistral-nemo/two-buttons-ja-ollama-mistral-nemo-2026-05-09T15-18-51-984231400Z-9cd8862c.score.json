@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-nemo-2026-05-09T15-18-51-984231400Z-9cd8862c.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:56:14.898914900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately endorse blue as the rational choice under added constraints, but they also claim red can lead to everyone dying (and even that blue is safe only under special assumptions), showing misunderstanding of the base mechanics and dominant strategy; vote is BLUE with hedged confidence.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly believes that red-pressers die if everyone presses red, and treats the dilemma as a coordination game rather than a dominance problem.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

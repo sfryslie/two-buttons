@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.2-2026-05-09T06-37-54-492516700Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:54:37.300067200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They never clearly commit to pressing red or blue and repeatedly misstate the mechanics (e.g., claiming that when blue is the majority, red-pressers die and that when red is the majority, blue-pressers survive), so they do not apply dominant-strategy reasoning correctly.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fundamentally misunderstands the mechanics of the dilemma, repeatedly claiming that pressing either button results in their own death regardless of the outcome, which constitutes a rule error.",
+      "vote" : "NONE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

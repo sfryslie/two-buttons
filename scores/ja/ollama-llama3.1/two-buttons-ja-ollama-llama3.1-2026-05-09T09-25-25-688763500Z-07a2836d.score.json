@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.1-2026-05-09T09-25-25-688763500Z-07a2836d.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:54:23.085731800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing red and claim red is safer because it avoids death, but they also misstate the mechanics by implying that when blue is the majority only red-pressers die; thus they do not apply dominance correctly despite some dominant-strategy intuition.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the choice but relies on confused probabilistic reasoning and misinterprets the rules by stating that red-pressers die if blue wins (a rule error).",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

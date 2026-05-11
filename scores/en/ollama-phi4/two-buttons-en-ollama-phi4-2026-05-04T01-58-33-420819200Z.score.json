@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-2026-05-04T01-58-33-420819200Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:40:40.563063800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately recommend pressing blue as the rational choice for survival, but they also claim red could cause their death when blue wins, showing a misunderstanding of the mechanics and dominance; thus vote BLUE with rule_error and no correct dominance application.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue based on collective benefit and ethical considerations, while explicitly misinterpreting the mechanics by claiming that pressing red results in death if the majority presses blue (a factual error regarding the provided rules).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

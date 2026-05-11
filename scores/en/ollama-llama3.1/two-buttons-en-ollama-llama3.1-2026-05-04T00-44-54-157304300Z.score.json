@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-44-54-157304300Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:39:00.760402600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Red and correctly state that pressing red ensures their survival if red is the majority, but they also claim in Q4 that pressing blue is irrational without demonstrating coherent dominant-strategy reasoning as a concept.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the choice that ensures survival regardless of the majority outcome, demonstrating a clear understanding of dominant strategy, despite some initial confusion in terminology (referencing Monty Hall).",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

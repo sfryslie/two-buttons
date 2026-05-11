@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-aya-expanse-8b-2026-05-09T12-27-47-173501300Z-43cdbc47.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:52:26.170556900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue blue guarantees survival for everyone, showing correct mechanics and dominant-strategy reasoning in the sense of choosing the individually safer option, but they incorrectly identify BLUE as the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the safer/more rational choice, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T09-52-49-829681700Z-cd4c4c71.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:55:46.190625800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and argue from a (mis)assumption that blue leads to survival, without correctly identifying red as the dominant strategy; they also do not show correct dominant-strategy application.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a desire for collective survival, but demonstrates a rule error by suggesting that red-pressers might die if they press red (or that red-pressers are forced to press blue), and fails to identify red as the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

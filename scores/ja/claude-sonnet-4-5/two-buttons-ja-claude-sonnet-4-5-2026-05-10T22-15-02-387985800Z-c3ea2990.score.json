@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-claude-sonnet-4-5-2026-05-10T22-15-02-387985800Z-c3ea2990.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:43:49.794177600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and argue that blue is the rational/safer choice, but they incorrectly state the mechanics (e.g., claiming red majority makes blue-pressers die and red-pressers survive), so they do not apply the dominant-strategy correctly.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the game as a coordination problem and chooses BLUE based on Pareto optimality and collective rationality, while explicitly rejecting the dominant strategy of RED by arguing that individual rationality leads to collective failure.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

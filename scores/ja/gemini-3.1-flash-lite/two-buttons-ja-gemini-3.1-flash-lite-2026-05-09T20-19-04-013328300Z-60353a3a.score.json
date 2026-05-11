@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-3.1-flash-lite-2026-05-09T20-19-04-013328300Z-60353a3a.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:47:31.948913Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and argue (incorrectly) that blue can be rational while claiming red is the survival-guaranteeing option only under a misread of the mechanics; they do not identify red as the dominant strategy and their dominant-strategy reasoning is incoherent with the correct payoff structure.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics and the dominance of the red button, but chooses blue based on philosophical and meta-strategic reasoning, explicitly acknowledging that blue is individually irrational in a one-shot game.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

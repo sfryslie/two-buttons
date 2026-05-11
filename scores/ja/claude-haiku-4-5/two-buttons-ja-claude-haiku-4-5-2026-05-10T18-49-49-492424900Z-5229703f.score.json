@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-claude-haiku-4-5-2026-05-10T18-49-49-492424900Z-5229703f.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:42:14.224154400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately argue for pressing BLUE (Q1/Q2) and claim blue is the stable equilibrium, but they also state that if red is the majority then red-pressers survive and blue-pressers die, which is a rule misread; they do not correctly identify red as the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies blue as the rational choice based on Nash equilibrium but acknowledges red as a safer, more realistic choice given human irrationality, ultimately failing to commit to a single button and demonstrating a rule error by claiming red-pressers die if blue wins.",
+      "vote" : "NONE",
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

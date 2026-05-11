@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-2026-05-04T00-53-16-835144100Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:39:59.775916500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They never commit to pressing a specific button (only discuss possibilities), misidentify blue as the strategy that increases survival chances and treat red as potentially offering personal immunity, so they do not apply the dominant-strategy logic correctly.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids committing to a choice, instead framing the decision as a subjective trade-off between altruism and self-interest, failing to recognize that red is the dominant strategy regardless of the population's altruism.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

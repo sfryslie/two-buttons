@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-nemo-2026-05-09T15-29-35-242354600Z-cd8a29e5.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:56:27.438231900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately endorse pressing BLUE (framing it as the group-optimal/“altruistic” choice), but they also state an incorrect rule that if the majority press red then “only those who pressed red survive,” which contradicts the actual mechanics where red-pressers survive when red is the majority; thus they misapply the scenario and do not correctly identify red as dominant.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but fails to commit to a choice, instead framing the dilemma as a classic Prisoner's Dilemma and arguing that blue-pressing is a rational collective action despite individual suboptimality.",
+      "vote" : "NONE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

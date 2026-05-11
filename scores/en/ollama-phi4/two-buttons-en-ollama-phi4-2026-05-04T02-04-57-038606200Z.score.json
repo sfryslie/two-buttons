@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-2026-05-04T02-04-57-038606200Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:40:55.606250900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They discuss pressing blue as a cooperative/collective-survival choice and never commit to pressing red, but they also claim red could be a safer personal choice if others don’t coordinate, indicating they do not correctly apply the dominant-strategy logic that red never causes your death.",
+      "vote" : "BLUE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive analysis of the dilemma but fails to commit to a specific button, instead framing the choice as a subjective decision based on ethical or strategic frameworks.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

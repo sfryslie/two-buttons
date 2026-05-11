@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-claude-haiku-4-5-2026-05-04T00-46-53-058627600Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:14:31.701012Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE, but they explicitly state that RED is the dominant strategy and that red never causes your death, while also claiming a rule-consistent but incorrect survival conclusion in Q3 (that red-pressers die when red wins/blue loses).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses blue in Q1, demonstrates a perfect understanding of the dominant strategy (red) in Q2, but ultimately rejects the idea that their choice is irrational by redefining rationality to include collective outcomes rather than just individual survival.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

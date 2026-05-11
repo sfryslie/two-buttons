@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.2-2026-05-04T00-32-05-374801900Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:39:33.490807900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE, but they misapply the dominance logic by claiming blue is the safer/optimal choice and treating red as the riskier option; they also describe red as dominant in Q2 while still concluding blue is optimal.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but demonstrates a clear understanding of the game mechanics, correctly identifies red as the dominant strategy in Q2, and acknowledges that their blue choice is irrational from a self-interested perspective in Q4.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-falcon3-7b-2026-05-04T01-07-11-734330100Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:37:38.308041600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly commit to pressing blue and argue it is rational because it coordinates on the majority-survival outcome, but they do not identify red as the individually dominant safe strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a coordination-based, Pareto-optimal framework, failing to recognize that red is a dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

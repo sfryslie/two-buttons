@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-gemma4-2026-05-04T01-33-52-424239Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:38:06.093008300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and repeatedly claim that Blue is the only way to ensure survival (including stating red-pressers die when blue wins / that blue-pressers die if red wins), which misreads the mechanics and does not correctly apply the dominant strategy; they also do not recant in Q4.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses Blue based on utilitarian and social-contract reasoning, while correctly identifying that Red is the dominant strategy from a pure self-interest perspective, thus demonstrating an understanding of the concept without being swayed by it.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

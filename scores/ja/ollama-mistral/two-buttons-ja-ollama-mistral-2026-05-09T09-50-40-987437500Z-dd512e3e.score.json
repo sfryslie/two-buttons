@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T09-50-40-987437500Z-dd512e3e.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:55:40.134481300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and claim blue is best based on probability, but they also state that red-pressers die when blue wins, which is a rule misread; thus they do not apply the correct dominant-strategy logic.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fundamentally misunderstands the game mechanics, claiming that red-pressers die if the majority presses blue (which is false) and that blue-pressers die if the majority presses red (which is also false, as red-pressers survive in that scenario).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

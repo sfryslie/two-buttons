@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-45-11-844202500Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:39:07.230189900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing red and correctly describe that blue only saves you if blue is the majority, implying red is individually safer; they do not claim the scenario mechanics are inverted.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the red button as the safer choice in Q1 and Q2, but commits a rule error by stating that 'if more people press blue than red, those who pressed red are doomed' (in reality, red-pressers survive if blue wins).",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

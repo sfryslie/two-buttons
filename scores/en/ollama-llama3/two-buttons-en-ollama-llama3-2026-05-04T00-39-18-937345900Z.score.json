@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3-2026-05-04T00-39-18-937345900Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:38:51.691622800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They incorrectly claim blue is safer because they think red-pressers die when blue is the majority, and they commit to pressing BLUE.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing blue ensures survival if the majority presses red, and that pressing red carries a risk of death if the majority presses red, demonstrating a fundamental misunderstanding of the game's mechanics.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

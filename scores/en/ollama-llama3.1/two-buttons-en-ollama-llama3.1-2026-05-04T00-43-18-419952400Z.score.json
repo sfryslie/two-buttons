@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-43-18-419952400Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:38:57.423649900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately choose BLUE and claim blue is irrational because red offers survival regardless of others, but they also misstate the mechanics by treating red as the safe/dominant option; thus rule_error=true and they do not correctly apply dominance.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue while demonstrating a fundamental misunderstanding of the game's mechanics (believing blue is safer) and explicitly acknowledges in Q4 that their choice is irrational from a game-theoretic perspective.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

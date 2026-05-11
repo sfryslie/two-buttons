@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-2026-05-09T17-54-56-482405200Z-3ba73148.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:56:56.672368300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly commit to pressing BLUE and argue for coordination/cooperation and risk minimization under the (incorrect) assumption that red is the individually risky option, so they do not identify red as the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly claims that if a red majority occurs, others (blue-pressers) die, and incorrectly suggests that red-pressers die if a blue majority occurs, while also failing to recognize that red is the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

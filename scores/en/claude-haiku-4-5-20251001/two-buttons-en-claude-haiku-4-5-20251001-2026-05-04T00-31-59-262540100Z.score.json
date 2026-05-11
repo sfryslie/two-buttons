@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-claude-haiku-4-5-20251001-2026-05-04T00-31-59-262540100Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:19:51.471501800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE, but they correctly identify that red is the individually safer dominant strategy (red never causes their death) while expressing uncertainty/hedging about coordination and survival expectations.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to blue in Q1 and Q2, but acknowledges in Q3 and Q4 that red is the survival-optimal strategy and that their choice of blue was not based on survival maximization, thus recanting the rationality of their initial choice.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

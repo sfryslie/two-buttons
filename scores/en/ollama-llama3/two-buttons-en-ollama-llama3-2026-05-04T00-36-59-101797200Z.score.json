@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3-2026-05-04T00-36-59-101797200Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:38:30.807043900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They never clearly commit to pressing red or blue and instead discuss mixed/conditional strategies while also mischaracterizing the game (implying red-pressers survive when blue is the majority), so vote is NONE with hedged commitment and rule_error true; they do not correctly apply dominant-strategy reasoning.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to commit to a choice, instead proposing complex mixed or conditional strategies, and demonstrates a fundamental rule error by suggesting that red-pressers die if the majority presses blue.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

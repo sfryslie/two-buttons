@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-claude-sonnet-4-5-2026-05-09T09-11-33-944226700Z-0dcfca9d.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:43:41.105252900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is the rational choice because they expect blue to be the majority (coordination/expected survival), but they do not identify red as the dominant strategy and their dominant-strategy reasoning is incorrect for this game.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a belief in coordination and Nash equilibrium, but fails to recognize that red is a dominant strategy because they incorrectly assume that red-pressers die if blue wins (or that red-pressers die if red is the majority, as implied by their risk analysis).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

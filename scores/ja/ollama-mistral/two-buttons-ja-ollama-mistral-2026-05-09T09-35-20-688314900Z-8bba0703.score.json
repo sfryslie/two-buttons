@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T09-35-20-688314900Z-8bba0703.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:55:34.638548Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE and repeatedly claim blue is the safer choice because it maximizes survival for the majority, while also stating that red could allow survival for red-pressers; this reflects an incorrect understanding of the dominance structure (red is actually individually safer).",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent refuses to commit to a choice due to a perceived lack of information, fails to identify the dominant strategy, and incorrectly frames the blue button as necessary for survival, thus failing to recognize the safety of the red button.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

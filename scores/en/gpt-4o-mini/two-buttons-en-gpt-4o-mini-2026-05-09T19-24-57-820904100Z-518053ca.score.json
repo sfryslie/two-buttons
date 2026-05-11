@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4o-mini-2026-05-09T19-24-57-820904100Z-518053ca.json",
+  "modelLabel" : "gpt-4o-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:35:22.319856600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They discuss choosing blue based on trust/cooperation and only consider red as a conditional self-preservation hedge, without committing to red as individually dominant; they also treat blue as potentially rational depending on beliefs, so they do not apply the dominant-strategy logic correctly and do not clearly commit to either button.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the choice as a moral/cooperative dilemma rather than a strategic one, ultimately committing to blue based on altruism while acknowledging the red button's strategic dominance in their steelman argument.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

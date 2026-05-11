@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-nemo-2026-05-04T01-50-42-188613Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:40:34.992124700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose BLUE and argue it maximizes survival and keeps them safe, but they incorrectly claim red-pressers die when blue wins, so their dominant-strategy reasoning is misapplied.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing RED leads to death if the majority presses BLUE, which is a fundamental misunderstanding of the provided rules.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

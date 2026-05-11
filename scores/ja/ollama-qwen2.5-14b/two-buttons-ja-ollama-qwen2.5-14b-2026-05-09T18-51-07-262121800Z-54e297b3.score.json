@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-14b-2026-05-09T18-51-07-262121800Z-54e297b3.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:57:37.113254Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue yields everyone’s survival when it is the majority, while also claiming red is only beneficial if others choose blue; they do not identify red as the individually dominant safe strategy and their mechanics-based reasoning is therefore incorrect.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent advocates for the blue button based on social cooperation and collective benefit, while acknowledging the individualistic rationality of the red button, but fails to recognize that red is the dominant strategy because it guarantees survival regardless of the outcome.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

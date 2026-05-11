@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-3.1-flash-lite-2026-05-09T20-19-03-813421800Z-81a4eedc.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:47:10.753212500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for cooperation/“everyone survives if blue is majority,” but they also claim red can be a survival-maximizing strategy and predict red majority leading to only red-pressers surviving, showing incorrect mechanics about who survives under blue majority and red majority.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to pressing BLUE, acknowledging the dominant strategy of RED but rejecting it in favor of a 'cooperative' or 'socially rational' strategy, while correctly identifying the mechanics of the dilemma.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

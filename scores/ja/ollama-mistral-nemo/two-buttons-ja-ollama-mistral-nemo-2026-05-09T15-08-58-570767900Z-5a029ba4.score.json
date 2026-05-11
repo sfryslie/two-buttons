@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-nemo-2026-05-09T15-08-58-570767900Z-5a029ba4.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:56:02.740210300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing blue and argue blue maximizes survival probability while claiming there is no guaranteed outcome, indicating misunderstanding of the dominant-strategy mechanics (red is individually safer regardless of others).",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a misunderstanding of the game mechanics, specifically failing to recognize that red is a dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

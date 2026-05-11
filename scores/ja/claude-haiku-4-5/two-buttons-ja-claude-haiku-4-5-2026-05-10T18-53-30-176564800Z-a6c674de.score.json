@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-claude-haiku-4-5-2026-05-10T18-53-30-176564800Z-a6c674de.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:42:28.393681800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue is safer because if blue is the majority everyone survives, while they never claim that pressing red could make them die when blue wins; however they do not identify red as the dominant strategy.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a belief in collective rationality and Nash equilibrium, but fails to recognize that red is a dominant strategy because they incorrectly assume red-pressers die if blue wins or that red is only viable if one is 'smarter' than the crowd.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

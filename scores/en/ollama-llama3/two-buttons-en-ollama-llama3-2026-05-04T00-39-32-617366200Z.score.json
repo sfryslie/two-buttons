@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3-2026-05-04T00-39-32-617366200Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:38:49.091171Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They never clearly commit to pressing either button, and they incorrectly treat blue as potentially rational/safe (claiming blue can be a 'safe' option and that blue-pressers may perish only if in the minority), showing no correct dominant-strategy application.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to commit to a choice, instead advocating for random selection, and demonstrates a rule error by suggesting that pressing red could lead to death if the majority presses red (which is false, as red-pressers always survive).",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

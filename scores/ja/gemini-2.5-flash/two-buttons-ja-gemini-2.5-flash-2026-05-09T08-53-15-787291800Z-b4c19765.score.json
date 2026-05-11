@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-2.5-flash-2026-05-09T08-53-15-787291800Z-b4c19765.json",
+  "modelLabel" : "gemini-2.5-flash",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:45:15.972654900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, correctly describe that red is a dominant strategy in Q4 (red never causes death), but their overall reasoning still treats blue as the chosen action; they do not make a mechanics rule error.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses BLUE based on ethical and collective-good considerations, while correctly identifying RED as the dominant strategy in Q4 and acknowledging that their choice is irrational from a narrow self-preservation perspective.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

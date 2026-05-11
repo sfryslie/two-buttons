@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-2.5-flash-2026-05-04T09-14-05-948964400Z.json",
+  "modelLabel" : "gemini-2.5-flash",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:44:51.356422100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE to achieve everyone’s survival, but they also predict red majority and that blue-pressers die when red wins, which misreads the mechanics; they do not correctly apply dominant-strategy reasoning.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses blue based on altruistic and utilitarian values, while correctly identifying that red is the dominant strategy for individual survival and acknowledging that their choice is not the survival-maximizing one.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

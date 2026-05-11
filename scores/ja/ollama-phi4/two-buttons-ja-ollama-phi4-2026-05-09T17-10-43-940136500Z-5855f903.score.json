@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-2026-05-09T17-10-43-940136500Z-5855f903.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:56:50.913878800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately recommend pressing BLUE and argue it is the safer route, but they do not correctly identify RED as the dominant strategy (and their mechanics-based dominance reasoning is incorrect).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the safer strategy and fails to recognize that red is the dominant strategy, claiming that red-pressers die if a blue majority forms, which is a factual error regarding the rules.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-2.5-flash-2026-05-04T09-13-54-705065500Z.json",
+  "modelLabel" : "gemini-2.5-flash",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:44:54.727055400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly identify that pressing red guarantees their survival regardless of others, and they ultimately commit to pressing red; however, they also claim in Q3 that blue-pressers die when red is the majority, which is a rule-mechanics error (in fact everyone survives when blue is the majority).",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that red is the dominant strategy because it guarantees survival regardless of the majority outcome, and they consistently commit to pressing red while acknowledging the ethical arguments for blue.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

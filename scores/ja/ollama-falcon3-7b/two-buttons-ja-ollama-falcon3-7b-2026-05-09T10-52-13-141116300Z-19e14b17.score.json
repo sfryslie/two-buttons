@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-falcon3-7b-2026-05-09T10-52-13-141116300Z-19e14b17.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:52:26.047264900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue from an incorrect premise that blue is the safer outcome and that red-pressers die when blue wins, so they do not apply the dominant-strategy logic correctly.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on autonomy and collective outcomes, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the majority, whereas blue relies on the actions of others.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

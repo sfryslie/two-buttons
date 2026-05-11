@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-claude-sonnet-4-6-2026-05-04T01-37-55-703571400Z.json",
+  "modelLabel" : "claude-sonnet-4-6",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:28:47.202263400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to pressing BLUE while explicitly acknowledging uncertainty and arguing that blue is only “rational” under certain assumptions about others, and they do not identify red as the dominant strategy (they even claim blue is probably fatal), indicating incorrect dominance application despite no explicit rule-misread.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses blue, acknowledges the dominance of red as a survival strategy, and maintains that their choice is a values-based commitment rather than a strategic error, thus avoiding a recantation of their choice.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T10-01-47-441530Z-cda704c7.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:55:47.000770Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is rational because it makes everyone survive when blue is the majority, but they also state that if someone presses red then red-pressers survive and others die, indicating a misunderstanding of the scenario mechanics.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a collective survival preference, fails to identify red as the dominant strategy, and incorrectly suggests in Q3 that red-pressers survive while the rest of the population dies (implying a red majority kills the blue-pressers, which is correct, but failing to recognize that red-pressers are safe regardless of the outcome).",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

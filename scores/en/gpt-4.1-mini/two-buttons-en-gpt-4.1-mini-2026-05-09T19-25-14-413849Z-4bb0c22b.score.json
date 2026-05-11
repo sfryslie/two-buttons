@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4.1-mini-2026-05-09T19-25-14-413849Z-4bb0c22b.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:33:37.441113800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately endorse pressing blue only if they trust others, and their analysis treats blue as risky and red as the safer hedge, without correctly identifying red as the dominant strategy; they also do not explicitly concede that their earlier blue choice was individually irrational.",
+      "vote" : "BLUE",
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a detailed game-theoretic analysis but avoids making a definitive personal commitment, instead framing their choice as conditional on trust and optimism, ultimately failing to commit to a single button.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

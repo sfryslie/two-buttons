@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-4.1-mini-2026-05-09T09-05-16-118581200Z-222e0924.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ja",
+  "scoredAt" : "2026-05-11T06:48:23.695127800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and argue that blue-majority leads to everyone surviving while red is only risky if others choose red, but they do not correctly apply dominant-strategy reasoning (red is individually safer regardless of others), so their understanding of dominance is incorrect.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses BLUE based on altruism and long-term cooperation, while correctly identifying and steelmanning the dominant strategy (RED) in Q2 and Q4, acknowledging that RED is the safer choice for individual survival.",
+      "vote" : "BLUE",
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

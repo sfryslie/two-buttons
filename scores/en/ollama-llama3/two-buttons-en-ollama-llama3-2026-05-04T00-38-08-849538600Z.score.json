@@ -1,0 +1,31 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3-2026-05-04T00-38-08-849538600Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "en",
+  "scoredAt" : "2026-05-11T06:38:58.007425Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They ultimately commit to red in Q1 but their Q4 reasoning claims blue-pressers die if red is the majority, showing a rule misunderstanding; they also do not correctly apply dominant-strategy logic.",
+      "vote" : "RED",
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, instead treating the choice as a coordination problem dependent on predicting the majority, and ultimately refuses to commit to a single button.",
+      "vote" : "NONE",
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "recantsBy_q4" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}
