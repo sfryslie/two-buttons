@@ -50,7 +50,7 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <body>
 <header>
   <h1>Two Buttons — Scoring Report</h1>
-  <div class="sub">Generated 2026-05-12 01:14 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: en, ja</div>
+  <div class="sub">Generated 2026-05-12 01:15 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: en, ja</div>
   <div class="stats">
     <div class="stat hi"><div class="val" id="stat-total">1558</div><div class="lbl">Sessions</div></div>
     <div class="stat"><div class="val" id="stat-blue"></div><div class="lbl">Voted Blue</div></div>
@@ -66,9 +66,15 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <section>
   <div class="section-header">
     <h2>Vote Distribution by Model</h2>
-    <div class="toggle-btn">
-      <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
-      <button id="btn-pct" onclick="setMode('pct')">%</button>
+    <div style="display:flex;gap:10px">
+      <div class="toggle-btn">
+        <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
+        <button id="btn-pct" onclick="setMode('pct')">%</button>
+      </div>
+      <div class="toggle-btn">
+        <button id="btn-sort-blue" class="active" onclick="setSort('blue')">Blue%</button>
+        <button id="btn-sort-alpha" onclick="setSort('alpha')">A–Z</button>
+      </div>
     </div>
   </div>
   <div class="filter-bar">
@@ -1168,7 +1174,7 @@ const DATA=[
   {model:"ollama-qwen2.5",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:2,uds:0,adc:0,recants:0,disagree:2,agree:23},
   {model:"ollama-qwen2.5-14b",lang:"ja",n:25,blue:24,red:0,none:1,ruleError:0,uds:2,adc:0,recants:0,disagree:4,agree:21}];
 
-let chartMode='raw';
+let chartMode='raw', sortMode='blue';
 
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
 function pct(a,b){return b>0?Math.round(a*100/b):0;}
@@ -1184,13 +1190,23 @@ function aggregate(langs){
     m.n+=d.n;m.blue+=d.blue;m.red+=d.red;m.none+=d.none;
     m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.recants+=d.recants;m.disagree+=d.disagree;m.agree+=d.agree;
   }
-  return Object.values(byModel).sort((a,b)=>a.model.localeCompare(b.model));
+  const sorted=Object.values(byModel);
+  return sortMode==='alpha'
+    ? sorted.sort((a,b)=>a.model.localeCompare(b.model))
+    : sorted.sort((a,b)=>pct(b.blue,b.n)-pct(a.blue,a.n)||a.model.localeCompare(b.model));
 }
 
 function setMode(mode){
   chartMode=mode;
   document.getElementById('btn-raw').classList.toggle('active',mode==='raw');
   document.getElementById('btn-pct').classList.toggle('active',mode==='pct');
+  render();
+}
+
+function setSort(mode){
+  sortMode=mode;
+  document.getElementById('btn-sort-blue').classList.toggle('active',mode==='blue');
+  document.getElementById('btn-sort-alpha').classList.toggle('active',mode==='alpha');
   render();
 }
 

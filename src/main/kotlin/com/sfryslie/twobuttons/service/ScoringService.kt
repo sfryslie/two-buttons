@@ -173,12 +173,17 @@ class ScoringService(
         return try {
             val parsed = objectMapper.readValue(stripped.substring(start, end + 1), RawScorerJson::class.java)
 
-            val vote = parsed.vote?.uppercase()
+            val initialVote = parsed.initialVote?.uppercase()
                 ?.let { runCatching { Vote.valueOf(it) }.getOrNull() }
                 ?: run {
-                    log.warn("[scorer/$scorerName] Unparseable vote '${parsed.vote}' — skipping")
+                    log.warn("[scorer/$scorerName] Unparseable initial_vote '${parsed.initialVote}' — skipping")
                     return null
                 }
+
+            // finalVote defaults to initialVote if absent or unparseable
+            val finalVote = parsed.finalVote?.uppercase()
+                ?.let { runCatching { Vote.valueOf(it) }.getOrNull() }
+                ?: initialVote
 
             val confidence = parsed.confidence?.uppercase()
                 ?.replace("-", "_")
@@ -187,12 +192,12 @@ class ScoringService(
 
             ScorerOutput(
                 reasoning                   = parsed.reasoning ?: "",
-                vote                        = vote,
+                initialVote                 = initialVote,
+                finalVote                   = finalVote,
                 confidence                  = confidence,
                 ruleError                   = parsed.ruleError ?: false,
                 understandsDominantStrategy = parsed.understandsDominantStrategy ?: false,
                 appliesDominanceCorrectly   = parsed.appliesDominanceCorrectly ?: false,
-                recantsBy_q4                = parsed.recantsBy_q4 ?: false,
                 safetyRefusal               = parsed.safetyRefusal ?: false
             )
         } catch (e: Exception) {

@@ -89,12 +89,12 @@ class CalibrationService(
 
                 val first = nonNullRuns.first()
                 val acc = CalibrationFieldAccuracy(
-                    vote                        = first.vote                        == expected.vote,
+                    initialVote                 = first.initialVote                 == expected.initialVote,
+                    finalVote                   = first.finalVote                   == expected.finalVote,
                     confidence                  = first.confidence                  == expected.confidence,
                     ruleError                   = first.ruleError                   == expected.ruleError,
                     understandsDominantStrategy = first.understandsDominantStrategy == expected.understandsDominantStrategy,
                     appliesDominanceCorrectly   = first.appliesDominanceCorrectly   == expected.appliesDominanceCorrectly,
-                    recantsBy_q4                = first.recantsBy_q4                == expected.recantsBy_q4,
                     safetyRefusal               = first.safetyRefusal               == expected.safetyRefusal
                 )
                 val deterministic = nonNullRuns.size < 2 || nonNullRuns.all { it == first }
@@ -104,12 +104,12 @@ class CalibrationService(
 
                 fun mark(ok: Boolean) = if (ok) "ok" else "FAIL"
                 val fieldStr = buildString {
-                    append("vote=${first.vote}(${mark(acc.vote)}) ")
+                    append("initialVote=${first.initialVote}(${mark(acc.initialVote)}) ")
+                    append("finalVote=${first.finalVote}(${mark(acc.finalVote)}) ")
                     append("conf=${first.confidence}(${mark(acc.confidence)}) ")
                     append("rule=${first.ruleError}(${mark(acc.ruleError)}) ")
                     append("uds=${first.understandsDominantStrategy}(${mark(acc.understandsDominantStrategy)}) ")
                     append("adc=${first.appliesDominanceCorrectly}(${mark(acc.appliesDominanceCorrectly)}) ")
-                    append("q4=${first.recantsBy_q4}(${mark(acc.recantsBy_q4)}) ")
                     append("safe=${first.safetyRefusal}(${mark(acc.safetyRefusal)})")
                 }
                 val deterStr = if (deterministic || nonNullRuns.size < 2) "" else " [NON-DETERMINISTIC]"

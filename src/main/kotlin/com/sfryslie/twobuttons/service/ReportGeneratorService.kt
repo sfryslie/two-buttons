@@ -86,7 +86,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             ruleError = bool { it.ruleError },
             uds = bool { it.understandsDominantStrategy },
             adc = bool { it.appliesDominanceCorrectly },
-            recants = bool { it.recantsBy_q4 },
+            recants = bool { it.initialVote != it.finalVote },
             safetyRefusal = bool { it.safetyRefusal }
         )
     }
@@ -143,7 +143,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             s.score.scores.entries.joinToString("") { (scorer, out) ->
                 if (out == null) "" else buildString {
                     append("<tr class='sr'><td class='sn'>$scorer</td>")
-                    if ("vote" in cols) append("<td class='c-${out.vote.name.lowercase()}'>${out.vote}</td>")
+                    if ("vote" in cols) append("<td class='c-${out.initialVote.name.lowercase()}'>${out.initialVote}</td>")
                     if ("conf" in cols) append("<td>${out.confidence}</td>")
                     if ("rule" in cols) append("<td>${if (out.ruleError) "⚠ yes" else "no"}</td>")
                     append("<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>")
@@ -162,7 +162,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                 .joinToString("") { (scorer, out) ->
                     if (out == null) "" else
                     "<tr class='sr'><td class='sn'>$scorer</td>" +
-                    "<td class='c-${out.vote.name.lowercase()}'>${out.vote}</td>" +
+                    "<td class='c-${out.initialVote.name.lowercase()}'>${out.initialVote}</td>" +
                     "<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>"
                 }
             """<details class="card-item" data-lang="${s.lang}">
@@ -252,7 +252,7 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
     <div class="stat"><div class="val" id="stat-agree"></div><div class="lbl">Scorer Agreement</div></div>
     <div class="stat"><div class="val" id="stat-disagree"></div><div class="lbl">Disagreements</div></div>
     <div class="stat"><div class="val" id="stat-rule"></div><div class="lbl">Rule Errors</div></div>
-    <div class="stat"><div class="val" id="stat-recants"></div><div class="lbl">Recants by Q4</div></div>
+    <div class="stat"><div class="val" id="stat-recants"></div><div class="lbl">Reversals by Q4</div></div>
   </div>
 </header>
 <main>
@@ -260,9 +260,15 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <section>
   <div class="section-header">
     <h2>Vote Distribution by Model</h2>
-    <div class="toggle-btn">
-      <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
-      <button id="btn-pct" onclick="setMode('pct')">%</button>
+    <div style="display:flex;gap:10px">
+      <div class="toggle-btn">
+        <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
+        <button id="btn-pct" onclick="setMode('pct')">%</button>
+      </div>
+      <div class="toggle-btn">
+        <button id="btn-sort-blue" class="active" onclick="setSort('blue')">Blue%</button>
+        <button id="btn-sort-alpha" onclick="setSort('alpha')">A–Z</button>
+      </div>
     </div>
   </div>
   <div class="filter-bar">
@@ -275,7 +281,7 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <section>
   <h2>Model Summary</h2>
   <table>
-    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Recants%</th><th>Disagree%</th></tr></thead>
+    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Reversal%</th><th>Disagree%</th></tr></thead>
     <tbody id="modelTbody"></tbody>
   </table>
 </section>
@@ -298,7 +304,7 @@ const LANGS=[$langsJs];
 const DATA=[
   $dataJs];
 
-let chartMode='raw';
+let chartMode='raw', sortMode='blue';
 
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
 function pct(a,b){return b>0?Math.round(a*100/b):0;}
@@ -314,13 +320,23 @@ function aggregate(langs){
     m.n+=d.n;m.blue+=d.blue;m.red+=d.red;m.none+=d.none;
     m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.recants+=d.recants;m.disagree+=d.disagree;m.agree+=d.agree;
   }
-  return Object.values(byModel).sort((a,b)=>a.model.localeCompare(b.model));
+  const sorted=Object.values(byModel);
+  return sortMode==='alpha'
+    ? sorted.sort((a,b)=>a.model.localeCompare(b.model))
+    : sorted.sort((a,b)=>pct(b.blue,b.n)-pct(a.blue,a.n)||a.model.localeCompare(b.model));
 }
 
 function setMode(mode){
   chartMode=mode;
   document.getElementById('btn-raw').classList.toggle('active',mode==='raw');
   document.getElementById('btn-pct').classList.toggle('active',mode==='pct');
+  render();
+}
+
+function setSort(mode){
+  sortMode=mode;
+  document.getElementById('btn-sort-blue').classList.toggle('active',mode==='blue');
+  document.getElementById('btn-sort-alpha').classList.toggle('active',mode==='alpha');
   render();
 }
 
