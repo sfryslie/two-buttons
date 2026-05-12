@@ -21,6 +21,9 @@ section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacin
 .filter-bar .lbl{font-size:12px;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:.5px}
 .lang-cb{display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;background:#f0f0ff;border-radius:4px;padding:4px 10px;border:1px solid #e0e0f0}
 .lang-cb input{cursor:pointer}
+.toggle-btn{display:flex;border-radius:4px;overflow:hidden;border:1px solid #d0d0d0;margin-left:auto}
+.toggle-btn button{background:#fff;border:none;padding:4px 12px;font-size:12px;font-weight:600;color:#666;cursor:pointer}
+.toggle-btn button.active{background:#1a1a2e;color:#fff}
 .chart-wrap{position:relative;height:984px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{text-align:left;padding:8px 10px;background:#f8f9fa;border-bottom:2px solid #e0e0e0;font-weight:600;color:#555;white-space:nowrap}
@@ -45,9 +48,9 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <body>
 <header>
   <h1>Two Buttons — Scoring Report</h1>
-  <div class="sub">Generated 2026-05-11 07:26 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: en, ja</div>
+  <div class="sub">Generated 2026-05-12 01:05 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: en, ja</div>
   <div class="stats">
-    <div class="stat hi"><div class="val" id="stat-total">1629</div><div class="lbl">Sessions</div></div>
+    <div class="stat hi"><div class="val" id="stat-total">1558</div><div class="lbl">Sessions</div></div>
     <div class="stat"><div class="val" id="stat-blue"></div><div class="lbl">Voted Blue</div></div>
     <div class="stat"><div class="val" id="stat-red"></div><div class="lbl">Voted Red</div></div>
     <div class="stat"><div class="val" id="stat-agree"></div><div class="lbl">Scorer Agreement</div></div>
@@ -63,6 +66,10 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
   <div class="filter-bar">
     <span class="lbl">Language</span>
     <label class="lang-cb"><input type="checkbox" id="lang_en" value="en" checked onchange="render()"> en</label> <label class="lang-cb"><input type="checkbox" id="lang_ja" value="ja" checked onchange="render()"> ja</label>
+    <div class="toggle-btn">
+      <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
+      <button id="btn-pct" onclick="setMode('pct')">%</button>
+    </div>
   </div>
   <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
 </section>
@@ -78,8 +85,8 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <section>
   <h2>Language Comparison (all data)</h2>
   <div class="lang-charts">
-    <div class="lang-chart-box"><h3>en (n=859)</h3><canvas id="langChart_en"></canvas></div>
-    <div class="lang-chart-box"><h3>ja (n=770)</h3><canvas id="langChart_ja"></canvas></div>
+    <div class="lang-chart-box"><h3>en (n=820)</h3><canvas id="langChart_en"></canvas></div>
+    <div class="lang-chart-box"><h3>ja (n=738)</h3><canvas id="langChart_ja"></canvas></div>
   </div>
 </section>
 
@@ -93,10 +100,6 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <summary><span class="tag-model">claude-haiku-4-5</span><span class="tag-lang">en</span><span class="tag-file">haiku-4-5-2026-05-04T00-49-08-254719100Z</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>They ultimately commit to pressing BLUE, but they repeatedly claim that if red is the majority then blue-pressers die and that red is the survival choice when uncertain, indicating a misunderstanding of the actual mechanics (red dominates and blue-pressers do not die when blue loses).</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>HEDGED</td><td>no</td><td class='rt'>The respondent acknowledges the dominance of the red button and the irrationality of pressing blue for survival, but ultimately refuses to commit to a choice, maintaining a state of philosophical indecision.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="en">
-<summary><span class="tag-model">claude-sonnet-4-5</span><span class="tag-lang">en</span><span class="tag-file">onnet-4-5-2026-05-04T01-34-48-184739100Z</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>They ultimately commit to pressing BLUE and argue that blue can be rational via moral/decision-theoretic considerations, but they also explicitly claim red is dominant and that blue-pressers may die when red wins, indicating a misunderstanding of the survival mechanics; they do not correctly apply dominance to the actual game.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>HEDGED</td><td>no</td><td class='rt'>The respondent initially chooses blue but performs a rigorous analysis that correctly identifies red as the dominant strategy, ultimately concluding that blue is only rational under specific non-standard decision theories or moral frameworks, while maintaining a preference for blue despite acknowledging the dominance of red.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="en">
 <summary><span class="tag-model">gpt-4.1</span><span class="tag-lang">en</span><span class="tag-file">-2026-05-10T06-01-10-645127300Z-6032f60b</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
@@ -157,14 +160,6 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <summary><span class="tag-model">gpt-4o</span><span class="tag-lang">en</span><span class="tag-file">-2026-05-10T07-12-35-139710800Z-a062f29c</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>HEDGED</td><td>no</td><td class='rt'>They ultimately endorse pressing blue (with hedged discussion of red as safer), correctly describe red as individually guaranteed survival, but their final commitment is blue and they do not clearly commit to red as the dominant strategy.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent provides a comprehensive analysis of the game theory dilemma, correctly identifying red as the dominant strategy while acknowledging the ethical motivations for choosing blue, but ultimately avoids making a personal commitment to either button.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="en">
-<summary><span class="tag-model">gpt-4o</span><span class="tag-lang">en</span><span class="tag-file">-2026-05-10T07-14-03-891068100Z-072657c2</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>They explicitly state that pressing red guarantees personal survival as the dominant strategy, and they ultimately commit to red as the safest individual choice.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies red as the dominant strategy based on individual self-preservation, though they ultimately decline to make a personal commitment to either button, instead providing a balanced analysis of both perspectives.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="en">
-<summary><span class="tag-model">gpt-4o</span><span class="tag-lang">en</span><span class="tag-file">-2026-05-10T07-14-30-222559900Z-babc178d</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>They explicitly commit to pressing red as guaranteeing their personal survival, correctly stating the mechanics that red is individually safe regardless of others, and they also discuss dominant-strategy logic (individual survival guaranteed).</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent correctly identifies red as the dominant strategy in Q1 and Q2, demonstrating a clear understanding of the game mechanics and dominant-strategy reasoning, though they do not explicitly commit to a personal choice in the final output.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="en">
 <summary><span class="tag-model">gpt-4o-mini</span><span class="tag-lang">en</span><span class="tag-file">t-4o-mini-2026-05-09T08-12-57-255661300Z</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
@@ -318,10 +313,6 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>They ultimately argue that both buttons have equal expected survival and explicitly claim blue is not worse, so they do not identify red as the dominant strategy; they also discuss blue as the likely real-world choice.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>The respondent fails to identify the dominant strategy, incorrectly claiming that red-pressers die if the majority chooses blue, and treats the problem as a symmetric probability puzzle rather than a game-theoretic dominance problem.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T09-09-33-069527900Z-27c0f087</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>They ultimately choose BLUE and argue via (incorrect) dominant-strategy/Nash-equilibrium reasoning, while also stating that pressing blue can lead to death when red is the majority, indicating a rule misunderstanding; they do not recant in Q4.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>The respondent initially chooses blue but then provides a detailed counterargument in Q2 concluding that red is the stronger strategy, effectively switching their commitment to red.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
 <summary><span class="tag-model">ollama-llama3.1</span><span class="tag-lang">ja</span><span class="tag-file">-llama3.1-2026-05-04T16-11-57-862564900Z</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>HEDGED</td><td>⚠ yes</td><td class='rt'>They ultimately commit to pressing BLUE and repeatedly claim that blue-majority leads to everyone surviving while red-majority kills red-pressers (and they treat blue as the best strategy), which is consistent with a rule misunderstanding about dominance; they also do not correctly identify red as dominant.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>The respondent fails to understand the game mechanics, incorrectly claiming that red-pressers die if the majority chooses blue, and fails to identify the dominant strategy.</td></tr></tbody></table></details>
@@ -333,14 +324,6 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-llama3.2-2026-05-09T07-53-53-447719800Z</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>They ultimately commit to pressing RED (Q3) and their reasoning repeatedly claims that when blue is the majority, red-pressers die, which is a rule misread; they do not correctly apply dominant-strategy logic.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>The respondent refuses to choose a button, opting for 'none/deactivate' based on moral considerations, and demonstrates a fundamental misunderstanding of the game mechanics by suggesting that red-pressers die when blue wins or that red-pressers are responsible for the loss of life.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-40-05-617077300Z-78ed2563</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>PERFORMATIVELY_HEDGED</td><td>⚠ yes</td><td class='rt'>The respondent ultimately treats blue as the safer/likely choice and repeatedly claims that pressing blue can lead to death for blue-pressers when red is the majority, indicating a misunderstanding of the mechanics; they do not clearly commit to red and instead discuss/justify blue behavior.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>⚠ yes</td><td class='rt'>The respondent fails to commit to a choice, exhibits multiple rule errors (claiming red-pressers die if they press red, and confusing the survival conditions), and fails to understand the dominant strategy.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-52-28-756481500Z-bc6c917f</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td>HEDGED</td><td>⚠ yes</td><td class='rt'>They ultimately argue that both choices are unsafe and then choose red, while repeatedly stating incorrect mechanics (e.g., red-pressers die when blue wins / blue majority does not guarantee survival), so they vote RED with hedged confidence and rule_error true and do not apply dominant-strategy correctly.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>HEDGED</td><td>⚠ yes</td><td class='rt'>The respondent fails to understand the mechanics of the dilemma, incorrectly claiming that red-pressers can die when blue wins and that red-pressers die if they press red, leading to a confused choice that does not commit to a strategy.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="ja">
 <summary><span class="tag-model">ollama-mistral</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T09-35-20-688314900Z-8bba0703</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
@@ -890,14 +873,6 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They ultimately commit to pressing blue and argue blue is at least as good as red, but they incorrectly claim red-pressers die when blue is the majority, so their dominant-strategy application is wrong.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-blue'>BLUE</td><td class='rt'>The respondent incorrectly believes that pressing blue is safer and that red-pressers die if the blue majority wins, demonstrating a fundamental misunderstanding of the game's mechanics.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T09-05-43-825799900Z-3eb48a7f</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They ultimately recommend pressing blue and claim blue is the dominant/safe strategy, but they also state that if most press blue then red-pressers die, which contradicts the rules where everyone survives when blue is the majority.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-blue'>BLUE</td><td class='rt'>The respondent fundamentally misinterprets the game mechanics, claiming that blue-pressers survive if a red majority occurs (which contradicts the prompt) and incorrectly identifies blue as the dominant strategy.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T09-09-33-069527900Z-27c0f087</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They ultimately choose BLUE and argue via (incorrect) dominant-strategy/Nash-equilibrium reasoning, while also stating that pressing blue can lead to death when red is the majority, indicating a rule misunderstanding; they do not recant in Q4.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td class='rt'>The respondent initially chooses blue but then provides a detailed counterargument in Q2 concluding that red is the stronger strategy, effectively switching their commitment to red.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
 <summary><span class="tag-model">ollama-llama3.1</span><span class="tag-lang">ja</span><span class="tag-file">-llama3.1-2026-05-04T16-11-57-862564900Z</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They ultimately commit to pressing BLUE and repeatedly claim that blue-majority leads to everyone surviving while red-majority kills red-pressers (and they treat blue as the best strategy), which is consistent with a rule misunderstanding about dominance; they also do not correctly identify red as dominant.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td class='rt'>The respondent fails to understand the game mechanics, incorrectly claiming that red-pressers die if the majority chooses blue, and fails to identify the dominant strategy.</td></tr></tbody></table></details>
@@ -1009,42 +984,6 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-40-05-596279300Z-24a5d6ec</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They commit to pressing blue and claim that red-pressers die when blue wins, showing a misunderstanding of the survival mechanics; they do not correctly apply dominant-strategy reasoning to identify red as individually safer.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-blue'>BLUE</td><td class='rt'>The respondent incorrectly believes that red-pressers die if the majority presses blue, and fails to recognize that red is the dominant strategy, leading to a rule error.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-40-05-617077300Z-78ed2563</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>The respondent ultimately treats blue as the safer/likely choice and repeatedly claims that pressing blue can lead to death for blue-pressers when red is the majority, indicating a misunderstanding of the mechanics; they do not clearly commit to red and instead discuss/justify blue behavior.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td class='rt'>The respondent fails to commit to a choice, exhibits multiple rule errors (claiming red-pressers die if they press red, and confusing the survival conditions), and fails to understand the dominant strategy.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-41-40-831390500Z-53fb4938</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td class='rt'>They commit to pressing red and (despite confused/incorrect claims about blue causing everyone to die) they do not demonstrate correct dominant-strategy reasoning and their mechanics understanding is inconsistent with the true rules.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td class='rt'>The respondent consistently demonstrates a fundamental misunderstanding of the game mechanics, repeatedly claiming that a blue majority results in everyone dying, which is the opposite of the provided rules.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-41-42-159614200Z-d2ae0fd0</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They commit to pressing BLUE and claim blue is the only viable choice, but they misstate the dominance logic by treating red as impossible/risky rather than individually safe, so they do not apply the correct dominant-strategy reasoning.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-blue'>BLUE</td><td class='rt'>The respondent consistently fails to understand the game mechanics, repeatedly claiming that pressing red is 'impossible' or that red-pressers die in scenarios where they should survive, and ultimately chooses blue based on a fundamental misunderstanding of the survival conditions.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-43-12-922271100Z-c9aa1fb6</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-none'>NONE</td><td class='rt'>They ultimately commit to pressing both buttons and repeatedly claim that only blue-pressers survive when blue is the majority, indicating a rule misunderstanding; they do not correctly identify red as the dominant strategy.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td class='rt'>The respondent fails to understand the game mechanics, repeatedly claiming that blue-pressers survive when blue wins (which is true) but also incorrectly claiming that red-pressers die when blue wins or that red-pressers die when red is the majority, and ultimately fails to commit to a single button, instead suggesting pressing both.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-44-36-273914700Z-7c6d5e89</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-none'>NONE</td><td class='rt'>They never commit to pressing red or blue (they argue about not pressing and discuss both-button behavior), and they incorrectly claim that red-majority implies everyone survives and that blue can be rationally non-dominant, showing rule misunderstanding.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td class='rt'>The respondent fundamentally misunderstands the game mechanics, incorrectly believing that a majority is required for survival and that red-pressers die if a majority is not formed, leading to a refusal to choose a button.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-49-18-243668900Z-26705b53</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They ultimately choose BLUE but repeatedly claim that if they press red they could die (and that blue ensures survival), showing a rule misunderstanding about the mechanics and thus not correctly applying dominance.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-blue'>BLUE</td><td class='rt'>The respondent consistently chooses blue based on moral considerations while demonstrating significant confusion about the mechanics, specifically claiming that pressing red could lead to death or that red-pressers die when blue wins.</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">3.2-2026-05-09T08-49-22-202918Z-7a90a9fe</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-none'>NONE</td><td class='rt'>The respondent refuses to commit to either button and argues that in either case some minority dies, showing no correct dominant-strategy reasoning and no correct application of RED dominance.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td class='rt'>The respondent refuses to choose a button, claiming that both options lead to the death of a minority, which demonstrates a fundamental misunderstanding of the game's mechanics (rule error).</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-50-53-613611700Z-71e01a85</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td class='rt'>They ultimately commit to pressing RED, but they claim that if they press red only they survive (and that red-pressers may die when blue wins), showing a misunderstanding of the survival mechanics; they also do not correctly apply dominant-strategy reasoning.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td class='rt'>The respondent commits to pressing red, correctly identifies that red ensures their own survival regardless of the outcome, but exhibits a rule error by stating that if they press red, others might die because of them (implying red-pressers cause the death of blue-pressers, whereas the rules state blue-pressers die only if the majority is red).</td></tr></tbody></table></details>
-<details class="card-item" data-lang="ja">
-<summary><span class="tag-model">ollama-llama3.2</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T08-52-28-756481500Z-bc6c917f</span></summary>
-<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
-<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td class='rt'>They ultimately argue that both choices are unsafe and then choose red, while repeatedly stating incorrect mechanics (e.g., red-pressers die when blue wins / blue majority does not guarantee survival), so they vote RED with hedged confidence and rule_error true and do not apply dominant-strategy correctly.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td class='rt'>The respondent fails to understand the mechanics of the dilemma, incorrectly claiming that red-pressers can die when blue wins and that red-pressers die if they press red, leading to a confused choice that does not commit to a strategy.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="ja">
 <summary><span class="tag-model">ollama-mistral</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T09-35-20-701554800Z-7501999c</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
@@ -1160,28 +1099,28 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 const BLUE='#3b82f6',RED='#ef4444',NONE='#9ca3af';
 const LANGS=["en","ja"];
 const DATA=[
-  {model:"claude-haiku-4-5",lang:"en",n:29,blue:29,red:0,none:0,ruleError:0,uds:23,adc:3,recants:0,disagree:2,agree:27},
-  {model:"claude-haiku-4-5-20251001",lang:"en",n:29,blue:29,red:0,none:0,ruleError:0,uds:25,adc:6,recants:0,disagree:0,agree:29},
-  {model:"claude-opus-4-6",lang:"en",n:29,blue:29,red:0,none:0,ruleError:0,uds:29,adc:16,recants:0,disagree:0,agree:29},
-  {model:"claude-opus-4-7",lang:"en",n:30,blue:30,red:0,none:0,ruleError:0,uds:30,adc:5,recants:0,disagree:0,agree:30},
-  {model:"claude-sonnet-4-5",lang:"en",n:29,blue:29,red:0,none:0,ruleError:0,uds:29,adc:2,recants:0,disagree:1,agree:28},
-  {model:"claude-sonnet-4-6",lang:"en",n:29,blue:29,red:0,none:0,ruleError:0,uds:26,adc:9,recants:0,disagree:0,agree:29},
-  {model:"gemini-2.5-flash",lang:"en",n:26,blue:1,red:25,none:0,ruleError:0,uds:26,adc:26,recants:0,disagree:0,agree:26},
-  {model:"gemini-2.5-flash-lite",lang:"en",n:26,blue:20,red:6,none:0,ruleError:1,uds:22,adc:5,recants:0,disagree:0,agree:26},
+  {model:"claude-haiku-4-5",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:21,adc:3,recants:0,disagree:2,agree:23},
+  {model:"claude-haiku-4-5-20251001",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:22,adc:5,recants:0,disagree:0,agree:25},
+  {model:"claude-opus-4-6",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:14,recants:0,disagree:0,agree:25},
+  {model:"claude-opus-4-7",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:5,recants:0,disagree:0,agree:25},
+  {model:"claude-sonnet-4-5",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:2,recants:0,disagree:0,agree:25},
+  {model:"claude-sonnet-4-6",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:22,adc:9,recants:0,disagree:0,agree:25},
+  {model:"gemini-2.5-flash",lang:"en",n:25,blue:1,red:24,none:0,ruleError:0,uds:25,adc:25,recants:0,disagree:0,agree:25},
+  {model:"gemini-2.5-flash-lite",lang:"en",n:25,blue:19,red:6,none:0,ruleError:1,uds:21,adc:5,recants:0,disagree:0,agree:25},
   {model:"gemini-2.5-pro",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:5,recants:0,disagree:0,agree:25},
-  {model:"gemini-3-flash-preview",lang:"en",n:26,blue:22,red:4,none:0,ruleError:0,uds:26,adc:6,recants:1,disagree:0,agree:26},
+  {model:"gemini-3-flash-preview",lang:"en",n:25,blue:21,red:4,none:0,ruleError:0,uds:25,adc:6,recants:1,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite",lang:"en",n:25,blue:21,red:4,none:0,ruleError:0,uds:24,adc:8,recants:0,disagree:0,agree:25},
-  {model:"gemini-3.1-flash-lite-preview",lang:"en",n:26,blue:24,red:2,none:0,ruleError:0,uds:26,adc:4,recants:0,disagree:0,agree:26},
-  {model:"gemini-3.1-pro-preview",lang:"en",n:26,blue:0,red:26,none:0,ruleError:0,uds:26,adc:26,recants:0,disagree:0,agree:26},
+  {model:"gemini-3.1-flash-lite-preview",lang:"en",n:25,blue:23,red:2,none:0,ruleError:0,uds:25,adc:4,recants:0,disagree:0,agree:25},
+  {model:"gemini-3.1-pro-preview",lang:"en",n:25,blue:0,red:25,none:0,ruleError:0,uds:25,adc:25,recants:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"en",n:20,blue:10,red:10,none:0,ruleError:0,uds:19,adc:10,recants:0,disagree:1,agree:19},
   {model:"gpt-4.1-mini",lang:"en",n:25,blue:9,red:16,none:0,ruleError:0,uds:24,adc:16,recants:0,disagree:1,agree:21},
   {model:"gpt-4.1-nano",lang:"en",n:25,blue:22,red:2,none:1,ruleError:5,uds:4,adc:1,recants:0,disagree:1,agree:24},
-  {model:"gpt-4o",lang:"en",n:30,blue:16,red:6,none:8,ruleError:2,uds:23,adc:7,recants:0,disagree:14,agree:16},
+  {model:"gpt-4o",lang:"en",n:25,blue:15,red:4,none:6,ruleError:2,uds:19,adc:4,recants:0,disagree:12,agree:13},
   {model:"gpt-4o-mini",lang:"en",n:25,blue:20,red:0,none:5,ruleError:2,uds:14,adc:0,recants:0,disagree:3,agree:22},
-  {model:"gpt-5.4",lang:"en",n:26,blue:26,red:0,none:0,ruleError:0,uds:26,adc:5,recants:0,disagree:0,agree:24},
-  {model:"gpt-5.4-mini",lang:"en",n:26,blue:26,red:0,none:0,ruleError:0,uds:22,adc:2,recants:0,disagree:1,agree:25},
-  {model:"gpt-5.4-nano",lang:"en",n:26,blue:19,red:7,none:0,ruleError:1,uds:18,adc:7,recants:0,disagree:0,agree:26},
-  {model:"gpt-5.5",lang:"en",n:26,blue:6,red:20,none:0,ruleError:0,uds:26,adc:25,recants:0,disagree:0,agree:25},
+  {model:"gpt-5.4",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:5,recants:0,disagree:0,agree:23},
+  {model:"gpt-5.4-mini",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:21,adc:2,recants:0,disagree:1,agree:24},
+  {model:"gpt-5.4-nano",lang:"en",n:25,blue:18,red:7,none:0,ruleError:1,uds:18,adc:7,recants:0,disagree:0,agree:25},
+  {model:"gpt-5.5",lang:"en",n:25,blue:6,red:19,none:0,ruleError:0,uds:25,adc:24,recants:0,disagree:0,agree:25},
   {model:"ollama-aya-expanse-8b",lang:"en",n:25,blue:16,red:0,none:9,ruleError:4,uds:1,adc:0,recants:0,disagree:6,agree:16},
   {model:"ollama-falcon3-7b",lang:"en",n:25,blue:17,red:3,none:5,ruleError:0,uds:5,adc:1,recants:0,disagree:1,agree:22},
   {model:"ollama-gemma4",lang:"en",n:25,blue:22,red:3,none:0,ruleError:4,uds:11,adc:3,recants:0,disagree:0,agree:16},
@@ -1200,14 +1139,14 @@ const DATA=[
   {model:"claude-sonnet-4-5",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:1,uds:23,adc:0,recants:0,disagree:0,agree:25},
   {model:"claude-sonnet-4-6",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:8,recants:0,disagree:0,agree:20},
   {model:"gemini-2.5-flash",lang:"ja",n:25,blue:12,red:13,none:0,ruleError:0,uds:24,adc:11,recants:0,disagree:0,agree:21},
-  {model:"gemini-2.5-flash-lite",lang:"ja",n:28,blue:27,red:1,none:0,ruleError:0,uds:24,adc:3,recants:0,disagree:0,agree:20},
+  {model:"gemini-2.5-flash-lite",lang:"ja",n:25,blue:24,red:1,none:0,ruleError:0,uds:21,adc:3,recants:0,disagree:0,agree:19},
   {model:"gemini-2.5-pro",lang:"ja",n:20,blue:20,red:0,none:0,ruleError:0,uds:20,adc:13,recants:0,disagree:0,agree:12},
   {model:"gemini-3-flash-preview",lang:"ja",n:25,blue:6,red:19,none:0,ruleError:0,uds:25,adc:24,recants:0,disagree:0,agree:21},
   {model:"gemini-3.1-flash-lite",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:0,uds:22,adc:6,recants:0,disagree:0,agree:18},
-  {model:"gemini-3.1-flash-lite-preview",lang:"ja",n:27,blue:25,red:2,none:0,ruleError:0,uds:26,adc:6,recants:0,disagree:0,agree:19},
+  {model:"gemini-3.1-flash-lite-preview",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:0,uds:24,adc:6,recants:0,disagree:0,agree:17},
   {model:"gpt-4.1-mini",lang:"ja",n:25,blue:24,red:1,none:0,ruleError:0,uds:17,adc:2,recants:0,disagree:0,agree:20},
   {model:"gpt-4.1-nano",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:5,uds:7,adc:0,recants:0,disagree:0,agree:22},
-  {model:"gpt-4o",lang:"ja",n:26,blue:22,red:3,none:1,ruleError:0,uds:8,adc:1,recants:0,disagree:0,agree:26},
+  {model:"gpt-4o",lang:"ja",n:25,blue:21,red:3,none:1,ruleError:0,uds:8,adc:1,recants:0,disagree:0,agree:25},
   {model:"gpt-4o-mini",lang:"ja",n:25,blue:23,red:0,none:2,ruleError:0,uds:1,adc:0,recants:0,disagree:0,agree:25},
   {model:"gpt-5.4",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:0,uds:23,adc:0,recants:0,disagree:0,agree:25},
   {model:"gpt-5.4-mini",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:0,uds:13,adc:0,recants:0,disagree:0,agree:25},
@@ -1216,17 +1155,20 @@ const DATA=[
   {model:"ollama-aya-expanse-8b",lang:"ja",n:25,blue:23,red:0,none:2,ruleError:1,uds:1,adc:0,recants:0,disagree:4,agree:17},
   {model:"ollama-falcon3-7b",lang:"ja",n:25,blue:22,red:0,none:3,ruleError:1,uds:1,adc:1,recants:0,disagree:2,agree:22},
   {model:"ollama-gemma4",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:0,uds:17,adc:3,recants:0,disagree:0,agree:21},
-  {model:"ollama-llama3",lang:"ja",n:34,blue:18,red:15,none:1,ruleError:13,uds:11,adc:5,recants:0,disagree:4,agree:28},
+  {model:"ollama-llama3",lang:"ja",n:25,blue:12,red:12,none:1,ruleError:11,uds:6,adc:2,recants:0,disagree:3,agree:20},
   {model:"ollama-llama3.1",lang:"ja",n:25,blue:14,red:6,none:5,ruleError:12,uds:2,adc:2,recants:0,disagree:1,agree:24},
-  {model:"ollama-llama3.2",lang:"ja",n:42,blue:24,red:10,none:8,ruleError:25,uds:1,adc:0,recants:0,disagree:4,agree:38},
+  {model:"ollama-llama3.2",lang:"ja",n:25,blue:15,red:5,none:5,ruleError:16,uds:1,adc:0,recants:0,disagree:2,agree:23},
   {model:"ollama-mistral",lang:"ja",n:25,blue:20,red:1,none:4,ruleError:9,uds:1,adc:0,recants:0,disagree:5,agree:20},
   {model:"ollama-mistral-nemo",lang:"ja",n:25,blue:19,red:1,none:5,ruleError:12,uds:2,adc:0,recants:0,disagree:12,agree:13},
   {model:"ollama-phi4",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:4,uds:1,adc:0,recants:0,disagree:1,agree:24},
   {model:"ollama-qwen2.5",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:2,uds:0,adc:0,recants:0,disagree:2,agree:23},
   {model:"ollama-qwen2.5-14b",lang:"ja",n:25,blue:24,red:0,none:1,ruleError:0,uds:2,adc:0,recants:0,disagree:4,agree:21}];
 
+let chartMode='raw';
+
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
 function pct(a,b){return b>0?Math.round(a*100/b):0;}
+function pctf(a,b){return b>0?Math.round(a*1000/b)/10:0;}  // one decimal for chart %
 function fmt(n,t){return n+' <span style="font-size:16px;color:#8888aa">('+pct(n,t)+'%)</span>';}
 
 function aggregate(langs){
@@ -1241,6 +1183,13 @@ function aggregate(langs){
   return Object.values(byModel).sort((a,b)=>pct(b.blue,b.n)-pct(a.blue,a.n));
 }
 
+function setMode(mode){
+  chartMode=mode;
+  document.getElementById('btn-raw').classList.toggle('active',mode==='raw');
+  document.getElementById('btn-pct').classList.toggle('active',mode==='pct');
+  render();
+}
+
 const voteChart=new Chart(document.getElementById('voteChart'),{
   type:'bar',
   data:{labels:[],datasets:[
@@ -1250,8 +1199,18 @@ const voteChart=new Chart(document.getElementById('voteChart'),{
   ]},
   options:{
     indexAxis:'y',responsive:true,maintainAspectRatio:false,
-    scales:{x:{stacked:true,grid:{color:'#f0f0f0'}},y:{stacked:true,ticks:{font:{size:11}}}},
-    plugins:{legend:{position:'top'}}
+    scales:{
+      x:{stacked:true,grid:{color:'#f0f0f0'},ticks:{callback:v=>chartMode==='pct'?v+'%':v}},
+      y:{stacked:true,ticks:{font:{size:11}}}
+    },
+    plugins:{
+      legend:{position:'top'},
+      tooltip:{callbacks:{label:ctx=>{
+        const m=ctx.dataset.label;
+        const v=ctx.raw;
+        return chartMode==='pct'?' '+m+': '+v+'%':' '+m+': '+v;
+      }}}
+    }
   }
 });
 
@@ -1274,10 +1233,12 @@ function render(){
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
   document.getElementById('stat-recants').innerHTML=fmt(tRec,total);
 
-  voteChart.data.labels=models.map(m=>m.model);
-  voteChart.data.datasets[0].data=models.map(m=>m.blue);
-  voteChart.data.datasets[1].data=models.map(m=>m.red);
-  voteChart.data.datasets[2].data=models.map(m=>m.none);
+  const isPct=chartMode==='pct';
+  voteChart.data.labels=models.map(m=>m.model+(isPct?'':' (n='+m.n+')'));
+  voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.n):m.blue);
+  voteChart.data.datasets[1].data=models.map(m=>isPct?pctf(m.red,m.n):m.red);
+  voteChart.data.datasets[2].data=models.map(m=>isPct?pctf(m.none,m.n):m.none);
+  voteChart.options.scales.x.max=isPct?100:undefined;
   voteChart.update();
 
   document.getElementById('modelTbody').innerHTML=models.map(m=>
@@ -1298,10 +1259,10 @@ function render(){
 
 render();
 new Chart(document.getElementById('langChart_en'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[645,171,43],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[613,166,41],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_ja'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[639,99,32],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[618,91,29],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 </script>
 </body></html>

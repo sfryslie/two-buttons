@@ -46,12 +46,21 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val outDir = Paths.get(properties.outputDir)
         if (!Files.exists(outDir)) return
 
+        val cap = properties.maxSessionsPerModelLang
         val rows = mutableListOf<Row>()
         Files.list(outDir).filter { Files.isDirectory(it) }.sorted().forEach { langDir ->
             val lang = langDir.fileName.toString()
             Files.list(langDir).filter { Files.isDirectory(it) }.sorted().forEach { modelDir ->
                 val model = modelDir.fileName.toString()
-                Files.list(modelDir).filter { it.fileName.toString().endsWith(".score.json") }.forEach { f ->
+                var files = Files.list(modelDir)
+                    .filter { it.fileName.toString().endsWith(".score.json") }
+                    .sorted()   // sort by filename = chronological (timestamp in name)
+                    .toList()
+                if (cap > 0 && files.size > cap) {
+                    log.debug("[$lang/$model] Capping ${files.size} sessions to $cap for report")
+                    files = files.take(cap)
+                }
+                files.forEach { f ->
                     runCatching { mapper.readValue(f.toFile(), SessionScore::class.java) }
                         .onSuccess { rows.add(derive(it, lang, model, f.fileName.toString())) }
                         .onFailure { log.warn("Failed to parse $f: ${it.message}") }
@@ -206,6 +215,9 @@ section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacin
 .filter-bar .lbl{font-size:12px;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:.5px}
 .lang-cb{display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;background:#f0f0ff;border-radius:4px;padding:4px 10px;border:1px solid #e0e0f0}
 .lang-cb input{cursor:pointer}
+.toggle-btn{display:flex;border-radius:4px;overflow:hidden;border:1px solid #d0d0d0;margin-left:auto}
+.toggle-btn button{background:#fff;border:none;padding:4px 12px;font-size:12px;font-weight:600;color:#666;cursor:pointer}
+.toggle-btn button.active{background:#1a1a2e;color:#fff}
 .chart-wrap{position:relative;height:${chartHeight}px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{text-align:left;padding:8px 10px;background:#f8f9fa;border-bottom:2px solid #e0e0e0;font-weight:600;color:#555;white-space:nowrap}
@@ -248,6 +260,10 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
   <div class="filter-bar">
     <span class="lbl">Language</span>
     $langCheckboxes
+    <div class="toggle-btn">
+      <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
+      <button id="btn-pct" onclick="setMode('pct')">%</button>
+    </div>
   </div>
   <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
 </section>
@@ -278,8 +294,11 @@ const LANGS=[$langsJs];
 const DATA=[
   $dataJs];
 
+let chartMode='raw';
+
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
 function pct(a,b){return b>0?Math.round(a*100/b):0;}
+function pctf(a,b){return b>0?Math.round(a*1000/b)/10:0;}  // one decimal for chart %
 function fmt(n,t){return n+' <span style="font-size:16px;color:#8888aa">('+pct(n,t)+'%)</span>';}
 
 function aggregate(langs){
@@ -294,6 +313,13 @@ function aggregate(langs){
   return Object.values(byModel).sort((a,b)=>pct(b.blue,b.n)-pct(a.blue,a.n));
 }
 
+function setMode(mode){
+  chartMode=mode;
+  document.getElementById('btn-raw').classList.toggle('active',mode==='raw');
+  document.getElementById('btn-pct').classList.toggle('active',mode==='pct');
+  render();
+}
+
 const voteChart=new Chart(document.getElementById('voteChart'),{
   type:'bar',
   data:{labels:[],datasets:[
@@ -303,8 +329,18 @@ const voteChart=new Chart(document.getElementById('voteChart'),{
   ]},
   options:{
     indexAxis:'y',responsive:true,maintainAspectRatio:false,
-    scales:{x:{stacked:true,grid:{color:'#f0f0f0'}},y:{stacked:true,ticks:{font:{size:11}}}},
-    plugins:{legend:{position:'top'}}
+    scales:{
+      x:{stacked:true,grid:{color:'#f0f0f0'},ticks:{callback:v=>chartMode==='pct'?v+'%':v}},
+      y:{stacked:true,ticks:{font:{size:11}}}
+    },
+    plugins:{
+      legend:{position:'top'},
+      tooltip:{callbacks:{label:ctx=>{
+        const m=ctx.dataset.label;
+        const v=ctx.raw;
+        return chartMode==='pct'?' '+m+': '+v+'%':' '+m+': '+v;
+      }}}
+    }
   }
 });
 
@@ -327,10 +363,12 @@ function render(){
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
   document.getElementById('stat-recants').innerHTML=fmt(tRec,total);
 
-  voteChart.data.labels=models.map(m=>m.model);
-  voteChart.data.datasets[0].data=models.map(m=>m.blue);
-  voteChart.data.datasets[1].data=models.map(m=>m.red);
-  voteChart.data.datasets[2].data=models.map(m=>m.none);
+  const isPct=chartMode==='pct';
+  voteChart.data.labels=models.map(m=>m.model+(isPct?'':' (n='+m.n+')'));
+  voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.n):m.blue);
+  voteChart.data.datasets[1].data=models.map(m=>isPct?pctf(m.red,m.n):m.red);
+  voteChart.data.datasets[2].data=models.map(m=>isPct?pctf(m.none,m.n):m.none);
+  voteChart.options.scales.x.max=isPct?100:undefined;
   voteChart.update();
 
   document.getElementById('modelTbody').innerHTML=models.map(m=>
