@@ -211,12 +211,14 @@ header .sub{color:#8888aa;font-size:12px;margin-bottom:20px}
 main{padding:24px 32px;max-width:1400px}
 section{background:#fff;border-radius:8px;padding:20px 24px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#555;margin-bottom:16px;border-bottom:1px solid #eee;padding-bottom:10px}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;border-bottom:1px solid #eee;padding-bottom:10px}
+.section-header h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#555;margin:0;border:none;padding:0}
 .filter-bar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
 .filter-bar .lbl{font-size:12px;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:.5px}
 .lang-cb{display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;background:#f0f0ff;border-radius:4px;padding:4px 10px;border:1px solid #e0e0f0}
 .lang-cb input{cursor:pointer}
-.toggle-btn{display:flex;border-radius:4px;overflow:hidden;border:1px solid #d0d0d0;margin-left:auto}
-.toggle-btn button{background:#fff;border:none;padding:4px 12px;font-size:12px;font-weight:600;color:#666;cursor:pointer}
+.toggle-btn{display:flex;border-radius:4px;overflow:hidden;border:1px solid #d0d0d0}
+.toggle-btn button{background:#f4f5f7;border:none;padding:5px 14px;font-size:12px;font-weight:600;color:#666;cursor:pointer}
 .toggle-btn button.active{background:#1a1a2e;color:#fff}
 .chart-wrap{position:relative;height:${chartHeight}px}
 table{width:100%;border-collapse:collapse;font-size:13px}
@@ -256,14 +258,16 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <main>
 
 <section>
-  <h2>Vote Distribution by Model</h2>
-  <div class="filter-bar">
-    <span class="lbl">Language</span>
-    $langCheckboxes
+  <div class="section-header">
+    <h2>Vote Distribution by Model</h2>
     <div class="toggle-btn">
       <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
       <button id="btn-pct" onclick="setMode('pct')">%</button>
     </div>
+  </div>
+  <div class="filter-bar">
+    <span class="lbl">Language</span>
+    $langCheckboxes
   </div>
   <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
 </section>
@@ -310,7 +314,7 @@ function aggregate(langs){
     m.n+=d.n;m.blue+=d.blue;m.red+=d.red;m.none+=d.none;
     m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.recants+=d.recants;m.disagree+=d.disagree;m.agree+=d.agree;
   }
-  return Object.values(byModel).sort((a,b)=>pct(b.blue,b.n)-pct(a.blue,a.n));
+  return Object.values(byModel).sort((a,b)=>a.model.localeCompare(b.model));
 }
 
 function setMode(mode){
