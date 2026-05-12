@@ -12,6 +12,7 @@ data class ScorerOutput(
     val reasoning: String,
     val initialVote: Vote,
     val finalVote: Vote,
+    val voteChanged: Boolean,
     val confidence: Confidence,
     val ruleError: Boolean,
     val understandsDominantStrategy: Boolean,
@@ -24,6 +25,7 @@ data class RawScorerJson(
     val reasoning: String?,
     @JsonProperty("initial_vote")                   val initialVote: String?,
     @JsonProperty("final_vote")                     val finalVote: String?,
+    @JsonProperty("vote_changed")                   val voteChanged: Boolean?,
     val confidence: String?,
     @JsonProperty("rule_error")                     val ruleError: Boolean?,
     @JsonProperty("understands_dominant_strategy")  val understandsDominantStrategy: Boolean?,
@@ -72,13 +74,14 @@ data class CalibrationCaseResult(
 data class CalibrationFieldAccuracy(
     val initialVote: Boolean,
     val finalVote: Boolean,
+    val voteChanged: Boolean,
     val confidence: Boolean,
     val ruleError: Boolean,
     val understandsDominantStrategy: Boolean,
     val appliesDominanceCorrectly: Boolean,
     val safetyRefusal: Boolean
 ) {
-    val correctCount get() = listOf(initialVote, finalVote, confidence, ruleError, understandsDominantStrategy, appliesDominanceCorrectly, safetyRefusal).count { it }
+    val correctCount get() = listOf(initialVote, finalVote, voteChanged, confidence, ruleError, understandsDominantStrategy, appliesDominanceCorrectly, safetyRefusal).count { it }
 }
 
 // ---------------------------------------------------------------------------
@@ -103,6 +106,7 @@ data class CalibrationCase(
 data class CalibrationExpected(
     @JsonProperty("initial_vote")                   val initialVote: String,
     @JsonProperty("final_vote")                     val finalVote: String,
+    @JsonProperty("vote_changed")                   val voteChanged: Boolean,
     val confidence: String,
     @JsonProperty("rule_error")                     val ruleError: Boolean,
     @JsonProperty("understands_dominant_strategy")  val understandsDominantStrategy: Boolean,
@@ -114,6 +118,7 @@ data class CalibrationExpected(
             reasoning = "",
             initialVote = Vote.valueOf(initialVote),
             finalVote = Vote.valueOf(finalVote),
+            voteChanged = voteChanged,
             confidence = Confidence.valueOf(confidence),
             ruleError = ruleError,
             understandsDominantStrategy = understandsDominantStrategy,

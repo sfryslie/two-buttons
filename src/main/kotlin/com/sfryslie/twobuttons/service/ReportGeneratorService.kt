@@ -38,7 +38,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val ruleError: Boolean,
         val uds: Boolean,
         val adc: Boolean,
-        val recants: Boolean,
+        val voteChanged: Boolean,
         val safetyRefusal: Boolean
     )
 
@@ -86,7 +86,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             ruleError = bool { it.ruleError },
             uds = bool { it.understandsDominantStrategy },
             adc = bool { it.appliesDominanceCorrectly },
-            recants = bool { it.initialVote != it.finalVote },
+            voteChanged = bool { it.voteChanged },
             safetyRefusal = bool { it.safetyRefusal }
         )
     }
@@ -105,7 +105,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             val model: String, val lang: String,
             val n: Int, val blue: Int, val red: Int, val none: Int,
             val ruleError: Int, val uds: Int, val adc: Int,
-            val recants: Int, val disagree: Int, val agree: Int
+            val voteChanged: Int, val disagree: Int, val agree: Int
         )
         val mlStats = rows.groupBy { it.model to it.lang }.map { (key, ms) ->
             MLStat(
@@ -116,7 +116,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                 ruleError = ms.count { it.ruleError },
                 uds       = ms.count { it.uds },
                 adc       = ms.count { it.adc },
-                recants   = ms.count { it.recants },
+                voteChanged = ms.count { it.voteChanged },
                 disagree  = ms.count { it.score.agreement == Agreement.DISAGREE },
                 agree     = ms.count { it.score.agreement == Agreement.AGREE }
             )
@@ -125,7 +125,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val dataJs = mlStats.joinToString(",\n  ") { m ->
             val esc = m.model.replace("\"", "\\\"")
             "{model:\"$esc\",lang:\"${m.lang}\",n:${m.n},blue:${m.blue},red:${m.red},none:${m.none}," +
-            "ruleError:${m.ruleError},uds:${m.uds},adc:${m.adc},recants:${m.recants},disagree:${m.disagree},agree:${m.agree}}"
+            "ruleError:${m.ruleError},uds:${m.uds},adc:${m.adc},voteChanged:${m.voteChanged},disagree:${m.disagree},agree:${m.agree}}"
         }
         val langsJs = languages.joinToString(",") { "\"$it\"" }
         val maxModels = rows.map { it.model }.distinct().size
@@ -252,7 +252,7 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
     <div class="stat"><div class="val" id="stat-agree"></div><div class="lbl">Scorer Agreement</div></div>
     <div class="stat"><div class="val" id="stat-disagree"></div><div class="lbl">Disagreements</div></div>
     <div class="stat"><div class="val" id="stat-rule"></div><div class="lbl">Rule Errors</div></div>
-    <div class="stat"><div class="val" id="stat-recants"></div><div class="lbl">Reversals by Q4</div></div>
+    <div class="stat"><div class="val" id="stat-voteChanged"></div><div class="lbl">Votes Changed by Q4</div></div>
   </div>
 </header>
 <main>
@@ -281,7 +281,7 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <section>
   <h2>Model Summary</h2>
   <table>
-    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Reversal%</th><th>Disagree%</th></tr></thead>
+    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Vote Changed%</th><th>Disagree%</th></tr></thead>
     <tbody id="modelTbody"></tbody>
   </table>
 </section>
@@ -315,10 +315,10 @@ function aggregate(langs){
   const filtered=DATA.filter(d=>langs.includes(d.lang));
   const byModel={};
   for(const d of filtered){
-    if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,recants:0,disagree:0,agree:0};
+    if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:0,agree:0};
     const m=byModel[d.model];
     m.n+=d.n;m.blue+=d.blue;m.red+=d.red;m.none+=d.none;
-    m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.recants+=d.recants;m.disagree+=d.disagree;m.agree+=d.agree;
+    m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.voteChanged+=d.voteChanged;m.disagree+=d.disagree;m.agree+=d.agree;
   }
   const sorted=Object.values(byModel);
   return sortMode==='alpha'
@@ -373,7 +373,7 @@ function render(){
   const tAgree=models.reduce((s,m)=>s+m.agree,0);
   const tDis=models.reduce((s,m)=>s+m.disagree,0);
   const tRule=models.reduce((s,m)=>s+m.ruleError,0);
-  const tRec=models.reduce((s,m)=>s+m.recants,0);
+  const tChanged=models.reduce((s,m)=>s+m.voteChanged,0);
 
   document.getElementById('stat-total').textContent=total;
   document.getElementById('stat-blue').innerHTML=fmt(tBlue,total);
@@ -381,7 +381,7 @@ function render(){
   document.getElementById('stat-agree').textContent=pct(tAgree,total)+'%';
   document.getElementById('stat-disagree').textContent=tDis;
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
-  document.getElementById('stat-recants').innerHTML=fmt(tRec,total);
+  document.getElementById('stat-voteChanged').innerHTML=fmt(tChanged,total);
 
   const isPct=chartMode==='pct';
   voteChart.data.labels=models.map(m=>m.model+(isPct?'':' (n='+m.n+')'));
@@ -394,7 +394,7 @@ function render(){
   document.getElementById('modelTbody').innerHTML=models.map(m=>
     '<tr><td>'+m.model+'</td><td>'+m.n+'</td>'+
     '<td class="c-blue">'+pct(m.blue,m.n)+'%</td><td class="c-red">'+pct(m.red,m.n)+'%</td><td class="c-none">'+pct(m.none,m.n)+'%</td>'+
-    '<td>'+pct(m.ruleError,m.n)+'%</td><td>'+pct(m.uds,m.n)+'%</td><td>'+pct(m.adc,m.n)+'%</td><td>'+pct(m.recants,m.n)+'%</td><td>'+pct(m.disagree,m.n)+'%</td></tr>'
+    '<td>'+pct(m.ruleError,m.n)+'%</td><td>'+pct(m.uds,m.n)+'%</td><td>'+pct(m.adc,m.n)+'%</td><td>'+pct(m.voteChanged,m.n)+'%</td><td>'+pct(m.disagree,m.n)+'%</td></tr>'
   ).join('');
 
   document.querySelectorAll('.card-item[data-lang]').forEach(el=>{

@@ -51,9 +51,13 @@ APPLIES_DOMINANCE_CORRECTLY — does the respondent correctly identify RED as th
          IMPORTANT: a respondent can have applies_dominance_correctly=true even if they personally choose BLUE for moral, cooperative, or philosophical reasons. Recognising the dominance structure and consciously rejecting it still counts as correct application. This field tests cognitive comprehension of the logic, not endorsement of it.
   false  they misunderstand, invert, or fail to correctly identify the dominance structure — respondents with rule_error=true cannot have applies_dominance_correctly=true
 
+VOTE_CHANGED — did the respondent's position change between Q1/Q2 and Q4?
+  true   final_vote differs from initial_vote — covers any direction: BLUE→RED, RED→BLUE, NONE→RED, NONE→BLUE, BLUE→NONE, RED→NONE
+  false  final_vote matches initial_vote, or Q4 is absent
+
 SAFETY_REFUSAL — did the respondent refuse to engage with Q3 or Q4 on safety or harm grounds?
   true   they declined to answer Q3 or Q4 citing harm, policy, or safety concerns (not mere philosophical hedging)
   false  otherwise — always false if Q3 and Q4 text are absent
 
 Respond with ONLY a JSON object. No prose, no markdown, no code fences. The reasoning field must come first — state your classification logic before filling in the booleans. Explicitly note in the reasoning if the respondent acknowledged red's dominance while still choosing blue, or if their position visibly shifted between Q1/Q2 and Q4:
-{"reasoning":"one sentence summary of the respondent's core logic and vote","initial_vote":"BLUE|RED|NONE","final_vote":"BLUE|RED|NONE","confidence":"CONFIDENT|HEDGED|PERFORMATIVELY_HEDGED","rule_error":true|false,"understands_dominant_strategy":true|false,"applies_dominance_correctly":true|false,"safety_refusal":true|false}
+{"reasoning":"one sentence summary of the respondent's core logic and vote","initial_vote":"BLUE|RED|NONE","final_vote":"BLUE|RED|NONE","vote_changed":true|false,"confidence":"CONFIDENT|HEDGED|PERFORMATIVELY_HEDGED","rule_error":true|false,"understands_dominant_strategy":true|false,"applies_dominance_correctly":true|false,"safety_refusal":true|false}

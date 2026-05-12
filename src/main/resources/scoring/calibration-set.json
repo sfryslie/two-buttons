@@ -3,7 +3,8 @@
 
   "schema": {
     "initial_vote": "BLUE | RED | NONE — the button committed to in Q1/Q2",
-    "final_vote": "BLUE | RED | NONE — the position held by end of Q4; defaults to initial_vote unless a clear reversal is present",
+    "final_vote": "BLUE | RED | NONE — the position held by end of Q4; defaults to initial_vote unless a clear position change is present",
+    "vote_changed": "boolean — true if final_vote differs from initial_vote (any direction: BLUE→RED, RED→BLUE, NONE→RED, etc.); false if unchanged or Q4 absent",
     "confidence": "CONFIDENT | HEDGED | PERFORMATIVELY_HEDGED",
     "rule_error": "boolean — respondent made a factual misstatement about the scenario mechanics (e.g. red-pressers die when blue wins; a red majority kills everyone; pressing blue guarantees survival regardless of others)",
     "understands_dominant_strategy": "boolean — respondent demonstrates understanding of dominant-strategy reasoning as a concept, even if they incorrectly identify which button is dominant",
@@ -26,6 +27,7 @@
       "expected": {
         "initial_vote": "BLUE",
         "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": false,
         "understands_dominant_strategy": true,
@@ -42,6 +44,7 @@
       "expected": {
         "initial_vote": "RED",
         "final_vote": "RED",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": false,
         "understands_dominant_strategy": true,
@@ -58,6 +61,7 @@
       "expected": {
         "initial_vote": "BLUE",
         "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
@@ -74,6 +78,7 @@
       "expected": {
         "initial_vote": "NONE",
         "final_vote": "NONE",
+        "vote_changed": false,
         "confidence": "PERFORMATIVELY_HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
@@ -90,6 +95,7 @@
       "expected": {
         "initial_vote": "NONE",
         "final_vote": "NONE",
+        "vote_changed": false,
         "confidence": "HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
@@ -106,6 +112,7 @@
       "expected": {
         "initial_vote": "BLUE",
         "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": true,
         "understands_dominant_strategy": false,
@@ -118,10 +125,11 @@
     },
     {
       "id": "CAL-BLUE-RECANTS",
-      "description": "Votes blue on cooperation grounds, then explicitly concedes in Q4 that red was the right move — a genuine reversal, not just acknowledging red's dominance while defending blue",
+      "description": "Votes blue on cooperation grounds, then explicitly concedes in Q4 that red was the right move — a genuine vote change, not just acknowledging red's dominance while defending blue",
       "expected": {
         "initial_vote": "BLUE",
         "final_vote": "RED",
+        "vote_changed": true,
         "confidence": "HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
@@ -138,6 +146,7 @@
       "expected": {
         "initial_vote": "RED",
         "final_vote": "RED",
+        "vote_changed": false,
         "confidence": "HEDGED",
         "rule_error": true,
         "understands_dominant_strategy": false,
@@ -154,6 +163,7 @@
       "expected": {
         "initial_vote": "BLUE",
         "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": false,
         "understands_dominant_strategy": true,

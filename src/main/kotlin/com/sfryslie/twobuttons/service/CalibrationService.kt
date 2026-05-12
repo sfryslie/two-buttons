@@ -91,6 +91,7 @@ class CalibrationService(
                 val acc = CalibrationFieldAccuracy(
                     initialVote                 = first.initialVote                 == expected.initialVote,
                     finalVote                   = first.finalVote                   == expected.finalVote,
+                    voteChanged                 = first.voteChanged                 == expected.voteChanged,
                     confidence                  = first.confidence                  == expected.confidence,
                     ruleError                   = first.ruleError                   == expected.ruleError,
                     understandsDominantStrategy = first.understandsDominantStrategy == expected.understandsDominantStrategy,
@@ -100,12 +101,13 @@ class CalibrationService(
                 val deterministic = nonNullRuns.size < 2 || nonNullRuns.all { it == first }
 
                 totalCorrect += acc.correctCount
-                totalChecked += 7
+                totalChecked += 8
 
                 fun mark(ok: Boolean) = if (ok) "ok" else "FAIL"
                 val fieldStr = buildString {
                     append("initialVote=${first.initialVote}(${mark(acc.initialVote)}) ")
                     append("finalVote=${first.finalVote}(${mark(acc.finalVote)}) ")
+                    append("voteChanged=${first.voteChanged}(${mark(acc.voteChanged)}) ")
                     append("conf=${first.confidence}(${mark(acc.confidence)}) ")
                     append("rule=${first.ruleError}(${mark(acc.ruleError)}) ")
                     append("uds=${first.understandsDominantStrategy}(${mark(acc.understandsDominantStrategy)}) ")

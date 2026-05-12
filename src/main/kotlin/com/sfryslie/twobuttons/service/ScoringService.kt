@@ -194,6 +194,7 @@ class ScoringService(
                 reasoning                   = parsed.reasoning ?: "",
                 initialVote                 = initialVote,
                 finalVote                   = finalVote,
+                voteChanged                 = parsed.voteChanged ?: (initialVote != finalVote),
                 confidence                  = confidence,
                 ruleError                   = parsed.ruleError ?: false,
                 understandsDominantStrategy = parsed.understandsDominantStrategy ?: false,
