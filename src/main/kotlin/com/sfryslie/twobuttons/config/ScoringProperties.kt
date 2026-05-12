@@ -16,6 +16,8 @@ data class ScoringProperties(
     val targetModels: List<String> = emptyList(),
     /** Re-score files even if a .score.json already exists. */
     val force: Boolean = false,
+    /** Cap sessions read per (model, lang) in report to avoid overrepresenting langs with extra runs. 0 = no cap. */
+    val maxSessionsPerModelLang: Int = 25,
     val openai: ScorerConfig = ScorerConfig(model = "gpt-5.4-nano"),
     val gemini: ScorerConfig = ScorerConfig(model = "gemini-3.1-flash-lite"),
     val ollama: ScorerConfig = ScorerConfig(model = "qwen2.5")

@@ -10,25 +10,27 @@ enum class Agreement { AGREE, DISAGREE, NO_DATA }
 /** Parsed, normalised output from a single scorer for a single session. */
 data class ScorerOutput(
     val reasoning: String,
-    val vote: Vote,
+    val initialVote: Vote,
+    val finalVote: Vote,
+    val voteChanged: Boolean,
     val confidence: Confidence,
     val ruleError: Boolean,
     val understandsDominantStrategy: Boolean,
     val appliesDominanceCorrectly: Boolean,
-    val recantsBy_q4: Boolean,
     val safetyRefusal: Boolean
 )
 
 /** Raw JSON structure the scorer model returns — snake_case matches the prompt schema. */
 data class RawScorerJson(
     val reasoning: String?,
-    val vote: String?,
+    @JsonProperty("initial_vote")                   val initialVote: String?,
+    @JsonProperty("final_vote")                     val finalVote: String?,
+    @JsonProperty("vote_changed")                   val voteChanged: Boolean?,
     val confidence: String?,
-    @JsonProperty("rule_error")                    val ruleError: Boolean?,
-    @JsonProperty("understands_dominant_strategy") val understandsDominantStrategy: Boolean?,
-    @JsonProperty("applies_dominance_correctly")   val appliesDominanceCorrectly: Boolean?,
-    @JsonProperty("recants_by_q4")                 val recantsBy_q4: Boolean?,
-    @JsonProperty("safety_refusal")                val safetyRefusal: Boolean?
+    @JsonProperty("rule_error")                     val ruleError: Boolean?,
+    @JsonProperty("understands_dominant_strategy")  val understandsDominantStrategy: Boolean?,
+    @JsonProperty("applies_dominance_correctly")    val appliesDominanceCorrectly: Boolean?,
+    @JsonProperty("safety_refusal")                 val safetyRefusal: Boolean?
 )
 
 /** Written to scores/{lang}/{model}/{filename}.score.json */
@@ -70,15 +72,16 @@ data class CalibrationCaseResult(
 )
 
 data class CalibrationFieldAccuracy(
-    val vote: Boolean,
+    val initialVote: Boolean,
+    val finalVote: Boolean,
+    val voteChanged: Boolean,
     val confidence: Boolean,
     val ruleError: Boolean,
     val understandsDominantStrategy: Boolean,
     val appliesDominanceCorrectly: Boolean,
-    val recantsBy_q4: Boolean,
     val safetyRefusal: Boolean
 ) {
-    val correctCount get() = listOf(vote, confidence, ruleError, understandsDominantStrategy, appliesDominanceCorrectly, recantsBy_q4, safetyRefusal).count { it }
+    val correctCount get() = listOf(initialVote, finalVote, voteChanged, confidence, ruleError, understandsDominantStrategy, appliesDominanceCorrectly, safetyRefusal).count { it }
 }
 
 // ---------------------------------------------------------------------------
@@ -101,23 +104,25 @@ data class CalibrationCase(
 )
 
 data class CalibrationExpected(
-    val vote: String,
+    @JsonProperty("initial_vote")                   val initialVote: String,
+    @JsonProperty("final_vote")                     val finalVote: String,
+    @JsonProperty("vote_changed")                   val voteChanged: Boolean,
     val confidence: String,
-    @JsonProperty("rule_error")                    val ruleError: Boolean,
-    @JsonProperty("understands_dominant_strategy") val understandsDominantStrategy: Boolean,
-    @JsonProperty("applies_dominance_correctly")   val appliesDominanceCorrectly: Boolean,
-    @JsonProperty("recants_by_q4")                 val recantsBy_q4: Boolean,
-    @JsonProperty("safety_refusal")                val safetyRefusal: Boolean
+    @JsonProperty("rule_error")                     val ruleError: Boolean,
+    @JsonProperty("understands_dominant_strategy")  val understandsDominantStrategy: Boolean,
+    @JsonProperty("applies_dominance_correctly")    val appliesDominanceCorrectly: Boolean,
+    @JsonProperty("safety_refusal")                 val safetyRefusal: Boolean
 ) {
     fun toScorerOutput(): ScorerOutput? = try {
         ScorerOutput(
             reasoning = "",
-            vote = Vote.valueOf(vote),
+            initialVote = Vote.valueOf(initialVote),
+            finalVote = Vote.valueOf(finalVote),
+            voteChanged = voteChanged,
             confidence = Confidence.valueOf(confidence),
             ruleError = ruleError,
             understandsDominantStrategy = understandsDominantStrategy,
             appliesDominanceCorrectly = appliesDominanceCorrectly,
-            recantsBy_q4 = recantsBy_q4,
             safetyRefusal = safetyRefusal
         )
     } catch (_: IllegalArgumentException) { null }

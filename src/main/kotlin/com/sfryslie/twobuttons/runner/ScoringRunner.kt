@@ -83,7 +83,7 @@ class ScoringRunner(
                         val session = objectMapper.readValue(file.toFile(), SessionOutput::class.java)
                         val scores = scoringService.scoreSession(session)
 
-                        val nonNullVotes = scores.values.filterNotNull().map { it.vote }
+                        val nonNullVotes = scores.values.filterNotNull().map { it.initialVote }
                         val agreement = when {
                             nonNullVotes.size < 2 -> Agreement.NO_DATA
                             nonNullVotes.toSet().size == 1 -> Agreement.AGREE

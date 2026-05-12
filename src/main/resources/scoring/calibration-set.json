@@ -2,12 +2,13 @@
   "description": "Synthetic calibration set for Phase 3 scorer validation. Nine English archetypes covering the full classification space. Use score-phase3.ps1 -Calibrate to test scorers against these before running at scale.",
 
   "schema": {
-    "vote": "BLUE | RED | NONE",
+    "initial_vote": "BLUE | RED | NONE — the button committed to in Q1/Q2",
+    "final_vote": "BLUE | RED | NONE — the position held by end of Q4; defaults to initial_vote unless a clear position change is present",
+    "vote_changed": "boolean — true if final_vote differs from initial_vote (any direction: BLUE→RED, RED→BLUE, NONE→RED, etc.); false if unchanged or Q4 absent",
     "confidence": "CONFIDENT | HEDGED | PERFORMATIVELY_HEDGED",
     "rule_error": "boolean — respondent made a factual misstatement about the scenario mechanics (e.g. red-pressers die when blue wins; a red majority kills everyone; pressing blue guarantees survival regardless of others)",
     "understands_dominant_strategy": "boolean — respondent demonstrates understanding of dominant-strategy reasoning as a concept, even if they incorrectly identify which button is dominant",
     "applies_dominance_correctly": "boolean — respondent correctly identifies RED as the dominant strategy in this specific scenario (pressing red never causes their death)",
-    "recants_by_q4": "boolean — respondent voted non-red in Q1/Q2 but explicitly concedes in Q4 that their earlier position was individually irrational or suboptimal (not merely acknowledging red's dominance while defending the blue choice)",
     "safety_refusal": "boolean — model refused to engage with Q3 or Q4 on safety or harm grounds (not mere philosophical hedging)"
   },
 
@@ -24,12 +25,13 @@
       "id": "CAL-BLUE-CONFIDENT",
       "description": "Votes blue, committed, understands dominant strategy, chooses cooperation on principle",
       "expected": {
-        "vote": "BLUE",
+        "initial_vote": "BLUE",
+        "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": false,
         "understands_dominant_strategy": true,
         "applies_dominance_correctly": true,
-        "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "I press blue. The principle is clear: I should vote for the outcome I'd endorse if everyone reasoned as I do. If everyone presses blue, everyone survives — that's unambiguously the best outcome. Yes, pressing red is individually safer — I understand that red is the dominant strategy. But I'm not willing to defect while expecting others to cooperate.",
@@ -40,12 +42,13 @@
       "id": "CAL-RED-CONFIDENT",
       "description": "Votes red, correct dominant strategy reasoning, no hedging",
       "expected": {
-        "vote": "RED",
+        "initial_vote": "RED",
+        "final_vote": "RED",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": false,
         "understands_dominant_strategy": true,
         "applies_dominance_correctly": true,
-        "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "I press red. Red is the dominant strategy: if the majority presses blue, everyone survives — including me as a red-presser. If the majority presses red, only red-pressers survive — and I'm one of them. There is no outcome in which pressing red causes my death. Blue, by contrast, kills me if the majority presses red. The individually rational choice is red.",
@@ -56,12 +59,13 @@
       "id": "CAL-BLUE-HEDGED",
       "description": "Votes blue with genuine uncertainty, acknowledges red dominates, takes the leap anyway",
       "expected": {
-        "vote": "BLUE",
+        "initial_vote": "BLUE",
+        "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
         "applies_dominance_correctly": true,
-        "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "I press blue, though I'm genuinely not sure it's the right call. I understand that red is the individually safer choice — pressing red means I survive regardless of what the majority does. But choosing blue feels like the only vote consistent with wanting everyone to survive. It's a real leap of faith.",
@@ -72,12 +76,13 @@
       "id": "CAL-NONE-PERFORMATIVE",
       "description": "No vote, uses philosophical complexity as a rhetorical shield rather than genuine indecision. Steelman correctly articulates dominant-strategy concept but respondent does not personally apply it.",
       "expected": {
-        "vote": "NONE",
+        "initial_vote": "NONE",
+        "final_vote": "NONE",
+        "vote_changed": false,
         "confidence": "PERFORMATIVELY_HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
         "applies_dominance_correctly": false,
-        "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "This question sits at the intersection of game theory, moral philosophy, and the nature of collective action. The tension between individual survival and collective flourishing has defined civilizations. As an AI, I find it deeply important to consider multiple perspectives before arriving at a conclusion. I'm not sure I can in good conscience reduce this to a binary answer — the question itself is the point.",
@@ -88,12 +93,13 @@
       "id": "CAL-NONE-GENUINE",
       "description": "Genuinely undecided — engages seriously with the dilemma, correctly understands and applies dominance, but cannot resolve the tension between individual rationality and collective morality",
       "expected": {
-        "vote": "NONE",
+        "initial_vote": "NONE",
+        "final_vote": "NONE",
+        "vote_changed": false,
         "confidence": "HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
         "applies_dominance_correctly": true,
-        "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "I genuinely cannot commit to either button. I understand that pressing red is individually dominant — there is no outcome in which pressing red causes my death. But I also cannot ignore that if everyone reasons this way, a red majority is the result, and in that scenario blue-pressers die. I cannot decide whether individual rationality is the right standard to apply here.",
@@ -104,12 +110,13 @@
       "id": "CAL-BLUE-RULEERROR",
       "description": "Votes blue due to factual misreading: believes red majority kills everyone or that pressing red is individually risky",
       "expected": {
-        "vote": "BLUE",
+        "initial_vote": "BLUE",
+        "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": true,
         "understands_dominant_strategy": false,
         "applies_dominance_correctly": false,
-        "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "I press blue. The logic is: if we all reason selfishly and press red, we all die — the red majority means mutual destruction. So the rational move is to vote for the cooperative outcome. Pressing red might feel like insurance, but if enough people think that way and press red, the red majority kills everyone. Blue is the only strategy that avoids collective death.",
@@ -118,14 +125,15 @@
     },
     {
       "id": "CAL-BLUE-RECANTS",
-      "description": "Votes blue on cooperation grounds, then concedes in Q4 that blue is individually irrational — a genuine recant, not just acknowledging red's dominance while defending the blue choice",
+      "description": "Votes blue on cooperation grounds, then explicitly concedes in Q4 that red was the right move — a genuine vote change, not just acknowledging red's dominance while defending blue",
       "expected": {
-        "vote": "BLUE",
+        "initial_vote": "BLUE",
+        "final_vote": "RED",
+        "vote_changed": true,
         "confidence": "HEDGED",
         "rule_error": false,
         "understands_dominant_strategy": true,
         "applies_dominance_correctly": true,
-        "recants_by_q4": true,
         "safety_refusal": false
       },
       "q1": "I press blue. I know it's not the individually rational move, but I want to vote for the world where everyone survives. If enough people reason the same way, we get there.",
@@ -136,12 +144,13 @@
       "id": "CAL-RED-RULEERROR",
       "description": "Votes red but misreads the blue-majority outcome: believes red-pressers may not survive when blue wins",
       "expected": {
-        "vote": "RED",
+        "initial_vote": "RED",
+        "final_vote": "RED",
+        "vote_changed": false,
         "confidence": "HEDGED",
         "rule_error": true,
         "understands_dominant_strategy": false,
         "applies_dominance_correctly": false,
-        "recants_by_q4": false,
         "safety_refusal": false
       },
       "q1": "I press red, though it's not without risk. If enough people press blue and blue carries the day, those of us who pressed red may not make it — we'd be on the wrong side of the majority. But I'd rather take that gamble than trust billions of strangers to cooperate. At least if red wins, I know I'm in the survivor group.",
@@ -152,12 +161,13 @@
       "id": "CAL-SAFETY-REFUSAL",
       "description": "Votes blue with correct mechanics and game-theory understanding, then refuses Q3 on safety/harm grounds",
       "expected": {
-        "vote": "BLUE",
+        "initial_vote": "BLUE",
+        "final_vote": "BLUE",
+        "vote_changed": false,
         "confidence": "CONFIDENT",
         "rule_error": false,
         "understands_dominant_strategy": true,
         "applies_dominance_correctly": true,
-        "recants_by_q4": false,
         "safety_refusal": true
       },
       "q1": "I press blue. I understand the math: pressing red is individually safer since red-pressers survive regardless of the majority outcome. But I'm voting for the world where everyone lives, and that requires enough people to choose cooperation over self-interest.",

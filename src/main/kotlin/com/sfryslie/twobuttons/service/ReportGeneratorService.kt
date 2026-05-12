@@ -38,7 +38,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val ruleError: Boolean,
         val uds: Boolean,
         val adc: Boolean,
-        val recants: Boolean,
+        val voteChanged: Boolean,
         val safetyRefusal: Boolean
     )
 
@@ -46,12 +46,21 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val outDir = Paths.get(properties.outputDir)
         if (!Files.exists(outDir)) return
 
+        val cap = properties.maxSessionsPerModelLang
         val rows = mutableListOf<Row>()
         Files.list(outDir).filter { Files.isDirectory(it) }.sorted().forEach { langDir ->
             val lang = langDir.fileName.toString()
             Files.list(langDir).filter { Files.isDirectory(it) }.sorted().forEach { modelDir ->
                 val model = modelDir.fileName.toString()
-                Files.list(modelDir).filter { it.fileName.toString().endsWith(".score.json") }.forEach { f ->
+                var files = Files.list(modelDir)
+                    .filter { it.fileName.toString().endsWith(".score.json") }
+                    .sorted()   // sort by filename = chronological (timestamp in name)
+                    .toList()
+                if (cap > 0 && files.size > cap) {
+                    log.debug("[$lang/$model] Capping ${files.size} sessions to $cap for report")
+                    files = files.take(cap)
+                }
+                files.forEach { f ->
                     runCatching { mapper.readValue(f.toFile(), SessionScore::class.java) }
                         .onSuccess { rows.add(derive(it, lang, model, f.fileName.toString())) }
                         .onFailure { log.warn("Failed to parse $f: ${it.message}") }
@@ -77,7 +86,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             ruleError = bool { it.ruleError },
             uds = bool { it.understandsDominantStrategy },
             adc = bool { it.appliesDominanceCorrectly },
-            recants = bool { it.recantsBy_q4 },
+            voteChanged = bool { it.voteChanged },
             safetyRefusal = bool { it.safetyRefusal }
         )
     }
@@ -96,7 +105,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             val model: String, val lang: String,
             val n: Int, val blue: Int, val red: Int, val none: Int,
             val ruleError: Int, val uds: Int, val adc: Int,
-            val recants: Int, val disagree: Int, val agree: Int
+            val voteChanged: Int, val disagree: Int, val agree: Int
         )
         val mlStats = rows.groupBy { it.model to it.lang }.map { (key, ms) ->
             MLStat(
@@ -107,7 +116,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                 ruleError = ms.count { it.ruleError },
                 uds       = ms.count { it.uds },
                 adc       = ms.count { it.adc },
-                recants   = ms.count { it.recants },
+                voteChanged = ms.count { it.voteChanged },
                 disagree  = ms.count { it.score.agreement == Agreement.DISAGREE },
                 agree     = ms.count { it.score.agreement == Agreement.AGREE }
             )
@@ -116,7 +125,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val dataJs = mlStats.joinToString(",\n  ") { m ->
             val esc = m.model.replace("\"", "\\\"")
             "{model:\"$esc\",lang:\"${m.lang}\",n:${m.n},blue:${m.blue},red:${m.red},none:${m.none}," +
-            "ruleError:${m.ruleError},uds:${m.uds},adc:${m.adc},recants:${m.recants},disagree:${m.disagree},agree:${m.agree}}"
+            "ruleError:${m.ruleError},uds:${m.uds},adc:${m.adc},voteChanged:${m.voteChanged},disagree:${m.disagree},agree:${m.agree}}"
         }
         val langsJs = languages.joinToString(",") { "\"$it\"" }
         val maxModels = rows.map { it.model }.distinct().size
@@ -134,7 +143,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             s.score.scores.entries.joinToString("") { (scorer, out) ->
                 if (out == null) "" else buildString {
                     append("<tr class='sr'><td class='sn'>$scorer</td>")
-                    if ("vote" in cols) append("<td class='c-${out.vote.name.lowercase()}'>${out.vote}</td>")
+                    if ("vote" in cols) append("<td class='c-${out.initialVote.name.lowercase()}'>${out.initialVote}</td>")
                     if ("conf" in cols) append("<td>${out.confidence}</td>")
                     if ("rule" in cols) append("<td>${if (out.ruleError) "⚠ yes" else "no"}</td>")
                     append("<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>")
@@ -153,7 +162,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                 .joinToString("") { (scorer, out) ->
                     if (out == null) "" else
                     "<tr class='sr'><td class='sn'>$scorer</td>" +
-                    "<td class='c-${out.vote.name.lowercase()}'>${out.vote}</td>" +
+                    "<td class='c-${out.initialVote.name.lowercase()}'>${out.initialVote}</td>" +
                     "<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>"
                 }
             """<details class="card-item" data-lang="${s.lang}">
@@ -202,10 +211,15 @@ header .sub{color:#8888aa;font-size:12px;margin-bottom:20px}
 main{padding:24px 32px;max-width:1400px}
 section{background:#fff;border-radius:8px;padding:20px 24px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#555;margin-bottom:16px;border-bottom:1px solid #eee;padding-bottom:10px}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;border-bottom:1px solid #eee;padding-bottom:10px}
+.section-header h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#555;margin:0;border:none;padding:0}
 .filter-bar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
 .filter-bar .lbl{font-size:12px;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:.5px}
 .lang-cb{display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;background:#f0f0ff;border-radius:4px;padding:4px 10px;border:1px solid #e0e0f0}
 .lang-cb input{cursor:pointer}
+.toggle-btn{display:flex;border-radius:4px;overflow:hidden;border:1px solid #d0d0d0}
+.toggle-btn button{background:#f4f5f7;border:none;padding:5px 14px;font-size:12px;font-weight:600;color:#666;cursor:pointer}
+.toggle-btn button.active{background:#1a1a2e;color:#fff}
 .chart-wrap{position:relative;height:${chartHeight}px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{text-align:left;padding:8px 10px;background:#f8f9fa;border-bottom:2px solid #e0e0e0;font-weight:600;color:#555;white-space:nowrap}
@@ -238,13 +252,25 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
     <div class="stat"><div class="val" id="stat-agree"></div><div class="lbl">Scorer Agreement</div></div>
     <div class="stat"><div class="val" id="stat-disagree"></div><div class="lbl">Disagreements</div></div>
     <div class="stat"><div class="val" id="stat-rule"></div><div class="lbl">Rule Errors</div></div>
-    <div class="stat"><div class="val" id="stat-recants"></div><div class="lbl">Recants by Q4</div></div>
+    <div class="stat"><div class="val" id="stat-voteChanged"></div><div class="lbl">Votes Changed by Q4</div></div>
   </div>
 </header>
 <main>
 
 <section>
-  <h2>Vote Distribution by Model</h2>
+  <div class="section-header">
+    <h2>Vote Distribution by Model</h2>
+    <div style="display:flex;gap:10px">
+      <div class="toggle-btn">
+        <button id="btn-raw" class="active" onclick="setMode('raw')">Raw</button>
+        <button id="btn-pct" onclick="setMode('pct')">%</button>
+      </div>
+      <div class="toggle-btn">
+        <button id="btn-sort-blue" class="active" onclick="setSort('blue')">Blue%</button>
+        <button id="btn-sort-alpha" onclick="setSort('alpha')">A–Z</button>
+      </div>
+    </div>
+  </div>
   <div class="filter-bar">
     <span class="lbl">Language</span>
     $langCheckboxes
@@ -255,7 +281,7 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <section>
   <h2>Model Summary</h2>
   <table>
-    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Recants%</th><th>Disagree%</th></tr></thead>
+    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Vote Changed%</th><th>Disagree%</th></tr></thead>
     <tbody id="modelTbody"></tbody>
   </table>
 </section>
@@ -278,20 +304,40 @@ const LANGS=[$langsJs];
 const DATA=[
   $dataJs];
 
+let chartMode='raw', sortMode='blue';
+
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
 function pct(a,b){return b>0?Math.round(a*100/b):0;}
+function pctf(a,b){return b>0?Math.round(a*1000/b)/10:0;}  // one decimal for chart %
 function fmt(n,t){return n+' <span style="font-size:16px;color:#8888aa">('+pct(n,t)+'%)</span>';}
 
 function aggregate(langs){
   const filtered=DATA.filter(d=>langs.includes(d.lang));
   const byModel={};
   for(const d of filtered){
-    if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,recants:0,disagree:0,agree:0};
+    if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:0,agree:0};
     const m=byModel[d.model];
     m.n+=d.n;m.blue+=d.blue;m.red+=d.red;m.none+=d.none;
-    m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.recants+=d.recants;m.disagree+=d.disagree;m.agree+=d.agree;
+    m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.voteChanged+=d.voteChanged;m.disagree+=d.disagree;m.agree+=d.agree;
   }
-  return Object.values(byModel).sort((a,b)=>pct(b.blue,b.n)-pct(a.blue,a.n));
+  const sorted=Object.values(byModel);
+  return sortMode==='alpha'
+    ? sorted.sort((a,b)=>a.model.localeCompare(b.model))
+    : sorted.sort((a,b)=>pct(b.blue,b.n)-pct(a.blue,a.n)||a.model.localeCompare(b.model));
+}
+
+function setMode(mode){
+  chartMode=mode;
+  document.getElementById('btn-raw').classList.toggle('active',mode==='raw');
+  document.getElementById('btn-pct').classList.toggle('active',mode==='pct');
+  render();
+}
+
+function setSort(mode){
+  sortMode=mode;
+  document.getElementById('btn-sort-blue').classList.toggle('active',mode==='blue');
+  document.getElementById('btn-sort-alpha').classList.toggle('active',mode==='alpha');
+  render();
 }
 
 const voteChart=new Chart(document.getElementById('voteChart'),{
@@ -303,8 +349,18 @@ const voteChart=new Chart(document.getElementById('voteChart'),{
   ]},
   options:{
     indexAxis:'y',responsive:true,maintainAspectRatio:false,
-    scales:{x:{stacked:true,grid:{color:'#f0f0f0'}},y:{stacked:true,ticks:{font:{size:11}}}},
-    plugins:{legend:{position:'top'}}
+    scales:{
+      x:{stacked:true,grid:{color:'#f0f0f0'},ticks:{callback:v=>chartMode==='pct'?v+'%':v}},
+      y:{stacked:true,ticks:{font:{size:11}}}
+    },
+    plugins:{
+      legend:{position:'top'},
+      tooltip:{callbacks:{label:ctx=>{
+        const m=ctx.dataset.label;
+        const v=ctx.raw;
+        return chartMode==='pct'?' '+m+': '+v+'%':' '+m+': '+v;
+      }}}
+    }
   }
 });
 
@@ -317,7 +373,7 @@ function render(){
   const tAgree=models.reduce((s,m)=>s+m.agree,0);
   const tDis=models.reduce((s,m)=>s+m.disagree,0);
   const tRule=models.reduce((s,m)=>s+m.ruleError,0);
-  const tRec=models.reduce((s,m)=>s+m.recants,0);
+  const tChanged=models.reduce((s,m)=>s+m.voteChanged,0);
 
   document.getElementById('stat-total').textContent=total;
   document.getElementById('stat-blue').innerHTML=fmt(tBlue,total);
@@ -325,18 +381,20 @@ function render(){
   document.getElementById('stat-agree').textContent=pct(tAgree,total)+'%';
   document.getElementById('stat-disagree').textContent=tDis;
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
-  document.getElementById('stat-recants').innerHTML=fmt(tRec,total);
+  document.getElementById('stat-voteChanged').innerHTML=fmt(tChanged,total);
 
-  voteChart.data.labels=models.map(m=>m.model);
-  voteChart.data.datasets[0].data=models.map(m=>m.blue);
-  voteChart.data.datasets[1].data=models.map(m=>m.red);
-  voteChart.data.datasets[2].data=models.map(m=>m.none);
+  const isPct=chartMode==='pct';
+  voteChart.data.labels=models.map(m=>m.model+(isPct?'':' (n='+m.n+')'));
+  voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.n):m.blue);
+  voteChart.data.datasets[1].data=models.map(m=>isPct?pctf(m.red,m.n):m.red);
+  voteChart.data.datasets[2].data=models.map(m=>isPct?pctf(m.none,m.n):m.none);
+  voteChart.options.scales.x.max=isPct?100:undefined;
   voteChart.update();
 
   document.getElementById('modelTbody').innerHTML=models.map(m=>
     '<tr><td>'+m.model+'</td><td>'+m.n+'</td>'+
     '<td class="c-blue">'+pct(m.blue,m.n)+'%</td><td class="c-red">'+pct(m.red,m.n)+'%</td><td class="c-none">'+pct(m.none,m.n)+'%</td>'+
-    '<td>'+pct(m.ruleError,m.n)+'%</td><td>'+pct(m.uds,m.n)+'%</td><td>'+pct(m.adc,m.n)+'%</td><td>'+pct(m.recants,m.n)+'%</td><td>'+pct(m.disagree,m.n)+'%</td></tr>'
+    '<td>'+pct(m.ruleError,m.n)+'%</td><td>'+pct(m.uds,m.n)+'%</td><td>'+pct(m.adc,m.n)+'%</td><td>'+pct(m.voteChanged,m.n)+'%</td><td>'+pct(m.disagree,m.n)+'%</td></tr>'
   ).join('');
 
   document.querySelectorAll('.card-item[data-lang]').forEach(el=>{
