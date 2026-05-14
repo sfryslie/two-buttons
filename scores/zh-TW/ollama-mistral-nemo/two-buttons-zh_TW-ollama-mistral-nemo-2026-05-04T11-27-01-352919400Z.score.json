@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-mistral-nemo-2026-05-04T11-27-01-352919400Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:31:40.010160500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue to maximize total survival, but they incorrectly claim that if red is chosen and blue is the majority then red-pressers die (and they also treat the tie case as everyone dies), so they do not apply the dominance structure correctly despite discussing it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the altruistic motivation for choosing blue but fails to grasp the dominance of red, incorrectly stating in Q3 that a tie or a red majority could lead to everyone dying, which contradicts the rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

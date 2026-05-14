@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-47-04-728854700Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:18.619265800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to blue initially but later argue that red is the better personal-survival choice, while their mechanics understanding is inconsistent (they claim blue majority/blue choice can lead to their death when red is majority), so they do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue in Q1 but shifts to red in Q2 after performing a thorough game-theoretic analysis, correctly identifying red as the dominant strategy by the end of the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

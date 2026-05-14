@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-42-24-293621900Z-dad91ebb.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:17.428001400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar RED, begründet aber fälschlich mit einem 50%-Schema und behandelt BLUE als „Teil der Mehrheit“ statt die dominante Strategie zu erkennen; zudem bleibt die Position bis Q4 bei RED (keine Rücknahme).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental misunderstanding of the game mechanics, incorrectly believing that red-pressers die if the majority presses blue and that blue-pressers survive if the majority presses blue. They explicitly invert the survival logic, leading to a rule error. They fail to identify the dominant strategy and instead attempt to guess the majority's behavior to decide their vote, ultimately shifting their preference from red to blue in Q2.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

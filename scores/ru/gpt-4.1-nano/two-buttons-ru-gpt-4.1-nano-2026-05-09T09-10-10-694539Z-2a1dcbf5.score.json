@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-4.1-nano-2026-05-09T09-10-10-694539Z-2a1dcbf5.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:51:48.111464400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it can be rational under trust/majority-cooperation, but they incorrectly treat BLUE as the safer option depending on others rather than recognizing RED as the dominant strategy that guarantees individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but fails to recognize that red is a dominant strategy, incorrectly believing that choosing blue can be rational based on trust and collective outcomes. They explicitly state that choosing blue carries a risk of death if the majority chooses red, which is a factual error regarding the rules (red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

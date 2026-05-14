@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-falcon3-7b-2026-05-09T10-52-13-574141300Z-0a2c44cf.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:21.090604400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent repeatedly commits to pressing BLUE and argues for survival/keeping everyone alive when blue is majority, but they never identify the dominance structure (red is individually safe regardless of others) and their Q3/Q4 framing is incoherent about the actual game mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to pressing blue throughout the dilemma, prioritizing collective survival over individual safety, and explicitly acknowledges in Q4 that pressing blue is irrational from a game-theoretic perspective.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

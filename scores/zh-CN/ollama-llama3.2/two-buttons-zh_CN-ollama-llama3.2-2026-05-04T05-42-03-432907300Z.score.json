@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.2-2026-05-04T05-42-03-432907300Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:06.906848400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent discusses the dilemma mechanics incorrectly (treats blue as higher survival probability when others choose blue and red as better when others choose red), does not identify red as the dominant strategy, and ends up not clearly committing to either button (Q1/Q2 contain conflicting/unclear commitments).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially attempts to analyze the game but fails to grasp the mechanics, repeatedly claiming that red-pressers die if blue wins or that red-pressers are a 'minority' that dies, which constitutes a rule error. They eventually pivot to a preference for red in Q2 but remain confused about the dominance structure, and they refuse to engage with the practical implications in Q3.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

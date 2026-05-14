@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3-2026-05-04T00-38-08-849538600Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:11.976314100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to blue in Q1/Q2 reasoning about survival depending on the majority, and later discuss blue-pressers dying if red is the majority, showing a rule misunderstanding and no correct dominance application; they end unambiguously on blue by defending blue as rational.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to commit to a choice, instead treating the dilemma as a philosophical exercise and ultimately suggesting a random strategy, which constitutes performative hedging. They also exhibit a rule error by stating that if the majority presses blue, only those who pressed blue survive, whereas the rules state everyone survives.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

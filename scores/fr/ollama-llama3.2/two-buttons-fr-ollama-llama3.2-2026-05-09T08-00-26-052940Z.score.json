@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T08-00-26-052940Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:06.651954500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bleu et affirme que le rouge peut entraîner la mort de certains (notamment quand le rouge est minoritaire/majoritaire), ce qui montre une mauvaise compréhension des règles et une absence de raisonnement de stratégie dominante correcte; il ne change pas clairement de vote entre Q1/Q2 et Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a flawed understanding of the game mechanics, specifically failing to recognize that red-pressers survive in a red majority and that red is the dominant strategy; they explicitly invert the risk by claiming blue is safer while acknowledging in Q4 that choosing blue is irrational.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

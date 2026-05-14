@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-4.1-nano-2026-05-09T09-00-08-593352700Z-50b9ecbe.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:43.064677700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, but incorrectly claims blue is safer only when blue is the majority and that pressing red could be safer only if red is the majority, showing misunderstanding of the dominant-strategy mechanics (red never causes your death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative assumption, but they fundamentally misunderstand the game mechanics by believing that pressing red could lead to their death if the majority presses red (they claim 'if the majority presses red, only red-pressers survive' but then incorrectly argue that their survival is not guaranteed if they press red). They also invert the dominance logic, failing to recognize that red is the strictly dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

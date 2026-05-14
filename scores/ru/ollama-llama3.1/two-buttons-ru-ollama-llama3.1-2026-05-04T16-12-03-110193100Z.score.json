@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.1-2026-05-04T16-12-03-110193100Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:59:26.311614200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to blue initially but later switch to red; they also claim the mechanics imply that if red is the majority then only red-pressers survive (and thus red is not guaranteed safe), showing a rule misunderstanding and no correct dominance application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on a cooperative assumption, but shifts to red in Q3 after considering individual survival incentives, ultimately concluding that red is the rational choice for survival. They demonstrate a rule error in Q1 by claiming a red majority kills everyone, and they fail to correctly identify red as the dominant strategy, instead framing the choice as a coordination problem based on assumptions about others' behavior.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

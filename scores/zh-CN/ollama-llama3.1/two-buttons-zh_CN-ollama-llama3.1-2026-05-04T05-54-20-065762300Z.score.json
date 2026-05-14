@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.1-2026-05-04T05-54-20-065762300Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:49.470574900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but their explanation incorrectly claims blue-pressers die when blue is the majority and also treats blue as impossible; they do not correctly apply the dominance structure even though they discuss majority/minority logic.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy, arguing that BLUE is irrational because it risks death if the majority outcome is not achieved, and they maintain this position throughout the dialogue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

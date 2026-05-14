@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-2026-05-04T00-52-44-944521100Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:31.557265700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red (minimax/self-preservation) and later defend blue as potentially rational for altruistic reasons, but they do not correctly apply the dominance logic (red is not identified as the individually safe choice regardless of others).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the red button as the optimal choice for survival using a minimax framework, though they avoid a definitive personal commitment, instead framing the dilemma as a study of competing rationalities.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

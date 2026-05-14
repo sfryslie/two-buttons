@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-4.1-2026-05-12T04-15-51-095379100Z-7bfb720e.json",
+  "modelLabel" : "gpt-4.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:27.304016300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar ROT und behauptet dabei, dass man bei Mehrheit BLAU stirbt, obwohl nach den Regeln bei Mehrheit BLAU alle überleben; damit liegt ein Regel-Fehler vor und die Dominanzstruktur wird falsch identifiziert.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure, explicitly acknowledging that 'red' is the individually safer choice (dominant strategy) due to the risk of being in a 'blue' minority. They consistently choose 'red' throughout the interaction, demonstrating a clear understanding of the mechanics without any rule errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

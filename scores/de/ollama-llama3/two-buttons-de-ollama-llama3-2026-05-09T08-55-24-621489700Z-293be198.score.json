@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3-2026-05-09T08-55-24-621489700Z-293be198.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:06.044746Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue it is dominant, but their mechanics are inverted (they claim red is safe when blue wins and blue is safe when red wins), so they misunderstand the dominance structure; they do not change their vote by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button but makes a significant rule error by claiming that if most people press blue, the red-presser dies (the prompt states red-pressers survive regardless of the majority).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

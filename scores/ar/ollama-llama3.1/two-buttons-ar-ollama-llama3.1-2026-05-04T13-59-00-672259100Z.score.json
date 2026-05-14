@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.1-2026-05-04T13-59-00-672259100Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:36.930283100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues (incorrectly) that blue-pressers risk death when red is the majority, showing a rule misunderstanding and failing to identify red as the dominant strategy; no evidence of vote change by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue but correctly identifies that pressing blue is irrational because it puts one's life at risk, demonstrating an understanding that red is the safer, dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

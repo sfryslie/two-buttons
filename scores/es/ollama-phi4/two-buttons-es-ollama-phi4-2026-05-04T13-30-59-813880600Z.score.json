@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-phi4-2026-05-04T13-30-59-813880600Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:42.034691200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente inicialmente elige azul por maximizar supervivencia colectiva y minimizar riesgo, pero reconoce (al menos implícitamente) que rojo podría garantizar supervivencia personal; no identifica correctamente la dominancia de rojo y trata azul como potencialmente racional sin captar que rojo nunca causa muerte.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses BLUE based on altruistic and collective survival goals, while explicitly acknowledging in Q2 that RED is the strategy that guarantees personal survival regardless of the outcome (a correct identification of the dominant strategy). They do not change their position, maintaining their preference for BLUE throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

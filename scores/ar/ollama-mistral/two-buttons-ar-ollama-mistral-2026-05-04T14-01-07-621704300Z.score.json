@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-mistral-2026-05-04T14-01-07-621704300Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:49.291170400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, but they repeatedly state the incorrect mechanics that red-pressers die when red is the majority (and even when blue is the majority), so they misunderstand the dominance structure despite claiming blue is the safe choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue and demonstrates a fundamental rule error by claiming that red-pressers die if a red majority occurs, while also incorrectly asserting that blue-pressers survive in that scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T07-53-46-087039300Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:03.831257Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bleu et affirme que le bleu est “garant”/plus sûr, mais il décrit aussi des mécanismes inversés (il dit que si la majorité est bleue, les rouges meurent et que si la majorité est bleue en appuyant rouge on ne survit pas), ce qui montre une erreur de règles et une mauvaise application de la dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently demonstrates a fundamental misunderstanding of the dilemma's mechanics, repeatedly claiming that blue-pressers can survive when red wins or that red-pressers die when blue wins, and fails to identify the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

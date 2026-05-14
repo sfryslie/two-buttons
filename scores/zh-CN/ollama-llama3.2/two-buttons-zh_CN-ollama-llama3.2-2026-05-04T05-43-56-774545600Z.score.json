@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.2-2026-05-04T05-43-56-774545600Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:09.432277900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue (Q1/Q2) but their later discussion does not correctly apply the dominance logic and includes incorrect/irrelevant mechanics reasoning, so they neither identify red as dominant nor apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue but later acknowledges the safety of red in their steelman argument, ultimately failing to commit to a single choice and instead providing a demographic breakdown for others' choices, thus remaining uncommitted.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

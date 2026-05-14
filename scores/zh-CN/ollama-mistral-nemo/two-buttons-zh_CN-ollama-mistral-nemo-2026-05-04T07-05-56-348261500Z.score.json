@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-mistral-nemo-2026-05-04T07-05-56-348261500Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:54.403236400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose blue and argue it’s rational via trust/collective good, while also stating that choosing red is tempting for self-preservation but not best collectively; they do not claim the correct dominant-strategy logic that red guarantees individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on cooperative values but commits a significant rule error in Q2 by claiming that if a majority chooses red, blue-pressers survive (they state 'choosing blue doesn't make me one of them [who die]').",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

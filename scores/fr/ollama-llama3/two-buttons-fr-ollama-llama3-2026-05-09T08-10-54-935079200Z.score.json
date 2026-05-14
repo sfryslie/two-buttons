@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3-2026-05-09T08-10-54-935079200Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:52.989788300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement BLUE et justifie par une logique de survie conditionnelle à la majorité, tout en affirmant à tort que rouge peut mener à la mort quand la majorité est rouge (inversion des règles) et sans identifier la dominance de RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue throughout the interaction, failing to recognize that red is a dominant strategy; they incorrectly believe that pressing blue is a rational survival strategy and that red-pressers die if the blue majority wins.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

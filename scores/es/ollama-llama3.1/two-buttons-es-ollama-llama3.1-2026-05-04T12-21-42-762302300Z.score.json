@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.1-2026-05-04T12-21-42-762302300Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:23.869379600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent razona que presionar rojo maximiza la supervivencia (aunque en Q4 defiende que presionar azul es racional), pero comete un error de reglas al afirmar que si la mayoría presiona azul y tú presionas rojo morirás; por ello no aplica correctamente la dominancia y su voto cambia de rojo a azul.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies RED as the logical choice for survival in Q2, but in Q4, they completely invert the logic, claiming that pressing BLUE guarantees survival if the majority presses RED (a factual error) and labeling the RED strategy as irrational.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

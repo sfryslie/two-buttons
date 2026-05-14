@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3-2026-05-04T08-08-38-909669Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:46.887578700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue is the rational/survival-maximizing choice under beliefs about others, without identifying red as the dominant strategy; they also do not claim any rule mechanics errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue, arguing that it is a rational choice based on coordination and risk aversion, while explicitly acknowledging and attempting to refute the red button's dominance. They demonstrate a clear rule error by claiming that if one presses red and is wrong about the majority, they are the 'only one who survives' (implying blue-pressers die in a red majority, which is correct, but also implying that red-pressers are somehow at risk or that the outcome is a paradox). More importantly, they fail to grasp that red is strictly dominant because they believe red-pressers are at risk if they are 'wrong' about the majority, which is factually impossible under the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

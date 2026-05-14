@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemini-3.1-flash-lite-2026-05-09T20-13-48-233523600Z-85c128de.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:05.758033500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue can lead to their death when red is the majority, while also claiming red is dominant; they do not apply the dominance structure correctly and do not show a vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy (the 'safe' choice) but explicitly chooses BLUE based on moral, cooperative, and 'superrational' philosophical frameworks. They maintain this position throughout the dialogue, demonstrating a clear understanding of the game theory mechanics while rejecting the dominant strategy for altruistic reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

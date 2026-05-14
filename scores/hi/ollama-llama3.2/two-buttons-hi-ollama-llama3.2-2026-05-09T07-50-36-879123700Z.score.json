@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3.2-2026-05-09T07-50-36-879123700Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:45.373243600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue is safer because a blue majority would keep everyone alive, and they do not make any rule-mechanics inversion; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative/collective survival goal, but demonstrates a fundamental misunderstanding of the rules by claiming that red-pressers die if a blue majority occurs and that red-pressers are the only ones who survive if a red majority occurs (inverting the rules).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

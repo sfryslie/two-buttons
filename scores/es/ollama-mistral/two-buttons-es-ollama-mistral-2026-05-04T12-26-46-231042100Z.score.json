@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-2026-05-04T12-26-46-231042100Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:33.436897Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent no comete un error de reglas pero se mantiene sin una elección personal clara (habla de deseos hipotéticos y de que la mayoría probablemente presiona azul), por lo que no aplica correctamente la dominancia y no identifica red como estrategia dominante.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly believing that pressing blue increases one's own survival probability, and demonstrates a rule error by failing to recognize that red-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

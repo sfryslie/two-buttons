@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemini-3.1-pro-preview-2026-05-04T02-41-35-289259700Z.json",
+  "modelLabel" : "gemini-3.1-pro-preview",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:26:56.884902800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Red and repeatedly claim Red is strictly dominant and guarantees their survival, but they also incorrectly state that blue-pressers die when red is the majority (and that red-majority implies death for blue-pressers), showing a rule misunderstanding despite correct dominant-strategy identification.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies Red as the strictly dominant strategy using game theory, acknowledges the dominance structure throughout, and maintains their choice of Red while providing a sophisticated analysis of why others might choose Blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

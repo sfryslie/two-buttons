@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-09T08-41-47-590338200Z-3a023ad9.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:00:42.680753600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent argues that choosing blue would lead to their death when blue is the majority, concludes survival requires pressing red, and later reiterates that red is the logical choice when majority is red; they do not make a rule-mechanics inversion but they misapply dominance by treating blue as the safer option in the counterargument and then rejecting it.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the safer choice but demonstrates a rule error by claiming that blue-pressers die when a blue majority occurs (they claim 'if you press blue, you won't survive' if the majority presses blue).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

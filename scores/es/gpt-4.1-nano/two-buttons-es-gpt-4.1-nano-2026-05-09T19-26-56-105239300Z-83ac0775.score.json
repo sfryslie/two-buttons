@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-4.1-nano-2026-05-09T19-26-56-105239300Z-83ac0775.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:25.333678Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que su decisión depende de creer qué hará la mayoría (azul si cree que la mayoría hará azul; rojo si cree que la mayoría hará rojo) y además sostiene que presionar rojo puede ser suicidio si la mayoría elige azul, lo que muestra una confusión con la mecánica de dominancia (red no puede causar su muerte cuando gana blue).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly treating the dilemma as a coordination game where the optimal choice depends on predicting the majority. They explicitly state that pressing red is a 'suicide' if the majority chooses blue, which is a factual error regarding the rules (red-pressers survive regardless of the majority).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

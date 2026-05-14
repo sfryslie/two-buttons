@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T06-37-56-649671500Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:50.457086900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für den blauen Knopf und begründet dies mit der (falschen) Annahme, dass blau nur dann sicher ist, wenn die Mehrheit blau drückt, und erwähnt dabei nicht korrekt die Dominanz von rot; keine Regel-Fehlinterpretation der Mechanik, aber falsche Dominanzanwendung.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative assumption, but demonstrates a fundamental rule error by claiming that if they press red, they might not survive if the majority presses blue (in reality, red-pressers always survive). They fail to identify red as the dominant strategy, instead viewing the choice as a gamble on the majority's behavior.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

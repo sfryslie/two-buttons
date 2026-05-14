@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-gemma4-2026-05-09T13-12-58-911765700Z-2bd4a0c3.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:21:36.103489600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit der (fälschlich angenommenen) Idee, dass Blau die Überlebenswahrscheinlichkeit aller maximiert, während er/sie gleichzeitig die Dominanzlogik nicht korrekt anwendet (er/sie erwartet bei Rot ein Aussterben der Gesamtheit).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a utilitarian framework, while explicitly acknowledging the game-theoretic dominance of RED (which they correctly identify as the 'individualistic' or 'self-preserving' choice). They demonstrate a clear understanding of the dilemma's mechanics and the concept of dominant-strategy reasoning, correctly identifying that RED is the safer individual choice while choosing BLUE for moral/cooperative reasons. There is no rule error, as they correctly describe the outcomes of both button choices.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

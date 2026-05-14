@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3-2026-05-09T08-07-54-012830500Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:34.619727200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and justify it via moral/altruistic considerations, but they do not identify the dominance structure (red is individually safer regardless of others), and they do not make any rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for moral reasons while correctly identifying red as the rational/dominant strategy in their counterargument, though they commit a rule error by suggesting that if the majority chooses red, there is no guarantee they will survive (the rules state red-pressers always survive).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

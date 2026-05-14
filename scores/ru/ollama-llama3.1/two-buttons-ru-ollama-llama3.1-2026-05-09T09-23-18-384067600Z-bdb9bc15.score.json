@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.1-2026-05-09T09-23-18-384067600Z-bdb9bc15.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:59:45.814158300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to RED, but their reasoning repeatedly inverts the mechanics (claiming red-pressers die when blue wins and that blue is the rational choice for majority), so they do not correctly apply the dominant strategy despite discussing it.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy, noting that it provides survival in both scenarios (or at least maximizes survival chances), and consistently maintains this position throughout the dialogue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

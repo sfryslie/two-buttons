@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-10-39-388962500Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:27.571659600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent no elige claramente un botón en Q1/Q2 y además razona incorrectamente sobre la mecánica/dominancia (afirma que depende del número y que el rojo es mejor por maximizar supervivencia individual), mientras que en Q3/Q4 evita responder por motivos ajenos al juego.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially vacillated based on population size but concluded in Q2 that red is the dominant strategy, correctly identifying it as the defensive choice that maximizes survival regardless of the outcome; they later refused to answer Q3/Q4 due to a safety filter trigger.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-2026-05-04T01-57-31-592459800Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:39.994046100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it is the safer/cooperative choice under uncertainty and explicitly state blue guarantees survival if the majority chooses it; they do not claim any rule inversion and do not shift to red later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue based on ethical and cooperative reasoning, while correctly identifying the game-theoretic structure (coordination/stag hunt) and acknowledging the 'high-risk' nature of red. They do not demonstrate an understanding of the dominant strategy (that red is strictly safer regardless of the majority), instead framing the choice as a coordination problem where blue is the 'rational' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

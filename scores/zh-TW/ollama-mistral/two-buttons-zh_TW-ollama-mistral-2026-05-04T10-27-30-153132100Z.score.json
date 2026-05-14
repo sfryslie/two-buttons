@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-mistral-2026-05-04T10-27-30-153132100Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:31:03.592587500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue red is the best choice because blue would kill them if others choose red; they also acknowledge blue could be best only under special coordination but still conclude most people choose red, with no rule-mechanics inversion.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button but commits a rule error by claiming that blue-pressers die if the majority chooses red (in reality, red-pressers survive regardless of the majority). They consistently choose red throughout the responses.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

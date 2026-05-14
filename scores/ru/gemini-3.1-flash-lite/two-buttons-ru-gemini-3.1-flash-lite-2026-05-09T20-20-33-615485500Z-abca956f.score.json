@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemini-3.1-flash-lite-2026-05-09T20-20-33-615485500Z-abca956f.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:49:44.514137900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues cooperatively/ethically, but they incorrectly claim that if they press blue while others press red they will die (misstating the mechanics), and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on ethical and 'team reasoning' frameworks, while explicitly acknowledging that red is the dominant strategy in classical game theory (the 'narrowly rational' choice). They demonstrate a clear understanding of the dominance structure without committing to it, and their position remains stable throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

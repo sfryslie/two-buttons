@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-5.4-nano-2026-05-04T09-51-34-247160800Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:37.437166500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent entscheidet sich klar für Blau und begründet dies mit dem (korrekten) Mechanismus, dass bei Mehrheit Blau alle überleben, während Rot nur dann hilft wenn die Mehrheit Rot ist; er erkennt damit die Dominanzstruktur nicht als solche (er behauptet Blau sei das sichere Risikoprofil, nicht dass Rot individuell nie tötet).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the safer, more robust choice for collective survival. They demonstrate a fundamental rule error by claiming that red-pressers die if the majority chooses blue (in reality, everyone survives regardless of the majority if the majority is blue). Because of this rule error, they fail to identify the dominance structure correctly, as they believe red carries a risk of death in the blue-majority scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

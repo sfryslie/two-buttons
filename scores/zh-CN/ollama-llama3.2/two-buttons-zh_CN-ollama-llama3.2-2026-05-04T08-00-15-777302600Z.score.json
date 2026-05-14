@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.2-2026-05-04T08-00-15-777302600Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:30.704641200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue is the only way to ensure survival, and does not identify red as the dominant strategy; they also do not make a rule-mechanics error but their dominance reasoning is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative/collective survival framework, but demonstrates a fundamental rule error by claiming that red-pressers die if the majority chooses blue (the prompt states everyone survives if the majority chooses blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

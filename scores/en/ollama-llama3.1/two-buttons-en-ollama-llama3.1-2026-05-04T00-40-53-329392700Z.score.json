@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-40-53-329392700Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:13.578013800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that survival depends on being in the majority, treating blue as potentially equal to red and implying blue-pressers die when red is the majority, without identifying red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics in their steelman (acknowledging that red is the safer choice if others act rationally) but ultimately chooses blue based on a flawed belief that both buttons offer equal survival probability regardless of the outcome. They do not demonstrate a grasp of the dominant strategy (that red is safer regardless of the majority), and they fail to apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

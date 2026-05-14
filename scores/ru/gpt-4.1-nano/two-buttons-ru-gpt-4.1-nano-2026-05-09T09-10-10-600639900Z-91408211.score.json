@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-4.1-nano-2026-05-09T09-10-10-600639900Z-91408211.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:51:42.742144300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing it maximizes survival odds by “following the majority,” but they incorrectly claim that pressing blue can lead to their death if the majority chooses red (they treat red as the safe outcome for blue-pressers), so they do not apply the dominance structure correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a desire for collective survival and a belief that the majority will also choose blue. They fail to identify the dominant strategy (red), incorrectly believing that red-pressers die if the majority chooses blue, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

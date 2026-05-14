@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.1-2026-05-09T09-21-14-479511400Z-8a89cc33.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:59:32.557404800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent claims that if a red majority occurs everyone dies, so they conclude one should press red, and later they still defend pressing blue as rational; they also explicitly state the incorrect mechanics that red majority kills everyone.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to RED in Q1/Q2 based on a fundamental misunderstanding of the rules (believing a red majority kills everyone), which constitutes a rule error. They later acknowledge the correct dominance logic in Q2 but reject it, and by Q4, they explicitly defend the rationality of choosing BLUE, indicating a shift in position from their initial choice of RED.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

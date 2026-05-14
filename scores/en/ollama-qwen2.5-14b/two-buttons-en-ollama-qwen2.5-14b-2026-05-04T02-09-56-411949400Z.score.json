@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-14b-2026-05-04T02-09-56-411949400Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:49.377542700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They repeatedly argue that blue is the safer choice because they expect others to choose blue, but they never identify red as the dominant strategy and they incorrectly treat red as potentially causing the red-pressers to die when blue is the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but demonstrates a fundamental rule error by claiming that if the majority presses blue, red-pressers die (Q1, Q2, Q4). Because they believe red-pressers die when blue wins, they fail to identify red as the dominant strategy and instead invert the logic, treating blue as the safe choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-mistral-2026-05-09T09-40-04-419279600Z-bd8c212d.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:01:31.113570500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent says they would press red to maximize their own survival, acknowledges the majority-blue vs majority-red mechanics and discusses strategic uncertainty, but does not correctly identify red as the dominant strategy (they treat blue as the safer outcome when others choose blue).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies red as the strategy for survival and commits to it, but demonstrates a rule error by claiming that if the majority chooses blue, red-pressers might die (they do not).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

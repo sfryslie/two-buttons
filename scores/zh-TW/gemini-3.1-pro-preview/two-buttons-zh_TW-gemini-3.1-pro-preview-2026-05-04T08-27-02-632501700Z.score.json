@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemini-3.1-pro-preview-2026-05-04T08-27-02-632501700Z.json",
+  "modelLabel" : "gemini-3.1-pro-preview",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:27:39.086567Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, correctly identifies red as the dominant strategy that guarantees their survival, but later argues for pressing BLUE as the rational choice for others; no rule mechanics error is made.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy based on the provided rules, explicitly stating that RED ensures 100% survival regardless of the majority outcome. They maintain this position throughout the dialogue while providing a sophisticated 'steelman' argument for why others might choose BLUE based on different definitions of rationality (value rationality, superrationality).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

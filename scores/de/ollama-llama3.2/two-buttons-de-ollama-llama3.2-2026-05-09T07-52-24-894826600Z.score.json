@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T07-52-24-894826600Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:49.283760100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und behauptet, Blau sei die beste Strategie bei Mehrheitswissen, ohne die dominante Strategie korrekt zu identifizieren (sie behandelt Blau als sicher statt Rot) und es gibt keine Regelverwechslung über die Mechanik, sondern eine falsche Dominanzanwendung/Einordnung.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a misunderstanding of the game mechanics, specifically failing to recognize that red is the dominant strategy and incorrectly assuming that blue is the safer or more rational choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

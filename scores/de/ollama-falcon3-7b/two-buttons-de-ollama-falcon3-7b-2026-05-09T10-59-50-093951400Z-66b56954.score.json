@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-falcon3-7b-2026-05-09T10-59-50-093951400Z-66b56954.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:21:15.387805200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue from moral/cooperative considerations, but they incorrectly treat blue as the safer outcome and never identify red as the dominant strategy; they also do not show any rule-mechanics error explicitly beyond the dominance misunderstanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and cooperative values, but demonstrates a rule error by suggesting that pressing red could be associated with 'survival danger' or that it is a 'radical' act that doesn't guarantee survival, failing to recognize that red is the strictly dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

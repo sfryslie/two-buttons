@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-mistral-2026-05-04T10-26-35-586013400Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:58.298400600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They discuss the mechanics correctly and argue blue is the safer/cooperative choice, but they never commit to pressing either button and do not identify red as the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy and commits multiple rule errors, specifically claiming that red-pressers die if the majority presses blue (which contradicts the prompt) and that blue-pressers survive if the majority presses red (which also contradicts the prompt). They avoid making a personal choice, framing the dilemma as a philosophical exercise, and thus remain uncommitted.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

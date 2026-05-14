@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-mistral-nemo-2026-05-09T15-16-08-837163700Z-126a5d6f.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:00.612231100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue to ensure everyone survives, and while they discuss others possibly fearing blue, they do not identify the dominance structure (red is individually safe regardless of others) and they treat blue as the rational/safe choice; no vote change is evident.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for altruistic reasons, acknowledges the dominance of red as a potential strategy for others, but incorrectly suggests that red-pressers might fear blue-pressers will cause everyone to die, which is a misunderstanding of the rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

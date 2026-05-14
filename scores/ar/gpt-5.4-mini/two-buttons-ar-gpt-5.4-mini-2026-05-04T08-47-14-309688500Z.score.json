@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-5.4-mini-2026-05-04T08-47-14-309688500Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:14:37.319267100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially commit to pressing red and argue (incorrectly) that red is safer for the individual depending on others, while later they retract the analysis and present a conditional “no absolute best” framing; they never clearly switch to blue by the end.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose RED but then performed a detailed analysis in Q2 where they incorrectly inverted the rules, claiming that pressing BLUE leads to death if the majority presses RED (which is false, as the rules state blue-pressers die only if the majority is red, but the respondent fails to recognize that RED is a dominant strategy because it guarantees survival regardless of the majority). They remain uncommitted to a single choice by the end, framing the decision as a coordination problem rather than a dominant strategy problem.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

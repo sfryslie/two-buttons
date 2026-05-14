@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-claude-haiku-4-5-2026-05-10T18-50-06-020558600Z-cc51dfa1.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:31:56.010800100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially lean toward red as the survival option but explicitly correct the mechanics in Q4, concluding blue maximizes their survival chances; they also acknowledge red does not guarantee survival and that blue is safer given their beliefs.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies the dominance of red but later commits a rule error in Q4, incorrectly claiming that red-pressers die if the blue majority wins, which leads them to conclude that blue is the rational choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

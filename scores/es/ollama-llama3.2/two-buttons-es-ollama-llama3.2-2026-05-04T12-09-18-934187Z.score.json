@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-09-18-934187Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:25.457304900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente inicialmente elige azul y luego argumenta que la respuesta correcta podría ser roja por razones morales, pero en ningún momento identifica correctamente que rojo domina a azul (de hecho afirma que si presionas rojo no sobrevivirás), mostrando confusión con la mecánica y la dominancia; además no hay cambio claro final entre Q1 y Q4 (Q4 defiende azul).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but shifts their reasoning in Q2 to acknowledge the strategic and moral arguments for red, ultimately concluding that red is the better choice; they exhibit significant rule errors throughout, including the belief that red-pressers die if they are not in the majority and that blue-pressers survive if they are in the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3.1-2026-05-09T09-29-05-753870700Z-db666848.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:42.260804100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent argues that people will choose blue because they expect others to choose red, but they never commit to a specific button and their mechanics/dominance reasoning is inconsistent with the actual dominant strategy (red is always individually safe).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue based on a cooperative/altruistic framework, failing to recognize that red is the dominant strategy. They exhibit a rule error by implying that blue-pressers have a chance of survival in a red-majority scenario (or that blue is the safer choice), and they do not demonstrate an understanding of dominant-strategy logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

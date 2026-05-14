@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-2026-05-04T00-51-12-445630Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:29.789198600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue (correctly) that red maximizes individual survival chances, while also acknowledging that blue could be chosen for moral reasons; no rule mechanics are inverted and there is no vote change.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the survival-maximizing choice but makes a rule error by claiming that if everyone presses red, they die (the rules state red-pressers survive if a red majority occurs).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

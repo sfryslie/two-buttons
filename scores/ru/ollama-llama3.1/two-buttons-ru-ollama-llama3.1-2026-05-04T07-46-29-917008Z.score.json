@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.1-2026-05-04T07-46-29-917008Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:59:23.520475400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, but their reasoning repeatedly claims that pressing BLUE leads to death when blue wins and that pressing RED is the only way to survive, which misreads the mechanics (blue majority would save everyone).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the choice to make, but their reasoning is fundamentally flawed because they believe that pressing BLUE leads to death if the majority presses BLUE (a direct violation of the rules, which state everyone survives if the majority presses BLUE).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

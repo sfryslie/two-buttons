@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.1-2026-05-04T13-59-58-032898400Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:34.320513300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and claims that pressing blue leads to everyone dying when red is the majority, while also discussing that red is chosen by others to avoid death—this reflects an incorrect understanding of the payoff mechanics and does not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but demonstrates a complete inversion of the rules, claiming that red-pressers are the ones who save everyone and that blue-pressers die in a red majority, which is the opposite of the provided rules. They fail to identify the dominance of red and instead confuse the mechanics, leading to a rule error and a failure to understand the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

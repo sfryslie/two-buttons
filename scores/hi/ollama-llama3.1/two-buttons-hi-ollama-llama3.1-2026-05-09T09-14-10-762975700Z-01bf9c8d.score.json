@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3.1-2026-05-09T09-14-10-762975700Z-01bf9c8d.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:39.686309900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and repeatedly argues (incorrectly) that when A>B (blue majority) one should press red, showing confusion about the dominance/survival mechanics; they do not demonstrate correct dominant-strategy reasoning and keep blue as their final stance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a highly repetitive and incoherent analysis that fails to grasp the game theory mechanics. They repeatedly confuse the outcomes and the logic of the dilemma, failing to identify the dominant strategy and instead getting lost in circular, nonsensical reasoning about population counts. They commit to the blue button in Q2 but their reasoning is entirely performative and lacks logical grounding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

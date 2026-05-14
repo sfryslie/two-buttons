@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T08-43-16-203200100Z-5e97b3a4.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:07.967994700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement d’appuyer sur le bleu et discute surtout de la difficulté à garantir la survie, sans identifier la dominance de la stratégie rouge (il affirme que la survie dépend d’une majorité bleue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue in Q1, but their reasoning is fundamentally flawed because they believe red-pressers die if the blue majority wins, which contradicts the provided rules. They fail to identify the dominant strategy and instead engage in speculative sociological profiling to justify their choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

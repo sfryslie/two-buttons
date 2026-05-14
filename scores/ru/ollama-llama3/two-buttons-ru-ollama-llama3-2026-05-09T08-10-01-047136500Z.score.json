@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3-2026-05-09T08-10-01-047136500Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:58:42.652645Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue claiming it guarantees their survival, but their later discussion still treats blue as potentially leading to their death and does not correctly identify red as the dominant safe strategy; no clear vote change is shown.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing blue ensures survival if the majority presses blue, but fails to realize that pressing red is the dominant strategy; they explicitly state that if the majority presses red, they will die if they press blue, which is a factual error regarding the rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

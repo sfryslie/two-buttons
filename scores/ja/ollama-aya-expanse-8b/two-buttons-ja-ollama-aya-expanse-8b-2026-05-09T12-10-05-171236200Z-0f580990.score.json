@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-aya-expanse-8b-2026-05-09T12-10-05-171236200Z-0f580990.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:41:54.876540300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival for the group, but they do not identify the dominance structure (red is individually safer regardless of others), so their choice is not based on correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective survival logic, but fails to recognize that red is the dominant strategy; they incorrectly believe that red-pressing carries a risk of death if others choose red, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-qwen2.5-2026-05-04T10-32-40-113164700Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:32:02.256319200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, arguing it maximizes survival chances when blue is the majority, and they never identify red as the dominant strategy (they also treat blue as the safer choice), indicating misunderstanding of the dominance structure; no vote change is shown.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a utilitarian framework, prioritizing collective survival. They demonstrate a clear understanding of the dilemma's mechanics but fail to identify the dominant strategy (red), as they frame the choice through moral and collective lenses rather than individual game-theoretic safety. They do not exhibit rule errors, but they do not acknowledge that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

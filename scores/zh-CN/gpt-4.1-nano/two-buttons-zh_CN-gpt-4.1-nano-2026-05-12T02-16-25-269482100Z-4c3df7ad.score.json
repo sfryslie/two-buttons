@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-4.1-nano-2026-05-12T02-16-25-269482100Z-4c3df7ad.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:21:15.569134600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing it is the safer strategy under uncertainty, and they never identify red as the dominant strategy; they also correctly describe the mechanics (blue majority saves everyone, red majority saves only red-pressers).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is a 'safe' strategy for collective survival. They fail to recognize that RED is the dominant strategy because they incorrectly assume that choosing BLUE is safer or that it maximizes survival probability, whereas RED is strictly safer regardless of the outcome. They do not demonstrate an understanding of dominant-strategy reasoning, as they frame the choice as a cooperative dilemma rather than an individual optimization problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

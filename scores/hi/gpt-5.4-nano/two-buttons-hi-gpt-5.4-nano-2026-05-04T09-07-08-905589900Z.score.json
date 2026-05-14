@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5.4-nano-2026-05-04T09-07-08-905589900Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:08.935022800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer/cooperative, but they incorrectly treat blue as the lower-risk choice and claim red is riskier because red-majority would save only red-pressers (they miss that red strictly dominates and red-pressers survive even when blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, framing it as a cooperative coordination strategy. While they correctly identify the mechanics of the dilemma (including the fact that red-pressers survive if red is the majority), they fail to recognize that red is a dominant strategy because they prioritize the 'everyone survives' outcome over individual survival. They demonstrate an understanding of the game-theoretic arguments for red (the 'second side' argument) but reject the dominance logic in favor of a coordination-based approach. They do not commit a rule error, as they correctly describe the survival conditions for both colors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

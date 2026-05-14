@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.1-2026-05-09T09-17-02-940951200Z-e0a935bc.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:59:33.306702Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but their mechanics understanding is correct; however they claim blue is the individually safe choice (and that blue-pressers die when blue wins), so they misunderstand dominance and apply it incorrectly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q2, correctly identifying it as the dominant strategy, but shifts to BLUE in Q3 and Q4 based on a sociological/cooperative rationale, despite acknowledging the dominance of RED.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

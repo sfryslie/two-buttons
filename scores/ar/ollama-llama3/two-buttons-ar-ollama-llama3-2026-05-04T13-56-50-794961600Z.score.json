@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3-2026-05-04T13-56-50-794961600Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:27.610173700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They claim red is the individually rational survival choice but also argue for blue on fairness/cooperation grounds, and they end up describing blue as the likely majority outcome without showing a correct dominant-strategy analysis.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics and the Nash equilibrium (RED) in Q1/Q2, but shifts to a sociological/cooperative argument for BLUE in Q3/Q4, ultimately settling on a preference for the cooperative outcome.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

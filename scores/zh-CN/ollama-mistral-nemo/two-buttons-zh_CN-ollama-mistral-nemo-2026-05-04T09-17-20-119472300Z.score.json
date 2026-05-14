@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-mistral-nemo-2026-05-04T09-17-20-119472300Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:58.544318200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red for self-preservation, but their explanation incorrectly claims blue-majority leads to red-pressers dying (and red-majority leaves only red-pressers alive), so they misunderstand the mechanics and dominant strategy despite discussing game-theory concepts.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy for individual survival and commits to it, while acknowledging the cooperative argument for BLUE without changing their position.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

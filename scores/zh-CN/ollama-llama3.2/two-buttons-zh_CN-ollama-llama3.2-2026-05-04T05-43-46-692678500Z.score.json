@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.2-2026-05-04T05-43-46-692678500Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:09.579528600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially commits to pressing red, but later argues for pressing blue and frames blue as maximizing survival while also claiming red-pressers die when blue wins, showing misunderstanding of the dominance/mechanics despite some dominant-strategy talk.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits a fundamental misunderstanding of the dilemma's mechanics, repeatedly claiming that red-pressers die when blue wins and that blue-pressers die when red wins, which constitutes a rule error. Despite choosing RED initially, they demonstrate no understanding of dominant-strategy logic and their reasoning is consistently flawed by these rule errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

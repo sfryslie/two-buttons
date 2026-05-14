@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.1-2026-05-04T13-58-54-454392Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:23.658944900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent claims red is the risky choice (blue is safe) and even says if the majority press red you will die, showing an inverted understanding of the mechanics; they never clearly commit to a personal button press and end by defending blue-pressing as rational.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental rule error by claiming that a red majority kills red-pressers and that blue-pressers survive in a blue majority, failing to recognize the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

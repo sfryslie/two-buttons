@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-2026-05-04T00-52-00-478637900Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:30.540887200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue blue is rational, but they also claim red can be a dominant strategy and discuss outcomes like ties/no-survival, indicating misunderstanding of the mechanics and dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice, instead providing a meta-analysis of the dilemma's game-theoretic and social complexities. They demonstrate a misunderstanding of the mechanics by suggesting that a tie (N/2) results in no one surviving, and they fail to identify the dominant strategy, instead framing red as a risky choice dependent on group size.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

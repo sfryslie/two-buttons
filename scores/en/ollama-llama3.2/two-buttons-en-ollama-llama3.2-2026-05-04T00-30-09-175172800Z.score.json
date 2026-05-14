@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.2-2026-05-04T00-30-09-175172800Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:26.975162Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safe choice, but they do not correctly identify the dominance structure (they treat blue as dominant/safe rather than recognizing red as strictly dominant), and they never acknowledge that red-pressers survive when blue is the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, incorrectly identifying it as the dominant strategy while failing to recognize that red is the mathematically dominant choice; they exhibit a rule error by suggesting that red-pressers might die if the majority is blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

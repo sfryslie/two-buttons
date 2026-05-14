@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.1-2026-05-04T13-59-41-746776700Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:31.737437800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue but repeatedly states an incorrect rule about outcomes (claiming red-majority kills blue-pressers and blue-majority kills red-pressers), and they do not correctly apply dominant-strategy logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental misunderstanding of the rules, incorrectly believing that red-pressers die if a red majority occurs and that blue-pressers survive in certain scenarios, leading to a confused and incoherent decision-making process.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

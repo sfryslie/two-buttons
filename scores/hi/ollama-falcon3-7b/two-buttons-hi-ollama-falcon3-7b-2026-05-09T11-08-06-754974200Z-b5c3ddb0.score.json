@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-falcon3-7b-2026-05-09T11-08-06-754974200Z-b5c3ddb0.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:23.326884300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and repeatedly states that when blue is the majority everyone survives, but they never identify red as the dominant safe strategy and their dominance reasoning is inconsistent/incorrect (they treat blue as the safe choice).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently demonstrates a correct understanding of the game's mechanics (e.g., acknowledging that a blue majority saves everyone and a red majority saves only red-pressers). While the respondent struggles with linguistic clarity and repetitive phrasing, they correctly identify the outcomes for both strategies. They do not commit to a specific button, instead focusing on analyzing the dilemma's structure and the implications of majority behavior, thus qualifying as PERFORMATIVELY_HEDGED. They do not demonstrate an understanding of dominant-strategy reasoning (the concept that red is safer regardless of the majority).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

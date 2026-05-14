@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemini-2.5-flash-lite-2026-05-04T08-59-47-002765900Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:04.600957900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing blue guarantees everyone survives and red is risky/immoral, and they explicitly claim blue is the safe choice even though they acknowledge red-pressers would survive when blue wins; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and cooperative reasoning, but they fundamentally misunderstand the game mechanics by claiming that blue-pressers die if the majority presses red (they do not) and that red-pressers die if the majority presses blue (they do not).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

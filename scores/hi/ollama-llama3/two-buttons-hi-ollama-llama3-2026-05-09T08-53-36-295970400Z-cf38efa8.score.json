@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3-2026-05-09T08-53-36-295970400Z-cf38efa8.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:35.849549400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, claim red is the dominant strategy in a Prisoner’s Dilemma sense but still defend blue on moral/philosophical grounds, and they do not make any rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies the mechanics of the dilemma, claiming that red-pressers die if the blue button wins (a rule error), and consequently fails to identify the correct dominant strategy. They commit to the blue button in Q1/Q2 and maintain this position throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-aya-expanse-8b-2026-05-04T06-28-00-628850200Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:42.401944200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent repeatedly commits to pressing BLUE for self-preservation and claims it is the safer option, while never identifying the dominance structure that RED guarantees individual survival; they also do not show any rule-mechanics error but their dominance application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies BLUE as their choice, but they fundamentally misunderstand the game mechanics by claiming that BLUE ensures survival and RED is risky, effectively inverting the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3.1-2026-05-09T09-25-20-354576600Z-a560baf9.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:41.397872100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, claims red ensures everyone survives, and does not correctly apply the dominance structure (they treat blue as the case where only red survives), indicating rule misunderstanding about outcomes and dominance.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, arguing that it ensures survival, but their reasoning is based on a fundamental misunderstanding of the game's mechanics (claiming red ensures everyone survives, which contradicts the rules).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-aya-expanse-8b-2026-05-04T01-18-39-063623200Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:57.143550800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing blue guarantees everyone survives and red risks their own death, but they do not identify the dominant strategy (red) and their mechanics-based risk assessment is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the optimal strategy and claims that pressing red carries a risk of death, demonstrating a fundamental misunderstanding of the game's mechanics (rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

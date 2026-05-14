@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-09T09-32-31-036079100Z-79a9bf23.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:00.478193600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant finit par choisir ROUGE en Q1/Q3 mais justifie ensuite en Q2/Q4 une logique où le bouton BLEU est supposé conduire à la survie de tous, sans reconnaître la dominance correcte de ROUGE; il y a donc une erreur de règles et une incohérence de position finale.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose red but explicitly repudiated this choice in Q2, shifting to a preference for blue based on a cooperative coordination argument, while failing to identify the dominant strategy of red.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

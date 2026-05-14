@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemini-2.5-flash-lite-2026-05-04T16-56-41-676196300Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:16:29.440403800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for collective/global optimality, while incorrectly claiming blue-pressers die when red is the majority and not identifying red as the dominant individually safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and the dominance of the red button (that red is the individually safer choice regardless of the outcome), but explicitly chooses blue based on a preference for collective survival and cooperative game theory. They maintain this position throughout the dialogue, demonstrating a clear understanding of the dominance structure while consciously rejecting it in favor of a cooperative strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

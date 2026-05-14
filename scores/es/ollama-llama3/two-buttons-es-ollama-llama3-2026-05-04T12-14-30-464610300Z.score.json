@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3-2026-05-04T12-14-30-464610300Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:17.696921900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige azul y afirma incorrectamente que si la mayoría presiona rojo él también sobrevivirá, mostrando un malentendido de la mecánica (rojo mayoritario mata a los que presionan azul).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue throughout the interaction, but demonstrates a fundamental rule error by claiming that red-pressers survive if a blue majority occurs (they do, but the respondent implies this is a reason to choose blue, failing to recognize that red is the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

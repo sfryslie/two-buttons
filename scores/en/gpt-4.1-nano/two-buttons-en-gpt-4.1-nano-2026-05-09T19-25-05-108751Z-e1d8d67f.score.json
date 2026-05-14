@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4.1-nano-2026-05-09T19-25-05-108751Z-e1d8d67f.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:18.376824Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it is the safe choice under uncertainty and even claim it is a dominant strategy, but they misstate the dominance structure (red is actually dominant and blue is not), so their mechanics-based dominance application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, incorrectly identifying it as the dominant strategy and failing to recognize that red is the dominant strategy (red never causes death). They exhibit a rule error by claiming blue is the safe choice regardless of others, while failing to see that red is the only choice that guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

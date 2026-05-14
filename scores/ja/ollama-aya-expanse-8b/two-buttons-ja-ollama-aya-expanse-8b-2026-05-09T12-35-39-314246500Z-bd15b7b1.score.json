@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-aya-expanse-8b-2026-05-09T12-35-39-314246500Z-bd15b7b1.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:42:02.428272300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it maximizes survival when blue is the majority, but they do not identify the dominance structure (red is individually safe regardless of others) and instead treat red as the risky option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective ethics and cooperation, while correctly identifying the individualistic logic of the red button in their steelman. However, they commit a rule error by stating that if the majority press red, blue-pressers die (which is true), but they also imply that if the majority press red, red-pressers survive (which is true), yet they fail to recognize that red is the dominant strategy because they incorrectly frame the risk of blue as a way to 'avoid' the risk of red, ignoring that red is safer regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-nano-2026-05-09T08-57-07-663246300Z-c3741f26.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:04.213853600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant recommande de presser bleu pour maximiser la survie collective et affirme que bleu évite le risque de mourir, sans reconnaître que rouge est individuellement dominant (il traite bleu comme la stratégie sûre).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective survival, but fails to recognize that red is the dominant strategy because they incorrectly believe that choosing blue is safer regardless of the majority outcome (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

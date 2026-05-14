@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3-2026-05-09T09-03-15-333137600Z-2827ba36.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:54.791982900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, but their mechanics reasoning is incorrect (they claim blue-pressers die when red is majority/when blue is minority), and they do not correctly identify red as the dominant safe strategy; they also keep the same vote through Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the survival-maximizing choice and acknowledges the game-theoretic dominance of red, despite some confusion in Q1 regarding the blue-majority outcome. They maintain their commitment to red throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

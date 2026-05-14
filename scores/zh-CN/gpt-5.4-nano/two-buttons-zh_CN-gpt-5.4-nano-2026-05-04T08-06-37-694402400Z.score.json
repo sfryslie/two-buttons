@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-5.4-nano-2026-05-04T08-06-37-694402400Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:20.613414600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer under uncertainty, while also discussing (in Q2/Q3) that red could be a best response in some reasoning models; they do not state the correct dominance logic that red is individually safe regardless of others’ choices.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue, explicitly acknowledging the game's mechanics but rejecting the dominant strategy of red in favor of a strategy based on avoiding the uncertainty of predicting the majority. They correctly identify the mechanics (red majority = red survives, blue majority = everyone survives) and demonstrate a clear understanding of dominant-strategy reasoning by steelmanning the red-presser's position, even though they personally choose blue. There is no rule error, as they correctly describe the survival conditions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-qwen2.5-14b-2026-05-09T19-38-10-243932600Z-9c020964.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:24:44.692735300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich wiederholt für den blauen Knopf aus moralischen/kooperativen Gründen, erkennt aber nicht die Dominanzlogik korrekt (behauptet, rotes Drücken erhöhe die eigene Überlebenswahrscheinlichkeit nur bei roter Mehrheit) und damit wird die individuelle Sicherheit von Rot nicht verstanden.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on ethical and altruistic principles, while acknowledging the self-preservation argument for red. They demonstrate a rule error by suggesting that red-pressers might die if the majority chooses blue (the prompt states everyone survives if blue wins) and by implying that red-pressers could face a 'wrong outcome' leading to death, failing to recognize that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

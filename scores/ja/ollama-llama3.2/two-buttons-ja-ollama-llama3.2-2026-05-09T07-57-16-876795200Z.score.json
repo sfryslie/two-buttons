@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.2-2026-05-09T07-57-16-876795200Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:44:01.020767700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the best way to avoid everyone dying, but they incorrectly treat red as the option that would kill red-pressers when blue wins and thus do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on moral/cooperative grounds while acknowledging the red button's strategic advantage, but they commit a rule error by claiming that pressing red could cause everyone to die or that blue is the only way to ensure survival, failing to grasp that red is strictly dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

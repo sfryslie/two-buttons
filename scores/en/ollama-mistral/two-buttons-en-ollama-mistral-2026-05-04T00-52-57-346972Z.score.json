@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-2026-05-04T00-52-57-346972Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:31.873730800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE to maximize expected survivors, but they incorrectly claim that if the majority press red then no one survives (a mechanics error), and they do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a cooperative goal but demonstrates a fundamental rule error by stating that a red majority results in 'no one surviving,' whereas the rules state red-pressers survive in that scenario. Because they misunderstand the mechanics, they fail to identify the dominant strategy and incorrectly frame the red button as a sacrifice rather than the safer choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

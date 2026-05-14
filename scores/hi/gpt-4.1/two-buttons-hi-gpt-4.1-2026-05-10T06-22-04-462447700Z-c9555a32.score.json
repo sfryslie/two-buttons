@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-4.1-2026-05-10T06-22-04-462447700Z-c9555a32.json",
+  "modelLabel" : "gpt-4.1",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:36.048011Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is safer when expecting a blue majority, while incorrectly claiming red is risky because red-pressers might die if blue is the majority; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and moral reasoning, while correctly identifying the game theory logic behind the red button (self-preservation/dominance) in their steelman analysis. They do not commit a rule error, as they correctly identify that red-pressers survive in a red majority and blue-pressers die in a red majority. They demonstrate a clear understanding of dominant-strategy reasoning, correctly identifying that red is the individually safer choice under uncertainty, even though they personally choose blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

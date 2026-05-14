@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.2-2026-05-09T08-50-53-613611700Z-71e01a85.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:44:12.911731600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, but their explanation incorrectly treats blue as the safer outcome for individuals (claiming red-pressers may die when blue wins), so they do not apply the dominance structure correctly despite discussing it.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing RED, correctly identifying it as the choice that ensures their own survival regardless of the majority, though they struggle with the game theory terminology and occasionally confuse the outcomes in their explanations.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

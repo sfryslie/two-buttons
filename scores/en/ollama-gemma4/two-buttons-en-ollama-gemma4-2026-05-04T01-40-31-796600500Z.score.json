@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-gemma4-2026-05-04T01-40-31-796600500Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:07.940361400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue that Blue yields universal survival while Red risks their death if the majority is Blue; they explicitly treat Blue as the safer choice and do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses Blue, arguing it is the 'rational' and 'safest' choice. However, they fundamentally misunderstand the game's mechanics: they believe Blue is the dominant strategy because it leads to 'universal survival,' whereas the prompt explicitly states that Red is the dominant strategy (as Red-pressers survive regardless of the majority). The respondent incorrectly claims that Red-pressers die if the majority is Blue, which is a direct violation of the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

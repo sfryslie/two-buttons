@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-4.1-nano-2026-05-09T09-10-10-647929Z-0ab1d5ea.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:51:43.247336500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues it minimizes personal risk if blue wins, and even acknowledges that choosing blue can lead to death if red wins—showing correct mechanics but incorrect dominance identification (red is actually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, incorrectly identifying it as the safer or more rational choice, and fails to recognize that red is the dominant strategy (red-pressers survive in both majority scenarios). They exhibit a rule error by suggesting that choosing blue is a way to 'minimize risk' and that choosing red is only for those who are certain of a red majority, failing to see that red is safe regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

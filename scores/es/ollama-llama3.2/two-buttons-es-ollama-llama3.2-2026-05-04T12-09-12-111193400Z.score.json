@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-09-12-111193400Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:25.332572Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige azul en Q1 y luego en Q2 se centra en que no puede confiar en la elección por incertidumbre/“equilibrio”, sin reconocer la dominancia de red; además no hay errores explícitos de mecánica pero sí falla en identificar la estrategia dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental misunderstanding of the dilemma's mechanics, repeatedly claiming that blue-pressers survive when the majority presses red and that red-pressers die when the majority presses blue, which contradicts the provided rules. They fail to identify the dominant strategy and instead engage in confused, non-logical reasoning about the outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

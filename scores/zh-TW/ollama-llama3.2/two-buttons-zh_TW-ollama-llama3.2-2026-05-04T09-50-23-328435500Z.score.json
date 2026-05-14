@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-llama3.2-2026-05-04T09-50-23-328435500Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:53.205169400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE to ensure survival, but their mechanics reasoning is confused and they claim BLUE-pressers are irrational; they do not correctly identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE but struggles with the game theory, eventually concluding that the dilemma is a paradox and that pressing BLUE is irrational. They demonstrate a rule error by suggesting that if a majority presses RED, the blue-pressers' survival is contingent on the paradox rather than the stated rules, and they fail to identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

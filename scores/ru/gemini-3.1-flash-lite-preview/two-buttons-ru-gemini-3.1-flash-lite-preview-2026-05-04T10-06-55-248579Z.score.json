@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemini-3.1-flash-lite-preview-2026-05-04T10-06-55-248579Z.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:50:03.355322400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for cooperation, but repeatedly misstates the dominance/safety logic by claiming red is a dominant strategy that guarantees personal survival, while also predicting red majority; they do not correctly apply the fact that red strictly dominates blue for individual safety.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on ethical and 'super-rational' cooperative frameworks, while explicitly acknowledging and correctly steelmanning the red button as the dominant strategy in game theory. They demonstrate a clear understanding of the dominance structure throughout the responses, correctly identifying red as the individually safer choice while rejecting it for philosophical reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

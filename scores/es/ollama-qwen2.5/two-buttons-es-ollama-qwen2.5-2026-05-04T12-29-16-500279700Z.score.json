@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-qwen2.5-2026-05-04T12-29-16-500279700Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:44.107867300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige presionar AZUL por motivos utilitaristas/cooperativos y expresa que presionar rojo podría llevar a que “nadie sobreviva”, mostrando una comprensión dominante incorrecta (no identifica rojo como estrategia individualmente segura).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on utilitarian and cooperative ethics, while correctly identifying the red button's individualistic survival logic in their steelman. They do not exhibit rule errors, as they correctly describe the outcomes of the buttons, and they demonstrate an understanding of the dominant strategy by acknowledging that red is the choice for individual survival, even though they reject it in favor of collective cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

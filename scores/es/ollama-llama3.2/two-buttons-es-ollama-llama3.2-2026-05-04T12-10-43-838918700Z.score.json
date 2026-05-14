@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-10-43-838918700Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:27.580736200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que la estrategia segura es presionar azul, pero luego sostiene que para garantizar sobrevivir debes presionar rojo; además no muestra un error mecánico claro sobre quién muere según la mayoría, aunque su razonamiento sobre dominancia es inconsistente y no identifica correctamente que rojo es dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue but shifts to acknowledging red as the safer, individually rational choice in Q2, demonstrating a correct understanding of the dominance structure despite initial confusion; they ultimately refuse to engage further in Q3/Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

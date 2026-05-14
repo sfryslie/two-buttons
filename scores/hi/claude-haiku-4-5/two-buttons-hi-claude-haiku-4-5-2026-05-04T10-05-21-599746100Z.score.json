@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-claude-haiku-4-5-2026-05-04T10-05-21-599746100Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:34:35.700803900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue for collective survival and universal cooperation, and even claim red is the strategy that would make them die when blue wins (they repeatedly treat blue as the risky choice), showing a rule misunderstanding and incorrect dominance application despite discussing game-theory concepts.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing from a perspective of collective rationality and Kantian ethics. They acknowledge the 'selfish' argument for red but reject it in favor of cooperative outcomes. Crucially, they demonstrate a misunderstanding of the game's mechanics: they incorrectly claim that if the majority presses red, everyone dies (the prompt states red-pressers survive in a red majority), and they incorrectly claim that if they press blue and the majority presses red, they die (the prompt states blue-pressers die in a red majority, but they fail to recognize that red is a dominant strategy because it guarantees survival regardless of the majority). Their analysis of the game theory is flawed because they treat it as a coordination game rather than a dominant-strategy game.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

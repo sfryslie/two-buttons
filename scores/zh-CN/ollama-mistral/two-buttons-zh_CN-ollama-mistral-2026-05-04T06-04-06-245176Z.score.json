@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-mistral-2026-05-04T06-04-06-245176Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:42.064681900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent repeatedly argues that blue maximizes survival and treats red as only safe under an unverifiable “I am the only red” condition, without recognizing that red is individually dominant (never causes your death), and they end up defending blue throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to commit to a choice, framing the dilemma as an unsolvable prediction problem, and exhibits a rule error by suggesting that if they are the only one to press red, everyone else dies (which contradicts the rule that blue majority saves everyone).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

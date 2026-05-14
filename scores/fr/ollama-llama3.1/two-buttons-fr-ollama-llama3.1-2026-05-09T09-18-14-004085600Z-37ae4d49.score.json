@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-09T09-18-14-004085600Z-37ae4d49.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:58.079240100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red in Q1/Q2, but their later analysis in Q3/Q4 concludes blue is the more rational/survival-assuring choice; they also repeatedly claim red-pressers die when blue wins and vice versa, showing misunderstanding of the actual mechanics and dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently misinterprets the mechanics of the dilemma, claiming that red-pressers die if the majority is blue (which contradicts the rules) and that blue-pressers can survive if the majority is red (which also contradicts the rules). They shift from choosing RED in Q1/Q2 to BLUE in Q3/Q4, demonstrating a fundamental failure to grasp the dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

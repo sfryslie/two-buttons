@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-5.4-nano-2026-05-04T02-12-57-084225900Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:48.839232100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it’s a safe coordination choice under beliefs about others coordinating on blue, but they do not identify red as the dominant strategy and even state that if red is the majority then blue-pressers die (a rule-mechanics error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on coordination game theory, but fails to identify the dominant strategy (red), instead treating the dilemma as a coordination game with multiple equilibria. They incorrectly state that blue-pressers die if red is the majority (which is true) but fail to recognize that red-pressers survive regardless of the majority, thus missing the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

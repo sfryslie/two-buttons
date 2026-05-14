@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T08-40-08-180724700Z-c0f2a439.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:07.182355500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safest, but they misstate the mechanics (claiming blue-pressers can die when blue wins/majority logic is wrong), so they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental misunderstanding of the game's mechanics, repeatedly claiming that blue-pressers die if the majority is red (which is true) but also suggesting that red-pressers might die or that the outcome depends on parity/odd numbers in ways that contradict the provided rules. They fail to identify the dominant strategy and exhibit significant rule errors throughout their analysis.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

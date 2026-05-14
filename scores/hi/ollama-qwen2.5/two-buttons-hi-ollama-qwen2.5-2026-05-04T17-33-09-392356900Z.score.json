@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-qwen2.5-2026-05-04T17-33-09-392356900Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:12.899772100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer when blue is the majority, but they incorrectly claim that if they press blue and red is the majority then they die (a rule error), and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the dilemma, instead focusing on abstract philosophical and game-theoretic analysis of the two buttons. They demonstrate a performative hedging style by framing the dilemma as a complex, context-dependent problem rather than committing to a strategy. They fail to correctly identify the dominance structure, as they do not recognize that red is the strictly dominant strategy, and they exhibit a rule error by suggesting that if a red majority occurs, one might die if they are not part of the 'restricted' group (implying red-pressers could die in a red majority).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

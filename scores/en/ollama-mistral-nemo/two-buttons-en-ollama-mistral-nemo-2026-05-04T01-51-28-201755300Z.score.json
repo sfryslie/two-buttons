@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-nemo-2026-05-04T01-51-28-201755300Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:37.949944400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and claim blue guarantees their survival even if red is the majority, which is a rule-mechanics error (red is the dominant strategy and blue-pressers die when red is the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a fundamental misunderstanding of the rules, specifically claiming that pressing blue guarantees survival if the majority presses red, which is the opposite of the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

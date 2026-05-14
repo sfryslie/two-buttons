@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-47-42-400187200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:20.128918900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose Blue but later argue that pressing Blue can be irrational because it risks death in the minority, and they also incorrectly claim that if everyone else presses blue and they press red they survive while others die (mechanics error), indicating misunderstanding of dominance and the survival conditions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but shifts to red in Q2 after attempting to analyze the survival outcomes, though they demonstrate a fundamental rule error by claiming that if everyone else presses red, pressing red results in death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

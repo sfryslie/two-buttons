@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-09-37-404011600Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:26.231087Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent inicialmente elige azul, luego en Q2 afirma que la respuesta correcta es presionar rojo (reconoce la dominancia de rojo), pero comete un error de reglas al razonar que si la mayoría presiona azul entonces los que presionan rojo no sobreviven; además no hay evidencia de que mantenga la elección final en Q4 y Q3/Q4 se evitan por motivos no relacionados con la mecánica del juego.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue in Q1 based on confused logic, then shifts to red in Q2 after attempting to analyze the dominance structure, though their reasoning remains riddled with factual errors regarding the mechanics (e.g., claiming blue-pressers die if blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

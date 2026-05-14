@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.1-2026-05-04T16-11-57-864562600Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:43:17.403078100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, but their reasoning is based on an incorrect independence/guessing approach rather than the dominance structure; they do not identify that red is individually safe regardless of others, and they keep red as their final position.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses red, correctly identifying it as the choice they make regardless of others' actions, though they do not explicitly articulate the game-theoretic concept of a dominant strategy (that red is safer because it never causes death).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

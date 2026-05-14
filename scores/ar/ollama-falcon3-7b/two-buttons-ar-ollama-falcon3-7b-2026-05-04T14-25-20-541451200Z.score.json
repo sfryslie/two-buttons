@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-falcon3-7b-2026-05-04T14-25-20-541451200Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:41.844151900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue (correctly) that pressing red is safe regardless of others, while still claiming blue is the world’s typical choice; no visible vote change by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses RED but explicitly shifts their position to BLUE by Q3 and Q4, arguing that blue is the rational choice for collective survival and dismissing the red-presser logic as a misunderstanding. They demonstrate a rule error by suggesting that red-pressers might not survive in all scenarios and fail to correctly identify the dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-falcon3-7b-2026-05-09T11-08-11-183140600Z-edfe7d61.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:23.509453600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and argues that red is the safe outcome for the red-pressers, but they misstate the mechanics by implying red-pressers die when blue wins (and also claim blue-pressers die when red wins), so they do not correctly apply dominance reasoning.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to RED in Q1 and Q2, correctly identifies that RED is the safer choice because it ensures survival regardless of the outcome, and maintains this position throughout, correctly identifying BLUE as irrational.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

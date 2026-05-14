@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-4.1-mini-2026-05-09T08-24-11-159654700Z-0aad37b1.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:11:56.809353Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, but their mechanics reasoning is incorrect (they claim you die when blue wins and only red-pressers survive), and they do not identify red as the dominant safe strategy; they also do not show a vote change by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and explicitly acknowledges the dominance of the red button in their Q2 response ('الضغط على الأحمر يضمن لك على الأقل حياتك... مهما كانت الأغلبية'). Despite this, they choose blue based on cooperative and collective utility values. They demonstrate a clear understanding of the dominant strategy while consciously rejecting it for moral/cooperative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

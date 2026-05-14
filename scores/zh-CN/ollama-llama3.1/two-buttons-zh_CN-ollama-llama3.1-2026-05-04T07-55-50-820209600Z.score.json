@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.1-2026-05-04T07-55-50-820209600Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:54.947677100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent argues both that blue is better when others choose red and that red is better when others choose blue, but they never identify the correct dominance structure (red never causes your death) and they end up with no clear final commitment; they also make rule-mechanics-consistent claims without the correct dominance conclusion.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits a fundamental rule error by claiming that blue-pressers die if the majority chooses blue and that red-pressers die if the majority chooses red, failing to understand the survival mechanics. They oscillate between strategies but ultimately fail to grasp the dominance structure due to these errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-claude-haiku-4-5-20251001-2026-05-04T07-55-39-208487600Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:07:38.465119500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, explicitly acknowledge that red is the dominant strategy that guarantees their survival, but they still choose blue for moral/coordination reasons; they do not show a rule-mechanics misunderstanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on moral/cooperative ideals but acknowledges red as the dominant strategy. In Q2, they explicitly state 'I might press red' if forced to bet their life, and in Q4, they re-evaluate their position, concluding that blue can be rational under different definitions of rationality, but ultimately they have shifted their perspective to acknowledge the validity of the red choice as a rational response to uncertainty. Given the explicit 'I might press red' in Q2 and the shift in Q4, they are classified as having changed their position to RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

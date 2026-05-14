@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-mistral-2026-05-04T08-05-35-293236400Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:45.551899600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent repeatedly argues for choosing blue to maximize survival and claims blue is the rational choice, while incorrectly implying that choosing blue can lead to the chooser dying if others choose red (i.e., misreading the dominance/survival mechanics).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent focuses entirely on the cooperative potential of the blue button and the necessity of trust, failing to identify that red is the dominant strategy; they never commit to a personal choice, instead discussing the dilemma's mechanics abstractly.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

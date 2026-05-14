@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.1-2026-05-04T12-19-50-526671100Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:21.974431600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige Rojo y razona que azul podría hacerle morir si la mayoría no es azul, aunque también menciona que si todos adoptan rojo todos sobreviven; no comete un error de mecánicas y reconoce una lógica de estrategia individual, pero no identifica correctamente que rojo es dominante (en su análisis azul sería el que puede matarte).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to RED in Q1/Q2 based on individual survival, but demonstrates a rule error by claiming that if everyone presses blue, everyone dies (the rules state blue majority = everyone survives).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

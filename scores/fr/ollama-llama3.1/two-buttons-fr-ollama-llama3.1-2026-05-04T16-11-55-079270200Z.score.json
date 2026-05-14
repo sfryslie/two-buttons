@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-04T16-11-55-079270200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:56.759030200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme à tort que le bleu garantit la survie et que le rouge peut mener à la mort, tout en ne montrant pas une compréhension correcte de la dominance (il change aussi de position entre Q1 et Q2/Q4).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the dominant strategy but then commits a rule error by claiming blue ensures survival regardless of the outcome, eventually shifting their commitment to blue based on a misunderstanding of the mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-5.4-nano-2026-05-04T02-08-40-745515400Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:46.123580100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it’s rational under beliefs about which majority outcome is more likely, while correctly describing the payoff structure (matching the majority) and not claiming any rule inversion; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the coordination nature of the game but fails to recognize that RED is a strictly dominant strategy (it is always at least as safe as BLUE, and safer if the majority is RED). They incorrectly model the payoffs as symmetric, leading them to believe BLUE is a rational choice based on coordination, while failing to see that RED never results in death regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

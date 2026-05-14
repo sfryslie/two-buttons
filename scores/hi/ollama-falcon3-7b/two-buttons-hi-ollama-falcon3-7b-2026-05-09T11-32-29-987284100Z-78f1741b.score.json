@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-falcon3-7b-2026-05-09T11-32-29-987284100Z-78f1741b.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:27.207029500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and claims red is the correct choice, but their explanation is garbled and does not demonstrate correct dominant-strategy mechanics; they also do not clearly apply the rule that red is individually safe regardless of others’ actions.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the red button as the rational choice in Q1 and Q3, acknowledging its dominance, but uses highly abstract, philosophical, and somewhat incoherent language throughout, ultimately failing to commit to a clear, direct personal action, thus falling into performative hedging.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

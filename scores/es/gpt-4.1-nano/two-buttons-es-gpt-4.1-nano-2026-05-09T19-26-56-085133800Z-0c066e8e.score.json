@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-4.1-nano-2026-05-09T19-26-56-085133800Z-0c066e8e.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:25.060683400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul por motivos de cooperación y supervivencia colectiva, pero afirma que si la mayoría presiona rojo entonces quien presiona azul arriesga su vida (lo cual contradice la mecánica donde con mayoría roja solo mueren los azules?); además no identifica la dominancia de red como estrategia individual segura.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative framework, but they commit a fundamental rule error by claiming that red-pressers die if the majority chooses blue (the prompt states everyone survives if the majority chooses blue). Because of this rule error, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

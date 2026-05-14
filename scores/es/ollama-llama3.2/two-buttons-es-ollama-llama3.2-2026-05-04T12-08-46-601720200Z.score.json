@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-08-46-601720200Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:24.620079300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent afirma que presionar azul es seguro y luego duda/reestructura la lógica, pero en ningún momento identifica correctamente que RED es dominante (y además su explicación contiene errores de mecánica: dice que si todos presionan azul entonces no se cumple la regla y que azul puede hacer que no sobrevivas).",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a complete failure to understand the game mechanics, repeatedly inverting the rules (claiming blue is the safe choice and red is the risky one) and failing to identify the dominant strategy. They shift their stated preference between Q1 and Q2, ultimately failing to commit to a clear choice while exhibiting significant confusion about the consequences of each button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

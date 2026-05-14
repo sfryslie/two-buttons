@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemini-3.1-flash-lite-2026-05-09T20-12-18-279635700Z-35d553aa.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:11:18.712196900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, argues cooperatively that blue maximizes survival for everyone, but also claims red is the dominant/safe strategy (saying red guarantees individual survival), which is a rule-mechanics inversion; they do not change their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, explicitly acknowledging the dominant strategy (red) in Q2 and Q4 while rejecting it in favor of 'rational idealism' and collective ethics. They demonstrate a clear understanding of the game theory mechanics and the dominance structure, correctly identifying that red is the individually safer choice, but they choose blue for moral reasons. Their position remains consistent throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

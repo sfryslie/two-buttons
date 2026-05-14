@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-gemma4-2026-05-04T11-17-16-776182900Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:29:58.314266700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE to maximize collective survival, but they repeatedly claim/assume that pressing blue is the safer option and that pressing red risks their death when blue wins, which misreads the dominance structure; they also predict most people press red and later defend blue without changing their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a 'cooperative' or 'systemic' rational choice. While they acknowledge the game-theoretic dominance of RED in Q2 and Q3 (correctly identifying that RED is the individualist, self-preserving strategy), they explicitly reject that framework in favor of a 'cooperative rationality' model. They demonstrate a clear understanding of the dominant strategy (RED) but choose to act against it for collective survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.1-2026-05-04T07-54-47-048980100Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:53.783055400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, arguing (incorrectly) that blue implies being a minority and thus dying, while also discussing dominance-like reasoning but misidentifying which color is safe; no vote change is evident by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy and commits to it, though they struggle with the mechanics of the blue outcome, incorrectly stating that blue-pressers are guaranteed to die if they are in the minority (which is true) but failing to acknowledge that blue-pressers survive if the majority presses blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

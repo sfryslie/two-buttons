@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3-2026-05-04T08-08-00-703187Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:46.580348500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it will be safe under a self-reinforcing majority expectation, and they later acknowledge that strict game-theoretic self-interest would favor red but still defend blue as rational under alternative notions; they do not make a rule-mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a belief that it is the cooperative, group-oriented choice, while explicitly acknowledging that red is the choice for individual survival. They demonstrate a fundamental rule error by claiming that if the majority presses blue, red-pressers die (the prompt states everyone survives if blue wins). They do not correctly identify red as the dominant strategy, instead viewing the choice as a paradox of cooperation versus individual risk.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

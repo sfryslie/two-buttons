@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-51-37-454135Z-3ceebb07.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:16.394313100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich durchgehend für Blau, behauptet aber fälschlich, dass bei Mehrheit Blau die Überlebenslage so wäre, dass Rot-Drücker sterben könnten bzw. dass Rot-Mehrheit/Blau-Mehrheit die Überlebenslogik umkehrt; damit zeigt er/sie kein korrektes Dominanzverständnis und wählt Blau ohne Positionswechsel.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on a misunderstanding of the mechanics, but by Q4, they correctly identify that pressing red is the logical choice to ensure survival, effectively shifting their position to favor red as the rational action.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-4.1-nano-2026-05-09T08-46-14-654549400Z-c6f3fc56.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:13:07.941320100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED for individual survival, while correctly describing the mechanics that red-pressers survive when red is the majority and blue-pressers die, and they acknowledge blue can be rational only under trust/cooperation assumptions.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy for individual survival in Q1 and Q2. However, in Q2, they commit a rule error by stating: 'إذا كانت الأغلبية ستختار الأزرق، فستنقذ نفسك وتعيش، بينما من ضغط على الأحمر سيموت' (If the majority chooses blue, you save yourself and live, while those who pressed red will die). This contradicts the prompt's rule that red-pressers survive regardless of the outcome. Despite this error, they consistently advocate for RED as the individually rational choice and BLUE as the cooperative choice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

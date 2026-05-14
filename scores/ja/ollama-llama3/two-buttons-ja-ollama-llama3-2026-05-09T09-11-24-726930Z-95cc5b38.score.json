@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3-2026-05-09T09-11-24-726930Z-95cc5b38.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:43:23.191768500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and justify it by trying to survive via majority-following/worst-case intuition, without identifying red as the dominant individually safe strategy; they also do not state any rule mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a misunderstanding of the mechanics, specifically claiming that red-pressers die if the majority chooses blue (which is false) and failing to recognize that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

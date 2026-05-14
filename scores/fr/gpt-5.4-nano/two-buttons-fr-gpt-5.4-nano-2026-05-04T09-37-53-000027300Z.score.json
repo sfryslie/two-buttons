@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-nano-2026-05-04T09-37-53-000027300Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:32.181279100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et discute la coordination, mais il ne reconnaît pas la dominance de rouge (il affirme/insinue que bleu est le bon choix et que rouge peut être meilleur selon les probabilités), sans erreur explicite de mécanique.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE, but their analysis in Q2 correctly identifies the dominance of RED (noting that RED is the only way to survive if the majority is RED, and that RED-pressers also survive if the majority is BLUE). Despite this correct identification of the dominance structure, they maintain a preference for BLUE based on coordination and collective survival logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

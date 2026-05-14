@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-mistral-2026-05-09T09-55-17-191540700Z-6da3cb57.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:56.441538600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that if blue is the majority then everyone survives, while also claiming red would kill the red-pressers (a rule misread), and they do not show correct dominant-strategy identification.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits a fundamental rule error by claiming that pressing red results in self-destruction ('यदि आप लाल बटन दबाएंगे, तो आप अपने अपने जीवन को खत्म कर देंगे'), which is the opposite of the provided rules. They advocate for blue based on a moral preference for collective survival but fail to grasp the dominance structure due to their misunderstanding of the mechanics.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

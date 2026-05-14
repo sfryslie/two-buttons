@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-09T07-50-01-305078300Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:00:00.465710800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue avoids death because it is (in their reasoning) part of the majority, but they do not correctly apply dominant-strategy logic and instead treat blue as the likely majority outcome; they also discuss possible irrationality without identifying red as individually safe.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a fundamental misunderstanding of the game mechanics, specifically believing that pressing red leads to death if a blue majority occurs (a rule error). They fail to identify the dominant strategy because they incorrectly perceive red as a death-trap rather than a safe option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

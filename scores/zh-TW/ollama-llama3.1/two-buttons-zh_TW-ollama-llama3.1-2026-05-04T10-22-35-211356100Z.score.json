@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-llama3.1-2026-05-04T10-22-35-211356100Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:43.559643700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red (Q1/Q2) and argue red is the majority outcome, but they do not correctly apply the dominance logic (they claim blue-pressers are killed when red is majority), showing rule misunderstanding; they also do not shift position by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but makes a rule error by claiming that if they choose red, they will be in the minority and likely die, which contradicts the rule that red-pressers always survive. They ultimately choose red based on a flawed assumption about majority behavior, and they fail to correctly apply dominance logic because they believe red is risky.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

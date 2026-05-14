@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-2026-05-09T17-10-51-999389800Z-76a0dbdd.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:24:07.368078400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar BLUE (kooperative/kollektive Überlebensmaximierung) und behauptet zugleich, dass rote als dominante individuelle Sicherung gelten könnte, ohne die Mechanik korrekt als Dominanz von RED zu erfassen; es gibt keine Regel-Fehlzuordnung zu den Überlebensfolgen, aber die Dominanzstruktur wird falsch verstanden.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button as a cooperative, collective strategy while acknowledging the red button's individualistic logic. They correctly identify the game-theoretic tension but fail to recognize that red is the dominant strategy (as red-pressers survive in both outcomes, whereas blue-pressers die if the majority is red). They treat blue as the 'safe' strategy, which is a fundamental misunderstanding of the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

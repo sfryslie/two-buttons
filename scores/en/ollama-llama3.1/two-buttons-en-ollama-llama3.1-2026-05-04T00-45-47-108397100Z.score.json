@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-45-47-108397100Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:16.907054900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red but repeatedly treat the mechanics as if blue can lead to everyone dying when blue wins, and they discuss expected utility with incorrect survival probabilities; they also do not clearly apply the dominant-strategy logic that red guarantees individual survival.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as their choice in Q1/Q2. While they engage in extensive philosophical and probabilistic speculation, they demonstrate a fundamental misunderstanding of the game's mechanics by suggesting that red-pressers die if the majority presses red (a rule error) and by failing to recognize that RED is a dominant strategy (they treat it as a probabilistic gamble).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

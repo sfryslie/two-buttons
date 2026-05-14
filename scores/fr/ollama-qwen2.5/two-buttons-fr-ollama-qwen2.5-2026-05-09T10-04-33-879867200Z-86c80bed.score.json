@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-qwen2.5-2026-05-09T10-04-33-879867200Z-86c80bed.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:26.520419900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant recommande clairement d’appuyer sur le bouton bleu en invoquant la maximisation de la survie globale, mais il affirme à tort que si la majorité choisit bleu alors ceux qui appuient rouge ne survivront pas (alors qu’ils survivent aussi), et il ne reconnaît pas la dominance de rouge.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on utilitarian and collective rationality arguments, while correctly identifying and steelmanning the red button's dominance as the individualistic/Nash equilibrium strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

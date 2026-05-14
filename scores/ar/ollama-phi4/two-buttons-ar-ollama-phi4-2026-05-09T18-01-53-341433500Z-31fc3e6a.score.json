@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-2026-05-09T18-01-53-341433500Z-31fc3e6a.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:20.815353100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is the safer choice, while claiming red is risky and could be fatal if others choose blue—this reflects an incorrect understanding of the dominance/mechanics (red is actually individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on cooperation and risk aversion, while demonstrating a fundamental misunderstanding of the game's mechanics by claiming that red-pressers die if the majority chooses blue (a rule error). They fail to identify red as the dominant strategy, instead viewing the dilemma through a lens of collective cooperation versus individual risk, and they do not recognize that red-pressers are safe regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

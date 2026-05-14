@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-24-23-098019600Z-e5ce1d71.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:47.365118400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar ROT (mit 50%-Argumenten) und behauptet dabei fälschlich, dass bei Mehrheit ROT nur ROT-Drücker überleben, während er/sie gleichzeitig die Dominanzstruktur nicht korrekt erkennt (er/sie behandelt ROT als riskant/irrational statt individuell sicher).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses red based on survival logic, but in Q4, they perform a complete reversal, labeling red-pressers as irrational and concluding they have no preference, effectively abandoning their initial choice.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

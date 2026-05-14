@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-mistral-nemo-2026-05-09T15-19-03-298996800Z-aade3def.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:03.113663100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and correctly describe the Prisoner’s Dilemma logic that red is the individually safer choice (blue presser dies only if any red exists), even while discussing it as “jamming” and noting blue could be rational in other contexts; no rule mechanics error and no vote change is shown.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly claims that if anyone presses red, blue-pressers die (a rule error), and they fail to identify the dominance of red, instead framing the choice as a coordination problem where everyone should choose the same button.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

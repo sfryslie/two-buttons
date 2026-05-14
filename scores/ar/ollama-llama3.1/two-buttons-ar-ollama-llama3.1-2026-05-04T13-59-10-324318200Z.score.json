@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.1-2026-05-04T13-59-10-324318200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:25.379144900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues (incorrectly) that RED is the one that ensures survival when blue is the majority, while also claiming blue pressers survive; they do not demonstrate correct dominant-strategy application and do not show a vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative outcome, despite correctly identifying that red is the safer individual choice (dominant strategy). They exhibit a rule error by claiming a red majority results in no survivors, whereas the rules state red-pressers survive in a red majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

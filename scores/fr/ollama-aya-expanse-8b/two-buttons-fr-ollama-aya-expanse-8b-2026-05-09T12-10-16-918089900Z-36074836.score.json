@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-aya-expanse-8b-2026-05-09T12-10-16-918089900Z-36074836.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:39.227676600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant recommande/encourage le bouton bleu et affirme que le bleu assure la survie collective, tout en mentionnant que le rouge garantirait la survie individuelle, sans identifier correctement la dominance de la stratégie rouge.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the interaction, framing the dilemma as a philosophical exercise and consistently redirecting the decision to the user's values, thus qualifying as performatively hedged. While they correctly identify the individualistic argument for red in Q2, they do not commit to it, and they fail to recognize that red is a strictly dominant strategy, instead treating the choice as a subjective moral trade-off.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

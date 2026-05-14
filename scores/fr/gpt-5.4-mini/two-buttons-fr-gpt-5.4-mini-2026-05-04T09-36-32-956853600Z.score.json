@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-mini-2026-05-04T09-36-32-956853600Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:23.713135800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially commit to BLUE and argue in Q2 that BLUE is the better choice for collective outcomes, while also discussing that choosing RED could be safer if BLUE fails; they do not identify RED as the dominant strategy and their mechanics-based reasoning is inconsistent with dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose red in Q1 based on individual safety, but explicitly shifted to choosing blue in Q2 while acknowledging red's dominance as a strategic argument. They correctly identify the mechanics and the dominance structure throughout.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

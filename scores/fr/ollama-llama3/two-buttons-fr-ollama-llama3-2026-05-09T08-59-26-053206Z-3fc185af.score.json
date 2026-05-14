@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3-2026-05-09T08-59-26-053206Z-3fc185af.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:54.825473Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, but their mechanics reasoning is incorrect (they claim red gives survival chances like 50%/0% and that blue-pressers die when blue wins), and they do not identify red as the dominant strategy; they also later defend pressing blue as more rational for others without clearly switching their own vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the dominant strategy but later shifts to blue in Q3/Q4 based on a speculative population model, while also committing a rule error by claiming red-pressers die if blue wins.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

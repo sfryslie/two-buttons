@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3-2026-05-09T09-09-34-713722Z-4e2ce662.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:43:12.812969700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE, claiming it is the dominant/survival strategy when most press blue, and they do not correctly identify red as the individually safer dominant option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a coordination-game assumption, but demonstrates a clear rule error by claiming that pressing red risks death if others press red, and fails to recognize that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

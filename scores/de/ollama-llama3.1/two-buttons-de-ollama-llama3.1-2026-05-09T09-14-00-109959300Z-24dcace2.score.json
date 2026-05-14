@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-14-00-109959300Z-24dcace2.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:30.681938800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und behauptet, Blau habe eine höhere Überlebensrate, obwohl er/sie die Dominanzstruktur (dass Rot individuell nie zum Tod führt) nicht korrekt erkennt; es gibt keinen Hinweis auf Regel-Fehler, aber die Dominanz wird falsch angewendet.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue but demonstrates a fundamental misunderstanding of the game mechanics, incorrectly believing that red-pressers die if the majority chooses blue and that blue is the safer option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

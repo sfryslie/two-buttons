@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-45-07-478917100Z-90898da0.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:11.174316900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für BLUE und argumentiert dabei, dass BLUE die eigene Überlebenssicherheit nicht garantiert (er/sie nennt RED als Strategie, die bei Mehrheit RED sicher ist, aber bei Mehrheit BLUE nicht), erkennt also die Dominanz von RED nicht und macht keine Regel-Fehlannahme zur Mechanik.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to pressing blue, but in Q2, they explicitly identify that pressing red is the superior strategy for survival ('So kann ich sicherstellen, dass ich überlebe, egal ob die Mehrheit den roten oder blauen Knopf gewählt hat'). This constitutes a shift in position from their initial choice to an endorsement of the red strategy. The respondent exhibits significant confusion regarding the mechanics (e.g., 'weißer als rot'), which qualifies as a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

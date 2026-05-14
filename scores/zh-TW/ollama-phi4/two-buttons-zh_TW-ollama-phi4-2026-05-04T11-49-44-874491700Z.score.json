@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-phi4-2026-05-04T11-49-44-874491700Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:31:57.478345600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, argue blue is safest because it guarantees their survival even if others choose red, and they explicitly treat red as risky when red majority occurs; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective welfare arguments, but they commit a fundamental rule error by claiming that if a red majority occurs, red-pressers die (the prompt states red-pressers survive in a red majority). They also incorrectly claim that pressing blue guarantees survival regardless of the outcome, which is false as blue-pressers die if a red majority occurs.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

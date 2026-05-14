@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-2026-05-09T10-40-16-266046600Z-ac093f53.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:46:14.956801200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it maximizes everyone’s survival, and they do not identify red as the individually dominant/safe strategy (they treat blue as the best choice).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on utilitarian ethics, but demonstrates a fundamental misunderstanding of the game's mechanics by stating that a blue majority is required for survival and that red-pressers die if blue wins, which contradicts the prompt's rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

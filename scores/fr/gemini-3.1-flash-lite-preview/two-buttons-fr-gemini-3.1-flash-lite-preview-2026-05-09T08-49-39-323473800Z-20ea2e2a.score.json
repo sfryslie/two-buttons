@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-3.1-flash-lite-preview-2026-05-09T08-49-39-323473800Z-20ea2e2a.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:52.485071200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit BLUE et affirme que le rouge est une stratégie dominante (donc il comprend la mécanique/dominance), mais il commet une erreur de règle en disant que s’il choisit bleu et que la majorité choisit rouge il meurt, tout en défendant ensuite le bleu comme rationnel/coopératif.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the fact that red is the dominant strategy, but chooses blue based on cooperative and ethical frameworks (Kant, Pareto optimality). They maintain this choice throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

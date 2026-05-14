@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-39-57-868859500Z-7270373f.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:03.648864200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt in Q1/Q2 keine klare Button-Entscheidung (\"nicht beide Knöpfe drücken\"), zeigt dabei aber ein falsches Verständnis der Mechanik (behauptet, man könne durch Nichtdrücken die Überlebenslogik umgehen) und diskutiert später nur allgemein ohne klare Rückkehr zu einer dominanten Strategie.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to understand the binary choice constraint, erroneously believing they can choose neither button to guarantee survival, and demonstrates a fundamental rule error by claiming that pressing red requires hoping for a red majority to survive (when in fact red-pressers survive regardless of the majority).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

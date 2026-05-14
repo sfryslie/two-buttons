@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-2026-05-04T00-58-24-026995400Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:45.154213200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer/cooperative choice for collective survival, without identifying red as the dominant strategy and without any rule-mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative/altruistic framework, failing to recognize that red is a dominant strategy because they incorrectly assume that pressing red carries a risk of death if the majority presses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

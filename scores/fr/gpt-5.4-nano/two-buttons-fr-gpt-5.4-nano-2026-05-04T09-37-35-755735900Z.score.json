@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-nano-2026-05-04T09-37-35-755735900Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:28.962821200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent argues that blue is the rational choice for survival coordination, claims red is dangerous when the majority is not red, and never commits to pressing red; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently treats blue as the cooperative/coordination choice and red as the competitive/anticipatory choice, failing to recognize that red is a dominant strategy (it is always safe, whereas blue is only safe if the majority is blue). The respondent explicitly claims that blue is the 'rational' choice for coordination and that red is 'dangerous' if the majority is blue, which is a factual error regarding the mechanics (red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

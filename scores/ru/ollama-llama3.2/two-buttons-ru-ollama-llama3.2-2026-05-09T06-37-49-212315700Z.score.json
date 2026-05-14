@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-09T06-37-49-212315700Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:59:56.152022100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially commits to pressing blue, then argues (incorrectly) that blue-majority would make them die and that they should reconsider, but by Q4 they still treat blue-pressing as their stance and call it irrational; they never identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits significant confusion regarding the rules, repeatedly claiming that blue-pressers die if the majority chooses blue, which is a direct contradiction of the provided rules. They initially choose blue, then attempt to reconsider due to their own rule errors, but never arrive at a coherent understanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

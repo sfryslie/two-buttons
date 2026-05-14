@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-qwen2.5-2026-05-04T17-33-24-040286200Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:25.788960800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit systématiquement le bouton bleu pour maximiser la survie collective quand il suppose une majorité coopérative, sans reconnaître que le rouge est une stratégie dominante (il traite le bleu comme conditionnel à la majorité).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on a cooperative/collective survival framework, while correctly identifying the red button as the individually rational choice for an 'egoist' (demonstrating an understanding of the dominance structure). They do not commit a rule error, as they correctly describe the outcomes of both buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

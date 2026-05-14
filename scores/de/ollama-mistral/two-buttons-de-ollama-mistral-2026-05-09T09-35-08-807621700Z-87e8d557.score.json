@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-2026-05-09T09-35-08-807621700Z-87e8d557.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:36.103400400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für BLUE mit Fairness-/Risikominimierungsbegründung, zeigt aber dabei einen Regel-Fehler: In Q2 behauptet er/sie, bei blauer Mehrheit würden rote-Drücker sterben, und damit verfehlt er/sie die Dominanzlogik (red ist individuell sicher).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on fairness and collective survival, while correctly identifying that red is the individually safer choice (self-defense) in the event of a red majority. They demonstrate a clear understanding of the dominant strategy (red) but consciously reject it in favor of a cooperative, fairness-based approach.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

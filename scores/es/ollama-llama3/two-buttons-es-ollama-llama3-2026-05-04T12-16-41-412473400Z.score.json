@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3-2026-05-04T12-16-41-412473400Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:19.495563500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul y razona que azul es “seguro” según creencias sobre la mayoría, pero afirma que si la mayoría presiona rojo entonces quien presiona azul muere, lo cual es un error de reglas; aun así no muestra comprensión correcta de la dominancia (red) como estrategia individual segura.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue but demonstrates a fundamental rule error by claiming that if the majority presses blue, the respondent dies if they pressed blue (the rules state everyone survives if the majority presses blue). Because they misunderstand the mechanics, they fail to identify the dominant strategy and incorrectly believe blue is the safer choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

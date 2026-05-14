@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-09-56-157947500Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:26.666375200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige azul en Q1/Q2 pero razona que azul es más seguro y además afirma que si la mayoría presiona rojo los de azul no sobreviven, mostrando un error de reglas (confunde la mecánica) y no identifica la dominancia de rojo; en Q3/Q4 evita responder por motivos de seguridad/política.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue but corrected their logic in Q2, correctly identifying red as the dominant strategy after realizing their initial misunderstanding of the mechanics; they then refused to answer Q3 and Q4 citing safety/harm concerns.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

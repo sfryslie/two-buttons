@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-mistral-2026-05-04T16-51-06-660602700Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:52.113888400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue (correctly) that red is individually safer because if blue is majority everyone survives, while if red is majority only red-pressers survive; they do not show a rule inversion and do not change their vote by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially expresses confusion but eventually commits to the red button in Q2, correctly identifying that red-pressers survive in both majority scenarios, though their explanation is somewhat garbled. They do not change their position after Q2 and do not demonstrate a clear understanding of game-theoretic dominance, despite choosing the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

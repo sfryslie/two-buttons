@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T07-53-46-789472100Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:04.196874200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bleu et affirme que c’est une stratégie de sécurité, mais il confond les mécanismes (il parle de cas où des gens “bannis” meurent quand le bleu est majoritaire) et ne reconnaît pas que le rouge est dominant et ne peut jamais causer sa mort.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a fundamental misunderstanding of the game mechanics, specifically believing that pressing red carries a risk of death if a majority of others choose red, which is factually incorrect according to the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

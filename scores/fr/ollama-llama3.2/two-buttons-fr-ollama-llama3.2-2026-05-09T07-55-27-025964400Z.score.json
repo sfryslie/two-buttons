@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T07-55-27-025964400Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:04.100844300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant ne choisit jamais clairement un bouton, discute surtout de l’incertitude et de la majorité, et décrit que choisir bleu peut mener à la mort (alors que rouge est dominant et ne cause jamais la mort), sans appliquer correctement la dominance.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the interaction, focusing instead on meta-analysis and philosophical framing of the dilemma, which constitutes performative hedging. They demonstrate a significant rule error in Q3 and Q4 by claiming that blue-pressers die if the red majority wins (which is true) but also implying that red-pressers are at risk if the blue majority wins (which is false, as red-pressers survive in both scenarios). Because they fundamentally misunderstand the mechanics (believing red-pressers are at risk in a blue majority), they fail to identify the dominant strategy correctly.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

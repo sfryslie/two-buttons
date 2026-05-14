@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-09T06-37-49-221404300Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:00:02.941650800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue (Q1/Q2) and argue survival depends on majority/cooperation-like reasoning, while also discussing that red could be safe only under a specific mistaken majority-inference; they do not identify red as the dominant strategy and their mechanics reasoning is inconsistent.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent engages in extensive meta-discussion and philosophical analysis of the dilemma without ever committing to a personal choice, effectively using the complexity of the scenario to avoid taking a position.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

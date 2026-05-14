@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-nemo-2026-05-09T15-18-56-963374400Z-8e4282a9.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:18.658934600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit BLUE et affirme que choisir rouge pourrait mettre sa propre vie en danger si la majorité rouge gagne, tout en reconnaissant que le choix dépend des croyances sur la majorité (il ne comprend pas la dominance de RED).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to the blue button but demonstrates a fundamental rule error by claiming that pressing red could lead to their own death if a red majority occurs, failing to recognize that red-pressers always survive.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.2-2026-05-04T15-19-51-953880Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:46.097531200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that BLUE ensures everyone survives while RED has no benefit, but they do not clearly apply dominant-strategy reasoning and they avoid Q3; Q4 does not show a vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on a cooperative preference, but their reasoning is incoherent and contains rule errors regarding the survival mechanics. In Q4, they abandon their initial choice to argue that no one should press any button, demonstrating a shift in position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

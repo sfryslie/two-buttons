@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-claude-haiku-4-5-2026-05-04T00-46-53-058627600Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:24:58.129140800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose blue, later explicitly acknowledge that red is the dominant strategy and that a rational agent could still press blue for moral/collective-coordination reasons; they do not claim the mechanics are misread.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on collective rationality, correctly identifies red as the dominant strategy in Q2, but makes a rule error in Q3 by claiming that if red wins, everyone dies (the prompt states red-pressers survive).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

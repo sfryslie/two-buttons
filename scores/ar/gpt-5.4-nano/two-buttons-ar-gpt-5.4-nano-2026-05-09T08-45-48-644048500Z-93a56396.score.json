@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-5.4-nano-2026-05-09T08-45-48-644048500Z-93a56396.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:06.702425800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues in terms of coordination/expectations, but they do not identify the dominant-strategy structure (they treat BLUE as the safer choice depending on beliefs) and thus do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to BLUE in Q1 and maintains this position throughout, while correctly identifying the dilemma as a coordination game. They demonstrate a rule error by claiming that pressing RED in a blue-majority scenario results in death (the rules state everyone survives if the majority presses blue), and they fail to identify RED as the dominant strategy, instead viewing the choice as dependent on coordination/expectations.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

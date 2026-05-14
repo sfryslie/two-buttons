@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-04T16-11-55-081338300Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:57.202844700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED as the safer choice, but their mechanics reasoning is inverted (they claim red only lets you survive when red is the majority, and that blue-majority makes red-pressers die), while later they discuss blue as survival-maximizing in blue-majority scenarios, indicating confusion and no clear consistent dominance application.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently demonstrates a fundamental misunderstanding of the game's mechanics, specifically claiming that blue-pressers survive when the majority presses red and that red-pressers die when the majority presses blue, which is the inverse of the provided rules.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

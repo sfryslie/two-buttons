@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-mistral-nemo-2026-05-09T15-18-33-519239600Z-896aa8de.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:00.816520Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues it is the safest because blue-majority saves everyone, and does not identify red as the dominant strategy; they also avoid Q4 safety/irrationality analysis.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a cooperative outcome but commits a rule error by failing to recognize that red-pressers survive even if the majority chooses blue, and they incorrectly imply that blue-pressers are safer despite the dominance of red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

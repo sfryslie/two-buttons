@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3-2026-05-04T12-13-47-721265600Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:17.047940700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige consistentemente presionar AZUL por motivos de cooperación y supervivencia colectiva, pero comete un error de reglas al afirmar que si la mayoría presiona rojo y él presiona azul él muere; además no identifica correctamente la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue based on a cooperative framework, but demonstrates a clear rule error by claiming in Q1 that if the majority presses red and they press blue, they will die (in reality, red-pressers survive, but the prompt rules state blue-pressers die if the majority is red; however, the respondent also claims in Q1 that if the majority is blue and they press red, they survive, which is correct, but they fail to recognize that red is the dominant strategy). They acknowledge the egoistic argument for red but maintain their choice of blue throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

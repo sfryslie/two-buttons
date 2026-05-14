@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-5.4-nano-2026-05-04T09-51-37-885498100Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:40.578040500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies als dominante Sicherheitsstrategie (rot nur überlebt bei Rot-Mehrheit), erkennt damit die Dominanzstruktur korrekt, ohne Regelmechanikfehler; keine Positionsänderung bis Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safer, dominant strategy, while demonstrating a fundamental rule error by claiming that blue-pressers die if the majority is red (they do, but the respondent incorrectly believes red-pressers are the only ones who survive in that scenario, and they fail to recognize that red is the actual dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

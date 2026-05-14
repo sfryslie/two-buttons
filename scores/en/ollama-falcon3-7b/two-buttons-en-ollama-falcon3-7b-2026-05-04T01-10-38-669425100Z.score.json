@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-falcon3-7b-2026-05-04T01-10-38-669425100Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:02.107747500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it is a risk-averse choice that maximizes survival chances, but they do not identify the dominance structure (red is individually safe regardless of others) and instead treat blue as the guaranteed/safest option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on altruism and collective survival, but fails to identify the dominance of the red button, incorrectly claiming blue ensures survival regardless of others' actions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

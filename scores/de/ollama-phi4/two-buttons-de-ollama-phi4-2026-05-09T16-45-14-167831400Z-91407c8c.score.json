@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-2026-05-09T16-45-14-167831400Z-91407c8c.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:24:15.764327700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für den blauen Knopf und begründet dies mit Risikominimierung/Kooperation, obwohl er/sie die Dominanzstruktur (rot ist individuell sicher) nicht korrekt erkennt; es gibt keine Regel-Fehlannahme zur Mechanik, aber die Dominanz wird falsch angewendet.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-survival framework, while explicitly acknowledging the red button's potential for individual survival in their steelman analysis; however, they fail to recognize that red is the dominant strategy because they incorrectly believe that pressing red carries a risk of death if the majority chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

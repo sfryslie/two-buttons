@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-04T16-11-55-077766400Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:56.762057200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que si la majorité semble choisir bleu, alors il faut choisir rouge (et inversement via un raisonnement de paradoxe), mais il ne comprend pas la mécanique dominante correcte (rouge ne fait jamais mourir) et conclut finalement en faveur de bleu comme choix rationnel dans son scénario.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental misunderstanding of the rules by claiming that red-pressers kill blue-pressers when the red majority wins, and they fail to identify the dominance of the red button, instead engaging in convoluted, circular logic about observing majorities.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

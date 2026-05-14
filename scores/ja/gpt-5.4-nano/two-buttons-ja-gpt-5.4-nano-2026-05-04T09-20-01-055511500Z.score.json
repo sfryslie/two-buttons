@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.4-nano-2026-05-04T09-20-01-055511500Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:41:03.237361900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer because blue-majority saves everyone, while they do not identify red as the dominant strategy (they treat red as riskier), despite discussing game-theoretic possibilities.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a cooperative/safety-oriented heuristic, explicitly acknowledging the game-theoretic argument for red in Q2 but rejecting it in favor of their own assessment of social dynamics. They do not demonstrate an understanding of the dominant strategy (that red is safer regardless of the outcome), as they incorrectly believe red-pressers die if the majority is blue (Q1: '赤を押した人だけが生き残る...多数派が青になる...赤を押した人は全滅').",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

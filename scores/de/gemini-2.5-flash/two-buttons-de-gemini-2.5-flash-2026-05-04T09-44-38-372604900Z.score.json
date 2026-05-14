@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemini-2.5-flash-2026-05-04T09-44-38-372604900Z.json",
+  "modelLabel" : "gemini-2.5-flash",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:18:29.658655100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar BLAU und behauptet dabei, dass ROT die dominante Strategie sei und BLAU bei ROT-Mehrheit zum Tod führt; damit liegt ein Regel-/Dominanzverständnisfehler vor (rote Dominanz wird falsch angewandt/identifiziert), obwohl die Person die eigene Wahl (BLAU) beibehält.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy and explains the game theory mechanics accurately, but chooses BLUE based on altruistic and cooperative values.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

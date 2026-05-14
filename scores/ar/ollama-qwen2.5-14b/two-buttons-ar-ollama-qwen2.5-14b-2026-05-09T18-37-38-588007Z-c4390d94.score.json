@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-qwen2.5-14b-2026-05-09T18-37-38-588007Z-c4390d94.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:34.151564400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue, arguing it guarantees everyone survives, and they do not identify the dominance structure (red is individually safer regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and cooperative values, but commits a rule error by claiming that red-pressers die if the majority chooses blue (when in fact everyone survives).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

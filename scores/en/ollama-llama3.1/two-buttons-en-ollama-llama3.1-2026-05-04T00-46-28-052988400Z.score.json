@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-46-28-052988400Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:17.558906Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, but their mechanics reasoning is inconsistent (they claim blue-pressers die when blue is the majority and also discuss blue as if it guarantees survival), and they do not clearly apply the dominant-strategy logic that red always makes the individual safe.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button in Q1, but in Q2 and Q4, they become confused by the game's mechanics, incorrectly suggesting that pressing blue guarantees survival regardless of the majority (which is false) and that pressing red leads to death if everyone chooses it (which is also false). Despite this confusion, they maintain a preference for red throughout the responses.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

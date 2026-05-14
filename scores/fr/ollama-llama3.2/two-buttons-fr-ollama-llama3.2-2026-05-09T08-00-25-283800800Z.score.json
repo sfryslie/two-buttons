@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T08-00-25-283800800Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:05.469702300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant ne s’engage pas clairement à appuyer sur un bouton, mais discute surtout d’une stratégie “choisir l’autre bouton” et d’arguments de survie; il ne démontre pas correctement la dominance (il ne reconnaît pas que rouge est strictement dominant) et ne corrige pas les mécanismes.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, instead engaging in confused probabilistic reasoning and misinterpreting the mechanics (e.g., claiming that if you press blue and others press red, you die, which is false as red-pressers survive regardless of the majority). They never commit to a clear choice, instead providing abstract, performative, and mathematically incoherent commentary throughout the responses.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

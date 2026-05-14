@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-42-16-660619500Z-0b7964e1.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:05.129087200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für ROT und begründet dies damit, dass ROT angeblich das eigene Überleben bei blauem Mehrheitsausgang sichere bzw. bei rotem Mehrheitsausgang das Risiko minimiert; dabei wird die Dominanz/Mechanik nicht korrekt angewandt (sie behaupten implizit, dass bei blauem Mehrheitsausgang die ROT-Drücker nicht überleben bzw. dass ROT riskant sei).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses red to minimize risk, but demonstrates a fundamental rule error by repeatedly claiming that pressing red carries a risk of death if the majority presses blue, and that pressing blue is safe if the majority presses blue (ignoring that red-pressers also survive in that scenario).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

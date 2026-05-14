@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3-2026-05-04T13-55-00-601814100Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:16.387848700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, argue via self-interest/defection logic that red is the individually safer choice, and they correctly describe the dominance structure (red dominates blue) without making a rule-mechanics error; no vote change is evident from Q1/Q2 to Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button based on rational self-interest and correctly identifies it as the dominant strategy, though they make a rule error in Q3 by claiming that blue-pressers survive if they are the only ones who press blue (the prompt states blue-pressers die if the majority is red).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

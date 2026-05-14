@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemini-3.1-flash-lite-2026-05-09T20-13-48-202301Z-0152b0d7.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:05.063300100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit kooperativen/kollektiven Überlegungen, behauptet aber zugleich fälschlich, dass Rot die individuelle Sicherheit garantiert und Blau ein Risiko sei; zudem wird die Dominanzstruktur (Rot ist individuell sicher) nicht korrekt angewendet.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses the blue button in Q1 and Q2, acknowledging that red is the dominant strategy (the 'safe' choice) but rejecting it in favor of cooperative/altruistic logic. They maintain this position throughout the discussion, correctly identifying the game theory mechanics while choosing to prioritize collective survival over individual risk-minimization.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

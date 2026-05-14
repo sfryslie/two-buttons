@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-qwen2.5-2026-05-04T17-33-09-391356900Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:14.100222300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent repeatedly argues for pressing blue because it preserves everyone when blue is the majority, and they never identify red as the individually dominant/safe strategy; they also misstate the red outcome when blue is the majority (implying red-pressers die).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative/altruistic framework, but they fundamentally misunderstand the game mechanics by claiming that if the majority is red, blue-pressers survive (they state: 'यदि बहुमत लाल है (कम), तो सभी जीवित रहेंगे' - which is false). Because they believe blue-pressers survive even when the majority is red, they fail to identify the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

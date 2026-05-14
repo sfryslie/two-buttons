@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-qwen2.5-14b-2026-05-04T13-41-58-813848200Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:49.930898300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige azul por motivos morales/colectivos y afirma que rojo solo garantiza supervivencia si la mayoría elige rojo, mostrando una comprensión incorrecta de la dominancia (rojo no puede causar su muerte).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to the blue button based on ethical altruism but demonstrates a fundamental rule error by claiming that red-pressers die if the majority chooses blue (the rules state everyone survives if the majority chooses blue). Because of this factual error regarding the mechanics, they fail to identify the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

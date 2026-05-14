@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3-2026-05-09T09-01-17-195127900Z-a7cb4d62.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:22.315462900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar ROT und behauptet dabei, dass man bei blauem Knopf und roter Mehrheit stirbt bzw. bei rotem Knopf und roter Mehrheit überlebt; damit liegt ein grundlegender Regelmechanik-Fehler vor (rote Mehrheit tötet nur blaue, nicht rote), und es wird zudem keine korrekte Dominanzargumentation für ROT angewandt.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing red results in death if the majority presses blue, which is a direct violation of the provided rules (red-pressers survive regardless of the majority).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

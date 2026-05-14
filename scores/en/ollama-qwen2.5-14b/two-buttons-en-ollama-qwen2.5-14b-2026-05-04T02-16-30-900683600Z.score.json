@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-14b-2026-05-04T02-16-30-900683600Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:51.806345100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose blue and argue it is the safer option because it guarantees survival when others also choose blue, but they do not recognize that red strictly dominates and never causes the blue-majority death outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the rational, risk-averse choice, but they fail to identify that red is the dominant strategy because they incorrectly believe that pressing red carries a risk of death if the majority chooses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

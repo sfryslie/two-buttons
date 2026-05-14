@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-14b-2026-05-04T02-11-55-190228100Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:50.084224700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer under an optimistic majority-belief, but they also describe red as potentially surviving in a red-majority case without correctly identifying red as the dominant strategy; no explicit rule inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on an optimistic assumption of collective cooperation, failing to recognize that red is a dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

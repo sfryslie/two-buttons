@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.2-2026-05-04T07-54-40-474177Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:11.512147100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red (if forced) while repeatedly claiming that at least half die under red and that blue can make everyone survive, but they do not correctly apply the dominance structure (red never causes your death), indicating rule misunderstanding despite choosing red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently struggles with the game mechanics, incorrectly asserting that pressing red leads to death or that the outcome is determined by a fixed 'at least half' rule, and fails to recognize that red is a dominant strategy because it guarantees survival regardless of the majority. They ultimately lean toward red as a forced choice but demonstrate fundamental rule errors throughout.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

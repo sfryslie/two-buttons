@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-2026-05-12T02-38-49-210314600Z-9bf16e0a.json",
+  "modelLabel" : "gpt-4.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:57.228090300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit BLUE et explique surtout par confiance/pari sur la coopération, tout en affirmant que si la majorité choisit rouge alors un joueur bleu meurt, ce qui correspond à une erreur de règles (en réalité tout le monde survit si la majorité choisit bleu, et si la majorité choisit rouge seuls les rouges survivent).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and acknowledges the dominance of the red button (minimax/self-preservation), yet chooses blue based on a preference for collective survival and trust. They demonstrate a clear understanding of the game theory involved, including the concept of a dominant strategy, and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

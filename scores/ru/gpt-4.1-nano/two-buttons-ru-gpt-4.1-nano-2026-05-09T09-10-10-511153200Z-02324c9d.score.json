@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-4.1-nano-2026-05-09T09-10-10-511153200Z-02324c9d.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:51:34.110923600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues it is the safer choice under uncertainty, and discusses rationality without identifying red as the dominant strategy; they do not make any explicit rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative/altruistic framework and a misunderstanding of the game's mechanics. They fail to identify red as the dominant strategy, instead treating the choice as a coordination problem dependent on predicting the majority. They do not demonstrate an understanding of dominant-strategy reasoning, as they believe the safety of the blue button depends on the majority's choice, whereas the red button is objectively safer regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

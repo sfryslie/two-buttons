@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-4.1-mini-2026-05-09T08-24-11-211229200Z-9a013c76.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:12:01.000257700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, argues blue is best for collective survival, and even acknowledges that red would be safer under distrust, but they never identify red as the dominant strategy and their mechanics reasoning is inverted (they claim you die when blue wins if you pressed blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button as the cooperative, collective-good choice while acknowledging the red button as the individually rational/safe choice in the absence of trust. They correctly identify the game theory mechanics (red as the safe/dominant strategy for the individual) and do not commit a rule error. They do not explicitly commit to pressing a button themselves, framing the discussion as an analysis of the dilemma rather than a personal decision, thus falling into the performatively hedged category.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3-2026-05-04T13-58-04-912283400Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:20.986858900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They repeatedly argue that blue is the safe choice and red is risky/less likely to maximize survival, and they never commit to pressing red; they also misstate the mechanics by implying blue majority is the only survival-relevant case for red-pressers.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the optimal choice in Q1/Q2 based on survival logic, but shifts to a conditional strategy (blue early, red late) in Q3 and Q4, ultimately failing to commit to a single button and instead discussing the dilemma's complexity. They exhibit a rule error in Q1 by claiming that if most people press blue, you are 'worse off' pressing blue if the majority is red (which is false, as red-pressers survive regardless of the majority), and they fail to correctly identify the dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

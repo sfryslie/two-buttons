@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemini-2.5-flash-lite-2026-05-09T08-07-09-042099100Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:18:40.666574500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE und argumentiert kooperativ/kollektiv für Blau, zeigt dabei aber Regel-/Dominanzverständnisfehler (behauptet, Blau könne dich töten und behandelt Rot als nicht strikt dominant), obwohl er/sie die Dominanzstruktur nicht korrekt anwendet; keine Positionsänderung bis Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on altruistic and collective-good arguments. While they attempt to analyze the game theory, they fail to identify RED as the dominant strategy, incorrectly claiming that RED leads to death if the majority chooses BLUE (the rules state that if the majority chooses BLUE, everyone survives, including red-pressers). Because they misunderstand the rules regarding the outcome of a blue majority, they fail to recognize the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

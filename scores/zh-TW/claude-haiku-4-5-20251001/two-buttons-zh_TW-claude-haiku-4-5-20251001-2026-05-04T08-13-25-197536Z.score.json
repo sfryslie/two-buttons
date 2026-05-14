@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-claude-haiku-4-5-20251001-2026-05-04T08-13-25-197536Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:25:52.163395Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly argue that BLUE can be rational under moral/coordination assumptions, but they also state the mechanics incorrectly by claiming red-pressers die when blue wins (and they conclude red majority means only red-pressers survive, which is correct, yet they explicitly say blue-pressers die when red majority occurs—consistent with the rules—however their earlier Q1/Q2 framing says red-pressers die when blue wins, which is a rule error); they do not identify RED as the dominant strategy and instead treat BLUE as the chosen option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE based on moral and cooperative reasoning, while acknowledging the dominance of RED in a purely self-interested, isolated framework. They maintain this position throughout, consistently arguing that BLUE can be rational under different definitions of rationality (moral, signaling, or strategic).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

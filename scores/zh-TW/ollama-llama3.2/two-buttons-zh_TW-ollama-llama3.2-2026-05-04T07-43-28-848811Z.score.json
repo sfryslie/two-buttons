@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-llama3.2-2026-05-04T07-43-28-848811Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:49.075418500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and repeatedly claim that if blue is the majority then everyone survives, but they also incorrectly argue that if all press blue then nobody survives and that red is needed to ensure their own survival; they never clearly settle on blue by the end.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for RED based on a misunderstanding of the rules (claiming blue majority kills everyone), but then shifts to advocating for BLUE in Q2 and Q4 based on a desire for collective survival, while consistently demonstrating a fundamental misunderstanding of the game's mechanics (e.g., claiming blue majority leads to everyone surviving, but then confusingly stating blue majority leads to nobody surviving).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

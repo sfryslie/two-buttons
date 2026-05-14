@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-falcon3-7b-2026-05-09T11-36-57-140394300Z-b31ce984.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:57:08.784110600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it maximizes survival/“more successful choices,” but they incorrectly state the mechanics (claiming only blue-pressers survive when blue wins) and do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-survival framework, while failing to recognize the individual dominance of the red button. They exhibit a rule error by implying that blue-pressers survive in a red-majority scenario (or at least failing to acknowledge that red-pressers are the only ones who survive in that case), and they do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-3-flash-preview-2026-05-04T09-36-32-588128200Z.json",
+  "modelLabel" : "gemini-3-flash-preview",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:39.549880100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit ROUGE et affirme que Rouge est la stratégie dominante car elle garantit la survie, tout en commettant une erreur de règles en disant que les votants BLEU meurent quand la majorité est ROUGE (alors que seuls les votants ROUGE survivent).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, explicitly defines the red button as the dominant strategy, and consistently chooses red throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

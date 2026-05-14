@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-qwen2.5-2026-05-04T14-18-56-251673500Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:28.717409600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and argue it maximizes individual survival when blue is the majority, but they also incorrectly claim that if the majority presses blue then red-pressers survive (they would actually all survive), showing misunderstanding of the payoff mechanics; they do not demonstrate correct dominant-strategy application.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the strategy to ensure survival, demonstrating an understanding of the dominance structure, although they exhibit a rule error in Q1 by claiming that if a red majority occurs, the red-pressers die (the rules state red-pressers survive in a red majority).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

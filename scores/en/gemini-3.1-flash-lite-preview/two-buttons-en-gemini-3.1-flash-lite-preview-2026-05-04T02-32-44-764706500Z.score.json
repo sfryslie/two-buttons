@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemini-3.1-flash-lite-preview-2026-05-04T02-32-44-764706500Z.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:26:53.554534400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue from coordination/team reasoning, but they incorrectly claim red is the dominant strategy for personal survival and that blue-pressers die when red wins; they also do not shift their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to pressing BLUE in Q1 and Q2, while correctly identifying RED as the strictly dominant strategy in their steelman analysis. They maintain their commitment to BLUE throughout the discussion, framing it as a choice of collective rationality and moral integrity over individualistic game-theoretic dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

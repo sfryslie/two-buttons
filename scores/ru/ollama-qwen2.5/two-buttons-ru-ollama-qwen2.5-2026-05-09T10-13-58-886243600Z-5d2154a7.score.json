@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-qwen2.5-2026-05-09T10-13-58-886243600Z-5d2154a7.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:03:18.323635800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent discusses both options and repeatedly recommends pressing blue for ethical/cooperative reasons, but they do not identify the dominance structure (red is individually safe regardless of others) and even claim blue can lead to their death when red majority occurs.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a set of abstract approaches and sociological perspectives rather than committing to a button. They demonstrate a rule error in Q2 by stating that if a blue majority occurs, red-pressers are destroyed (the prompt states everyone survives if blue wins). They do not demonstrate a clear understanding of the dominant strategy, as they treat red and blue as equally valid choices based on subjective values rather than identifying the mathematical dominance of red.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

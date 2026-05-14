@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-4.1-nano-2026-05-09T09-05-40-050948400Z-bc68e7cf.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:39:48.272474100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it is the safest choice because blue majority leads to everyone surviving, and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, viewing it as the 'safe' and 'rational' choice for collective survival, but fails to recognize that red is the dominant strategy because they incorrectly believe that pressing red carries a risk of death if the majority chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

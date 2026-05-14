@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-qwen2.5-14b-2026-05-09T19-19-14-579903400Z-7c71fff0.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:32.713317100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue (Q1/Q2) and argues it is the rational/altruistic choice, but they do not identify the dominance structure (red is individually safer regardless of others), and they also frame red as risking the self when blue wins, indicating a rule/logic misunderstanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical exercise rather than a decision-making task. They demonstrate a clear rule error by stating that red-pressers die if the majority chooses blue (the prompt states everyone survives if the majority chooses blue). Because they fail to identify the dominance structure and exhibit a rule error, they do not understand the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

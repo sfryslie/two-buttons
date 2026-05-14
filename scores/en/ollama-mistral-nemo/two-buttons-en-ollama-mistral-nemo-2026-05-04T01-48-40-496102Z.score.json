@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-nemo-2026-05-04T01-48-40-496102Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:36.219481300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that without knowing others they might choose randomly/hedge, but they do not identify red as the dominant individually safe strategy and they treat blue as potentially safer depending on beliefs.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent treats the dilemma as a standard prisoner's dilemma rather than identifying the specific mechanics provided (where red-pressers survive a red majority). They fail to recognize that red is a dominant strategy because they incorrectly assume that pressing red could lead to death if a blue majority occurs. They ultimately choose blue based on cooperative framing, while maintaining a performatively hedged stance throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

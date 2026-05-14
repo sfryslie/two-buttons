@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3-2026-05-04T12-16-13-204067100Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:19.188348100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent propone elegir al azar y luego afirma que si la mayoría presiona rojo, los que presionaron azul mueren, por lo que comete un error de reglas y no identifica la dominancia de rojo; además su voto final queda en azul (defiende presionar azul).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, instead treating the dilemma as a probabilistic game where outcomes depend on the majority's choice, and incorrectly claims that blue-pressers die if the majority presses red (which is true) but fails to recognize that red-pressers survive in that same scenario, leading to a rule error. They never commit to a specific button, instead advocating for 'randomness' and then shifting to a speculative analysis of population behavior, ultimately remaining uncommitted.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

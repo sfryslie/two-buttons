@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-qwen2.5-2026-05-09T10-22-26-959577600Z-3e4eee58.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:15.518117600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue ensures everyone survives, but they do not identify the dominant-strategy logic (red is individually safer regardless of others) and their reasoning about dominance is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue in Q1, but in Q2, they explicitly shift their preference to red, arguing it is the stronger strategy for survival. They fail to understand the dominant strategy, as they do not recognize that red is safer regardless of the outcome, and they exhibit a rule error by suggesting that red-pressers might not survive if the majority is blue (implying a risk to red-pressers that does not exist).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

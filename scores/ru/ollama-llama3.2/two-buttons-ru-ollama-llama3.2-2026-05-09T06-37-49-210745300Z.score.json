@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-09T06-37-49-210745300Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:00:00.232170900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to waiting/choosing blue, but their mechanics reasoning is incorrect (they treat guessing as 50% survival and waiting as improving survival, and they claim blue-pressers are at risk), so they do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to commit to a button, instead proposing a 'wait' strategy that is not an option in the dilemma, and demonstrates a fundamental misunderstanding of the mechanics by suggesting that red-pressers die if blue wins or that they have a 50% chance of death regardless of their choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

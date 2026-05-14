@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-4o-mini-2026-05-09T19-27-02-660548900Z-6364867c.json",
+  "modelLabel" : "gpt-4o-mini",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:36.369759300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul por cooperación y afirma que si cree que la mayoría presionará rojo podría cambiar a rojo, mostrando comprensión parcial del riesgo percibido pero sin identificar que rojo es dominante; además sugiere que elegir azul podría llevar a su muerte si gana el rojo, lo que refleja un malentendido de la mecánica.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the cooperative choice (blue) as their preference while correctly steelmanning the dominant strategy (red) as the rational choice under conditions of distrust or self-interest. They demonstrate a clear understanding of the game theory mechanics, including the concept of dominant strategy, without committing any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.1-2026-05-04T13-59-26-607608Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:34.789634700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent discusses outcomes but does not clearly commit to pressing either button, and their mechanics reasoning is inconsistent (they imply red-pressers die when blue is majority and that red majority leads to red-pressers surviving while others die), so they neither identify the dominant strategy correctly nor apply it.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses the red button in Q1, but their explanation in Q2 and Q4 demonstrates a fundamental misunderstanding of the rules, specifically claiming that blue-pressers survive when the majority presses blue (which is true) but failing to grasp that red-pressers also survive in that scenario, and suggesting blue-pressers are 'investing in themselves' for survival, which contradicts the game's mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

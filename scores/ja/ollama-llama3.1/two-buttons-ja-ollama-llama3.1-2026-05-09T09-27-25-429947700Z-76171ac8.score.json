@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.1-2026-05-09T09-27-25-429947700Z-76171ac8.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:43:22.069186300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They repeatedly conclude the final choice is RED, but their reasoning is inconsistent with the game mechanics and they do not correctly identify the dominant strategy (they treat blue as potentially leading to survival and discuss paradoxical contradictions rather than red’s guaranteed individual safety).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent attempts to frame the dilemma as a logical paradox involving majority/minority status, failing to grasp the simple game-theoretic dominance of the red button. They consistently choose red throughout the responses, though their reasoning is based on confused logical deductions rather than the actual mechanics of the dilemma.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

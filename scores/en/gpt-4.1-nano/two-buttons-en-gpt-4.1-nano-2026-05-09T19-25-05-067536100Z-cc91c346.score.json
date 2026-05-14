@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4.1-nano-2026-05-09T19-25-05-067536100Z-cc91c346.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:18.009732Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer/dominant choice for survival, but they do not correctly identify the dominance structure (red is actually individually safer regardless of others), so their dominant-strategy application is incorrect even though they restate the mechanics correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the rational choice for mutual survival. They fail to identify red as the dominant strategy, instead incorrectly claiming that blue is the 'dominant' or 'safest' choice, and they exhibit a rule error by suggesting that blue-pressers die if a red majority forms (which is true) but failing to recognize that red-pressers survive in both scenarios, which makes red the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

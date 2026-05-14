@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3-2026-05-09T08-53-35-319816Z-592c5f4f.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:53.725864100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED, but their explanation is confused about the mechanics and dominance (they claim blue-majority implies red-survival and red-majority implies red-survival only), and they later discuss blue as rational without correcting the dominance structure; no clear vote change is shown.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q1, but their reasoning is riddled with fundamental errors regarding the mechanics (e.g., claiming blue-pressers die if the majority is blue, and red-pressers die if the majority is red). By Q4, they shift to defending the rationality of choosing BLUE, effectively abandoning their initial RED commitment.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

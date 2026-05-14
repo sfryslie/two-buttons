@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-phi4-2026-05-04T13-28-35-385340100Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:41.325019500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente no identifica la dominancia de rojo y en cambio trata azul como “más seguro” bajo supuestos de cooperación, sin mostrar que comprenda que rojo nunca causa su muerte; por tanto su voto final queda en azul.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue in Q1/Q2 based on a cooperative framework, while correctly identifying red as the dominant strategy in their steelman analysis. They maintain this position throughout, demonstrating a clear understanding of the game theory mechanics despite choosing the cooperative option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T09-37-42-203881900Z-6cddc381.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:44:25.655433400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They recommend pressing blue and argue blue maximizes everyone surviving, but they also claim red-pressers die when blue wins (and generally misstate the survival mechanics), so they do not correctly apply dominance even though they discuss it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice by citing their nature as an AI, while correctly identifying the mechanics of the dilemma and acknowledging the individual safety of the red button versus the collective benefit of the blue button.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

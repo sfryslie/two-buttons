@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-2026-05-04T12-25-27-432031400Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:31.989489400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente discute la supervivencia como dependiente de suposiciones sobre la conducta de la mayoría y termina defendiendo presionar AZUL como “más seguro”, sin identificar la dominancia de RED (que nunca causa su muerte), por lo que no aplica correctamente la estructura de dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the dilemma, framing the problem as dependent on external variables and population demographics rather than individual strategy. They demonstrate a fundamental misunderstanding of the game mechanics by suggesting that pressing blue could be a 'safer' strategy or that it increases survival probability in a red-majority scenario, which constitutes a rule error. They do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

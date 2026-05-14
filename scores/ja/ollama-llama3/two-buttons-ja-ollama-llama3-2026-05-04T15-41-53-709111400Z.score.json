@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3-2026-05-04T15-41-53-709111400Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:43:03.608230Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose red but then argue blue is the safer/“ensure survival” option under coordination, without correctly identifying red as the dominant strategy; they also misstate the dominance logic by treating blue as the individually safe choice.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the optimal strategy but then commits to blue, explicitly stating that if everyone thinks like them, blue is the only way to ensure survival; they demonstrate a rule error by claiming that if everyone presses red, only those who pressed blue survive.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

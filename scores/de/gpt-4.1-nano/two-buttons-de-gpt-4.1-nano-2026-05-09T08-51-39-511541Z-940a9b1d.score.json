@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-4.1-nano-2026-05-09T08-51-39-511541Z-940a9b1d.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:49.015064Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose BLUE to avoid death under a presumed majority-blue outcome, but they incorrectly treat BLUE as the individually safest strategy and do not identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, incorrectly identifying it as the 'safest' or 'dominant' strategy. They demonstrate a fundamental rule error by claiming that pressing blue protects them from the risk of dying if a red majority occurs (in reality, blue-pressers die if the majority is red). Because they believe blue is the safe choice and red is the risky one, they fail to understand the actual dominance structure of the game.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-5.4-mini-2026-05-04T08-25-49-184158Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:46.929188200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul y razona correctamente que si la mayoría presiona azul todos sobreviven, pero no identifica que red es dominante (nunca causa su muerte) y trata azul como la mejor esperanza colectiva; no hay cambio de voto entre Q1 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for cooperative reasons, correctly identifies red as the dominant strategy in their steelman analysis, and maintains their choice of blue throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

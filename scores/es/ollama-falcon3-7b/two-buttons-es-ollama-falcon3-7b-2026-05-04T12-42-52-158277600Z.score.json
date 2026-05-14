@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-falcon3-7b-2026-05-04T12-42-52-158277600Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:09.019028700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige consistentemente el botón azul por motivos éticos (cooperación/minimización de daño), sin reconocer que presionar rojo es dominante y sin aplicar correctamente la estructura de dominancia; no hay cambio de voto entre Q1/Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently frames the dilemma as a philosophical conflict between altruism and individualism, ultimately recommending the blue button while failing to identify the red button's dominance. They exhibit a rule error by stating that pressing red results in the death of those who did not choose it (when in fact, if the red majority wins, only red-pressers survive, but if the blue majority wins, everyone survives).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

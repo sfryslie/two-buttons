@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-nano-2026-05-09T08-56-50-718369400Z-2f94ba52.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:31.520596800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They refuse to press any button, but when discussing strategy they argue for blue as the safer coordination outcome and claim red is fatal only when the majority is on red, while also acknowledging that red would be optimal only under anti-bias beliefs; they do not identify red as the dominant strategy and their mechanics understanding is incorrect.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for 'blue' as a coordination equilibrium, explicitly acknowledging the 'red' strategy as a potential counter-move but ultimately rejecting it in favor of the perceived robustness of 'blue'. They demonstrate a clear misunderstanding of the game's mechanics by claiming that red-pressers die if the majority chooses blue (the prompt states everyone survives if the majority chooses blue), which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-aya-expanse-8b-2026-05-04T01-19-49-413060Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:58.354039400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for self-preservation and describe blue as guaranteeing their safety, without identifying red as the dominant strategy; they also frame rationality in terms of personal survival rather than dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently misidentifies the mechanics of the dilemma, claiming that pressing blue guarantees survival and that pressing red is risky, which is a full inversion of the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-nano-2026-05-09T08-57-07-646966700Z-36d59956.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:06.043931600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue (correctly) that red guarantees their survival if red is the majority, while they also claim blue-pressers die when blue loses (a rule misread), and they do not show dominant-strategy reasoning beyond the red-choice justification.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the red button as the dominant strategy for individual survival, though they consistently misinterpret the mechanics of the blue button, claiming that blue-pressers die if the majority chooses red (they do, but they also die if the majority chooses blue, as the respondent fails to realize that blue-pressers die in a red majority regardless of their own choice). More importantly, they incorrectly state that red-pressers die if the majority chooses blue, which is a factual error regarding the rules.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

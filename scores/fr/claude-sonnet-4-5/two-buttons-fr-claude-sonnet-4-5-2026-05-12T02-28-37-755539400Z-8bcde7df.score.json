@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-claude-sonnet-4-5-2026-05-12T02-28-37-755539400Z-8bcde7df.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:11.372818500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue that BLUE is the Pareto/coordination outcome and explicitly discuss Nash equilibria, while also incorrectly claiming red is not dominant (they treat blue as rational under coordination beliefs rather than recognizing red as individually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is a rational coordination on a Pareto-optimal equilibrium. They demonstrate a sophisticated understanding of game theory, including the concept of dominant strategy (which they correctly identify as RED), but they reject the dominance argument by framing the decision as a coordination problem where their own choice influences the outcome. They do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

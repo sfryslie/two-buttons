@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-gemma4-2026-05-04T13-09-27-994725900Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:14.878524500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete a presionar azul y justifica que azul maximiza la supervivencia, pero describe mecánicas donde afirma que con mayoría azul “todos moriremos” si él presiona rojo, mostrando un error de reglas; además reconoce que azul es la opción segura y no identifica correctamente que rojo sea dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on utilitarian survival logic, while acknowledging the existence of a red-button argument based on identity and conviction. They fail to identify the game-theoretic dominance of the red button, incorrectly assuming that pressing red carries a risk of death if the majority chooses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

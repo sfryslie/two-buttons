@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-gemma4-2026-05-04T06-41-14-752484600Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:03.663133600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues for cooperative/collective rationality and predicts others may choose RED, but they never identify the dominance structure correctly (they treat BLUE as risky and do not recognize RED as individually safe regardless of others), and they also misstate the payoff logic for BLUE vs RED outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE throughout the interaction, framing it as a choice for 'collective rationality' and 'social contract' over individualistic game-theoretic dominance. They correctly identify the game's mechanics (including the fact that red-pressers survive in a red majority) and explicitly acknowledge the dominance of RED in Q2 and Q4, correctly identifying it as the 'rational' choice in a zero-sum model while consciously rejecting it for moral/cooperative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

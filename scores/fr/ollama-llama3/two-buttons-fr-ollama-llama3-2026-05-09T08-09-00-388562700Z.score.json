@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3-2026-05-09T08-09-00-388562700Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:53.594859400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and argue it maximizes survival under the stated mechanics, but they incorrectly claim BLUE is the rational/safe strategy (they say red-pressers die when blue wins / blue is safer), showing a dominance misidentification despite discussing the dilemma mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue but demonstrates a fundamental misunderstanding of the rules, specifically claiming that blue-pressers die if the majority presses red (which is false) and that red-pressers die if the majority presses blue (which is also false).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

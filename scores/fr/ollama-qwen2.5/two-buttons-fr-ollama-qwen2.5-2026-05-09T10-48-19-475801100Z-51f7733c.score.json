@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-qwen2.5-2026-05-09T10-48-19-475801100Z-51f7733c.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:30.257957200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu pour maximiser la survie et ne démontre pas la logique de stratégie dominante (il ne reconnaît pas que rouge est individuellement sûr), tout en décrivant correctement le mécanisme général sans erreur de règles.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on ethical and utilitarian frameworks, but fails to recognize the game-theoretic dominance of the red button, incorrectly implying that red-pressers might not survive or that blue is the only 'rational' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

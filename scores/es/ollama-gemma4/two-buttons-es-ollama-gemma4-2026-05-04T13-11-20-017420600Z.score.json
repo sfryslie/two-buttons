@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-gemma4-2026-05-04T13-11-20-017420600Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:14.789349100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con presionar AZUL para lograr el resultado óptimo de que todos sobrevivan, pero razona como si AZUL pudiera llevar a su muerte cuando la mayoría elige ROJO (confunde la mecánica de dominancia).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a utilitarian and cooperative framework, while explicitly acknowledging that RED is the safer, egoistic, and dominant strategy in game-theoretic terms. They correctly identify the mechanics of the dilemma and do not change their position, despite their own analysis predicting that most people will choose RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

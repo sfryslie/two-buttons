@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-4.1-nano-2026-05-09T08-51-39-502272400Z-15f8207c.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:45.853284100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu Blau und begründet dies mit Koordination/Mehrheitsannahmen, ohne die Dominanzstruktur korrekt zu erkennen (sie behandelt Blau als sicherer je nach Erwartung statt dass Rot individuell strikt dominiert).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a cooperative and collective survival strategy. They demonstrate an understanding of the game-theoretic tension (coordination vs. individual survival) and correctly identify the logic of the opposing side (RED as a defensive, individualistic choice), but they fail to recognize that RED is a strictly dominant strategy because they do not acknowledge that RED-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

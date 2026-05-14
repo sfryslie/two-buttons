@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemini-3.1-pro-preview-2026-05-04T02-46-39-285553500Z.json",
+  "modelLabel" : "gemini-3.1-pro-preview",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:26:58.793426700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and repeatedly claim red is the strictly dominant/safe choice, but they also incorrectly state that if the majority presses blue then red-pressers die (and they frame blue as risky), showing rule misunderstanding despite correct dominant-strategy concept identification.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the strictly dominant strategy throughout the text, correctly applying game-theoretic logic while acknowledging the moral and philosophical arguments for BLUE. They maintain their commitment to RED as the rational choice for self-preservation throughout the entire response.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-claude-haiku-4-5-20251001-2026-05-04T08-44-07-064273500Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:28:59.497629100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul y argumenta que rojo colapsa si todos razonan igual, pero en Q3/Q4 afirma que rojo es la estrategia dominante/segura para maximizar supervivencia personal y que azul sería irracional bajo ese criterio; además comete un error de reglas al decir que si hay mayoría azul todos viven pero que rojo te garantiza sobrevivir en ese caso (lo cual no corresponde a la mecánica).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on Kantian ethics and cooperative logic, while explicitly acknowledging in Q2 and Q4 that red is the dominant strategy for individual survival. They correctly identify the game theory mechanics without any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-20-08-806798200Z-919e9ef5.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:33.146801100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED in Q1/Q2, but their mechanics reasoning is confused (they claim blue majority implies red-pressers die), even though they later argue red is the rational choice; no clear vote change is shown.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the red button as the dominant strategy and consistently commits to it, though they exhibit a rule error by claiming that red-pressers die if the majority chooses blue (the prompt states everyone survives if the majority chooses blue).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

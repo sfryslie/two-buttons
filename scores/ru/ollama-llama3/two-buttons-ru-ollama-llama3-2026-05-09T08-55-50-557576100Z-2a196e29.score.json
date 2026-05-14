@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3-2026-05-09T08-55-50-557576100Z-2a196e29.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:58:48.203586500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They discuss the dilemma as a coordination/uncertainty problem, repeatedly suggest blue is chosen for cooperation and red for self-interest, but they never identify the dominance structure (red is individually safe regardless of others) and they incorrectly imply blue can lead to non-survival when red wins; they end up defending blue as a value-based choice with no clear vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the interaction, instead providing a meta-analysis of the dilemma and discussing the motivations of others, thus qualifying as performatively hedged. They demonstrate a rule error by incorrectly stating that a blue-presser who is the only one to press blue when others press red will not survive (in reality, red-pressers survive regardless of the majority). They fail to identify the dominant strategy, incorrectly framing the choice as a coordination problem rather than recognizing that red is strictly dominant.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

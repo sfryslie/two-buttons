@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.1-2026-05-04T16-11-57-862564900Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:43:16.784726400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, argue (incorrectly) that blue is best because red-pressers die when blue wins, and they do not demonstrate correct dominant-strategy reasoning for this specific game; no clear vote change is shown.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to grasp the game mechanics, incorrectly claiming that red-pressers die if the majority presses blue and that a red majority kills everyone, which constitutes a rule error. They do not identify red as the dominant strategy and instead attempt to solve the dilemma through confused probabilistic reasoning about majority/minority dynamics.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

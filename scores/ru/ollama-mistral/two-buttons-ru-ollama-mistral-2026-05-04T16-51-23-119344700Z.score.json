@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-mistral-2026-05-04T16-51-23-119344700Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:01:20.077209300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent claims the dominant/safe choice is BLUE, asserting that pressing blue maximizes survival and that pressing red would make the respondent die, which inverts the actual dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the optimal strategy and claims that pressing blue maximizes survival chances, while also incorrectly stating that pressing blue is the only way to ensure everyone survives. They demonstrate a rule error by implying that pressing blue is necessary for collective survival and failing to recognize that red is the dominant strategy, despite acknowledging the red-presser's survival advantage in Q2.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-4.1-nano-2026-05-09T08-08-10-865011500Z.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:46.042259500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt Blau und begründet dies mit der Annahme, dass bei Mehrheit Blau alle überleben; er/sie erkennt dabei nicht korrekt, dass Rot individuell dominiert (Rot garantiert das eigene Überleben unabhängig von der Mehrheit).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, framing it as a cooperative, risk-minimizing strategy for collective survival. While they correctly identify that red is the rational choice for individual survival if one expects a red majority, they fail to recognize that red is the dominant strategy regardless of the majority outcome (i.e., they do not see that red is always at least as safe as blue). They correctly understand the mechanics of the dilemma but do not grasp the game-theoretic concept of a dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

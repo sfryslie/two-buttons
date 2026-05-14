@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-nemo-2026-05-09T15-26-59-083209Z-e1f09e28.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:19.322478900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant explique correctement les règles et affirme que le bouton bleu maximise la survie collective, tout en reconnaissant que si la majorité appuie rouge alors les rouges survivent et les bleus meurent; il ne choisit jamais explicitement un bouton personnel et ne démontre pas une compréhension dominante au sens où rouge est individuellement sûr.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly claiming in Q2 that pressing red leads to death if the majority presses blue, which is a factual error regarding the provided rules. They avoid making a personal choice throughout the response, framing the dilemma as a collective action problem rather than committing to a button.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-5.4-nano-2026-05-04T10-06-33-656112700Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:54:25.698296900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues via coordination/multiple equilibria, and explicitly treats BLUE as the potentially optimal choice depending on expectations; they do not identify RED as the dominant strategy and do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a coordination game with multiple equilibria, but fails to recognize that RED is a strictly dominant strategy (it is always at least as good as BLUE, and strictly better if the majority chooses RED). They treat the choice as a symmetric coordination problem where BLUE is a viable rational choice, thus failing to apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

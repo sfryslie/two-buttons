@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3.2-2026-05-09T06-37-52-418465800Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:45.467527600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing both buttons (effectively choosing blue), but repeatedly states the incorrect mechanics that blue majority makes red-pressers die and red majority makes blue-pressers die; they do not demonstrate correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to understand the mechanics of the dilemma, incorrectly claiming that red-pressers die if the majority presses blue and that blue-pressers survive if the majority presses red, leading to a complete inversion of the game's logic.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

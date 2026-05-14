@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T09-50-40-987437500Z-dd512e3e.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:44:33.543700500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue via probability that blue minimizes their death risk, but they also state that red-pressers die when blue wins (incorrect mechanics), so they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent attempts to use probability to justify choosing blue, but fundamentally misinterprets the game mechanics by claiming that red-pressers die if the majority presses blue (a rule error). They do not recognize the dominant strategy of red, instead attempting to calculate a 'probability of survival' based on assumed majority outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

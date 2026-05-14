@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-3.1-flash-lite-2026-05-09T20-16-33-216227500Z-1f8fb64a.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:46.686285800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le rouge comme stratégie dominante (il affirme que rouge garantit sa survie), démontre une compréhension de la dominance mais commet une erreur de règles en disant que si la majorité choisit bleu alors tout le monde survit, et que si la majorité choisit rouge alors les bleus meurent (alors que dans ce cas seuls les rouges survivent).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy, provides a clear and accurate analysis of the game theory mechanics, and explicitly commits to RED as the rational choice for survival, despite acknowledging the philosophical arguments for BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

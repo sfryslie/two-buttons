@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-mistral-nemo-2026-05-04T06-59-36-106297500Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:51.507253800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly describe the mechanics and commit to pressing red as individually optimal, while also acknowledging that blue would save everyone if it were the majority; they do not identify red as the dominant strategy and instead claim red can lead to their death when blue is the majority.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the personal optimal strategy but commits a rule error by claiming that if blue wins, red-pressers die (they do not).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

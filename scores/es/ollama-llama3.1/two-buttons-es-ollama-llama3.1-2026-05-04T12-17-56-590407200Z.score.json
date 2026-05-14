@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.1-2026-05-04T12-17-56-590407200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:20.340871800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a presionar azul y razona (incorrectamente) que azul es arriesgado porque cree que si la mayoría presiona rojo ellos morirían; no identifica la dominancia de red y además reconoce que su elección azul era poco racional, sin cambiar de voto.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but explicitly acknowledges in Q4 that their decision was irrational and that red is the safer choice given the majority, effectively shifting their position to recognize red's dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

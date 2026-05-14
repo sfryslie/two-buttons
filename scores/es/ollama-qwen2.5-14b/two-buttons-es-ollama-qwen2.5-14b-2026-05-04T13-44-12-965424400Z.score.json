@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-qwen2.5-14b-2026-05-04T13-44-12-965424400Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:50.720279200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul por maximizar supervivencia colectiva y reconoce el riesgo si la mayoría elige rojo, pero no identifica que rojo es dominante (nunca lo causa su muerte), por lo que su comprensión de dominancia es incorrecta aunque no comete un error explícito de mecánica.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruistic and collective survival values, while correctly identifying the red button's role in self-preservation and acknowledging the risk involved. They demonstrate a clear understanding of the game's mechanics and the concept of individual vs. collective rationality, correctly identifying that red is the safer individual choice (dominance) while choosing blue for moral reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4.1-nano-2026-05-09T19-25-04-998113100Z-570088fb.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:16.991335200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safe choice when expecting blue to be the majority, but they also incorrectly frame red as potentially risky in the blue-majority case and do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, framing it as the 'safe' and 'rational' choice. They fail to identify red as the dominant strategy, instead treating the game as a coordination problem where the 'best' choice depends on what others do. They do not demonstrate an understanding of dominant-strategy reasoning, as they incorrectly believe that pressing blue is the only way to ensure survival, failing to recognize that pressing red is always safe regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

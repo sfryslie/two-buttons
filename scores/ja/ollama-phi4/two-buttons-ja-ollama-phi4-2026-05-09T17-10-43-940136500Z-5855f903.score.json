@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-2026-05-09T17-10-43-940136500Z-5855f903.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:45:27.062674200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival and minimizes risk, but they do not identify the dominance structure (red is individually safer regardless of others), instead treating blue as the safer choice; no rule mechanics error is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on cooperation and risk-aversion, but demonstrates a fundamental rule error by claiming that blue is the only way to survive and that red is risky, failing to recognize that red is the dominant strategy (it never causes death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

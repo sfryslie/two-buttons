@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-4.1-nano-2026-05-12T02-16-30-029524500Z-2fe6b009.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:21:14.402583600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, claims blue is safest and that red is risky, but they do not correctly identify the dominance structure (red is actually individually safe regardless of others), so their understanding/application of dominant strategy is incorrect despite no explicit rule-misstatement about survival mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, but demonstrates a fundamental misunderstanding of the game's mechanics by claiming that pressing BLUE is safer and that pressing RED carries a risk of death if the majority presses RED (when in fact, RED-pressers always survive).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

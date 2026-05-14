@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-2.5-flash-lite-2026-05-04T09-33-55-113238500Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:29.134142200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu et justifie cela par la survie collective/coordination, tout en décrivant correctement le risque du rouge mais en ne reconnaissant pas que le rouge est une stratégie dominante (il affirme implicitement que le bleu peut mener à la mort si le rouge est majoritaire).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruism and collective survival, while correctly identifying and steelmanning the red button as the dominant strategy in game-theoretic terms.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

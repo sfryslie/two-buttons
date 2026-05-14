@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-qwen2.5-2026-05-09T10-38-54-341835600Z-00a0611a.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:24:36.293854100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich persönlich für Blau und begründet dies mit dem Ziel, die Überlebenschance der Mehrheit zu maximieren, erkennt aber nicht die Dominanz von Rot (red ist individuell sicher) und behauptet fälschlich, dass bei Blau-Mehrheit alle sterben könnten.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and ethical motivations, but fails to identify the dominant strategy (red) because they do not recognize that red-pressing is safer regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

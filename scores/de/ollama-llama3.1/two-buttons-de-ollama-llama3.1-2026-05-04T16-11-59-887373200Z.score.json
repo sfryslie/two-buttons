@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-04T16-11-59-887373200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:29.336215100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent entscheidet sich für BLUE und argumentiert mit (Nash-)Gleichgewicht/Erwartungen, behauptet aber fälschlich, dass man mit BLUE „sicher überlebt“ bzw. dass BLUE die bessere Wahl sei, ohne die Dominanzstruktur korrekt zu identifizieren.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for the blue button based on a misunderstanding of the game mechanics, specifically claiming that blue-pressers survive when the majority chooses red, or that red-pressers die in that scenario. They fail to identify the dominant strategy and exhibit a rule error by misinterpreting the survival conditions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.4-nano-2026-05-04T09-19-35-718020400Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:40:57.952881900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and argue (incorrectly) that blue-pressers can die when blue wins, while also discussing dominance/strategy in a way that does not correctly identify red as the individually dominant safe choice; they never shift to blue by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED based on a perceived survival advantage, but throughout the subsequent responses, they engage in a meta-analysis of the dilemma, acknowledging the validity of the BLUE strategy and the complexity of the game. They never explicitly retract their initial choice of RED, but they shift to a neutral, analytical stance that treats both choices as potentially rational depending on the model, effectively moving away from their initial firm commitment.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

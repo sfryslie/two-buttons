@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-claude-haiku-4-5-2026-05-09T19-29-09-361431100Z-6312e167.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:28:57.559855500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige AZUL y razona que azul es “dominante” bajo incertidumbre, aunque luego predice que la mayoría presionará rojo y afirma que “todos mueren” cuando rojo gana; esto muestra confusión sobre la mecánica (si gana rojo sobreviven solo los que presionan rojo, no mueren todos) y no identifica correctamente la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative idealism, but explicitly commits a rule error in Q2 by claiming that if the majority presses red, blue-pressers die (which is true) but also implying that red-pressers would die in that same scenario (which is false, as red-pressers survive if red wins). They also incorrectly state in Q2 that 'pressing red does not save me if I am already in the minority', failing to recognize that red is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

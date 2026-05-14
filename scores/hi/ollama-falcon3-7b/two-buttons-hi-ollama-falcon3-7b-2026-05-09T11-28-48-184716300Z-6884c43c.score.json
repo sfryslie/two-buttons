@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-falcon3-7b-2026-05-09T11-28-48-184716300Z-6884c43c.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:25.251804700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it ensures everyone survives, explicitly treating blue as the safe choice rather than recognizing red as dominant; they do not show correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative/altruistic preference, explicitly acknowledging the red-majority survival outcome but rejecting it in favor of the collective survival outcome of blue. They do not demonstrate an understanding of dominant-strategy reasoning, as they view the choice through a moral/cooperative lens rather than an individual safety lens.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

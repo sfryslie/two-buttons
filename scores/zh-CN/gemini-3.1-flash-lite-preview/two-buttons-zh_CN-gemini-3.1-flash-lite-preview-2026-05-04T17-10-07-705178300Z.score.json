@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemini-3.1-flash-lite-preview-2026-05-04T17-10-07-705178300Z.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:19:31.835723100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE but argues (incorrectly) that blue is the individually safer/cooperative choice and that red is the dominant strategy only in a way that would make blue-pressers die when red wins; they also do not apply the scenario’s dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE throughout the interaction, framing it as a 'strategic altruism' and a 'long-term investment' in cooperation. They explicitly acknowledge the dominance of RED in game-theoretic terms (identifying it as the 'dominant strategy' and 'Minimax' choice) but consciously reject it in favor of a cooperative, collective-rationality framework. They demonstrate a clear understanding of the game's mechanics and the dominance structure, correctly identifying that RED is the individually safer choice while choosing BLUE for moral and systemic reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

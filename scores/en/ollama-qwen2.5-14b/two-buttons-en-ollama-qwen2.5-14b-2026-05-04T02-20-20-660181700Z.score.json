@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-14b-2026-05-04T02-20-20-660181700Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:53.404356800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue, arguing it maximizes collective survival under cooperation, and they do not identify red as the individually dominant/safe strategy (they even suggest blue can put one at risk).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a choice between altruism (Blue) and self-preservation (Red), but fails to recognize that Red is the dominant strategy because they incorrectly believe that choosing Blue is a viable rational strategy based on trust, rather than acknowledging that Red is safer regardless of the majority outcome. They also exhibit a rule error by suggesting that choosing Blue could lead to one's own death if the majority chooses Red, which is true, but they fail to grasp that Red never leads to death, thus missing the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

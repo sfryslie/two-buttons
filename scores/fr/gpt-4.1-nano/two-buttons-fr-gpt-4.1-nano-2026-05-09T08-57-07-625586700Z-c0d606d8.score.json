@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-nano-2026-05-09T08-57-07-625586700Z-c0d606d8.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:04.568843900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit rouge et justifie cela par une mauvaise lecture des conséquences (il affirme que choisir bleu peut mener à sa mort si la majorité choisit rouge), tout en ne démontrant pas une compréhension correcte de la dominance; il ne change pas de position ensuite.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and consistently chooses RED as their personal strategy. They demonstrate an understanding of the game-theoretic structure, noting that RED is a safer choice in the face of uncertainty, although they occasionally misstate the outcome of the blue-majority scenario (e.g., claiming blue-pressers die if the majority is red, which is true, but also suggesting that choosing blue exposes one to the risk of death if the majority is red, which is also true). They do not exhibit a rule error regarding the survival of red-pressers.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

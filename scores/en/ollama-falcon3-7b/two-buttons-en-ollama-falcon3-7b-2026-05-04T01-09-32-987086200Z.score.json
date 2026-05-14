@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-falcon3-7b-2026-05-04T01-09-32-987086200Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:01.332674700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red (to break symmetry) while repeatedly claiming red is the dominant/safe strategy, but they do not correctly apply the scenario mechanics (red is not the dominant strategy; blue majority saves everyone), so their dominant-strategy understanding is incorrect.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies red as the dominant strategy throughout the text, correctly noting that it is the best choice regardless of others' actions, and explicitly commits to pressing red in Q1/Q2.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

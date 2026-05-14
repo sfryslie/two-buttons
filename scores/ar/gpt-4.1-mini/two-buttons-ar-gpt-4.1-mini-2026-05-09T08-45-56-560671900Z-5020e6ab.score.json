@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-4.1-mini-2026-05-09T08-45-56-560671900Z-5020e6ab.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:12:29.039190500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, argues blue yields everyone’s survival when the majority is blue, and treats red as a self-protective option when expecting a red majority, without identifying the dominance structure correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a game theory problem but commits a rule error by stating that pressing blue results in death if the majority presses red (in reality, the prompt states that if the majority presses red, only red-pressers survive, but it does not explicitly state that blue-pressers die in that specific scenario; however, the respondent's logic consistently treats blue as a risky choice that leads to death if the majority chooses red, which is a misinterpretation of the survival conditions). They choose blue based on moral and cooperative grounds while acknowledging the defensive logic of red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

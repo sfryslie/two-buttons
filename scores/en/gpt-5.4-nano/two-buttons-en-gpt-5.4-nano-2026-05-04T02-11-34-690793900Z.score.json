@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-5.4-nano-2026-05-04T02-11-34-690793900Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:47.847835Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer because red requires red to be the majority; they acknowledge the strongest pro-red steelman but still defend blue as the rational choice, without any rule-mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the safer, more cooperative equilibrium. They demonstrate a clear misunderstanding of the game's mechanics by repeatedly claiming that red-pressers die if blue wins (a rule error) and failing to recognize that red is a dominant strategy because they believe red-pressers only survive if red is the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

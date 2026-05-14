@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4.1-nano-2026-05-09T19-25-05-059380900Z-0ac8fd4f.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:17.063561700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer choice by coordinating on a blue majority, but they do not correctly identify the dominance structure (they treat blue as the safe/likely strategy rather than recognizing red as individually dominant regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue based on a coordination-game framework, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the majority outcome. They explicitly misinterpret the rules by suggesting that red-pressers die if the majority is blue (the rules state everyone survives if the majority is blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

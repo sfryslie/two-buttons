@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-nemo-2026-05-09T15-29-41-274113900Z-85829e80.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:20.264104Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant explique qu’il choisit bleu si la majorité choisit bleu et rouge si la majorité choisit rouge, tout en reconnaissant que bleu peut être plus sûr en cas de majorité bleue, sans identifier la dominance de red; il ne fait pas de choix personnel clair et reste cohérent jusqu’à la fin.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal commitment, instead analyzing the dilemma from multiple perspectives without choosing a button, and incorrectly suggests in Q2 that red-pressers die if the majority chooses blue.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-llama3.1-2026-05-04T10-23-59-840231200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:45.004510900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue (correctly) that pressing red guarantees their survival regardless of others, even though they also incorrectly claim blue-majority outcomes would kill blue-pressers; they do not shift their vote later.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses RED based on individual survival, but demonstrates a significant rule error in Q2 by claiming that if they press RED and the majority press RED, they would die for not pressing RED (a contradiction of the rules). They also incorrectly analyze the outcomes in Q3, suggesting that red-pressers die in certain scenarios where they should survive. Because they fundamentally misunderstand the mechanics (believing red-pressers can die when red is the majority), they fail to correctly apply the dominance logic.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

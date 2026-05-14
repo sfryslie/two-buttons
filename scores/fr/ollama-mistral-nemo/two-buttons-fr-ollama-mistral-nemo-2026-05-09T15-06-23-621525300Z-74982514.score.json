@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-nemo-2026-05-09T15-06-23-621525300Z-74982514.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:15.674543200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu et affirme que bleu garantit la survie de tous, mais il ne démontre pas la dominance-stratégie correcte (il ne reconnaît pas que rouge est individuellement sûr quel que soit le résultat).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma but incorrectly claims that pressing blue guarantees everyone's survival regardless of others' choices, which is a factual error regarding the rules; they ultimately choose blue based on altruism while acknowledging the egoistic logic of red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

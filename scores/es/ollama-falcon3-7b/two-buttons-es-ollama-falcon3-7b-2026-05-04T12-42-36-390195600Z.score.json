@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-falcon3-7b-2026-05-04T12-42-36-390195600Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:10.002735500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete a presionar AZUL y argumenta que azul maximiza la supervivencia colectiva, pero no identifica la dominancia de RED (que nunca causa tu muerte), por lo que su comprensión/aplicación de la estrategia dominante es incorrecta.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-survival framework, but fails to identify the dominant strategy (red) and incorrectly frames the red-presser outcome as a 'loss' or 'less desirable' even though red-pressers survive in all scenarios.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

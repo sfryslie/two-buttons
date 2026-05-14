@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-gemma4-2026-05-04T06-48-49-411230500Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:05.785113100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer because it yields universal survival, but they incorrectly claim that if blue loses then red-pressers (including themselves) would not survive, showing a rule misunderstanding; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through collective utility and risk minimization. While they demonstrate a high level of analytical engagement and correctly identify the game-theoretic tension, they fail to recognize that RED is the dominant strategy (they treat the dilemma as a coordination game rather than a dominance game). They do not exhibit rule errors, but they do not correctly apply the concept of dominant strategy to the specific mechanics provided.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

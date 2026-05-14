@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-falcon3-7b-2026-05-04T14-28-10-047569600Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:51.700442100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and claims that if red is the majority then blue-pressers survive while red-pressers die, which inverts the actual survival mechanics; they also discuss the dilemma without clear dominant-strategy reasoning and do not shift their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a highly incoherent and abstract response that fails to commit to a clear choice, instead using performative, pseudo-technical language to avoid the dilemma. They demonstrate a rule error by suggesting that red-pressers' survival depends on the 'last pressure' rather than the majority outcome, and they fail to identify the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

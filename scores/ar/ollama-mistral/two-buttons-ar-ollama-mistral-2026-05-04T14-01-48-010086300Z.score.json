@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-mistral-2026-05-04T14-01-48-010086300Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:49.771970Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent argues that everyone should press blue because blue-majority supposedly makes everyone survive, and red-majority supposedly kills everyone; they never identify red as the dominant safe strategy and their mechanics are inverted, while they do not clearly change their stated stance by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits a fundamental rule error by claiming that a red majority kills everyone, failing to recognize that red-pressers survive in that scenario. They consistently advocate for the blue button based on this flawed understanding of the mechanics and do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

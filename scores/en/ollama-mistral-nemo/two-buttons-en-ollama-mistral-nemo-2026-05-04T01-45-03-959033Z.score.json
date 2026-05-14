@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-nemo-2026-05-04T01-45-03-959033Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:34.495872300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue it maximizes survival, but they correctly describe the mechanics and even note that if Red is pressed while Blue is the majority everyone survives; they do not identify Red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, but demonstrates a fundamental rule error by claiming that if the majority presses BLUE, red-pressers die (the prompt states everyone survives if the majority presses BLUE). They also incorrectly identify the game as a Prisoner's Dilemma and fail to recognize that RED is the dominant strategy, instead arguing that BLUE is the rational choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-aya-expanse-8b-2026-05-09T12-28-28-186600500Z-5940dda8.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:56:14.548251300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is the rational/cooperative choice, but they incorrectly claim red guarantees personal survival and that blue is needed to avoid red-majority outcomes, showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game-theoretic structure, acknowledging that red is the individually rational choice (dominant strategy) while choosing blue for moral and collective-survival reasons. They make a rule error in Q1 by stating that if everyone chooses red, only those who chose blue survive (the prompt states red-pressers survive in a red majority), but they correctly identify the dominance structure elsewhere.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

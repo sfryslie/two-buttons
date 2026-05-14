@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-mistral-2026-05-09T09-58-49-485969100Z-dbe760d9.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:01:55.136841300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing it maximizes survival and even claims red-majority leads to everyone dying except red-pressers, which misstates the mechanics; they do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a moral commitment to collective survival, but they exhibit a rule error by claiming that pressing red results in death if the majority presses blue (which contradicts the prompt's rule that everyone survives if the blue majority wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

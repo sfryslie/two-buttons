@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-nemo-2026-05-04T13-18-51-937082700Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:37.399357Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige consistentemente presionar AZUL por cooperación y bienestar colectivo, aunque describe correctamente que si la mayoría presiona rojo solo sobreviven los rojos y si la mayoría presiona azul todos sobreviven; no identifica la dominancia individual de rojo (trata azul como la opción racional).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a prisoner's dilemma and acknowledges the individualistic incentive to press red, but commits to blue based on cooperative and moral reasoning. They commit a rule error in Q2 by claiming that pressing red if others don't leads to 'certain death' (in reality, red-pressers always survive). Because they believe red-pressers die if they are in the minority, they fail to correctly identify the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

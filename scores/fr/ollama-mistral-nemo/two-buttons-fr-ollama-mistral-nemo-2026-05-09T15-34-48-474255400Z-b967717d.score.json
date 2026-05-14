@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-nemo-2026-05-09T15-34-48-474255400Z-b967717d.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:20.039414400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly describe the mechanics and commit to pressing blue to guarantee everyone survives, explicitly acknowledging red could lead to only red-pressers surviving, and they do not shift away from blue by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a cooperative framework, but fails to recognize that red is the dominant strategy because they incorrectly believe red-pressers might die if the blue majority wins (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

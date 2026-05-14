@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-2026-05-04T02-05-55-194962300Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:45.377243300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue as the safer/cooperative choice and discuss dominance only in terms of coordination risk, without identifying red as the individually dominant strategy; they also do not make a concrete rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue based on collective survival and coordination, while demonstrating a clear rule error by claiming that pressing blue 'minimizes personal risk' and that red 'risks extinction' (ignoring that red-pressers survive regardless of the outcome). They fail to identify red as the dominant strategy, instead framing the choice as a coordination problem where blue is the 'safer' option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

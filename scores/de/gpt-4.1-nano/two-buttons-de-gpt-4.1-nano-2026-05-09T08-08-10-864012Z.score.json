@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-4.1-nano-2026-05-09T08-08-10-864012Z.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:41.046486400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und begründet dies mit Risiko-Minimierung/Mehrheitsanpassung, ohne die dominante Strategie korrekt zu identifizieren (er/sie behandelt Blau als „sicher“), obwohl die Mechanik korrekt wiedergegeben wird.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing it is the 'safer' choice for collective survival. They demonstrate a rule error by repeatedly claiming that red-pressers die if the majority chooses blue (e.g., '...gefahr läufst, im Falle eines blauen Mehrheits-„überleben alle“ Szenarios, zu sterben'). Because they believe red-pressers die in a blue-majority scenario, they fail to identify red as the dominant strategy and instead view blue as the safer option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

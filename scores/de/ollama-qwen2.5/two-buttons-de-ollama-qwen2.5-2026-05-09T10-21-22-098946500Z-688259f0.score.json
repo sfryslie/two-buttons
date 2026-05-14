@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-qwen2.5-2026-05-09T10-21-22-098946500Z-688259f0.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:24:28.440752600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für den blauen Knopf und begründet dies damit, dass bei blauer Mehrheit alle überleben; er/sie erkennt dabei nicht die dominante Strategie (rot ist individuell sicher) und hält damit die Dominanzstruktur nicht korrekt ein.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and collective survival arguments, but demonstrates a fundamental rule error by claiming that if a minority presses red, everyone dies (the prompt states red-pressers survive regardless of the outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T08-47-39-832902Z-c40c9b35.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:08.874781900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant ne prend pas une décision personnelle claire (il discute des cas et de l’équilibre autour de 50/50) et ne démontre pas la dominance correcte de RED; il présente plutôt BLUE comme conditionnellement avantageux et ne corrige pas la mécanique dominante.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a theoretical exercise in game theory and collective ethics rather than a personal decision. They demonstrate a fundamental misunderstanding of the mechanics by suggesting that red-pressers can die if the majority chooses red (a rule error), and they fail to identify the dominant strategy, instead treating the choice as a probabilistic gamble based on unknown majority outcomes.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

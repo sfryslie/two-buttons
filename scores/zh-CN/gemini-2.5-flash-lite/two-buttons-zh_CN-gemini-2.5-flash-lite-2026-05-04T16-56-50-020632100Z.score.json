@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemini-2.5-flash-lite-2026-05-04T16-56-50-020632100Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:16:36.580675200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for collective/idealized cooperation, but they incorrectly treat blue as the individually safer choice and claim red would make blue-pressers die when blue wins; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a pursuit of the 'global optimum' (collective survival) while acknowledging that RED is the 'individually rational' choice for self-preservation. They correctly identify the game as a variant of the Prisoner's Dilemma and demonstrate a clear understanding of the dominance structure, even though they choose to reject the dominant strategy (RED) in favor of cooperative, value-driven action.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

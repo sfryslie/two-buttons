@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3-2026-05-09T08-59-48-625097500Z-23204ff5.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:58:57.225188Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue yields only a 50% survival chance while red can yield 100% in some cases, without recognizing red as the dominant safe strategy; they also discuss coordination/expected utility rather than applying the correct mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue but demonstrates a clear rule error by claiming that red-pressers die if a blue majority occurs, and they fail to identify red as the dominant strategy, instead viewing the choice as a 50/50 probability.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

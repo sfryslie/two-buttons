@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-mistral-nemo-2026-05-09T15-23-33-544997700Z-b169596c.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:01.642809700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but their mechanics reasoning is incorrect (they claim red majority kills blue-pressers and that blue majority saves everyone), and they do not demonstrate correct dominant-strategy application; they also shift from red (Q2) to blue (Q4) by the end.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q2 based on self-preservation, but in Q3 and Q4, they pivot to arguing that BLUE is the rational choice for the population and characterize RED as irrational, effectively abandoning their initial personal commitment to RED. They demonstrate a rule error by claiming that blue-pressers die if red wins (they do not) and by failing to recognize that red is the dominant strategy, instead viewing blue as the 'safe' choice.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

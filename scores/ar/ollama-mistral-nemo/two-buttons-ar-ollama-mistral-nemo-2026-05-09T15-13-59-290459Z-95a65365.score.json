@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-mistral-nemo-2026-05-09T15-13-59-290459Z-95a65365.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:03.374535100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE (Q2) while claiming red is the safer way to ensure survival, and they do not correctly apply the dominance logic (they also suggest blue-pressers may die), so their understanding of the dominant strategy is incorrect and their vote is inconsistent across answers.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing RED to ensure survival, but demonstrates a fundamental rule error by claiming that if people press BLUE, red-pressers will die or that the outcome is uncertain, failing to recognize that red-pressers survive regardless of the majority.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

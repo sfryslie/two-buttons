@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-qwen2.5-2026-05-09T10-08-13-893210Z-754353f3.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:26.665724800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bouton bleu et discute d’un raisonnement de type “paradoxe du suicide”/anticipations, mais il ne démontre pas la dominance correcte (il traite rouge comme pouvant mener à la mort de ceux qui pressent rouge), tout en concluant que bleu est rationnel et en restant cohérent jusqu’à la fin.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a desire for collective survival, but fails to recognize that the red button is the dominant strategy. They demonstrate a rule error by suggesting that if everyone chooses red, 'nobody survives' (in reality, red-pressers survive if the majority is red). They do not understand the concept of a dominant strategy, as they frame the choice as a coordination problem rather than an individual safety optimization problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

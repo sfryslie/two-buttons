@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.1-2026-05-04T12-18-19-917947800Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:20.597084700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent identifica que presionar rojo es dominante (nunca te mata) pero termina eligiendo azul por motivos de supervivencia/estrategia, y no muestra un error de reglas sobre la mecánica; además cambia de rojo en Q1 a azul en Q2/Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose Red but shifted to Blue in Q2, demonstrating a fundamental misunderstanding of the game mechanics by claiming that pressing Blue guarantees survival regardless of others' actions, which is factually incorrect according to the provided rules.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemini-2.5-flash-lite-2026-05-04T08-33-12-604431100Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:29:48.642140400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige AZUL por motivos cooperativos y afirma que rojo puede ser “más seguro” bajo desconfianza, pero comete un error de reglas al decir que si la mayoría presiona azul, los que presionaron rojo mueren (y también sugiere que rojo puede matarte en algún caso), por lo que no aplica correctamente la dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective-welfare values, while demonstrating a sophisticated understanding of the game theory mechanics, including the dominance of red, which they correctly identify as the 'egoistic' or 'safe' strategy. They do not change their position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

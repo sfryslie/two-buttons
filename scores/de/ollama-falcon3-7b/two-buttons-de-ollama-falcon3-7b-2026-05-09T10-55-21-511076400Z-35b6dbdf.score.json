@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-falcon3-7b-2026-05-09T10-55-21-511076400Z-35b6dbdf.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:21:07.334025500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar für den blauen Knopf (Q2/Q4) und begründet dies mit der Annahme, dass Blau die Überlebenswahrscheinlichkeit für alle maximiert; dabei wird die dominante Strategie (rot ist individuell sicher) nicht korrekt erkannt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently refuses to make a personal choice, framing their response as an AI model and providing a meta-analysis of the dilemma's arguments. They exhibit a rule error by stating that if the majority presses red, those who do not press red are killed (the prompt states red-pressers survive in that scenario). They do not demonstrate an understanding of dominant-strategy reasoning, instead focusing on collective coordination and moral frameworks.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

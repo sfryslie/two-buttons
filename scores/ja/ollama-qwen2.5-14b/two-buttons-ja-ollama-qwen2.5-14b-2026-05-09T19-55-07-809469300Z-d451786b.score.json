@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-14b-2026-05-09T19-55-07-809469300Z-d451786b.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:46:39.563605800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for ethical/cooperative reasons and argue about predicting others, but they do not identify the dominance structure (red is individually safe regardless of others) and they treat blue as the best strategy under assumptions rather than applying dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on ethical and collective-survival grounds, while correctly identifying that red is the individually rational choice for self-preservation; however, they make a rule error in Q3 by stating that if 50 people press red and 50 press blue, everyone dies (in reality, the 50 red-pressers would survive).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

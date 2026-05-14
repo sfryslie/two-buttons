@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-gemma4-2026-05-04T11-19-27-965163400Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:07.008828500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue maximizes total survival when a majority chooses blue, while also (incorrectly) treating blue as the individually safer/dominant choice rather than recognizing red’s dominance; they do not change their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on utilitarian and collective-survival arguments. They acknowledge the 'rational self-interest' argument for red in Q2 but reject it in favor of collective cooperation. They do not demonstrate a rule error (they correctly identify that red-pressers survive if red wins, and blue-pressers die if red wins). They demonstrate an understanding of dominant-strategy reasoning by steelmanning the 'rational self-interest' argument for red, but they ultimately reject this logic in favor of a collective-utility framework.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

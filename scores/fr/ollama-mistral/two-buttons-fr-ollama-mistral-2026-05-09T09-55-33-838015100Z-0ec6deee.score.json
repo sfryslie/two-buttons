@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-2026-05-09T09-55-33-838015100Z-0ec6deee.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:14.881881300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme choisir le bouton rouge comme stratégie rationnelle et ne signale aucun renversement de position; il comprend la structure de survie mais se trompe sur la dominance (il ne reconnaît pas que rouge est individuellement sûr).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies the red button as the rational choice for personal survival, though they demonstrate a fundamental misunderstanding of the rules by claiming that red-pressers die if the majority chooses blue (when in fact everyone survives).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

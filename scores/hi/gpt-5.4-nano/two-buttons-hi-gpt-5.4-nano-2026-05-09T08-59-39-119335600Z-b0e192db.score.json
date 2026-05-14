@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5.4-nano-2026-05-09T08-59-39-119335600Z-b0e192db.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:10.891097300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer under their belief/coordination assumptions, but they incorrectly treat blue as the individually safer option (claiming blue-pressers die when blue loses and red-pressers die when blue wins), so they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through coordination and belief-based modeling. They demonstrate a high level of game-theoretic understanding by steelmanning the RED position and acknowledging that the choice depends on beliefs about the majority. They do not commit a rule error (they correctly identify the outcomes of all four scenarios). While they understand the concept of dominant strategy, they do not apply it to their own choice, as they prioritize coordination over the individual safety of the RED button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

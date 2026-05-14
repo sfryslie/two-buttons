@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemini-3.1-flash-lite-preview-2026-05-09T08-23-54-056007Z-6a2717df.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:11:30.440525Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues for cooperation/ethical coordination, while also explicitly claiming that pressing red could lead to everyone’s death (a rule-mechanics misunderstanding), and they do not correctly identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly identifies the game theory structure, correctly steelmans the dominant strategy (RED) as the pragmatically rational choice, but chooses BLUE based on ethical and cooperative values. They demonstrate a clear understanding of the dominance structure without committing to it as their personal choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

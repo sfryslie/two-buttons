@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-llama3.1-2026-05-04T10-23-37-853040300Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:46.483593600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "他們明確承諾按紅色，並且用“按紅色可確保自己活著/不會死”的主張來支持；同時也討論到藍色多數時紅色者仍可活（未出現把機制倒置成紅者會死的錯誤），但其對“多數人會按藍色/紅色”的敘述混亂且不影響對支配策略的理解。",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for pressing red as the only way to guarantee survival, demonstrating a clear understanding of the dominance of red, though they struggle with the game-theoretic implications of the majority rule and express confusion about the mechanics of the blue button's outcome.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

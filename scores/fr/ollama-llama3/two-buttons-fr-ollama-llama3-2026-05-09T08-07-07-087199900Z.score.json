@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3-2026-05-09T08-07-07-087199900Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:52.395545700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et affirme que bleu maximise sa survie, mais il décrit aussi que rouge pourrait laisser survivre ceux qui ont choisi rouge; il ne démontre pas correctement la dominance (il pense que bleu peut mener à sa mort quand la majorité choisit rouge), donc il applique mal la logique de dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue in Q1/Q2 but demonstrates a fundamental rule error by claiming that pressing blue is a way to survive if the majority presses blue, while incorrectly believing that pressing red would lead to death if the majority presses blue (the prompt states red-pressers survive regardless of the majority). They fail to identify red as the dominant strategy and instead invert the logic, treating blue as the safe choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

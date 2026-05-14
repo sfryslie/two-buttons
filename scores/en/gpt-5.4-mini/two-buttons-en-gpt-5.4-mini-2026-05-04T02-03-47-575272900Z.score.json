@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-5.4-mini-2026-05-04T02-03-47-575272900Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:43.444276100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially commit to pressing blue, later acknowledge that red is the stronger strategic/self-preservation case, but they do not clearly switch their own final vote; they also correctly describe the mechanics (blue majority saves everyone, red majority saves only red-pressers) and discuss dominance in a way that indicates understanding but they misidentify which strategy is dominant for individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but later acknowledges that red is the risk-dominant strategy for self-preservation. They demonstrate a clear understanding of the game theory mechanics, though they make a rule error in Q2 by stating 'red-choosers die if blue wins' (the prompt rules state everyone survives if blue wins). Because they explicitly identify red as the stronger strategic case in Q2 and maintain this analytical stance through Q4, their final position is classified as RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

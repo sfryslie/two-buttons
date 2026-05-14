@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-aya-expanse-8b-2026-05-04T01-15-13-585236100Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:55.645106300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer choice for collective survival, but they do not identify the dominant-strategy structure (red never causes your death) and instead treat blue as safer depending on others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly describes the consequences of the buttons (claiming blue-pressers die if red wins, and red-pressers die if blue wins), failing to recognize that red is the dominant strategy. They consistently advocate for blue based on a misunderstanding of the rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-2026-05-04T12-24-13-901332700Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:30.859300400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado afirma que para maximizar la supervivencia la opción es presionar azul, aunque reconoce que el rojo podría elegirse bajo criterios personales; no identifica la dominancia de rojo y no corrige la mecánica a favor de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the strategy that maximizes personal survival, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

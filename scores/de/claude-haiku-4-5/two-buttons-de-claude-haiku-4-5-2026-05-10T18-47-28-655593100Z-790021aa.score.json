@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-claude-haiku-4-5-2026-05-10T18-47-28-655593100Z-790021aa.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:17:46.051883500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich zu Blau, behauptet aber zugleich korrekt, dass Rot die dominante Strategie ist (Rot maximiert individuell die Überlebenschance), und wählt Blau aus Koordinations-/Kollektivgründen; es gibt keine klare Rücknahme der Blau-Position bis Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but explicitly acknowledges in Q2 that red is the dominant strategy, eventually stating 'Vielleicht drücke ich doch Rot' (Maybe I'll press red after all). By Q4, they maintain a nuanced defense of blue as 'structurally rational' while admitting it is 'instrumentally irrational' compared to red, but they do not definitively retract their initial choice or commit to red, leaving their final position as a shift toward uncertainty or a split stance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

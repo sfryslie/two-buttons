@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-2026-05-09T10-22-32-355608900Z-f213097e.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:46:23.941995200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue for blue as the best way to maximize survival, but they do not identify the dominant-strategy logic (red is individually safe regardless of others) and they frame red as potentially safer under uncertainty; no rule-mechanics falsehood is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the 'blue' button based on collective utility and social cooperation, while acknowledging the 'red' button as a self-interested strategy. They demonstrate an understanding of the game-theoretic tension (Nash equilibrium/self-preservation vs. collective survival) but do not correctly identify red as the dominant strategy; they incorrectly suggest that if a minority chooses red, everyone dies (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

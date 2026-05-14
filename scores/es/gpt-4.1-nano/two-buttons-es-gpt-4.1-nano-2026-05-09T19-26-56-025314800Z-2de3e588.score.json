@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-4.1-nano-2026-05-09T19-26-56-025314800Z-2de3e588.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:23.396425800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent afirma correctamente la mecánica y que presionar azul le asegura sobrevivir en ambos casos, elige azul y no comete errores de reglas, aunque su razonamiento identifica mal la estrategia dominante (red) y por eso no aplica la dominancia correctamente.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, but they fundamentally misunderstand the game mechanics: they believe that if the majority presses blue, red-pressers die (which contradicts the prompt's rule that blue majority means everyone survives). Because they believe red-pressers die when blue wins, they incorrectly identify blue as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

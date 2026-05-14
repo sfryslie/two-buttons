@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-4.1-nano-2026-05-09T19-26-56-118975200Z-d93ab473.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:25.924131300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul y razona que azul puede hacer que él sobreviva cuando la mayoría elige azul, pero comete un error de reglas al afirmar que si la mayoría elige rojo entonces los que eligieron azul no sobreviven; además no identifica la dominancia de red (rojo) como estrategia individualmente segura.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but demonstrates a fundamental rule error by claiming that red-pressers die if the majority presses blue (the rules state everyone survives if the majority presses blue). Because they believe red-pressers die in a blue-majority scenario, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

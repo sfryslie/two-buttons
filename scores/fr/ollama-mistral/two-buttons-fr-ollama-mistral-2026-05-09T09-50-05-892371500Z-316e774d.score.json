@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-2026-05-09T09-50-05-892371500Z-316e774d.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:14.409331500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bouton bleu en affirmant que c’est la stratégie qui maximise ses chances de survie, sans reconnaître que le rouge est individuellement dominant (il présente le rouge comme réduisant ses chances).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a fundamental misunderstanding of the game's mechanics, specifically claiming that red-pressers die if the majority chooses blue and that red-pressers die if the majority chooses red (full inversion of the rules).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

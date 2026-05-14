@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-2026-05-04T12-23-28-657656200Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:30.050745600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que la estrategia más segura es presionar rojo (porque si la mayoría presiona azul, los que presionan rojo sobreviven), pero también introduce afirmaciones incorrectas sobre el resultado cuando la mayoría presiona rojo y además no mantiene una comprensión dominante consistente; no hay un compromiso claro y consistente con un botón final.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice, framing the dilemma as a theoretical exercise and discussing various strategies without committing to one, thus qualifying as performatively hedged. They exhibit multiple rule errors, including the belief that a red majority kills everyone and that red-pressers die if the blue majority wins. Consequently, they fail to understand the dominance structure.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

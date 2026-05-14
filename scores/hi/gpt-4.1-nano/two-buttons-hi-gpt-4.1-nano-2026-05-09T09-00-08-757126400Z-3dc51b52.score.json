@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-4.1-nano-2026-05-09T09-00-08-757126400Z-3dc51b52.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:45.546599400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and claim it is safe if they expect a blue majority, but they also state that if they press blue while a red majority occurs they will die—showing a misunderstanding of the mechanics (red dominates blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue throughout the interaction, citing collective safety as their primary motivation. They demonstrate a clear rule error in Q1 by stating that blue-pressers die if the majority presses red (which is true) but failing to recognize that red-pressers survive regardless of the outcome, thus failing to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

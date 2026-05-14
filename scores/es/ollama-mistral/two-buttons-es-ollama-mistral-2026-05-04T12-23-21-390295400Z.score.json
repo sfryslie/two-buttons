@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-2026-05-04T12-23-21-390295400Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:31.132597800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige azul para maximizar supervivencia según una lectura incorrecta de la mecánica (cree que si la mayoría presiona rojo, los azules sobreviven), y aunque discute ambos escenarios no identifica la dominancia de rojo; no hay cambio claro de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy and exhibits a rule error by claiming that blue-pressers survive if the majority presses red, which contradicts the prompt's rules. They avoid making a personal commitment throughout the interaction, instead framing the dilemma as a philosophical exercise about human behavior and rationality.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

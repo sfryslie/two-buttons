@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-falcon3-7b-2026-05-04T14-23-41-108095600Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:44.222840400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing red and does not correctly apply the dominance logic; they also describe blue as the safer/expected choice and do not state the correct mechanics that red guarantees individual survival.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, correctly identifying that it ensures survival regardless of the outcome, though their explanation is somewhat abstract and linguistically fragmented. They do not demonstrate a clear understanding of game-theoretic dominant strategy terminology, but they correctly identify the survival outcome of the red button, and they do not commit any rule errors regarding the mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

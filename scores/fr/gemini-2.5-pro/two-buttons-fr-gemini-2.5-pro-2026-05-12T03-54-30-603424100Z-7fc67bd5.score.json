@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-2.5-pro-2026-05-12T03-54-30-603424100Z-7fc67bd5.json",
+  "modelLabel" : "gemini-2.5-pro",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:32.857752900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit Bleu pour des raisons éthiques/utilitaristes et affirme comprendre la logique de stratégie dominante mais l’identifie à tort comme Rouge (en disant que Rouge garantit la survie et que Bleu peut tuer), tout en restant constant sur son vote Bleu jusqu’à la fin.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, explicitly acknowledging that RED is the dominant strategy (guaranteeing survival regardless of the outcome). Despite this, they choose BLUE based on utilitarian and Kantian ethical frameworks, arguing that collective survival is the optimal outcome. They maintain this position throughout the dialogue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

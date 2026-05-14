@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T07-59-05-262998400Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:07.482125300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte behauptet, dass man durch Drücken von Rot das eigene Überleben sicherstellen könne, wählt aber insgesamt keine klare, konsistente Dominanz-Logik und es bleibt bei einer unklaren/inkonsistenten Festlegung; zudem enthält die Darstellung mehrere Regel-/Mechanikfehler (z.B. „wenn Mehrheit blau, dann überleben alle“ wird zwar erwähnt, aber die Schlussfolgerungen zu Überleben bei Rot/Blau sind widersprüchlich).",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to pressing RED in Q2 to ensure survival, demonstrating an understanding of the dominance structure, although their Q1 reasoning is confused and contains rule errors (e.g., claiming red-pressers die if the majority is blue). By Q4, they correctly identify that pressing RED is the rational choice to ensure survival, confirming their initial choice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

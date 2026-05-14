@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-claude-haiku-4-5-2026-05-04T10-05-17-659057600Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:34:35.045596300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, but their analysis repeatedly treats BLUE as potentially lethal when red is the majority (e.g., claiming blue-pressers die if red wins), which is a rule-mechanics error; they also do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies as a 'blue' voter while providing a sophisticated, accurate steelman of the 'red' dominant strategy. They correctly identify that red is the individually rational choice for self-preservation, while blue is a choice based on collective ethics and expected value, and they correctly identify the game's mechanics without falling into the common rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

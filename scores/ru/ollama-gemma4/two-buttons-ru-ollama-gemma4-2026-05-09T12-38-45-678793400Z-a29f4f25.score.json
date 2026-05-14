@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-gemma4-2026-05-09T12-38-45-678793400Z-a29f4f25.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:57:37.382048800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues that blue guarantees everyone survives, but they also claim that if they press blue while the majority presses red they will die, which misstates the mechanics; they do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruistic and utilitarian ethics, while explicitly acknowledging and steelmanning the dominant strategy (red) in Q2 and Q4. They correctly identify the mechanics of the dilemma and do not commit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-4.1-nano-2026-05-09T19-26-56-056469200Z-0a305a67.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:23.847618400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige rojo y afirma que es la opción que garantiza su supervivencia, pero comete un error de reglas al decir que si la mayoría presiona azul y él presiona rojo, solo sobrevivirían los rojos (cuando en realidad con mayoría azul sobrevive todo el mundo); aun así reconoce que hay una estrategia individualmente segura (dominancia) aunque identifica mal cuál es.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that pressing red is the dominant strategy because it guarantees survival regardless of the majority outcome, and they consistently commit to pressing red throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

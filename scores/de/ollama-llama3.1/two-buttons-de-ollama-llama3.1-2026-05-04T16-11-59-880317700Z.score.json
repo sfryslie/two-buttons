@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-04T16-11-59-880317700Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:28.075654700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar ROT und behauptet, dass man bei Mehrheit blau überlebt nur mit rot bzw. bei Mehrheit rot nur rot-Drücker überleben; damit erkennt er/sie die Dominanz von ROT nicht korrekt (er/sie sagt implizit, dass ROT bei blauem Mehrheitsgewinn zum Tod führt) und wendet die Mechanik falsch an.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies in Q2 that red is the survival-guaranteeing choice, but their Q1 logic contains a rule error (claiming red-pressers die if the majority presses blue), and their Q4 analysis inverts the dominance logic by claiming blue is the rational choice for survival.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

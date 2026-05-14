@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-claude-haiku-4-5-20251001-2026-05-04T08-44-27-157911800Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:29:00.381129200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con presionar AZUL y razona que rojo es un “salto de fe”, pero comete un error de reglas al afirmar que si gana rojo “mueren” los azules (cuando en realidad si hay mayoría azul todos sobreviven, y si hay mayoría roja solo mueren los azules).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE while acknowledging the logic of RED, but they commit a fundamental rule error by claiming that if a red majority occurs, the blue-pressers die (which is true) but also that the red-pressers die if the blue-pressers win (which is false; the prompt states everyone survives if blue wins). They also incorrectly state in Q3 that if a red majority occurs, the red-pressers die along with the blue-pressers, which contradicts the prompt's rule that red-pressers survive if they are the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

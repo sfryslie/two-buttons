@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-5.4-mini-2026-05-04T17-09-22-696035Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:17.960323200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue yields all-survival when it is the majority, while acknowledging red’s “follow the majority to survive” logic but still defending blue; they do not make any rule-mechanics error and do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but makes a rule error by claiming that blue-pressers die if a red majority occurs (the prompt states only red-pressers survive in a red majority, but does not explicitly state blue-pressers die; however, the respondent explicitly states '按蓝色的人死' in Q1). They consistently choose blue for cooperative reasons, acknowledge the logic of red as a 'self-preservation' strategy, and correctly identify that red is the dominant strategy in terms of individual safety, even though they reject it for collective goals.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

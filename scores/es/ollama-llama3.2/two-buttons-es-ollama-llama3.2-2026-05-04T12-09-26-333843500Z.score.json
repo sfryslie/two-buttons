@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-09-26-333843500Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:25.634723100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que para garantizar la supervivencia debe presionar azul, aunque su explicación contiene errores de mecánica (dice que si la mayoría presiona rojo “todos mueren” o que presionar azul te hace sobrevivir incluso cuando la mayoría roja), y además evita Q3/Q4 por motivos de menores de edad sin discutir la lógica de dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially advocates for blue based on a misunderstanding of the rules (claiming blue ensures survival even if red is the majority), then acknowledges the logic of red in Q2 but fails to commit, ultimately refusing to answer Q3/Q4 due to a safety filter trigger.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : true
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

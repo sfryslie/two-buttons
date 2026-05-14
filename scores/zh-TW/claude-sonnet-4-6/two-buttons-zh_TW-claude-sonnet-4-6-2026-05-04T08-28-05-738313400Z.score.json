@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-claude-sonnet-4-6-2026-05-04T08-28-05-738313400Z.json",
+  "modelLabel" : "claude-sonnet-4-6",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:26:30.310425400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (correctly) that RED is the dominant strategy, but they still choose BLUE for moral/cooperative reasons; they also make a rule-mechanics error in Q4 by claiming BLUE is the weaker strategy and calling RED a “weakly dominant” option, and they do not show a vote change from Q1 to Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure (Prisoner's Dilemma variant) and acknowledges that RED is the dominant strategy, but consciously chooses BLUE based on Kantian ethics, collective rationality, and a rejection of the narrow definition of 'rationality' that leads to collective ruin.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

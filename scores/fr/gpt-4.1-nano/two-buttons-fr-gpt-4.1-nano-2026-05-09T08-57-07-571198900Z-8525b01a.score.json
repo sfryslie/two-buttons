@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-nano-2026-05-09T08-57-07-571198900Z-8525b01a.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:03.034940600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bouton bleu et justifie cela par une logique de prudence/anticipation de la majorité, mais il affirme à tort que choisir rouge peut entraîner sa mort quand la majorité choisit bleu (alors que dans ce cas tout le monde survit).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently recommends the blue button based on a misunderstanding of the game's mechanics, specifically claiming that red-pressers die if the majority chooses blue, which is false according to the provided rules. Because they believe red-pressers die when blue wins, they fail to identify the dominant strategy and instead treat the dilemma as a coordination game.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

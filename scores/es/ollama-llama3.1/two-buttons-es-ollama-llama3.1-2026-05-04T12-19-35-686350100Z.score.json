@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.1-2026-05-04T12-19-35-686350100Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:21.800847Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent afirma que su botón es azul y razona correctamente que si la mayoría presiona azul todos sobreviven, pero no identifica la dominancia de red (red nunca causa tu muerte) y además sugiere que el caso de “muerte total” haría que el argumento sea problemático.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent attempts to analyze the dilemma through logical paradoxes but fails to grasp the mechanics, incorrectly suggesting that a red majority leads to 'total death' and failing to identify the dominance of the red button. They commit to blue in Q1/Q2 and maintain this position throughout, showing no understanding of the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

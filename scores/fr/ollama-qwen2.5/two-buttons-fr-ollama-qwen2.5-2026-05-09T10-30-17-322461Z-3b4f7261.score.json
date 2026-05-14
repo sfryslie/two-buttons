@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-qwen2.5-2026-05-09T10-30-17-322461Z-3b4f7261.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:28.389202200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu et justifie cela par la coopération et la survie collective, tout en affirmant (à tort) que le bouton rouge est une stratégie sûre pour soi et que le risque vient du fait que si la majorité choisit rouge alors seuls les rouges survivent; il ne reconnaît pas la dominance de red (red ne peut pas causer sa mort).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button in Q2 ('If you choose the red button, then you are sure to survive in any situation, regardless of the choices of other participants'), but chooses blue for ethical and cooperative reasons. They demonstrate a clear understanding of the game theory mechanics and the dominant strategy, despite rejecting it in favor of a collective-survival strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

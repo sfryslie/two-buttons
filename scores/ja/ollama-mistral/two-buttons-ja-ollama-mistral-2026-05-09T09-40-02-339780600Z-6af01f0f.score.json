@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-2026-05-09T09-40-02-339780600Z-6af01f0f.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:44:28.681110400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They repeatedly endorse pressing blue to achieve survival, but they do not correctly identify the dominance structure (they even claim blue could lead to everyone dying), so their mechanics/dominance application is incorrect and they remain committed to blue throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the cooperative choice (blue) based on altruism, while acknowledging the complexity of human behavior. They demonstrate a rule error by suggesting that if everyone presses blue, everyone might die (which contradicts the prompt's rule that blue majority ensures survival). They do not demonstrate an understanding of the dominant strategy (red), as they view the dilemma primarily through a lens of collective cooperation versus individual risk, and they fail to identify that red is the safer choice regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

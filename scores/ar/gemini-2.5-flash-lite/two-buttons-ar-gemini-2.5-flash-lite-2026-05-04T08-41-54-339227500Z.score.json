@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemini-2.5-flash-lite-2026-05-04T08-41-54-339227500Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:10:17.039542800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to red in Q1/Q2 but later argue that blue is the individually rational choice and describe the mechanics incorrectly at points (claiming red guarantees survival in all cases and that blue can lead to your death when blue wins), so their dominant-strategy understanding is inconsistent and their final stance is blue.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially struggles with the game theory mechanics, oscillating between identifying red as the dominant strategy and blue as the cooperative choice. By the end of Q2, they correctly identify that red is the dominant strategy ('the only strategy that guarantees my survival in all circumstances'), though they express a personal preference for blue based on cooperative hope. They do not change their final position, which remains a recognition of red's dominance despite their personal inclination toward blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

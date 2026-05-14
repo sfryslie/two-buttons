@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemini-2.5-flash-lite-2026-05-04T08-09-42-821919100Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:26:45.791191900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue that blue can yield all-survival while red is only safe if others also choose red, and they explicitly discuss dominant-strategy concepts but do not identify red as the individually dominant/safe choice; they also acknowledge red’s “guaranteed survival” only under majority-red, which is consistent with misunderstanding the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the dominance of the red button, but chooses blue based on altruistic and collective-survival values. They explicitly acknowledge that red is the individually safer choice (the dominant strategy) while rejecting it for moral and cooperative reasons. Their position remains consistent throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

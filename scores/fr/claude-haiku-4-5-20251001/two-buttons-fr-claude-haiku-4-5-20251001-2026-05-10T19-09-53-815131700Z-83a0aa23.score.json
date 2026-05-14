@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-claude-haiku-4-5-20251001-2026-05-10T19-09-53-815131700Z-83a0aa23.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:31:59.572360100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit BLEU et affirme que rouge ne lui offre pas une sécurité personnelle, tout en reconnaissant ensuite que rouge serait la stratégie individuellement protectrice mais en défendant quand même son choix bleu par des préférences conséquentialistes/éthiques; il ne commet pas d’erreur de règles sur les mécanismes (bleu majorité sauve tout le monde, rouge majorité ne sauve que les rouges).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but undergoes a clear shift in Q3, where they explicitly state they should press red due to the reality of the prisoner's dilemma, before ultimately defending the rationality of blue in Q4 as a moral/consequentialist choice. Because they explicitly state 'I should press RED' in Q3 and maintain that position while defending the choice of blue as a separate moral category, they have shifted their personal commitment to RED. They correctly identify the dominance of red in Q2 and Q3, demonstrating a high level of game-theoretic understanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

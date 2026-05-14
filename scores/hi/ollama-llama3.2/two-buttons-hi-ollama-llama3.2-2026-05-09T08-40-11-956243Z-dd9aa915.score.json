@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3.2-2026-05-09T08-40-11-956243Z-dd9aa915.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:48.155553600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and claim blue ensures everyone survives while red-pressers die when blue wins, showing a rule misunderstanding; they also discuss outcomes based on assumed population shares and do not apply the dominance logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a complete failure to understand the dilemma's mechanics, repeatedly stating that blue-pressers die if red wins and red-pressers die if blue wins, which is a total inversion of the provided rules. They consistently choose blue but base their reasoning on a fundamental misunderstanding of the survival outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

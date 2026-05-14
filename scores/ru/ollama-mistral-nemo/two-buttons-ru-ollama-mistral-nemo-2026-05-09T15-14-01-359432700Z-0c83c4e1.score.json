@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-mistral-nemo-2026-05-09T15-14-01-359432700Z-0c83c4e1.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:02:05.318825100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues that blue yields survival for everyone if it is the majority, while incorrectly claiming that if red is the majority they personally will not survive; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to the blue button based on altruistic and cooperative values, but they fundamentally misunderstand the game mechanics by claiming that pressing red results in death if the majority presses red (a rule error). Because they believe red-pressers die in a red majority, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

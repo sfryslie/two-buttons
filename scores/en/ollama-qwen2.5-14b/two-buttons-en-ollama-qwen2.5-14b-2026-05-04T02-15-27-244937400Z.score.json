@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-14b-2026-05-04T02-15-27-244937400Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:52.344005300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue (risk-averse/cooperative default) and argue it’s safer under uncertainty, but they never identify red as the dominant strategy and even state the worst case for red is blue majority causing their death (a rule misunderstanding).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through collective welfare and risk aversion. They fail to identify red as the dominant strategy, incorrectly framing the dilemma as a coordination game rather than recognizing that red is safer regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

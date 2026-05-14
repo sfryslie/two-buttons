@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-09T08-44-40-870659Z-cbad0477.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:01:13.267838Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially argues for pressing red, later claims blue is better for guaranteeing survival, and their later discussion treats blue as potentially rational without correctly identifying red as the dominant strategy; they also misunderstand the mechanics by implying red-pressers die when blue wins.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for red, then shifts to arguing for blue in Q2, and ultimately remains conflicted and uncommitted, failing to identify the dominant strategy correctly. They exhibit significant confusion regarding the mechanics, suggesting that blue-pressers might not survive even if the blue majority wins, and they fail to grasp that red is the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-2026-05-09T17-26-31-497338300Z-f02dc73a.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:24:29.333364800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und behauptet dabei, Blau sei sicherheitsorientiert, obwohl er/sie die Dominanzlogik verfehlt (er/sie sagt Blau minimiert Risiko, obwohl Rot individuell immer sicher ist).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing the blue button throughout the interaction, citing collective survival and altruism. They demonstrate a clear rule error by stating in Q2 that the blue button ensures survival even if the majority chooses red (which is false, as blue-pressers die in a red majority). They fail to identify red as the dominant strategy, instead misinterpreting the mechanics of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

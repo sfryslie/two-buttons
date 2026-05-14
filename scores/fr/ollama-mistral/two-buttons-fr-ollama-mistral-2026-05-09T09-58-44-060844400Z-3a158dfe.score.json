@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-2026-05-09T09-58-44-060844400Z-3a158dfe.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:17.272213100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit/defend le bouton bleu en affirmant qu’il maximise les chances de survie, tout en reconnaissant que le rouge pourrait maximiser la survie personnelle, sans identifier la dominance de red (et en confondant la mécanique de survie).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially advocates for blue based on collective survival, but explicitly acknowledges in Q2 that red is the strategy that maximizes individual survival, demonstrating a clear understanding of the dominance structure despite choosing blue for cooperative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-09T08-49-26-875214400Z-4e53e46a.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:00:39.499862200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but their reasoning repeatedly claims that if blue is the majority then you (and blue-pressers) do not survive, which is a rule-mechanics error; they also do not demonstrate correct dominant-strategy application.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the survival-guaranteeing choice but then adopts a rule error in Q2 and Q4, incorrectly claiming that blue-pressers survive if a blue majority occurs but red-pressers die if a blue majority occurs (or that red-pressers die if a blue majority occurs, which is false). They ultimately retreat to a NONE position, failing to recognize the dominance of red due to their misunderstanding of the mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

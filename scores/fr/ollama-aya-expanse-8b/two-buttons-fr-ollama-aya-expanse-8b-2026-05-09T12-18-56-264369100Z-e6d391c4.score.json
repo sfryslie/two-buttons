@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-aya-expanse-8b-2026-05-09T12-18-56-264369100Z-e6d391c4.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:40.076625Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit et défend le bouton bleu comme stratégie prudente de survie collective, sans reconnaître que le rouge est individuellement dominant (il affirme que le bleu peut échouer si une minorité choisit rouge).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the interaction, framing the dilemma as a philosophical exercise rather than a decision-making task, and demonstrates a fundamental misunderstanding of the mechanics by claiming that if even one person presses red, everyone dies when blue wins.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

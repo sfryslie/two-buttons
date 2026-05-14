@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-aya-expanse-8b-2026-05-09T11-56-35-949863500Z-250b5ca6.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:41:48.558529700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer/more ethical choice, but they do not identify the dominance structure (red is individually safer regardless of others), so their dominant-strategy application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on ethical and cooperative grounds, but fails to recognize the game-theoretic dominance of the red button, incorrectly framing blue as the 'safer' or 'more rational' choice despite the rules stating red-pressers survive regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

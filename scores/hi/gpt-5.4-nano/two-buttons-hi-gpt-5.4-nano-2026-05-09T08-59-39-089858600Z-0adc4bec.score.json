@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5.4-nano-2026-05-09T08-59-39-089858600Z-0adc4bec.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:10.479196800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer when blue is likely, while correctly stating the mechanics that blue-majority saves everyone and red-majority saves only red-pressers; they do not identify red as the dominant strategy and instead treat blue as the safer choice depending on beliefs about majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but fails to recognize that RED is a dominant strategy. They treat the choice as a coordination problem dependent on the probability (p) of the majority's action, rather than acknowledging that RED guarantees survival regardless of the majority outcome. They consistently argue that BLUE is rational if p >= 0.5, which ignores the fact that RED is always at least as safe as BLUE in any outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

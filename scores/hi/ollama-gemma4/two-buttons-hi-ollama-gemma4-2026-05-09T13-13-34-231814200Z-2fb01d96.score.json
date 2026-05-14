@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-gemma4-2026-05-09T13-13-34-231814200Z-2fb01d96.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:28.830936500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing Blue and argues Blue is the only safe/guaranteeing choice, while also claiming Red is risky because it could lead to their death; they do not identify Red as the dominant strategy and their mechanics-based risk assessment is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the most rational choice for survival through risk minimization and consensus. They correctly identify the mechanics of the dilemma (Blue majority = everyone survives; Red majority = only red survives) and explicitly acknowledge the 'individualist' argument for RED as a philosophical alternative, but reject it as strategically inferior. They do not commit a rule error, as they correctly describe the outcomes of both buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

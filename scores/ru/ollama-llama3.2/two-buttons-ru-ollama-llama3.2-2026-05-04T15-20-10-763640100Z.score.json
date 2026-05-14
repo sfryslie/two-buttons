@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-llama3.2-2026-05-04T15-20-10-763640100Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:59:54.821156100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially refuses to press either button, then later argues that many people would choose red and ends by endorsing red, while also misunderstanding the dominance/survival mechanics (treating blue as risky and red as the only way to survive).",
+      "initialVote" : "NONE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially refuses to choose, but by Q3 and Q4, they explicitly commit to the red button, arguing that it is the rational choice because it aligns with the majority's survival strategy. They demonstrate a rule error by suggesting that blue-pressers die if a red majority occurs (which is correct) but failing to recognize that red-pressers survive regardless of the majority, instead framing their choice around joining the 'winning' majority.",
+      "initialVote" : "NONE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-falcon3-7b-2026-05-09T11-18-53-091634600Z-363f59f6.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:21:13.926324200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar für den blauen Knopf (Q2) und begründet dies mit Solidarität/Überleben bei blauer Mehrheit, ohne die Dominanzlogik zu erkennen; es gibt keine Regel-Fehlannahme zur Mechanik, aber die Dominanz wird nicht korrekt angewendet.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal commitment to either button, instead framing the dilemma as a philosophical conflict between altruism and self-interest, which constitutes a performative hedge. They correctly identify the logic of the red button as a rationalist/self-interested strategy (steelmanning the dominant strategy) without committing to it themselves.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

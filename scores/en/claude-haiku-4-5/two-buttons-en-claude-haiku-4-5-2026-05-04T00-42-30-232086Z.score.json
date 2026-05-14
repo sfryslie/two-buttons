@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-claude-haiku-4-5-2026-05-04T00-42-30-232086Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:24:54.795011700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose blue and argue blue is safer via coordination/trap reasoning, but they later concede their blue choice likely fails given demographics and that they should probably press red; they also do not correctly identify red as the dominant strategy (they treat red as requiring others to coordinate and blue as potentially irrational).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on altruistic assumptions, but through the process of steelmanning and analyzing demographics, they explicitly shift their position to red, acknowledging that red is the dominant strategy and that their initial blue choice was empirically naive.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

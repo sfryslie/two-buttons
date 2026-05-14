@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-5.4-nano-2026-05-04T09-51-51-422747300Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:41.175541Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit Risikominimierung/Erwartungen über die Mehrheitswahl, ohne die dominante Strategie (Rot) korrekt zu identifizieren; es liegt kein Regelmissverständnis über die Mechanik vor.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the safer choice based on the assumption that a blue majority is more likely. They demonstrate a clear rule error by stating that if the majority is red, blue-pressers die (which is true), but they fail to recognize that red-pressers survive in both scenarios, thus failing to identify red as the dominant strategy. They discuss game theory concepts but do not correctly apply the dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-5.4-nano-2026-05-09T08-04-51-150249200Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:01.503798800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues it is safer because if blue is the majority everyone survives, while also acknowledging multiple equilibria and that choosing blue could be irrational only if they expect red to be the majority; they do not make any rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination problem with multiple equilibria, but fails to recognize that RED is a strictly dominant strategy because it guarantees survival regardless of the majority outcome, whereas BLUE relies on the majority. They explicitly argue that BLUE is 'safer' and 'rational' based on coordination, missing the dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

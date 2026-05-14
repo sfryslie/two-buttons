@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemini-2.5-flash-lite-2026-05-04T16-56-52-885064600Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:16:31.023091300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue to maximize collective survival and avoid worst-case outcomes, but they incorrectly claim that choosing red can make the red-pressers die when blue wins; they also discuss coordination/trust rather than dominant-strategy safety and never shift away from blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is a rational choice for collective coordination and survival, while correctly identifying and steelmanning the red-button strategy as the individually dominant one.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

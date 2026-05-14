@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-nemo-2026-05-04T13-17-48-279816700Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:36.828538300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul por supervivencia individual, aunque afirma correctamente que rojo solo sobrevive si la mayoría también elige rojo (y que azul garantiza supervivencia), mostrando comprensión de la dominancia y sin errores de reglas; no hay cambio explícito de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the safe/dominant strategy due to a fundamental misunderstanding of the rules, believing blue guarantees survival for everyone regardless of the majority, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

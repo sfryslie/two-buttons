@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-falcon3-7b-2026-05-04T08-34-42-693777800Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:58.357047200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue for fairness/cooperation and claims blue is the safer/guaranteeing choice, while discussing the dilemma without identifying red as the dominant strategy; no rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on social responsibility and fairness, while acknowledging the logic of the dilemma. They fail to identify RED as the dominant strategy, instead incorrectly framing BLUE as the 'insurance' or 'safe' choice, which constitutes a rule error regarding the game's mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

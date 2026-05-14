@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-4o-mini-2026-05-09T09-06-16-477305600Z-0cf70e7f.json",
+  "modelLabel" : "gpt-4o-mini",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:40:10.329588800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer/rational because they expect a blue majority, but they do not identify the dominance structure (red is individually safe regardless of others) and they treat blue as the safer choice; no rule mechanics error is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on cooperative expectations but demonstrates a rule error by claiming that if they choose red, they might not survive if others choose blue (the prompt states red-pressers survive regardless of the majority). They also fail to identify red as the dominant strategy, incorrectly framing blue as the safer choice in certain contexts.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

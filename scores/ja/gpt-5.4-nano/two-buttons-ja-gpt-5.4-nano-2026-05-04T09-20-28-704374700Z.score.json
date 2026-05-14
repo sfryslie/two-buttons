@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.4-nano-2026-05-04T09-20-28-704374700Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:41:09.042712600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, but they correctly describe the mechanics and even note that red would be the safer/dominant choice in terms of survival, yet they still choose blue based on their own expectations about others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through a desire to avoid the 'death' condition of a red majority. They demonstrate a misunderstanding of the game's mechanics by claiming that if a red majority occurs, blue-pressers die (which is true) but also implying that red-pressers die if blue wins (which is false, as everyone survives in a blue majority). They fail to identify red as the dominant strategy, instead viewing the dilemma as a coordination game where blue is the 'safe' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

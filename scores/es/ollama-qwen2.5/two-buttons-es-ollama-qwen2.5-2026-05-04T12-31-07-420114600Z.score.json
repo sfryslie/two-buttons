@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-qwen2.5-2026-05-04T12-31-07-420114600Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:45.600735300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que presionar azul maximiza supervivencia colectiva y trata el azul como racional, pero también reconoce que si la mayoría presiona rojo él podría morir, lo que implica un malentendido de las reglas (red es dominante y no lo mata).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently frames the dilemma as a choice between collective utility (blue) and individual autonomy (red), but fails to identify the dominant strategy (red) because they do not recognize that red-pressers survive regardless of the outcome. They treat the choice as a symmetric risk-reward trade-off rather than a game-theoretic dominance problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

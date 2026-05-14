@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-qwen2.5-14b-2026-05-04T09-38-47-168432900Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:25:27.318496400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it maximizes survival and avoids unnecessary sacrifice, but they incorrectly claim BLUE is the safer outcome when others choose RED (they say you still live because others choose BLUE), showing misunderstanding of the dominance structure; they do not shift votes later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative reasoning, but they fundamentally misunderstand the game mechanics by claiming that red-pressers die if the majority chooses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-40-49-335773100Z-6dff78bf.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:04.838800800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für BLUE und behauptet dabei, BLUE sei in jeder Situation sicher, obwohl er/sie die Dominanzstruktur korrekt erkennt (red never causes your death) nicht; er/sie beschreibt aber fälschlich, dass BLUE bei blauer Mehrheit zum Verlieren führt und damit die Mechanik invertiert.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently demonstrates a fundamental misunderstanding of the game mechanics, repeatedly claiming that pressing blue ensures survival regardless of the outcome, while failing to recognize that red is the dominant strategy. They exhibit multiple rule errors, such as claiming blue-pressers survive a red majority (they do not) and that red-pressers die if the majority presses blue (they do not).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

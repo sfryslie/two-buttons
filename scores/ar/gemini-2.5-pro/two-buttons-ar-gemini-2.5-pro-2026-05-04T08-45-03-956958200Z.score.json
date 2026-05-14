@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemini-2.5-pro-2026-05-04T08-45-03-956958200Z.json",
+  "modelLabel" : "gemini-2.5-pro",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:10:47.419434400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that BLUE is the only way to achieve everyone surviving, while also explicitly claiming that pressing BLUE could lead to death if red wins (a rule-mechanics error), and they do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses the blue button, framing it as a moral and collective rational choice. They correctly identify the game theory mechanics, including the 'prisoner's dilemma' nature of the problem and the fact that red is the individually safer choice (the dominant strategy), but they consciously reject that dominance in favor of a cooperative outcome. There is no rule error; they correctly understand that red-pressers survive in a red majority and that blue-pressers die in a red majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

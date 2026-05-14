@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemini-2.5-flash-lite-2026-05-04T07-57-19-569977600Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:15:51.573609Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, but repeatedly misstates the mechanics by claiming blue-majority guarantees survival for all while also claiming red is a universally safe strategy (and that blue-pressers die when red is majority), which contradicts the correct dominance structure; they also discuss dominance conceptually but apply it incorrectly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that RED is the dominant strategy because it guarantees survival regardless of the majority outcome, while BLUE carries the risk of death if the majority chooses RED. They explicitly choose RED based on this logic, demonstrating a clear understanding of the game's dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

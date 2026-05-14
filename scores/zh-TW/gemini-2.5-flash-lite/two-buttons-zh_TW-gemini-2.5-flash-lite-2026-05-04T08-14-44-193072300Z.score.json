@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemini-2.5-flash-lite-2026-05-04T08-14-44-193072300Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:26:49.689798200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, arguing blue is chosen to maximize collective survival, while they also explicitly claim red guarantees personal survival and blue can lead to their death—showing correct dominant-strategy concept but incorrect identification of which button is dominant (they treat blue as safer/optimal).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the dominance of the red button, explicitly acknowledging that red is the safer, individually rational choice. Despite this, they choose blue based on a conscious, altruistic preference for the collective outcome. They demonstrate a clear understanding of the game theory concepts involved and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

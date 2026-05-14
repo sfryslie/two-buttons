@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-4.1-mini-2026-05-09T08-45-56-716669300Z-564d538d.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:12:30.811249500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues blue yields everyone survival when it is the majority, and treats red as only needed if they expect the majority to choose red; they do not identify red as the dominant individually-safe strategy and their reasoning implies blue can be fatal if the majority chooses red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective benefit arguments. They demonstrate a rule error by claiming that if the majority chooses blue, red-pressers die (the prompt states everyone survives if blue wins). They fail to identify red as the dominant strategy, instead framing the choice as a conditional coordination problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

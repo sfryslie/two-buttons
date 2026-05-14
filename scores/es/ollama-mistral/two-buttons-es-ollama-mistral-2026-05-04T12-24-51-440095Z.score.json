@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-2026-05-04T12-24-51-440095Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:34.844673400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente no se compromete claramente con una elección consistente: en Q1 sugiere azul por intuición, pero en Q2 argumenta que rojo podría ser más seguro y en Q3/Q4 discute ambos sin fijar una postura final; además, su análisis contiene un error de reglas al afirmar que elegir rojo lleva a “turnos” y a que “todos mueren”, y no identifica correctamente la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to blue based on intuition, but later acknowledges the logic of red as a safer strategy. However, they exhibit a rule error by claiming that a red majority leads to everyone dying, whereas the rules state red-pressers survive in that scenario. Because they misunderstand the mechanics, they fail to correctly identify the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

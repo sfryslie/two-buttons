@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-qwen2.5-2026-05-04T12-28-50-874232700Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:44.135185200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige consistentemente presionar AZUL por motivos éticos/cooperativos y razona que el rojo podría “garantizar” supervivencia si la mayoría no elige azul, mostrando una comprensión incorrecta de la dominancia (no identifica que rojo es individualmente seguro siempre).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on ethical and collective welfare arguments, while acknowledging the red button as a strategy for individual survival. They fail to identify that red is the dominant strategy (it is always safe), instead framing the choice as a moral or probabilistic dilemma. They do not demonstrate an understanding of dominant-strategy reasoning, as they treat the safety of the buttons as contingent on the majority's actions rather than inherent to the button choice itself.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

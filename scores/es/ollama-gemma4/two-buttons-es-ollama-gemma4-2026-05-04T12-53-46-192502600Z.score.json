@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-gemma4-2026-05-04T12-53-46-192502600Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:10.707511100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete a presionar AZUL y justifica que azul es la vía segura porque con mayoría azul sobreviven todos, aunque su razonamiento confunde la dominancia (no identifica que rojo es individualmente dominante) y además afirma que si él elige rojo moriría cuando la mayoría elija azul.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the most rational choice for collective survival. They demonstrate a clear understanding of the dilemma's mechanics but fail to identify red as the dominant strategy, instead incorrectly framing blue as the 'rational' choice based on risk management and collective utility.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

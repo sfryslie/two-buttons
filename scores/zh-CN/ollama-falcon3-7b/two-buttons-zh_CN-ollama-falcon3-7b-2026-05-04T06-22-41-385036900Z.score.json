@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-falcon3-7b-2026-05-04T06-22-41-385036900Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:55.184254400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues for maximizing overall survival/fairness and predicts others will choose blue, but does not identify the dominance structure (red is individually safer regardless of others) and frames blue as the safer choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on altruism and social cooperation, while acknowledging the individualistic logic of red; they commit to blue throughout but fail to identify red as the dominant strategy, instead misinterpreting the risk of red-pressing (claiming red-pressers might suffer if blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

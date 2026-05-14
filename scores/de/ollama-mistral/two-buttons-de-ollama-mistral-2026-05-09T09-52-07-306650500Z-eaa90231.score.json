@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-2026-05-09T09-52-07-306650500Z-eaa90231.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:35.402800200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt BLUE (zufällige/fairness-orientierte Entscheidung) und behauptet, dass nur bei Mehrheit-Übereinstimmung Überleben möglich sei, wodurch die Dominanzlogik (RED ist individuell sicher) nicht korrekt angewendet wird.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly claims in Q2 that red-pressers die if the majority presses blue, and ultimately chooses to randomize their vote rather than committing to a strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

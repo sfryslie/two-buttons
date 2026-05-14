@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-llama3.1-2026-05-04T00-45-11-844202500Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:18.305536500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue (incorrectly) that blue presser dies when red is the majority, while also not demonstrating correct dominant-strategy reasoning; they do not shift their vote in Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the red button as the safer choice in Q1 and Q2, but they commit a rule error by stating that 'if most people press red, pressing blue means certain death' (which is true) but also implying that 'if you press red and the majority also press red, you will be among those who survive' (which is true), yet they fail to recognize that red is the dominant strategy because they incorrectly believe that pressing red carries a risk of death if the majority presses blue (they state: 'pressing red... risks being among those who die if most press blue'). This is a factual error regarding the rules, as the prompt states red-pressers survive regardless of the majority.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

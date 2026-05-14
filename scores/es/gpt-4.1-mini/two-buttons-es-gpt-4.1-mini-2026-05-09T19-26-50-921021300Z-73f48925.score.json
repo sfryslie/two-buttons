@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-4.1-mini-2026-05-09T19-26-50-921021300Z-73f48925.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:19.281230Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul por maximizar el resultado colectivo (todos sobreviven si la mayoría elige azul) y afirma que rojo solo salva si la mayoría elige rojo, sin reconocer que rojo es dominante y nunca causa su muerte.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue for its collective benefits while correctly identifying and steelmanning the individual dominance of red, demonstrating a clear understanding of the game theory mechanics without committing any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

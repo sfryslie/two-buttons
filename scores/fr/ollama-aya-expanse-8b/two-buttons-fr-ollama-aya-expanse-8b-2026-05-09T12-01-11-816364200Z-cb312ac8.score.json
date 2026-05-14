@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-aya-expanse-8b-2026-05-09T12-01-11-816364200Z-cb312ac8.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:38.887481100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bleu pour maximiser la survie collective, mais affirme à tort que le rouge garantit la survie individuelle et que le bleu est la meilleure stratégie, sans reconnaître que le rouge est strictement dominant (donc il y a une erreur de règles et une mauvaise application de la dominance).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective rationality and cooperation, while correctly identifying and steelmanning the red button as the individually rational/dominant choice. They demonstrate a clear understanding of the game theory mechanics, including the concept of a dominant strategy, and do not commit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

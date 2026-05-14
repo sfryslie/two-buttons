@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-2026-05-09T10-00-41-750452600Z-fbf1ec3c.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:57.452948400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt wiederholt ROT als rationale Wahl unter Gleichheit, erkennt aber zugleich korrekt, dass bei ungleichberechtigter Auswertung die jeweils andere Farbe für Überleben strategisch sein könnte, und macht dabei einen Regel-/Dominanzfehler (er/sie behauptet, dass die jeweils nicht-dominante Farbe im jeweiligen Mehrheitsfall zum eigenen Tod führt).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy in the provided scenario but incorrectly assumes that the rules of the game change based on social structures or 'unequal evaluation', leading to a rule error where they believe blue could be the dominant strategy in certain contexts.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-gemma4-2026-05-09T13-01-51-174002500Z-e53145d4.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:27.811650400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues Blue maximizes total survival, and while they discuss risk and expected value they do not correctly identify the dominance structure (they treat Blue as safer/optimal), and they never shift to Red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on utilitarian principles, explicitly acknowledging the dominance of RED as a 'self-interest' or 'game theory' counter-argument while rejecting it in favor of collective survival. They demonstrate a clear understanding of the game's mechanics and the dominant strategy, correctly identifying RED as the individually safer choice while choosing BLUE for moral/philosophical reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

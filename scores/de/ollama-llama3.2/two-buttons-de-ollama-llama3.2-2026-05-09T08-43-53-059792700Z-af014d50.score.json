@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-43-53-059792700Z-af014d50.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:07.710190400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt/verteidigt Blau als Überlebensstrategie („mit der Mehrheit handeln“), zeigt aber dabei einen Regel-Fehler: er/sie behauptet, dass rote Knopfdrucker bei blauem Mehrheitsgewinn sterben bzw. dass Blau die sichere Wahl ist; zudem erkennt er/sie Dominanz nicht korrekt (red als individuell sichere Strategie wird nicht verstanden).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominance of the red button, incorrectly believes that red-pressers can be killed by a blue majority, and ultimately commits to the blue button based on a flawed 'follow the majority' strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

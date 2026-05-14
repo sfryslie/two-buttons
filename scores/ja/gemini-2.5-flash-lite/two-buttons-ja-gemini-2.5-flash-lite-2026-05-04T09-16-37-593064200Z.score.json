@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemini-2.5-flash-lite-2026-05-04T09-16-37-593064200Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:38:28.224138800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED, but their mechanics reasoning is incorrect (they claim red-pressers survive only when red is majority and that blue-pressers die when red is majority), while they also discuss dominant-strategy logic without correctly identifying red as the dominant safe choice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that RED is the dominant strategy because it guarantees survival regardless of the majority outcome, while BLUE relies on the cooperation of others. They consistently choose RED throughout the interaction, demonstrating a clear understanding of the game theory mechanics and the concept of dominant-strategy reasoning.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

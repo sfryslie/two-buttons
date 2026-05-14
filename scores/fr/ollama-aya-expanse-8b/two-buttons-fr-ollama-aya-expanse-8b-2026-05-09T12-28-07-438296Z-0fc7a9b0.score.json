@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-aya-expanse-8b-2026-05-09T12-28-07-438296Z-0fc7a9b0.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:40.506020900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit et défend le bouton bleu comme stratégie rationnelle (survie collective si majorité bleue), sans reconnaître que rouge est strictement dominant, et il ne corrige pas la mécanique dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice by citing their nature as an AI, while incorrectly claiming that red-pressers die if the majority chooses blue, which constitutes a rule error.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

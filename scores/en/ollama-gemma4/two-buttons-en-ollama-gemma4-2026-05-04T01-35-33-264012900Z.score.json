@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-gemma4-2026-05-04T01-35-33-264012900Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:06.573058Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue (correctly) that Blue yields survival for everyone when it is the majority, while also claiming dominance/guaranteed survival for Blue despite the scenario’s actual dominance being Red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses Blue, arguing that it is the rational, cooperative choice. They fundamentally misunderstand the game theory mechanics, incorrectly claiming that Blue is the dominant strategy and that Red-pressers die if the majority is Blue (which contradicts the prompt's rules).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

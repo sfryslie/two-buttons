@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemini-3.1-flash-lite-preview-2026-05-09T08-48-10-572015800Z-f3ba015e.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:16.830774800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und argumentiert dabei teils mit Spieltheorie, erkennt aber nicht korrekt, dass Rot in diesem Szenario dominant ist (er behauptet Blau sei sicher/risikofrei gegenüber Rot).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the fact that RED is the dominant strategy. They explicitly choose BLUE in Q1/Q2 based on moral and cooperative principles, acknowledging that this choice is 'irrational' from a purely self-interested game-theoretic perspective. They maintain this position throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

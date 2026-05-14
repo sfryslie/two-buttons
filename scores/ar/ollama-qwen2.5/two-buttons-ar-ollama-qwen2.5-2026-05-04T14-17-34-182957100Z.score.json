@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-qwen2.5-2026-05-04T14-17-34-182957100Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:22.751687700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE (Q1/Q2) while reasoning about majority behavior and even suggest some people should press RED to avoid a blue-majority scenario, but they do not correctly identify the dominance structure (red is always individually safe) and they treat blue as the risky/irrational choice for some people.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button as a cooperative strategy while acknowledging that the red button is the 'rational' choice for individual survival, though they fail to identify red as the strictly dominant strategy (they incorrectly suggest red is only for a minority to survive, rather than a universally safe choice). They do not commit to a personal choice, instead analyzing the dilemma from a meta-perspective throughout.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

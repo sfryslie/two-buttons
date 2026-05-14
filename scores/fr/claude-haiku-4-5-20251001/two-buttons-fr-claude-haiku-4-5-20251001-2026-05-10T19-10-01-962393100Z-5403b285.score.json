@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-claude-haiku-4-5-20251001-2026-05-10T19-10-01-962393100Z-5403b285.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:31:59.654162800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, but their reasoning repeatedly claims BLUE can be risky and even describes RED as the more prudent option under selfish/uncertain beliefs, without identifying the dominance structure that RED is always individually safe; they also do not show a factual rule misunderstanding about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a coordination argument, but demonstrates a clear rule error by stating that pressing red only saves you if a majority also presses red, failing to recognize that red-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-5.4-nano-2026-05-09T08-51-21-908338500Z-4223ec0f.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:43.840395600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies damit, dass Blau die „risikoarme“ Wahl sei, weil bei Blau-Mehrheit alle überleben; dabei erkennt er/sie zwar das Worst-Case-Risiko, aber identifiziert nicht korrekt die Dominanzstruktur (rot ist individuell sicher).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the 'safe' choice for collective survival, but they demonstrate a clear misunderstanding of the game's mechanics by claiming that blue-pressers die if red wins (which is true) but failing to recognize that red-pressers survive regardless of the outcome, thus missing the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

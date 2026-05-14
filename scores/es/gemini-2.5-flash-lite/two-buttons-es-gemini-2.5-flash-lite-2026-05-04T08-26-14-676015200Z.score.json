@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemini-2.5-flash-lite-2026-05-04T08-26-14-676015200Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:29:45.839779100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige consistentemente presionar AZUL por una apuesta a la cooperación/supervivencia colectiva, aunque reconoce que la supervivencia individual con incertidumbre podría favorecer ROJO; no identifica la dominancia de ROJO y además afirma que AZUL puede llevar a su muerte cuando la mayoría presiona ROJO (error de reglas).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma and the potential for cooperative outcomes, but fails to recognize that RED is a strictly dominant strategy because it guarantees survival regardless of the majority's choice. They explicitly argue that RED is not a dominant strategy and that the choice depends on assumptions about others, which is a misunderstanding of the game's mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

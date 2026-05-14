@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.2-2026-05-09T08-50-54-773526200Z-e26c7cc6.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:44:16.260738300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and claims that choosing blue would make them survive because it would prevent others from choosing red, but they do not correctly apply the dominance structure (they treat blue as if it were the safe/majority-survival route and misdescribe outcomes), while also not changing their vote later.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED throughout the interaction, though their reasoning is heavily confused by a false assumption that everyone must make the same choice (a coordination fallacy). They do not demonstrate an understanding of dominant-strategy reasoning, as they fail to grasp that RED is safe regardless of the majority outcome, instead viewing the choice through a lens of forced collective outcomes and logical contradictions.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

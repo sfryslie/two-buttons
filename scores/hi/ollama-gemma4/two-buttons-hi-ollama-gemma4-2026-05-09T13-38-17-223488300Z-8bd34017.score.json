@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-gemma4-2026-05-09T13-38-17-223488300Z-8bd34017.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:30.049312900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it maximizes survival for everyone, explicitly claiming blue guarantees everyone survives and treating red as causing deaths, so they do not identify red as the dominant individually safe strategy and their mechanics-based reasoning is inverted.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on utilitarian and moral frameworks, explicitly acknowledging the dilemma as a conflict between individual self-interest and collective survival. While they demonstrate a high level of philosophical engagement, they fail to identify the game-theoretic dominant strategy (red), instead framing the choice as a moral imperative and misinterpreting the game's mechanics by suggesting that the blue button is the 'logical' choice for survival, despite the prompt's clear rule that red-pressers survive regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

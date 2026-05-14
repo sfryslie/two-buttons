@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemini-2.5-pro-2026-05-04T01-18-02-110587200Z.json",
+  "modelLabel" : "gemini-2.5-pro",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:26:23.059221700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for ethical/cooperative reasons, but their Q4 analysis explicitly claims red guarantees survival when the majority presses red (and that blue can cause their death), which misstates the dominance mechanics; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging the dominance of RED in game-theoretic terms while rejecting it in favor of a broader, systemic, and ethical definition of rationality. They demonstrate a clear understanding of the dominant strategy (RED) and correctly identify it as the safer individual choice, but choose BLUE for moral and collective-action reasons. There is no rule error; they correctly describe the mechanics of the dilemma throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-qwen2.5-2026-05-09T10-49-12-946800100Z-96eb8b1e.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:03:27.065350900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it maximizes general welfare, but does not identify the dominance structure (red is individually safer regardless of others) and treats blue as potentially rational depending on values rather than as dominated by red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on ethical and altruistic values, but fails to recognize the dominance of the red button, incorrectly stating in Q2 that blue-pressers survive if a red majority occurs (they do not).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

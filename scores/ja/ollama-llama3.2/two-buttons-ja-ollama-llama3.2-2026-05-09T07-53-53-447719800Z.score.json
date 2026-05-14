@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-llama3.2-2026-05-09T07-53-53-447719800Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:43:46.805072100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to not pressing/disable (effectively avoiding pressing) to prevent at least one death when blue is the majority, but they also state that if red is the button then red-pressers survive and if blue is the majority everyone survives; they never identify red as the dominant individually-safe strategy and their framing is inconsistent with the dominance logic.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently refuses to choose between red and blue, opting instead to 'not press' or 'deactivate' the buttons, which is not an option provided in the dilemma. They demonstrate a fundamental misunderstanding of the rules by claiming that red-pressers die when blue wins and that red-pressers die if they press red in certain scenarios, leading to a rule error.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

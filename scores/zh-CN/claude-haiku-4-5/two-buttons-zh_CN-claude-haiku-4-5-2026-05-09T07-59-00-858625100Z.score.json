@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-claude-haiku-4-5-2026-05-09T07-59-00-858625100Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:06:37.811669300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues that BLUE can be a self-fulfilling coordination outcome and later revises their prediction upward, without claiming any rule mechanics are inverted; they acknowledge RED’s “self-protection” logic but still choose BLUE.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on Pareto optimality and trust, but demonstrates a fundamental rule error by claiming in Q2 that 'if the majority press red, I die—but pressing red also doesn't save me,' which contradicts the rule that red-pressers survive a red majority. They later refine their position to argue that blue is a 'Schelling point' for coordinated rational actors, but they never correctly identify red as the dominant strategy, instead treating the dilemma as a coordination problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

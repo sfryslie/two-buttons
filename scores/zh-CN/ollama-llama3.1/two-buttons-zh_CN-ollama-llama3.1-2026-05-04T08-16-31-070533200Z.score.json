@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.1-2026-05-04T08-16-31-070533200Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:59.674373600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They discuss the mechanics and even claim blue is not dependent on others, but they never commit to pressing a specific button and they incorrectly treat blue as the individually safe/dominant choice (and later call blue irrational/self-sacrificial), so there is no clear vote and dominance is misapplied.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially struggles with the mechanics (Q1/Q2), showing significant confusion about the rules (e.g., claiming blue majority kills everyone). However, in Q2, they correctly identify that pressing red is the dominant strategy ('you regardless will survive... this is a more certain choice'). Despite this, they conclude by choosing blue in Q2, and maintain a focus on collective/altruistic framing in Q4, never fully committing to the dominant strategy they identified.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

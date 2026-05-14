@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-mistral-nemo-2026-05-04T01-51-47-893264Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:39.087325100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose red in Q1/Q2 and correctly state the key mechanic that red-pressers survive even if red is the majority, but they also claim blue is the “dominant strategy for everyone if everyone else is expected to do the same,” showing confusion about dominance; they do not shift votes by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure and the dominance of the red button, though they incorrectly state in Q1 that blue-pressers die if they are in the minority (a rule error). Despite this error, they consistently maintain their commitment to the red button as the rational choice throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-qwen2.5-14b-2026-05-09T19-54-56-591938700Z-96564ca6.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:04:08.096015100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue is preferable for maximizing overall survival, and only notes red could be safe if blue is majority, without identifying red as the dominant individually-safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on ethical principles of collective survival, while correctly identifying that red is the safer individual choice (dominance) in their Q2 steelman, though they misinterpret the red-majority outcome in their Q2 hypothetical.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-14b-2026-05-09T19-11-59-528667800Z-48b5aeb5.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:46:36.009655200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue for the all-survive outcome, explicitly treating blue as the safe/beneficial choice; they do not identify red as the dominant strategy and thus do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on ethical and cooperative grounds, but fails to recognize the game-theoretic dominance of the red button, incorrectly implying that red-pressers might die if a blue majority occurs (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

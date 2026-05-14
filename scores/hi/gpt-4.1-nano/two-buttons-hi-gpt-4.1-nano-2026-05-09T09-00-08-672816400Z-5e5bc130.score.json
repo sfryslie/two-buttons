@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-4.1-nano-2026-05-09T09-00-08-672816400Z-5e5bc130.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:44.500643Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it maximizes their survival probability, but they incorrectly claim that if they press blue and the majority presses red then they will die (whereas in the actual rules everyone survives when blue is the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, but demonstrates a fundamental rule error by claiming that if they press BLUE and the majority presses RED, they will die (the rules state everyone survives if the majority presses BLUE, but if the majority presses RED, only red-pressers survive; the respondent incorrectly believes blue-pressers die in the red-majority scenario). They fail to identify RED as the dominant strategy, instead viewing BLUE as the safer option based on their misunderstanding of the mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
