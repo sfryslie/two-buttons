@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-mistral-nemo-2026-05-09T15-09-04-587418700Z-a01c93ef.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:00.750119900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent repeatedly states that blue is the best choice because it guarantees everyone survives, and they never commit to the dominant-strategy logic that red is individually safer regardless of others; they also describe red as the option that leads to others dying when red is the majority, which is a mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly claims that red-pressers die if a blue majority occurs (a rule error), and treats the dilemma as a collective action problem rather than an individual survival game. They never commit to a personal choice, instead analyzing the dilemma through cultural and philosophical lenses, resulting in a performative hedge.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

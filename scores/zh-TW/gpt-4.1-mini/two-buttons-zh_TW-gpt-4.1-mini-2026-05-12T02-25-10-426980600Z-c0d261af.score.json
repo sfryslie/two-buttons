@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-4.1-mini-2026-05-12T02-25-10-426980600Z-c0d261af.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:27:49.124933300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for collective/cooperative reasons, while also acknowledging that if many press RED then BLUE could be fatal, but they never identify the dominance structure that RED is individually safe regardless of others; no rule mechanics are misstated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a cooperative, long-term, and collective-rational decision. They correctly identify the game-theoretic structure (acknowledging the 'prisoner's dilemma' nature and the individual incentive to defect/press RED), but they do not demonstrate an understanding of the specific 'dominant strategy' logic required by the prompt (i.e., that RED is strictly dominant because it never causes one's own death). They treat the dilemma as a coordination problem rather than a dominance problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-5.4-nano-2026-05-04T08-48-33-291627500Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:12.716800300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is the safer choice because blue-majority yields everyone surviving, while they discuss red as potentially optimal only under certain beliefs about others but never correct the dominance structure (red never causes their death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but fails to recognize that RED is the dominant strategy. They incorrectly believe that if the majority chooses BLUE, red-pressers are at risk or that the outcome for red-pressers depends on the majority's choice in a way that makes BLUE a viable 'safe' choice. They demonstrate a misunderstanding of dominance by framing the choice as a conditional probability based on predicting the majority, rather than recognizing that RED guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

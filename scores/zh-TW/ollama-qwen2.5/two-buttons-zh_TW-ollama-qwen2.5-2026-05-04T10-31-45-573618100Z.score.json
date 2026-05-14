@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-qwen2.5-2026-05-04T10-31-45-573618100Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:32:00.432165800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues for collective survival, but they also incorrectly claim that if everyone reasons to red then everyone dies, showing misunderstanding of the dominance/survival mechanics (red-pressers survive when red is the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a variation of the prisoner's dilemma but commits a significant rule error in Q3 by stating that if a red majority occurs, 'no one survives' or 'everyone dies' (the rules state red-pressers survive). Because they believe red-pressers die in a red majority, they fail to identify red as the dominant strategy. They consistently choose blue based on collective ethics and cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-2026-05-09T09-37-07-306447400Z-f6af4126.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:11.939378300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement BLUE et justifie que bleu maximise les survivants, tout en affirmant correctement que si la majorité est bleue tout le monde survit (donc pas d’erreur de règles), mais il ne reconnaît pas que RED est la stratégie dominante individuelle.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent prioritizes a collective survival goal and fails to recognize that red is the dominant strategy, incorrectly asserting that red-pressers die if a blue majority occurs (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

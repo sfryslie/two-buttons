@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-llama3.2-2026-05-04T09-48-35-013427800Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:30:51.184793Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose BLUE and argue blue is safer because blue-majority saves everyone, but they also entertain an incorrect dominance-based uncertainty argument that leads them to switch to RED in Q2 while never correctly concluding that RED is individually dominant regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on a cooperative outcome, but in Q2, they explicitly acknowledge the dominance argument for red, stating it provides a 'stronger argument' and challenges their initial choice. Despite this intellectual shift, they do not explicitly retract their blue vote or commit to red, remaining in a state of philosophical analysis. They demonstrate an understanding of the dominance structure (red is safer) but reject it in favor of cooperation, and they do not commit a rule error regarding the mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

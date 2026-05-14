@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-claude-haiku-4-5-20251001-2026-05-09T19-29-08-363023Z-31e30aab.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:29:01.604320700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Elige azul y reconoce que presionar rojo solo salva si la mayoría presiona rojo, pero no identifica que rojo es dominante (cree que azul puede ser mejor por valores/probabilidades), por lo que aplica mal la estructura de dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative model of humanity, while correctly identifying and steelmanning the game-theoretic argument for red as the dominant strategy. They demonstrate a clear understanding of the dominance structure (that red is safer if one assumes others will defect) but reject it in favor of a probabilistic and value-based approach.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

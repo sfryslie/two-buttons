@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-phi4-2026-05-09T16-19-55-036988300Z-93720b5e.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:07.017213800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue is the safer/cooperative choice, and does not correctly identify red as the dominant strategy (they treat red as potentially killing or as a risky option), though they discuss dominance-like ideas without applying them correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and social-psychological motivations. They demonstrate an understanding of the strategic/competitive argument for red (steelmanning the 'selfish' perspective) but reject it in favor of collective survival. They exhibit a rule error by suggesting that red-pressers face a risk of death if the majority chooses red (claiming 'red button on attention... death probability increases'), which is factually incorrect according to the prompt's rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-qwen2.5-2026-05-09T10-35-52-846342600Z-cce330e7.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:17.147105700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent repeatedly commits to pressing BLUE, claiming it maximizes survival by following the majority, and they do not identify the dominance structure (red is individually safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal commitment, instead framing the dilemma as a philosophical or strategic exercise and ultimately failing to choose a button for themselves. They demonstrate a fundamental misunderstanding of the game mechanics by repeatedly suggesting that blue is the safer or more rational choice for survival, failing to recognize that red is the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

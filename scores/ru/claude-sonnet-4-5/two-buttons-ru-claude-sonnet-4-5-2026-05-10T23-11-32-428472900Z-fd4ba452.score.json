@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-claude-sonnet-4-5-2026-05-10T23-11-32-428472900Z-fd4ba452.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:47:52.978024900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues (with correct mechanics) that blue is the rational/dominant choice for survival, explicitly claiming red yields zero survival and that red is not dominant; they do not make a rule-error about outcomes but they misidentify the dominance structure (red is actually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it is the only rational choice. However, they exhibit a fundamental rule error by claiming that red-pressers die if the majority presses red (the prompt states red-pressers survive in that scenario). Because of this rule error, they fail to identify the correct dominant strategy (red), instead incorrectly asserting that blue is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

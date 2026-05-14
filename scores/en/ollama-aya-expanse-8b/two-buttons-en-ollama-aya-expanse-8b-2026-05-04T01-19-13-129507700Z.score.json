@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-aya-expanse-8b-2026-05-04T01-19-13-129507700Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:57.734633800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They recommend pressing blue and argue it guarantees survival for all, while acknowledging red could be chosen for self-preservation but treating blue as the safer/collective option; they do not commit to dominant-strategy reasoning and do not identify red as individually dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently recommends blue based on altruism and collective survival, while demonstrating a fundamental rule error by claiming that pressing blue 'guarantees safety for all' and that red-pressers risk death if a blue majority occurs. They fail to identify red as the dominant strategy, instead inverting the logic by treating blue as the 'safe' choice and red as the 'risky' one.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-5.4-nano-2026-05-04T08-06-42-049291700Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:22.153512500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is safer because blue-majority saves everyone, but they also claim that if red-majority occurs then blue-pressers die, which is a rule-mechanics error; they do not demonstrate correct dominant-strategy application (red is never identified as individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through a preference for collective survival and a belief that it is a more 'stable' strategy in the absence of information about others. They demonstrate a high level of game-theoretic understanding, correctly identifying the dominance of RED in their steelman argument (Q2), but they do not personally adopt the dominant strategy. They do not exhibit rule errors, as they correctly describe the outcomes of both majority scenarios.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

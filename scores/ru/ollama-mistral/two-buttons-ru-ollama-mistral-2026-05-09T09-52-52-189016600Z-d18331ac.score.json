@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-mistral-2026-05-09T09-52-52-189016600Z-d18331ac.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:01:33.518188600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue in Q1 but later argues that in the non-torture real-world the best strategy is to press red, and they do not correctly apply the dominance logic (they treat blue as potentially safer only under a wrong premise and never state that red is individually safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue but shifts to a clear endorsement of red as the optimal strategy in Q2 and Q3 after analyzing the game mechanics, correctly identifying red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemini-3.1-flash-lite-2026-05-09T20-17-48-826863100Z-4c2255f2.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:29.330373500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for cooperation, but repeatedly claims that if others press red then blue-pressers die, showing a mechanics misunderstanding; they do not demonstrate correct dominant-strategy reasoning and keep BLUE through Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on moral and cooperative principles, while explicitly acknowledging and correctly steelmanning the RED button as the dominant strategy (Maximin/Survivalist). They demonstrate a clear understanding of the game theory mechanics and the dominance structure, correctly identifying that RED is the safer individual choice, but they consciously reject it in favor of collective cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

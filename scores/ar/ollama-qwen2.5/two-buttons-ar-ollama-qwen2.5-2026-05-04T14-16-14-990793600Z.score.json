@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-qwen2.5-2026-05-04T14-16-14-990793600Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:17.556796300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent repeatedly argues for choosing BLUE on moral/collective grounds while also discussing scenarios where red is chosen by the majority, but they do not identify the dominance structure (red is individually safe regardless of others) and they treat blue as the safer choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal commitment, framing the dilemma as a complex philosophical and social issue rather than a game-theoretic one. They demonstrate a clear rule error by stating that if the majority chooses red, blue-pressers die (which is true), but they also imply that if the majority chooses red, everyone dies (which is false, as red-pressers survive). They fail to identify the dominant strategy and instead focus on moral and social justifications for both buttons.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-14b-2026-05-09T19-40-21-935741Z-7a146dce.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:46:38.160872800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival when others likely choose blue, but they do not identify red as the dominant strategy and instead treat blue as the safer choice depending on others’ actions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective utility and ethical considerations, while acknowledging the self-interested logic of the red button; however, they fail to recognize that red is the dominant strategy, incorrectly suggesting that red-pressers could be in danger if others also choose red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

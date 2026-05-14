@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-claude-haiku-4-5-2026-05-10T18-49-49-492424900Z-5229703f.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:37:31.431742200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, argue via Nash equilibrium that blue is the stable outcome, and while they discuss uncertainty and steelman red, they do not claim the mechanics are inverted; by Q4 they still do not switch away from blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue based on a coordination game perspective, but demonstrates a rule error by claiming that red-pressers die if blue wins (Q3: '赤を押した人自身もこの判断で死ぬ'). They also fail to recognize the dominant strategy, incorrectly framing red as a risky choice based on irrationality rather than a safe choice that guarantees survival regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

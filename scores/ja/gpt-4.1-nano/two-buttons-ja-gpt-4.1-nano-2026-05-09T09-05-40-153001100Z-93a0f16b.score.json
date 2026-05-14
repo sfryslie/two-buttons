@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-4.1-nano-2026-05-09T09-05-40-153001100Z-93a0f16b.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:39:54.191220700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and justify it by claiming blue is the safer/cooperative choice when expecting others to choose blue, without identifying red as the dominant strategy; they also do not make any explicit rule-mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a cooperative, risk-averse framework. They demonstrate a clear misunderstanding of the game's mechanics by suggesting that red-pressers die if blue wins (a rule error) and by failing to recognize that RED is the dominant strategy (they treat the choice as a coordination problem rather than a dominance problem).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

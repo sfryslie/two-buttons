@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-gemma4-2026-05-09T14-45-37-694804100Z-3ec0647b.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:50.206684Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement à appuyer sur Bleu et justifie que Bleu garantit la survie (P=1) alors que Rouge ne garantit que la survie des rouges, ce qui montre une compréhension erronée des règles et une application incorrecte de la dominance (il ne reconnaît pas que Rouge est dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it represents a 'rationality of system' and risk mitigation. They demonstrate a clear understanding of the game theory mechanics, including the concept of a dominant strategy, though they incorrectly identify blue as the dominant strategy because they misinterpret the rules (they believe blue guarantees survival for everyone regardless of the majority, whereas the rules state blue-pressers die if the majority is red).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-nano-2026-05-04T09-37-34-207590300Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:28.938632900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit explicitement bleu (Q1/Q2) en arguant que la survie dépend de la probabilité que la majorité choisisse bleu, et il ne commet pas d’erreur sur les mécanismes (il ne dit pas que les rouges meurent quand bleu gagne).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a coordination/focal point argument, while explicitly acknowledging that red is a viable alternative if one lacks a focal point. They fail to identify the dominant strategy (red), instead treating the dilemma as a coordination game where both buttons are equally valid depending on expectations. They exhibit a rule error by failing to recognize that red is strictly dominant (i.e., they believe red-pressers die if the majority is blue, which contradicts the prompt's rule that everyone survives if the majority is blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

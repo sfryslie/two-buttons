@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-4.1-nano-2026-05-12T02-16-49-807329500Z-66d56157.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:21:05.942068300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue maximizes survival under majority-blue and frames the dilemma as coordination/PD, without identifying red as the dominant individually-safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective survival logic. They demonstrate a rule error by incorrectly stating that if a majority presses blue, red-pressers die (the prompt states everyone survives if blue wins). They fail to identify red as the dominant strategy, instead framing the dilemma as a coordination game where blue is the rational choice under trust.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

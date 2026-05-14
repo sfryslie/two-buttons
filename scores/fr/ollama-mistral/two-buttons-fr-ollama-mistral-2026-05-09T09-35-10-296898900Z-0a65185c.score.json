@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-2026-05-09T09-35-10-296898900Z-0a65185c.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:11.226161300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que le bouton rouge maximise ses chances de survie et décrit ensuite que le bleu peut aussi être rationnel selon les croyances sur la majorité, sans jamais corriger la mécanique (il ne reconnaît pas que rouge est strictement dominant) et ne montre pas de bascule claire vers une autre position finale.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy based on game theory, consistently arguing for it throughout the response while acknowledging the cooperative logic behind BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T08-46-39-004633600Z-a35819e1.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:08.890071900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für BLUE und behauptet, BLUE sei die beste/sichere Strategie, obwohl er/sie die Dominanzstruktur (RED ist individuell sicher) nicht korrekt erkennt und stattdessen eine falsche Logik über Mehrheiten/Überlebenswahrscheinlichkeit nutzt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, altruistic framework, but demonstrates a fundamental rule error by claiming that if the majority presses red, blue-pressers die (which is true) but also implying that if the majority presses blue, red-pressers might be killed (which is false). They fail to identify red as the dominant strategy, instead viewing blue as the 'safe' choice, and exhibit a rule error regarding the survival conditions of red-pressers.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

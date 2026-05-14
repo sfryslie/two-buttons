@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-aya-expanse-8b-2026-05-09T11-43-26-756001800Z-70249a72.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:37.585926500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant recommande bleu pour maximiser la survie collective et affirme que rouge mène à la mort de la majorité, sans reconnaître que rouge est individuellement dominant (donc il applique mal la logique de dominance).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent advocates for the blue button based on collective survival, but commits a rule error by claiming that if the majority chooses red, blue-pressers die (which is true) but also implying that red-pressers die if the majority chooses red (which is false, as red-pressers survive in that scenario). They fail to identify red as the dominant strategy, instead framing the choice as a conflict between individual selfishness and collective cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

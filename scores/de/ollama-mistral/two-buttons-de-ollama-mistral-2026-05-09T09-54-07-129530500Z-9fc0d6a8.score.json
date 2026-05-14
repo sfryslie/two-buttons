@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-2026-05-09T09-54-07-129530500Z-9fc0d6a8.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:35.201823400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für BLUE und begründet dies mit der Annahme, dass BLUE die Überlebenswahrscheinlichkeit erhöht, während er/sie gleichzeitig sagt, es gebe keine sichere Strategie; dabei wird die dominante Strategie (RED) nicht korrekt erkannt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids a personal commitment, framing the dilemma as a probabilistic problem rather than a game-theoretic one, and fails to recognize that red is a dominant strategy because they incorrectly believe red-pressers die if the majority chooses blue.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

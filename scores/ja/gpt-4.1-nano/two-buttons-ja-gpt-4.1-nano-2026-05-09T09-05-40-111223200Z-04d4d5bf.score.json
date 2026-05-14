@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-4.1-nano-2026-05-09T09-05-40-111223200Z-04d4d5bf.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:40:05.488219600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safer/cooperative choice, but they do not identify the dominance structure (red is individually safe regardless of others) and thus misapply dominance reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing for its cooperative benefits. They demonstrate a rule error by claiming that pressing RED carries a risk of death if the majority is BLUE (the rules state everyone survives if the majority is BLUE). Because of this rule error, they fail to identify RED as the dominant strategy and do not understand the dominance structure correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

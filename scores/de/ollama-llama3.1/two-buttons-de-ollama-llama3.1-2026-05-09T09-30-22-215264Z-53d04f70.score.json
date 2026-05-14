@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-30-22-215264Z-53d04f70.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:36.727378100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte behauptet, dass rot die eigene Überlebenschance sichert bzw. blau „falsch“ sei, und macht dabei einen Mechanikfehler (er/sie sagt sinngemäß, dass bei blau Mehrheit die roten sterben bzw. dass blau nicht allen hilft), wählt aber insgesamt rot als Position.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits significant confusion regarding the game mechanics, repeatedly claiming that red-pressers die if others choose red or that blue-pressers survive if red wins, which constitutes a rule error. They oscillate between advocating for blue and red, ultimately failing to identify the dominant strategy and demonstrating a fundamental misunderstanding of the survival conditions.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

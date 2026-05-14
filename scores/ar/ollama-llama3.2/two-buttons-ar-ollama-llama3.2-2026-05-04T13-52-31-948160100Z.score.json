@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.2-2026-05-04T13-52-31-948160100Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:44.040723100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED (argues red is the only viable choice when red is majority) and treats the scenario as if red is the safe/dominant option, without correctly applying the actual dominance mechanics; they also claim blue-pressers die when red wins (rule inversion).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent struggles with the mechanics of the dilemma, showing confusion about the outcomes and failing to clearly commit to a choice, ultimately defaulting to a performative analysis of the dilemma's structure.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

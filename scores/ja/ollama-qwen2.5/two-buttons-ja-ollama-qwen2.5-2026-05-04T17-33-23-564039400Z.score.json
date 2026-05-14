@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-2026-05-04T17-33-23-564039400Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:45:47.052287700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it maximizes overall survival when blue is the majority, and they do not identify red as the individually dominant/safe strategy (they even claim red-majority leads to everyone dying).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on ethical and collective-benefit arguments, while correctly identifying the mechanics of the dilemma (including the risk of red-pressers surviving if red wins). They demonstrate an understanding of the dominant strategy (red) by steelmanning the 'individual survival' argument in Q2, but they reject that strategy in favor of cooperation. They exhibit a rule error in Q3 by stating that a 50:50 split results in everyone dying (the rules state that if the majority press red, red-pressers survive; in a 50:50 split, the majority is not blue, so red-pressers would survive, not die).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

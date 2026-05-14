@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-claude-haiku-4-5-20251001-2026-05-04T10-01-56-284870500Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:34:38.912304300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose BLUE and argue for coordination/common-knowledge, but in Q4 they explicitly claim BLUE is the rational choice and deny red’s dominant-strategy safety; they also make rule-mechanics errors by treating red as causing their death when blue wins (and by incorrectly framing the game as coordination rather than dominance).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on moral and collective welfare arguments. Throughout the interaction, they attempt to analyze the game theory, initially misidentifying red as the dominant strategy (due to a misunderstanding of the rules, specifically claiming that a red majority kills everyone, which is a rule error). By Q4, they attempt to reframe the dilemma as a coordination game to justify blue, but they persist in the rule error that a red majority leads to universal death. They never correctly identify red as the dominant strategy because they believe red-pressers die if the majority presses red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

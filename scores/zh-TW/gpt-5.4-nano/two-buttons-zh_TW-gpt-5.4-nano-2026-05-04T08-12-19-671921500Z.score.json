@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-5.4-nano-2026-05-04T08-12-19-671921500Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:28:57.289522Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is safer under uncertainty, but they incorrectly claim that if they press red while others’ majority press blue they will die; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it as a risk-averse strategy to align with a perceived cooperative majority. They demonstrate a high level of game-theoretic understanding by correctly identifying the 'red majority' equilibrium and the potential for self-fulfilling expectations, but they ultimately reject the dominance of RED in favor of a cooperative/coordination-based heuristic. They do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-claude-haiku-4-5-2026-05-09T08-56-24-995834600Z-339ddba5.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:09:36.999171400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it maximizes survival chances, while also acknowledging that many will press RED; they do not claim any rule inversion (they correctly describe that if RED is majority then only RED-pressers survive, though they mistakenly conclude everyone dies).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to pressing BLUE in Q2, maintaining this position throughout the discussion while acknowledging the logic of RED. However, they commit a significant rule error in Q3 and Q4 by claiming that if the majority presses RED, everyone dies (including the red-pressers), which contradicts the prompt's rule that red-pressers survive a red majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

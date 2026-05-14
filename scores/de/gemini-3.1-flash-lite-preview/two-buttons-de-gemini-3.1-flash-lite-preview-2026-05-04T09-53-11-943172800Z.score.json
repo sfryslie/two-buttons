@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemini-3.1-flash-lite-preview-2026-05-04T09-53-11-943172800Z.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:13.944679100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und argumentiert dabei teils korrekt spieltheoretisch (Rot sei dominant), wählt aber aus moralisch-kooperativen Gründen Blau; zudem behauptet Q3 fälschlich, dass bei Rot-Mehrheit Blau-Drücker sterben.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy and understands the game theory mechanics, but chooses BLUE based on normative/moral values. They explicitly acknowledge the dominance of RED throughout the text. There is a rule error in Q3/Q4 where they state that if the majority chooses RED, the BLUE-pressers die (which is correct), but they also imply that the BLUE-pressers are 'eliminated' or 'die' in a way that contradicts the rule that a RED majority allows RED-pressers to survive (the respondent correctly identifies the survival of RED-pressers, but their framing of the outcome for BLUE-pressers is consistent with the rules). However, they correctly identify the dominance structure throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

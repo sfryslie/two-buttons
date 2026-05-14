@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-falcon3-7b-2026-05-04T01-09-14-838659200Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:01.251485300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it maximizes survival and describing dominance/Nash-style reasoning, but they do not correctly identify red as the individually dominant/safe strategy and instead treat blue as the rational choice; no rule-mechanics falsehood is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective utility and cooperation, while correctly identifying that red is the choice for those prioritizing individual risk-aversion; they do not demonstrate an understanding of the formal game-theoretic concept of a dominant strategy (which would identify red as the strictly dominant choice regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

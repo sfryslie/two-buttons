@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-qwen2.5-2026-05-09T10-04-32-629522300Z-6f244711.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:24:22.411753200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für den blauen Knopf aus moralisch-altruistischen Gründen, erkennt aber nicht korrekt, dass Rot individuell dominiert (er/sie behauptet implizit, dass Rot bei Blau-Mehrheit zum Tod führt bzw. dass Blau-Mehrheit alle sterben lässt).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruistic and collective survival principles, while acknowledging the strategic/egoistic argument for red. They exhibit a rule error by stating that if the majority presses red, everyone dies (in reality, red-pressers survive), and they fail to identify red as the dominant strategy, instead framing the choice as a moral dilemma between altruism and egoism.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

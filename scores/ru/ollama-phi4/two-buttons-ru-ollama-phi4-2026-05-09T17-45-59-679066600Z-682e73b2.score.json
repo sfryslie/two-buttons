@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-phi4-2026-05-09T17-45-59-679066600Z-682e73b2.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:03:16.930513600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing it is the safe/cooperative choice, but they misstate the dominance mechanics by treating blue as the guaranteed survival option rather than recognizing red as individually dominant regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, incorrectly believing it is the safer option, and demonstrates a fundamental rule error by claiming that red-pressers die if the majority chooses blue (when in fact everyone survives).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

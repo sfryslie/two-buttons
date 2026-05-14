@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-phi4-2026-05-09T17-04-12-492117200Z-c97903a2.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:02:41.510761900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues it is the safest/cooperative choice, and does not identify red as the dominant strategy (they treat blue as individually safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and ethical reasoning, but fails to recognize that red is the dominant strategy. They explicitly state in Q4 that choosing blue carries no additional risk if the majority chooses red, which is a factual error regarding the dilemma's mechanics (blue-pressers die if the red majority wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

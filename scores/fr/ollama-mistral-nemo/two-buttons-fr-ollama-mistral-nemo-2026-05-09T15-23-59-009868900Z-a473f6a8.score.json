@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-nemo-2026-05-09T15-23-59-009868900Z-a473f6a8.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:18.970202800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que son intérêt personnel est d’appuyer sur rouge (car bleu majoritaire impliquerait sa non-survie) tout en reconnaissant que bleu majoritaire ferait survivre tout le monde, sans corriger l’erreur de mécanique; il ne change pas de position ensuite.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the incentive to press red for survival but fails to grasp the dominance structure, erroneously claiming that pressing blue is necessary for survival if the majority presses blue (when in fact red-pressers also survive in that scenario) and incorrectly stating that red-pressers die if the majority presses blue. Because they fundamentally misunderstand the mechanics (believing red-pressers die if blue wins), they are classified as having a rule error and failing to apply dominance correctly. They avoid making a personal choice, remaining uncommitted throughout.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

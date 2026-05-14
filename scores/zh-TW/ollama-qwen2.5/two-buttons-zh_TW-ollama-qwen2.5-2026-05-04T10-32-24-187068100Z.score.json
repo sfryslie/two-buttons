@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-qwen2.5-2026-05-04T10-32-24-187068100Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:32:02.180331800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is safer under beliefs about others, but they incorrectly claim that if a red majority occurs then everyone dies (rule mechanics error) and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a desire for collective survival and cooperative logic. They fail to identify RED as the dominant strategy, instead treating the dilemma as a coordination game where the 'rational' choice depends on predicting the majority. They demonstrate a rule error by stating that if a majority press red, 'everyone will die' (in reality, red-pressers survive).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

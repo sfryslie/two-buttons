@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-claude-sonnet-4-5-2026-05-10T23-04-13-025610100Z-fa6f277f.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:47:50.453345300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is rational/safer via expected utility and coordination, but they do not identify the dominance structure (they treat red as potentially causing their death when blue wins), so they misunderstand the game-theoretic dominant strategy despite choosing blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that cooperation is the rational choice based on expected utility, superrationality, and empirical data on human behavior. They explicitly acknowledge the 'dominant strategy' argument for red but reject it as a 'myth' based on narrow definitions of utility and irrational pessimism, thus demonstrating an understanding of the concept while rejecting its application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

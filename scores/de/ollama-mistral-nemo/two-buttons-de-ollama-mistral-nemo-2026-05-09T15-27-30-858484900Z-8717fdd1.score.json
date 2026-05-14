@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-nemo-2026-05-09T15-27-30-858484900Z-8717fdd1.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:57.225266200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für ROT, behauptet aber fälschlich, dass bei Mehrheit BLAU alle überleben und bei Mehrheit ROT „wir alle sterben“ bzw. dass ROT das eigene Überleben gefährden könne; zudem erkennt er/sie die Dominanz von ROT nicht korrekt und hält BLAU für die sichere Option.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing RED in Q1/Q2 but demonstrates a fundamental rule error by claiming that blue-pressers survive when the majority presses blue, while simultaneously claiming that red-pressers might die if the majority presses blue (which contradicts the prompt's rules). They fail to identify the dominance of the red button, instead inverting the logic by suggesting blue is the 'safer' option for survival.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

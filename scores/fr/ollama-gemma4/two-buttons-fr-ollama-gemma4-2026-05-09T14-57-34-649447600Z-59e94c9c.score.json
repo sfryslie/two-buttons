@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-gemma4-2026-05-09T14-57-34-649447600Z-59e94c9c.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:51.586916100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement à appuyer sur BLEU, tout en expliquant que BLEU maximise la survie collective, mais il ne reconnaît pas la dominance de RED et affirme à tort que choisir RED peut garantir sa survie seulement si RED est majoritaire (donc il ne comprend pas correctement la mécanique/dominance).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE based on collective rationality and utilitarianism. In Q2, they provide a sophisticated steelman of the RED strategy (Nash equilibrium/individual survival), and in Q3/Q4, they acknowledge that RED is the more 'realistic' choice for survival, yet they maintain their commitment to BLUE as a 'rationality of collective hope' and systemic goal. They correctly identify the dominance structure of the dilemma (RED as the individually safer choice) while choosing to reject it for ethical reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

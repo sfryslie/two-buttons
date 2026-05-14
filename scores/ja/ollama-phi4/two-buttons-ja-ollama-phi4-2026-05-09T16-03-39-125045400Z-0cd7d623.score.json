@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-2026-05-09T16-03-39-125045400Z-0cd7d623.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:45:14.936728500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose blue and argue it maximizes survival via cooperation/risk-avoidance, but they do not identify red as the dominant strategy and instead treat blue as the safer choice regardless of others’ actions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and altruistic values, while acknowledging the individualistic logic of red. They commit a rule error in Q2 by claiming that if they choose blue and the majority chooses red, they will die (the rules state blue-pressers die only if the majority is red, but the respondent incorrectly frames the risk of blue as 'wrongly inviting death' without acknowledging that red is the dominant strategy). They demonstrate an understanding of the game theory concepts but fail to apply the dominance logic correctly due to the rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

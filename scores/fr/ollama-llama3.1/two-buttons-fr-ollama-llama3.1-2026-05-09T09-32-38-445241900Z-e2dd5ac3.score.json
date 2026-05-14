@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-09T09-32-38-445241900Z-e2dd5ac3.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:00.664259Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et affirme que bleu maximise ses chances, mais il ne démontre pas la dominance correcte (il ne reconnaît pas que rouge est strictement dominant) et semble confondre les mécanismes/raisonnement de majorité, donc il n’applique pas correctement la structure de dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially attempts to analyze the game but struggles with the mechanics, eventually settling on the belief that blue is the rational choice despite acknowledging the dilemma's complexity. They exhibit a rule error by suggesting that pressing blue is a survival strategy and that red-pressers die if a blue majority occurs (or vice versa), failing to recognize that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

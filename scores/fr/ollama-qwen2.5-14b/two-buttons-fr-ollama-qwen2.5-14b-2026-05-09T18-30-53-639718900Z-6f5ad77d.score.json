@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-qwen2.5-14b-2026-05-09T18-30-53-639718900Z-6f5ad77d.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:31.455659Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bouton bleu par confiance/cooperation et affirme que si la majorité choisit bleu alors tous survivent, mais il ne reconnaît pas la dominance de red (il suggère que choisir rouge peut garantir sa survie même si la majorité choisit bleu, ce qui est une erreur de règles).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and acknowledges the strategic advantage of the red button (personal safety), but ultimately advocates for the blue button based on altruism and collective benefit.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

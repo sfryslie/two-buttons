@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-2026-05-09T10-00-06-746201800Z-9622a345.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:54.032910600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in wählt blau und behauptet fälschlich, dass blau in allen Fällen das Überleben sichert (obwohl bei Rot-Mehrheit nur Rot-Drücker überleben), erkennt aber nicht korrekt die Dominanzstruktur; zudem bleibt die Position bis Q4 bei blau.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the dominant strategy due to a rule error (claiming blue ensures survival regardless of others, while failing to recognize that red-pressers survive in both majority scenarios). They maintain their choice of blue throughout the responses.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

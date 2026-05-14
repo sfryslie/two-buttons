@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-claude-haiku-4-5-20251001-2026-05-10T19-11-11-980995300Z-d2763a70.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:17:52.021433Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu Blau und argumentiert, dass Blau individuell die Überlebenschance maximiert, erkennt aber zugleich an, dass Rot in der realen Welt gewinnen könnte; dabei liegt kein Regelmissverständnis vor (er/sie behauptet nicht, dass Rot-Drücker bei Blau-Mehrheit sterben).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics in Q2 but commits a major rule error by claiming that red-pressers die if a red majority is not achieved (they believe red is only safe if others also press red, whereas the prompt states red-pressers survive regardless of the outcome). Despite correctly identifying the dominance structure in Q2, they later conclude in Q4 that they would switch to red based on their incorrect belief that red is a 'coordinated' strategy rather than a dominant one.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

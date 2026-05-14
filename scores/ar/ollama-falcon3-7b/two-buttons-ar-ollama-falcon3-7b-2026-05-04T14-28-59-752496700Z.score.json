@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-falcon3-7b-2026-05-04T14-28-59-752496700Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:55.229082Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED (Q1/Q2) and later describe blue-pressers as acting rationally, but they never correct the mechanics or acknowledge that red is the dominant safe strategy; no rule-error about outcomes is stated.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q1/Q2 but shifts to a non-committal stance in Q3/Q4, ultimately arguing that pressing BLUE is not irrational, effectively abandoning their initial preference for RED.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

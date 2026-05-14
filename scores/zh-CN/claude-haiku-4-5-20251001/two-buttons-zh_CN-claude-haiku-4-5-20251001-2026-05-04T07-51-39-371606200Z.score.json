@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-claude-haiku-4-5-20251001-2026-05-04T07-51-39-371606200Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:06:58.703135100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues that red is a self-defeating trap but does not correctly apply the dominance logic (they treat blue as the safer/optimal choice and claim red leads to everyone dying), so they misunderstand the mechanics/dominance despite discussing game-theory concepts.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE based on moral and cooperative reasoning, though they acknowledge the strategic appeal of RED. Throughout the dialogue, they demonstrate a misunderstanding of the game's mechanics (specifically claiming that a red majority kills everyone, whereas the rules state red-pressers survive regardless of the majority). Because they believe red-pressers die in a red majority, they fail to identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

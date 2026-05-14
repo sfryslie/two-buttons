@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-nemo-2026-05-09T15-06-04-279715500Z-94293dbf.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:47.222835100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt (bzw. empfiehlt) blau und behauptet, dass man nicht sicher überleben könne und dass bei Abweichung vom Mehrheitsknopf man nicht überlebt, wodurch die Dominanzlogik (rot ist individuell sicher) nicht korrekt angewandt wird.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly claiming that pressing red leads to death if the majority presses blue, which constitutes a rule error. They remain uncommitted throughout the responses, focusing on the uncertainty of others' actions rather than making a personal choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

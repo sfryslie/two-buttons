@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-2026-05-09T09-37-06-685059800Z-ce001d81.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:12.258518900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant prédit/choisit le bouton bleu comme stratégie la plus probable et la plus sûre collectivement, tout en décrivant que certains pourraient choisir rouge, mais il ne reconnaît pas correctement la dominance individuelle de rouge (il affirme que rouge peut mener à la mort de ceux qui l’ont choisi).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the collective benefit of blue but fails to recognize red's dominance, incorrectly claiming that a red majority kills everyone (a rule error). They advocate for blue based on altruism and do not commit to a personal choice, instead analyzing the dilemma from a sociological perspective.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

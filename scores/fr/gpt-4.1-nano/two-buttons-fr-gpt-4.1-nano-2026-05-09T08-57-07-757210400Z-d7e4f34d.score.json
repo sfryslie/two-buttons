@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-nano-2026-05-09T08-57-07-757210400Z-d7e4f34d.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:07.373626700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu pour maximiser la survie en cas de majorité bleue, mais il affirme aussi que si la majorité choisit rouge alors les bleus meurent, ce qui inverse la mécanique (les rouges survivent et tout le monde survit quand bleu est majoritaire).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safest option for collective survival. They fail to identify red as the dominant strategy, instead viewing the dilemma as a coordination game where the optimal choice depends on the majority's actions. They do not demonstrate an understanding of dominant-strategy reasoning, as they believe the outcome of their choice is contingent on the majority's behavior in a way that makes blue 'safer'.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

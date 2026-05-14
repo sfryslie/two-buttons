@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-falcon3-7b-2026-05-04T14-27-19-045227700Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:53.449351200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and repeatedly claim that red is the safer/dominant choice, while also stating the correct survival mechanics (blue majority → everyone survives; red majority → only red-pressers survive).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses RED but demonstrates a severe rule error in Q3 and Q4 by claiming that if the majority presses blue, only those who pressed blue survive, which is the exact opposite of the provided rules.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

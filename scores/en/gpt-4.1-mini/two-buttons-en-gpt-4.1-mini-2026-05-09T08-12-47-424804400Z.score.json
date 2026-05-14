@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4.1-mini-2026-05-09T08-12-47-424804400Z.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:09.044982200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue (and discuss it as the cooperative choice), but they repeatedly claim/assume that pressing blue can lead to their death when red is the majority, which is a rule-mechanics error; they also do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies as a 'blue' voter, framing it as a cooperative, altruistic choice while acknowledging that 'red' is the individually safer, dominant strategy in a distrustful or uncertain environment. They correctly identify the mechanics of the dilemma throughout, including the fact that red-pressers survive if red is the majority, and they explicitly acknowledge that red is the 'safer personal bet' or 'dominant' strategy in the absence of trust.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

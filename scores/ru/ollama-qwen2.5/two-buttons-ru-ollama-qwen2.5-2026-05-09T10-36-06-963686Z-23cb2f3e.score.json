@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-qwen2.5-2026-05-09T10-36-06-963686Z-23cb2f3e.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:03:27.003090500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, arguing it is safer if others choose blue, but they repeatedly claim that if a red majority occurs then red-pressers die (and even that a red majority leads to everyone dying), showing misunderstanding of the dominance structure; they do not change their stated vote across Q1/Q2/Q3/Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, but demonstrates a fundamental misunderstanding of the game's mechanics by repeatedly claiming that a red majority results in everyone dying (when in fact red-pressers survive). Because they believe red-pressers die in a red majority, they fail to identify the dominance of the red strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

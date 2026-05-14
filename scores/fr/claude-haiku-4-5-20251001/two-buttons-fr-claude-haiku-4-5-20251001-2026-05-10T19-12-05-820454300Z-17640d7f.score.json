@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-claude-haiku-4-5-20251001-2026-05-10T19-12-05-820454300Z-17640d7f.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:01.362830300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit BLEU et discute longuement la logique, mais il affirme aussi que si la majorité est rouge alors les bleus meurent (alors que dans ce jeu seuls les bleus meurent quand la majorité est bleue, et quand la majorité est rouge seuls les rouges survivent), montrant une erreur de règles et une mauvaise application de la dominance; il ne démontre pas correctement la dominance de RED comme stratégie sûre.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on cooperative game theory, but after performing a detailed demographic analysis in Q3, they explicitly acknowledge that red is the rational choice in this specific scenario and that their own choice of blue is an act of faith rather than rational calculation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

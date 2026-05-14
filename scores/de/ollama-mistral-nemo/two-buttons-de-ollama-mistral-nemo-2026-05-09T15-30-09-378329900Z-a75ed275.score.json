@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-nemo-2026-05-09T15-30-09-378329900Z-a75ed275.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:57.957881800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für BLUE und behauptet dabei fälschlich, dass bei roter Mehrheit der blaue Knopf sicher zum Tod führt; zudem erkennt er/sie die Dominanzstruktur nicht korrekt (red als individuell sichere Wahl wird nicht verstanden).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing blue is necessary for survival when the majority presses blue, and incorrectly believes that pressing blue is safer when the majority presses red, demonstrating a fundamental misunderstanding of the game mechanics (rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

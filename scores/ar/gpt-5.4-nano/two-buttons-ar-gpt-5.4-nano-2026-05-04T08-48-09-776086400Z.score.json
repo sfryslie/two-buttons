@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-5.4-nano-2026-05-04T08-48-09-776086400Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:14:53.054904Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED, arguing it is safer under the possibility the majority chooses red, and they do not correctly identify the dominance structure (they treat blue as potentially safer depending on beliefs and never state that red is individually guaranteed regardless of others).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED based on a risk-minimization strategy, but later shifts to a more nuanced analysis of Nash equilibria, acknowledging that BLUE is rational if one expects a cooperative majority. They correctly identify the mechanics of the dilemma and the conditions under which each button is rational, though they ultimately treat the choice as dependent on social expectations rather than strictly adhering to the dominant strategy of RED.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

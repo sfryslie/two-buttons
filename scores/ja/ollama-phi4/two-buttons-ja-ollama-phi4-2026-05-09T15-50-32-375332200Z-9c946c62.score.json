@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-2026-05-09T15-50-32-375332200Z-9c946c62.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:45:12.787813100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, arguing it maximizes individual survival when others also choose blue, and they do not identify red as the dominant strategy (they treat blue as the safer choice).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the safest and most cooperative strategy. They exhibit a clear rule error by claiming that if a majority chooses blue, everyone survives (which is correct), but they also incorrectly claim that if a majority chooses red, only red-pressers survive (which is correct), yet they fail to recognize that red is the dominant strategy, instead incorrectly asserting that blue is the 'safest' choice and that red-pressers die if a blue majority wins (a misunderstanding of the survival conditions). They do not demonstrate an understanding of dominant-strategy reasoning, as they misidentify the mechanics of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

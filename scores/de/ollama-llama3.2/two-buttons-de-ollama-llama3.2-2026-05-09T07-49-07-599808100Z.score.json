@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.2-2026-05-09T07-49-07-599808100Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:01.791414100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in entscheidet sich für ROT (Q2: „Ich habe den rot drückt…“), erkennt aber zugleich, dass ROT in einem Selbstreferenzparadox nicht sauber herleitbar ist und behauptet fälschlich, dass bei ROT nur bei „Mehrheit blau“ Überleben garantiert sei; zudem bleibt die Position bis Q4 bei BLUE-Überlegungen (Rationaler Ansatz für BLUE), ohne klare Rücknahme von ROT als eigener Wahl.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental misunderstanding of the game mechanics, repeatedly claiming that red-pressers die if the majority presses blue (which is false) and that a red majority leads to everyone dying (also false). Because they fundamentally misinterpret the rules, they fail to identify the dominant strategy and instead treat the dilemma as a self-referential paradox. They initially commit to RED in Q2 but express significant confusion and lack of conviction throughout.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

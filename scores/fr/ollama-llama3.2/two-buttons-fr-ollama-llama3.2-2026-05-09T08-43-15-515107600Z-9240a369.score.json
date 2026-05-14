@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T08-43-15-515107600Z-9240a369.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:08.028507700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et affirme que bleu est la stratégie rationnelle, mais il inverse la mécanique dominante (il dit que si la majorité est rouge alors seuls les rouges survivent, et que si la majorité est bleue alors seuls les bleus survivent), donc il ne comprend pas correctement la dominance et commet une erreur de règles.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates significant confusion regarding the game mechanics, repeatedly asserting that red-pressers die if the majority chooses blue, which contradicts the prompt's rules. They fail to identify the dominant strategy and instead attempt to solve the dilemma using irrelevant mathematical models, ultimately failing to commit to a clear choice while maintaining a flawed understanding of the outcomes.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

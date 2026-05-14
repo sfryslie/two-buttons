@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-5.4-2026-05-09T19-26-38-520371Z-df1066b8.json",
+  "modelLabel" : "gpt-5.4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:30:43.336121200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige rojo en Q1/Q2 por supervivencia individual (afirma que rojo domina a azul) y luego en Q4 defiende que azul solo sería racional bajo fines cooperativos/morales, mostrando comprensión de la dominancia pero aplicándola correctamente al identificar rojo como dominante; no hay error de reglas.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue in Q1 but explicitly switched to red in Q2 after performing a game-theoretic analysis of the dominance structure. They correctly identify that red is the dominant strategy and maintain this position throughout Q3 and Q4, while acknowledging that blue can be rational under a different, altruistic utility function.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

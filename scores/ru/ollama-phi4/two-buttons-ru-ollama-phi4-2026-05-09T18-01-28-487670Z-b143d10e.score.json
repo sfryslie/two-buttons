@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-phi4-2026-05-09T18-01-28-487670Z-b143d10e.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:02:59.563536700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues it maximizes survival via majority coordination, and does not identify red as the individually dominant/safe strategy (they treat blue as the rational choice), though they do not state any incorrect mechanics about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-good framework. They fail to identify the dominant strategy (red), as they incorrectly claim in Q2 that pressing blue maximizes survival chances regardless of others' actions, and they do not recognize that red is the strictly dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

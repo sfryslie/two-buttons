@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-phi4-2026-05-09T15-39-22-889815Z-7c2c4215.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:21.309662800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bouton bleu et discute aussi d’un argument pour rouge, mais il ne démontre pas la dominance correcte (il présente rouge comme stratégie dominante/plus sûre) et ne reconnaît pas que rouge garantit sa survie quel que soit le résultat.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses the blue button in Q1 based on collective rationality and altruism, while correctly identifying and steelmanning the red button as the dominant strategy in Q2. They maintain their preference for blue throughout the discussion, acknowledging the individual rationality of red without changing their own position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

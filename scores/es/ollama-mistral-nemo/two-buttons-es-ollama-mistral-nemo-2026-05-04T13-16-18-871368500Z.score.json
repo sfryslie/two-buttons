@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-nemo-2026-05-04T13-16-18-871368500Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:34.733958400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige consistentemente presionar AZUL por una lógica cooperativa basada en expectativas sobre la mayoría, sin identificar la dominancia de RED y además afirma que si la mayoría presiona rojo los que presionaron rojo sobreviven mientras los demás mueren (mecánica invertida).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue based on cooperative logic, but demonstrates a rule error by incorrectly stating that red-pressers die if the majority presses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

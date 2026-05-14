@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-09T09-28-48-706758300Z-01aef60c.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:00.418755800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que la majorité bleue fait survivre tout le monde mais conclut quand même que la meilleure option est rouge, tout en décrivant à tort que si la majorité est bleue alors seuls les rouge-pressers survivent (mécanique inversée), et il ne montre pas de changement clair de vote final.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for RED based on a probabilistic model, but then shifts to a more nuanced view in Q3/Q4, acknowledging that RED is a survival strategy while BLUE is a moral choice. They commit to RED in Q2 but their final analysis in Q4 treats both as rational depending on the goal (survival vs. altruism), effectively remaining uncommitted to a single path. They exhibit a rule error in Q3 by stating that if the majority chooses BLUE, only red-pressers survive, which contradicts the prompt's rules.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

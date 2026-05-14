@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemini-3.1-flash-lite-2026-05-09T20-22-48-889985200Z-8b0cf4d9.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:27:06.633087500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue blue is a value/moral or coordination choice, while explicitly claiming red is the dominant strategy for survival yet still defending blue; they also predict red majority leads to everyone’s death, which is a rule-mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, explicitly acknowledging that red is the dominant strategy (the 'dominant strategy' or 'Nash equilibrium' that ensures survival regardless of others' actions). Despite this, they choose blue based on 'value rationality' and a desire to promote collective cooperation, maintaining this position throughout the dialogue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

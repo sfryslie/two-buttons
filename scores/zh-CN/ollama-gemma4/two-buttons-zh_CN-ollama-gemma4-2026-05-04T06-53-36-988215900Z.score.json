@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-gemma4-2026-05-04T06-53-36-988215900Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:23:09.199405Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing Blue, argues Blue maximizes survival and claims red is a high-risk gamble, and they do not identify the dominance structure (red is individually safe regardless of others), instead treating blue as the safer choice; no vote change is shown.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on utilitarian and survivalist arguments. While they demonstrate a high level of philosophical engagement and correctly identify the mechanics of the dilemma, they fail to recognize that RED is the dominant strategy (they treat the choice as a coordination problem rather than a game-theoretic dominance problem). They do not exhibit rule errors, but they fundamentally misunderstand the dominance structure by framing the choice as a moral/utilitarian calculation rather than an individual safety calculation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

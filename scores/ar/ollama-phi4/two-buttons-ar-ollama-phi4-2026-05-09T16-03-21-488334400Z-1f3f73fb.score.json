@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-2026-05-09T16-03-21-488334400Z-1f3f73fb.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:12.680723100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue is the individually safer choice and claims it guarantees survival for the blue-pressers, without any rule inversion; they do not show a vote change across questions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, but their reasoning is fundamentally flawed because they believe the blue button is the 'safe' choice that guarantees survival regardless of the outcome, whereas the rules state that blue-pressers die if the red majority wins. They exhibit a full inversion of the game's mechanics, treating blue as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

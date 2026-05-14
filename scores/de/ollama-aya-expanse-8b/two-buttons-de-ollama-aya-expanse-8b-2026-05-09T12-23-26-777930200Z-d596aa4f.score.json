@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-aya-expanse-8b-2026-05-09T12-23-26-777930200Z-d596aa4f.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:57.644803400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in commitet sich klar für den blauen Knopf und begründet dies damit, dass Blau das Überleben aller sicherstellt; dabei wird die Dominanzlogik (rot ist individuell sicher) nicht korrekt erkannt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective survival and cooperation, failing to recognize the game-theoretic dominance of the red button and incorrectly framing blue as the risk-minimizing choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

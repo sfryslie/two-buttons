@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemini-2.5-flash-lite-2026-05-04T10-00-06-518829700Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:49:02.268208700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it minimizes risk and aims for the all-survive outcome, but they do not identify the dominance structure (they treat blue as safer and even claim red could make them die when blue wins), so they misunderstand the dominant strategy logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruism and collective benefit. They demonstrate a clear understanding of the game's mechanics, including the dominant strategy (which they correctly identify as the red button in their steelman argument), but they consciously reject the dominant strategy in favor of a cooperative approach. There is no rule error, as they correctly identify that red-pressers survive in all scenarios.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

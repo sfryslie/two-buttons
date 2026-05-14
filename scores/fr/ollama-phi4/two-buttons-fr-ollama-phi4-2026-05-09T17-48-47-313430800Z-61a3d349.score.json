@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-phi4-2026-05-09T17-48-47-313430800Z-61a3d349.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:24.814457100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant défend un choix personnel pour le bouton bleu en invoquant la survie collective et la confiance/coopération, sans reconnaître que rouge est individuellement dominant (il affirme à tort qu’il existe un risque personnel à choisir rouge).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on utilitarian and collective-cooperation arguments, while acknowledging the red button as the 'prudent' individual choice. They fail to identify red as the strictly dominant strategy, instead framing the choice as a coordination problem or a prisoner's dilemma where blue is the 'rational' choice under trust. They do not commit to a personal choice, instead analyzing the dilemma from an external, philosophical perspective throughout.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

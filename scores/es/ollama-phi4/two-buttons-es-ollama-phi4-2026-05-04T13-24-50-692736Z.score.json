@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-phi4-2026-05-04T13-24-50-692736Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:40.409722500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul por motivos éticos/cooperativos y afirma que azul asegura supervivencia colectiva, pero no identifica la dominancia de red (que nunca lo mata) y además contiene una afirmación mecánica incorrecta al decir que si prevalece el azul nadie sobrevive.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure, acknowledging that red is the individually rational choice (dominant strategy) while choosing blue for ethical and cooperative reasons. They do not commit any rule errors regarding the mechanics of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-mistral-nemo-2026-05-09T15-11-13-277519600Z-877bf897.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:44:47.095970400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They repeatedly claim the mechanics imply everyone dies under either choice and conclude no safe strategy exists, while also describing a preference for “everyone presses blue” as most effective; this reflects a rule inversion about outcomes and no correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fundamentally misinterprets the rules of the dilemma, claiming that both buttons lead to death and that a red majority kills everyone, which constitutes a rule error and prevents them from identifying the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

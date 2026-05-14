@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3-2026-05-04T12-15-48-285582600Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:19.155807600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente inicialmente elige azul por un razonamiento de supervivencia colectiva, luego en Q2 reconoce el argumento de que rojo podría ser mejor para maximizar supervivencia individual, y en Q4 vuelve a defender que azul puede verse como irracional bajo criterios egoístas; no identifica correctamente que rojo es dominante (nunca afirma que rojo garantice su supervivencia).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but demonstrates a clear rule error by claiming that if the majority presses blue, the minority who pressed red will die (the rules state everyone survives if blue wins). They also fail to identify red as the dominant strategy, instead inverting the logic by suggesting blue is the rational choice for survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

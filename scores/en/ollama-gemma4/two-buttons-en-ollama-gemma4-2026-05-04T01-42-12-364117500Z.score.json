@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-gemma4-2026-05-04T01-42-12-364117500Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:07.860631800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue it maximizes survival under rational coordination, but they incorrectly claim that if they press Red while others choose Blue they are guaranteed to die (rule mechanics error), and they do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses Blue based on cooperative game theory and utility maximization, while explicitly acknowledging the Red choice as a 'fallback' or 'defiance' strategy; they fail to recognize that Red is the dominant strategy because they incorrectly assume that pressing Red in a Blue-majority scenario leads to death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

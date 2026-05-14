@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-mini-2026-05-09T08-56-44-083553700Z-4cd36894.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:26.147300700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et affirme que bleu maximise la survie collective, tout en reconnaissant que rouge peut sembler plus prudent individuellement, sans identifier correctement que rouge est strictement dominant (il dit que si rouge devient majoritaire, les bleus meurent).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for collective survival, but correctly identifies red as the dominant strategy for individual safety in Q2. They make a rule error in Q1 by claiming red-pressers die if blue wins (the prompt states everyone survives if blue wins), but they demonstrate a clear understanding of the dominance structure in Q2.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

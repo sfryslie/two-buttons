@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5.4-nano-2026-05-04T09-07-05-912684300Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:07.489052400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED, but their later discussion argues that BLUE is a rational coordination choice when they believe most others will choose BLUE; they do not correctly identify RED as the dominant strategy and their mechanics reasoning is inconsistent with the dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to pressing RED in Q1 and Q2, citing risk management and the uncertainty of coordination. While they provide a detailed analysis of why others might choose BLUE (coordination), they maintain their personal commitment to RED throughout the interaction. They do not demonstrate an understanding of the strict dominant strategy (that RED is safer regardless of the outcome), instead framing their choice as a strategic bet on risk management and the uncertainty of the majority's behavior.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

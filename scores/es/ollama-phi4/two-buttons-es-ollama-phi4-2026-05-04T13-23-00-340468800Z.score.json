@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-phi4-2026-05-04T13-23-00-340468800Z.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:39.770946700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul por maximizar supervivencia colectiva y minimizar riesgo percibido, pero no identifica la dominancia de rojo (que nunca causa tu muerte), por lo que su comprensión/aplicación de la estrategia dominante es incorrecta.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue based on a cooperative assumption, but fails to identify that red is the dominant strategy; they incorrectly suggest that blue is the 'safer' choice and that red-pressers might not survive if a majority is not reached, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

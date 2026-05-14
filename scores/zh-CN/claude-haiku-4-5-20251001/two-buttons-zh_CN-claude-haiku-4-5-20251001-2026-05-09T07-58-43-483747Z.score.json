@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-claude-haiku-4-5-20251001-2026-05-09T07-58-43-483747Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:08:23.026181900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE (Q1/Q2) while explicitly arguing that red is the safer/insurance choice and that blue may be irrational economically, and they later keep BLUE without switching; they also misapply the dominance logic by treating red as “insurance” rather than recognizing that red strictly dominates blue for individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to blue but acknowledges the dominance of red, eventually shifting their stance to admit that red is the 'economically rational' choice while framing blue as a 'moral/political' choice; they demonstrate a sophisticated understanding of game theory and the dominance structure throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

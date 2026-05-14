@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-mistral-nemo-2026-05-04T13-18-00-459433600Z.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:37.136095Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul como “estrategia más segura” y razona en términos de cooperación vs descooperación, pero no identifica que rojo es dominante (y sugiere que azul puede ser irracional si el resto elige rojo), por lo que no aplica correctamente la dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative framework, failing to recognize that red is a dominant strategy because they incorrectly believe red-pressers die if a blue majority occurs (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

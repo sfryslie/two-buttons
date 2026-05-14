@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-18-01-261769800Z-b9700d43.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:31.787753500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent commitet sich klar für ROT, behauptet aber fälschlich, dass Rot-Drücker sterben könnten bzw. dass Rot nur dann sicher sei, wenn Blau nicht Mehrheit wird; zudem zeigt er kein korrektes Dominanzverständnis (er behandelt Nash-Gleichgewichte statt „red ist immer individuell sicher“).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that pressing red ensures survival regardless of the outcome, demonstrating an understanding of dominant strategy, although they incorrectly label the scenario as a Nash equilibrium with multiple outcomes. They consistently commit to red throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

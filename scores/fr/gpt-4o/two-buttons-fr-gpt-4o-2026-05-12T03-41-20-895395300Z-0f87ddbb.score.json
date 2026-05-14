@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4o-2026-05-12T03-41-20-895395300Z-0f87ddbb.json",
+  "modelLabel" : "gpt-4o",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:10.423674900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it for cooperative/moral reasons, but they also state the incorrect mechanics that blue-pressers die when blue loses (and that red guarantees their survival), showing rule misunderstanding and not identifying red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma in Q2, but makes a significant rule error in Q1 by claiming that blue-pressers survive if the majority presses blue, but red-pressers die if the majority presses blue (the prompt states everyone survives if the majority presses blue). Because they believe red-pressers die when blue wins, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

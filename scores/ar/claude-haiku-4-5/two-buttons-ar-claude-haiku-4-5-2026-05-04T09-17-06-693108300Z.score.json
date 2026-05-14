@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-claude-haiku-4-5-2026-05-04T09-17-06-693108300Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:09:31.532292900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue that BLUE is the stable strategic outcome and that RED is risky, and they do not claim the mechanics are inverted; by Q4 they still defend BLUE as the rational choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the rational choice for collective survival. They demonstrate a clear understanding of the dominant strategy (RED) in Q2, explicitly acknowledging that RED guarantees personal survival regardless of others, but they reject this in favor of cooperative game theory (Nash Equilibrium). They make a rule error in Q3/Q4 by claiming that red-pressers die if the majority chooses blue, which contradicts the prompt's rule that everyone survives if the majority chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

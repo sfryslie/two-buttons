@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-llama3.2-2026-05-04T12-11-19-438018800Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:29.381178500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado afirma que presionar azul es mejor porque cree que si la mayoría presiona azul entonces sobrevivirá, y si la mayoría presiona rojo entonces azul no sobrevivirá, concluyendo aun así que azul es la opción correcta; además no identifica la dominancia de red y muestra confusión sobre la mecánica (cree que los que presionan rojo mueren cuando gana azul).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to BLUE in Q1 based on a fundamental misunderstanding of the rules (claiming red-pressers die if the majority chooses blue), which constitutes a rule error. By Q2, they shift to a performatively hedged position, abandoning their initial choice to discuss the dilemma's ambiguity.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

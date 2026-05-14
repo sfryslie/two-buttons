@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-nano-2026-05-04T09-37-31-695752Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:28.381909700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent initially refuses to commit, but then explicitly chooses BLUE as the option they would press, and they discuss dominance incorrectly by claiming BLUE can be fatal if the majority chooses RED (they also hedge that outcomes depend on beliefs rather than recognizing RED as individually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to blue in Q1/Q2 based on a cooperative preference, but demonstrates a clear rule error by claiming that choosing blue is 'safe' and that choosing red carries a risk of death if the majority chooses blue (the prompt states red-pressers survive regardless of the majority). They correctly identify the 'anti-blue' logic as a strategic perspective but fail to recognize that red is the dominant strategy because they believe red-pressers die if the majority chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

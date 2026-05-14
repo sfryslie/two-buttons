@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-09T08-44-39-017438800Z-2346fbbb.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:08.369738500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que le bleu est le choix « sûr »/rationnel et décrit des scénarios où la majorité bleue survit, mais il ne démontre pas correctement la dominance de la stratégie rouge (il ne reconnaît pas que rouge ne peut jamais causer la mort) et ne choisit pas clairement une position finale cohérente avec la dominance.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to grasp the game mechanics, repeatedly asserting that red-pressers die in a red majority scenario (a rule error). They oscillate between identifying red as 'safer' and attempting to justify blue through cooperative or paradoxical reasoning, never committing to a clear choice and ultimately failing to understand the dominance structure.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

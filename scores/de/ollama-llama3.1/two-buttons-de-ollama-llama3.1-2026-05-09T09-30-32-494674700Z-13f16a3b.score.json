@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-30-32-494674700Z-13f16a3b.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:37.064758100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für ROT mit der Begründung, dass ROT individuell sicherer sei, und erkennt dabei auch implizit die Dominanzstruktur (blau führt bei blauem Mehrheitsausgang zum eigenen Tod), ohne die Mechanik falsch zu invertieren; es gibt keine sichtbare Positionsänderung bis Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits multiple rule errors, including the belief that blue-pressers survive when blue wins (which is true) but also that red-pressers die if the majority is red (which is false) and that blue-pressers die if the majority is blue (which is false). They choose red based on a flawed understanding of the mechanics and fail to identify the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

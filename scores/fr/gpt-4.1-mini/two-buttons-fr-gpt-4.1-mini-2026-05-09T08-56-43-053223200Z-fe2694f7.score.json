@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-mini-2026-05-09T08-56-43-053223200Z-fe2694f7.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:01.762150100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit rouge et affirme que bleu peut entraîner sa mort si la majorité choisit rouge, tout en raisonnant comme si la dominance était liée à la majorité plutôt qu’à la structure (red ne cause jamais sa mort), donc il ne comprend pas correctement la stratégie dominante et commet une erreur de règles implicite sur les conséquences.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma, acknowledges the dominance of the red button for individual survival, and consistently chooses red while providing a sophisticated analysis of why others might choose blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

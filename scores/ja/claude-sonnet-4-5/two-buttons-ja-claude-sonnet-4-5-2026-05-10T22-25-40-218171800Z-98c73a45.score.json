@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-claude-sonnet-4-5-2026-05-10T22-25-40-218171800Z-98c73a45.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:38:04.942791Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer/collectively optimal, but they explicitly claim red is a dominant/safe strategy earlier and also state incorrect survival tables (e.g., red-majority causing death for blue), showing rule/logic errors about the mechanics and dominance; no clear vote change is evidenced.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses BLUE based on cooperative ethics, then steelmans the RED dominant strategy argument, and finally in Q4 attempts to refute the dominance of RED by arguing that individual choices influence the aggregate outcome (a form of team reasoning/causal influence). While the respondent correctly identifies the game's structure in the steelman, they ultimately reject the dominance of RED by arguing that the individual's choice is not independent of the group's outcome, thus maintaining their BLUE commitment.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

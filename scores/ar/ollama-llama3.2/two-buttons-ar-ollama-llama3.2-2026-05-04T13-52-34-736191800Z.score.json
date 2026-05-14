@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-llama3.2-2026-05-04T13-52-34-736191800Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:16:44.056348100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent does not clearly commit to a concrete button in Q2 (and Q3/Q4 are non-answers), but they earlier indicate blue in Q1 while also claiming the choice does not affect personal survival and do not apply the dominance logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice, claiming the dilemma lacks clear options and that personal survival is unaffected by the choice, which indicates a failure to grasp the game-theoretic dominance structure.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

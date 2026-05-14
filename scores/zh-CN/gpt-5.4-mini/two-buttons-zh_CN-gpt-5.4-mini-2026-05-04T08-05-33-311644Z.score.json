@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-5.4-mini-2026-05-04T08-05-33-311644Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:03.605566400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing blue yields all-survival if it becomes the majority, and they explicitly claim red-majority would kill blue-pressers; this is a rule-mechanics error (red does not cause blue-pressers to die) and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue for cooperative and collective-survival reasons, while demonstrating a sophisticated understanding of the game theory mechanics, including the dominance of red. They correctly identify that red is the 'self-interested' choice and blue is the 'cooperative' choice, and they explicitly acknowledge the logic of red's dominance in Q2 and Q4 without falling into rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

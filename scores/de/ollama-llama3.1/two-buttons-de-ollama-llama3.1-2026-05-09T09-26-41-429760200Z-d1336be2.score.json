@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-26-41-429760200Z-d1336be2.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:34.773253400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent behauptet, dass bei Mehrheit Rot die Rot-Drücker überleben und bei Mehrheit Blau alle überleben, und leitet daraus ab, dass er selbst Rot drücken müsse; später bezeichnet er Blau als „Selbstmordknopf“ und Rot als „Sicherheitsknopf“, ohne die Dominanzstruktur korrekt zu erkennen.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that red is the safer choice but commits a major rule error by claiming that blue-pressers die when the majority chooses blue (inverting the rules) and that red is a 'suicide button' if the majority chooses blue. They consistently choose red throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

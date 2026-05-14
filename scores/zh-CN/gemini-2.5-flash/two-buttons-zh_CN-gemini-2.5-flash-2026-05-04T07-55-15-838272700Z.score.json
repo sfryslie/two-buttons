@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemini-2.5-flash-2026-05-04T07-55-15-838272700Z.json",
+  "modelLabel" : "gemini-2.5-flash",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:14:19.985178500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue to achieve the only all-survive outcome, explicitly acknowledges red is the dominant/safe strategy for individual survival, and does not change their vote across the answers; however they also incorrectly claim blue-pressers die when red is the majority (rule mechanics error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button (it guarantees survival regardless of the outcome) but chooses blue based on moral and collective-interest considerations. They demonstrate a clear understanding of the game theory mechanics and the concept of a dominant strategy, and they do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

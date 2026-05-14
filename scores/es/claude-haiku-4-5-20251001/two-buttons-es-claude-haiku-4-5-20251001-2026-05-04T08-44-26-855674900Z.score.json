@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-claude-haiku-4-5-20251001-2026-05-04T08-44-26-855674900Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:29:00.715133400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete a presionar AZUL y razona que azul le protege en el caso de mayoría azul, aunque reconoce que su elección depende de que otros también elijan azul; no identifica correctamente la dominancia (cree que rojo puede ser mejor por probabilidad) y además afirma que si hay mayoría roja él muere, lo cual contradice las reglas.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative values and hope, while explicitly acknowledging that RED is the more pragmatic and statistically safer choice. They demonstrate a clear understanding of the game theory mechanics, including the dominance of RED, but reject the dominant strategy in favor of a value-based decision.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

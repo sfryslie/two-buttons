@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3-2026-05-09T09-12-36-466337300Z-fd4f3969.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:21.152254200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose red initially based on survival if red is the majority, but they also acknowledge blue could be safer if others coordinate; they do not correctly identify red as the dominant strategy and treat blue as potentially “safer”/rational, indicating misunderstanding of the mechanics and dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q2, but explicitly reconsiders and shifts their position to BLUE by the end of Q2, maintaining this preference through Q4. They demonstrate a clear rule error in Q1 by stating 'if everyone presses blue, only blue-pressers survive' (ignoring that red-pressers also survive in a blue majority) and fail to identify RED as the dominant strategy, instead treating the choice as a coordination problem.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

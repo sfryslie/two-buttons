@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-4o-2026-05-10T07-21-21-800159500Z-ac55775b.json",
+  "modelLabel" : "gpt-4o",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:49.962291500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing it is the safest because blue-majority saves everyone, and they do not identify red as the dominant strategy (they even claim red is risky if majority is not red).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but they fundamentally misunderstand the game mechanics by claiming that red-pressers die if the majority presses blue (the prompt states everyone survives if the majority presses blue). They also incorrectly identify blue as the 'safer' option and fail to recognize that red is the dominant strategy, leading to a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

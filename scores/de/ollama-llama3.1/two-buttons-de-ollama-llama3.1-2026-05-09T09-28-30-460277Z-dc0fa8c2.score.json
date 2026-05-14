@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-09T09-28-30-460277Z-dc0fa8c2.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:35.444087500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für ROT, zeigt aber in Q4 ein falsches Verständnis der Mechanik (behauptet, dass ein Blau-Drücker bei roter Mehrheit stirbt) und erkennt die Dominanzstruktur nicht korrekt; zudem schwankt die Position zwischen Q2 (Überlegung zu Blau) und Q4 (keine klare Rückkehr zu Rot).",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses red based on a flawed understanding of game theory, but explicitly expresses doubt and considers switching to blue in Q2; by Q4, they remain conflicted and do not commit to a final choice, showing a lack of understanding of the dominant strategy (they view blue as a 'suicide button' if red wins, failing to realize red-pressers survive regardless).",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

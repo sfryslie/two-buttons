@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3.1-2026-05-09T09-18-41-181542600Z-a67ae206.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:40.879269500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red (Q1/Q2) and claims red is best, but their mechanics reasoning is confused (they treat blue-majority as causing death/uncertainty and do not correctly apply the dominant-strategy logic), and they do not show a clear vote change by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the safer choice and commits to it, but they exhibit significant rule errors, specifically claiming that a blue majority results in everyone dying (when it actually results in everyone surviving) and that a red majority results in only one side surviving (when it results in all red-pressers surviving).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

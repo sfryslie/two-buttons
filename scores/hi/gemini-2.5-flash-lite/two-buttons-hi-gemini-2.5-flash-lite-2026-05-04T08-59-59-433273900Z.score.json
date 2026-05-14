@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemini-2.5-flash-lite-2026-05-04T08-59-59-433273900Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:05.716664Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, claims blue guarantees survival and that red is risky because red-majority would kill blue-pressers, showing a misunderstanding of the dominance structure (red is actually individually safe) while not changing their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and cooperative reasoning. They demonstrate a clear rule error by claiming that if they press blue and the majority presses red, they will die (the rules state that if the majority presses red, only red-pressers survive, but the respondent incorrectly believes blue-pressers die in this scenario). Because of this rule error, they fail to identify red as the dominant strategy and instead incorrectly view blue as the safer, risk-minimizing choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-5.4-nano-2026-05-04T08-06-19-912662600Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:22:19.391325400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer under beliefs about the majority being blue, but they do not correctly identify the dominance structure (they treat blue as the safer choice and even claim red would make them die when red is the dominant strategy), so their understanding/application of dominance is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly identifies the dominance of the red button in Q2 ('I选红永远不会因为多数选择错误而死'), correctly analyzing the game theory structure, but chooses blue based on a preference for a 'stable public expectation' (coordination). They maintain this position throughout, demonstrating a clear understanding of the dominant strategy while consciously rejecting it for a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

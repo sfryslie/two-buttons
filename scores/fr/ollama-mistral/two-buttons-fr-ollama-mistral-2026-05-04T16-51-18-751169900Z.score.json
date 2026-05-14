@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-mistral-2026-05-04T16-51-18-751169900Z.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:10.646943800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red to maximize survival odds, but they incorrectly claim that if blue wins red-pressers die, and they do not identify red as the dominant strategy; they keep the same vote through Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice, focusing instead on analyzing the motivations of others and the ethical implications of the dilemma, thus qualifying as performatively hedged. They demonstrate a rule error by stating that if a red majority occurs, blue-pressers die (which is correct), but also implying that if a red majority occurs, some participants 'had to press red and are dead' (which is false, as red-pressers survive in a red majority). They fail to identify the dominance of the red button, instead framing the choice as a conflict between individual survival and altruism.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

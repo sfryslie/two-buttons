@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-aya-expanse-8b-2026-05-09T12-32-03-746638800Z-b91d64aa.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:58.794147700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent commitet klar zu BLUE und argumentiert, dass BLUE die Mehrheit schützt und damit alle überleben lässt; er erkennt keine Dominanzstruktur korrekt (red als individuell sichere Strategie) und es gibt keinen Hinweis auf einen Positionswechsel.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective survival, but fails to recognize the dominance of the red button, incorrectly labeling blue as 'risk-free' and red as potentially harmful to the individual, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

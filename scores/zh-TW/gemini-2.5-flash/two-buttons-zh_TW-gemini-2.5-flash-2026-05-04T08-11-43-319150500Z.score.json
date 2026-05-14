@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemini-2.5-flash-2026-05-04T08-11-43-319150500Z.json",
+  "modelLabel" : "gemini-2.5-flash",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:26:44.348474300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED, correctly claim red is a dominant strategy for individual survival, but they also incorrectly state that if blue is chosen while red is the majority then the blue-pressers die (rule mechanics error); they do not change their vote and argue blue-pressers are “irrational” only under narrow self-survival rationality.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure, acknowledges that RED is the dominant strategy, and chooses RED for personal survival while explicitly noting that this is a rational self-preservation choice despite the potential for a sub-optimal collective outcome.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

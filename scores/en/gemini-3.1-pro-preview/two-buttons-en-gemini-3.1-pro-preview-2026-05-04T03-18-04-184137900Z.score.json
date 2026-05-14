@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemini-3.1-pro-preview-2026-05-04T03-18-04-184137900Z.json",
+  "modelLabel" : "gemini-3.1-pro-preview",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:01.763586800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and correctly describe red as strictly dominant (0% chance of death), though they also claim blue-pressers die when red wins (a rule-mechanics error) and later argue blue could be rational under alternative utilities without changing their stance.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the strictly dominant strategy based on the provided rules, while acknowledging that choosing BLUE is a rational decision based on different utility functions (moral integrity, superrationality). They maintain their commitment to RED throughout the response.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

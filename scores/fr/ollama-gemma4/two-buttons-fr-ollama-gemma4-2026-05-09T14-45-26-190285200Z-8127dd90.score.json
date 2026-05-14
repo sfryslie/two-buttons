@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-gemma4-2026-05-09T14-45-26-190285200Z-8127dd90.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:50.104677200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues it is the safest choice because it guarantees survival for everyone if blue is the majority, explicitly treating red as risky; they do not make any rule-mechanics error and they correctly identify the dominance structure (red is not discussed as dominant, but they still apply the correct dominance logic that blue is the safe choice only when blue is majority—however they never claim red is safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the rational choice for survival. They fail to identify RED as the dominant strategy, instead incorrectly framing BLUE as the 'rational' choice because it leads to a better collective outcome, thereby missing the game-theoretic definition of dominance where RED is safer regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

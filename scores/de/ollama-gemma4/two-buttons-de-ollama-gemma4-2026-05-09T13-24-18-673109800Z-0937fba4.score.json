@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-gemma4-2026-05-09T13-24-18-673109800Z-0937fba4.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:21:40.710838100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies damit, dass Blau die Mehrheit der Überlebenden sichert (100% Überleben), erkennt aber nicht die Dominanzlogik korrekt (red wäre individuell sicherer), sondern behauptet implizit, Rot führe zu Tod der Rot-Drücker bzw. sei riskant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on utilitarian survival logic, acknowledging the deontological argument for red as a counterpoint but never adopting it. They correctly identify the mechanics of the dilemma (blue majority = everyone survives; red majority = red survives) and do not exhibit rule errors, though they fail to identify red as the dominant strategy, instead framing blue as the 'rational' choice due to its cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

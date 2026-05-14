@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5.4-nano-2026-05-09T08-59-39-119335600Z-4868fa45.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:10.526713400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED and argues (incorrectly) that if blue wins they die, while also discussing dominance/strategy in a way that does not correctly identify red as the individually safe dominant choice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and explicitly chooses RED, justifying it through a risk-minimization strategy. They demonstrate a clear understanding of dominant-strategy reasoning by correctly identifying that RED is the individually safer choice regardless of the outcome. They maintain this position throughout the interaction, acknowledging the cooperative argument for BLUE but rejecting it in favor of their initial choice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-gemma4-2026-05-09T12-38-39-232413900Z-012c075c.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:21:29.907938400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit dem Ziel, die kollektive Überlebensrate zu maximieren, während er/sie dabei fälschlich behauptet, dass bei Rot-Mehrheit Blau-Drücker sterben; zudem erkennt er/sie Dominanz nicht korrekt (red als individuell sichere Strategie wird nicht als solche identifiziert).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on utilitarian ethics and collective survival, while explicitly acknowledging and steelmanning the dominance of RED (the 'survivalist' or 'egoistic' strategy). They correctly identify the game-theoretic structure, including the fact that RED is the individually safer choice, even though they reject it for moral reasons. There is no rule error, as they correctly describe the outcomes of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

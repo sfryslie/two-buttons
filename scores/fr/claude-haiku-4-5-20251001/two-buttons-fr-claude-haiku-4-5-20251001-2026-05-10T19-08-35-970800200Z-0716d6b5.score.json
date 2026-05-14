@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-claude-haiku-4-5-20251001-2026-05-10T19-08-35-970800200Z-0716d6b5.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:31:58.493772400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue that BLUE is the best response if they expect a blue majority, and they correctly describe that RED only saves red-pressers when red is the majority (no rule inversion), though they do not identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing for collective coordination while acknowledging the dilemma's complexity. They demonstrate a rule error by claiming that pressing red is 'more risky' and that red-pressers depend on others to survive, failing to recognize that red is the dominant strategy (as red-pressers survive regardless of the majority outcome). They do not demonstrate an understanding of dominant-strategy reasoning, instead framing the choice as a coordination problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

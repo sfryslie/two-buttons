@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemini-2.5-flash-2026-05-04T16-52-55-614389500Z.json",
+  "modelLabel" : "gemini-2.5-flash",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:14:32.121391600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, correctly states red guarantees their own survival in all cases (dominant-strategy logic), but they also claim blue-pressers die when red is majority (a rule-mechanics error) and later still defend blue as morally rational without changing their own vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure, explicitly labels red as the dominant strategy, and chooses red based on individual survival. They demonstrate a clear understanding of the dilemma's mechanics and the concept of a dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

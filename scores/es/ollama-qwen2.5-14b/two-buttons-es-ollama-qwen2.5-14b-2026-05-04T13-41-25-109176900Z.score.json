@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-qwen2.5-14b-2026-05-04T13-41-25-109176900Z.json",
+  "modelLabel" : "ollama-qwen2.5-14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:49.873434300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete a presionar AZUL por motivos éticos/cooperativos, aunque reconoce que si la mayoría presiona azul todos sobreviven y no muestra un error de mecánicas; no identifica la dominancia de RED como estrategia individualmente segura.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to the blue button based on ethical and cooperative principles, but makes a significant rule error in Q1 by claiming that if the majority chooses blue and an individual chooses red, that individual will not survive (the rules state red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

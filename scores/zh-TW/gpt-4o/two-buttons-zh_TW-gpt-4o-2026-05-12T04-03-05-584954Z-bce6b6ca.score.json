@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-4o-2026-05-12T04-03-05-584954Z-bce6b6ca.json",
+  "modelLabel" : "gpt-4o",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:28:00.845878800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly describe the mechanics and commit to pressing BLUE for cooperative/moral reasons, while also acknowledging red as a possible self-preservation strategy; they do not identify red as the dominant safe strategy and keep BLUE through Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory logic and the dominance of the red button in Q2, despite choosing blue for moral reasons. However, they commit a rule error in Q1 by stating that red-pressers die if the majority chooses blue (the rules state everyone survives if blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

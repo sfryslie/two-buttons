@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-4.1-mini-2026-05-09T09-09-49-580616800Z-451bdc53.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:50:56.298605800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue can be rational under collective/trust assumptions, and claims red is safer only under the (incorrect) premise that blue-pressers die when red wins; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma's mechanics but makes a rule error by claiming that blue-pressers die if the majority chooses red (the prompt states red-pressers survive in a red majority, but does not state blue-pressers die; however, the respondent explicitly claims they die, which is a factual error regarding the provided rules). They understand the concept of dominant strategy (identifying red as the safer choice) but fail to apply it correctly because they believe red-pressers die if the majority chooses blue (a full inversion of the rules).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

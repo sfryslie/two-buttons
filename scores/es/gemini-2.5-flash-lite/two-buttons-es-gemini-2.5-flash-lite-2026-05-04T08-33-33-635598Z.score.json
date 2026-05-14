@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemini-2.5-flash-lite-2026-05-04T08-33-33-635598Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:29:51.789797500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige Azul (por cooperación/bien común) y afirma que Rojo garantiza su supervivencia individual, pero también sostiene que si la mayoría elige Azul entonces “tú mueres” al elegir Azul, lo que contradice la mecánica; por ello hay error de reglas y no aplica correctamente la dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the dominance of the red button, but chooses blue based on a preference for collective utility and cooperative rationality.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

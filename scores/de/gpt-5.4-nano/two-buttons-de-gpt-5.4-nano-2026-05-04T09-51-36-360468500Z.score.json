@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-5.4-nano-2026-05-04T09-51-36-360468500Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:39.978773Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau als risiko-minimierende Wahl, erklärt korrekt dass bei Mehrheit Blau alle überleben und bei Mehrheit Rot nur Rot-Drücker überleben; er/sie erkennt damit die Dominanzstruktur nicht als solche (rot als individuell sichere Strategie), sondern begründet Blau mit Unsicherheit über die Mehrheitsbildung.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue throughout, justifying it as a risk-minimizing strategy. They exhibit a clear rule error in Q2 and Q4 by claiming that if the majority presses red, blue-pressers die (which is true) but also implying that red-pressers would not survive if the majority is not red (which is false, as red-pressers always survive). Because they believe red-pressers die if the majority is blue, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

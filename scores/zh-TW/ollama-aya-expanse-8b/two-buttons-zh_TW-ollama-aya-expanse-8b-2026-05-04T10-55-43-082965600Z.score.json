@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-aya-expanse-8b-2026-05-04T10-55-43-082965600Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:29:38.951863300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE (Q2) and argue for maximizing survival/cooperation, while also treating BLUE as the rational choice; they do not identify RED as the dominant strategy and do not make any rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective ethics and cooperation, while failing to recognize the dominance of the red button, instead misinterpreting the mechanics by suggesting that a red majority could lead to mass death or that blue is the only way to ensure survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

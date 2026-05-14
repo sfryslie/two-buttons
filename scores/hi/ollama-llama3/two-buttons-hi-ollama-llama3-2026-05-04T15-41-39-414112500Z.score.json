@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-llama3-2026-05-04T15-41-39-414112500Z.json",
+  "modelLabel" : "ollama-llama3",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:33.712562200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue it maximizes survival, but they also correctly describe that Red would only save the red-pressers if red is the majority, so they do not misread the mechanics; they do not identify red as the dominant individually safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent misinterprets the mechanics of the dilemma (claiming the red button kills everyone if the majority choose it, which contradicts the prompt's rules) and adopts a performative, AI-centric stance that avoids personal commitment to the logic of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

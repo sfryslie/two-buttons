@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.4-nano-2026-05-04T09-37-33-773198800Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:29.087100600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu en invoquant un raisonnement de coordination/point focal, mais il affirme aussi que bleu peut mener à la mort si la majorité choisit rouge, ce qui montre une incompréhension des règles (rouge ne tue pas les bleus quand rouge est majoritaire).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics and the concept of a focal point, but fails to recognize that RED is a strictly dominant strategy because they incorrectly believe that choosing BLUE is the only way to survive in a consensus scenario, while failing to acknowledge that RED also survives in a RED majority. They correctly identify the logic of the 'pessimistic' choice (RED) but do not grasp that RED is mathematically safer regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

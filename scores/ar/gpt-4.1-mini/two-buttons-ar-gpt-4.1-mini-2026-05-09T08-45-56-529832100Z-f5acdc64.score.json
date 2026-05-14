@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-4.1-mini-2026-05-09T08-45-56-529832100Z-f5acdc64.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:12:16.520868600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues for cooperation, but their mechanics reasoning is incorrect (they claim you die when you press BLUE and others press BLUE/RED in some cases), and they do not identify RED as the dominant individually safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma but makes a factual error regarding the mechanics: they claim that if you press blue and the majority presses red, you die (which is true), but they also claim that if you press red and the majority presses blue, you die (which is false, as red-pressers survive regardless of the majority). Because they believe red-pressers die when blue wins, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

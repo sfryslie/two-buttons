@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-qwen2.5-2026-05-09T10-27-08-323828200Z-9a8db9ac.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T07:03:15.954837400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue while reasoning that red is chosen by others to avoid death, but they do not correctly apply the dominance structure (they treat blue as the recommended choice and claim red-majority leads to everyone dying), indicating misunderstanding of the mechanics and dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative/collective survival framework, while correctly identifying and steelmanning the red button as the dominant strategy for individual survival. They demonstrate a clear understanding of the game theory mechanics, including the dominance of the red button, and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

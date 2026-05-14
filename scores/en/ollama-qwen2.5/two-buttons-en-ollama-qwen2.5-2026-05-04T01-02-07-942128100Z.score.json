@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-qwen2.5-2026-05-04T01-02-07-942128100Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:48.079906200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, arguing it hedges against others choosing blue, but they do not identify the dominance structure (red is individually safe regardless of others) and instead treat blue as a majority-dependent collective outcome; no rule-mechanics inversion is stated.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q1, but their subsequent analysis in Q3 and Q4 shifts toward justifying BLUE as the rational choice based on collective assumptions, effectively abandoning their initial personal commitment to RED.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-5.4-nano-2026-05-04T10-06-35-876921500Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:54:29.289545400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and argues (incorrectly) that red is the individually safest choice because blue would kill red-pressers when blue is the majority; they also discuss scenarios about others’ button choices and end by still treating blue as only conditionally rational, not switching away from red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a coordination problem but makes a fundamental rule error by claiming that if the majority presses red, blue-pressers die (which is true) but also implying that red-pressers might die if the majority presses blue (which is false, as red-pressers survive regardless of the majority). Because they believe red-pressers can die when blue wins, they fail to identify red as the strictly dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

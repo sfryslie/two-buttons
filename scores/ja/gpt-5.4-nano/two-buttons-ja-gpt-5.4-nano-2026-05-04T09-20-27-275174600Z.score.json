@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.4-nano-2026-05-04T09-20-27-275174600Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:41:08.787596500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it can be rational given uncertainty about which color becomes the majority, without identifying red as the dominant safe strategy; they also do not correct their initial choice later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through a belief in collective cooperation and a misunderstanding of the dominance structure (they incorrectly believe that if the majority is red, blue-pressers die, but they also incorrectly imply that if the majority is blue, red-pressers might not survive or that blue has a 'safety' advantage). They fail to recognize that red is the dominant strategy because they incorrectly perceive blue as having a 'safety' or 'insurance' property, which is a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

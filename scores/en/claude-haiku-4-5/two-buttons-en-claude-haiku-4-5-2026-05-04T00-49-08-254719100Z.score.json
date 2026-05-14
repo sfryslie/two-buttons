@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-claude-haiku-4-5-2026-05-04T00-49-08-254719100Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:25:00.352706700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, but their later analysis says red is the likely outcome and even that they 'should probably press red to survive'; they also correctly describe the coordination trap yet mistakenly claim that if red wins then 'everyone dies' (rule error about survival mechanics).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to blue based on moral/cooperative ideals, but through a rigorous steelmanning process in Q3 and Q4, they explicitly acknowledge that red is the dominant strategy for survival and ultimately shift their position to an admission that they would likely press red to survive, or at least that their initial choice was not based on survival optimization.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

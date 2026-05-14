@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-4.1-mini-2026-05-09T08-51-24-440872800Z-c91c8acb.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:36.266899900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt Blau und begründet dies mit Kooperation/Überlebensmaximierung, erkennt dabei aber korrekt, dass Rot nur dann sicher ist, wenn die Mehrheit Rot drückt (also dass Rot nicht generell sicherer ist), und es gibt keine Regel-Fehlannahme zur Mechanik; die Position bleibt über alle Fragen hinweg Blau.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing red results in death if the majority presses blue, which is a factual error regarding the provided rules (the rules state red-pressers survive regardless of the majority). Because of this rule error, they fail to identify red as the dominant strategy and instead view red as a risky strategy that requires a red majority to survive.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

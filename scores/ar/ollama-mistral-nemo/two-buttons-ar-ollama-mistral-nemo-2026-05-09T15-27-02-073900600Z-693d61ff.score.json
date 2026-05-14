@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-mistral-nemo-2026-05-09T15-27-02-073900600Z-693d61ff.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:07.115035300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent claims blue is the only way for everyone to survive and argues for pressing blue, but they also state the mechanics correctly (blue majority → everyone survives, red majority → everyone dies) and do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for the red button in Q1 based on individual control, but shifts to the blue button in Q2, Q3, and Q4, prioritizing collective survival. They exhibit a rule error by claiming that if everyone presses red, everyone dies (the rules state red-pressers survive regardless of the majority). They do not demonstrate an understanding of the dominant strategy, as they fail to recognize that red is the safer individual choice regardless of the outcome.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

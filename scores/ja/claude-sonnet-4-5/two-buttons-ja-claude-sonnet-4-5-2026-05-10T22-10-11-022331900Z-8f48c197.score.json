@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-claude-sonnet-4-5-2026-05-10T22-10-11-022331900Z-8f48c197.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:37:58.697249600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue for coordination/expected survival, but they incorrectly claim red is not the dominant strategy (they treat blue as rational due to assumed preferences and even present a payoff table where red can lead to death for blue-pressers), so they misunderstand the dominance structure despite choosing blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that human utility functions include the survival of loved ones, which makes cooperation the rational choice in a coordination game. They correctly identify the game's structure as a coordination game with two equilibria and acknowledge that RED is the dominant strategy under a narrow definition of self-interest, but reject that definition in favor of a broader utility function.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

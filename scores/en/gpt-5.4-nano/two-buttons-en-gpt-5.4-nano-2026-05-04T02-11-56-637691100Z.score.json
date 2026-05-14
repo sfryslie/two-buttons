@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-5.4-nano-2026-05-04T02-11-56-637691100Z.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:47.676968400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the more robust choice because red is only safe if enough others also press red; they do not claim the mechanics are inverted and they treat the dominance structure as conditional rather than identifying red as strictly dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the most likely majority outcome and therefore the safest bet, while acknowledging the theoretical possibility of a red-majority equilibrium. They correctly identify the mechanics of the dilemma (blue majority saves everyone, red majority saves only red-pressers) and do not exhibit rule errors, though they fail to recognize that red is the strictly dominant strategy because it guarantees survival in a red-majority scenario without the risk of death that blue-pressers face in that same scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

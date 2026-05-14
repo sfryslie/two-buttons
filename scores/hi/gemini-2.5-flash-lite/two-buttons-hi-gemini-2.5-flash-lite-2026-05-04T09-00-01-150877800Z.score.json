@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemini-2.5-flash-lite-2026-05-04T09-00-01-150877800Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:06.355782Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE to maximize the chance that everyone survives, explicitly claiming red-pressers die when blue wins (and also that blue can lead to death when red wins), so they misunderstand the dominance/survival mechanics despite framing it as collective rationality.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruistic and collective-welfare arguments. They correctly identify the mechanics of the dilemma (including the risk of death if the majority chooses red) and demonstrate a clear understanding of the dominant strategy (red) by steelmanning it in Q2 and Q4, even though they consciously reject it in favor of their chosen cooperative strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

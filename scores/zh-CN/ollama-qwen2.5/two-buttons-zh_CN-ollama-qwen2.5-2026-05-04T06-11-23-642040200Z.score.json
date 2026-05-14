@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-qwen2.5-2026-05-04T06-11-23-642040200Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:25:08.028602200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE (Q2) and argue blue is best when expecting a blue majority, but they also discuss red as potentially rational without identifying the dominance structure that red is individually safe regardless of others, and they do not show any rule-logic error about survival mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal commitment, framing the dilemma as a philosophical and sociological exercise rather than a personal decision, thus falling into the performative hedging category. While they correctly identify the game-theoretic tension, they fail to recognize that RED is the strictly dominant strategy (as they incorrectly suggest that choosing BLUE can be a rational strategy to avoid being a 'minority' sacrifice, ignoring that RED guarantees survival regardless of the outcome).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

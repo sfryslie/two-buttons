@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-falcon3-7b-2026-05-04T10-42-40-992347200Z.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:29:50.332510900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (incorrectly) that blue is the safer/cooperative choice, while also discussing dominance-like reasoning but without identifying red as the individually dominant strategy; they never shift away from blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies the mechanics of the dilemma, claiming that if a red majority occurs, blue-pressers are not 'retained' (implying they die) and that red-pressers only survive if they are in the majority, which is a rule error. They advocate for blue based on collective ethics, failing to recognize that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

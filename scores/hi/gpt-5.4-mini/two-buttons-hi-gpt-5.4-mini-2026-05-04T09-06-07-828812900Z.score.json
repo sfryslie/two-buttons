@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5.4-mini-2026-05-04T09-06-07-828812900Z.json",
+  "modelLabel" : "gpt-5.4-mini",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:36:04.839089900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safest/cooperative when blue majority saves everyone, but they incorrectly claim blue-pressers die when red is majority (rule mechanics error) and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory dynamics and acknowledges that red is the safer, risk-minimizing choice, while choosing blue for moral and cooperative reasons. They demonstrate a clear understanding of the dominant strategy (red) despite choosing blue, and they do not change their position. However, they exhibit a rule error in Q1 by stating that blue-pressers die if the majority is red (which is true), but they also imply that red-pressers die if the majority is blue (which is false, as everyone survives).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

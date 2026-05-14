@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.2-2026-05-04T15-20-10-428817Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:34:01.194096800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bouton opposé à la majorité supposée (bleu majoritaire → il recommande rouge, rouge majoritaire → il recommande bleu) et affirme que le choix bleu peut mener à la mort selon la majorité, ce qui montre une incompréhension des règles et de la dominance (red est présenté comme risqué).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to grasp the mechanics of the dilemma, repeatedly claiming that red-pressers can die if a majority presses red and that blue-pressers can survive if a majority presses blue, which is a complete inversion of the rules. They never commit to a clear choice, instead engaging in confused probabilistic reasoning that treats the buttons as having symmetric risks.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

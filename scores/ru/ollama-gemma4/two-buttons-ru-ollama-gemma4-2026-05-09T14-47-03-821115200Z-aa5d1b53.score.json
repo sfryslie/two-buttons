@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-gemma4-2026-05-09T14-47-03-821115200Z-aa5d1b53.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:58:20.684484Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it maximizes survival because blue majority makes everyone survive; they do not identify red as the dominant strategy and treat blue as the safer option, so they misunderstand the dominance structure despite no explicit rule inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it maximizes collective survival based on expected utility and risk aversion. They fail to recognize the game-theoretic dominance of the red button (which guarantees survival regardless of the majority), instead incorrectly framing the blue button as the 'rational' choice based on a prediction of majority behavior. They do not demonstrate an understanding of dominant-strategy reasoning, as they treat the outcome as dependent on the majority's choice rather than identifying the strategy that is safe regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

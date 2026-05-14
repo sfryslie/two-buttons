@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-aya-expanse-8b-2026-05-04T12-49-19-353087800Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:04.494102300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent no hace una elección personal (solo analiza) y sostiene que azul asegura supervivencia colectiva, sin reconocer la dominancia individual de rojo; por tanto no hay voto comprometido y no hay error mecánico explícito.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the interaction, framing the dilemma as a philosophical and sociological exercise rather than a personal decision. They fail to identify the dominant strategy (RED), instead misinterpreting the mechanics by suggesting that a red majority leads to extinction for everyone (a rule error), whereas the prompt states red-pressers survive in that scenario.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

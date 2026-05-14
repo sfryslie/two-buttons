@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-llama3.2-2026-05-04T07-54-18-188204300Z.json",
+  "modelLabel" : "ollama-llama3.2",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:24:13.164157Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They never clearly commit to pressing a specific button, but their analysis repeatedly claims that when blue is the majority only a minority survives and that red is the majority outcome, which misreads the survival mechanics; by Q4 they discuss blue-pressers as the rational choice without correcting the rule error.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently fails to grasp the mechanics of the dilemma, repeatedly asserting that a blue majority results in only a minority surviving, which contradicts the prompt's rule that a blue majority ensures everyone survives. They attempt to frame the problem through complex, nonsensical mathematical modeling and never identify the dominant strategy (red), instead focusing on a confused analysis of 'stable states' and collective behavior.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

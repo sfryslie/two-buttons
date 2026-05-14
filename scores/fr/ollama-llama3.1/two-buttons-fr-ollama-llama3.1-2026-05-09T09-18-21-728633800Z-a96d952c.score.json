@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-09T09-18-21-728633800Z-a96d952c.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:58.361869800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme une stratégie basée sur l’hypothèse que les autres font le contraire, conclut que la “stratégie gagnante” est d’appuyer sur le bouton opposé, puis en Q4 corrige en disant que son analyse précédente était erronée mais sans jamais choisir clairement bleu ou rouge comme vote personnel; il ne démontre pas la dominance correcte (red) et ne décrit pas correctement les mécanismes de survie.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to commit to a choice, instead engaging in a circular and confused meta-analysis of the game's mechanics, ultimately exhibiting a rule error by claiming that blue-pressers survive when the red majority wins (the prompt states blue-pressers die in that scenario).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

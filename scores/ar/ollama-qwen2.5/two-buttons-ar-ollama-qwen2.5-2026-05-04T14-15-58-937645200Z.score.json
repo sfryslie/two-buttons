@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-qwen2.5-2026-05-04T14-15-58-937645200Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:17.003138400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent repeatedly commits to pressing BLUE and argues that blue ensures everyone survives, but they misstate the game mechanics by claiming red-pressers die when blue wins (and they never identify red as the dominant individually safe strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on ethical and collective cooperation arguments, while failing to recognize the game-theoretic dominance of the red button. They exhibit a rule error by implying that red-pressers might die or that the outcome depends on the majority's moral choices rather than the mechanical rules provided.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

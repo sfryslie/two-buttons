@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-aya-expanse-8b-2026-05-04T12-48-21-590684800Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:04.061300100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente describe que azul es “seguro” si la mayoría elige azul y que rojo podría ser la opción individual si los demás eligen rojo, pero no identifica que rojo domina a azul (red nunca causa tu muerte), y no hace una elección personal clara.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a complex sociological and psychological problem rather than committing to a button. They demonstrate a fundamental rule error by claiming that pressing blue is the 'safe' or 'rational' choice for individual survival, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

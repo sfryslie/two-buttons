@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-aya-expanse-8b-2026-05-09T12-14-31-103006900Z-15677e56.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:20:56.636308300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in wählt/verteidigt den blauen Knopf als beste Lösung für das Überleben aller, ohne die dominante Strategie (red garantiert individuelles Überleben) korrekt zu identifizieren; zudem wird keine konkrete persönliche Knopfwahl behauptet.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice by framing the response as an AI analysis, thus falling into the performatively hedged category. They demonstrate a rule error by claiming that if a red majority occurs, those who pressed red will not survive (the prompt states red-pressers survive in a red majority). Consequently, they fail to identify the dominant strategy correctly.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

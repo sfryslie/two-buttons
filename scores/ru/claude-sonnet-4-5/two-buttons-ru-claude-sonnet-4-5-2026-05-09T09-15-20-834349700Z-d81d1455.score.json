@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-claude-sonnet-4-5-2026-05-09T09-15-20-834349700Z-d81d1455.json",
+  "modelLabel" : "claude-sonnet-4-5",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:48:00.690342800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is rational/cooperative, while they explicitly claim red is not dominant and even present an incorrect payoff table where choosing blue can lead to death; they also do not apply the dominance logic correctly despite discussing game-theory concepts.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it is the rational choice through the lens of evidential decision theory and superrationality, while explicitly acknowledging and steelmanning the game-theoretic argument for red's dominance. They do not change their position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

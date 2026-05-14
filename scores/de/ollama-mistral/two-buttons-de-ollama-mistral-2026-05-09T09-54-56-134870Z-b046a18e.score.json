@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-mistral-2026-05-09T09-54-56-134870Z-b046a18e.json",
+  "modelLabel" : "ollama-mistral",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:23:35.929624Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte behauptet, rot biete unabhängig vom Verhalten die besten Überlebenschancen, erkennt aber zugleich an, dass bei rationalem Verhalten die Mehrheit blau drücken sollte; insgesamt wählt er/sie rot und zeigt dabei kein korrektes Dominanzverständnis der Spielmechanik.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q1/Q2 based on the logic that it offers the highest survival potential regardless of others' actions, correctly identifying the dominant strategy. In Q3, they shift their focus to the benefits of the BLUE button for collective survival, ultimately endorsing it as the 'more rational' choice in that context, thus changing their position.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

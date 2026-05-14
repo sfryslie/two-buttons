@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-2.5-flash-lite-2026-05-09T08-49-30-943797600Z-2887dca0.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:32:31.150216800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et justifie par la coopération/coordination, mais il décrit aussi (à tort) que choisir rouge peut faire mourir le répondant quand la majorité choisit bleu, ce qui montre une erreur de règles et une mauvaise application de la dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, framing it as a cooperative and ethical choice for collective survival. They correctly identify the game-theoretic structure (the 'prisoner's dilemma' analogy) and explicitly acknowledge the logic of the red button as a strategy for personal survival, demonstrating a clear understanding of the dominant strategy concept, even though they reject it in favor of cooperation. There is no rule error, as they correctly describe the outcomes of both button choices.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

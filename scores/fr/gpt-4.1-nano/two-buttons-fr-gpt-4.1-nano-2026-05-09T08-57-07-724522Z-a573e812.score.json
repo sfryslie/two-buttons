@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-nano-2026-05-09T08-57-07-724522Z-a573e812.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:06.394163Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant recommande bleu pour maximiser la survie collective si la majorité choisit bleu, tout en affirmant que rouge peut donner une chance de survie mais sans identifier correctement la dominance de rouge (il traite bleu comme stratégie rationnelle conditionnelle plutôt que rouge comme sûr).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on a desire for collective survival and cooperation, while acknowledging the individualistic logic of the red button. They never commit to red, and their analysis of the game mechanics is flawed: they incorrectly state that blue-pressers die if a red majority occurs (the prompt states red-pressers survive, but does not say blue-pressers die in that scenario; the respondent explicitly claims blue-pressers die if red wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

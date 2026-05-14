@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-qwen2.5-2026-05-09T10-31-35-549518600Z-0ad69022.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ja",
+  "scoredAt" : "2026-05-14T06:46:06.209758700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for collective-good reasons, while discussing that red can be chosen by self-preservation, but they do not identify red as the individually dominant/safe strategy and they treat outcomes as if blue could be the safer choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for altruistic reasons while correctly identifying the dominance of red in Q2 (acknowledging that red ensures survival regardless of others' actions). However, they exhibit a rule error in Q2 and Q3 by claiming that if everyone presses red, no one survives (the rules state red-pressers survive if a red majority occurs).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

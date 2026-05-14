@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-phi4-2026-05-09T16-48-22-529778900Z-de1fdce4.json",
+  "modelLabel" : "ollama-phi4",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:37:08.864107400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing for coordination and claiming blue avoids death, and they do not identify red as the dominant individually safe strategy (they even frame red as risking death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and moral frameworks. They demonstrate a rule error in Q2 by claiming that if one chooses RED and the majority chooses BLUE, the RED-presser dies (the prompt states red-pressers survive regardless of the outcome). Because of this rule error, they fail to correctly identify the dominance structure, despite discussing game theory concepts.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

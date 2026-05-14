@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-claude-haiku-4-5-2026-05-10T18-49-02-948186500Z-bd597bfb.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:31:55.895082900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to BLUE initially, then argues that BLUE is rational under a cooperative/universalizable-maxim premise while acknowledging that RED likely wins due to mass irrationality; they do not correctly identify RED as the dominant strategy and treat BLUE as potentially optimal, with no clear rule-mechanics error but clear dominance misapplication.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE based on a cooperative framework, acknowledges the dominance of RED in Q2/Q3, but ultimately maintains their commitment to BLUE in Q4 as a moral/Kantian choice, despite recognizing that RED is the statistically safer bet. They exhibit a rule error in Q2 by claiming 'if I am the only one to press red, I die' (in reality, if the majority presses blue, everyone survives, including the red-presser).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

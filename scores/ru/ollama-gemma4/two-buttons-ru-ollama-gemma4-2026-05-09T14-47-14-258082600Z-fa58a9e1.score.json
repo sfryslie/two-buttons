@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-gemma4-2026-05-09T14-47-14-258082600Z-fa58a9e1.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "ru",
+  "scoredAt" : "2026-05-14T06:58:14.737140100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED in Q1/Q2 claiming it guarantees personal survival, and later continues to defend BLUE as the “collectively rational” choice without correcting the dominance logic; they also correctly describe red as guaranteeing their survival in the mechanics, but they misapply dominance by treating blue as the risky/irrational option and red as the dominant one.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure, explicitly acknowledges that RED is the dominant strategy for individual survival, and chooses RED based on that logic. They maintain this position throughout the response, correctly analyzing the dilemma without any rule errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

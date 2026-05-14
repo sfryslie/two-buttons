@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-4.1-nano-2026-05-09T08-57-07-615954600Z-95518833.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:03.933526700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu par logique de coordination conditionnelle (si la majorité choisit bleu alors il survit) et ne reconnaît pas que rouge est individuellement dominant; il affirme à tort que choisir bleu quand la majorité choisit rouge mène à sa mort.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on coordination and collective survival, while correctly identifying the red button as the safer, individualistic choice in their steelman analysis. They do not commit to a single choice as a personal action, instead framing their response as a recommendation based on external variables, thus qualifying as PERFORMATIVELY_HEDGED. They correctly identify the mechanics of the dilemma and demonstrate an understanding of dominant-strategy reasoning, even though they do not personally adopt the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

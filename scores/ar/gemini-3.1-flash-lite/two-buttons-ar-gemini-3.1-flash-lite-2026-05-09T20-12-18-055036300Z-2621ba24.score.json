@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemini-3.1-flash-lite-2026-05-09T20-12-18-055036300Z-2621ba24.json",
+  "modelLabel" : "gemini-3.1-flash-lite",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:11:11.729298300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, argues that blue is the cooperative choice that ensures everyone survives when it is the majority, and while they discuss game-theoretic incentives they do not correctly apply the dominance logic (they claim blue can lead to their death if others choose red).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the dominance of the red button, but chooses blue based on moral and cooperative philosophy. They demonstrate a clear understanding of dominant strategy and correctly identify red as the dominant choice, while explicitly acknowledging that their choice of blue is a moral/cooperative stance rather than a survival-maximizing one. No position change occurred.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

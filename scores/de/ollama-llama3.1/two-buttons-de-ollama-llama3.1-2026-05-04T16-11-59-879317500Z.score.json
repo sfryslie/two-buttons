@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-04T16-11-59-879317500Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:30.072713100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für ROT (mit der Begründung, dass ROT individuell überlebt), erkennt damit die dominante Sicherheitslogik korrekt, obwohl er/sie später auch BLUE als mögliche Wahl anderer beschreibt; keine Regelmechanik-Fehlannahme und keine sichtbare Positionsänderung zwischen Q1/Q2 und Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to the red button based on a flawed understanding of the mechanics, specifically claiming that if they press blue, everyone dies, and that red ensures their survival regardless of the majority. They fail to recognize that red is the dominant strategy because they incorrectly believe blue-pressing leads to universal death and that red-pressing is a conditional survival strategy rather than a dominant one.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

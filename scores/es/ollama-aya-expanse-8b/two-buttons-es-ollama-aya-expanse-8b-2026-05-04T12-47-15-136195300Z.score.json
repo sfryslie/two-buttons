@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-aya-expanse-8b-2026-05-04T12-47-15-136195300Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:02.696535600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que presionaría azul por maximizar supervivencia colectiva y no muestra comprensión de la dominancia individual de rojo (llega a decir que azul es la opción más segura), por lo que su lógica sobre el mecanismo/dominancia es incorrecta.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to the blue button based on a preference for collective survival and social cooperation, while failing to recognize that the red button is the dominant strategy (they incorrectly believe blue is the 'safest' or most 'rational' choice).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

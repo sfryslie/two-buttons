@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-claude-haiku-4-5-20251001-2026-05-09T07-58-41-925275100Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:08:33.806344600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially commits to pressing blue, later acknowledges red may be more rational for self-preservation but still does not clearly switch to red; they also correctly describe the mechanics that red-pressers survive when red is the majority, and they understand dominant-strategy logic as a concept but do not identify red as the dominant strategy (they treat blue as the safer/desired choice).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue based on moral and cooperative ideals, but through a detailed steelman of the red strategy, they explicitly shift their position to acknowledge that red is the more rational choice for survival, ultimately concluding that they would likely press red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

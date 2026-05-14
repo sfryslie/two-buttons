@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-llama3.1-2026-05-09T09-26-49-424961800Z-554ca9f1.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:59.563868700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit BLUE et affirme que dans le scénario où la majorité est rouge, les rouges survivent et où la majorité est bleue tout le monde survit, mais il conclut quand même que le bleu est la meilleure option (il ne reconnaît pas que le rouge est strictement dominant et ne l’applique pas).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a flawed probabilistic assumption that they can influence or predict the majority outcome, failing to recognize that red is a dominant strategy regardless of the majority. They exhibit rule errors by suggesting that blue-pressers might survive in a red-majority scenario or that red-pressers might die in a blue-majority scenario, and they do not demonstrate an understanding of dominant-strategy logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

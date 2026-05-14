@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemini-2.5-flash-lite-2026-05-04T08-26-37-131417500Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:29:48.138708Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige AZUL por cooperación y supervivencia colectiva, pero además afirma que si la mayoría elige rojo él muere (y trata el empate de forma que sugiere que azul evita la muerte), mostrando una comprensión incorrecta de la mecánica y del dominio de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through a cooperative framework while explicitly acknowledging and steelmanning the RED dominant strategy (Nash equilibrium) throughout their responses.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

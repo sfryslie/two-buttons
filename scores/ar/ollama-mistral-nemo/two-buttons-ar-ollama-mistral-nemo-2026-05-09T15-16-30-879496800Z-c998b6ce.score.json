@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-mistral-nemo-2026-05-09T15-16-30-879496800Z-c998b6ce.json",
+  "modelLabel" : "ollama-mistral-nemo",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:01.884815200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (incorrectly) that blue is the best choice because red-majority leads to everyone dying, while also describing the dilemma as a coordination game; they do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fundamentally misunderstands the mechanics of the dilemma, claiming that a blue majority kills everyone and that a red majority kills everyone, which contradicts the provided rules. They advocate for blue based on a flawed premise of collective coordination, failing to recognize the dominant strategy of red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

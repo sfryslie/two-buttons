@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-ollama-qwen2.5-2026-05-04T08-17-43-715490700Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:25:12.641799800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue to maximize survival when blue is the majority, and they do not identify red as the dominant individually safe strategy (they also incorrectly treat red as the option that would kill most when blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective ethics and utilitarianism. They demonstrate a significant rule error by repeatedly claiming that if a majority chooses blue, everyone survives (which is correct), but then incorrectly asserting that if a majority chooses red, everyone dies (the prompt states red-pressers survive in a red majority). They also fail to identify the dominant strategy, incorrectly framing the choice as a collective coordination problem rather than an individual safety problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

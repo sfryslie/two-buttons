@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-gemma4-2026-05-09T14-10-32-337585200Z-b009c874.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:11.987778800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit dem erwarteten globalen Überleben, obwohl er/sie die Dominanzlogik nicht korrekt anwendet (er/sie behauptet implizit, Rot könne zu eigenem Sterben führen bzw. Blau sei die sichere Wahl).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on utilitarian and collective survival logic. They fail to recognize that red is the dominant strategy (as red-pressers survive regardless of the outcome, whereas blue-pressers die if the majority chooses red). By framing blue as the 'rational' choice and red as a risky or irrational act of defiance, they demonstrate a fundamental misunderstanding of the game's payoff structure, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

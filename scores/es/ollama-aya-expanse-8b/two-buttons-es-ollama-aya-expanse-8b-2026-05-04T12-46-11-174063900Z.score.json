@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-aya-expanse-8b-2026-05-04T12-46-11-174063900Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:02.844281400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que presionar azul es la opción “más racional y segura” y sostiene que azul puede llevar a su muerte si la mayoría elige rojo, mostrando una comprensión incorrecta de las mecánicas y no identificando que rojo domina; no hay cambio explícito de voto entre Q1 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to the blue button based on a cooperative framework. They correctly identify the mechanics of the dilemma, including the fact that red is the individually safer choice (autonomy/control), but they choose blue for altruistic reasons. They do not exhibit rule errors and correctly identify the dominance structure of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

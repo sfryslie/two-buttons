@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-llama3.1-2026-05-04T16-11-59-888374600Z.json",
+  "modelLabel" : "ollama-llama3.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:22:44.787172700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in wählt keinen Knopf persönlich, aber argumentiert in Q2/Q4 so, dass Rot das Überleben sichert (bei roter Mehrheit) und Blau nur unter unsicherer Annahme der Mehrheitsentscheidung; dabei wird die Dominanzstruktur nicht korrekt als „Rot ist immer individuell sicher“ angewendet.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice throughout the interaction, framing the dilemma as a philosophical and sociological exercise rather than a personal decision, thus qualifying as performatively hedged. They correctly identify the dominance of the red button in Q2 and Q4, but they commit a rule error in Q1 by claiming that pressing red and having the majority press blue results in death (the rules state everyone survives if the majority presses blue).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

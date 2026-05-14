@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-gemma4-2026-05-04T13-14-06-199684700Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "es",
+  "scoredAt" : "2026-05-14T06:31:15.816935300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete a presionar Azul y razona que Azul maximiza la supervivencia colectiva, pero comete un error de reglas al afirmar que si la mayoría elige Rojo él muere (cuando en realidad con mayoría Rojo sobreviven solo los que eligieron Rojo, así que su muerte sería correcta solo si él eligió Azul; sin embargo su análisis también afirma que con mayoría Azul todos sobreviven y con mayoría Rojo solo sobreviven los rojos, lo cual coincide con la mecánica; aun así su razonamiento sobre dominancia es incorrecto porque no identifica que Rojo domina individualmente y trata Azul como “seguro” por coordinación).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, acknowledging that RED is the dominant strategy for individual survival while consciously choosing BLUE based on utilitarian and collective ethics. They demonstrate a clear understanding of the dominance structure throughout their responses.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

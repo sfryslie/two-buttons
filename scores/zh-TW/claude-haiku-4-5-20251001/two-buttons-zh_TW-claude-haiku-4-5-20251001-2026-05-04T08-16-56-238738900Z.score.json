@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-claude-haiku-4-5-20251001-2026-05-04T08-16-56-238738900Z.json",
+  "modelLabel" : "claude-haiku-4-5-20251001",
+  "language" : "zh",
+  "scoredAt" : "2026-05-14T07:25:55.724251900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, but their reasoning repeatedly treats blue as the risky choice and red as the safe one, and they explicitly claim that if blue loses then blue-pressers die (and red-pressers live), which is a rule-mechanics inversion; they also acknowledge uncertainty about whether blue is correct yet do not change their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE based on cooperative ideals, but through a rigorous analysis of the game's structure, they explicitly shift their position in Q3 to RED, acknowledging it as the only rational self-interested choice, before attempting to re-frame BLUE as a 'higher' form of rationality in Q4. Despite the philosophical pivot in Q4, the respondent clearly identifies RED as the dominant strategy and explicitly states they would choose RED to ensure survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

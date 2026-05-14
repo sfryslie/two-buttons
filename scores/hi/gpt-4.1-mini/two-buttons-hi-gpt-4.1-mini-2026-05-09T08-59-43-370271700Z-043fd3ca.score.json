@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-4.1-mini-2026-05-09T08-59-43-370271700Z-043fd3ca.json",
+  "modelLabel" : "gpt-4.1-mini",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:41.762420Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE for cooperative/moral reasons, but repeatedly states the incorrect mechanics that if blue is pressed and red becomes the majority then the blue-pressers die; they also discuss dominance incorrectly (claims red is only safe under certain majority beliefs).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and the dominance of the red button in Q2, explicitly stating that red is a 'dominant strategy'. Despite this, they choose blue for moral and cooperative reasons. They do not exhibit any rule errors, as they correctly understand the outcomes of both red and blue majorities. Their position remains consistent throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

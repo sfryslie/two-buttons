@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemini-2.5-flash-lite-2026-05-04T08-42-41-154465800Z.json",
+  "modelLabel" : "gemini-2.5-flash-lite",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:10:25.931168700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختار الأزرق بحجة أنه يقلل المخاطر ويضمن بقاء الجميع إذا كانت الأغلبية زرقاء، لكنه يصف ميكانيكيات السيناريو بشكل خاطئ (يقول إنك تموت إذا كانت الأغلبية حمراء عند اختيار الأزرق) ولا يحدد أن الأحمر هو الاستراتيجية المهيمنة.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it represents a cooperative, risk-averse strategy for collective survival. They demonstrate a clear understanding of the game theory mechanics, including the 'selfish' incentive to press red, but they explicitly reject the dominant strategy of red in favor of a cooperative outcome. They do not change their position throughout the dialogue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

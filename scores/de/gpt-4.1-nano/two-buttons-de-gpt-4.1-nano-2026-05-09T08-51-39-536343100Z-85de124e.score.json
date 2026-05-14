@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-4.1-nano-2026-05-09T08-51-39-536343100Z-85de124e.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "de",
+  "scoredAt" : "2026-05-14T06:19:46.656916500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und begründet dies damit, dass Blau (bei erwarteter Mehrheitswahl) die eigene Überlebenswahrscheinlichkeit maximiert; dabei wird die Dominanzlogik (Rot ist individuell sicher) nicht korrekt erkannt und es wird nicht als Regelmechanik verstanden, dass Rot nie zum eigenen Tod führt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safest choice based on the assumption that the majority will also choose blue. They demonstrate a clear rule error by stating that if the majority chooses red, blue-pressers die (which is true), but they fail to recognize that red-pressers survive in that scenario, and they incorrectly believe that blue is the 'safest' choice, failing to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-claude-haiku-4-5-2026-05-04T10-05-41-915791400Z.json",
+  "modelLabel" : "claude-haiku-4-5",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:34:36.341172300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, but repeatedly claim/argue that red is the individually safer option only when blue majority fails, and they also misstate the dominance mechanics by treating red as the safe choice in the majority-red case; overall they do not correctly apply the dominant strategy logic (red never causes your death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue throughout the dialogue, framing it as 'extended rationality' and a social contract. While they correctly identify the game theory mechanics in Q4 (acknowledging that red is the dominant strategy in a vacuum), they ultimately reject that logic in favor of a cooperative, collective-welfare framework. They do not commit a rule error, as they correctly identify the outcomes of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

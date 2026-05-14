@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-gemma4-2026-05-04T01-27-06-888189500Z.json",
+  "modelLabel" : "ollama-gemma4",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:28:03.803322900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue Blue is the dominant/optimal strategy for maximizing survival, while incorrectly claiming Red is the minimax/safe option and treating Blue as the dominant strategy rather than recognizing Red strictly dominates Blue; no vote change is shown.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses Blue, arguing it is the rational choice for maximizing collective survival. They demonstrate a clear misunderstanding of game theory by misidentifying Blue as the 'dominant strategy' (when Red is the dominant strategy) and incorrectly claiming that Red-pressers die if the majority presses Blue (the prompt states everyone survives if the majority presses Blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

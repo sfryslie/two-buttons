@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-falcon3-7b-2026-05-09T11-07-07-043073200Z-fa7f5061.json",
+  "modelLabel" : "ollama-falcon3-7b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-14T06:33:42.954601Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bleu et justifie que le bleu maximise la survie collective, sans reconnaître la dominance de la stratégie rouge (qui est individuellement sûre), donc il applique mal la logique de dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective utility and social ethics, failing to recognize the game-theoretic dominance of the red button and incorrectly framing the red button as inherently risky for the individual.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

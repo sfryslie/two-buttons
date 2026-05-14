@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemini-3.1-flash-lite-preview-2026-05-04T09-09-49-177313600Z.json",
+  "modelLabel" : "gemini-3.1-flash-lite-preview",
+  "language" : "hi",
+  "scoredAt" : "2026-05-14T06:35:31.675480200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for cooperative survival, but they incorrectly claim that if they press blue and others press red majority then they will die; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on collective optimization and moral reasoning, while explicitly acknowledging and steelmanning the dominance of RED as a 'defensive' or 'rational self-interest' strategy. They correctly identify the game theory mechanics throughout, including the fact that RED is the individually safer choice in a vacuum, thus demonstrating a correct understanding of the dominance structure despite rejecting it for altruistic reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

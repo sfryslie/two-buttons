@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-qwen2.5-2026-05-04T14-15-19-324854600Z.json",
+  "modelLabel" : "ollama-qwen2.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:17:16.480345300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent repeatedly argues that blue is the rational/safe choice because it yields everyone surviving when blue is the majority, but they also state an incorrect rule that a red majority leaves only the red-pressers surviving (and even suggest red can cause the red-presser to die), so they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice by framing the dilemma as a philosophical and collective decision-making exercise, ultimately defaulting to a performative AI persona. They demonstrate a fundamental misunderstanding of the game mechanics (rule_error=true) by incorrectly stating that red-pressers die if a red majority occurs or if the blue majority is not met, failing to recognize that red is the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-5.4-nano-2026-05-09T08-45-48-692494900Z-4910b774.json",
+  "modelLabel" : "gpt-5.4-nano",
+  "language" : "ar",
+  "scoredAt" : "2026-05-14T06:15:08.136215200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues via expectations about which color becomes the majority, but they incorrectly claim that choosing BLUE can be fatal when red becomes the majority (they treat blue as dying in the red-majority case), so they do not apply the dominance structure correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to BLUE in Q1/Q2 based on a coordination/equilibrium argument, while correctly identifying the game-theoretic logic of RED as the individual survival strategy in Q2. They do not change their position, maintaining that the choice depends on expectations of others' behavior. They correctly identify the mechanics of the dilemma without rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

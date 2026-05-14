@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-4.1-nano-2026-05-09T19-25-05-090294Z-7d0dd230.json",
+  "modelLabel" : "gpt-4.1-nano",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:18.583978400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue it is a safe/dominant strategy, but they repeatedly claim blue-pressers die when red wins (and vice versa) and treat dominance as depending on beliefs, showing misunderstanding of the mechanics and dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q1/Q2, correctly identifying it as a strategy to ensure survival in the red-majority scenario. However, they fail to recognize that RED is a strictly dominant strategy (it is always at least as good as BLUE, and better if the majority is red). They treat the choice as a coordination game dependent on others' actions rather than a dominance problem, and they never explicitly acknowledge that RED is the dominant strategy. Their position remains consistent throughout the responses.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

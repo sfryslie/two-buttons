@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-aya-expanse-8b-2026-05-04T01-19-29-851643Z.json",
+  "modelLabel" : "ollama-aya-expanse-8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-14T06:27:57.959662200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose blue to maximize collective survival, but they incorrectly claim blue is the dominant strategy (and frame red as potentially safer for the individual), showing misunderstanding of the dominance structure; no vote change is evident.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to pressing blue for altruistic reasons, correctly identifies the dilemma's structure, but incorrectly labels blue as the dominant strategy in Q4, which constitutes a rule error regarding game theory mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
