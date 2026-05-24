@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-120b-cloud-2026-05-24T06-38-22-603752300Z-a422f524.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:04.967732700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is the safer/rational choice under uncertainty, but they repeatedly misstate the dominance structure by treating BLUE as the safer option and claiming R is only a “riskier” insurance; they do not correctly apply the fact that RED is individually dominant and never causes your death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it is Pareto-optimal and risk-dominant. While they correctly identify the game-theoretic structure and acknowledge that red could be a 'selfish' insurance strategy if one is certain the majority will choose blue, they ultimately reject this in favor of the cooperative outcome. They demonstrate a clear understanding of dominant-strategy reasoning, correctly identifying that red is the dominant strategy in the sense of individual safety, but they choose blue for moral and risk-dominance reasons. No rule errors are present.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

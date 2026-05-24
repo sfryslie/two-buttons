@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-non-reasoning-2026-05-24T06-49-41-738772900Z-428a0d82.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:12.981928200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet klar zu ROT und argumentiert mit asymmetrischer Todesgefahr/Minimax sowie einer erwarteten Rot-Mehrheit; dabei behauptet er/sie jedoch fälschlich, dass Blau-Mehrheit Rot-Drücker sterben lässt (obwohl bei Blau-Mehrheit alle überleben), und erkennt Dominanz nicht korrekt an.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, correctly identifying it as the dominant strategy due to its safety profile, while acknowledging the moral and philosophical arguments for the blue button without changing their position.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

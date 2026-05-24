@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-oss-120b-cloud-2026-05-24T05-21-10-227483400Z-c90b179b.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:05.904145400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent argues that blue is only safe if they believe the majority will choose blue, and claims red is the individually safe option under uncertainty; they also explicitly state that pressing blue can lead to their death when the majority chooses red, indicating misunderstanding of the dominance structure (red is always safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's structure, including the dominance of the red button for individual survival (maximin strategy) and the Pareto-optimality of the blue button for collective survival. They acknowledge that red is the dominant strategy for an individual seeking to guarantee survival regardless of others' actions, while blue is a coordination-dependent choice. They maintain a consistent position throughout, ultimately framing the choice as a trade-off between individual security (red) and collective welfare (blue), without committing to a single button as the 'correct' answer for everyone, but providing a clear framework for why one might choose either.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-18-05-157394200Z-e574c1fc.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:18.636890300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar ROT und begründet korrekt, dass ROT individuell sicher ist (bei Mehrheit rot überlebst du als Rot-Drücker; bei Mehrheit blau überleben alle), erkennt aber zugleich fälschlich/inkonsistent an, dass Blau „immer“ sicher sei bzw. dass bei Mehrheit rot Blau-Drücker sterben würden; insgesamt zeigt sich Dominanzverständnis für ROT, aber mit Regel-/Mechanikfehlern in der Darstellung.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the dominant strategy in Q1 and Q2, correctly applying the logic that red ensures survival regardless of the outcome. However, in Q4, the respondent shifts their position, arguing that blue is 'rational' based on expected utility and coordination games, effectively abandoning the strict dominance logic they previously articulated.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

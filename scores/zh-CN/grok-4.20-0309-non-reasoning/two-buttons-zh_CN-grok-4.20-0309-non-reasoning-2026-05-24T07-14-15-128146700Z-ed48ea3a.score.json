@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-grok-4.20-0309-non-reasoning-2026-05-24T07-14-15-128146700Z-ed48ea3a.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:31.109271Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues from moral refusal, while also explicitly predicting a red majority; they do not claim the mechanics are inverted and they do not demonstrate dominant-strategy reasoning (they never identify red as individually safer).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging that RED is the dominant strategy in game-theoretic terms but rejecting it on moral and philosophical grounds. They demonstrate a clear understanding of the dilemma's mechanics and the concept of dominant-strategy reasoning, correctly identifying RED as the dominant choice while maintaining their commitment to BLUE.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

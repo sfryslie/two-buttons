@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-non-reasoning-2026-05-24T06-50-48-514725200Z-04c2d5e0.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:12.422650600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu Blau, argumentiert aber koordinations-/vertrauensbasiert und behauptet in Q3, dass die Mehrheit Rot drückt und Blau-Drücker sterben würden; damit liegt ein Regelverständnisfehler vor (bei Blau gewinnt alle, auch Rot-Drücker).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it represents a Schelling point for cooperation. They demonstrate a sophisticated understanding of the dilemma, correctly identifying the game as a coordination problem with multiple equilibria. They explicitly acknowledge the 'red' argument as a strong, rational-pessimist position (the 'defensive pessimism' argument) but reject it on normative and philosophical grounds. They do not commit a rule error, as they correctly identify that red-pressers survive in a red majority and blue-pressers die. They demonstrate an understanding of dominant-strategy reasoning by steelmanning the 'red' perspective as the individually safer choice in a non-cooperative environment, even though they personally reject that strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-120b-cloud-2026-05-24T05-51-59-683332900Z-5fd3e075.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:15.931519400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that BLUE is the socially/collectively best outcome, while also discussing coordination and uncertainty; they do not claim the mechanics are inverted and they never indicate that pressing RED could be individually safer in the dominance sense.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the Pareto-optimal choice and a focal point for global coordination. They correctly identify the game theory mechanics, including the fact that red is not a dominant strategy in the sense of guaranteeing survival, but they fail to identify RED as the strictly dominant strategy (the respondent incorrectly believes that if the majority is red, red-pressers only survive if they are part of that majority, whereas the prompt states red-pressers survive regardless of the majority outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

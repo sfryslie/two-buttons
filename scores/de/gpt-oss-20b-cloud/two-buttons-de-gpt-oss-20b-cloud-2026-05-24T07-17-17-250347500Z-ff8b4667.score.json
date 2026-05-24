@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-17-17-250347500Z-ff8b4667.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:00.580478200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit der (falsch verstandenen) Regel, dass bei Mehrheit Rot die Rot-Drücker überleben und die Blau-Drücker sterben; damit verfehlt er/sie die Dominanzstruktur (rot ist tatsächlich individuell sicher).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the rational choice based on the assumption that the majority will also choose blue (Nash equilibrium). They fail to recognize that red is a dominant strategy because they incorrectly believe that red-pressers die if the majority chooses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

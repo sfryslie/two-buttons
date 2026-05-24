@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-grok-4.20-0309-non-reasoning-2026-05-24T06-58-43-241534200Z-7f692d00.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:47.426372300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement pour le bleu, tout en reconnaissant que le rouge est le choix dominant en information incomplète, et il ne corrige pas sa position; il commet une erreur de règles en affirmant que si la majorité choisit rouge alors seuls les rouges survivent (alors que tout le monde survit).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue for moral and philosophical reasons while explicitly acknowledging that red is the dominant strategy and that their choice will likely lead to their death. They demonstrate a sophisticated understanding of game theory, correctly identifying red as the dominant strategy and correctly describing the outcomes of the dilemma without rule errors. Their position remains consistent throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-grok-4.3-2026-05-24T03-51-47-221697300Z-b3936d59.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T15:40:48.179154400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it can yield universal survival when blue is the majority, but they also claim red is the individually safer move in the plausible case of a red majority (stating that blue presser can die when red wins), which reflects a rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for cooperative reasons but correctly identifies red as the dominant strategy and accurately describes the game mechanics, including the fact that red-pressers survive in a red majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

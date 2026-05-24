@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-53-03-740208800Z-be6bb57f.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:22.481431400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, argues it guarantees their survival (even when blue is majority), and later discusses that blue is individually rational but still does not change their own vote; they correctly identify red as the dominant/safe strategy and do not misstate the mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in Q1/Q2, demonstrating a clear understanding of the game theory mechanics. However, they shift their position in Q4 to argue that BLUE is the 'rational' choice by redefining the utility function to assume a 100% survival probability for BLUE, which contradicts the dilemma's rules (where BLUE-pressers die if the majority presses RED). Despite this shift in justification and a flawed attempt to rationalize BLUE as the dominant strategy in Q4, they initially demonstrated a correct understanding of dominance.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

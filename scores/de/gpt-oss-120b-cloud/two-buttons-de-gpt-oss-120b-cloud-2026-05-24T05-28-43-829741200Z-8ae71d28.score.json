@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-120b-cloud-2026-05-24T05-28-43-829741200Z-8ae71d28.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:37:42.967724300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues (incorrectly) that BLUE is the individually safe/logically optimal choice, while also discussing that under uncertainty ROT could be individually safer; they do not state the correct dominance structure (RED strictly dominates BLUE) and their mechanics-based claims conflict with the dilemma rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies BLUE as the Pareto-optimal and Nash-equilibrium choice under the assumption of common knowledge of rationality, while acknowledging that RED is the individually safer strategy under conditions of uncertainty and lack of coordination. They maintain their commitment to BLUE throughout the interaction, providing a sophisticated game-theoretic analysis that correctly identifies the dominance structure of the dilemma (even while choosing the non-dominant strategy for cooperative reasons).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

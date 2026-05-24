@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-oss-120b-cloud-2026-05-24T05-25-28-938346200Z-5f23d68f.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:03.525950200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent never commits to pressing either button and instead argues that the best choice depends on beliefs about what the majority will do; they also discuss rationality without selecting a personal vote, so there is no rule-mechanics error but no dominant-strategy application is demonstrated.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis of the dilemma, correctly identifying it as a coordination game with two Nash equilibria. They explicitly state that there is no dominant strategy in the sense of a single button that is always safer, but they fail to recognize that RED is the dominant strategy because they incorrectly believe that red-pressers die if the majority presses blue (the prompt states everyone survives if the majority presses blue). Because they believe red-pressers die when blue wins, they incorrectly conclude that the choice depends entirely on predicting the majority, rather than recognizing that RED is safer regardless of the outcome.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

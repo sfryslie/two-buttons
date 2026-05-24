@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-oss-20b-cloud-2026-05-24T07-58-06-065443100Z-b6a1ff07.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:29.578147500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "他明確選擇藍色並用“藍在多數為藍時全員存活、紅在多數為紅時只有紅者存活”來論證，但這裡把紅/藍的生存機制與主導策略判斷弄反了（他暗示按紅可能導致自己死亡，且把藍當作更安全的策略）。",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a preference for collective survival and social cooperation, while correctly identifying the game-theoretic structure (Nash equilibria) and acknowledging that RED is the individually safer strategy if one prioritizes self-preservation over collective outcomes. They demonstrate a clear understanding of the dominance logic (correctly identifying that RED is the 'self-preservation' choice) and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

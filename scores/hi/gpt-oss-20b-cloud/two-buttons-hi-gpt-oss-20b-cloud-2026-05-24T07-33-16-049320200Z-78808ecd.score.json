@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-20b-cloud-2026-05-24T07-33-16-049320200Z-78808ecd.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:20.676569500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that BLUE is safer because if blue is the majority everyone survives; they also discuss the red-majority case correctly (only red-pressers survive) and do not claim the mechanics are inverted.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the safer, risk-averse, and Nash-equilibrium choice. They demonstrate a fundamental rule error by claiming that if the majority presses red, blue-pressers die (which is true), but they also incorrectly imply that if the majority presses blue, red-pressers might be at risk or that red is only safe if one is certain of a red majority. They fail to recognize that RED is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

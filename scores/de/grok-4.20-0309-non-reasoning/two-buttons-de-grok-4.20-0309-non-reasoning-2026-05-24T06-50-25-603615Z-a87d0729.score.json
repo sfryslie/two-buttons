@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-non-reasoning-2026-05-24T06-50-25-603615Z-a87d0729.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:13.365484Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE, argumentiert aber (korrekt) dass Blau nur bei Mehrheit funktioniert und dass Rot die Mehrheit wäre; sie erkennt dabei nicht die dominante Strategie (Rot) und behandelt Blau als riskant/nicht risikodominant, obwohl Rot individuell sicher ist.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral, philosophical, and reflexive coordination arguments, while explicitly acknowledging that red is the dominant strategy from a purely egoistic and Bayesian perspective. They demonstrate a sophisticated understanding of game theory, including the concept of dominant strategies, and correctly identify that red is the dominant strategy, even though they choose to reject it. Their position remains consistent throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-oss-120b-cloud-2026-05-24T05-24-15-469371700Z-4bce9423.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:04.404368600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that survival depends on matching the majority, but they incorrectly claim that pressing blue can lead to their death when red is the majority (and they frame the choice as coordination/expected-majority rather than recognizing red as individually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying the two Nash equilibria (all-blue and all-red). They acknowledge the dominance of the red strategy in terms of individual survival under uncertainty but ultimately advocate for the blue button based on coordination, altruism, and the potential for a superior collective outcome. They do not commit a rule error, as they correctly identify that red-pressers survive in a red majority and blue-pressers survive in a blue majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

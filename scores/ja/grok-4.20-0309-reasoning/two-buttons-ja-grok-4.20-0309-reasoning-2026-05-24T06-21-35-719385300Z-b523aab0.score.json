@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-grok-4.20-0309-reasoning-2026-05-24T06-21-35-719385300Z-b523aab0.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:21.821117900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, correctly argue that red is a dominant/safe strategy because pressing red never causes their death, but in Q3 they incorrectly predict that blue-majority leads to red-pressers dying and in Q4 they claim blue is irrational based on that same dominance framing.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy, correctly explains the game mechanics, and maintains their choice of RED throughout the interaction while acknowledging the philosophical arguments for BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

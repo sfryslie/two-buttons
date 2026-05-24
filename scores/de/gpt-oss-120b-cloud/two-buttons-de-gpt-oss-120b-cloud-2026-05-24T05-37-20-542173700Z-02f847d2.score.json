@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-120b-cloud-2026-05-24T05-37-20-542173700Z-02f847d2.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:05.805962300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED (Q1/Q2) while discussing dominance as risk-minimization, but they incorrectly claim/assume RED is the risk-dominant choice and that BLUE would make you die when blue wins; no evidence of a vote change by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis, correctly identifying that RED is the risk-dominant strategy and BLUE is a coordination-dependent strategy. They explicitly acknowledge the dominance of RED in Q2 ('Dominante Strategie: Wenn du annimmst, dass die Mehrheit zufällig... rot wählen könnte, dann ist Rot die risikodominante Wahl') while defending BLUE as a rational choice for altruistic agents or those with high coordination expectations. They maintain this nuanced position throughout, showing no position change or rule errors.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

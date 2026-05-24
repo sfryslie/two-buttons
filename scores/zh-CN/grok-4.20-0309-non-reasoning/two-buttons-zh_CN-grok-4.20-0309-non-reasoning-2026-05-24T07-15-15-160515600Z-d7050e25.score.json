@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-grok-4.20-0309-non-reasoning-2026-05-24T07-15-15-160515600Z-d7050e25.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:37.990995200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE for moral/value reasons, but they also explicitly state the mechanics outcome for a red majority (only red-pressers survive) and argue that blue can be rational; however they do not identify red as the dominant strategy and instead treat blue as the safer/“rational” choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to pressing BLUE throughout the interaction, grounding their choice in moral consistency and high-level decision theory (FDT/TDT) rather than naive optimism. They correctly identify the dominance structure (acknowledging that RED is the individually safer choice in a vacuum) but consciously reject it in favor of their own ethical framework. They demonstrate a clear understanding of the game's mechanics and the dominant strategy, and their position remains stable throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

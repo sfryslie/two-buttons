@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-grok-4.3-2026-05-24T05-17-50-930227500Z-59516f7e.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:25.513794400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue for cooperation/majority-blue survival, while also claiming that if red wins then blue-pressers die—showing a rule misunderstanding about the mechanics; they do not demonstrate correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for cooperative reasons, correctly identifies the red-presser's logic as a 'pure self-preservation' strategy, and acknowledges that red is the safer choice under a pure self-interest framework, though they do not explicitly label it as 'dominant' in the game-theoretic sense. They maintain their choice of blue throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

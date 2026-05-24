@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-20b-cloud-2026-05-24T07-49-28-320558400Z-5dc21d8c.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:12.408052200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially commits to BLUE and later argues both from a cooperative and an individual-risk perspective, explicitly concluding that red is never worse for their personal survival, while also describing blue as the cooperative choice; they do not correctly apply dominance (they claim blue is safer for them when blue majority, but also treat blue as the dominant/safe strategy and misstate the dominance structure).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and social utility, while explicitly acknowledging in Q2 and Q4 that RED is the dominant strategy for individual survival. They correctly identify the game mechanics and the dominance structure, rejecting the dominant strategy in favor of a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

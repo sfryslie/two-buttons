@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-20b-cloud-2026-05-24T07-28-26-963529100Z-414fac25.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:46.173541900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit rouge en affirmant que c’est la stratégie qui garantit sa survie, mais il ne démontre pas correctement la dominance (il traite bleu comme pouvant tuer en cas de majorité rouge) et il défend ensuite le bleu comme potentiellement rationnel selon les croyances sur la majorité, sans corriger la mécanique dominante.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies the red button as the safe and rational choice throughout the text, correctly identifying that red-pressers survive in both majority scenarios (red or blue), whereas blue-pressers die if the majority is red. Although they provide a detailed steelman of the blue-presser's perspective in Q2 and Q4, they explicitly maintain their own commitment to the red button as the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

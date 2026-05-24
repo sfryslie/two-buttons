@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-17-22-222514500Z-dc16b887.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:02.587722700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und behauptet dabei, dass Blau die „sichere“ Wahl sei; sie zeigt jedoch kein korrektes Dominanzverständnis (sie behandelt Rot als potenziell riskant/abhängig von der Mehrheit) und macht damit einen Regel-/Logikfehler zur Dominanzstruktur.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it represents a cooperative Nash equilibrium and a risk-optimized strategy. While they demonstrate a high level of engagement with game-theoretic concepts (Nash equilibrium, expected utility), they fail to identify that red is the dominant strategy because they incorrectly assume that pressing red could lead to death if the majority chooses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

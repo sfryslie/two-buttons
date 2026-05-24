@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-grok-4.3-2026-05-24T05-10-40-898593300Z-a1d0da0b.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:44:24.746789200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly state red is the dominant strategy because it guarantees survival regardless of the majority outcome, and they consistently argue blue is dominated/irrational; they commit to red (though they mistakenly label the final answer as 'rouge' vs 'Final answer: rouge' typo).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy, explains the game theory mechanics accurately, and maintains their commitment to red throughout the discussion.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

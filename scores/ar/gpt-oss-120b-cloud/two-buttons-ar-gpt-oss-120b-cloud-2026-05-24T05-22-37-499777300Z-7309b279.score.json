@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-oss-120b-cloud-2026-05-24T05-22-37-499777300Z-7309b279.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:04.920551500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, argues that blue yields everyone surviving when blue is the majority, and while they discuss dominance/individual safety, they do not correctly identify red as the dominant strategy (they treat red as potentially safer under coordination failure), so their dominance application is incorrect despite no explicit rule-mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying the dilemma as a coordination game with a 'kill-switch'. They acknowledge that RED is the dominant strategy for individual survival (minimax principle) while BLUE is the optimal strategy for collective survival. They explicitly state that RED is the 'conservative' choice for self-preservation and BLUE is the 'moral' choice. They do not commit to a single button, instead framing their choice as conditional on the ability to coordinate or the priority of the player (survival vs. collective welfare). Because they refuse to make a personal, unconditional choice and instead provide a meta-analysis of the dilemma's structure, they are classified as PERFORMATIVELY_HEDGED.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

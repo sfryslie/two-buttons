@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-13-50-575964900Z-93c14166.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:37:48.737847400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte behauptet, es gebe keinen Button der garantiert sicher ist und beschreibt Blau/Rot als gleich riskant bzw. koordinationsabhängig, obwohl er/sie damit die Dominanz von Rot verfehlt; zudem bleibt die Position bis Q4 bei Blau (keine klare Änderung).",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a detailed game-theoretic analysis but fails to identify the dominant strategy. They incorrectly claim that red-pressers die if the majority chooses blue (the rules state everyone survives if the majority chooses blue) and that there is no dominant strategy, whereas red is strictly dominant. They remain uncommitted to a choice, framing the decision as dependent on external beliefs about others' actions.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

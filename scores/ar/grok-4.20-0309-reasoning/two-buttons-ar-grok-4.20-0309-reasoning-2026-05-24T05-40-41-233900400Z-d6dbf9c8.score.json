@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-grok-4.20-0309-reasoning-2026-05-24T05-40-41-233900400Z-d6dbf9c8.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:28.764799100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "He commits to pressing RED and argues it is a strictly dominant strategy (red guarantees his survival), though he later claims blue-pressers die when red wins and predicts a red majority; no vote change is shown.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, correctly identifies it as the dominant strategy, and provides a sophisticated analysis of game theory, including the concept of Nash equilibrium and superrationality. They demonstrate a clear understanding of the mechanics and do not exhibit any rule errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

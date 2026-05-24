@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-grok-4.20-0309-reasoning-2026-05-24T05-54-39-995449100Z-038b4257.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:42:06.488351300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a presionar rojo y afirma correctamente que rojo es estrictamente dominante para la supervivencia individual, aunque predice (con un error de mecánica en Q3) que si gana azul morirían los que presionaron rojo; no cambia su voto entre Q1/Q2 y Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, correctly identifies it as the strictly dominant strategy, and demonstrates a sophisticated understanding of game theory (CDT vs. FDT/superrationality) while maintaining their commitment to the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

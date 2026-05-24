@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-15-23-269323600Z-19730399.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:37:53.020473900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival for everyone when blue is the majority, while also discussing dominance but not identifying red as the individually dominant/safe strategy; no rule-mechanics error is stated (they correctly describe the outcomes).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the 'rational' choice for collective survival. They demonstrate a clear misunderstanding of the game's mechanics by claiming that BLUE is the 'dominant strategy' and that RED is only safer if one correctly predicts a RED majority. They fail to recognize that RED is the dominant strategy because it guarantees survival regardless of the majority outcome, whereas BLUE relies on the actions of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

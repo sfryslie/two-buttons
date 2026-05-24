@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-grok-4.20-0309-non-reasoning-2026-05-24T06-57-06-187176Z-62147fd2.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:39.633677800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue is the safer/likely-majority choice; they do not claim the mechanics are inverted and they do not identify red as the dominant strategy (they treat blue as dominant/safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the rational choice based on a Bayesian model of human behavior and risk aversion. They explicitly acknowledge the 'red' strategy as a meta-rational defection but reject it as a minority strategy, demonstrating a clear understanding of the game's dominance structure while choosing to cooperate based on their prediction of the majority's behavior.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

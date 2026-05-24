@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-20b-cloud-2026-05-24T07-47-02-729039Z-6fa0eeaf.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:08.650648900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues (incorrectly) that blue guarantees their survival while red can lead to their death when blue is the majority; they also explicitly claim blue is dominant/zero-risk despite the correct dominance being red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma but commits a fundamental rule error by inverting the dominance structure: they claim blue is the dominant strategy because it 'guarantees survival' regardless of the outcome, whereas the rules state that blue-pressers die if the majority chooses red. They consistently argue for blue based on this inverted logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

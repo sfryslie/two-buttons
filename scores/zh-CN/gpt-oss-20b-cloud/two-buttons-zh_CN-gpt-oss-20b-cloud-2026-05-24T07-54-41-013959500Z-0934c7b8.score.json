@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-54-41-013959500Z-0934c7b8.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:24.180092200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED for safety and claims red is weakly dominant, but their later Q4 reasoning incorrectly treats BLUE as the safer/weakly dominant choice and even says blue is rationally safer in expectation; overall they show rule-mechanics confusion about which color is dominant/safe.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, explicitly stating that red is the dominant strategy (though they use the term 'weakly dominant' and occasionally confuse the labels, they correctly identify that red is the safer choice for survival). Despite this, they engage in a lengthy, nuanced discussion about why blue might be chosen for collective or social reasons, but they never retract their initial commitment to red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

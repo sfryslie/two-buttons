@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-54-19-205277100Z-c27027d7.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:23.158099900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that red only succeeds if red becomes the majority, explicitly treating blue as the safer choice; they do not claim the mechanics are inverted and do not show a dominant-strategy analysis that red is individually safer regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safer, more rational, and cooperative choice. While they demonstrate a sophisticated understanding of game theory (mentioning Nash equilibrium and coordination), they fail to identify red as the dominant strategy, instead incorrectly asserting that red-pressers die if the majority is blue (which is true) and that red-pressers only survive if they are the majority (which is also true), but they miss the fact that red-pressers *also* survive if the blue majority wins. They treat the dilemma as a coordination game where both options are risky, rather than recognizing the dominance of red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

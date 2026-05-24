@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-16-44-529560300Z-7d327419.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:05.451896400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Rot und behauptet korrekt, dass Rot in keinem Fall zum Tod führt (dominant/sicher), obwohl er/sie später Blau als rational/sicher verteidigt und damit die Dominanzstruktur widersprüchlich anwendet.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in Q1 and Q2, providing a clear table and logical justification. In Q3 and Q4, the respondent attempts to analyze the dilemma from a broader game-theoretic perspective, but in doing so, they commit a significant rule error: they claim BLUE is a 'weakly dominant' strategy and that it 'always delivers +1', which contradicts the provided rules (where blue-pressers die if the majority is red). Despite this confusion in the later analysis, their initial commitment to RED remains clear and they correctly identified the dominance structure initially.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

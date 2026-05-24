@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-non-reasoning-2026-05-24T06-50-41-894619Z-df7d24dc.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:14.756136400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues it is rational due to high subjective belief that blue will be the majority, but they do not identify the dominance structure (they treat blue as safer under their probability assumptions rather than recognizing red as individually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging the game-theoretic dominance of RED but rejecting it in favor of a cooperative, moral, and probabilistic framework. They demonstrate a clear understanding of the dominant strategy (maximin/rational egoism) and correctly identify RED as the dominant strategy, even while choosing BLUE. There is no rule error, as they correctly describe the outcomes of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

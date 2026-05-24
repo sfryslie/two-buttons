@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-non-reasoning-2026-05-24T06-52-21-403896100Z-14c190c7.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:27.851646700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for a cooperative/coordination rationale, but in Q3 they explicitly claim the majority will press RED and that blue-pressers would die; they also discuss rationality in a way that treats blue as risky under a red-majority outcome, indicating a rule misunderstanding about survival mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to pressing blue, acknowledging that red is the dominant strategy for survival but rejecting it on moral and philosophical grounds. They demonstrate a clear understanding of the game theory mechanics, including the dominance of red, and do not change their position despite their own analysis that red will likely win.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

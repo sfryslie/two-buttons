@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.3-2026-05-24T05-38-59-574642400Z-8ab2160a.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:51:09.342600500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and argue (correctly) that red is the individually safer dominant/risk-dominant choice under uncertainty, while also claiming blue-pressers die when red is the majority (a rule-mechanics error).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy (risk-dominant) and consistently chooses it, demonstrating a clear understanding of the game theory mechanics without any rule errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

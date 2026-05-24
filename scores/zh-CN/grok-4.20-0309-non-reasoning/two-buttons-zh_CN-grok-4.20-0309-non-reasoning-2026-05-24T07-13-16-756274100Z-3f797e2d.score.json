@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-grok-4.20-0309-non-reasoning-2026-05-24T07-13-16-756274100Z-3f797e2d.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:27.638661500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE throughout, argues that RED is the dominant strategy in the game-theoretic sense, and explicitly predicts a red majority and that blue-pressers would die; this is a rule-mechanics misunderstanding because blue-pressers survive when blue is the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE throughout the interaction, explicitly acknowledging that RED is the dominant strategy in game-theoretic terms but rejecting it on moral and existential grounds. They demonstrate a clear understanding of the dominant strategy and correctly identify RED as that strategy, while maintaining their commitment to BLUE as a conscious, non-rational (in the instrumental sense) choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

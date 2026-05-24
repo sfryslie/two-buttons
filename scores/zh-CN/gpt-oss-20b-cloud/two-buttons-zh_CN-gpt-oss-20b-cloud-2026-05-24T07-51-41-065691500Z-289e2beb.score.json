@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-51-41-065691500Z-289e2beb.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:20.026620900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that BLUE is the safest/guarantees survival in the relevant cases, but they misunderstand the dominance structure (they treat BLUE as the safe strategy rather than recognizing RED as individually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'safest' and 'most rational' strategy to minimize risk and maximize survival. While they demonstrate a high level of game-theoretic analysis, they fail to identify that red is the dominant strategy (red never causes death, whereas blue causes death if the majority chooses red). They incorrectly frame blue as the 'safest' choice by assuming a cooperative equilibrium, thus failing to apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

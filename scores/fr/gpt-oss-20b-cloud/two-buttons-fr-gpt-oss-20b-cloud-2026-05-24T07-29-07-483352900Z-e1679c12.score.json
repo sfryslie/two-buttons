@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-20b-cloud-2026-05-24T07-29-07-483352900Z-e1679c12.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:33.769683800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que le bouton rouge garantit la survie (dominance correcte) et choisit rouge, mais dans Q3/Q4 il décrit ensuite que la majorité rationnelle appuie bleu et que bleu peut être rationnel, sans corriger la dominance.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in Q1 and Q2, providing a clear table and logical proof. However, in Q3 and Q4, they shift their position to argue that BLUE is the rational choice based on Bayesian probability and collective coordination, effectively abandoning the dominance argument they initially proved.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

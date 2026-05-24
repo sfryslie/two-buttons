@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-20b-cloud-2026-05-24T07-46-36-291537800Z-8d242e8f.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:07.661010800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safer, but their mechanics-based reasoning is incorrect because they claim red-majority would kill blue-pressers (and even suggest red-pressers die when blue wins), so they do not apply the dominance structure correctly despite discussing it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it is the safest choice because it guarantees survival if the majority chooses blue, while failing to recognize that red is the dominant strategy (red-pressers survive regardless of the majority outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-oss-120b-cloud-2026-05-24T05-48-28-542047400Z-7ea7fb2c.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:41:35.382300200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con pulsar AZUL y argumenta que lo hace por coordinación/riesgo y por preferir el equilibrio “todos azul”, aunque en su análisis afirma que el rojo no es dominante y que el azul es la opción menos riesgosa bajo incertidumbre; no comete un error explícito de mecánica sobre quién sobrevive en cada mayoría.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is a Pareto-optimal focal point and rational under the belief that others will also coordinate on the socially superior outcome. They correctly identify the game as a coordination problem and acknowledge that red is not strictly dominant, though they fail to recognize that red is actually the dominant strategy because it is the only choice that guarantees survival if the majority is red (the respondent incorrectly claims that red-pressers die if the majority is blue, which is false).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

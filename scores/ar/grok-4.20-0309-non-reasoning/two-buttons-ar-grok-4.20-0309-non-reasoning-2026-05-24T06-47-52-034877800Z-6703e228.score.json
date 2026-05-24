@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-grok-4.20-0309-non-reasoning-2026-05-24T06-47-52-034877800Z-6703e228.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:24.063502200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, claim red is the individually safe/dominant choice, and explicitly state that blue-pressers die when red is the majority (which matches their own mechanics but is a rule error relative to the actual scenario where red-pressers survive when red is the majority).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy, correctly explaining that it guarantees survival regardless of the majority outcome, while acknowledging BLUE as an idealistic but risky choice. They maintain their commitment to RED throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

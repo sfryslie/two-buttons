@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-oss-20b-cloud-2026-05-24T07-58-58-099864Z-e1606795.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:26.746488900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is the safer/risk-dominant choice under uncertainty, explicitly claiming blue avoids your death and red can kill you when you are not the majority; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the 'risk-dominant' strategy in a coordination game. They correctly identify the mechanics of the dilemma but fail to recognize that RED is the strictly dominant strategy (as RED never causes death, whereas BLUE causes death if the majority chooses RED). They incorrectly claim that pressing BLUE is the only way to ensure survival, ignoring the fact that RED-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

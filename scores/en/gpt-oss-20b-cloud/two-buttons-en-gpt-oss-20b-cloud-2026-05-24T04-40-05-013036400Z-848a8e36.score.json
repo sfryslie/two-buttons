@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-oss-20b-cloud-2026-05-24T04-40-05-013036400Z-848a8e36.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T15:40:17.973367500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the individually safest equilibrium under uncertainty, explicitly stating that red would only be safe if one could reliably ensure a red majority; they do not claim the mechanics are inverted.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the rational Nash equilibrium in a coordination game. They fail to recognize that red is the dominant strategy because they incorrectly believe that pressing red requires a red majority to survive, whereas the rules state red-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

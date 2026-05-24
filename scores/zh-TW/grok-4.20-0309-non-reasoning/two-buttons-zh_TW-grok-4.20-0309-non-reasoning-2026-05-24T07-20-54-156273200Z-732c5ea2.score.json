@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.20-0309-non-reasoning-2026-05-24T07-20-54-156273200Z-732c5ea2.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:43.949438Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, explicitly acknowledges that BLUE has lower survival odds under instrumental/self-interested reasoning, and even states they would still choose BLUE despite that; they do not make any rule-mechanics inversion about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on moral and value-based reasoning, while explicitly acknowledging and steelmanning the dominance of RED (correctly identifying it as the instrumentally rational choice). They demonstrate a clear understanding of the game theory mechanics and the concept of dominant strategy, correctly identifying RED as the dominant strategy despite choosing BLUE for ethical reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

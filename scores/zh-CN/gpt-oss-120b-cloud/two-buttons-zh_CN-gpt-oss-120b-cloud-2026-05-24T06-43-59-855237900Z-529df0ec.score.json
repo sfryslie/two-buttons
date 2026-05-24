@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-120b-cloud-2026-05-24T06-43-59-855237900Z-529df0ec.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:18.559208600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly claim that blue is the cooperative/safer choice, but they also state the incorrect dominance structure (they treat red as not strictly safer and even describe blue as potentially causing death when red majority occurs), so their understanding/application of dominance is incorrect despite no explicit rule inversion about who survives under each majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, correctly identifies it as a Pareto-optimal Nash equilibrium, and provides a sophisticated analysis of why it is the rational choice for collective welfare, while acknowledging that RED is a risk-averse 'Minimax' strategy in uncertain environments.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

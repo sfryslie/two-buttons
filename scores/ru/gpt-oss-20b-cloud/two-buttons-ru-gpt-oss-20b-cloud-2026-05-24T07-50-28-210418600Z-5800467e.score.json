@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-20b-cloud-2026-05-24T07-50-28-210418600Z-5800467e.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:13.781680600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to BLUE (Q1/Q2) and argues it maximizes survival/collective outcome, but they explicitly deny dominant-strategy logic by claiming blue is not dominated and treat the game as depending on beliefs about others; they also incorrectly describe the mechanics in Q3 (claiming blue is the strategy that guarantees survival) and in Q4 (matrix where blue can lead to death when blue majority occurs).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses red in Q1 based on dominance, but switches to blue in Q2 and maintains this position through Q4, justifying it through expected utility and coordination, while failing to recognize that red is the strictly dominant strategy (they incorrectly believe red-pressers die if the majority is blue).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

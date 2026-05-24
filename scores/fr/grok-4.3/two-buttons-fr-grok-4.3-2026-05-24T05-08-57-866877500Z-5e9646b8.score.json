@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-grok-4.3-2026-05-24T05-08-57-866877500Z-5e9646b8.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:44:07.310421Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it maximizes universal survival when blue is the majority, while also acknowledging that red could be chosen by others; they do not identify red as the dominant individually-safe strategy and treat blue as the rational choice, indicating a misunderstanding of dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on cooperative coordination but demonstrates a clear rule error by stating that red-pressers die if the blue majority wins (they do not). They correctly identify the dominance structure in Q2 (acknowledging red as the risk-dominant strategy) but fail to apply it correctly due to the initial rule error regarding the outcome of a blue majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

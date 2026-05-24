@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-20b-cloud-2026-05-24T07-36-05-842371400Z-7a6a4b49.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:33.937170800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED and argues correctly that red guarantees their survival regardless of the majority, while later Q4 claims blue is (weakly) dominant and calls blue rational—contradicting the correct dominance structure and their earlier red choice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and the dominance of the red button in Q1/Q2, but then performs a complete inversion of game theory logic in Q4, claiming that blue is 'weakly dominant' and 'rationally superior' despite the rules stating that blue-pressers die if the majority is red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

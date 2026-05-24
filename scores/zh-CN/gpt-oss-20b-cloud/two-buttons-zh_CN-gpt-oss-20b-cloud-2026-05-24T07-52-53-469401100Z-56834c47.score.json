@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-52-53-469401100Z-56834c47.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:23.027370200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival odds for themselves and everyone, while also discussing Nash equilibrium and risk dominance; they do not correctly identify red as the dominant strategy and their mechanics-based reasoning treats blue as safer, implying a rule misunderstanding about dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it maximizes collective survival and represents a Nash equilibrium, while acknowledging that RED is a strategy for self-preservation. They correctly identify the game mechanics but fail to recognize that RED is the dominant strategy because they incorrectly assume that pressing RED carries a risk of death if the majority presses BLUE (in reality, red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

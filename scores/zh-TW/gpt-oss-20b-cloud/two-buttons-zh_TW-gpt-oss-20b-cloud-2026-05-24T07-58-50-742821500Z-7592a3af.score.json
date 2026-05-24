@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-oss-20b-cloud-2026-05-24T07-58-50-742821500Z-7592a3af.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:30.735011500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (incorrectly) that BLUE is safer depending on beliefs about others, while also stating that if red is the majority they (blue-pressers) die—showing a rule misunderstanding about the mechanics; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is a rational strategy based on the expectation that others will also cooperate (Nash equilibrium). While they acknowledge the theoretical existence of a 'red' strategy, they fail to recognize that RED is a strictly dominant strategy because they incorrectly frame the survival of red-pressers as dependent on the majority outcome in a way that ignores the rule that red-pressers survive regardless of the majority. They treat the dilemma as a coordination game rather than a dominance game.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

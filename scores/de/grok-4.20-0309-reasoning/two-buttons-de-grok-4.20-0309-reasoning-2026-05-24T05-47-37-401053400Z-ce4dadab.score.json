@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-reasoning-2026-05-24T05-47-37-401053400Z-ce4dadab.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:29.844408500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and correctly state that red is dominant and guarantees their survival regardless of the majority, while also predicting a red majority and (incorrectly) claiming blue-pressers die when blue wins (they say 'Alle Blau-Drücker sterben' under majority red).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy, correctly explains the game theory mechanics, and maintains their commitment to RED throughout the interaction while acknowledging the moral arguments for BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

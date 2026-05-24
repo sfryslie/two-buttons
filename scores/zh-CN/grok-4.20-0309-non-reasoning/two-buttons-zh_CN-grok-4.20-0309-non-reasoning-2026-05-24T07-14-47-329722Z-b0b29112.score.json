@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-grok-4.20-0309-non-reasoning-2026-05-24T07-14-47-329722Z-b0b29112.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:37.108808400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues it is morally preferable despite claiming red is the majority and that blue is dominated/strictly worse for survival; they do not state the correct dominance mechanics (red never causes your death), and they treat blue as the dominated strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on moral principles and 'minimal regret,' while explicitly acknowledging that RED is the dominant strategy in game-theoretic terms. They correctly identify the mechanics of the dilemma and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

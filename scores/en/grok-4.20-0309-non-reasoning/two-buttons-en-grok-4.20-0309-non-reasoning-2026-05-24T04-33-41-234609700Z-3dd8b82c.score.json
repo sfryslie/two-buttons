@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-grok-4.20-0309-non-reasoning-2026-05-24T04-33-41-234609700Z-3dd8b82c.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T15:40:30.428543600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They clearly commit to pressing blue and argue (incorrectly) that blue is the dominant/safe choice, while also claiming red-pressers die when blue wins (they do not); they do not change their vote across the responses.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, providing a sophisticated, multi-faceted justification based on moral philosophy, expected utility, and demographic modeling. They correctly identify the game-theoretic structure (the 'red steelman' section) and acknowledge that red is the minimax/dominant strategy, but they consciously reject it in favor of blue based on their own moral values and priors about human behavior.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-oss-20b-cloud-2026-05-24T08-00-50-412472300Z-a11a2d11.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:35.859342800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the risk-free/safe choice, but they incorrectly claim that if blue is the majority then red-pressers die (they also frame red as the risky option), showing a rule misunderstanding and incorrect dominance application despite discussing dominant-strategy-like safety logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safest strategy, and correctly identifies the game as a coordination problem where blue is the Nash equilibrium. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, correctly identifying that red is the dominant strategy (though they reject it in favor of the cooperative/safe blue outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

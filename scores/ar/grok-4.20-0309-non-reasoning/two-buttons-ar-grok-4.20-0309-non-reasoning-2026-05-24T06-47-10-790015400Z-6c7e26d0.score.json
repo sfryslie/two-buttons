@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-grok-4.20-0309-non-reasoning-2026-05-24T06-47-10-790015400Z-6c7e26d0.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:20.945677Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, but their mechanics are wrong (they claim blue-pressers die when red is the majority) and they explicitly argue red is the individually safer dominant choice while still defending blue on moral grounds; no clear vote change is shown from Q1 to Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on moral idealism, but through a rigorous analysis of game theory and human behavior, they explicitly acknowledge that red is the rational choice for survival. By Q4, they conclude that choosing blue is 'irrational' from a survival perspective, effectively shifting their position to recognize red as the dominant strategy, even if they maintain a personal preference for the moral ideal.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

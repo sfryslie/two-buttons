@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-56-07-111870700Z-c74d0975.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:37.989745300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "他明确选择按蓝，并论证蓝多数时所有人存活、红多数时只有红者存活；同时他把“按红更安全/占优”这一点说错为“按红风险更高”，因此在主导策略理解与应用上均不正确。",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the rational choice for survival. They demonstrate a clear misunderstanding of the game's mechanics by claiming that pressing RED is risky and that BLUE is the 'safest' strategy, failing to recognize that RED is a dominant strategy (pressing RED never causes death). They explicitly argue that BLUE is the rational choice and RED is only for extreme, irrational, or niche scenarios, thus failing to identify the dominance structure correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

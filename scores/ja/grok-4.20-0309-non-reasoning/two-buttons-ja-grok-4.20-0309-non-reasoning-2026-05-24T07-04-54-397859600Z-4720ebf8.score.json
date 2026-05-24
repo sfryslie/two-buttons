@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-grok-4.20-0309-non-reasoning-2026-05-24T07-04-54-397859600Z-4720ebf8.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:10.977614800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (incorrectly) that if red becomes the majority then blue-pressers die, while also discussing dominance in terms of expected survival but not identifying red as the individually dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE for moral and cooperative reasons while explicitly acknowledging that RED is the dominant strategy and that their own choice is 'irrationally' optimistic based on game theory. They demonstrate a perfect understanding of the dilemma's mechanics and the dominance structure, correctly identifying RED as the rational choice for survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

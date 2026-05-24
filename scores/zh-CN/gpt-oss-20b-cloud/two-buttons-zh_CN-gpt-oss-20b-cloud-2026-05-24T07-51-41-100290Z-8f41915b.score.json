@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-51-41-100290Z-8f41915b.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:19.739213700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues from a (mis)understanding that blue is the safer choice when expecting blue-majority, while also incorrectly stating that red is the dominant/safe strategy in some parts; overall they do not apply the dominance structure correctly and show rule/logic confusion about who dies under each majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the 'safe' and 'cooperative' choice. While they demonstrate a high level of engagement with game theory concepts (Nash equilibrium, expected utility), they fail to identify that RED is a strictly dominant strategy. They incorrectly believe that pressing RED carries a risk of death if the majority presses BLUE (the rules state red-pressers survive regardless of the majority). Because they believe RED is risky and BLUE is safe, they fail to apply dominance correctly and exhibit a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

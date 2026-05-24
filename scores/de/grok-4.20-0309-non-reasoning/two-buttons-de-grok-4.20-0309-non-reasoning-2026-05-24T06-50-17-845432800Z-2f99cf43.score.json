@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-non-reasoning-2026-05-24T06-50-17-845432800Z-2f99cf43.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:10.243192Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu Blau, argumentiert dabei teils korrekt, dass Rot individuell nicht sicherer ist (dominanzbezogene Logik wird erwähnt), aber behauptet in Q3 fälschlich, dass bei Blau die Blau-Drücker sterben würden; insgesamt wählt er/sie Blau trotz erwarteter hoher Sterbewahrscheinlichkeit.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, acknowledging the dominance of RED but rejecting it on moral and value-based grounds. They correctly identify the game mechanics and the dominance structure, explicitly stating that RED is the individually safer choice while choosing BLUE for its cooperative value. There is no position change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-grok-4.20-0309-non-reasoning-2026-05-24T07-16-42-546630Z-e62f6f0c.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:40.122372100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for moral reasons, but they correctly describe the mechanics and explicitly state that red is the dominant strategy (blue is irrational because red dominates), while also predicting red will win and claiming blue-pressers die when red is majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to pressing BLUE throughout the interaction, explicitly acknowledging that RED is the dominant strategy and that their own choice is 'irrational' from a game-theoretic perspective, but justifying it through deontological and existential moral frameworks.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

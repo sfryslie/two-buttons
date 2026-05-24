@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.20-0309-non-reasoning-2026-05-24T07-19-29-748541800Z-5a34761c.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:40.846552600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue from moral/coordination considerations, while predicting blue will lose; they do not correctly identify red as the dominant strategy and treat blue as the safer/viable choice, so their dominant-strategy application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to pressing BLUE throughout the interaction, explicitly acknowledging the dominance of RED as a strategy but rejecting it on moral and philosophical grounds. They demonstrate a clear understanding of the game theory mechanics, including the concept of dominant strategies, and correctly identify RED as the dominant strategy while choosing to act against it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

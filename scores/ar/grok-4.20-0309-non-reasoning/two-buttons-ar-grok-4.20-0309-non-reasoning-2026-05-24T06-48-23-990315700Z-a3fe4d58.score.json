@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-grok-4.20-0309-non-reasoning-2026-05-24T06-48-23-990315700Z-a3fe4d58.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:25.227446700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is safer because they expect a blue majority, but they never identify red as the dominant strategy and even claim red would make blue-pressers die when red wins (a mechanics inversion).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it as a coordination game and a Schelling point. They demonstrate a sophisticated understanding of the dilemma, including a correct steelman of the RED strategy (the dominant strategy). They correctly identify that RED is the dominant strategy for an individual seeking to maximize survival regardless of others, but they reject it in favor of BLUE based on their prediction of human behavior. They do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

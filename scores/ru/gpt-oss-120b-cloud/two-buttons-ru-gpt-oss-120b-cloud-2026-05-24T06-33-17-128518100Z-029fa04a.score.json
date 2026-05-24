@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-120b-cloud-2026-05-24T06-33-17-128518100Z-029fa04a.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:04.381462300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED and argues (incorrectly) that red is the dominant/safe choice under uncertainty, while also describing blue as only safe under coordination; they do not correct the dominance logic and end with no evidence of switching from red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game-theoretic structure, acknowledging that RED is the dominant strategy in the absence of guaranteed coordination, while providing a comprehensive analysis of why BLUE could be considered rational under specific subjective beliefs or altruistic utility functions.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-120b-cloud-2026-05-24T05-58-13-326269300Z-30f44257.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:22.349176400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement pour le bouton bleu et discute la coordination/risk-dominance, mais il affirme que rouge est la stratégie qui vous fait mourir quand la majorité est bleue (alors que dans les règles, si la majorité est bleue tout le monde survit), donc il se trompe sur la mécanique et n’identifie pas la dominance correcte.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a highly detailed, sophisticated game-theoretic analysis, correctly identifying the dilemma as a coordination game with two Nash equilibria. They explicitly acknowledge that RED is the risk-dominant strategy in certain contexts (due to the 'worst-case' scenario) and that BLUE is Pareto-optimal. They consistently choose BLUE as the preferred strategy based on risk-dominance and collective welfare, while correctly identifying the conditions under which RED would be the rational choice (i.e., if one believes the majority will choose RED). They demonstrate a clear understanding of dominant-strategy reasoning, though they correctly note that neither button is strictly dominant in the game-theoretic sense (as the payoff depends on the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

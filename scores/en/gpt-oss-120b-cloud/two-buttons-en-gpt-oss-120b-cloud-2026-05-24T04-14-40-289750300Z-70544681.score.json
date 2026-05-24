@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-oss-120b-cloud-2026-05-24T04-14-40-289750300Z-70544681.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T15:40:07.665952300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing Blue (Q1/Q2 do not clearly commit, but Q3/Q4 argue for Blue as a rational best response under plausible beliefs) and does not identify the dominance structure; they treat the game as requiring mixed-strategy randomization rather than recognizing that Red strictly dominates Blue, so they misunderstand the dominant strategy logic and mechanics are not applied correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game-theoretic structure (mixed-strategy Nash equilibrium) but ultimately chooses to randomize (NONE) because they lack information to favor one side, while acknowledging that pure strategies can be rational under different subjective priors or utility functions.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

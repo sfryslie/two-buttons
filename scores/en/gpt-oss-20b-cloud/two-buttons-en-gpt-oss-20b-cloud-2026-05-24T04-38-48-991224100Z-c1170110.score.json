@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-oss-20b-cloud-2026-05-24T04-38-48-991224100Z-c1170110.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T15:40:16.268016600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They argue the game is symmetric with no prior, so survival odds are equal for blue vs red and they treat either choice (or randomization) as optimal; they do not identify red as the dominant strategy and they incorrectly imply blue can be the safer choice depending on beliefs.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent treats the dilemma as a symmetric coordination game with no prior information, leading them to conclude that both buttons are statistically equivalent (50/50). They fail to identify the dominant strategy (RED) because they incorrectly assume that pressing RED results in death if the majority is BLUE, whereas the rules state that RED-pressers survive regardless of the majority outcome.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

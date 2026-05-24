@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-20b-cloud-2026-05-24T07-33-25-959463600Z-58095c7c.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:17.265573700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer/cooperative choice under uncertainty, explicitly claiming blue is the individually safer option and not recognizing red as the dominant strategy; they also correctly state the mechanics that blue majority saves everyone and red majority saves only red-pressers.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safer, more rational choice under uncertainty. They fail to identify red as the dominant strategy, instead treating the dilemma as a coordination game where blue is the 'safe' equilibrium. They do not demonstrate an understanding of dominant-strategy reasoning, as they incorrectly believe that pressing red carries a risk of death if the majority chooses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

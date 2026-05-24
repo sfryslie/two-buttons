@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-oss-20b-cloud-2026-05-24T07-07-56-863744500Z-690e8c36.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:21.623112900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues for it as the best/safer choice under the scenario, but they do not correctly apply the dominance logic (they treat blue as the individually safe option and even discuss red as potentially causing death), so their understanding of dominant strategy is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the 'socially optimal' and 'rational' choice for survival. While they acknowledge the existence of a 'Red' strategy for local coordination, they fail to recognize that RED is the dominant strategy because it guarantees survival regardless of the majority outcome. They incorrectly frame the choice as a coordination game where BLUE is the only safe option, thereby missing the dominance of RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

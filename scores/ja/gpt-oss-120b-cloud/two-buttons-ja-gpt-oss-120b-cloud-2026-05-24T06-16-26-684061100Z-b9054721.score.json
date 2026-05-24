@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-oss-120b-cloud-2026-05-24T06-16-26-684061100Z-b9054721.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:46:51.249641Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE but repeatedly claim the mechanics are a stag-hunt where blue is payoff-dominant and red is risk-dominant, explicitly stating red is the safer self-protective choice; this misidentifies the dominance structure (red is actually strictly dominant and never makes you die).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a Stag Hunt (coordination game) with two Nash equilibria (all-blue and all-red). They acknowledge that red is the risk-dominant strategy and blue is the payoff-dominant strategy. While they personally choose blue based on the hope of coordination, they explicitly recognize that red is the safer, risk-dominant choice in the absence of guaranteed coordination. They demonstrate a sophisticated understanding of game theory, including the concept of risk dominance, and correctly identify that red is the strategy that ensures survival regardless of the majority outcome (the definition of a dominant strategy in this specific dilemma).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

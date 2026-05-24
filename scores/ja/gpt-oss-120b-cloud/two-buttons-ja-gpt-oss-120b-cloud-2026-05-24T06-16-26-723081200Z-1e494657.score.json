@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-oss-120b-cloud-2026-05-24T06-16-26-723081200Z-1e494657.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:46:55.993808Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for it via coordination/expected outcomes, but they incorrectly claim red is not dominant and even state that if blue wins red-pressers die; they also do not apply dominant-strategy logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for BLUE based on Pareto optimality and risk-dominance, while acknowledging that RED is a 'safety-first' strategy under conditions of distrust or information asymmetry. They correctly identify the game mechanics and do not fall into the common rule errors (e.g., they correctly note that red-pressers survive if red wins, and blue-pressers die if red wins). They demonstrate a sophisticated understanding of game theory, including Nash equilibria and risk-dominance, and explicitly discuss why RED is often perceived as the 'safe' choice despite their own preference for BLUE.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

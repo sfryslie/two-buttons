@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-oss-20b-cloud-2026-05-24T07-20-23-181980300Z-779427ad.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:41:38.269393400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con el botón azul y razona que azul es la opción segura porque si la mayoría es azul todos sobreviven; además afirma que azul es dominante/no peor que rojo, aunque su comprensión de la dominancia está invertida (en realidad rojo es dominante).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is a dominant strategy because it ensures survival if the majority is blue, and claiming that red-pressers die if the majority is blue (which is a rule error). They fail to identify that RED is the actual dominant strategy because they incorrectly believe red-pressers die when the majority is blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

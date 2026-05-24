@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-grok-4.20-0309-reasoning-2026-05-24T05-46-39-067692700Z-90ba1fb0.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:33.987141500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED, correctly argue red is individually guaranteed to keep them alive regardless of others, and later defend blue as irrational without changing their vote; however they also claim blue-pressers die when red wins, which is a rule-mechanics error (in fact everyone survives if blue is majority).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy, correctly explains the game mechanics, and maintains their commitment to RED throughout the interaction. They acknowledge the moral argument for BLUE but reject it as irrational in the context of the dilemma's survival mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-oss-120b-cloud-2026-05-24T07-00-33-075929700Z-3b335405.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:21.801107200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to RED when coordination is impossible and to BLUE when they believe a blue majority will occur; they correctly describe the mechanics (blue majority saves everyone, red majority saves only red-pressers) but they deny dominant-strategy logic by claiming no option guarantees safety and by treating BLUE as conditional on others, so they do not apply dominance correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a coordination game and acknowledges that red is the safer choice in the absence of coordination, while blue is the Pareto-optimal choice if coordination is achieved. They explicitly state their choice depends on the ability to coordinate, choosing blue if coordination is possible and red if it is not. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, correctly noting that red is the safer choice in an anonymous/uncoordinated setting.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-20b-cloud-2026-05-24T07-34-45-046745600Z-4a668008.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:20.540645300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (with some incorrect mechanics) that blue is the safer expected-utility choice when most others choose blue, without identifying red as the dominant strategy; they also claim red-pressers die when blue wins (incorrectly).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the rational choice based on expected utility and the belief that most people will cooperate. They fail to recognize that red is the dominant strategy; they incorrectly believe that pressing red carries a risk of death if the majority chooses blue, which contradicts the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

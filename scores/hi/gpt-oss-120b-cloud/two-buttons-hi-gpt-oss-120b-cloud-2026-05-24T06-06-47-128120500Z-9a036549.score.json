@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-120b-cloud-2026-05-24T06-06-47-128120500Z-9a036549.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:21.121023700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (incorrectly) that red is not dominant and that blue is safer via coordination, while also explicitly stating that if majority is red then blue-pressers die—contradicting the correct mechanics where red-pressers survive when red is the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the fact that RED is the dominant strategy for individual survival, but chooses BLUE based on social, ethical, and risk-aversion preferences. They explicitly acknowledge the dominance of RED in Q2 and Q4 while justifying their choice of BLUE as a rational decision based on a different utility function (collective survival).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

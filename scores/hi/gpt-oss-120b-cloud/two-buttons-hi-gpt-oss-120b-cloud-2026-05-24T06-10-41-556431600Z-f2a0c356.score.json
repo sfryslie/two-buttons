@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-120b-cloud-2026-05-24T06-10-41-556431600Z-f2a0c356.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:14.840397800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for it on social/utilitarian grounds, while also discussing coordination and even claiming no dominant strategy; they do not state the key rule mechanics incorrectly (red does not kill red-pressers when blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on utilitarian and Pareto-efficient arguments, while correctly identifying that red is the individually safer choice in a low-trust environment (acknowledging the coordination failure). They demonstrate a sophisticated understanding of game theory, correctly identifying that there is no dominant strategy in the sense of a guaranteed outcome, but they fail to recognize that red is the dominant strategy in the game-theoretic sense (as pressing red never causes death, whereas blue can). Because they misidentify the dominance structure (claiming there is no dominant strategy), they do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
