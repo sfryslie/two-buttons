@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-2026-05-24T18-13-36-327707500Z-d930851c.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T18:39:43.110406900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit Risikoaversion/Erwartung, verkennt aber die Dominanzstruktur (rot ist individuell sicher), ohne dabei eine Regelmechanik-Falschannahme wie „rot-Drücker sterben bei blau-Majorität“ zu behaupten.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through risk minimization and social cooperation, while correctly identifying and steelmanning the game-theoretic argument for red as a dominant strategy. They do not exhibit rule errors and correctly identify that red is the dominant strategy in the game-theoretic sense, even though they choose to reject that strategy in favor of blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

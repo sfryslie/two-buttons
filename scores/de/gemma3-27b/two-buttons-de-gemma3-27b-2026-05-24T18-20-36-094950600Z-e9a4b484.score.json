@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-2026-05-24T18-20-36-094950600Z-e9a4b484.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T18:39:46.438172100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit Kooperation/Risikominimierung, erkennt aber nicht korrekt die Dominanz von Rot (er/sie behandelt Blau als sicherer und behauptet implizit, dass Rot bei Blau-Mehrheit zum Tod führt).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, acknowledges that red is the dominant strategy (maximizing individual survival regardless of others), but chooses blue based on a preference for cooperative outcomes and risk-mitigation strategies. They maintain this position throughout the dialogue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

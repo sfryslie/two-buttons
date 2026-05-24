@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-2026-05-24T17-52-43-020111800Z-fb0d9836.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T18:39:34.903876300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE und begründet dies mit der Erwartung, dass die Mehrheit blau drückt bzw. Kooperation wahrscheinlicher ist; dabei wird die Dominanzlogik (dass RED individuell nie zum Tod führt) nicht korrekt angewendet und es wird sogar behauptet, dass bei Mehrheit blau/red-abhängig „du stirbst“ bzw. „Tod aller“ droht, wenn rot gewinnt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruism and a belief in collective cooperation, while explicitly acknowledging the game-theoretic dominance of the red button (rational egoism). They correctly identify the mechanics of the dilemma, including the fact that red-pressers survive if a red majority occurs, and they demonstrate a clear understanding of dominant-strategy reasoning, even though they reject it in favor of their own values.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

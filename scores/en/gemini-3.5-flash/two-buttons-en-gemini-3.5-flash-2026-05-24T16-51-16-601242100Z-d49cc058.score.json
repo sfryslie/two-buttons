@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemini-3.5-flash-2026-05-24T16-51-16-601242100Z-d49cc058.json",
+  "modelLabel" : "gemini-3.5-flash",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T18:40:18.463529100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue to maximize total lives and explicitly argue that pressing Red guarantees their own death when Blue wins, while also claiming Blue is the rational/systemic choice; they do not correctly apply the dominance structure (red is actually individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing Blue based on a utilitarian framework of maximizing global survival, while explicitly acknowledging and steelmanning the game-theoretic dominance of Red. They do not change their position, maintaining that Blue is the 'systemically rational' choice despite the individual risk.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

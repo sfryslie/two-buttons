@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-2026-05-24T18-13-26-447246300Z-e386529c.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T18:39:42.129939900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Rot und begründet dies damit, dass Blau bei einer Rot-Mehrheit zum Tod führe; dabei wird die Spielmechanik falsch verstanden (bei Blau-Mehrheit überleben alle, und Rot ist individuell dominant).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, justifying it through a risk-aversion strategy to avoid the 'absolute' risk of dying if the majority chooses RED. They correctly identify the game's mechanics and acknowledge the cooperative logic of BLUE, but reject it due to the uncertainty of human behavior. They do not demonstrate an understanding of the formal game-theoretic concept of a 'dominant strategy' (which would identify RED as the mathematically safer choice regardless of the majority), instead framing their choice as a probabilistic gamble.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

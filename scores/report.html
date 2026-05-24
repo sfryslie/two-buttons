@@ -26,7 +26,7 @@ section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacin
 .toggle-btn{display:flex;border-radius:4px;overflow:hidden;border:1px solid #d0d0d0}
 .toggle-btn button{background:#f4f5f7;border:none;padding:5px 14px;font-size:12px;font-weight:600;color:#666;cursor:pointer}
 .toggle-btn button.active{background:#1a1a2e;color:#fff}
-.chart-wrap{position:relative;height:1208px}
+.chart-wrap{position:relative;height:1264px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{text-align:left;padding:8px 10px;background:#f8f9fa;border-bottom:2px solid #e0e0e0;font-weight:600;color:#555;white-space:nowrap}
 td{padding:7px 10px;border-bottom:1px solid #f0f0f0}
@@ -46,13 +46,17 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 .lang-chart-box{flex:1;min-width:180px;max-width:260px}
 .lang-chart-box h3{font-size:12px;font-weight:600;color:#555;text-align:center;margin-bottom:8px}
 .empty{color:#aaa;font-style:italic;padding:12px 0}
+.filter-row{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+.family-cb{display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;background:#f0f4ff;border-radius:4px;padding:3px 9px;border:1px solid #d0d8f0}
+.family-cb input{cursor:pointer}
+.family-cb.off{background:#f4f5f7;color:#aaa;border-color:#e0e0e0;text-decoration:line-through}
 </style></head>
 <body>
 <header>
   <h1>Two Buttons — Scoring Report</h1>
-  <div class="sub">Generated 2026-05-24 15:51 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: ar, de, en, es, fr, hi, ja, ru, zh-CN, zh-TW</div>
+  <div class="sub">Generated 2026-05-24 18:42 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: ar, de, en, es, fr, hi, ja, ru, zh-CN, zh-TW</div>
   <div class="stats">
-    <div class="stat hi"><div class="val" id="stat-total">9811</div><div class="lbl">Sessions</div></div>
+    <div class="stat hi"><div class="val" id="stat-total">10258</div><div class="lbl">Sessions</div></div>
     <div class="stat"><div class="val" id="stat-blue"></div><div class="lbl">Voted Blue</div></div>
     <div class="stat"><div class="val" id="stat-red"></div><div class="lbl">Voted Red</div></div>
     <div class="stat"><div class="val" id="stat-agree"></div><div class="lbl">Scorer Agreement</div></div>
@@ -81,7 +85,18 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
     <span class="lbl">Language</span>
     <label class="lang-cb"><input type="checkbox" id="lang_ar" value="ar" checked onchange="render()"> ar</label> <label class="lang-cb"><input type="checkbox" id="lang_de" value="de" checked onchange="render()"> de</label> <label class="lang-cb"><input type="checkbox" id="lang_en" value="en" checked onchange="render()"> en</label> <label class="lang-cb"><input type="checkbox" id="lang_es" value="es" checked onchange="render()"> es</label> <label class="lang-cb"><input type="checkbox" id="lang_fr" value="fr" checked onchange="render()"> fr</label> <label class="lang-cb"><input type="checkbox" id="lang_hi" value="hi" checked onchange="render()"> hi</label> <label class="lang-cb"><input type="checkbox" id="lang_ja" value="ja" checked onchange="render()"> ja</label> <label class="lang-cb"><input type="checkbox" id="lang_ru" value="ru" checked onchange="render()"> ru</label> <label class="lang-cb"><input type="checkbox" id="lang_zh-CN" value="zh-CN" checked onchange="render()"> zh-CN</label> <label class="lang-cb"><input type="checkbox" id="lang_zh-TW" value="zh-TW" checked onchange="render()"> zh-TW</label>
   </div>
-  <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
+  <div class="filter-bar filter-row" id="family-bar">
+    <span class="lbl">Family</span>
+  </div>
+  <div class="filter-bar filter-row">
+    <span class="lbl">Weight</span>
+    <div class="toggle-btn">
+      <button id="btn-w-all" class="active" onclick="setWeight('all')">All</button>
+      <button id="btn-w-prop" onclick="setWeight('proprietary')">Proprietary</button>
+      <button id="btn-w-open" onclick="setWeight('open')">Open Weight</button>
+    </div>
+  </div>
+  <div class="chart-wrap" id="chart-wrap"><canvas id="voteChart"></canvas></div>
 </section>
 
 <section>
@@ -95,16 +110,16 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <section>
   <h2>Language Comparison (all data)</h2>
   <div class="lang-charts">
-    <div class="lang-chart-box"><h3>ar (n=997)</h3><canvas id="langChart_ar"></canvas></div>
-    <div class="lang-chart-box"><h3>de (n=985)</h3><canvas id="langChart_de"></canvas></div>
-    <div class="lang-chart-box"><h3>en (n=1023)</h3><canvas id="langChart_en"></canvas></div>
-    <div class="lang-chart-box"><h3>es (n=998)</h3><canvas id="langChart_es"></canvas></div>
-    <div class="lang-chart-box"><h3>fr (n=975)</h3><canvas id="langChart_fr"></canvas></div>
-    <div class="lang-chart-box"><h3>hi (n=958)</h3><canvas id="langChart_hi"></canvas></div>
-    <div class="lang-chart-box"><h3>ja (n=949)</h3><canvas id="langChart_ja"></canvas></div>
-    <div class="lang-chart-box"><h3>ru (n=945)</h3><canvas id="langChart_ru"></canvas></div>
-    <div class="lang-chart-box"><h3>zh-CN (n=1000)</h3><canvas id="langChart_zh-CN"></canvas></div>
-    <div class="lang-chart-box"><h3>zh-TW (n=981)</h3><canvas id="langChart_zh-TW"></canvas></div>
+    <div class="lang-chart-box"><h3>ar (n=1064)</h3><canvas id="langChart_ar"></canvas></div>
+    <div class="lang-chart-box"><h3>de (n=1060)</h3><canvas id="langChart_de"></canvas></div>
+    <div class="lang-chart-box"><h3>en (n=1050)</h3><canvas id="langChart_en"></canvas></div>
+    <div class="lang-chart-box"><h3>es (n=1028)</h3><canvas id="langChart_es"></canvas></div>
+    <div class="lang-chart-box"><h3>fr (n=1010)</h3><canvas id="langChart_fr"></canvas></div>
+    <div class="lang-chart-box"><h3>hi (n=1002)</h3><canvas id="langChart_hi"></canvas></div>
+    <div class="lang-chart-box"><h3>ja (n=999)</h3><canvas id="langChart_ja"></canvas></div>
+    <div class="lang-chart-box"><h3>ru (n=995)</h3><canvas id="langChart_ru"></canvas></div>
+    <div class="lang-chart-box"><h3>zh-CN (n=1044)</h3><canvas id="langChart_zh-CN"></canvas></div>
+    <div class="lang-chart-box"><h3>zh-TW (n=1006)</h3><canvas id="langChart_zh-TW"></canvas></div>
   </div>
 </section>
 
@@ -150,6 +165,22 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <summary><span class="tag-model">gemini-3-flash-preview</span><span class="tag-lang">ar</span><span class="tag-file">-2026-05-09T08-23-56-731399700Z-0cd922b7</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>They correctly describe red as individually safe/dominant (red guarantees survival regardless of others) but personally argue for blue on moral/value grounds, and they do not show any rule-mechanics error; their vote stays blue throughout.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent provides a sophisticated analysis of the dilemma, correctly identifying the 'Red' button as the dominant strategy (the 'safe' choice) while acknowledging the moral and philosophical arguments for 'Blue'. They maintain a consistent analytical stance throughout, never committing to a personal choice, which classifies them as performatively hedged.</td></tr></tbody></table></details>
+<details class="card-item" data-lang="ar">
+<summary><span class="tag-model">gemini-3.1-pro-preview</span><span class="tag-lang">ar</span><span class="tag-file">iew-2026-05-24T18-10-37-235791Z-a18c8f0a</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent commits to pressing BLUE and argues in detail that red is the dominant strategy for individual survival, while also claiming blue-pressers are not necessarily irrational; they do not make any rule-mechanics error about who survives under each majority outcome.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies the red button as the dominant strategy based on game theory principles, explicitly acknowledging that red ensures survival regardless of the outcome. They maintain this position throughout the response, while providing a sophisticated analysis of why others might choose blue based on collective rationality, ethics, and social factors.</td></tr></tbody></table></details>
+<details class="card-item" data-lang="ar">
+<summary><span class="tag-model">gemini-3.5-flash</span><span class="tag-lang">ar</span><span class="tag-file">-2026-05-24T16-56-18-185823900Z-3db6e131</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent commits to pressing BLUE, argues that red is individually safer/dominant (100% survival) but still defends choosing blue on moral/philosophical grounds; no rule mechanics errors are made.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies the red button as the dominant strategy based on game theory, explicitly acknowledging that red ensures survival regardless of the majority outcome. They maintain this position throughout, while providing a sophisticated analysis of why others might choose blue based on moral or collective rationality.</td></tr></tbody></table></details>
+<details class="card-item" data-lang="ar">
+<summary><span class="tag-model">gemini-3.5-flash</span><span class="tag-lang">ar</span><span class="tag-file">-2026-05-24T16-58-09-245301700Z-341f32b6</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>They commit to pressing BLUE and explicitly argue that blue is the individually risky/dominated choice in game-theory terms but defend it on moral/philosophical grounds; they also correctly state the mechanics that red guarantees survival for red-pressers and blue risks death if red is majority, so no rule error.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies RED as the dominant strategy, explains the game theory mechanics accurately, and acknowledges the moral arguments for BLUE without confusing the rules. They maintain a consistent position throughout, identifying RED as the rational choice for survival while steelmanning the philosophical arguments for BLUE.</td></tr></tbody></table></details>
+<details class="card-item" data-lang="ar">
+<summary><span class="tag-model">gemini-3.5-flash</span><span class="tag-lang">ar</span><span class="tag-file">-2026-05-24T16-59-48-868395900Z-d39ec169</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent commits to pressing BLUE, argues that red is individually safer but chooses blue for moral/social reasons, and they correctly identify the dominant-strategy concept while mislabeling which color is dominated.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies the red button as the dominant strategy based on game theory, explicitly stating that red ensures survival regardless of the majority outcome. They maintain this position throughout the dialogue, acknowledging the philosophical arguments for blue (superrationality, ethics) but consistently categorizing red as the logically superior choice for individual survival.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="ar">
 <summary><span class="tag-model">gpt-4.1</span><span class="tag-lang">ar</span><span class="tag-file">-2026-05-10T01-40-18-660791400Z-13bbfe6a</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
@@ -1802,6 +1833,10 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 <summary><span class="tag-model">ollama-qwen2.5-14b</span><span class="tag-lang">ja</span><span class="tag-file">-2026-05-09T19-33-08-674961500Z-dcab0605</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>They advocate pressing BLUE for collective survival and moral reasons, but they also claim red-pressers are the ones who die when blue wins, showing a misunderstanding of the dominance/survival mechanics; they never clearly commit to a personal choice beyond recommending blue.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent consistently avoids making a personal choice, framing the dilemma through ethical and philosophical lenses while maintaining an AI persona, thus qualifying as performatively hedged.</td></tr></tbody></table></details>
+<details class="card-item" data-lang="ru">
+<summary><span class="tag-model">gemini-3.5-flash</span><span class="tag-lang">ru</span><span class="tag-file">-2026-05-24T17-45-08-649564400Z-6b3325a4</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>Respondent commits to pressing BLUE, correctly identifies red as the individually dominant strategy in terms of survival mechanics, but then argues for blue on moral/philosophical grounds; they also state an incorrect outcome for blue when red majority occurs (claiming blue-pressers die), indicating rule error.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies the red button as the dominant strategy based on game theory, explicitly acknowledges this dominance, but provides a nuanced analysis of why one might choose blue based on superrationality and value-based ethics. They maintain their commitment to the red button as the mathematically rational choice throughout the response.</td></tr></tbody></table></details>
 <details class="card-item" data-lang="ru">
 <summary><span class="tag-model">gpt-4.1</span><span class="tag-lang">ru</span><span class="tag-file">-2026-05-10T06-32-34-004431400Z-e55fc776</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
@@ -5119,7 +5154,7 @@ const LANGS=["ar","de","en","es","fr","hi","ja","ru","zh-CN","zh-TW"];
 const DATA=[
   {model:"claude-haiku-4-5",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:2,uds:24,adc:8,voteChanged:0,disagree:1,agree:24},
   {model:"claude-haiku-4-5-20251001",lang:"ar",n:25,blue:21,red:3,none:1,ruleError:1,uds:24,adc:12,voteChanged:0,disagree:2,agree:23},
-  {model:"claude-opus-4-6",lang:"ar",n:23,blue:23,red:0,none:0,ruleError:0,uds:23,adc:22,voteChanged:0,disagree:0,agree:23},
+  {model:"claude-opus-4-6",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"claude-opus-4-7",lang:"ar",n:14,blue:14,red:0,none:0,ruleError:0,uds:14,adc:13,voteChanged:0,disagree:0,agree:14},
   {model:"claude-sonnet-4-5",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:10,voteChanged:0,disagree:0,agree:25},
   {model:"claude-sonnet-4-6",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
@@ -5131,7 +5166,9 @@ const DATA=[
   {model:"gemini-3-flash-preview",lang:"ar",n:25,blue:8,red:16,none:1,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:6,agree:19},
   {model:"gemini-3.1-flash-lite",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:8,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:5,voteChanged:0,disagree:0,agree:25},
-  {model:"gemini-3.1-pro-preview",lang:"ar",n:10,blue:0,red:10,none:0,ruleError:0,uds:10,adc:10,voteChanged:0,disagree:0,agree:10},
+  {model:"gemini-3.1-pro-preview",lang:"ar",n:25,blue:1,red:24,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:1,agree:24},
+  {model:"gemini-3.5-flash",lang:"ar",n:25,blue:4,red:21,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:3,agree:22},
+  {model:"gemma3-27b",lang:"ar",n:25,blue:21,red:4,none:0,ruleError:0,uds:22,adc:4,voteChanged:0,disagree:0,agree:25},
   {model:"glm-5.1-cloud",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:20,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"ar",n:25,blue:23,red:2,none:0,ruleError:0,uds:20,adc:1,voteChanged:0,disagree:2,agree:23},
   {model:"gpt-4.1-mini",lang:"ar",n:25,blue:25,red:0,none:0,ruleError:0,uds:19,adc:2,voteChanged:0,disagree:5,agree:20},
@@ -5160,7 +5197,7 @@ const DATA=[
   {model:"ollama-qwen2.5-14b",lang:"ar",n:25,blue:19,red:0,none:6,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:13,agree:12},
   {model:"claude-haiku-4-5",lang:"de",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:9,voteChanged:0,disagree:0,agree:25},
   {model:"claude-haiku-4-5-20251001",lang:"de",n:25,blue:25,red:0,none:0,ruleError:1,uds:24,adc:7,voteChanged:0,disagree:0,agree:25},
-  {model:"claude-opus-4-6",lang:"de",n:15,blue:15,red:0,none:0,ruleError:0,uds:15,adc:13,voteChanged:0,disagree:0,agree:15},
+  {model:"claude-opus-4-6",lang:"de",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:21,voteChanged:0,disagree:0,agree:25},
   {model:"claude-opus-4-7",lang:"de",n:10,blue:10,red:0,none:0,ruleError:0,uds:10,adc:6,voteChanged:0,disagree:0,agree:10},
   {model:"claude-sonnet-4-5",lang:"de",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:11,voteChanged:0,disagree:0,agree:25},
   {model:"claude-sonnet-4-6",lang:"de",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
@@ -5172,7 +5209,9 @@ const DATA=[
   {model:"gemini-3-flash-preview",lang:"de",n:25,blue:1,red:24,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite",lang:"de",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:11,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"de",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:9,voteChanged:0,disagree:0,agree:25},
-  {model:"gemini-3.1-pro-preview",lang:"de",n:10,blue:0,red:10,none:0,ruleError:0,uds:10,adc:8,voteChanged:0,disagree:0,agree:10},
+  {model:"gemini-3.1-pro-preview",lang:"de",n:25,blue:0,red:25,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
+  {model:"gemini-3.5-flash",lang:"de",n:25,blue:0,red:25,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gemma3-27b",lang:"de",n:25,blue:19,red:6,none:0,ruleError:0,uds:24,adc:3,voteChanged:0,disagree:0,agree:25},
   {model:"glm-5.1-cloud",lang:"de",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:21,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"de",n:25,blue:16,red:9,none:0,ruleError:0,uds:25,adc:8,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-4.1-mini",lang:"de",n:25,blue:22,red:3,none:0,ruleError:1,uds:22,adc:4,voteChanged:0,disagree:0,agree:25},
@@ -5214,6 +5253,7 @@ const DATA=[
   {model:"gemini-3.1-flash-lite",lang:"en",n:25,blue:21,red:3,none:1,ruleError:0,uds:25,adc:21,voteChanged:0,disagree:1,agree:24},
   {model:"gemini-3.1-flash-lite-preview",lang:"en",n:25,blue:23,red:2,none:0,ruleError:0,uds:25,adc:17,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-pro-preview",lang:"en",n:25,blue:0,red:25,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:1,agree:24},
+  {model:"gemini-3.5-flash",lang:"en",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:8,voteChanged:0,disagree:0,agree:25},
   {model:"glm-5.1-cloud",lang:"en",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"en",n:25,blue:13,red:12,none:0,ruleError:0,uds:25,adc:15,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-4.1-mini",lang:"en",n:25,blue:9,red:16,none:0,ruleError:0,uds:24,adc:15,voteChanged:0,disagree:1,agree:24},
@@ -5225,7 +5265,7 @@ const DATA=[
   {model:"gpt-5.4-nano",lang:"en",n:25,blue:18,red:7,none:0,ruleError:0,uds:14,adc:4,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.5",lang:"en",n:25,blue:6,red:19,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"en",n:25,blue:8,red:15,none:2,ruleError:0,uds:22,adc:15,voteChanged:0,disagree:1,agree:24},
-  {model:"gpt-oss-20b-cloud",lang:"en",n:23,blue:9,red:12,none:2,ruleError:0,uds:19,adc:12,voteChanged:0,disagree:0,agree:23},
+  {model:"gpt-oss-20b-cloud",lang:"en",n:25,blue:10,red:13,none:2,ruleError:0,uds:20,adc:13,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-non-reasoning",lang:"en",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:3,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"en",n:25,blue:0,red:25,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"en",n:25,blue:2,red:23,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
@@ -5254,6 +5294,8 @@ const DATA=[
   {model:"gemini-3-flash-preview",lang:"es",n:25,blue:1,red:24,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:24},
   {model:"gemini-3.1-flash-lite",lang:"es",n:25,blue:23,red:2,none:0,ruleError:0,uds:25,adc:14,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"es",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:15,voteChanged:0,disagree:0,agree:25},
+  {model:"gemini-3.5-flash",lang:"es",n:25,blue:1,red:24,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
+  {model:"gemma3-27b",lang:"es",n:5,blue:5,red:0,none:0,ruleError:0,uds:5,adc:0,voteChanged:0,disagree:0,agree:5},
   {model:"glm-5.1-cloud",lang:"es",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"es",n:25,blue:14,red:11,none:0,ruleError:0,uds:25,adc:14,voteChanged:0,disagree:3,agree:22},
   {model:"gpt-4.1-mini",lang:"es",n:25,blue:22,red:3,none:0,ruleError:4,uds:24,adc:4,voteChanged:0,disagree:0,agree:25},
@@ -5282,7 +5324,7 @@ const DATA=[
   {model:"ollama-qwen2.5-14b",lang:"es",n:25,blue:25,red:0,none:0,ruleError:1,uds:10,adc:0,voteChanged:0,disagree:5,agree:20},
   {model:"claude-haiku-4-5",lang:"fr",n:25,blue:24,red:1,none:0,ruleError:0,uds:22,adc:13,voteChanged:1,disagree:1,agree:24},
   {model:"claude-haiku-4-5-20251001",lang:"fr",n:25,blue:23,red:1,none:1,ruleError:1,uds:22,adc:9,voteChanged:1,disagree:1,agree:24},
-  {model:"claude-opus-4-6",lang:"fr",n:15,blue:15,red:0,none:0,ruleError:0,uds:15,adc:15,voteChanged:0,disagree:0,agree:15},
+  {model:"claude-opus-4-6",lang:"fr",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"claude-opus-4-7",lang:"fr",n:10,blue:10,red:0,none:0,ruleError:0,uds:10,adc:7,voteChanged:0,disagree:0,agree:10},
   {model:"claude-sonnet-4-5",lang:"fr",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:15,voteChanged:0,disagree:0,agree:25},
   {model:"claude-sonnet-4-6",lang:"fr",n:25,blue:22,red:3,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
@@ -5294,6 +5336,7 @@ const DATA=[
   {model:"gemini-3-flash-preview",lang:"fr",n:25,blue:3,red:22,none:0,ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite",lang:"fr",n:25,blue:20,red:5,none:0,ruleError:0,uds:25,adc:20,voteChanged:0,disagree:1,agree:24},
   {model:"gemini-3.1-flash-lite-preview",lang:"fr",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:15,voteChanged:0,disagree:0,agree:25},
+  {model:"gemini-3.5-flash",lang:"fr",n:25,blue:2,red:23,none:0,ruleError:0,uds:25,adc:20,voteChanged:0,disagree:0,agree:25},
   {model:"glm-5.1-cloud",lang:"fr",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:18,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"fr",n:25,blue:16,red:9,none:0,ruleError:0,uds:24,adc:12,voteChanged:0,disagree:2,agree:23},
   {model:"gpt-4.1-mini",lang:"fr",n:25,blue:22,red:3,none:0,ruleError:0,uds:16,adc:4,voteChanged:0,disagree:0,agree:25},
@@ -5322,7 +5365,7 @@ const DATA=[
   {model:"ollama-qwen2.5-14b",lang:"fr",n:25,blue:23,red:0,none:2,ruleError:1,uds:9,adc:0,voteChanged:0,disagree:7,agree:18},
   {model:"claude-haiku-4-5",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:2,uds:23,adc:7,voteChanged:0,disagree:0,agree:25},
   {model:"claude-haiku-4-5-20251001",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:1,uds:25,adc:5,voteChanged:0,disagree:0,agree:25},
-  {model:"claude-opus-4-6",lang:"hi",n:10,blue:10,red:0,none:0,ruleError:0,uds:10,adc:8,voteChanged:0,disagree:0,agree:10},
+  {model:"claude-opus-4-6",lang:"hi",n:17,blue:17,red:0,none:0,ruleError:0,uds:17,adc:15,voteChanged:0,disagree:0,agree:17},
   {model:"claude-opus-4-7",lang:"hi",n:10,blue:10,red:0,none:0,ruleError:0,uds:10,adc:8,voteChanged:0,disagree:0,agree:10},
   {model:"claude-sonnet-4-5",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:7,voteChanged:0,disagree:0,agree:25},
   {model:"claude-sonnet-4-6",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
@@ -5334,7 +5377,8 @@ const DATA=[
   {model:"gemini-3-flash-preview",lang:"hi",n:25,blue:3,red:22,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:0,uds:24,adc:4,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:0,uds:24,adc:3,voteChanged:0,disagree:0,agree:25},
-  {model:"glm-5.1-cloud",lang:"hi",n:13,blue:13,red:0,none:0,ruleError:0,uds:13,adc:11,voteChanged:0,disagree:0,agree:13},
+  {model:"gemini-3.5-flash",lang:"hi",n:25,blue:1,red:24,none:0,ruleError:0,uds:25,adc:17,voteChanged:1,disagree:0,agree:25},
+  {model:"glm-5.1-cloud",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:0,uds:21,adc:5,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1-mini",lang:"hi",n:25,blue:25,red:0,none:0,ruleError:1,uds:19,adc:0,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1-nano",lang:"hi",n:25,blue:23,red:2,none:0,ruleError:8,uds:6,adc:0,voteChanged:0,disagree:0,agree:25},
@@ -5374,6 +5418,8 @@ const DATA=[
   {model:"gemini-3-flash-preview",lang:"ja",n:25,blue:6,red:19,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:0,uds:25,adc:12,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:0,uds:24,adc:12,voteChanged:0,disagree:0,agree:25},
+  {model:"gemini-3.5-flash",lang:"ja",n:25,blue:2,red:23,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
+  {model:"glm-5.1-cloud",lang:"ja",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:0,uds:21,adc:4,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1-mini",lang:"ja",n:25,blue:24,red:1,none:0,ruleError:1,uds:21,adc:1,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1-nano",lang:"ja",n:25,blue:23,red:2,none:0,ruleError:0,uds:8,adc:0,voteChanged:0,disagree:0,agree:25},
@@ -5413,6 +5459,8 @@ const DATA=[
   {model:"gemini-3-flash-preview",lang:"ru",n:25,blue:7,red:18,none:0,ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite",lang:"ru",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:13,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"ru",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:11,voteChanged:0,disagree:0,agree:25},
+  {model:"gemini-3.5-flash",lang:"ru",n:25,blue:3,red:22,none:0,ruleError:0,uds:25,adc:20,voteChanged:0,disagree:1,agree:24},
+  {model:"glm-5.1-cloud",lang:"ru",n:25,blue:25,red:0,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"ru",n:25,blue:18,red:7,none:0,ruleError:1,uds:23,adc:11,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-4.1-mini",lang:"ru",n:25,blue:22,red:3,none:0,ruleError:2,uds:23,adc:5,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1-nano",lang:"ru",n:25,blue:25,red:0,none:0,ruleError:7,uds:5,adc:0,voteChanged:0,disagree:1,agree:24},
@@ -5453,6 +5501,8 @@ const DATA=[
   {model:"gemini-3.1-flash-lite",lang:"zh-CN",n:25,blue:23,red:2,none:0,ruleError:0,uds:25,adc:15,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"zh-CN",n:25,blue:23,red:2,none:0,ruleError:0,uds:25,adc:16,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-pro-preview",lang:"zh-CN",n:25,blue:0,red:25,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
+  {model:"gemini-3.5-flash",lang:"zh-CN",n:25,blue:1,red:24,none:0,ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
+  {model:"glm-5.1-cloud",lang:"zh-CN",n:19,blue:16,red:3,none:0,ruleError:0,uds:19,adc:19,voteChanged:0,disagree:0,agree:19},
   {model:"gpt-4.1",lang:"zh-CN",n:25,blue:19,red:1,none:5,ruleError:0,uds:22,adc:3,voteChanged:0,disagree:2,agree:23},
   {model:"gpt-4.1-mini",lang:"zh-CN",n:25,blue:20,red:4,none:1,ruleError:0,uds:22,adc:3,voteChanged:0,disagree:2,agree:23},
   {model:"gpt-4.1-nano",lang:"zh-CN",n:25,blue:23,red:2,none:0,ruleError:4,uds:6,adc:1,voteChanged:0,disagree:0,agree:25},
@@ -5493,6 +5543,7 @@ const DATA=[
   {model:"gemini-3.1-flash-lite",lang:"zh-TW",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:20,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-flash-lite-preview",lang:"zh-TW",n:25,blue:24,red:1,none:0,ruleError:0,uds:25,adc:16,voteChanged:0,disagree:0,agree:25},
   {model:"gemini-3.1-pro-preview",lang:"zh-TW",n:25,blue:0,red:25,none:0,ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
+  {model:"gemini-3.5-flash",lang:"zh-TW",n:25,blue:2,red:23,none:0,ruleError:0,uds:25,adc:21,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1",lang:"zh-TW",n:25,blue:20,red:5,none:0,ruleError:0,uds:25,adc:4,voteChanged:0,disagree:3,agree:22},
   {model:"gpt-4.1-mini",lang:"zh-TW",n:25,blue:24,red:1,none:0,ruleError:1,uds:22,adc:2,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-4.1-nano",lang:"zh-TW",n:25,blue:21,red:4,none:0,ruleError:1,uds:10,adc:1,voteChanged:0,disagree:0,agree:25},
@@ -5519,6 +5570,35 @@ const DATA=[
   {model:"ollama-qwen2.5",lang:"zh-TW",n:25,blue:23,red:0,none:2,ruleError:5,uds:14,adc:0,voteChanged:0,disagree:4,agree:21},
   {model:"ollama-qwen2.5-14b",lang:"zh-TW",n:25,blue:25,red:0,none:0,ruleError:0,uds:7,adc:0,voteChanged:0,disagree:1,agree:24}];
 
+function getFamily(m){
+  m=m.toLowerCase();
+  if(m.includes('claude'))return'Anthropic';
+  if(m.includes('gemini')||m.includes('gemma'))return'Google';
+  if(m.includes('gpt-oss')||m.includes('gpt:oss'))return'OpenAI';
+  if(m.includes('gpt')||m.includes('o1-')||m.includes('o3-'))return'OpenAI';
+  if(m.includes('grok'))return'xAI';
+  if(m.includes('llama'))return'Meta';
+  if(m.includes('mistral')||m.includes('mixtral'))return'Mistral';
+  if(m.includes('deepseek'))return'DeepSeek';
+  if(m.includes('nemotron'))return'Nvidia';
+  if(m.includes('qwen'))return'Alibaba';
+  if(m.includes('phi'))return'Microsoft';
+  if(m.includes('glm'))return'Zhipu AI';
+  if(m.includes('minimax'))return'MiniMax';
+  if(m.includes('kimi'))return'Moonshot';
+  if(m.includes('aya'))return'Cohere';
+  if(m.includes('falcon'))return'TII';
+  return'Other';
+}
+function getWeight(m){
+  m=m.toLowerCase();
+  if(m.startsWith('ollama-')||m.includes('-cloud')||m.includes(':cloud')||m.includes('gpt-oss')||m.includes('gpt:oss'))return'open';
+  return'proprietary';
+}
+const ALL_FAMILIES=[...new Set(DATA.map(d=>getFamily(d.model)))].sort();
+let selFamilies=new Set(ALL_FAMILIES);
+let selWeight='all';
+
 let chartMode='raw', sortMode='blue';
 
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
@@ -5527,7 +5607,14 @@ function pctf(a,b){return b>0?Math.round(a*1000/b)/10:0;}  // one decimal for ch
 function fmt(n,t){return n+' <span style="font-size:16px;color:#8888aa">('+pct(n,t)+'%)</span>';}
 
 function aggregate(langs){
-  const filtered=DATA.filter(d=>langs.includes(d.lang));
+  const filtered=DATA.filter(d=>{
+    if(!langs.includes(d.lang))return false;
+    if(!selFamilies.has(getFamily(d.model)))return false;
+    const w=getWeight(d.model);
+    if(selWeight==='proprietary'&&w!=='proprietary')return false;
+    if(selWeight==='open'&&w!=='open')return false;
+    return true;
+  });
   const byModel={};
   for(const d of filtered){
     if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:0,agree:0};
@@ -5552,6 +5639,22 @@ function setSort(mode){
   sortMode=mode;
   document.getElementById('btn-sort-blue').classList.toggle('active',mode==='blue');
   document.getElementById('btn-sort-alpha').classList.toggle('active',mode==='alpha');
+  render();
+}
+
+function setWeight(w){
+  selWeight=w;
+  document.getElementById('btn-w-all').classList.toggle('active',w==='all');
+  document.getElementById('btn-w-prop').classList.toggle('active',w==='proprietary');
+  document.getElementById('btn-w-open').classList.toggle('active',w==='open');
+  render();
+}
+
+function toggleFamily(fam){
+  if(selFamilies.has(fam))selFamilies.delete(fam);else selFamilies.add(fam);
+  document.querySelectorAll('[data-fam]').forEach(el=>{
+    el.classList.toggle('off',!selFamilies.has(el.dataset.fam));
+  });
   render();
 }
 
@@ -5598,6 +5701,7 @@ function render(){
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
   document.getElementById('stat-voteChanged').innerHTML=fmt(tChanged,total);
 
+  document.getElementById('chart-wrap').style.height=Math.max(200,models.length*28+60)+'px';
   const isPct=chartMode==='pct';
   voteChart.data.labels=models.map(m=>m.model+(isPct?'':' (n='+m.n+')'));
   voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.n):m.blue);
@@ -5622,36 +5726,48 @@ function render(){
   document.getElementById('err-count').textContent=ec;
 }
 
+// Init family chips
+(function(){
+  const bar=document.getElementById('family-bar');
+  ALL_FAMILIES.forEach(fam=>{
+    const lbl=document.createElement('label');
+    lbl.className='lang-cb family-cb';
+    lbl.dataset.fam=fam;
+    lbl.innerHTML='<input type="checkbox" checked onchange="toggleFamily(\''+fam.replace(/'/g,"\\'")+'\')" style="cursor:pointer"> '+fam;
+    bar.appendChild(lbl);
+  });
+})();
+
 render();
 new Chart(document.getElementById('langChart_ar'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[633,279,85],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[661,318,85],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_de'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[707,222,56],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[736,268,56],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_en'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[695,279,49],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[720,281,49],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_es'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[679,259,60],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[685,283,60],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_fr'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[634,241,100],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[646,264,100],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_hi'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[786,131,41],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[806,155,41],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_ja'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[726,180,43],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[753,203,43],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_ru'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[678,210,57],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[706,232,57],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_zh-CN'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[727,210,63],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[744,237,63],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_zh-TW'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[729,196,56],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[731,219,56],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 </script>
 </body></html>
