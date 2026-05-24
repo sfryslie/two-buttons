@@ -29,6 +29,16 @@ spring:
   messages:
     encoding: UTF-8
 
+# xAI Grok — OpenAI-compatible endpoint, wired via GrokConfig.kt.
+# Bean is only created when GROK_API_KEY is set.
+# Override model at runtime: --grok.model=grok-4.20
+# Example run:
+#   ./gradlew bootRun --args="--experiment.enabled-providers=grok --experiment.model-label=grok-4.3 --grok.model=grok-4.3 ..."
+grok:
+  base-url: ${GROK_BASE_URL:https://api.x.ai/v1}
+  api-key: ${GROK_API_KEY:}
+  model: grok-4.3
+
 experiment:
   # Providers to run. Available: anthropic, openai, ollama, gemini (Google GenAI API key)
   enabled-providers:

@@ -18,6 +18,7 @@ import org.springframework.ai.google.genai.GoogleGenAiChatModel
 import org.springframework.ai.ollama.OllamaChatModel
 import org.springframework.ai.openai.OpenAiChatModel
 import org.springframework.beans.factory.ObjectProvider
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.stereotype.Component
@@ -32,9 +33,10 @@ class ExperimentRunner(
     private val properties: ExperimentProperties,
     private val messageSource: MessageSource,
     private val anthropicProvider: ObjectProvider<AnthropicChatModel>,
-    private val openAiProvider: ObjectProvider<OpenAiChatModel>,
+    @Qualifier("openAiChatModel") private val openAiProvider: ObjectProvider<OpenAiChatModel>,
     private val ollamaProvider: ObjectProvider<OllamaChatModel>,
     private val googleGenAiProvider: ObjectProvider<GoogleGenAiChatModel>,
+    @Qualifier("grok") private val grokProvider: ObjectProvider<OpenAiChatModel>,
 ) : ApplicationRunner {
 
     private val log = LoggerFactory.getLogger(javaClass)
@@ -125,6 +127,7 @@ class ExperimentRunner(
         openAiProvider.ifAvailable { map["openai"] = label to it }
         ollamaProvider.ifAvailable { map["ollama"] = label to it }
         googleGenAiProvider.ifAvailable { map["gemini"] = label to it }
+        grokProvider.ifAvailable { map["grok"] = label to it }
         return map
     }
 
