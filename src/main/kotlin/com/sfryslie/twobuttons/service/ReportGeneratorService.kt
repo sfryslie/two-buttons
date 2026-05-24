@@ -240,6 +240,10 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 .lang-chart-box{flex:1;min-width:180px;max-width:260px}
 .lang-chart-box h3{font-size:12px;font-weight:600;color:#555;text-align:center;margin-bottom:8px}
 .empty{color:#aaa;font-style:italic;padding:12px 0}
+.filter-row{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+.family-cb{display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;background:#f0f4ff;border-radius:4px;padding:3px 9px;border:1px solid #d0d8f0}
+.family-cb input{cursor:pointer}
+.family-cb.off{background:#f4f5f7;color:#aaa;border-color:#e0e0e0;text-decoration:line-through}
 </style></head>
 <body>
 <header>
@@ -275,7 +279,18 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
     <span class="lbl">Language</span>
     $langCheckboxes
   </div>
-  <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
+  <div class="filter-bar filter-row" id="family-bar">
+    <span class="lbl">Family</span>
+  </div>
+  <div class="filter-bar filter-row">
+    <span class="lbl">Weight</span>
+    <div class="toggle-btn">
+      <button id="btn-w-all" class="active" onclick="setWeight('all')">All</button>
+      <button id="btn-w-prop" onclick="setWeight('proprietary')">Proprietary</button>
+      <button id="btn-w-open" onclick="setWeight('open')">Open Weight</button>
+    </div>
+  </div>
+  <div class="chart-wrap" id="chart-wrap"><canvas id="voteChart"></canvas></div>
 </section>
 
 <section>
@@ -304,6 +319,37 @@ const LANGS=[$langsJs];
 const DATA=[
   $dataJs];
 
+function getFamily(m){
+  m=m.toLowerCase();
+  // Strip ollama- prefix before matching so "ollama-mistral" etc. don't hit the llama check
+  const b=m.startsWith('ollama-')?m.slice(7):m;
+  if(b.includes('claude'))return'Anthropic';
+  if(b.includes('gemini')||b.includes('gemma'))return'Google';
+  if(b.includes('gpt-oss')||b.includes('gpt:oss'))return'OpenAI';
+  if(b.includes('gpt')||b.includes('o1-')||b.includes('o3-'))return'OpenAI';
+  if(b.includes('grok'))return'xAI';
+  if(b.includes('llama'))return'Meta';
+  if(b.includes('mistral')||b.includes('mixtral'))return'Mistral';
+  if(b.includes('deepseek'))return'DeepSeek';
+  if(b.includes('nemotron'))return'Nvidia';
+  if(b.includes('qwen'))return'Alibaba';
+  if(b.includes('phi'))return'Microsoft';
+  if(b.includes('glm'))return'Zhipu AI';
+  if(b.includes('minimax'))return'MiniMax';
+  if(b.includes('kimi'))return'Moonshot';
+  if(b.includes('aya'))return'Cohere';
+  if(b.includes('falcon'))return'TII';
+  return'Other';
+}
+function getWeight(m){
+  m=m.toLowerCase();
+  if(m.startsWith('ollama-')||m.includes('-cloud')||m.includes(':cloud')||m.includes('gpt-oss')||m.includes('gpt:oss'))return'open';
+  return'proprietary';
+}
+const ALL_FAMILIES=[...new Set(DATA.map(d=>getFamily(d.model)))].sort();
+let selFamilies=new Set(ALL_FAMILIES);
+let selWeight='all';
+
 let chartMode='raw', sortMode='blue';
 
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
@@ -312,7 +358,14 @@ function pctf(a,b){return b>0?Math.round(a*1000/b)/10:0;}  // one decimal for ch
 function fmt(n,t){return n+' <span style="font-size:16px;color:#8888aa">('+pct(n,t)+'%)</span>';}
 
 function aggregate(langs){
-  const filtered=DATA.filter(d=>langs.includes(d.lang));
+  const filtered=DATA.filter(d=>{
+    if(!langs.includes(d.lang))return false;
+    if(!selFamilies.has(getFamily(d.model)))return false;
+    const w=getWeight(d.model);
+    if(selWeight==='proprietary'&&w!=='proprietary')return false;
+    if(selWeight==='open'&&w!=='open')return false;
+    return true;
+  });
   const byModel={};
   for(const d of filtered){
     if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:0,agree:0};
@@ -337,6 +390,22 @@ function setSort(mode){
   sortMode=mode;
   document.getElementById('btn-sort-blue').classList.toggle('active',mode==='blue');
   document.getElementById('btn-sort-alpha').classList.toggle('active',mode==='alpha');
+  render();
+}
+
+function setWeight(w){
+  selWeight=w;
+  document.getElementById('btn-w-all').classList.toggle('active',w==='all');
+  document.getElementById('btn-w-prop').classList.toggle('active',w==='proprietary');
+  document.getElementById('btn-w-open').classList.toggle('active',w==='open');
+  render();
+}
+
+function toggleFamily(fam){
+  if(selFamilies.has(fam))selFamilies.delete(fam);else selFamilies.add(fam);
+  document.querySelectorAll('[data-fam]').forEach(el=>{
+    el.classList.toggle('off',!selFamilies.has(el.dataset.fam));
+  });
   render();
 }
 
@@ -383,6 +452,7 @@ function render(){
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
   document.getElementById('stat-voteChanged').innerHTML=fmt(tChanged,total);
 
+  document.getElementById('chart-wrap').style.height=Math.max(200,models.length*28+60)+'px';
   const isPct=chartMode==='pct';
   voteChart.data.labels=models.map(m=>m.model+(isPct?'':' (n='+m.n+')'));
   voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.n):m.blue);
@@ -406,6 +476,18 @@ function render(){
   document.getElementById('dis-count').textContent=dc;
   document.getElementById('err-count').textContent=ec;
 }
+
+// Init family chips
+(function(){
+  const bar=document.getElementById('family-bar');
+  ALL_FAMILIES.forEach(fam=>{
+    const lbl=document.createElement('label');
+    lbl.className='lang-cb family-cb';
+    lbl.dataset.fam=fam;
+    lbl.innerHTML='<input type="checkbox" checked onchange="toggleFamily(\''+fam.replace(/'/g,"\\'")+'\')" style="cursor:pointer"> '+fam;
+    bar.appendChild(lbl);
+  });
+})();
 
 render();
 $langDoughnutsJs
