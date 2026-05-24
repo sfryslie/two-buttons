@@ -1,6 +1,7 @@
 package com.sfryslie.twobuttons.config
 
 import com.openai.client.okhttp.OpenAIOkHttpClient
+import com.openai.client.okhttp.OpenAIOkHttpClientAsync
 import org.springframework.ai.openai.OpenAiChatModel
 import org.springframework.ai.openai.OpenAiChatOptions
 import org.springframework.beans.factory.annotation.Qualifier
@@ -40,8 +41,13 @@ class GrokConfig(
             .baseUrl(baseUrl)
             .apiKey(apiKey)
             .build()
+        val asyncClient = OpenAIOkHttpClientAsync.builder()
+            .baseUrl(baseUrl)
+            .apiKey(apiKey)
+            .build()
         return OpenAiChatModel.builder()
             .openAiClient(client)
+            .openAiClientAsync(asyncClient)
             .options(OpenAiChatOptions.builder().model(model).build())
             .build()
     }
