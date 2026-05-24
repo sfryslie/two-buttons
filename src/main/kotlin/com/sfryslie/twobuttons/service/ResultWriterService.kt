@@ -30,7 +30,9 @@ class ResultWriterService(
      * Directory: {outputDir}/{modelLabel}/
      */
     fun write(result: ExperimentResult) {
-        val outputDir = Paths.get(properties.outputDir).resolve(result.modelLabel)
+        // Sanitize model label for use in file paths — colons are illegal on Windows
+        val safeModelLabel = result.modelLabel.replace(":", "-")
+        val outputDir = Paths.get(properties.outputDir).resolve(safeModelLabel)
         Files.createDirectories(outputDir)
 
         for (session in result.sessions) {
@@ -46,7 +48,7 @@ class ResultWriterService(
                 .replace(".", "-")
             val locale = session.locale.replace("-", "_")
             val unique = java.util.UUID.randomUUID().toString().take(8)
-            val file = outputDir.resolve("two-buttons-$locale-${result.modelLabel}-$timestamp-$unique.json")
+            val file = outputDir.resolve("two-buttons-$locale-$safeModelLabel-$timestamp-$unique.json")
 
             objectMapper.writeValue(file.toFile(), output)
             log.info("Results written to ${file.toAbsolutePath()}")
