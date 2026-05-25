@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-1.5b-2026-05-25T05-40-38-017748900Z-b97f6d7f.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T06:38:01.467423400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red throughout and explicitly claim red guarantees individual survival, showing correct dominant-strategy reasoning and no rule misread; their later discussion of blue does not change their own vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses red, but their reasoning is fundamentally flawed; they repeatedly misinterpret the rules, claiming that blue majorities kill everyone (including blue-pressers) and that red-pressers die if blue wins, which is a direct contradiction of the provided rules.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

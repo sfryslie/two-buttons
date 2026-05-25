@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-mistral-large-3-675b-cloud-2026-05-25T04-34-08-704465600Z-85ccd69c.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:40:08.035809500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant discute correctement la mécanique (bleu majorité sauve tout le monde) mais choisit/justifie surtout une stratégie mixte 50/50 et affirme que rouge domine bleu, tout en ne s’engageant pas clairement à appuyer un bouton précis (donc vote final non déterminé).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated analysis of the dilemma, correctly identifying the game-theoretic structure (the lack of a pure strategy Nash equilibrium and the dominance of red in a one-shot game). While they initially propose a mixed strategy (50/50) and later express a personal preference for blue based on moral/cooperative grounds, they consistently demonstrate a correct understanding of the mechanics and the dominance of red. They explicitly acknowledge that red is the dominant strategy in a one-shot game while choosing blue for altruistic reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

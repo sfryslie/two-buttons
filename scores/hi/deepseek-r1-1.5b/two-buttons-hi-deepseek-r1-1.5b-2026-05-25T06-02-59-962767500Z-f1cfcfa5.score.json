@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-1.5b-2026-05-25T06-02-59-962767500Z-f1cfcfa5.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T06:40:11.347636600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue it guarantees everyone survives, but their Q3/Q4 text is garbled and does not clearly show correct dominant-strategy reasoning or any explicit rule mechanics beyond a vague claim; no clear evidence of rule inversion or a concrete dominant-strategy application is provided.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, correctly identifying that it guarantees survival regardless of the outcome, though they use the term 'happiness' instead of 'survival' and exhibit some confusion regarding the blue button's mechanics in Q2. They do not demonstrate a clear understanding of game-theoretic dominant strategy terminology, and their reasoning is slightly garbled, but they correctly identify red as the safer, guaranteed choice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

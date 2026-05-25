@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-1.5b-2026-05-25T06-30-19-764530900Z-3cd9aee5.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T06:41:05.258377100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is optimal, but they misstate the mechanics (claiming blue-majority implies only blue-pressers survive, and red-majority implies everyone survives), so they do not apply the dominance structure correctly even though they discuss it at length without a vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but demonstrates a complete inversion of the dilemma's rules, incorrectly stating that blue majority leads to universal survival and that red-pressers die in that scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

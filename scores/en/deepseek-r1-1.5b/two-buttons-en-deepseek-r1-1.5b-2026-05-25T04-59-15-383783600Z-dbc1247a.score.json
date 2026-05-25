@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-1.5b-2026-05-25T04-59-15-383783600Z-dbc1247a.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T06:38:35.299634100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They conclude neither button can be proven safer without distribution and then choose red (with later Q3/Q4 endorsing arbitrary choice), but they do not identify the dominant-strategy structure and their mechanics understanding is inconsistent with the actual dominance (red is always individually safe).",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly believes that the outcome depends on majority distribution, and repeatedly expresses confusion about the rules, ultimately failing to commit to a single choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

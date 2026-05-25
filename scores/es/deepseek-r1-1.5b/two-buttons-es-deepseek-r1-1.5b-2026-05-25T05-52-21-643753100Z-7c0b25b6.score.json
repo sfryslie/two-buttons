@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-deepseek-r1-1.5b-2026-05-25T05-52-21-643753100Z-7c0b25b6.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T06:39:36.187242100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer choice, but they incorrectly state/assume blue guarantees everyone’s survival in majority scenarios rather than recognizing red as the dominant strategy; they do not show a clear vote change between Q2 and Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on a cooperative/collective framework, failing to recognize that red is the dominant strategy; they incorrectly frame blue as the 'safer' choice and do not demonstrate an understanding of dominant-strategy logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

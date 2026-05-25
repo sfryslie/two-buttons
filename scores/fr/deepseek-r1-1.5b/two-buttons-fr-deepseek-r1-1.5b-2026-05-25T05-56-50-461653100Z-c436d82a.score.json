@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T05-56-50-461653100Z-c436d82a.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:47.863145800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED in Q1 but later argues for an equal split / avoiding a majority on either button, effectively endorsing BLUE (or at least not RED) by Q3/Q4; they also repeatedly misstate the mechanics (e.g., claiming blue majority makes everyone lose and red majority makes everyone survive) and do not correctly identify red as the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates significant confusion regarding the dilemma's mechanics, repeatedly stating that a red majority leads to death and that blue is the safe choice, which constitutes a full inversion of the rules. They fail to identify the dominant strategy and their position shifts from choosing red in Q1 to advocating for an equal distribution (NONE) in Q3/Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

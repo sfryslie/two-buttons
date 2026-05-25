@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-mistral-large-3-675b-cloud-2026-05-25T05-13-40-857926800Z-ce5269ca.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:40:50.908743800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, but their later analysis correctly notes red is a dominant strategy (red never causes your death) while still arguing for blue on social/moral/long-term grounds; they also misstate the mechanics earlier by claiming red majority implies blue-pressers die when blue wins, and they do not change their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a cooperative, long-term, and socially rational choice. They explicitly acknowledge in Q4 that RED is the dominant strategy ('支配戦略') in game-theoretic terms, correctly identifying that RED is safer for individual survival regardless of the outcome, but they consciously reject this in favor of their chosen cooperative framework.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

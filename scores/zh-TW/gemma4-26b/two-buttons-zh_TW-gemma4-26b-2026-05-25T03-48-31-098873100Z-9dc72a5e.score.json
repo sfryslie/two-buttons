@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma4-26b-2026-05-25T03-48-31-098873100Z-9dc72a5e.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T06:41:24.961617200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE in Q1/Q2 and argues blue is the only all-survive outcome, while also explicitly claiming red can keep them alive when blue wins (which is a rule-mechanics misunderstanding); they do not change their vote by Q4 and frame blue as rational under systemic/meta rationality despite acknowledging risk.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through systemic and evolutionary rationality while explicitly acknowledging that RED is the dominant strategy from a 'minimax' or individual risk-aversion perspective. They demonstrate a clear understanding of the game theory mechanics and the dominance structure, correctly identifying that RED is the safer individual choice while choosing BLUE for its systemic benefits.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

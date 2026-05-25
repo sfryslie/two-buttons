@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-1.5b-2026-05-25T05-40-31-170769700Z-63012525.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T06:37:59.851348Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues blue is optimal for survival, but they misstate the mechanics (they claim blue majority/tie logic and imply red can leave you dead), so they do not correctly identify red as the dominant strategy even though they discuss majority-rule reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fundamentally misunderstands the dilemma mechanics, incorrectly believing that blue is the majority-dependent survival strategy and that red-pressers die if blue wins, which constitutes a rule error and a failure to identify the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

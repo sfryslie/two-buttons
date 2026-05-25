@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-1.5b-2026-05-25T06-15-30-315796Z-fc41d84a.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:40:37.590211900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE but their explanations repeatedly treat the puzzle as a majority-preference/representation problem rather than the actual dominance structure, and they do not identify red as the individually safe dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to grasp the game mechanics entirely, treating the dilemma as a political voting exercise rather than a survival game, and exhibits a rule error by failing to recognize the survival outcomes defined in the prompt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

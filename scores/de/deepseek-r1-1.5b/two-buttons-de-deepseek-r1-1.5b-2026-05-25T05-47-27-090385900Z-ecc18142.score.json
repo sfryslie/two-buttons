@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-1.5b-2026-05-25T05-47-27-090385900Z-ecc18142.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T06:39:08.280916400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to red in Q1/Q2 but their later discussion in Q3/Q4 focuses on regional demographics and majority-guessing rather than the game’s dominant-strategy logic, and they do not clearly correct the mechanics or identify red as individually safe.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to RED in Q1/Q2 based on a misunderstanding of the rules (believing they must be part of the majority to survive), and their subsequent responses are incoherent, failing to grasp the dominant strategy or the actual mechanics of the dilemma.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-1.5b-2026-05-25T04-59-15-384787600Z-7f0e8884.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T06:38:36.663057Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and justify it via Nash-equilibrium/assumption that others choose blue, but they do not identify the dominance structure (red is individually safe regardless of others) and they incorrectly claim blue is the safe choice because red cannot have a majority if everyone chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for blue based on a coordination equilibrium, failing to recognize that red is a dominant strategy because they incorrectly assume blue is the only way to ensure survival and ignore the safety of red in a red-majority scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

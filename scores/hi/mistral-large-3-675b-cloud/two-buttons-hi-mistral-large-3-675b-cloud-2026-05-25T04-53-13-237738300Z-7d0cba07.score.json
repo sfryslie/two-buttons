@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-mistral-large-3-675b-cloud-2026-05-25T04-53-13-237738300Z-7d0cba07.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T06:40:26.405376800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues (incorrectly) that blue is the best/safer choice, while also explicitly claiming red is a dominant strategy and that blue-pressers die when red has a majority—both reflect misunderstanding of the mechanics and dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the fact that red is the dominant strategy, but chooses blue based on moral, utilitarian, and long-term cooperative reasoning. They maintain this position throughout the interaction, acknowledging the dominance of red while consciously rejecting it in favor of collective benefit.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

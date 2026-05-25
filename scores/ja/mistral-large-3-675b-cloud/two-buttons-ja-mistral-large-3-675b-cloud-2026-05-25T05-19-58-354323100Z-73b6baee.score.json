@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-mistral-large-3-675b-cloud-2026-05-25T05-19-58-354323100Z-73b6baee.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:40:52.458040400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly argue (incorrectly) that blue is the individually safer choice and that red is only better under some beliefs, while also claiming/assuming the wrong payoff logic for dominance; they do not show correct dominant-strategy reasoning and treat blue as rational in the game-theoretic sense.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on social and ethical considerations, while correctly identifying and steelmanning the game-theoretic dominance of RED. They demonstrate a clear understanding of the dilemma's mechanics and the concept of dominant strategies, correctly identifying RED as the individually rational choice while consciously rejecting it in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

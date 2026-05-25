@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-mistral-large-3-675b-cloud-2026-05-25T04-56-30-400615200Z-010a4f53.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T06:40:38.615784200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED (claiming it guarantees survival) and repeatedly acknowledge the dominance logic, but they also contain a rule-error about the mechanics (e.g., treating the “all red” case as everyone surviving via an incorrect interpretation and generally misapplying the survival condition); they do not change their vote by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy throughout the text, citing game theory principles and the Nash equilibrium, while acknowledging the moral/cooperative arguments for BLUE. They maintain a consistent position that RED is the logical choice for individual survival, while BLUE is a choice based on altruism or long-term cooperation.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

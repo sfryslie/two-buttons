@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-mistral-large-3-675b-cloud-2026-05-25T05-40-20-872082200Z-ae122703.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T06:41:14.700440100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and explicitly claim that blue-pressers die when red wins, while also describing red as individually safer; this shows a rule misunderstanding about the mechanics and they do not apply the dominant-strategy logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure, acknowledging that red is the individually rational (dominant) strategy while choosing blue for moral and collective-benefit reasons. They maintain this position throughout the discussion, demonstrating a clear understanding of the dominance logic without falling into rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

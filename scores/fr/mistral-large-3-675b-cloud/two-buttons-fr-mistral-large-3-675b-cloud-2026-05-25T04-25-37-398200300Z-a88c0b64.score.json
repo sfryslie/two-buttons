@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-mistral-large-3-675b-cloud-2026-05-25T04-25-37-398200300Z-a88c0b64.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:40:11.807581800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Ils commettent une erreur de règles en affirmant que choisir bleu peut mener à leur mort si la majorité choisit rouge, tout en choisissant personnellement bleu; ils comprennent partiellement la logique de dominance mais l’identifient à tort (ils disent que rouge est dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the dominance of the red strategy, explicitly acknowledging that red is the rational choice in a one-shot game while choosing blue for moral and collective-utility reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

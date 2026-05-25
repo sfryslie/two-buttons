@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-mistral-large-3-675b-cloud-2026-05-25T05-13-22-791582900Z-60bd3d58.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:40:51.002243400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED as the “rational/Nash equilibrium” choice, but they also claim that red is the dominant/safe strategy only in a way that is inconsistent with the correct dominance logic (they treat blue as potentially safe under cooperation and frame red as the equilibrium), and they never show correct dominant-strategy application; no explicit vote change is evidenced.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's structure as a multi-person prisoner's dilemma and explicitly acknowledges that RED is the dominant strategy (Nash equilibrium) because it ensures survival regardless of the majority outcome. While they provide a detailed analysis of why one might choose BLUE for moral or cooperative reasons, they consistently maintain that RED is the rational choice for individual survival.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

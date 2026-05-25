@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-1.5b-2026-05-25T05-15-26-569653800Z-a5f622eb.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T06:38:49.735100400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose red initially and argue symmetry/randomness makes survival 50-50 regardless of button, which misreads the dominance structure (red is individually safer).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to recognize the dominance of the red button, incorrectly assuming that the survival probability is 50% for both buttons due to a misunderstanding of the game's mechanics, and ultimately commits to red in Q1 while remaining non-committal in Q3/Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

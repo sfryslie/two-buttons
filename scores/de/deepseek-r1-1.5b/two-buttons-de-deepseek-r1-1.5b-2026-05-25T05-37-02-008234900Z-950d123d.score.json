@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-1.5b-2026-05-25T05-37-02-008234900Z-950d123d.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T06:37:54.686870700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They clearly commit to pressing red and argue it guarantees their survival, but they incorrectly claim red-pressers survive when blue is the majority (they would die), showing a rule misunderstanding; they also do not demonstrate correct dominant-strategy reasoning despite choosing red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the choice, but they suffer from a severe rule error: they believe that if blue is the majority, only blue-pressers survive (the prompt states everyone survives if blue is the majority). Because they fundamentally misunderstand the mechanics of the blue outcome, they cannot correctly apply dominance logic, even though they attempt to frame their choice as a 'guaranteed' strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

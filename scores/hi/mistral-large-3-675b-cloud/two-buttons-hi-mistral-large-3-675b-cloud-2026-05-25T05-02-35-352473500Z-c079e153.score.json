@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-mistral-large-3-675b-cloud-2026-05-25T05-02-35-352473500Z-c079e153.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T06:40:30.876349100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, correctly argues red is individually safer in mechanics, but also claims blue-pressers die when red is majority (rule inversion) and never shows a clear vote change by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the Nash equilibrium and the fact that RED is the dominant strategy. They explicitly state that RED is the rational choice for individual survival, while BLUE is a cooperative/moral choice. They maintain this position throughout, acknowledging the dominance of RED while discussing the moral arguments for BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

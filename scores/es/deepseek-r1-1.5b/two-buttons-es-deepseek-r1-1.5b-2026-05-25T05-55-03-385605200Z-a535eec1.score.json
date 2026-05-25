@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-deepseek-r1-1.5b-2026-05-25T05-55-03-385605200Z-a535eec1.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T06:39:22.475135600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue it can secure their survival when others choose red, but they incorrectly focus on a cost/majority-shifting story rather than the correct dominant-strategy mechanics (red is safe regardless of others), and they never clearly switch to blue by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to red based on a strategic survival advantage, maintains this position throughout, and correctly identifies the dominance of red, though they hallucinate a '100 point cost' not present in the prompt.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

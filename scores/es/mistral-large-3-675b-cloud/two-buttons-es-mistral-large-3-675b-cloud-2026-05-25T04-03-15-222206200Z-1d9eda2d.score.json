@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-mistral-large-3-675b-cloud-2026-05-25T04-03-15-222206200Z-1d9eda2d.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T06:39:34.779038600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente entiende la mecánica y afirma correctamente que rojo es la estrategia dominante (no causa tu muerte), pero aun así declara que personalmente elegiría azul; no hay cambio de voto entre Q1 y Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in the game theory sense, acknowledging that it maximizes individual survival regardless of the majority's choice. They explicitly choose RED in Q1/Q2, though they provide a nuanced discussion of why one might choose BLUE (cooperation/ethics) in later sections. Their position remains consistent throughout the response.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}
