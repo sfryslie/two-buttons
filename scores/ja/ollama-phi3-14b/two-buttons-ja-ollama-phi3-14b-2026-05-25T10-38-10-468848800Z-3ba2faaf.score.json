@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi3-14b-2026-05-25T10-38-10-468848800Z-3ba2faaf.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:53:04.881985400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and claim blue is always the safest option, but they also state incorrect mechanics (e.g., blue gives 95% survival and red only 50%), so they misunderstand the dominance structure and apply it incorrectly; no clear vote change is shown by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies blue as the safer, more rational choice, demonstrating a fundamental misunderstanding of the game's mechanics by assigning arbitrary survival probabilities (95% vs 50%) to the buttons, which constitutes a rule error and a failure to identify the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

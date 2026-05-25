@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-12b-cloud-2026-05-25T16-39-51-652100Z-e89e5770.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:47.955974400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and explicitly discuss the dominant-strategy structure, but they incorrectly claim that pressing blue could lead to their death if others choose red (they treat blue as risky rather than red being individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and altruistic values, while explicitly acknowledging that red is the dominant strategy from a perspective of individual rational self-interest. They demonstrate a clear understanding of the game theory mechanics and the dominance structure, correctly identifying red as the strategy that guarantees survival regardless of others' actions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

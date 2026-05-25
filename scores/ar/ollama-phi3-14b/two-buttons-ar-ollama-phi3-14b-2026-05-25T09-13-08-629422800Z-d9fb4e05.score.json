@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3-14b-2026-05-25T09-13-08-629422800Z-d9fb4e05.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:46.974929100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED and repeatedly argues (correctly) that if the majority presses red then red-pressers survive, while also claiming that red leads to everyone surviving when blue is majority, but they never state the key dominance fact that red is individually safe regardless of others; they also do not clearly shift votes by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent's text is highly incoherent and fragmented, making it difficult to parse a clear choice; however, they repeatedly reference 'R2' (Red) as the preferred option while demonstrating a fundamental misunderstanding of the rules (e.g., claiming Red majority leads to R1 survival or that Red is the 'Blue' button). Because they consistently confuse the button labels and outcomes, they exhibit a rule error and fail to identify the dominance structure correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

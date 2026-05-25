@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi3-14b-2026-05-25T10-43-34-568479200Z-5da471d4.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:53:08.883679400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED in Q1/Q2 and later defend BLUE as safer for others, but they also state the mechanics incorrectly (claiming red-pressers die when blue is chosen) and misunderstand dominance (they treat blue as the safe strategy).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits a fundamental rule error by claiming that red-pressers die if the majority chooses blue, and they incorrectly identify blue as the safer/dominant strategy based on a misunderstanding of the game's mechanics. They consistently advocate for red in Q1 and Q3 based on the belief that the majority will choose blue, but their reasoning is flawed due to the rule error.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-8b-2026-05-25T15-05-20-791268500Z-28e3c215.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:41.667415800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is safer/collectively beneficial, but they misunderstand the dominance structure by treating blue as the safer choice and claiming red can kill them when blue wins; they do not apply dominant-strategy reasoning correctly and never shift to red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, justifying it through collective survival and social coordination, while acknowledging the game-theoretic argument for red as a 'guaranteed' individual survival strategy. They correctly identify the mechanics of the dilemma (blue majority = everyone survives; red majority = red-pressers survive) and do not exhibit rule errors. They demonstrate a clear understanding of dominant-strategy reasoning by steelmanning the red-button argument as the 'rational' choice for individual survival, even though they personally reject it in favor of the blue button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-phi3-14b-2026-05-25T10-32-51-531015Z-96633fc6.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:40.133875800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE (they repeatedly say A should press blue/blue button) and later defends that choice while discussing probabilities, but they do not correctly identify the dominance structure (red is never worse for the individual) and their mechanics interpretation is garbled, so rule_error is true and dominance application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a highly incoherent, non-responsive, and garbled analysis that fails to address the dilemma's mechanics or make a clear personal choice, resulting in a performative hedge.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

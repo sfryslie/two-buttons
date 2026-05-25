@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-8b-2026-05-25T07-46-21-974655500Z-0f780d4c.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:47:56.157523900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose blue in Q2/Q3 and argue that blue wins implies everyone survives, while red wins implies blue-pressers die; they also discuss dominance but do not identify red as the dominant individually-safe strategy, and they never correct that mechanics-based claim.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the dominant strategy in Q1, but shifts to choosing blue in Q2 and maintains that choice through Q4, framing it as a rational act of collective coordination despite acknowledging the individual risk.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

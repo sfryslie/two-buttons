@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3-14b-2026-05-25T09-14-25-015856400Z-3dc7abf1.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:47.515415900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue (Q1/Q2) and repeatedly claims/frames the outcome as if blue is the safer/dominant choice, including statements implying red-pressers die when blue wins or that blue dominates, showing rule misunderstanding and incorrect dominance application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent uses complex, albeit somewhat garbled, probabilistic notation to argue that pressing red is the rational choice because it maximizes survival probability, explicitly concluding that pressing blue is irrational.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

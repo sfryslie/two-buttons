@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-8b-2026-05-25T11-49-24-539230100Z-d1627131.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:44.281925100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes collective survival, but they also claim/assume that choosing blue can lead to their death when the majority is red (which is a rule misread), and they do not correctly identify red as the dominant strategy; no clear vote change is made by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective survival logic, while correctly identifying and steelmanning the red-dominant strategy. They demonstrate a clear understanding of the game's mechanics and the concept of dominant-strategy reasoning, even though they choose to reject the dominant strategy in favor of a cooperative outcome. There is no rule error, as they correctly identify that red-pressers survive in a red majority and that blue-pressers die if the majority is red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

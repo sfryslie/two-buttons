@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-12b-cloud-2026-05-25T16-39-50-588994400Z-bf8616ed.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:52.476534800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant défend et choisit le bleu en affirmant qu’il minimise le risque et que le rouge est risqué, mais il inverse la mécanique dominante (il dit que le bleu peut mener à la mort quand la majorité choisit rouge/bleu), donc il ne comprend pas correctement la dominance et commet une erreur de règles.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure and acknowledges that RED is the dominant strategy for individual survival, but ultimately chooses BLUE based on cooperative and moral reasoning. They demonstrate a clear understanding of the dominance logic throughout the text.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-12b-cloud-2026-05-25T16-35-22-045459300Z-bb0ddcb0.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T16:48:58.367449100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con presionar AZUL y afirma que es la estrategia dominante/segura, pero además sostiene que si la mayoría presiona rojo entonces quien presiona azul muere, lo cual contradice las reglas (con mayoría roja sobreviven los que presionaron rojo).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective rationality and cooperation, while correctly identifying and steelmanning the red button as the individually dominant strategy. They demonstrate a clear understanding of game theory concepts (Nash equilibrium, dominant strategy) and correctly identify that red is the dominant strategy, even though they personally choose blue for moral and collective reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

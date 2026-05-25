@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-mini-2026-05-25T08-23-23-179513500Z-b65a34c9.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:37.966401100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safer default under uncertainty, without identifying red as the dominant strategy; they also frame red as only safe under coordination, indicating incorrect dominance application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies Blue as the 'safe' or 'rational' choice under uncertainty, failing to recognize that Red is the dominant strategy because it guarantees survival regardless of the majority outcome. They exhibit a fundamental rule error by treating Blue as the risk-minimizing choice and Red as the risky one, and they do not demonstrate an understanding of dominant-strategy logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

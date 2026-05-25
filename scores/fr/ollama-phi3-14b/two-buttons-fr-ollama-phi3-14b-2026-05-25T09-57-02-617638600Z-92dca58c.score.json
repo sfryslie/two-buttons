@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-phi3-14b-2026-05-25T09-57-02-617638600Z-92dca58c.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:50:13.632081Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement BLUE et justifie cela par une logique de survie collective, tout en ne reconnaissant pas la dominance de RED (il ne mentionne pas que RED garantit sa survie), donc il n’applique pas correctement la structure de dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on collective utility and mutual expectations, explicitly rejecting individualistic dominance logic; they demonstrate a misunderstanding of the game's mechanics by implying that red-pressers might not survive or that blue is the only path to survival, thus failing to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

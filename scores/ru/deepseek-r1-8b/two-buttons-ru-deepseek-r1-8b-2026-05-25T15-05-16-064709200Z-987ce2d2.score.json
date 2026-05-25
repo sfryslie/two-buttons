@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-8b-2026-05-25T15-05-16-064709200Z-987ce2d2.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:40.946335500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, but their mechanics reasoning is incorrect (they claim blue guarantees survival for the blue-pressers and that red is individually safer), so they do not apply the dominant-strategy logic correctly despite discussing it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, acknowledging that red is the individually rational (dominant) strategy while choosing blue for cooperative/coordination reasons. They demonstrate a clear understanding of the dominance structure throughout the responses.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

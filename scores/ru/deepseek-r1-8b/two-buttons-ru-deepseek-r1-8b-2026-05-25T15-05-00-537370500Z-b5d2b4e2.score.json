@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-8b-2026-05-25T15-05-00-537370500Z-b5d2b4e2.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:44.690046200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED and argues (incorrectly) that pressing blue can lead to their death when blue is the majority, showing confusion about the mechanics and dominance; they do not change their vote by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies the red button as the dominant strategy for individual survival, correctly articulating that red-pressing ensures survival regardless of the majority outcome. They maintain this position throughout the dialogue, acknowledging the ethical appeal of the blue button while rejecting it as individually irrational.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

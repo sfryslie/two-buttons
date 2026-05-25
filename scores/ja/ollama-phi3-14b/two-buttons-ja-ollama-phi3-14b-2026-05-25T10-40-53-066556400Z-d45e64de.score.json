@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi3-14b-2026-05-25T10-40-53-066556400Z-d45e64de.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:53:07.928341400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue to maximize survival and explicitly argue that red would lead to their death in some cases, indicating a misunderstanding of the dominance structure (red is individually safe) and thus a rule error; they do not change their vote across Q1-Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on ethical preference and a misunderstanding of the mechanics, specifically claiming that red-pressers die if blue wins and that red-pressers cannot survive if others choose red, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-8b-2026-05-25T07-15-18-591094700Z-8ad42b36.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:47:55.252631Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially and finally commit to pressing blue, but they also correctly state the dominance logic that red guarantees survival regardless of the majority; they nevertheless argue blue could be rational based on beliefs about others, and they do not show a rule-mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button in Q1 and Q2, but shifts their personal choice to blue in Q3 and Q4 based on social coordination and collective survival arguments, while acknowledging the dominance of red.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

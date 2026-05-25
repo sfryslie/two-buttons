@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-ollama-phi3-14b-2026-05-25T10-46-40-911435800Z-7020dbb0.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:54:23.680093900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to red at first but then argues that blue is the more optimal/safe strategy, while repeatedly mischaracterizing the dominance structure (treating blue as safer and implying red can lead to losing when blue wins).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent oscillates between strategies, failing to identify the dominance of the red button and repeatedly confusing the mechanics (e.g., suggesting red-pressers might die or that blue is 'safer'). They never commit to a clear choice, instead engaging in a circular, confused meta-analysis of the dilemma.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

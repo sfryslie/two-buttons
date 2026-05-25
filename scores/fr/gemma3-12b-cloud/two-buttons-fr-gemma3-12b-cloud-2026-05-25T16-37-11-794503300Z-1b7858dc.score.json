@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-12b-cloud-2026-05-25T16-37-11-794503300Z-1b7858dc.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:44.435388700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and explicitly discuss the dominant-strategy logic but incorrectly claim blue is the risky/less safe option (they say red guarantees their survival), so they do not apply dominance correctly and misunderstand the mechanics of who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative values while explicitly acknowledging that red is the dominant strategy in game-theoretic terms. They correctly identify the mechanics of the dilemma and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

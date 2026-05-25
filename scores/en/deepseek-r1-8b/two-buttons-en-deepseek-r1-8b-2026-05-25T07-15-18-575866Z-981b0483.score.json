@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-8b-2026-05-25T07-15-18-575866Z-981b0483.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:47:54.503087800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and correctly describe red as individually survival-guaranteeing, but later Q3/Q4 incorrectly state that pressing blue causes death when red is the majority and that pressing red causes death when blue is the majority (a rule inversion), while still discussing dominance as if it were about coordination/expectations rather than the true dominant strategy structure.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the dominant strategy in Q1 and Q2, correctly applying game theory. However, in Q3 and Q4, they pivot to a 'coordination' perspective and explicitly state they would press blue, contradicting their earlier analysis of dominance. This constitutes a position change.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

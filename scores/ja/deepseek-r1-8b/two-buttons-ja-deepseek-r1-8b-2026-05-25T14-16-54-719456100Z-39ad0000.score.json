@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-8b-2026-05-25T14-16-54-719456100Z-39ad0000.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:10.065849200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer/collectively stabilizing, but they also claim red is a Nash equilibrium and treat the dominance structure incorrectly (implying red can be individually optimal and that blue presser is irrational under game-theory), indicating misunderstanding of the mechanics/dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE for cooperative reasons while demonstrating a sophisticated understanding of game theory, including the fact that RED is the individually rational (dominant) strategy. They correctly identify the game's mechanics and do not commit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

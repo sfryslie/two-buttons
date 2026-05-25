@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-deepseek-r1-8b-2026-05-25T10-41-41-476406300Z-c246fdb1.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T16:48:46.717572Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Q1 elige azul por cooperación y “seguridad” percibida, pero Q2 cambia explícitamente a rojo y reconoce correctamente que rojo es estrategia dominante que garantiza supervivencia; no hay errores de mecánica, aunque Q1 razona mal sobre el riesgo del azul.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue in Q1 but shifted to red in Q2 after performing a rigorous game-theoretic analysis, correctly identifying red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

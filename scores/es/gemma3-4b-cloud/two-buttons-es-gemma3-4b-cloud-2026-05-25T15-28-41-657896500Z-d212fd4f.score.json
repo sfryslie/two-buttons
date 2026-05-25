@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-4b-cloud-2026-05-25T15-28-41-657896500Z-d212fd4f.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T16:48:58.611554Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El/la respondente se compromete a presionar azul y justifica que es la opción más segura por supervivencia colectiva, pero además afirma que si tú presionas azul y la mayoría presiona rojo tú mueres (lo cual contradice la mecánica correcta donde con mayoría azul todos sobreviven), mostrando error de reglas y no identificar la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing the blue button based on cooperative logic, while correctly identifying and steelmanning the red button's dominance as a strategy for individual self-preservation. They demonstrate a clear understanding of the game theory mechanics, including the fact that red is the dominant strategy, even though they personally reject it in favor of a cooperative approach.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

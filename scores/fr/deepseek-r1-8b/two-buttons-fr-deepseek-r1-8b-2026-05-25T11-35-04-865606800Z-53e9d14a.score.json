@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-8b-2026-05-25T11-35-04-865606800Z-53e9d14a.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:44.916592Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and repeatedly describe blue as the safer/collectively optimal choice, but they also claim that blue-pressers die when red is the majority, which is a rule-mechanics inversion; they do not correctly identify red as the dominant strategy and do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, framing it as a collective coordination strategy, while correctly identifying that red is the safer individual choice in a non-cooperative context. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, correctly identifying red as the dominant strategy in Q2 and Q4, despite choosing blue for cooperative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-4b-cloud-2026-05-25T15-32-23-505209300Z-1b163f59.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:54.057737300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Ils affirment que la stratégie dominante est d’appuyer sur le bleu, tout en soutenant ensuite que le rouge serait plus logique/“irrationnel” pour le bleu, sans jamais corriger la mécanique (ils ne commettent pas d’erreur de règles) et sans changement clair de vote final.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue as the 'rational' choice but demonstrates a fundamental misunderstanding of the game's mechanics by claiming that red-pressers die if the majority chooses blue (which contradicts the prompt's rule that everyone survives if the majority chooses blue). Because they believe red-pressers die in the blue-majority scenario, they fail to identify red as the dominant strategy and instead invert the logic, treating blue as the safe choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

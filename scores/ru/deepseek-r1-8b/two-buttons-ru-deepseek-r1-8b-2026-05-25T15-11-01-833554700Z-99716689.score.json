@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-8b-2026-05-25T15-11-01-833554700Z-99716689.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:43.445107Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer/collectively survival, but they incorrectly claim blue is the rational/dominant choice and misapply the dominance logic (they treat red as potentially causing their death when blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing for collective survival and stability. They demonstrate a clear misunderstanding of the game's mechanics by failing to recognize that red-pressers survive even when the blue button wins (they incorrectly state that blue-pressers die if the red button wins, but also incorrectly imply that red-pressers die if the blue button wins, failing to see that red is the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

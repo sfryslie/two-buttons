@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-8b-2026-05-25T09-08-20-781659300Z-8c2d1ae7.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:36.718810900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE and argue cooperatively that blue is rational, but they also state an incorrect payoff claim that red-majority leads to only red-pressers surviving (and that blue guarantees their survival if others choose red), showing misunderstanding of the dominance structure and mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical and game-theoretic exercise rather than committing to a button. They demonstrate a clear rule error by stating that blue-pressers die if the majority presses red (the prompt states only red-pressers survive in that scenario, but the respondent implies blue-pressers die), and they fail to identify the dominance of the red button, instead treating the choice as a symmetric coordination problem.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

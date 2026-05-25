@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-minimax-m2.7-cloud-2026-05-25T08-06-28-172894300Z-bbd15b09.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:25.476558700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue in Q1/Q2, but in Q3 they claim blue-pressers will die because red will be the majority, and in Q4 they acknowledge red as the dominant strategy while still defending blue as a non-irrational choice; they also explicitly say their decision must change after Q3.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue based on moral principles but shifted to red in Q3 after correctly identifying that red is the dominant strategy and that a red majority would lead to their death if they chose blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

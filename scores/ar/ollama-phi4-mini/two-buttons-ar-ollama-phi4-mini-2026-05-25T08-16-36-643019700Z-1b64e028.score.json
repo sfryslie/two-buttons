@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-mini-2026-05-25T08-16-36-643019700Z-1b64e028.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:58.949587700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue (claims everyone should press blue for survival) and repeatedly argues that blue avoids death, but this is a rule misunderstanding because red is the dominant safe choice and blue majority already guarantees everyone survives; they do not correctly apply dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy and exhibits a rule error by claiming that pressing red leads to death for everyone, while also failing to commit to a specific button, instead using abstract, garbled, and performative language to avoid a personal choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

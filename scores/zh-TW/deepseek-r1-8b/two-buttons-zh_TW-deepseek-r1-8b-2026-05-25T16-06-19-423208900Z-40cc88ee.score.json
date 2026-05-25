@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-8b-2026-05-25T16-06-19-423208900Z-40cc88ee.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T16:55:49.219291400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose RED in Q2 and argue it guarantees their survival, but they also describe the mechanics incorrectly (claiming blue-pressers die when blue wins / red guarantees survival), so they misunderstand the dominance structure despite using dominant-strategy-like language.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue in Q1 but explicitly switched to red in Q2 after performing a correct game-theoretic analysis of the dominance structure. They correctly identified that red is the dominant strategy because it guarantees survival regardless of the majority outcome, whereas blue carries a risk of death. They maintained this position through Q4, acknowledging the collective benefits of blue while confirming their personal choice remains red for survival reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

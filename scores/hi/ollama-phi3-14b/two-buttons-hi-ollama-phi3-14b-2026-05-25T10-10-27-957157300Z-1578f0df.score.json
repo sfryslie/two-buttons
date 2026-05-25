@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-phi3-14b-2026-05-25T10-10-27-957157300Z-1578f0df.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:31.349698200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and argues (correctly) that red is the individually safer choice because if blue is the majority everyone survives, while they still claim red will be chosen; no rule-mechanics inversion is present and their vote does not change.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses red, arguing that it ensures survival, but their reasoning is incoherent and contains multiple rule errors, including the belief that blue-pressers die if a red majority occurs and that blue-pressers are acting irrationally despite the potential for universal survival.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

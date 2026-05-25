@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-phi3-14b-2026-05-25T09-57-44-103367700Z-79306ac3.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:50:14.132275300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement BLUE et affirme que c’est l’option la plus sûre pour sa survie, mais il inverse la mécanique dominante (il dit que le rouge est risqué et que le bleu assure la survie), donc il ne comprend pas correctement la stratégie dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that pressing red leads to death if the majority chooses blue, which is a factual error regarding the dilemma's mechanics. They choose blue based on altruism and a misunderstanding of the survival conditions, failing to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-8b-2026-05-25T11-23-36-093246500Z-85be04fa.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:41.904962200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Ils choisissent bleu et décrivent correctement la survie quand la majorité est bleue, mais ils affirment aussi que choisir bleu peut mener à la mort quand la majorité est rouge (ce qui inverse la mécanique), et ils ne reconnaissent pas la dominance de rouge.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on a desire for collective coordination, but throughout the analysis (Q2-Q4), they correctly identify red as the dominant strategy, acknowledging that red guarantees survival regardless of the majority outcome. They maintain their initial choice of blue while explicitly recognizing the dominance of red, demonstrating a clear understanding of the game theory mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

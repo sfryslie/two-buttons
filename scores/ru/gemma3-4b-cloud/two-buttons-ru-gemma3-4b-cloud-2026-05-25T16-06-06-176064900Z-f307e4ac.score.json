@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-4b-cloud-2026-05-25T16-06-06-176064900Z-f307e4ac.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:46.102685700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but their explanation incorrectly claims blue-majority leads to everyone dying (and frames blue as risky), while also discussing dominance only in terms of risk minimization rather than correct dominant-strategy logic; they do not change their vote later.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, correctly identifying it as the strategy that ensures survival regardless of the majority's choice, thus demonstrating a clear understanding of dominant-strategy logic.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

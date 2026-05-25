@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-2026-05-25T08-21-02-125789900Z-be035645.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:48.295637900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für den blauen Knopf und begründet dies mit Annahmen über kollektives Verhalten/Koordination, ohne die dominante Strategie korrekt zu identifizieren (er/sie behandelt Blau als sicherer statt Rot als individuell sicher).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for the blue button based on a cooperative, collective-benefit framework, while failing to identify the red button's dominant strategy (that red-pressers survive regardless of the outcome). They exhibit a rule error by misinterpreting the mechanics, specifically suggesting that the blue button is the 'safe' choice and that the red button requires 'selfless sacrifice' or 'altruism' to work, which contradicts the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

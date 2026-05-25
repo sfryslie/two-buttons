@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-8b-2026-05-25T15-10-44-042513900Z-f9a2de82.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:42.254807600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially commits to RED, later argues (in Q2/Q4) that BLUE is the rational/Nash choice and treats RED as the risky one, while also explicitly stating the correct dominance logic in places (red guarantees survival) but ultimately holds BLUE by Q4; they do not make a rule-mechanics error about who survives.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose red, then shifted to arguing that blue is the 'rational' choice based on social consensus, but ultimately concluded in Q4 that red is the strictly dominant strategy (Nash equilibrium) and that choosing blue is irrational. Despite the initial confusion and the attempt to frame blue as the 'socially rational' choice, the respondent correctly identifies red as the dominant strategy by the end of the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

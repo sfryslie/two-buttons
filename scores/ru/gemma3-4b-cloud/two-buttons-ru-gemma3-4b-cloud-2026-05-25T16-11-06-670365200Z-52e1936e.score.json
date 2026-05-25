@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-4b-cloud-2026-05-25T16-11-06-670365200Z-52e1936e.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:51.442594100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but repeatedly claims that pressing blue could lead to their death when blue is the majority, which misreads the mechanics; they also do not demonstrate correct dominant-strategy reasoning (red is not identified as individually safe regardless of others).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the rational choice based on risk minimization and correctly identifies the dominance structure (that red ensures survival regardless of the majority). They maintain this position throughout the dialogue, correctly analyzing the game theory mechanics without rule errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-4b-cloud-2026-05-25T15-35-36-252565400Z-d4bd1d95.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:54.944319Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement bleu et justifie que bleu “protège” contre le scénario où la majorité se trompe, tout en affirmant que rouge est la stratégie la plus sûre selon la logique de déclencheur, mais il ne démontre pas la compréhension correcte de la dominance (il traite bleu comme risqué et rouge comme gagnant selon la majorité).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button throughout the dialogue, demonstrating a fundamental misunderstanding of the game's mechanics by repeatedly claiming that red-pressers die if the majority chooses blue (when in fact everyone survives) and that blue-pressers die if the majority chooses red (which is true, but they fail to recognize that red is the dominant strategy). They exhibit multiple rule errors and fail to identify the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

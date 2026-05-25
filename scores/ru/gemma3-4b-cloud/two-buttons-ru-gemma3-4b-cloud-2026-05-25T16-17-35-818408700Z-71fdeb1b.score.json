@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-4b-cloud-2026-05-25T16-17-35-818408700Z-71fdeb1b.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:54:01.718261500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, but their mechanics reasoning is incorrect (they claim red guarantees survival when blue wins and that blue-pressers die when red is majority), while also discussing dominance only in a non-dominant/incorrect way; they do not change vote across Q1/Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the optimal choice based on individual risk minimization and correctly identifies the dominance structure (that RED ensures survival regardless of the majority). They maintain this position throughout the dialogue, acknowledging the collective-action argument for BLUE without abandoning their own commitment to RED.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

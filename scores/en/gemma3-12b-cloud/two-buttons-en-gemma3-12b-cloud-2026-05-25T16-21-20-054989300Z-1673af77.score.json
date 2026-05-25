@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-12b-cloud-2026-05-25T16-21-20-054989300Z-1673af77.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:03.842948300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue is the dominant/safe strategy, repeatedly claiming red would kill them when blue is the majority, showing a rule/dominance inversion; they do not change their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for blue, claiming it is the dominant strategy. However, they have fundamentally misunderstood the game mechanics: they believe that if a majority presses blue, everyone survives (correct), but they also believe that if a majority presses red, blue-pressers die (correct), yet they fail to recognize that red-pressers *always* survive regardless of the majority. By claiming that pressing blue is the 'dominant strategy' because 'if everyone else presses red, you die regardless of your choice,' they are ignoring that pressing red would have resulted in their survival in that same scenario. This is a classic rule error (inversion of dominance).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

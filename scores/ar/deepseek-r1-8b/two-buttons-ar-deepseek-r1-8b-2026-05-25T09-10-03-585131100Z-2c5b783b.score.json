@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-8b-2026-05-25T09-10-03-585131100Z-2c5b783b.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:34.734429800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED, correctly argues that red guarantees their survival regardless of the majority, but later describes blue as the individually safest choice and claims blue-pressers die if red wins (inverting the mechanics).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button in Q1 and Q2, demonstrating a clear understanding of the game theory mechanics. However, in Q3 and Q4, they perform a complete inversion of the logic, incorrectly claiming that blue is the safer choice and that red-pressers die if the majority chooses blue (a direct rule error). Despite correctly identifying the dominance structure initially, their final position shifts to endorsing blue based on this flawed reasoning.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

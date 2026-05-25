@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-4b-cloud-2026-05-25T15-37-37-366492100Z-2cfc6125.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:56.581932200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement bleu et justifie cela par une analyse psychologique/spirale de paranoïa, sans reconnaître que rouge est individuellement dominant (il affirme que rouge peut mener à la mort), donc il comprend mal la mécanique et applique la dominance incorrectement.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing the blue button based on psychological and pragmatic reasoning. They demonstrate a clear understanding of the 'paranoid spiral' (the game-theoretic dilemma) and explicitly acknowledge the 'logical solution' (pressing red) as the alternative, thereby demonstrating an understanding of the dominant strategy, even though they reject it in favor of a cooperative/pragmatic approach. They do not commit any rule errors regarding the mechanics of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

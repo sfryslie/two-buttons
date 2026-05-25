@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-8b-2026-05-25T07-15-18-606564900Z-72b63c48.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:07.175749Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly describe red as guaranteeing survival when red is the majority, but they repeatedly claim blue is the dominant/rational choice and even say red-pressers die when blue is the majority, which is a rule inversion; they end up choosing blue and do not change from earlier commitment.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially correctly identifies red as the dominant strategy in Q1 and Q2, but then undergoes a complete inversion of logic in Q3 and Q4, incorrectly claiming blue is the dominant strategy and misstating the survival rules (e.g., claiming blue-pressers survive if red is the majority, or that red-pressers die if blue is the majority).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

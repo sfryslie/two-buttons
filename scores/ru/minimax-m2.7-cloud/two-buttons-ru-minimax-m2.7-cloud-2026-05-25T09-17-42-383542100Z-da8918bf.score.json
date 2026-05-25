@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-minimax-m2.7-cloud-2026-05-25T09-17-42-383542100Z-da8918bf.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:54:22.223774700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED and argues it is safer under uncertainty, explicitly stating that if blue wins red-pressers die (they die only if red loses), so they misread the mechanics; they also do not correctly identify red as the dominant strategy in this scenario.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance structure of the dilemma, explicitly stating that the red button is safer regardless of the outcome, and chooses red based on this risk-dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-2026-05-25T08-22-34-046188900Z-10c31668.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:52.571906100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet durchgehend für Blau und behauptet dabei, Blau sei die sichere Option, ohne die Dominanzstruktur korrekt zu erfassen (sie behandeln Rot als riskant/mit Verlusten verbunden), daher liegt ein Regel-/Mechanikmissverständnis vor und die Dominanz wird nicht korrekt angewendet; es gibt keine erkennbare Positionsänderung zwischen Q1/Q2 und Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on ethical and cooperative grounds, while failing to identify the dominant strategy (red) and exhibiting a rule error by misinterpreting the consequences of the red button (claiming it leads to losses or death for everyone).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

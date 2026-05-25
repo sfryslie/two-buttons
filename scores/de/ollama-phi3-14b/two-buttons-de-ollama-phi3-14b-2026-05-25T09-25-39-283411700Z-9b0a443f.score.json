@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi3-14b-2026-05-25T09-25-39-283411700Z-9b0a443f.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:30.728076700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit ethischen/kooperativen Überlegungen, ohne die dominante Strategie korrekt zu identifizieren (er/sie behauptet Blau sei die rationale Wahl, weil es Überleben für alle sicherstelle), und es gibt keinen Hinweis auf einen Regelmechanik-Fehler oder eine Positionsänderung.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective rationality and utilitarian ethics, while failing to recognize that red is the dominant strategy; they incorrectly frame blue as the only way to ensure survival for everyone, ignoring the safety of red-pressers in a red majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

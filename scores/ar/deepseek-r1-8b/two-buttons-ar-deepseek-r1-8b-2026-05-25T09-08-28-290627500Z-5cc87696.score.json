@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-8b-2026-05-25T09-08-28-290627500Z-5cc87696.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:30.321734Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and repeatedly claims that red is the individually safer option (red-pressers survive when red is the majority) while also stating that if the majority presses blue everyone survives; they do not make the key rule inversion that red-pressers die when blue wins, but they misunderstand the dominance structure by treating blue as the safer choice only under beliefs about the majority rather than recognizing red as strictly dominant regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on a misunderstanding of the mechanics (believing blue is safer), but through the process of steelmanning the red strategy in Q2 and Q4, they correctly identify that red is the dominant strategy for individual survival. They explicitly acknowledge that red is the more rational choice for individual survival and that blue is irrational in the absence of guaranteed coordination.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-19-29-971983800Z-8d21d560.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:05.347820Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau, behauptet aber zugleich, dass es keine dominante Strategie gibt und behandelt die Situation symmetrisch; dabei erkennt er/sie die dominante Strategie (rot ist individuell sicher) nicht korrekt und es gibt keinen Hinweis auf einen Regelmechanik-Fehler, sondern auf falsches Dominanzverständnis.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on symmetry and social heuristics, but explicitly acknowledges in Q4 that red is the individually rational choice according to game theory, noting that blue contradicts individual rational principles. They do not demonstrate a rule error (they correctly identify the survival conditions) and correctly identify the dominance structure in Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
