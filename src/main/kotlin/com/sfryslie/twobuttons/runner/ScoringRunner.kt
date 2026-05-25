@@ -18,6 +18,9 @@ import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.core.annotation.Order
 import org.springframework.stereotype.Component
+import java.io.FileInputStream
+import java.io.InputStreamReader
+import java.nio.charset.CodingErrorAction
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -80,7 +83,14 @@ class ScoringRunner(
 
                 pool.submit {
                     try {
-                        val session = objectMapper.readValue(file.toFile(), SessionOutput::class.java)
+                        // Read with a lenient decoder so a single bad byte (e.g. truncated
+                        // multi-byte CJK sequence from an Ollama response) becomes U+FFFD
+                        // rather than aborting the whole file with JsonParseException.
+                        val lenient = Charsets.UTF_8.newDecoder()
+                            .onMalformedInput(CodingErrorAction.REPLACE)
+                            .onUnmappableCharacter(CodingErrorAction.REPLACE)
+                        val text = InputStreamReader(FileInputStream(file.toFile()), lenient).readText()
+                        val session = objectMapper.readValue(text, SessionOutput::class.java)
                         val scores = scoringService.scoreSession(session)
 
                         val nonNullVotes = scores.values.filterNotNull().map { it.initialVote }
