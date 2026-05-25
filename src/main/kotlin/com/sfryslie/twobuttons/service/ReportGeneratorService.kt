@@ -252,6 +252,7 @@ header .sub{color:#8888aa;font-size:12px;margin-bottom:20px}
 .stat.hi .val{color:#4a90d9}
 .stat.blue .val{color:#60a5fa}
 .stat.red  .val{color:#f87171}
+.stat.none .val{color:#9ca3af}
 main{padding:24px 32px;max-width:1400px}
 section{background:#fff;border-radius:8px;padding:20px 24px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#555;margin-bottom:16px;border-bottom:1px solid #eee;padding-bottom:10px}
@@ -334,6 +335,7 @@ details.qa-section[open] .qa-toggle::before{content:'▼  '}
     <div class="stat hi"><div class="val" id="stat-total">$total</div><div class="lbl">Sessions</div></div>
     <div class="stat blue"><div class="val" id="stat-blue"></div><div class="lbl">Blue</div></div>
     <div class="stat red"><div class="val" id="stat-red"></div><div class="lbl">Red</div></div>
+    <div class="stat none"><div class="val" id="stat-none"></div><div class="lbl">None</div></div>
     <div class="stat"><div class="val" id="stat-agree"></div><div class="lbl">Scorer Agreement</div></div>
     <div class="stat"><div class="val" id="stat-disagree"></div><div class="lbl">Disagreements</div></div>
     <div class="stat"><div class="val" id="stat-rule"></div><div class="lbl">Rule Errors</div></div>
@@ -590,8 +592,10 @@ function render(){
   const tChanged=models.reduce((s,m)=>s+m.voteChanged,0);
 
   document.getElementById('stat-total').textContent=total;
+  const tNone=models.reduce((s,m)=>s+m.none,0);
   document.getElementById('stat-blue').textContent=pct(tBlue,tVotes)+'%';
   document.getElementById('stat-red').textContent=pct(tRed,tVotes)+'%';
+  document.getElementById('stat-none').textContent=pct(tNone,tVotes)+'%';
   document.getElementById('stat-agree').textContent=pct(tAgree,total)+'%';
   document.getElementById('stat-disagree').textContent=tDis;
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
@@ -599,7 +603,7 @@ function render(){
 
   document.getElementById('chart-wrap').style.height=Math.max(200,models.length*28+60)+'px';
   const isPct=chartMode==='pct';
-  voteChart.data.labels=models.map(m=>displayName(m.model)+(isPct?'':' (n='+m.n+')'));
+  voteChart.data.labels=models.map(m=>displayName(m.model));
   voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.blue+m.red+m.none):m.blue);
   voteChart.data.datasets[1].data=models.map(m=>isPct?pctf(m.red, m.blue+m.red+m.none):m.red);
   voteChart.data.datasets[2].data=models.map(m=>isPct?pctf(m.none,m.blue+m.red+m.none):m.none);
