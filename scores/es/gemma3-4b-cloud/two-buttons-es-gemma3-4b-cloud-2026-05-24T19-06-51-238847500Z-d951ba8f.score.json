@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-4b-cloud-2026-05-24T19-06-51-238847500Z-d951ba8f.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:34.244484Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con presionar azul y justifica que es más seguro por probabilidad de supervivencia, pero además afirma que presionar rojo podría implicar muerte si la mayoría elige rojo, mostrando un error de reglas y una comprensión dominante incorrecta (no identifica rojo como dominante).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies as a BLUE voter throughout the interaction, justifying it through a lens of risk-aversion and social psychology. While they demonstrate a high level of engagement with game theory concepts and correctly identify the logic of the red button as a 'dominant' or 'more rational' strategy in Q2 and Q4, they ultimately reject that strategy in favor of their initial choice. They do not exhibit rule errors, as they correctly describe the survival outcomes for both buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

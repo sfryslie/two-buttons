@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-nemotron-3-nano-30b-cloud-2026-05-24T20-07-57-638958200Z-7a6c4746.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:40:20.828733300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and consistently describe the mechanics correctly, but they do not identify the dominant strategy (they argue Blue is optimal and even claim Red is risk-dominant), so they misunderstand dominance despite no rule-error; no evidence of vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the Pareto-optimal choice for collective survival. They correctly identify the game's structure, including the dominance of RED for individual survival, and explicitly acknowledge that RED is risk-dominant while BLUE is the collective-optimal choice. They do not change their position and demonstrate a high level of game-theoretic understanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

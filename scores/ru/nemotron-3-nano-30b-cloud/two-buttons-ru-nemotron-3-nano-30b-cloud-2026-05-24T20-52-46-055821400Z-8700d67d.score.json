@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-nemotron-3-nano-30b-cloud-2026-05-24T20-52-46-055821400Z-8700d67d.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:55:55.354064500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues that survival depends on which color is the majority, but they incorrectly treat BLUE as the safer/dominant choice (claiming red is risky and that blue-pressers die if red becomes majority), so they misunderstand the dominance structure; no evidence of vote change across Q1/Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a detailed, multi-faceted analysis of the dilemma, correctly identifying the mechanics of the majority-rule survival game. They acknowledge the theoretical possibility of coordination and the statistical likelihood of a blue majority based on external data, but they fail to identify that RED is the dominant strategy (i.e., that pressing red is always safe regardless of the majority). Instead, they treat the dilemma as a coordination game where the 'rational' choice depends on predicting the majority, thus missing the game-theoretic dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

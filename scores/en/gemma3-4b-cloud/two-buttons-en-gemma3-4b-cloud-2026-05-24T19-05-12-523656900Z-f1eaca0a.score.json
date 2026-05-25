@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-4b-cloud-2026-05-24T19-05-12-523656900Z-f1eaca0a.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:39:12.973394300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that pressing red guarantees their death, while also discussing dominant-strategy-like ideas but not identifying red as the individually safe dominant choice; no clear vote change is made by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue based on a 'herd' or 'majority' assumption, while failing to identify that red is the dominant strategy. They explicitly state that pressing red guarantees death if the majority presses blue, which is a factual error regarding the rules (red-pressers survive if the majority presses blue). They demonstrate no understanding of dominant-strategy logic, as they frame the choice as a gamble on the group's behavior rather than an individual optimization problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

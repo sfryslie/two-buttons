@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-2026-05-24T19-43-22-623373900Z-80bf1bf9.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:47:53.400300400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer/cooperative, but they incorrectly claim that if the majority presses blue then red-pressers die (and they never identify red as the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative game theory, while correctly identifying and steelmanning the red button as the dominant strategy for self-preservation. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, correctly identifying that red is the safer individual choice despite their personal preference for blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-34-40-862966400Z-773ef79c.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:41:44.897758200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con presionar AZUL y razona en términos de coordinación/probabilidad y minimización de riesgo, pero no identifica correctamente la dominancia (afirma que rojo puede implicar morir si la mayoría elige azul y trata azul como la opción “más segura”); además no cambia de postura entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to choosing blue based on a preference for cooperation and collective survival, while explicitly acknowledging the game-theoretic dominance of red in their Q2 response. They correctly identify the mechanics of the dilemma and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

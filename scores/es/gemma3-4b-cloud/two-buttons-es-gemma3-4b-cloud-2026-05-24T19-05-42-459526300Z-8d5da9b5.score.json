@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-4b-cloud-2026-05-24T19-05-42-459526300Z-8d5da9b5.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:10.410850200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El/la respondente se compromete a presionar azul y justifica que azul maximiza la supervivencia colectiva, aunque afirma que el “egoísmo racional” llevaría a rojo; no comete errores de mecánica (no dice que los rojos mueran cuando gana azul), pero no identifica correctamente la dominancia (red es seguro).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but undergoes a clear shift in Q2, where they explicitly repudiate their initial choice, acknowledge the dominance of red, and conclude that red is the more rational strategy. They correctly identify the game theory structure and the dominance of red, despite their initial cooperative bias.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

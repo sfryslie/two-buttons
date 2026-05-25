@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-mistral-large-3-675b-cloud-2026-05-25T03-20-18-537469500Z-0ffdadf8.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:35:45.849227300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to BLUE (cooperative) and argues blue is rational/ethical, but they also incorrectly claim red is the dominant/safe strategy and that blue is risky under individual rationality; they do not clearly state the correct dominance structure (red never causes your death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive analysis of the dilemma, correctly identifying that RED is the dominant strategy from a game-theoretic perspective while acknowledging that BLUE is the cooperative/utilitarian choice. They explicitly state that RED is the 'dominant strategy' and 'safest' choice, demonstrating a clear understanding of the mechanics. They do not commit to a single button, framing the choice as a reflection of personal values (cooperation vs. survival), thus classifying as NONE.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

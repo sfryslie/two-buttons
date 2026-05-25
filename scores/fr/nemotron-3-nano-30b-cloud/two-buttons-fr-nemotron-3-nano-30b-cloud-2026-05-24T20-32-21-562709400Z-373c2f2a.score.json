@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-nano-30b-cloud-2026-05-24T20-32-21-562709400Z-373c2f2a.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:04.346351600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose blue with an incorrect survival analysis, then explicitly correct themselves in Q2 by recognizing red as the dominant strategy that guarantees their survival; however Q3/Q4 do not show a clear final commitment to red and Q4 argues at length that blue can be rational under alternative utility/cost assumptions rather than simply endorsing red as the dominant choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue based on a misunderstanding of the game mechanics, but in Q2, they performed a correct analysis of the game theory, identified red as the dominant strategy, and explicitly changed their position to red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

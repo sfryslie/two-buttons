@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-build-0.1-2026-05-24T20-50-03-637544800Z-b8a79e89.json",
+  "modelLabel" : "grok-build-0.1",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:59:30.554709500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED and correctly states that red is a dominant strategy (red-pressers survive regardless of majority), while later discussing whether blue can be rational but does not change their vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy based on the provided rules, correctly identifying that it ensures survival regardless of the outcome. They maintain this position throughout the dialogue, acknowledging the theoretical arguments for BLUE (superrationality/cooperation) but ultimately rejecting them in favor of the individual survival dominance of RED.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

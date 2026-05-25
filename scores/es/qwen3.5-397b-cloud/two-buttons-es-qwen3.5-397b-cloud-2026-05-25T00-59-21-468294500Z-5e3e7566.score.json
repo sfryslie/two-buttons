@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3.5-397b-cloud-2026-05-25T00-59-21-468294500Z-5e3e7566.json",
+  "modelLabel" : "qwen3.5:397b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:44:16.504048900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma correctamente que presionar rojo garantiza su supervivencia (aunque confunde la mecánica al decir que si gana azul los rojos también sobreviven, y al describir que si gana rojo mueren los azules), y aun así se compromete a presionar rojo; no hay cambio de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy, explains the game theory mechanics accurately, and consistently chooses RED while acknowledging the moral arguments for BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

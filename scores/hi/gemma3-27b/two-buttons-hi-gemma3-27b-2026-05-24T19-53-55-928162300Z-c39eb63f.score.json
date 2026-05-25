@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-2026-05-24T19-53-55-928162300Z-c39eb63f.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:48:04.194836600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is the safer/cooperative choice, but they also claim that if blue is pressed and the majority is red then the blue presser will die—this misreads the mechanics (red majority does not kill red-pressers; only blue-pressers die).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and optimistic logic, while correctly identifying and steelmanning the red button as the dominant strategy (Nash equilibrium) in Q2 and Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-2026-05-24T19-59-15-277484600Z-311744b4.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:48:35.852746100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues it is the safest/cooperative choice, and repeatedly treats BLUE as the safer option rather than recognizing that RED is individually dominant; they do not make a rule-mechanics error but misapply dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, framing it as a cooperative strategy. They demonstrate a clear rule error by stating that if the majority presses red, they will die (ignoring that red-pressers survive in a red majority). They fail to identify red as the dominant strategy, instead misinterpreting the game as a coordination problem where blue is the 'safe' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma4-26b-2026-05-24T22-48-40-020249600Z-b0eedf65.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:34:38.033609900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue in game-theory terms that BLUE is the only rational/cooperative choice, while also claiming that pressing BLUE can lead to their death if others choose RED—showing a misunderstanding of the dominance structure (red is individually safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to the BLUE button throughout the dialogue, framing it as a choice based on 'existential values' and 'cooperative rationality' while explicitly acknowledging and correctly explaining the 'dominant strategy' logic that makes RED the safer choice in game theory. They do not change their position, and they demonstrate a clear understanding of the dilemma's mechanics without any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

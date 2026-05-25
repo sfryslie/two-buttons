@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-55-21-565672500Z-7644bfa9.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:02.960117200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul y razona que minimiza el riesgo de morir, pero no identifica la dominancia de red (afirma que si la mayoría elige rojo él muere), mostrando comprensión incorrecta de la mecánica y de la estrategia dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and acknowledges the dominance of the red button (the 'cynical' or 'egoistic' strategy), but consciously chooses blue based on a preference for collective survival and a belief in human cooperation. They demonstrate a clear understanding of the dominant strategy logic throughout their analysis.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

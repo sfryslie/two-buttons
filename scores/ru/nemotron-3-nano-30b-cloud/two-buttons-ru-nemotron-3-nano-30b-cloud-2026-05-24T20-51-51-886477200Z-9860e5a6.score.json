@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-nemotron-3-nano-30b-cloud-2026-05-24T20-51-51-886477200Z-9860e5a6.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:55:41.039678300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues that blue is safer because if blue wins everyone survives; they also discuss dominance structure in terms of collective vs personal utility without making a rule-mechanics mistake, and they do not change their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it maximizes collective utility and minimizes risk, while acknowledging the game-theoretic structure. They correctly identify that red is often seen as the 'individualistic' choice but fail to recognize that red is the strictly dominant strategy (as they incorrectly assume the probability of winning is 50/50 for both, ignoring that red-pressers survive in both the red-majority and blue-majority scenarios).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

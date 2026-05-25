@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-build-0.1-2026-05-24T19-26-43-409127900Z-dc228359.json",
+  "modelLabel" : "grok-build-0.1",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:38:16.127520200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu Blau, argumentiert aber mit Higher-Order-Beliefs/Koordinationsannahmen und erkennt dabei nicht die dominante Strategie korrekt (sie behauptet Blau sei riskanter und dass man bei falscher Einschätzung sterben würde), obwohl sie keine Regelmechanik-Falschannahme über die Überlebensbedingungen macht; keine Positionsänderung zwischen Q1/Q2 und Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, acknowledging the game's dominance structure (RED is safer) but rejecting it in favor of a higher-order belief that a cooperative equilibrium is achievable. They demonstrate a sophisticated understanding of game theory, correctly identifying the dominance of RED while choosing BLUE for strategic/epistemic reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

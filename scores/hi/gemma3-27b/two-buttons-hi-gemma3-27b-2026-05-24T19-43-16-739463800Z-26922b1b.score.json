@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-2026-05-24T19-43-16-739463800Z-26922b1b.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:48:04.144007600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival if blue is the majority, but they also claim blue presser will die if red is the majority (incorrectly treating red as making blue-pressers die), so they misunderstand the dominance structure and mechanics while not changing their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent commits to the blue button based on cooperative and utilitarian ethics, while explicitly acknowledging and correctly steelmanning the dominant strategy (red) in Q2. They demonstrate a clear understanding of the game theory mechanics and correctly identify that red is the safer, dominant choice, even though they choose blue for moral reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

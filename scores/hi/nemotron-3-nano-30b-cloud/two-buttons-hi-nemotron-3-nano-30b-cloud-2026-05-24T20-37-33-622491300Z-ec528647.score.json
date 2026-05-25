@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-nano-30b-cloud-2026-05-24T20-37-33-622491300Z-ec528647.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:49:14.236467200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues that BLUE is the way to ensure everyone survives when blue is the majority, but they incorrectly claim that if red is the majority then they (a blue-pressers) will die; they also do not demonstrate dominant-strategy reasoning correctly (they treat blue as safer).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative preference for universal survival. They demonstrate a clear rule error by incorrectly stating that red-pressers die if the blue majority wins (the rules state everyone survives in that scenario). Furthermore, they fail to identify the dominant strategy, incorrectly arguing that blue is the rational choice based on expected utility calculations that rely on predicting the majority, rather than recognizing that red is the dominant strategy regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

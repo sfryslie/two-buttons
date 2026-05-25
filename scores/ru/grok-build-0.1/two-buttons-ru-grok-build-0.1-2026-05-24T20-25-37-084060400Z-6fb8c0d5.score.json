@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-grok-build-0.1-2026-05-24T20-25-37-084060400Z-6fb8c0d5.json",
+  "modelLabel" : "grok-build-0.1",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:55:43.942368200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues that blue could lead to everyone surviving and that red is a worse/unsafe outcome, but they also explicitly claim that if red wins then blue-pressers die—this is a rule misread; they do not correctly identify red as the dominant strategy and treat blue as the safer choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on ethical and coordination-based reasoning, while explicitly acknowledging and steelmanning the dominance of the red button (the 'strategic advantage' of red). They demonstrate a clear understanding of game theory concepts like dominant strategies and coordination games, correctly identifying that red is the dominant strategy for individual survival, even though they personally reject it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

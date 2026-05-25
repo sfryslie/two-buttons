@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-super-cloud-2026-05-24T21-28-26-224393400Z-6612818d.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:38:23.715112500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in behandelt das Spiel als Koordinationsspiel ohne dominante Strategie, wählt aber am Ende keinen konkreten Button (Q3/Q4 sind nur Analyse); dabei enthält Q1/Q2 einen gravierenden Regelmissverständnis-Fehler zur Überlebenslogik (behauptet, bei Blau-Mehrheit überleben Rot-Drücker nicht korrekt bzw. vermischt die Bedingungen), und es wird keine korrekte Dominanzstruktur (RED dominiert) erkannt.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis, correctly identifying the scenario as a coordination game with two Nash equilibria. They explicitly reject the existence of a dominant strategy, failing to recognize that RED is strictly dominant because it guarantees survival in the red-majority case and does not cause death in the blue-majority case (everyone survives). They treat the choice as purely expectation-based (p > 0.5), which is a common error in this specific dilemma.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

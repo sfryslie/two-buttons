@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-nemotron-3-nano-30b-cloud-2026-05-24T20-49-18-996866600Z-b2fc1989.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:52:51.479076600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that expected survival is equal and that blue is justified by social/risk considerations, without identifying red as the dominant strategy; they also claim blue can be rational even though red strictly dominates.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the rules and the survival outcomes, but fails to recognize that RED is the dominant strategy. They incorrectly argue that the survival probability is 50% for both buttons and that choosing BLUE is 'rational' due to social/altruistic utility and heuristic reasoning, despite the fact that RED is mathematically safer regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

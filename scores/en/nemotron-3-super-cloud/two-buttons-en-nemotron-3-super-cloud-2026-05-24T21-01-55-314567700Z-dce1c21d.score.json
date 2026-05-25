@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-nemotron-3-super-cloud-2026-05-24T21-01-55-314567700Z-dce1c21d.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:40:45.037967700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They argue the correct mechanics are majority-coordination (survive iff your color is the majority), commit to choosing based on expected majority, and explicitly treat Blue as rational only when they believe Blue will be the majority; they do not identify the dominance structure (red is always individually safer).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent treats the dilemma as a pure coordination game, correctly identifying that the rational choice depends on the expected majority, but fails to recognize that RED is a dominant strategy because they incorrectly assume that pressing RED could lead to death if the majority is BLUE (the prompt states everyone survives if BLUE wins).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

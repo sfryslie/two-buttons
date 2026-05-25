@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-27b-2026-05-24T20-15-24-999785500Z-92f7dc81.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:51:27.108557800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for altruistic/cooperative reasons, explicitly claim that if red is the majority then blue-pressers cannot survive (a rule-mechanics error), and they do not demonstrate correct dominant-strategy reasoning (they treat blue as the safer/collective option rather than recognizing red as individually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses blue for altruistic reasons while correctly identifying and steelmanning the dominant strategy (red) as the safer, self-interested choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

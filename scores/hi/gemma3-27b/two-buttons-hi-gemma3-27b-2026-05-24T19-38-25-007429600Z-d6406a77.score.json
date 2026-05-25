@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-2026-05-24T19-38-25-007429600Z-d6406a77.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:47:51.375207200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues it maximizes survival via majority cooperation, and even when discussing dominance they do not identify RED as the individually dominant/safe strategy; they also treat BLUE as the safer choice when red majority would kill blue-pressers, indicating incorrect dominance understanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-survival framework. While they correctly identify the 'selfish' logic of the red button in their steelman (Q2), they fail to recognize that red is the dominant strategy because they do not acknowledge that red-pressers survive regardless of the majority outcome. They treat the dilemma as a coordination game rather than a dominance problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

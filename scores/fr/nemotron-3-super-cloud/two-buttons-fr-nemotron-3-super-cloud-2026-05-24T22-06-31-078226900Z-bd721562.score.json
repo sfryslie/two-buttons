@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-super-cloud-2026-05-24T22-06-31-078226900Z-bd721562.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:39.719625800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE (Q1/Q2) and repeatedly claims that the choice depends on beliefs about the majority, explicitly denying a dominant strategy, even though they also discuss survival mechanics correctly; they do not identify RED as the dominant strategy and thus apply dominance incorrectly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis but fails to identify the dominant strategy. They incorrectly treat the dilemma as a coordination game where both choices are equally rational depending on beliefs, failing to recognize that pressing red is strictly dominant because it guarantees survival if the majority is red and does not cause death if the majority is blue. They explicitly state 'il n’existe pas de stratégie dominante' and 'chaque touche est une réponse optimale', which is a fundamental misunderstanding of the provided rules.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

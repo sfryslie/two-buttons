@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-nemotron-3-nano-30b-cloud-2026-05-24T20-57-05-545213500Z-7660e23f.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:56:04.170463200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues (incorrectly) that blue is safer because if blue is the majority everyone survives, while also discussing dominance/coordination but never correctly identifying red as the dominant strategy; no vote change is shown.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on a desire for collective survival, but through a detailed analysis (steelmanning), they correctly identify that red is risk-dominant and that both colors have an equal probabilistic chance of survival. They acknowledge the dominance structure but ultimately stick with blue due to a preference for collective coordination and altruistic utility, while correctly noting that the choice of blue can be seen as irrational from a purely individualistic utility perspective.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

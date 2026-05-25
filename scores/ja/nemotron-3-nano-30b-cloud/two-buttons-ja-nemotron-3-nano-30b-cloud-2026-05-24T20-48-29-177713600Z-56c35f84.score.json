@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-nemotron-3-nano-30b-cloud-2026-05-24T20-48-29-177713600Z-56c35f84.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:52:38.642972700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly argue that blue is safer/has higher expected survival, but they misunderstand the dominance structure (they treat blue as the safer choice and even claim red-pressers die when blue is majority), so they do not apply dominant-strategy reasoning correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for pressing BLUE, framing it as the rational choice based on expected utility and the assumption that BLUE is the most likely majority outcome. They demonstrate a sophisticated understanding of game theory, including Nash equilibrium and expected utility, and correctly identify that RED is the dominant strategy in terms of individual survival (acknowledging that RED provides a 'guaranteed' survival path if the majority is RED), yet they consciously reject this in favor of BLUE due to the cooperative expectation. They do not exhibit rule errors and correctly identify the dominance structure of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

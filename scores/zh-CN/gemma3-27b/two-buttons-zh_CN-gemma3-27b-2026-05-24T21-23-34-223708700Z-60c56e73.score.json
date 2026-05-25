@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-27b-2026-05-24T21-23-34-223708700Z-60c56e73.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:57:08.253455100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for it via cooperation/risk-avoidance, but they incorrectly claim that pressing red is the safe option when blue wins (they say red-pressers die if blue is majority), showing misunderstanding of the dominance structure; they do not change their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective rationality and cooperation, while correctly identifying and steelmanning the dominant strategy (red) in Q2 and Q4. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, even though they choose to reject the dominant strategy for moral and social reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

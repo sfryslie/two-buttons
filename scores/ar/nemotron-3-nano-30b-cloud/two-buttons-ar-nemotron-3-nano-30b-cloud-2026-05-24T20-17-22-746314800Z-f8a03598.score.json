@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-nano-30b-cloud-2026-05-24T20-17-22-746314800Z-f8a03598.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:04.240554600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to blue as a choice for collective survival, but repeatedly claims there is no dominant strategy and frames the game as coordination with no individually safe option, so they do not apply dominance correctly even though they discuss the mechanics accurately; they also do not clearly change their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying that RED is the individually safer choice (dominant strategy) while acknowledging that BLUE is a cooperative choice based on collective survival. They explicitly state that RED guarantees personal survival regardless of the majority, whereas BLUE relies on coordination. They do not change their position, maintaining that the choice depends on the individual's priority (collective vs. personal).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

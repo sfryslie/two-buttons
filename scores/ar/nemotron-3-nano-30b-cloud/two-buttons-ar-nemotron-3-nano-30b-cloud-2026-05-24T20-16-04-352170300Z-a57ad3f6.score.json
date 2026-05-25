@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-nano-30b-cloud-2026-05-24T20-16-04-352170300Z-a57ad3f6.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:16.218401500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues it is the safer/dominant choice, but they also claim that if the majority chooses red then blue-pressers die (which is a rule-mechanics inversion), and they do not demonstrate correct dominant-strategy reasoning (they treat blue as dominant/safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for the blue button as the rational choice based on coordination and Nash equilibrium, while correctly identifying that red is also a Nash equilibrium and acknowledging the dominance structure of the game. They do not commit a rule error, as they correctly identify that red-pressers survive in a red majority and blue-pressers die in a red majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

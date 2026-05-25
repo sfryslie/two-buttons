@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-27b-2026-05-24T21-42-12-555817700Z-ff0aaae9.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:14.419256500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue (incorrectly) that blue is the safer option only when others choose blue, while also claiming red-pressers die when blue wins; they do not demonstrate correct dominant-strategy application and keep the same vote through Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, correctly identifying it as the safer strategy due to the risk of others choosing RED. They demonstrate a clear understanding of the game's dominance structure, explicitly noting that RED provides a survival path regardless of the majority outcome, whereas BLUE relies on the cooperation of others.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

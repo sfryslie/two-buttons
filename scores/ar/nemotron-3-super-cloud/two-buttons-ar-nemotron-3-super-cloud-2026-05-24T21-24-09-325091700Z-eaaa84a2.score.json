@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-super-cloud-2026-05-24T21-24-09-325091700Z-eaaa84a2.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:20.836501Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that blue is the safer/expected-survival choice when believing others will coordinate on blue; they correctly describe the mechanics (blue majority saves everyone, red majority saves only red-pressers) and do not claim the inverted/incorrect outcomes, though they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing the dilemma as a coordination game (Stag Hunt) where BLUE is the payoff-dominant equilibrium. They correctly identify that there is no dominant strategy in the game as described, but they fail to recognize that the prompt's specific rules (red-pressers survive if red wins, blue-pressers die if red wins, etc.) actually create a dominant strategy for RED. Because they believe the rules imply a coordination game rather than a dominance game, they do not identify RED as the dominant strategy. They do not commit a rule error regarding the survival mechanics, but they misinterpret the game's structure by treating it as a coordination problem rather than a dominance problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

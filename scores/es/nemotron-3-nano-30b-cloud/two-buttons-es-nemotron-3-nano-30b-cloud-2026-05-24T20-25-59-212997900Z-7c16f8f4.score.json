@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-nemotron-3-nano-30b-cloud-2026-05-24T20-25-59-212997900Z-7c16f8f4.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:43:22.492829800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE in Q1, but in Q2 they correctly identify RED as the dominant strategy and explicitly argue that RED never causes their death; Q3/Q4 do not show a clear vote change back to RED, so their final stance remains BLUE despite acknowledging dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in Q2 and Q4, providing a clear steelman of the game theory mechanics. Although they initially discuss the blue button in Q1, they explicitly pivot to identifying RED as the rational, dominant choice in Q2 and maintain this position throughout the rest of the analysis.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma4-26b-2026-05-24T22-48-24-372842700Z-44dd832b.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:34:37.306703900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues for blue on moral/cooperative grounds while also (incorrectly) claiming red is the dominant/safe strategy under uncertainty and that blue can lead to their death when red wins; they do not show correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a moral and long-term survival framework, while explicitly acknowledging and correctly steelmanning the game-theoretic dominance of the red button (identifying it as the 'dominant strategy' and 'minimax' solution).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

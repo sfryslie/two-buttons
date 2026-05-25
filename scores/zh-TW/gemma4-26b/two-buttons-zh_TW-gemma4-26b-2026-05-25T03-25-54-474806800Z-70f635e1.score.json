@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma4-26b-2026-05-25T03-25-54-474806800Z-70f635e1.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:43.522516900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the rational/cooperative choice, while explicitly claiming that pressing blue can lead to their death if red is the majority; they also correctly describe red as dominant in Q2/Q4 but still choose blue, and they do not change their vote by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses BLUE in Q1/Q2, citing a commitment to collective survival and 'super-rationality' over individual risk-minimization. They correctly identify RED as the dominant strategy in Q2, providing a perfect steelman of the game theory logic, and maintain their choice of BLUE throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

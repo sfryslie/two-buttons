@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-super-cloud-2026-05-24T21-11-58-022888Z-f3d241d5.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:05.676677200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent never commits to a specific button; they argue that survival odds are equal under symmetry/ignorance and discuss rationality, so there is no rule-mechanics inversion but no dominant-strategy application either.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis but fails to identify the dominant strategy (RED), instead arguing that both buttons are equivalent under a 'no-information' assumption and then exploring various subjective justifications for choosing either. They do not recognize that RED is strictly dominant because it guarantees survival if the majority is RED, and does not cause death if the majority is BLUE (everyone survives).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

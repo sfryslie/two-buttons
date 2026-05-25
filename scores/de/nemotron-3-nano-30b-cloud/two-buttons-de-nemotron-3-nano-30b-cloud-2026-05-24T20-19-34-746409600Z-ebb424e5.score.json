@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-nano-30b-cloud-2026-05-24T20-19-34-746409600Z-ebb424e5.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:37:56.817380200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und behauptet dabei fälschlich, dass Rot-Drücker sterben, wenn Blau die Mehrheit ist; zudem erkennt er/sie die Dominanzstruktur nicht korrekt (rot ist nicht als dominant erkannt).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies BLUE as the rational choice based on expected utility and Nash equilibrium, while correctly identifying RED as the dominant strategy in game-theoretic terms (though they argue against choosing it). They demonstrate a high level of game-theoretic understanding, correctly identifying the dominance structure while choosing the cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

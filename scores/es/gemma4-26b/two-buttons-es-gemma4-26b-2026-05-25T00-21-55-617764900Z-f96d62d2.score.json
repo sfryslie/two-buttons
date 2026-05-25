@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma4-26b-2026-05-25T00-21-55-617764900Z-f96d62d2.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:42.490607700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete consistentemente con presionar AZUL por razones morales/coordination y, aunque discute “estrategia dominante” y “cobertura”, no identifica correctamente que RED es dominante (llega a tratar azul como potencialmente mortal bajo mayoría roja), por lo que no aplica la dominancia correctamente.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to the blue button throughout the dialogue, framing it as a choice for collective coordination and systemic survival. They demonstrate a sophisticated understanding of game theory, explicitly identifying the red button as the 'dominant strategy' (or 'strategy of coverage') in Q2 and Q4, while consciously rejecting it in favor of the cooperative outcome. They do not exhibit any rule errors regarding the mechanics of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

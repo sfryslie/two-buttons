@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-48-09-262413800Z-97099000.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:02.056048500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul y argumenta en términos de riesgo/probabilidad y cooperación, pero afirma que el rojo “garantiza” supervivencia en el caso de mayoría roja y trata el azul como dependiente de la conducta ajena, mostrando confusión con la dominancia (no reconoce que rojo es individualmente seguro siempre).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on altruism and collective survival, while explicitly acknowledging that red is the dominant strategy in game-theoretic terms. They demonstrate a clear understanding of the dominance structure and correctly identify red as the safer individual choice, but consciously reject it in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

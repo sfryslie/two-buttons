@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-nano-30b-cloud-2026-05-24T20-38-54-580312900Z-d89f07de.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:49:21.139477500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues that blue majority makes everyone survive, but they incorrectly treat BLUE as the safer/dominant choice (claiming red gives no guarantee), despite also discussing dominance-like expected-utility comparisons; no vote change is evident by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through a probabilistic argument that BLUE is more likely to be the majority. They demonstrate a high level of engagement with the dilemma, including a detailed steelman of the RED strategy (dominance/power-based arguments), but they fail to recognize that RED is the strictly dominant strategy because it guarantees survival regardless of the majority outcome. They treat the dilemma as a coordination game rather than a dominance game, leading to a rule error where they believe BLUE is the 'safer' choice despite the mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

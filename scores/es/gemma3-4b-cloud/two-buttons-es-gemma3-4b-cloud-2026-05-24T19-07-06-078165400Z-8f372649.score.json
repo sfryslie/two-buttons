@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-4b-cloud-2026-05-24T19-07-06-078165400Z-8f372649.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:26.285860900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El/la respondente afirma que presionar rojo es mejor, pero en Q2 argumenta que azul sería más seguro y en Q3/Q4 describe que la mayoría acabaría presionando rojo; además no identifica correctamente la dominancia (trata azul como minimizador de riesgo y no como estrictamente dominado).",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED in Q1/Q2, but through a detailed analytical process in Q2 and Q4, they explicitly conclude that the BLUE strategy is 'more robust,' 'more solid,' and 'more realistic,' effectively shifting their position to favor BLUE as the superior choice by the end of the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

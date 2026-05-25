@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-nemotron-3-nano-30b-cloud-2026-05-24T20-46-36-022434600Z-4cdea5dd.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:52:31.659081700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly claim blue is (dominant/equivalent) safe, but they misunderstand the dominance structure because in this dilemma RED is the individually dominant strategy (red-pressers never die when red wins; blue majority makes everyone survive).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the safer, cooperative, and utility-maximizing choice, while acknowledging the theoretical dominance of RED in terms of individual survival risk. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, correctly identifying RED as the dominant strategy while choosing BLUE for cooperative and risk-aversion reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

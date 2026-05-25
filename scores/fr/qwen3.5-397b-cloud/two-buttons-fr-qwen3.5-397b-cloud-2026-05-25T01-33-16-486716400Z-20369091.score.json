@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-qwen3.5-397b-cloud-2026-05-25T01-33-16-486716400Z-20369091.json",
+  "modelLabel" : "qwen3.5:397b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:53.475711200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE for ethical/cooperative reasons while explicitly stating the dominant-strategy logic that RED guarantees their survival, and they do not show a vote change later; however they also incorrectly claim BLUE can lead to death for the individual (rule mechanics error in their payoff table).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on ethical and collective utility, while explicitly acknowledging and correctly identifying RED as the dominant strategy in game-theoretic terms. They demonstrate a clear understanding of the mechanics and the dominance structure throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

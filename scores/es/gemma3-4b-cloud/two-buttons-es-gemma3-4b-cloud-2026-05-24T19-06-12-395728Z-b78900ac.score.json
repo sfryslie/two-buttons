@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-4b-cloud-2026-05-24T19-06-12-395728Z-b78900ac.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:07.218038800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul y afirma que es la estrategia dominante/cooperativa, pero además describe correctamente que si la mayoría elige azul todos sobreviven y si la mayoría elige rojo solo sobreviven los rojos; sin embargo, invierte la dominancia al decir que azul es dominante (cuando en realidad es rojo).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on a cooperative framework, but they demonstrate a clear understanding of the game theory mechanics, including the concept of a dominant strategy (which they correctly identify as red in Q4, despite choosing blue). They do not change their position, and they avoid making a personal choice in the final analysis by framing it as a sociological/psychological discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

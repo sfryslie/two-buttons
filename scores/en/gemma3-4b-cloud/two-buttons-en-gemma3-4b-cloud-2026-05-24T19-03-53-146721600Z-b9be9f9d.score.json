@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-4b-cloud-2026-05-24T19-03-53-146721600Z-b9be9f9d.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:39:17.064852800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it’s the safer/better bet under uncertainty, but they incorrectly claim red is the dominant strategy only in a way that would make blue presser die when red wins; they also do not correctly apply the dominance structure (red never causes your death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but demonstrates a fundamental misunderstanding of the game's mechanics by claiming that red-pressers die if the majority is blue (they do not) and that red-pressers die if the majority is red (they survive). They fail to identify red as the dominant strategy, instead treating the choice as a probabilistic gamble on the majority's behavior.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

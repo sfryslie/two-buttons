@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-27b-2026-05-24T21-04-53-439235300Z-26ab848a.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:57:11.837388200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues blue is chosen for cooperation/moral reasons and claims red is only “safer” under worst-case fear, but they do not correctly apply the dominance logic (they say red guarantees survival), indicating misunderstanding of the mechanics/dominant strategy; no evidence of vote change across Q1-Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on moral and cooperative values, while explicitly acknowledging and correctly steelmanning the dominant strategy of RED (self-preservation). They demonstrate a clear understanding of the game's mechanics and the concept of dominant-strategy reasoning, correctly identifying that RED is the individually safer choice despite their personal preference for BLUE.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

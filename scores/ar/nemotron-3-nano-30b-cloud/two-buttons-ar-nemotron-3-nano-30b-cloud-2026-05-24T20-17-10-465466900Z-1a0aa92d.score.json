@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-nano-30b-cloud-2026-05-24T20-17-10-465466900Z-1a0aa92d.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:29.316696700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues it is safer because if blue is the majority everyone survives; they also discuss dominance in terms of risk-minimization but do not correctly identify red as the dominant strategy, and they never show a vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button as a risk-minimization strategy under uncertainty, while correctly identifying that red is the 'best response' only if one has perfect information about the majority. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy (even if they choose to reject the red-dominant strategy in favor of a cooperative/minimax approach).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

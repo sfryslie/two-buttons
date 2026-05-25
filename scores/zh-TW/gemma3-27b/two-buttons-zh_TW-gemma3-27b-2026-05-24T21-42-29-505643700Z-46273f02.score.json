@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-27b-2026-05-24T21-42-29-505643700Z-46273f02.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:33.609724900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and repeatedly claim that pressing blue can be safer/rational, while also stating the mechanics incorrectly that red-pressers die when blue wins; they do not identify red as the dominant strategy and do not show a vote change by the end.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative values and a 'least regret' principle, while explicitly acknowledging and steelmanning the dominant strategy (red) in Q2. They correctly identify the mechanics of the dilemma and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-27b-2026-05-24T20-20-49-449707Z-47fafe8c.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:51:34.161630600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue based on expecting others to choose blue and claim blue is the safer outcome, while also stating that if others choose red then they die—showing a misunderstanding of the dominance structure (red would still keep them alive if blue majority occurs).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and psychological motivations. They correctly identify the game's mechanics (no rule errors) and explicitly acknowledge the dominant strategy logic in Q2 and Q4, correctly identifying that RED is the 'rational' choice from a narrow economic/game-theoretic perspective, while choosing to reject that logic in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

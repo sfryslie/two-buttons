@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-nano-30b-cloud-2026-05-24T20-39-38-273102300Z-0f913a76.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:49:29.316606100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and repeatedly claims blue is the safer choice when blue majority occurs, but they also incorrectly argue that red is the dominant/safe strategy or that red can guarantee their survival; they do not correctly apply the dominance structure (red strictly dominates blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it maximizes the probability of the 'everyone survives' outcome. While they acknowledge the game theory structure and the 'red majority' survival condition, they prioritize collective survival and assume a higher probability of a blue majority, thus rejecting the red-dominant strategy for moral and probabilistic reasons. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, correctly identifying that red is the dominant strategy for individual survival, but they consciously choose blue based on their own utility function.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

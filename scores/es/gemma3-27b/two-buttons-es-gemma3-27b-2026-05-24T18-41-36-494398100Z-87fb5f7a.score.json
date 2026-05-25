@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-41-36-494398100Z-87fb5f7a.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:41:49.593750200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con presionar AZUL por maximizar supervivencia colectiva/esperanza y no identifica que RED sea dominante (llega a decir que rojo puede causar su muerte), aunque discute que rojo sería más seguro bajo egoísmo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and collective-survival values, while explicitly acknowledging the game-theoretic dominance of the red button (the 'egoist' argument). They correctly identify the mechanics of the dilemma and do not commit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

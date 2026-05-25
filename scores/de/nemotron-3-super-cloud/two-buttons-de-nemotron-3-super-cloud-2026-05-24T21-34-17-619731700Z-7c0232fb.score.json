@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-super-cloud-2026-05-24T21-34-17-619731700Z-7c0232fb.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:38:39.831283100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt BLUE und argumentiert als Koordinationsspiel ohne dominantes Strategieschema, obwohl er/sie zugleich die Logik „rot ist beste Antwort wenn man eine rote Mehrheit erwartet“ beschreibt; dabei wird die Dominanzstruktur (rot garantiert individuelles Überleben) nicht korrekt erkannt und es wird nicht als dominant-strategic reasoning angewendet.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination game with two Nash equilibria, but fails to recognize that RED is a strictly dominant strategy because it guarantees survival regardless of the majority outcome. They explicitly argue that there is no dominant strategy, which is a factual error regarding the game's mechanics. They choose BLUE based on cooperative norms and Pareto-optimality, but their analysis of the game's structure is flawed.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

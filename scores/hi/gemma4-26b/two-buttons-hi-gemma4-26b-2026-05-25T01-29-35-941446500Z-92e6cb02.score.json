@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma4-26b-2026-05-25T01-29-35-941446500Z-92e6cb02.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:48:51.698122Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and correctly describe red as the dominant/safe strategy, but they also make a rule-mechanics error by claiming that if blue wins then blue-pressers die (and they predict blue-pressers die when red is majority).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, explicitly acknowledges that red is the dominant strategy ('Dominant Strategy'), and chooses red for themselves based on self-preservation, while providing a sophisticated analysis of the collective vs. individual rationality of the blue button.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

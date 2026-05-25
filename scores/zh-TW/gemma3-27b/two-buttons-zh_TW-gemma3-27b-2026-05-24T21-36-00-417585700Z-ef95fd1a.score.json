@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-27b-2026-05-24T21-36-00-417585700Z-ef95fd1a.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:20.886209500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer only under optimistic assumptions about others, while also claiming red can guarantee their survival (misstating the dominance/survival mechanics), so they do not apply dominant-strategy reasoning correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and moral reasoning, while correctly identifying and steelmanning the dominant strategy (red) in Q2 and Q4. They correctly understand the mechanics of the dilemma, though they make a minor error in Q3 by stating that red-pressers die if a red majority occurs (the prompt rules state red-pressers survive in a red majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

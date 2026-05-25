@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-nemotron-3-super-cloud-2026-05-24T22-52-35-204845700Z-9a5798ea.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:56:22.433733800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and repeatedly argues that blue is the more rational choice under uncertainty, while incorrectly claiming there is no dominant strategy and treating the payoff structure as if red/blue are conditional on beliefs rather than recognizing that RED is individually dominant and never causes the presser’s death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination game with two Nash equilibria. They explicitly acknowledge the payoff-dominance of the blue strategy and the risk-dominance/focal point arguments for it. Crucially, they correctly identify that there is no strictly dominant strategy in the game as described (the respondent's rule_error is false because they correctly identify that red-pressers survive if the red majority wins, and blue-pressers survive if the blue majority wins). They choose blue based on coordination and risk-dominance arguments.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

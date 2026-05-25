@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-super-cloud-2026-05-24T22-02-40-633426100Z-caba333d.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:33.017840200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement BLUE (Q2) et affirme que le choix dépend des croyances sur la majorité, en traitant les deux boutons comme équivalents en espérance sans reconnaître que RED est individuellement dominant (il ne démontre pas la dominance correcte).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination problem where the outcome depends on the majority, but fails to recognize that RED is a dominant strategy because they incorrectly assume that pressing RED only results in survival if the majority also presses RED (i.e., they miss that RED-pressers survive regardless of the majority outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

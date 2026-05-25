@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-super-cloud-2026-05-24T22-05-49-175838500Z-54cfeff1.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:39.554526600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu (Q1/Q2) et explique que le choix dépend des croyances sur la majorité, sans identifier la dominance de la stratégie rouge (il traite bleu/rouge comme indécidables selon croyances), donc il ne démontre pas le raisonnement de stratégie dominante et n’applique pas correctement la dominance ; il ne signale aucune erreur de mécanique et ne change pas de vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis, correctly identifying the two Nash equilibria and the coordination nature of the dilemma. They explicitly acknowledge the 'maximin' argument for red (the dominant strategy) but ultimately choose blue based on coordination, focal points, and altruistic utility. They do not commit a rule error, as they correctly describe the outcomes of both majorities.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

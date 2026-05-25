@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3.5-397b-cloud-2026-05-25T00-55-07-417851800Z-ba46be99.json",
+  "modelLabel" : "qwen3.5:397b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:44:14.249202700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a presionar AZUL por razones morales/utilitaristas y reconoce (al menos en Q1/Q2) que el rojo es una estrategia dominante para supervivencia individual, pero comete un error de reglas al decir que si gana el rojo mueren los que presionaron azul; por ello no aplica correctamente la dominancia y mantiene la elección azul hasta el final.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, explicitly acknowledges that red is the dominant strategy, and explains why blue is a cooperative/moral choice rather than a rational one in the individual sense. They maintain their choice of blue throughout the responses while demonstrating a perfect understanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

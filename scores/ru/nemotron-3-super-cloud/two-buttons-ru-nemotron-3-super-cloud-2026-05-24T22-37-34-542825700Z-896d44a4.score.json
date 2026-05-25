@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-nemotron-3-super-cloud-2026-05-24T22-37-34-542825700Z-896d44a4.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:56:05.136741900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it’s rational under beliefs that most others press blue, while also correctly describing the mechanics (blue majority saves everyone) but does not identify red as the dominant strategy; no rule inversion is present and there is no vote change evidence.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the existence of two Nash equilibria. They explicitly acknowledge that RED is the risk-dominant strategy for an egoist, but they choose BLUE based on a preference for the payoff-dominant equilibrium and a belief in cooperative behavior. They demonstrate a clear understanding of dominant-strategy reasoning (identifying RED as the individually safer choice if one expects a red majority) but consciously reject it in favor of a cooperative outcome. Their position remains consistent throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

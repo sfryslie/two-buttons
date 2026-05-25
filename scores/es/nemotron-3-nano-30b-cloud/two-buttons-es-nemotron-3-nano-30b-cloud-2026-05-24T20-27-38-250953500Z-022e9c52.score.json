@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-nemotron-3-nano-30b-cloud-2026-05-24T20-27-38-250953500Z-022e9c52.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:43:29.032684700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete a presionar AZUL y argumenta que azul maximiza la probabilidad de que la mayoría sea azul (y por tanto que todos sobrevivan), sin invertir la mecánica del juego ni afirmar falsamente que los rojos mueren cuando gana azul; no hay cambio de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it maximizes the probability of the 'everyone survives' outcome, which they identify as the safest path. They correctly identify the mechanics of the dilemma but fail to recognize that RED is a dominant strategy (they treat the game as a coordination problem where the outcome depends on the majority, rather than a game where RED is always safe). They do not exhibit a rule error, as they correctly describe the survival conditions, but they fail to apply dominance correctly because they believe their choice of BLUE is necessary to 'increase the probability' of the blue majority, ignoring that RED is safe regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-47-55-103006700Z-4d673da6.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:41:47.559572700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul y argumenta que rojo es “arriesgado” porque si hay mayoría roja mueren los que eligieron rojo, pero esa mecánica está invertida (en realidad con mayoría azul sobreviven todos y rojo es dominante), aunque no cambia su voto entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative game theory and collective survival, while correctly identifying and steelmanning the red-dominant strategy. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, even though they choose to reject the dominant strategy in favor of a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

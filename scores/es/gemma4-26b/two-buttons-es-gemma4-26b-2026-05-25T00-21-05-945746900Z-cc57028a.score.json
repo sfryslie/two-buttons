@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma4-26b-2026-05-25T00-21-05-945746900Z-cc57028a.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:40.554474100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete con presionar AZUL y afirma que si la mayoría es azul todos sobreviven, pero en Q4 describe que azul puede llevar a morir cuando la mayoría es roja (lo cual contradice la mecánica) y además no identifica correctamente la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the dominance of the red button (which they explicitly label as a 'seguro de vida' or 'estrategia dominante' in Q4). They choose blue based on 'superrationality' and cooperative ethics, acknowledging that this choice is instrumentally irrational but systemically rational. They do not change their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

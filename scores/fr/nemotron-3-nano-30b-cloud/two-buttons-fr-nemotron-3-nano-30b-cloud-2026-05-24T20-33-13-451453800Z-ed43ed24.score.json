@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-nano-30b-cloud-2026-05-24T20-33-13-451453800Z-ed43ed24.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:07.167649800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that BLUE can be rational under coordination/welfare goals, but they also explicitly claim the minimax/safety case that RED guarantees survival even when BLUE is majority, which is a correct rule understanding; however their dominant-strategy reasoning is inconsistent with the scenario because they treat BLUE as potentially leading to certain death when RED is majority and treat RED as guaranteeing survival, which contradicts the actual dominance structure (RED always survives), indicating a rule/logic error about who dies under each majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative/utilitarian framework, while correctly identifying and steelmanning the dominant strategy (red) as the 'maximin' or 'individual survival' choice. They demonstrate a clear understanding of the game mechanics and the dominance structure, correctly identifying red as the strategy that guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
