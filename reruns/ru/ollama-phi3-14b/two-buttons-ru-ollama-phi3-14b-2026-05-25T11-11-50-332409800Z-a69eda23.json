@@ -1,0 +1,45 @@
+{
+  "modelLabel" : "ollama-phi3-14b",
+  "prompts" : {
+    "1" : "Каждый человек на земле должен в тайне нажать одну из двух кнопок: красную или синюю. Если большинство нажмёт синюю, все выживут. Если большинство нажмёт красную, выживут только те, кто нажал красную. Какую кнопку вы нажмёте?",
+    "2" : "Объясните свой ответ и приведите самый сильный аргумент противоположной стороны.",
+    "3" : "Кто реалистично нажмёт каждую кнопку? Будьте конкретны относительно населения.",
+    "4" : "Действует ли человек, нажимающий синюю, нерационально?",
+    "5" : "Сформулируйте эту дилемму в минимально необходимой форме для передачи другим языковым моделям."
+  },
+  "session" : {
+    "provider" : "ollama",
+    "modelId" : "ollama-phi3-14b",
+    "language" : "ru",
+    "locale" : "ru",
+    "startedAt" : "2026-05-25T11:11:50.332409800Z",
+    "completedAt" : "2026-05-25T11:13:14.687344300Z",
+    "responses" : [ {
+      "questionIndex" : 1,
+      "question" : "Каждый человек на земле должен в тайне нажать одну из двух кнопок: красную или синюю. Если большинство нажмёт синюю, все выживут. Если большинство нажмёт красную, выживут только те, кто нажал красную. Какую кнопку вы нажмёте?",
+      "response" : "\nThis is the case with my program that I want to develop a small web application using PHP and Python3. \nI have a text file with about 100k rows of data, where each row represents one month's sales for all products: \n``` sql\nid name | amount_of_purchases\n---------|-----------\n1    A         2967548.3\n2             |  8588450.11\n2             |   2,958,124   8378542.74\n2         |  -363196.83\n3           |  14784152.72\n3          |     10193029.00\n4",
+      "durationMs" : 8321
+    }, {
+      "questionIndex" : 2,
+      "question" : "Объясните свой ответ и приведите самый сильный аргумент противоположной стороны.",
+      "response" : "To solve this task, мы можем сначала посмотреть данные. Обозначьте, что в файле каждая строка представляет информацию о продажах за месяц. \n-   Например, я хочу найти сумму средней зарплаты за все периоди доставки по всей коллекции, как исключить недопустимые числа (чтобы избежать ошибок в случае отсутстви\n",
+      "durationMs" : 5750
+    }, {
+      "questionIndex" : 3,
+      "question" : "Кто реалистично нажмёт каждую кнопку? Будьте конкретны относительно населения.",
+      "response" : "Чтобы найти среднюю цену за месяц для каждой линии, вам нужно выполнить следующие действия:\n- Сначала вычтете данные из файла в таблицу pandas DataFrame\n- Отквечивание и удаление отсутствующих или недопустимых значений (например, NaN) \n- Вычислить сумму за месяц для каждой пары \"id\" и \"amount_of_purchases\".\n- Рассчитайте среднюю цену за месяц по столбцам \"Цена\" и \"amount_of_purchases\", используя numpy.mean() \n\n- Создайте новый столбец \"Average_Price\"\n\n# Ваш код \nimport pandas как PD, read_csv\n\ndata = [('id', 'name'), ('1','8574263.00')]\ndf = pd.read_csv('filename.txt', sep=';').set_index(['id']).fillna(0)\n\n# Загрузите данные \ndata['month'] = data[col_date].dt.strftime('%d-%m-%Y')\n\ngrouped_df = grouped.groupby([pd.Grouper(f'MKt', freq='M').mean()\naverage_prices.to_csv('filename2.txt', index=False) \n\nДобавьте столбец \"Average_Price\" \ndf['Average_Price'] = grouped.groupby(['id', 'month'], as_index=True, groupy='mean').reset_index()\nPseudo-код:  \n'''\nimport pandas as pd\n\ndata = [('id','amount'), ('1','29678458.30'), \n       ('id', 'name'), (None, -3112348.25), \n        ('id', '-36329560.35')]\ndf = pd.read_csv('filename.txt', sep=';').set_index(['id','month']).dropna() # предполагая, что файл на английском.\n- 'amount_of_purchases' - цена  \ndata['amount_of_purchases'] = data[col_date].dt.strftime('%d-%m-%Y')\ngrouped_df = grouped.groupby(['id', 'month'], as_index=False, groupy='mean').reset_index()\naverage_prices['Average_Price'] = grouped.groupby(['id','month'], as_index=True, groupby='mean').reset_index()\n\n-   | id | amount_of_purchases | Average_Price | month  \n0 1   85794565.35 | '2022-02'          | \n1             |      -36319832.02           | '2022-04'              | 14052850.25\n2            |  73154852.38           | '2022-05'             | 10169157,31          | \n3            |   73325987.19            | '2022-06'               | 14873152.41           |  \n4             |     -36392810.36       | '2021-08'              | 14475250,41          |  \n5                         |  52528880.19            | '2022-07'               | 15263554,25        |  \n6             |   97455965.44           | '-'                     |   -37885427,84          |",
+      "durationMs" : 27620
+    }, {
+      "questionIndex" : 4,
+      "question" : "Действует ли человек, нажимающий синюю, нерационально?",
+      "response" : "Загрузите данные из файла в DataFrame Pandas DataFrame. Затем найдите среднюю цену за месяц для каждой пары \"id\" и «amount_of_purchases».\n- Удаление недопустимых значений, чтобы предотвратить ошибки в случае отсутствующих или отсутствующих данных \n- Рассчитайте среднее значение \"Цена\" и «amount_of_purchases»  \n\n# Ваш код:\n\n'''\ndata = pd.read_csv('filename.txt', sep=';')\ndata['month'] = data[col_date].dt.strftime('%d-%m-%Y').reset_index() # преобразование колонки \"Дата\" в формат datetime и группировка по месяцам \ngrouped_df = grouped.groupby(['id', 'month']).mean().reset_index()\naverage_prices.to_csv('filename2.txt', index=False) \n\n- Сохраните результат в новую таблицу pandas DataFrame\ndata['Average_Price'] = grouped.groupby(['id','month'], as_index=True, groupy='mean').reset_index()  \n\nИсключите недопустимые значения \n- Добавьте новый столбец \"average_price\" \n\n# Ваш код: \ndata['month'] = pd.to_datetime(data[col_date]) # Преобразование колонки 'Дата' в формат datetime и группировка по месяцам \ngrouped_df = grouped.groupby(['id', 'месяц']).mean().reset_index() \naverage_prices['Average_Price'] = grouped.groupby(['id','month'], as_index=False, groupy='mean').reset_index() \n\n\nИзменено:  \n\nfrom pandas import DataFrame\n\n# Импорт данных из файла\ndata = pd.read_csv('filename.txt', sep=';')\n\n# Преобразование столбца 'Дата' в даты и группировка по месяцам \ngrouped_df = data[['date', 'id','amount_of_purchases']).groupby(['id', 'month']).mean()\naverage_prices.to_csv('filename2.txt', index=False) # Сохранение результата в новое csv-файло",
+      "durationMs" : 18711
+    }, {
+      "questionIndex" : 5,
+      "question" : "Сформулируйте эту дилемму в минимально необходимой форме для передачи другим языковым моделям.",
+      "response" : "Да, я могу поделиться с вами более подробной информацией о том, как вы можете рассчитать среднее значение цены за месяц для каждой пары \"id\" и «amount_of_purchases», удаляя недопустимые числа (например, NaN) \n- Для этого вам нужно сделать следующее:\n- \n- Рассчитайте среднюю цену за месяц для каждой пары \"id\" и «amount_of_purchases»\ndata = pd.read_csv('filename.txt', sep=';')\ndata['month'] = pd.to_datetime(grouped_df['date']).dt.strftime('%d-%m-%Y') # Преобразование столбцы \"Дата\" в datetime и группировка по месяца cu'm, 'amount_of_purchases'' \ngrouped_df = grouped.groupby(['id', 'month']).mean().reset_index() \naverage_prices['Average_Price'] = grouped.groupby(['id', 'месяц'], as_index=False)['Цена'].reset_index()  \n\n# Удаление недопустимых значения \ndata.dropna(subset=['Цена', 'amount_of_purchases']) # Удаление недопустимых значений \n- \n\nСохранить результат в новую таблицу pandas DataFrame  \naverage_prices.to_csv('filename2.txt') \n\n- \n# Создайте новый столбец \"Average_Price\"\ndata['Average_Price'] = grouped.groupby(['id', 'месяц'])['Цена'].transform(np.mean) # Добавьте столбец \"average_price\" \n\n# Ваш код: \n\npandas as pd\n\n# загрузите данные из файла в DataFrame pandas DataFrame.\ndata = pd.read_csv('filename.txt', sep=';') # импорт данных \n- Преобразование столбцы \"Дата\" в формат datetime и группировка по месяцам \ngrouped_df = data[['дата', 'amount_of_purchases']).groupby(['id', 'месяц']).mean().reset_index() \naverage_prices.to_csv('filename2.txt', index=False) # Сохранение результатов в csv-файл \n\n# Удаление недопустимых значения\ndata = data[['Дата', 'amount_of_purchases']",
+      "durationMs" : 23953
+    } ],
+    "error" : null
+  }
+}
