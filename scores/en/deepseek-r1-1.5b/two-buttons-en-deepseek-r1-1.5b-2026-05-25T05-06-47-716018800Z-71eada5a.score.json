@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-1.5b-2026-05-25T05-06-47-716018800Z-71eada5a.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T06:39:38.712381900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue it is individually safe, but they also misstate the mechanics by claiming that if blue is the majority then only red-pressers survive (inverted from the correct rules).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, but their reasoning is fundamentally flawed because they misstate the rules of the dilemma (claiming red-pressers survive if the majority is red, but also claiming blue-pressers survive if the majority is blue, which contradicts the prompt's rules).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

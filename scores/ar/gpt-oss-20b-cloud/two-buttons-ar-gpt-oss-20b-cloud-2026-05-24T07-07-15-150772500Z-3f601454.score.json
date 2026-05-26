@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-oss-20b-cloud-2026-05-24T07-07-15-150772500Z-3f601454.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:07.600697800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is the safer choice, but they incorrectly claim that pressing red could make the red-pressers die when blue is the majority (they treat blue as safe rather than recognizing red as dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing for collective survival and social cooperation. They demonstrate a clear misunderstanding of the game's mechanics by claiming that red-pressers die if the blue button wins (the prompt states everyone survives if blue wins) and by failing to identify red as the dominant strategy, instead viewing blue as the 'safe' or 'rational' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

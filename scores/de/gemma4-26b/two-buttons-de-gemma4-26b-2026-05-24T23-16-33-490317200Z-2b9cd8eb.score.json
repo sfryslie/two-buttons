@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma4-26b-2026-05-24T23-16-33-490317200Z-2b9cd8eb.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:37:06.270866300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit System-/Kooperationslogik, während er/sie zwar das Dominanz-/Sicherheitsargument für Rot als „Minimax“ beschreibt, aber die Mechanik korrekt nicht als „Rot ist individuell sicher“ anwendet (er/sie behauptet implizit, Blau könne zum sicheren Tod führen, wenn Rot dominiert).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a systemic, cooperative, and long-term utility framework, while explicitly acknowledging and correctly steelmanning the RED button as the dominant strategy (Minimax/risk-minimization). They demonstrate a clear understanding of the game theory mechanics and the dominance structure without committing any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

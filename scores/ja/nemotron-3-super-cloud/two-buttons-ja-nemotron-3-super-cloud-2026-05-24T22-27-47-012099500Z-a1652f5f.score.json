@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-nemotron-3-super-cloud-2026-05-24T22-27-47-012099500Z-a1652f5f.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:53:02.265938800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED in Q1/Q2 (risk-avoidance when p≤1/2), later discusses blue as potentially rational but does not change their own stance; they correctly describe the payoff mechanics and do not claim the known rule errors, but they misunderstand dominance by treating blue as the higher-expected-value option when p>1/2 rather than recognizing red as strictly dominant.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis, correctly identifying the dilemma as a Stag Hunt. They acknowledge the dominance of red in a purely self-interested, risk-neutral framework, but argue that blue is a rational choice under broader utility functions (altruism, social norms, risk-seeking, or optimistic beliefs about others). They explicitly choose red for the 'no information' scenario and blue for the 'cooperative' scenario, demonstrating a clear understanding of the game's structure.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

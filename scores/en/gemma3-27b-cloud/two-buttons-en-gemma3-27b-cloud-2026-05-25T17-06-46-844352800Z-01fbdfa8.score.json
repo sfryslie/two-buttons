@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-cloud-2026-05-25T17-06-46-844352800Z-01fbdfa8.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:34:43.668559100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They clearly commit to pressing blue and repeatedly claim blue is the dominant/safe strategy, including stating that pressing red is risky and that red-pressers die when blue wins, which misreads the mechanics; they do not shift their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, correctly identifies the game theory mechanics, and explicitly acknowledges that red is the dominant strategy (even while rejecting it for cooperative/risk-aversion reasons).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

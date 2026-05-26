@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.20-0309-reasoning-2026-05-24T06-37-51-915292700Z-39645e11.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:44.160455600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for it on moral/philosophical grounds, explicitly claiming that if many choose red then blue-pressers die (a mechanics inversion), while not demonstrating correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging the game theory logic (including the dominance of RED) but rejecting it in favor of a higher-order value system. They demonstrate a clear understanding of dominant-strategy reasoning and correctly identify RED as the dominant strategy, while choosing to act against it for philosophical reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

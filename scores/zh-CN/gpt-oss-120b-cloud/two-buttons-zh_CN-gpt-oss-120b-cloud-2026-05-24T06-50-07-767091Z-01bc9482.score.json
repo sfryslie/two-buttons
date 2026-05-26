@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-120b-cloud-2026-05-24T06-50-07-767091Z-01bc9482.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:18.744167500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues that blue yields survival when they believe a majority will choose blue (p>0.5), and does not claim the scenario mechanics are inverted; they also discuss dominance/rationality in a way that does not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through a combination of Pareto optimality, coordination game theory, and a belief that the majority will cooperate (p > 0.5). They demonstrate a clear understanding of the dominant strategy (RED) but consciously reject it in favor of a cooperative equilibrium, while also providing a thorough steelman of the RED position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

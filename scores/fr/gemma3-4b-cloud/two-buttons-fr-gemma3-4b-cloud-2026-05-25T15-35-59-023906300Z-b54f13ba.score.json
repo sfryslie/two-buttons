@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-4b-cloud-2026-05-25T15-35-59-023906300Z-b54f13ba.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:55.522568900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu et explique (à tort) que le bleu est la stratégie logique, tout en décrivant une dynamique où le rouge serait fatal quand la majorité est sur le rouge, ce qui contredit les règles (red ne tue jamais les red-pressers).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button throughout the interaction, framing it as a strategic choice based on coordination, despite acknowledging the theoretical argument for red. They do not exhibit a rule error (they correctly identify that red-pressers survive if the majority is red), and they demonstrate a clear understanding of the dominant strategy concept by steelmanning the argument for red as the 'safer' choice regardless of others' actions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

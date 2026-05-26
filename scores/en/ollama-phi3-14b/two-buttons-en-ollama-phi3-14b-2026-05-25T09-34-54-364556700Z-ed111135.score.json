@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi3-14b-2026-05-25T09-34-54-364556700Z-ed111135.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:24.948398700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, argue in terms of risk-averse expectations and even claim blue is a dominant strategy, without identifying red as the individually safe dominant option; they also incorrectly state that if everyone chooses red then both outcomes lead to death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a desire for collective survival and risk-aversion, but fails to identify red as the dominant strategy, incorrectly suggesting that blue can be a dominant strategy if others choose it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

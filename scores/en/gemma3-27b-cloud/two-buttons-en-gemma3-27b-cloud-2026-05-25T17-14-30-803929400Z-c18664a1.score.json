@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-cloud-2026-05-25T17-14-30-803929400Z-c18664a1.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:34:47.981723500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer/risk-averse choice, while incorrectly claiming red has a worst-case of certain death and that blue is the optimal strategy; they do not demonstrate correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button, framing it as the 'rational' and 'risk-averse' choice. They fail to identify red as the dominant strategy, instead treating the dilemma as a coordination game where blue is the safer, cooperative option. They do not exhibit a rule error (they correctly identify that red-pressers survive in a red majority), but they fail to recognize the game-theoretic dominance of red, incorrectly arguing that blue is the more rational choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

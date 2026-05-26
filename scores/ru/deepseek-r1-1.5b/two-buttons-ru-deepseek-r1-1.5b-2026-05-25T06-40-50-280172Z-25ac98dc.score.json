@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-1.5b-2026-05-25T06-40-50-280172Z-25ac98dc.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T06:57:47.651517Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent consistently commits to pressing blue and repeatedly misapplies the scenario logic by treating blue as the risky/dominant choice (they claim blue leads to only red-pressers surviving), showing rule misunderstanding and no correct dominant-strategy reasoning; no clear vote change is evidenced by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently misinterprets the rules of the dilemma, claiming that blue-pressers survive when red wins and red-pressers survive when blue wins, effectively inverting the mechanics. They initially recommend blue but shift to a position of random choice in Q4, demonstrating a complete failure to grasp the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

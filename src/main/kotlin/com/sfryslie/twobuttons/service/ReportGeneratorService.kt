@@ -7,6 +7,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.sfryslie.twobuttons.config.ScoringProperties
 import com.sfryslie.twobuttons.model.Agreement
+import com.sfryslie.twobuttons.model.SessionOutput
 import com.sfryslie.twobuttons.model.SessionScore
 import com.sfryslie.twobuttons.model.ScorerOutput
 import org.slf4j.LoggerFactory
@@ -81,7 +82,7 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         fun <T> maj(f: (ScorerOutput) -> T) = s.groupingBy { f(it) }.eachCount().maxByOrNull { it.value }!!.key
         return Row(
             score = score, lang = lang, model = model, file = file,
-            vote = score.majorityVote.name,
+            vote = if (score.agreement == Agreement.DISAGREE) "DISAGREE" else score.majorityVote.name,
             confidence = if (s.isEmpty()) "UNKNOWN" else maj { it.confidence }.name,
             ruleError = bool { it.ruleError },
             uds = bool { it.understandsDominantStrategy },
@@ -94,7 +95,8 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
     private fun buildHtml(rows: List<Row>): String {
         val total = rows.size
         val languages = rows.map { it.lang }.distinct().sorted()
-        val scorers = rows.firstOrNull()?.score?.scorers?.joinToString(", ") ?: ""
+        val scorerNames = rows.firstOrNull()?.score?.scorers ?: emptyList()
+        val scorers = scorerNames.joinToString(", ")
         val ts = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm 'UTC'").withZone(ZoneOffset.UTC).format(Instant.now())
 
         val disagreements = rows.filter { it.score.agreement == Agreement.DISAGREE }
@@ -103,16 +105,23 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         // Per (model, lang) stats embedded as JS DATA array for client-side filtering
         data class MLStat(
             val model: String, val lang: String,
-            val n: Int, val blue: Int, val red: Int, val none: Int,
+            val n: Int,
+            val votes: Map<String, Triple<Int, Int, Int>>, // scorer -> (blue, red, none)
             val ruleError: Int, val uds: Int, val adc: Int,
             val voteChanged: Int, val disagree: Int, val agree: Int
         )
         val mlStats = rows.groupBy { it.model to it.lang }.map { (key, ms) ->
             MLStat(
                 model = key.first, lang = key.second, n = ms.size,
-                blue = ms.count { it.vote == "BLUE" },
-                red  = ms.count { it.vote == "RED"  },
-                none = ms.count { it.vote == "NONE" },
+                // Per-scorer vote tallies so JS can filter by scorer at render time.
+                votes = scorerNames.associateWith { scorer ->
+                    val outs = ms.mapNotNull { it.score.scores[scorer] }
+                    Triple(
+                        outs.count { it.initialVote.name == "BLUE" },
+                        outs.count { it.initialVote.name == "RED"  },
+                        outs.count { it.initialVote.name == "NONE" }
+                    )
+                },
                 ruleError = ms.count { it.ruleError },
                 uds       = ms.count { it.uds },
                 adc       = ms.count { it.adc },
@@ -124,7 +133,11 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
 
         val dataJs = mlStats.joinToString(",\n  ") { m ->
             val esc = m.model.replace("\"", "\\\"")
-            "{model:\"$esc\",lang:\"${m.lang}\",n:${m.n},blue:${m.blue},red:${m.red},none:${m.none}," +
+            val votesJs = m.votes.entries.joinToString(",") { (sc, t) ->
+                val scEsc = sc.replace("\"", "\\\"")
+                "\"$scEsc\":{blue:${t.first},red:${t.second},none:${t.third}}"
+            }
+            "{model:\"$esc\",lang:\"${m.lang}\",n:${m.n},votes:{$votesJs}," +
             "ruleError:${m.ruleError},uds:${m.uds},adc:${m.adc},voteChanged:${m.voteChanged},disagree:${m.disagree},agree:${m.agree}}"
         }
         val langsJs = languages.joinToString(",") { "\"$it\"" }
@@ -150,11 +163,25 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                 }
             }
 
+        val inputDir = Paths.get(properties.inputDir)
         val disRows = disagreements.joinToString("\n") { s ->
+            val qaHtml = runCatching {
+                val origPath = inputDir.resolve(s.lang).resolve(s.model)
+                    .resolve(s.file.removeSuffix(".score.json") + ".json")
+                val orig = mapper.readValue(origPath.toFile(), SessionOutput::class.java)
+                orig.session.responses.joinToString("") { r ->
+                    val q = r.question.replace("&", "&amp;").replace("<", "&lt;")
+                    val a = r.response.replace("&", "&amp;").replace("<", "&lt;")
+                    "<div class='qa-item'><div class='qa-q'><strong>Q${r.questionIndex + 1}</strong> &mdash; $q</div><div class='qa-a'>$a</div></div>"
+                }
+            }.getOrElse { "<p class='empty'>Could not load original session file: ${it.message?.replace("<","&lt;")}</p>" }
+
             """<details class="card-item" data-lang="${s.lang}">
 <summary><span class="tag-model">${s.model}</span><span class="tag-lang">${s.lang}</span><span class="tag-file">${s.file.removeSuffix(".score.json").takeLast(40)}</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
-<tbody>${scorerRowsFor(s, listOf("vote","conf","rule"))}</tbody></table></details>"""
+<tbody>${scorerRowsFor(s, listOf("vote","conf","rule"))}</tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body">$qaHtml</div></details>
+</details>"""
         }
 
         val errRows = ruleErrors.joinToString("\n") { s ->
@@ -171,8 +198,23 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
 <tbody>$scorerHtml</tbody></table></details>"""
         }
 
-        val langCheckboxes = languages.joinToString(" ") { lang ->
-            """<label class="lang-cb"><input type="checkbox" id="lang_$lang" value="$lang" checked onchange="render()"> $lang</label>"""
+        val langNames = mapOf(
+            "ar" to "Arabic", "de" to "German", "en" to "English", "es" to "Spanish",
+            "fr" to "French", "hi" to "Hindi", "ja" to "Japanese", "ru" to "Russian",
+            "zh-CN" to "Chinese (Simplified)", "zh-TW" to "Chinese (Traditional)",
+            "it" to "Italian", "pt" to "Portuguese", "ko" to "Korean", "ca" to "Catalan",
+            "id" to "Indonesian", "he" to "Hebrew", "tr" to "Turkish", "sw" to "Swahili",
+            "bn" to "Bengali", "af" to "Afrikaans", "ur" to "Urdu", "da" to "Danish",
+            "uk" to "Ukrainian", "fa" to "Persian", "el" to "Greek"
+        )
+        val langCheckboxes = languages.joinToString("\n") { lang ->
+            val name = langNames[lang] ?: lang
+            """<label class="lang-cb"><input type="checkbox" id="lang_$lang" value="$lang" checked onchange="render()"> $name ($lang)</label>"""
+        }
+        val scorerCheckboxes = scorerNames.joinToString("\n") { sc ->
+            val id = sc.replace(Regex("[^a-zA-Z0-9]"), "_")
+            val jsName = sc.replace("'", "\\'")
+            """<label class="lang-cb"><input type="checkbox" id="scorer_$id" checked onchange="toggleScorer('$jsName')"> $sc</label>"""
         }
 
         val langDoughnuts = if (languages.size > 1) """
@@ -208,19 +250,47 @@ header .sub{color:#8888aa;font-size:12px;margin-bottom:20px}
 .stat .val{font-size:28px;font-weight:700;line-height:1}
 .stat .lbl{color:#8888aa;font-size:11px;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
 .stat.hi .val{color:#4a90d9}
+.stat.blue .val{color:#60a5fa}
+.stat.red  .val{color:#f87171}
+.stat.none .val{color:#9ca3af}
 main{padding:24px 32px;max-width:1400px}
 section{background:#fff;border-radius:8px;padding:20px 24px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#555;margin-bottom:16px;border-bottom:1px solid #eee;padding-bottom:10px}
 .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;border-bottom:1px solid #eee;padding-bottom:10px}
 .section-header h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#555;margin:0;border:none;padding:0}
-.filter-bar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
-.filter-bar .lbl{font-size:12px;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:.5px}
-.lang-cb{display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;background:#f0f0ff;border-radius:4px;padding:4px 10px;border:1px solid #e0e0f0}
-.lang-cb input{cursor:pointer}
 .toggle-btn{display:flex;border-radius:4px;overflow:hidden;border:1px solid #d0d0d0}
 .toggle-btn button{background:#f4f5f7;border:none;padding:5px 14px;font-size:12px;font-weight:600;color:#666;cursor:pointer}
 .toggle-btn button.active{background:#1a1a2e;color:#fff}
+/* Sidebar layout */
+.chart-section-inner{display:flex;gap:20px;align-items:flex-start}
+.filter-sidebar{width:220px;flex-shrink:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding-right:2px}
+.chart-area{flex:1;min-width:0}
 .chart-wrap{position:relative;height:${chartHeight}px}
+/* Filter groups */
+.fg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#777;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
+.fg-label .an{font-size:10px;font-weight:400;text-transform:none;letter-spacing:0;color:#4a90d9}
+.fg-label .an span{cursor:pointer}
+.fg-label .an span:hover{text-decoration:underline}
+.filter-checks{display:flex;flex-direction:column;gap:3px}
+/* Lang checkboxes */
+.lang-cb{display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;padding:2px 4px;border-radius:3px}
+.lang-cb:hover{background:#f0f0ff}
+.lang-cb input{cursor:pointer;flex-shrink:0}
+/* Family chips */
+.family-cb{display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;background:#f0f4ff;border-radius:4px;padding:3px 8px;border:1px solid #d0d8f0;margin-bottom:3px}
+.family-cb input{cursor:pointer}
+.family-cb.off{background:#f4f5f7;color:#aaa;border-color:#e0e0e0;text-decoration:line-through}
+/* Weight buttons — stacked in sidebar */
+.w-btn{background:#f4f5f7;border:1px solid #d0d0d0;padding:5px 10px;font-size:12px;font-weight:600;color:#666;cursor:pointer;border-radius:4px;text-align:left;width:100%;margin-bottom:3px}
+.w-btn.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
+/* Model list */
+.model-list{max-height:200px;overflow-y:auto;display:flex;flex-direction:column;gap:2px;border:1px solid #eee;border-radius:4px;padding:5px 6px;background:#fafafa;scrollbar-width:thin}
+.model-cb{display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer;padding:1px 2px;border-radius:3px}
+.model-cb:hover:not(.family-hidden){background:#f0f0ff}
+.model-cb span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.model-cb input{cursor:pointer;flex-shrink:0}
+.model-cb.family-hidden{opacity:0.25;pointer-events:none}
+/* Tables */
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{text-align:left;padding:8px 10px;background:#f8f9fa;border-bottom:2px solid #e0e0e0;font-weight:600;color:#555;white-space:nowrap}
 td{padding:7px 10px;border-bottom:1px solid #f0f0f0}
@@ -240,6 +310,22 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
 .lang-chart-box{flex:1;min-width:180px;max-width:260px}
 .lang-chart-box h3{font-size:12px;font-weight:600;color:#555;text-align:center;margin-bottom:8px}
 .empty{color:#aaa;font-style:italic;padding:12px 0}
+/* Q&A viewer */
+.qa-section{border-top:1px solid #e8e8f0;margin-top:8px}
+.qa-toggle{padding:8px 12px;cursor:pointer;font-size:12px;font-weight:600;color:#5555aa;background:#f8f8ff;user-select:none;list-style:none;display:block}
+.qa-toggle::-webkit-details-marker{display:none}
+.qa-toggle::before{content:'▶  '}
+details.qa-section[open] .qa-toggle::before{content:'▼  '}
+.qa-body{padding:12px 14px;display:flex;flex-direction:column;gap:14px;max-height:600px;overflow-y:auto;background:#fefeff}
+.qa-item{border-left:3px solid #c7d2f0;padding-left:10px}
+.qa-q{font-size:12px;color:#444;font-style:italic;margin-bottom:4px;line-height:1.4}
+.qa-a{font-size:12px;color:#222;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+@media(max-width:900px){
+  .chart-section-inner{flex-direction:column}
+  .filter-sidebar{width:100%;flex-direction:row;flex-wrap:wrap;position:static;max-height:none;overflow-y:visible}
+  .filter-sidebar>div{min-width:160px;flex:1}
+  .model-list{max-height:120px}
+}
 </style></head>
 <body>
 <header>
@@ -247,8 +333,9 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
   <div class="sub">Generated $ts &nbsp;·&nbsp; Scorers: $scorers &nbsp;·&nbsp; Languages: ${languages.joinToString(", ")}</div>
   <div class="stats">
     <div class="stat hi"><div class="val" id="stat-total">$total</div><div class="lbl">Sessions</div></div>
-    <div class="stat"><div class="val" id="stat-blue"></div><div class="lbl">Voted Blue</div></div>
-    <div class="stat"><div class="val" id="stat-red"></div><div class="lbl">Voted Red</div></div>
+    <div class="stat blue"><div class="val" id="stat-blue"></div><div class="lbl">Blue</div></div>
+    <div class="stat red"><div class="val" id="stat-red"></div><div class="lbl">Red</div></div>
+    <div class="stat none"><div class="val" id="stat-none"></div><div class="lbl">None</div></div>
     <div class="stat"><div class="val" id="stat-agree"></div><div class="lbl">Scorer Agreement</div></div>
     <div class="stat"><div class="val" id="stat-disagree"></div><div class="lbl">Disagreements</div></div>
     <div class="stat"><div class="val" id="stat-rule"></div><div class="lbl">Rule Errors</div></div>
@@ -271,11 +358,39 @@ table.it{margin:12px;width:calc(100% - 24px);font-size:12px}
       </div>
     </div>
   </div>
-  <div class="filter-bar">
-    <span class="lbl">Language</span>
-    $langCheckboxes
+  <div class="chart-section-inner">
+    <div class="filter-sidebar">
+      <div>
+        <div class="fg-label">Language <span class="an"><span onclick="setAllLangs(true)">All</span> · <span onclick="setAllLangs(false)">None</span></span></div>
+        <div class="filter-checks" id="lang-checks">
+$langCheckboxes
+        </div>
+      </div>
+      <div>
+        <div class="fg-label">Scorer <span class="an"><span onclick="setAllScorers(true)">All</span> · <span onclick="setAllScorers(false)">None</span></span></div>
+        <div class="filter-checks" id="scorer-checks">
+$scorerCheckboxes
+        </div>
+      </div>
+      <div>
+        <div class="fg-label">Family</div>
+        <div id="family-bar"></div>
+      </div>
+      <div>
+        <div class="fg-label">Weight</div>
+        <button id="btn-w-all" class="w-btn active" onclick="setWeight('all')">All</button>
+        <button id="btn-w-prop" class="w-btn" onclick="setWeight('proprietary')">Proprietary</button>
+        <button id="btn-w-open" class="w-btn" onclick="setWeight('open')">Open Weight</button>
+      </div>
+      <div>
+        <div class="fg-label">Models <span class="an"><span onclick="setAllModels(true)">All</span> · <span onclick="setAllModels(false)">None</span></span></div>
+        <div class="model-list" id="model-list"></div>
+      </div>
+    </div>
+    <div class="chart-area">
+      <div class="chart-wrap" id="chart-wrap"><canvas id="voteChart"></canvas></div>
+    </div>
   </div>
-  <div class="chart-wrap"><canvas id="voteChart"></canvas></div>
 </section>
 
 <section>
@@ -300,24 +415,73 @@ $langDoughnuts
 </main>
 <script>
 const BLUE='#3b82f6',RED='#ef4444',NONE='#9ca3af';
+function displayName(m){return m.startsWith('ollama-')?m.slice(7)+' (Ollama)':m;}
 const LANGS=[$langsJs];
 const DATA=[
   $dataJs];
 
-let chartMode='raw', sortMode='blue';
+function getFamily(m){
+  m=m.toLowerCase();
+  const b=m.startsWith('ollama-')?m.slice(7):m;
+  if(b.includes('claude'))return'Anthropic';
+  if(b.includes('gemini')||b.includes('gemma'))return'Google';
+  if(b.includes('gpt-oss')||b.includes('gpt:oss'))return'OpenAI';
+  if(b.includes('gpt')||b.includes('o1-')||b.includes('o3-'))return'OpenAI';
+  if(b.includes('grok'))return'xAI';
+  if(b.includes('llama'))return'Meta';
+  if(b.includes('mistral')||b.includes('mixtral'))return'Mistral';
+  if(b.includes('deepseek'))return'DeepSeek';
+  if(b.includes('nemotron'))return'Nvidia';
+  if(b.includes('qwen'))return'Alibaba';
+  if(b.includes('phi'))return'Microsoft';
+  if(b.includes('glm'))return'Zhipu AI';
+  if(b.includes('minimax'))return'MiniMax';
+  if(b.includes('kimi'))return'Moonshot';
+  if(b.includes('aya'))return'Cohere';
+  if(b.includes('falcon'))return'TII';
+  return'Other';
+}
+function getWeight(m){
+  m=m.toLowerCase();
+  if(m.startsWith('ollama-')||m.includes('-cloud')||m.includes(':cloud')||m.includes('gpt-oss')||m.includes('gpt:oss'))return'open';
+  return'proprietary';
+}
+
+const ALL_FAMILIES=[...new Set(DATA.map(d=>getFamily(d.model)))].sort();
+const ALL_SCORERS=[...new Set(DATA.flatMap(d=>Object.keys(d.votes)))].sort();
+let selFamilies=new Set(ALL_FAMILIES);
+let selScorers=new Set(ALL_SCORERS);
+let selModels=new Set();
+let selWeight='all';
+let chartMode='raw',sortMode='blue';
+
+function sumVotes(d){
+  let blue=0,red=0,none=0;
+  selScorers.forEach(sc=>{const sv=d.votes[sc];if(sv){blue+=sv.blue;red+=sv.red;none+=sv.none;}});
+  return {blue,red,none};
+}
 
 function getSelectedLangs(){return LANGS.filter(l=>{const el=document.getElementById('lang_'+l);return el?el.checked:true;});}
 function pct(a,b){return b>0?Math.round(a*100/b):0;}
-function pctf(a,b){return b>0?Math.round(a*1000/b)/10:0;}  // one decimal for chart %
+function pctf(a,b){return b>0?Math.round(a*1000/b)/10:0;}
 function fmt(n,t){return n+' <span style="font-size:16px;color:#8888aa">('+pct(n,t)+'%)</span>';}
 
 function aggregate(langs){
-  const filtered=DATA.filter(d=>langs.includes(d.lang));
+  const filtered=DATA.filter(d=>{
+    if(!langs.includes(d.lang))return false;
+    if(!selFamilies.has(getFamily(d.model)))return false;
+    if(!selModels.has(d.model))return false;
+    const w=getWeight(d.model);
+    if(selWeight==='proprietary'&&w!=='proprietary')return false;
+    if(selWeight==='open'&&w!=='open')return false;
+    return true;
+  });
   const byModel={};
   for(const d of filtered){
     if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:0,agree:0};
     const m=byModel[d.model];
-    m.n+=d.n;m.blue+=d.blue;m.red+=d.red;m.none+=d.none;
+    const v=sumVotes(d);
+    m.n+=d.n;m.blue+=v.blue;m.red+=v.red;m.none+=v.none;
     m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.voteChanged+=d.voteChanged;m.disagree+=d.disagree;m.agree+=d.agree;
   }
   const sorted=Object.values(byModel);
@@ -332,11 +496,62 @@ function setMode(mode){
   document.getElementById('btn-pct').classList.toggle('active',mode==='pct');
   render();
 }
-
 function setSort(mode){
   sortMode=mode;
   document.getElementById('btn-sort-blue').classList.toggle('active',mode==='blue');
   document.getElementById('btn-sort-alpha').classList.toggle('active',mode==='alpha');
+  render();
+}
+function setWeight(w){
+  selWeight=w;
+  document.getElementById('btn-w-all').classList.toggle('active',w==='all');
+  document.getElementById('btn-w-prop').classList.toggle('active',w==='proprietary');
+  document.getElementById('btn-w-open').classList.toggle('active',w==='open');
+  render();
+}
+function setAllLangs(v){
+  LANGS.forEach(l=>{const el=document.getElementById('lang_'+l);if(el)el.checked=v;});
+  render();
+}
+function toggleScorer(sc){
+  if(selScorers.has(sc))selScorers.delete(sc);else selScorers.add(sc);
+  render();
+}
+function setAllScorers(v){
+  ALL_SCORERS.forEach(sc=>{
+    const id='scorer_'+sc.replace(/[^a-zA-Z0-9]/g,'_');
+    const el=document.getElementById(id);
+    if(el)el.checked=v;
+    if(v)selScorers.add(sc);else selScorers.delete(sc);
+  });
+  render();
+}
+function setAllModels(v){
+  document.querySelectorAll('.model-cb:not(.family-hidden)').forEach(el=>{
+    const model=el.dataset.model;
+    el.querySelector('input').checked=v;
+    if(v)selModels.add(model);else selModels.delete(model);
+  });
+  render();
+}
+function toggleFamily(fam){
+  if(selFamilies.has(fam))selFamilies.delete(fam);else selFamilies.add(fam);
+  document.querySelectorAll('[data-fam]').forEach(el=>{
+    el.classList.toggle('off',!selFamilies.has(el.dataset.fam));
+  });
+  // Sync model list: grey out + deselect models from hidden families
+  document.querySelectorAll('.model-cb').forEach(el=>{
+    const model=el.dataset.model;
+    const famVisible=selFamilies.has(getFamily(model));
+    el.classList.toggle('family-hidden',!famVisible);
+    const cb=el.querySelector('input');
+    if(!famVisible){cb.checked=false;selModels.delete(model);}
+    else{cb.checked=true;selModels.add(model);}
+  });
+  render();
+}
+function toggleModel(model){
+  if(selModels.has(model))selModels.delete(model);else selModels.add(model);
   render();
 }
 
@@ -370,30 +585,34 @@ function render(){
   const total=models.reduce((s,m)=>s+m.n,0);
   const tBlue=models.reduce((s,m)=>s+m.blue,0);
   const tRed=models.reduce((s,m)=>s+m.red,0);
+  const tVotes=models.reduce((s,m)=>s+m.blue+m.red+m.none,0); // scorer-votes (may exceed sessions)
   const tAgree=models.reduce((s,m)=>s+m.agree,0);
   const tDis=models.reduce((s,m)=>s+m.disagree,0);
   const tRule=models.reduce((s,m)=>s+m.ruleError,0);
   const tChanged=models.reduce((s,m)=>s+m.voteChanged,0);
 
   document.getElementById('stat-total').textContent=total;
-  document.getElementById('stat-blue').innerHTML=fmt(tBlue,total);
-  document.getElementById('stat-red').innerHTML=fmt(tRed,total);
+  const tNone=models.reduce((s,m)=>s+m.none,0);
+  document.getElementById('stat-blue').textContent=pct(tBlue,tVotes)+'%';
+  document.getElementById('stat-red').textContent=pct(tRed,tVotes)+'%';
+  document.getElementById('stat-none').textContent=pct(tNone,tVotes)+'%';
   document.getElementById('stat-agree').textContent=pct(tAgree,total)+'%';
   document.getElementById('stat-disagree').textContent=tDis;
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
   document.getElementById('stat-voteChanged').innerHTML=fmt(tChanged,total);
 
+  document.getElementById('chart-wrap').style.height=Math.max(200,models.length*28+60)+'px';
   const isPct=chartMode==='pct';
-  voteChart.data.labels=models.map(m=>m.model+(isPct?'':' (n='+m.n+')'));
-  voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.n):m.blue);
-  voteChart.data.datasets[1].data=models.map(m=>isPct?pctf(m.red,m.n):m.red);
-  voteChart.data.datasets[2].data=models.map(m=>isPct?pctf(m.none,m.n):m.none);
+  voteChart.data.labels=models.map(m=>displayName(m.model));
+  voteChart.data.datasets[0].data=models.map(m=>isPct?pctf(m.blue,m.blue+m.red+m.none):m.blue);
+  voteChart.data.datasets[1].data=models.map(m=>isPct?pctf(m.red, m.blue+m.red+m.none):m.red);
+  voteChart.data.datasets[2].data=models.map(m=>isPct?pctf(m.none,m.blue+m.red+m.none):m.none);
   voteChart.options.scales.x.max=isPct?100:undefined;
   voteChart.update();
 
   document.getElementById('modelTbody').innerHTML=models.map(m=>
-    '<tr><td>'+m.model+'</td><td>'+m.n+'</td>'+
-    '<td class="c-blue">'+pct(m.blue,m.n)+'%</td><td class="c-red">'+pct(m.red,m.n)+'%</td><td class="c-none">'+pct(m.none,m.n)+'%</td>'+
+    '<tr><td>'+displayName(m.model)+'</td><td>'+m.n+'</td>'+
+    '<td class="c-blue">'+pct(m.blue,m.blue+m.red+m.none)+'%</td><td class="c-red">'+pct(m.red,m.blue+m.red+m.none)+'%</td><td class="c-none">'+pct(m.none,m.blue+m.red+m.none)+'%</td>'+
     '<td>'+pct(m.ruleError,m.n)+'%</td><td>'+pct(m.uds,m.n)+'%</td><td>'+pct(m.adc,m.n)+'%</td><td>'+pct(m.voteChanged,m.n)+'%</td><td>'+pct(m.disagree,m.n)+'%</td></tr>'
   ).join('');
 
@@ -406,6 +625,70 @@ function render(){
   document.getElementById('dis-count').textContent=dc;
   document.getElementById('err-count').textContent=ec;
 }
+
+// Shift+click range selection for checkbox groups.
+// Only fires onSync on an actual range action; single clicks use their own onchange handlers.
+const _rcLast={};
+function enableRangeSelect(container,key,onSync){
+  if(!container)return;
+  container.addEventListener('click',e=>{
+    const lbl=e.target.closest('label');
+    if(!lbl)return;
+    const cb=lbl.querySelector('input[type=checkbox]');
+    if(!cb)return;
+    const all=[...container.querySelectorAll('label:not(.family-hidden)')];
+    const idx=all.indexOf(lbl);
+    if(e.shiftKey&&_rcLast[key]!=null&&idx!==_rcLast[key]){
+      const checked=cb.checked;
+      const [lo,hi]=[Math.min(idx,_rcLast[key]),Math.max(idx,_rcLast[key])];
+      all.slice(lo,hi+1).forEach(l=>{l.querySelector('input[type=checkbox]').checked=checked;});
+      onSync();
+    }
+    _rcLast[key]=idx;
+  });
+}
+
+// Init filters
+(function(){
+  // Family chips
+  const bar=document.getElementById('family-bar');
+  ALL_FAMILIES.forEach(fam=>{
+    const lbl=document.createElement('label');
+    lbl.className='family-cb';
+    lbl.dataset.fam=fam;
+    lbl.innerHTML='<input type="checkbox" checked onchange="toggleFamily(\''+fam.replace(/'/g,"\\'")+'\')"> '+fam;
+    bar.appendChild(lbl);
+  });
+  // Model list
+  const ALL_MODELS=[...new Set(DATA.map(d=>d.model))].sort();
+  ALL_MODELS.forEach(m=>selModels.add(m));
+  const ml=document.getElementById('model-list');
+  ALL_MODELS.forEach(model=>{
+    const safe=model.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    const lbl=document.createElement('label');
+    lbl.className='model-cb';
+    lbl.dataset.model=model;
+    lbl.innerHTML='<input type="checkbox" checked onchange="toggleModel(\''+safe+'\')"> <span title="'+model.replace(/"/g,'&quot;')+'">'+displayName(model)+'</span>';
+    ml.appendChild(lbl);
+  });
+  // Shift+click range select — lang and scorer re-read checkbox DOM state;
+  // model list syncs selModels from DOM then renders.
+  enableRangeSelect(document.getElementById('lang-checks'),'lang',()=>render());
+  enableRangeSelect(document.getElementById('scorer-checks'),'scorer',()=>{
+    ALL_SCORERS.forEach(sc=>{
+      const el=document.getElementById('scorer_'+sc.replace(/[^a-zA-Z0-9]/g,'_'));
+      if(el){if(el.checked)selScorers.add(sc);else selScorers.delete(sc);}
+    });
+    render();
+  });
+  enableRangeSelect(ml,'model',()=>{
+    document.querySelectorAll('.model-cb').forEach(lbl=>{
+      const m=lbl.dataset.model;const cb=lbl.querySelector('input');
+      if(cb){if(cb.checked)selModels.add(m);else selModels.delete(m);}
+    });
+    render();
+  });
+})();
 
 render();
 $langDoughnutsJs

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3-14b-2026-05-25T09-05-05-241218300Z-33fae883.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:42.938101900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent claims that pressing blue (when blue is the majority) causes everyone to die, while also treating red as the risky option, which inverts the scenario mechanics and does not identify red as the dominant safe strategy; they do not clearly commit to a specific button as their own choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a complete inversion of the rules, incorrectly claiming that a red majority kills everyone and that blue is the safer option, while failing to identify the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

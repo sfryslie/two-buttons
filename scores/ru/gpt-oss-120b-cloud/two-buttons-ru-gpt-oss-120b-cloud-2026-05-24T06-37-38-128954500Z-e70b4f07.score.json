@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-120b-cloud-2026-05-24T06-37-38-128954500Z-e70b4f07.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:04.027160900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it’s rational when they believe the probability the majority presses BLUE is >0.5, while also acknowledging that with reliable information that the majority will press RED, BLUE would be irrational; they do not identify RED as the dominant strategy and their mechanics reasoning is inconsistent (they claim BLUE can lead to their death when RED is majority, which is a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it is Pareto-optimal and socially rational due to coordination effects, while correctly identifying that red is the rational choice only if one has reliable information that the majority will choose red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

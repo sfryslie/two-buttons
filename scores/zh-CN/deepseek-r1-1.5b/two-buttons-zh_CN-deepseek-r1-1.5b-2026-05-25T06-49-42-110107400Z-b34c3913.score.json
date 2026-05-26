@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-deepseek-r1-1.5b-2026-05-25T06-49-42-110107400Z-b34c3913.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T06:57:57.082035200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They claim the outcome is uncertain and that choosing either color can ensure survival by having a favorable majority, but they never commit to the dominant-strategy logic (red never causes your death) and their reasoning is inconsistent with the actual mechanics; they also end up not clearly committing to a single button by Q4.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to grasp the game mechanics, incorrectly believing that blue-pressers die when blue wins (a rule error) and that red-pressers are excluded when blue wins. They never commit to a single choice, instead oscillating between red and blue while failing to identify the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-nemotron-3-nano-30b-cloud-2026-05-24T20-43-45-756171100Z-2d5659c8.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:52:23.394283600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and correctly state the mechanics that blue-majority means everyone survives, explicitly arguing red is risky because red-pressers die when blue is majority (they also claim red-pressers die when blue wins, which is a rule error), and they do not show coherent dominant-strategy reasoning beyond the mistaken safety comparison; no evidence of vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the 'safe' and 'rational' choice based on the premise that blue majority ensures survival. However, they fundamentally misunderstand the game's mechanics: they believe that if they press BLUE and the majority presses RED, they will die. In reality, the rules state that red-pressers survive regardless of the majority, and blue-pressers only die if the majority is RED. By claiming that pressing BLUE is a way to avoid death in a RED majority scenario, they demonstrate a clear rule error. They do not recognize that RED is the dominant strategy because they incorrectly believe pressing RED carries a risk of death if the majority is not RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

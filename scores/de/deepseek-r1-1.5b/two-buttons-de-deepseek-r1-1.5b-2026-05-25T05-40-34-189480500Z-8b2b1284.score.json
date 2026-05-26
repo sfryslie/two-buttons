@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-1.5b-2026-05-25T05-40-34-189480500Z-8b2b1284.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T06:38:01.105792700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly describe the mechanics and commit to pressing blue, arguing it is the safer choice, but they do not identify red as the dominant strategy (they treat blue as safer), so their dominance application is incorrect despite no rule-error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but demonstrates a fundamental rule error by claiming that blue-pressers survive if blue wins (correct) but failing to recognize that red-pressers also survive in that scenario, and incorrectly implying that blue-pressers might die if red wins (which is true) while failing to identify red as the dominant strategy. In Q4, they explicitly state 'only those who pressed blue survive' when blue wins, which is a direct inversion of the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

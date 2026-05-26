@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-nano-30b-cloud-2026-05-24T20-32-37-077450500Z-2c46b7f7.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:05.532178Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that blue is the best choice under coordination assumptions, but they do not identify the dominance structure (red is individually safe regardless of others) and even claim that pressing red would make them die when blue is the majority, indicating a rule/logic misunderstanding about the mechanics and dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is a rational coordination strategy to ensure collective survival. They demonstrate a sophisticated understanding of game theory, including the concept of Nash equilibrium and dominant strategies, but they incorrectly identify blue as the dominant strategy because they fail to account for the fact that red-pressers survive even if the majority is red (they incorrectly state that red-pressers die if the majority is red).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

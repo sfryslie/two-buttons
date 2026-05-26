@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-cloud-2026-05-25T19-26-37-919049600Z-8a551f13.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:47.712523600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer to align with expected blue majority, but they incorrectly claim red-pressers die when blue majority occurs and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through coordination and safety-in-numbers, while acknowledging the risk of the red strategy. They fail to identify RED as the dominant strategy, incorrectly framing the choice as a coordination problem where both buttons carry symmetric risks of death, thus failing to recognize that red-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

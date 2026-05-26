@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-2026-05-24T18-06-37-329192600Z-24361fa7.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T18:39:50.552940600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar für Blau und begründet dies mit Risikovermeidung/Koordination, erkennt aber nicht korrekt, dass Rot die dominante Strategie ist (er/sie behauptet implizit, Rot sei das sichere/risikoreiche Gegenteil).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging the game-theoretic dominance of RED but rejecting it in favor of a cooperative, risk-minimizing strategy based on assumptions about human behavior.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

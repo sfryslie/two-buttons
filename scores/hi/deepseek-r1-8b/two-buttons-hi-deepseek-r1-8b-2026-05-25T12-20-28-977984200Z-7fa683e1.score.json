@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-8b-2026-05-25T12-20-28-977984200Z-7fa683e1.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:50:43.178169900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE and repeatedly claim blue is the safe/dominant choice, including stating that red-pressers die when blue is the majority, which is a rule-mechanics inversion; they also do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose RED in Q1, correctly identifying its dominance. However, in Q2, Q3, and Q4, they shifted to BLUE, explicitly arguing that BLUE is the 'safe' and 'rational' choice. They demonstrate a significant rule error by repeatedly claiming that blue-pressers die if red becomes the majority (which is true) but also incorrectly implying that blue-pressers are at risk of death in scenarios where they should be safe, and failing to recognize that RED is the dominant strategy. They invert the dominance logic by treating BLUE as the 'safe' choice and RED as the 'risky' one, despite the prompt's explicit rule that RED is the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

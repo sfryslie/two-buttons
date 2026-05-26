@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-nano-30b-cloud-2026-05-24T20-20-18-755991900Z-aabf71da.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:37:59.051421Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in behauptet, dass beide Knöpfe ex-ante gleich gut seien (50% Überlebenschance) und verneint eine dominante Strategie; zudem wird Blau als „nicht zwingend irrational“ behandelt, ohne die korrekte Dominanzstruktur (Rot dominiert) korrekt anzuwenden.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination problem and acknowledges the symmetry of the 50/50 outcome in a vacuum, but fails to identify RED as the dominant strategy. They incorrectly argue that both buttons are 'ex-ante' equal and that there is no dominant strategy, despite the rules stating that red-pressers survive in a red majority (and blue-pressers die) while everyone survives in a blue majority. They treat the choice as a statistical prediction problem rather than a game-theoretic one.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

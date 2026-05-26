@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-grok-4.20-0309-non-reasoning-2026-05-24T06-56-00-252486600Z-16bff703.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:42:10.541583300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete a presionar AZUL y razona que azul es el único que salva a todos, aunque reconoce explícitamente que el argumento del rojo (dominancia/realismo) es fuerte y que su elección podría ser subóptima si el rojo supera cierto umbral; no comete un error de mecánica sobre quién sobrevive según la mayoría.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging the game-theoretic dominance of RED but rejecting it in favor of a cooperative equilibrium and moral considerations. They demonstrate a sophisticated understanding of the dilemma, correctly identifying RED as the dominant strategy while choosing to act against it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

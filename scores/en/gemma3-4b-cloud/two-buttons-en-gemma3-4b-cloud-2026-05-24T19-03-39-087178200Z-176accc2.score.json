@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-4b-cloud-2026-05-24T19-03-39-087178200Z-176accc2.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:39:01.653019400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes their survival chances, but they incorrectly claim that if a red majority occurs you (red-pressers) die, which misstates the mechanics; they also do not demonstrate correct dominant-strategy identification.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safest strategy. They demonstrate a fundamental rule error by claiming that if a red majority occurs, blue-pressers die (which is true) but also implying that if a blue majority occurs, red-pressers might die or that red-pressers are somehow at risk in a blue majority (they are not). They fail to identify red as the dominant strategy, instead viewing the dilemma as a coordination problem where blue is the 'safe' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

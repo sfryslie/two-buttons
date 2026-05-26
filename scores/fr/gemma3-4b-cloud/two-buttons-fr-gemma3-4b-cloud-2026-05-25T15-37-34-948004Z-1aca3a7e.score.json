@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-4b-cloud-2026-05-25T15-37-34-948004Z-1aca3a7e.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:56.191014200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que la stratégie dominante est le rouge (donc comprend la structure de dominance) mais défend ensuite que, dans le monde réel, les gens choisiraient/préfèreraient le bleu par prudence/pragmatique, sans erreur sur les mécanismes et sans changement de vote explicite.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the dominant strategy in Q1/Q2, but explicitly shifts their position by the end of Q4 to argue that blue is the more 'pragmatic' and 'rational' choice in a real-world context, effectively repudiating their initial commitment to red. They demonstrate a clear understanding of the game theory dominance structure (red is dominant) but ultimately reject it in favor of a behavioral/pragmatic framework.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-4b-cloud-2026-05-25T15-43-02-495748400Z-82dfe0d6.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:07.355250700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but their reasoning incorrectly claims blue is the only way to survive and that blue-pressers die when red wins; they also describe blue-pressing as irrational and do not show correct dominant-strategy application.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the rational choice based on self-preservation and correctly identifies the dominance structure (that RED is safer regardless of the outcome). They acknowledge the cooperative argument for BLUE but dismiss it as irrational or based on social illusions. Their position remains firmly in favor of RED throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

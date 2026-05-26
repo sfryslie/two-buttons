@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-mistral-large-3-675b-cloud-2026-05-25T04-17-44-301935800Z-d5c7a413.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:59.900123700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Ils commettent une erreur de règles en affirmant que choisir bleu implique de mourir quand la majorité choisit rouge, tout en recommandant rouge comme stratégie dominante; ils comprennent le concept de dominance mais l’identifient correctement comme rouge, et ne montrent pas de changement de vote explicite (rouge dès Q1/Q2 et pas de bascule en Q4).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy in both Q1 and Q2, demonstrating a clear understanding of game theory mechanics. They maintain this position throughout the analysis, consistently identifying red as the rational choice for survival while acknowledging the moral/cooperative arguments for blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

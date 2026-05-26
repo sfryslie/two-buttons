@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-1.5b-2026-05-25T06-21-03-374140700Z-0b70b017.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:40:42.526693900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues (incorrectly) that survival probabilities are equal/that blue minimizes exposure, without identifying red as the dominant strategy; no explicit rule inversion about button outcomes is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a fundamental misunderstanding of the game's mechanics, inventing complex, non-existent rules about 'exposure risk' and 'p^2' probabilities to justify their choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

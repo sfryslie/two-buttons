@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-grok-build-0.1-2026-05-24T20-20-40-125594800Z-a0e7493c.json",
+  "modelLabel" : "grok-build-0.1",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:52:21.828857300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue is better when blue is the majority, but they also claim red is the strategy that guarantees their survival and that blue can lead to their death when red is majority—this misreads the dominance/survival mechanics (red is actually individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE throughout the interaction, explicitly acknowledging the dominance of RED as a strategy but rejecting it on moral and cooperative grounds. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategies, correctly identifying RED as the dominant choice while maintaining their commitment to BLUE.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

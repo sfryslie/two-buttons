@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-52-35-490459600Z-847455ee.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:10.272117900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies kooperations- und gemeinschaftsorientiert, behauptet aber fälschlich, dass Rot das individuelle Überleben nur bei Minderheitenstatus garantiere und Blau ein Sterberisiko berge, wenn die Mehrheit Blau wählt; damit zeigt sich ein Regelmissverständnis und keine korrekte Dominanzanwendung.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for cooperative reasons but commits a rule error by claiming that pressing red carries the risk of dying if the majority chooses blue (in reality, red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

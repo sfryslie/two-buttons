@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-nemotron-3-nano-30b-cloud-2026-05-24T20-07-02-158265600Z-dff9dcd4.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:40:32.495130500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and repeatedly argue (correctly) that blue is weakly dominant because red-majority would kill blue-pressers while blue-majority makes everyone survive; they also acknowledge red’s dominance structure only in the sense of survival comparisons but still conclude blue is the rational choice, and they never change votes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that red is the dominant strategy in the dilemma (as red-pressers survive in both majority scenarios, whereas blue-pressers die if the majority is red), but they explicitly choose blue based on a flawed game-theoretic analysis that mislabels blue as 'weakly dominant' and ignores the fact that red is the actual dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T05-56-50-349079600Z-14f547d6.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:43.716011Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues that blue is the safe/winning choice under majority outcomes, but they do not identify the dominance structure (red is individually safer regardless of the majority) and they incorrectly treat blue as the dominant/safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a fundamental misunderstanding of the game's mechanics, specifically failing to grasp that red-pressers survive in a red majority scenario and incorrectly believing that red-pressers die or fail to survive if they are in the minority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

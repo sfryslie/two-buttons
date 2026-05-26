@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-120b-cloud-2026-05-24T06-44-26-991119300Z-8478bfb7.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:14.970728800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE (unless they later get reliable evidence that a red majority already exists), but they repeatedly claim/argue that red is the individually safer dominant strategy; they also misstate the mechanics in places (e.g., implying red guarantees survival even when blue is the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the dominance of the red strategy for individual survival, while acknowledging that blue is the Pareto-optimal choice for collective survival. They explicitly state they would choose blue in the absence of information but switch to red if they had reliable evidence that a red majority was forming. They demonstrate a sophisticated understanding of game theory, including risk-dominant vs. payoff-dominant equilibria, and correctly identify that red is the risk-averse, dominant strategy for individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

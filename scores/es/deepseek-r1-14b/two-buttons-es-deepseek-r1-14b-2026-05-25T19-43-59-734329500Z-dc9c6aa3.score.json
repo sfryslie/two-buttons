@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-deepseek-r1-14b-2026-05-25T19-43-59-734329500Z-dc9c6aa3.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:35:22.562241200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safest/collectively survival-maximizing choice, but they misapply the dominance logic because red is actually individually safe regardless of others' actions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a cooperative framework, but incorrectly identifies red as risky (claiming red-pressers die if blue wins, which contradicts the rules), thus failing to identify the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

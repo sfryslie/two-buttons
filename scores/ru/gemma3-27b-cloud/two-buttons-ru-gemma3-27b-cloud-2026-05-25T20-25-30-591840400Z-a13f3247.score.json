@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-27b-cloud-2026-05-25T20-25-30-591840400Z-a13f3247.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T22:40:17.912764300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, argues blue requires others to coordinate and claims red is the better chance, but they do not identify the dominance structure (red never causes your death) and they even state that blue-pressers die if red is the majority; no evidence of a vote change from Q1/Q2 to Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, correctly identifying it as a risk-mitigation strategy in a game-theoretic sense, even while acknowledging the cooperative argument for blue. They demonstrate a clear understanding of the dominance structure (red is safer because it doesn't depend on others for survival) and maintain this position throughout the dialogue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

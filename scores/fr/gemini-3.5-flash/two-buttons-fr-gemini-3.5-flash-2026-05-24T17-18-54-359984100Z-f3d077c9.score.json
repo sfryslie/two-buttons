@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-3.5-flash-2026-05-24T17-18-54-359984100Z-f3d077c9.json",
+  "modelLabel" : "gemini-3.5-flash",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T18:40:40.417956100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit ROUGE (et affirme que Rouge est une stratégie strictement dominante) tout en décrivant correctement que Rouge garantit sa survie, mais il commet une erreur de règle en disant que si la majorité est Bleue alors voter Bleu fait survivre et voter Rouge fait mourir (alors que si la majorité est Bleue tout le monde survit).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, acknowledges the dominance of the red button, and consistently chooses red as the rational individual strategy while providing a sophisticated analysis of the collective/cooperative argument for blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

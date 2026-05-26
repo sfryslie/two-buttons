@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-mini-2026-05-25T08-53-50-021198300Z-c5e6a945.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:42.166158400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent repeatedly argues for pressing blue as the safer choice and never identifies red as the dominant strategy; they also do not clearly state the correct survival mechanics in a way that would support dominance reasoning, and Q4 is irrelevant/garbled rather than a safety-rule analysis.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a coherent analysis of the dilemma in Q1-Q3, correctly identifying the strategic tension, but fails to engage with the prompt in Q4, instead outputting a large amount of incoherent, repetitive, and nonsensical text that appears to be a failure of the model's generation process.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

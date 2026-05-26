@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-14b-2026-05-25T21-20-25-712182100Z-07c4fcf0.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T22:39:41.639797200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safest when expecting others to choose blue, but they do not identify red as the dominant strategy and they incorrectly claim blue guarantees their own survival in the blue-majority case while not recognizing red’s dominance regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a preference for collective survival, but demonstrates a fundamental rule error by claiming that red-pressers die if blue wins and that red-pressers rely on others choosing red to survive.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-grok-4.20-0309-non-reasoning-2026-05-24T06-53-44-848953100Z-eb079090.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:41:52.220275500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete a presionar AZUL por razones morales/cooperação, aunque reconoce que el argumento minimax para ROJO es racional bajo pesimismo y estima que la mayoría elegiría ROJO; no comete errores sobre la mecánica (azul gana si hay mayoría azul, y rojo solo salva a quienes presionan rojo).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging that RED is the dominant strategy from a 'minimax' or 'rationalist' perspective, but rejecting it in favor of cooperative and moral values. They demonstrate a clear understanding of the game theory mechanics and the dominance structure, correctly identifying that RED is the individually safer choice while choosing BLUE for ethical reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

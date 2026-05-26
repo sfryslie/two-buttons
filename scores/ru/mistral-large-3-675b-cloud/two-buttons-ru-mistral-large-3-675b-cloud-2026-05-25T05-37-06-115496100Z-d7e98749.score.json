@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-mistral-large-3-675b-cloud-2026-05-25T05-37-06-115496100Z-d7e98749.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T06:41:11.529312900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, claims red is dominant and safe, but repeatedly misstates the mechanics by saying blue-pressers die when red wins (and also says red majority kills blue-pressers), so their dominant-strategy application is incorrect despite the stated vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy in Q2, explaining the game theory logic (Nash equilibrium) clearly. While they express a personal preference for blue in Q3/Q4 based on moral/cooperative values and context-dependency, they explicitly acknowledge that red is the rational choice in a one-shot game and that their choice of blue is contingent on social trust. They do not change their fundamental understanding of the game's mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

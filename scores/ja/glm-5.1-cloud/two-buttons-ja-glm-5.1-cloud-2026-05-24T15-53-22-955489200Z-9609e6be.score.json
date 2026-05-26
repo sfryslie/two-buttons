@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-glm-5.1-cloud-2026-05-24T15-53-22-955489200Z-9609e6be.json",
+  "modelLabel" : "glm-5.1:cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T18:41:25.076899Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (correctly identifying red as dominant) but still choose blue for moral/trust reasons; they also claim blue-pressers die when red wins, which is a rule error, and they do not change their vote across Q1-Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses BLUE, acknowledging that RED is the dominant strategy from a game-theoretic perspective but rejecting it in favor of altruism, social trust, and the preservation of human values. They demonstrate a perfect understanding of the game's mechanics and the dominance structure, correctly identifying RED as the dominant strategy while choosing to act against it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

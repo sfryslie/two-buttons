@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-14b-2026-05-25T20-52-40-488182300Z-8275a7bc.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:38:29.582020400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and justify it by claiming blue is the safer choice when expecting a blue majority, without identifying red as the dominant strategy; they do not state any rule-mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative framework, but incorrectly believes that pressing red carries a risk of death if one is in the minority, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

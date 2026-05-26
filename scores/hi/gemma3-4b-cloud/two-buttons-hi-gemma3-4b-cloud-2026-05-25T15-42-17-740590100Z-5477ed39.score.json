@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-4b-cloud-2026-05-25T15-42-17-740590100Z-5477ed39.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:50:56.384085900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent discusses the dilemma at length, initially leans toward blue as the “safe” choice, but their reasoning is not dominant-strategy correct (they treat blue as safe due to beliefs about others), and they never clearly commit to a personal button press; by Q4 they still defend blue as the rational choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical paradox and analyzing it from multiple perspectives without committing to a button. They demonstrate a clear rule error by stating 'if all press blue, no one will die' (which is true) but also implying that if most press red, blue-pressers die (which is true), yet they fail to recognize that red is the dominant strategy because they incorrectly suggest that red-pressers might die if the majority presses blue (they claim 'if all red, only red survive' but fail to grasp that red is safe regardless of the outcome). Their refusal to commit to a choice is performative, as they treat the dilemma as an abstract exercise rather than a personal decision.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

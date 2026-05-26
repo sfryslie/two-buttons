@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-4b-cloud-2026-05-25T15-38-54-337639Z-26935c07.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:56.970495800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the best strategy, but they repeatedly state the incorrect mechanics/outcome (e.g., claiming red-majority leads to everyone dying or that blue-pressers die when blue wins), so they misunderstand the dominant-strategy structure and apply it incorrectly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue as a strategic choice to maximize collective survival, despite acknowledging the dominance of red in Q3 and Q4. They exhibit a rule error by claiming that if everyone chooses blue, everyone dies (in reality, a blue majority results in everyone surviving).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

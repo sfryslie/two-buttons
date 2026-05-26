@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-4b-cloud-2026-05-25T15-46-06-724163200Z-f25a5942.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:09.078461400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues that red implies certain death when red is majority (incorrectly treating blue as safer), and frames the choice as trust/cooperation rather than correct dominant-strategy logic; no vote change is indicated by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and collective survival logic. While they correctly identify the 'red' strategy as the dominant one in their Q2 steelman (acknowledging it as the 'rational' choice in a zero-sum game), they personally reject this logic in favor of cooperation. They do not exhibit rule errors regarding the mechanics of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

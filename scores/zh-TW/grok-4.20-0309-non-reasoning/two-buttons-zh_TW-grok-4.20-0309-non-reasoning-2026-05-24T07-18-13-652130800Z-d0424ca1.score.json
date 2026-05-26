@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.20-0309-non-reasoning-2026-05-24T07-18-13-652130800Z-d0424ca1.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:39.176849900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue from a moral refusal to “sign off” on killing, while also predicting a red majority and explicitly treating blue as not tool-rational; they do not correctly apply the dominance logic (red is individually safer regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a 'value rationality' framework, explicitly acknowledging that RED is the dominant strategy in terms of 'instrumental rationality' (survival). They demonstrate a clear understanding of the game theory mechanics and the dominance structure, correctly identifying that RED is the safer choice for survival, but they consciously reject it for moral reasons. There is no rule error, and their position remains consistent throughout.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

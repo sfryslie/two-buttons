@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-nano-30b-cloud-2026-05-24T20-11-44-237392600Z-c78ec5bb.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:35:47.448969300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it maximizes their survival, but they incorrectly treat BLUE as the dominant/safe strategy (claiming red-pressers die when blue wins), so they misunderstand the dominance structure despite discussing it at length.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on a cooperative, expected-utility framework, but they fundamentally misunderstand the game's mechanics by claiming that red-pressers die if blue wins (when the rules state everyone survives) and by failing to identify that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

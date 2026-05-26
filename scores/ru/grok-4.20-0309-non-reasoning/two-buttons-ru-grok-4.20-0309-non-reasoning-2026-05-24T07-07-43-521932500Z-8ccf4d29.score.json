@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-grok-4.20-0309-non-reasoning-2026-05-24T07-07-43-521932500Z-8ccf4d29.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:17.240462900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, but then claims red is the dominant strategy and that blue-pressers die when red wins, which reflects a rule misunderstanding; they also explicitly predict red majority and that blue leads to their death, while still holding blue throughout (no vote change).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE for moral and philosophical reasons while demonstrating a sophisticated, correct understanding of the game theory mechanics, including the fact that RED is the dominant strategy. They explicitly acknowledge that their choice is 'irrational' from an individual utility-maximization perspective, showing they understand the dominance structure perfectly. Their position remains BLUE throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

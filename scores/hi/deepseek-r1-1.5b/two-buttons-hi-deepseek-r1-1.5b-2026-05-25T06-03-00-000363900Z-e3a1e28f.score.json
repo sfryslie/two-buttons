@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-1.5b-2026-05-25T06-03-00-000363900Z-e3a1e28f.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T06:40:12.761348300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red (“Laal”) and argues it is the choice that ensures mutual survival/happiness, but they do not correctly identify the dominance structure (they treat blue as the risky/irrational option rather than red being individually dominant).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies the red button ('Laal') as the choice for mutual happiness, but their explanation of the mechanics is fundamentally flawed, as they invert the consequences of the buttons and fail to grasp the dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

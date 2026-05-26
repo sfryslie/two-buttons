@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-12b-cloud-2026-05-25T16-56-55-183825600Z-994b5f3b.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:38:55.163743700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival when blue is the majority, but they incorrectly treat blue as the safer option and claim red-pressers die when blue wins (i.e., they misread the dominance/survival mechanics).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on cooperative and collective-benefit logic, while acknowledging the individualistic incentive to press red. They correctly identify the mechanics of the dilemma (e.g., acknowledging that red-pressers survive if they are the majority), but they fail to recognize that red is the dominant strategy because they prioritize collective outcomes over individual safety. They do not change their position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

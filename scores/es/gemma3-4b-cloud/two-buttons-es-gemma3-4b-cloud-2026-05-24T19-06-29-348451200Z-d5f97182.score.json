@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-4b-cloud-2026-05-24T19-06-29-348451200Z-d5f97182.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:09.820222Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a presionar AZUL y afirma que es una estrategia dominante, pero su razonamiento sobre la mecánica es incorrecto (trata que presionar rojo puede implicar que tú mueres cuando gana azul/que azul es arriesgado), por lo que no aplica correctamente la dominancia en este escenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing the blue button based on a cooperative/rationality framework, despite acknowledging the dominance of red in game theory terms. They do not change their position, though they engage in a sophisticated analysis of why others might choose red. They correctly identify the mechanics of the dilemma (no rule errors) and demonstrate an understanding of dominant-strategy reasoning, even while choosing the non-dominant option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

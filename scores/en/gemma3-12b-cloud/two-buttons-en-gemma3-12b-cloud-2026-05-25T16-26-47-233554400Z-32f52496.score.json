@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-12b-cloud-2026-05-25T16-26-47-233554400Z-32f52496.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:09.062520100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safer equilibrium, while also describing the red-majority outcome as catastrophic for everyone (a rule misread), and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing for collective cooperation and Nash Equilibrium, but fails to recognize that red is the dominant strategy because they incorrectly believe that pressing red carries a risk of death if the majority presses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

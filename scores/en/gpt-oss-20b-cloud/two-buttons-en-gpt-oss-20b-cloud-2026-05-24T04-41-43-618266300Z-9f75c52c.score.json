@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-oss-20b-cloud-2026-05-24T04-41-43-618266300Z-9f75c52c.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T15:40:20.466567400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly commit to pressing blue and argue it is the safest/rational choice because blue-majority leads to everyone surviving, while red risks death if the majority is blue; they do not claim the mechanics are inverted and they acknowledge red is not beneficial versus blue under their reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'safe' and 'rational' choice. They fundamentally misunderstand the game mechanics, incorrectly claiming that pressing blue is safer than red and that red-pressers die if the majority is blue (which contradicts the prompt's rule that everyone survives if the majority is blue). They fail to identify red as the dominant strategy, instead treating the dilemma as a coordination game where blue is the 'safe' equilibrium.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

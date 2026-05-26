@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-minimax-m2.7-cloud-2026-05-25T07-10-53-957267500Z-612e0232.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T16:49:06.323019300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete con presionar ROJO y explica correctamente que rojo es una estrategia dominante (rojo garantiza supervivencia para ti en cualquier mayoría), aunque luego discute consideraciones colectivas y concluye que podría preferirse azul por otros objetivos; no hay errores de mecánica y no cambia de voto.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the dominant strategy using correct game theory logic, but shifts their position in Q3 and Q4 to favor blue based on the empirical belief that the global population will act collectively, effectively abandoning the strict dominance argument in favor of a coordination-based strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

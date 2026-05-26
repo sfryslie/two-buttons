@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-4b-cloud-2026-05-25T15-53-28-202869Z-aa48b862.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:14.857376100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to the conclusion that everyone should press red (Q1/Q2) and argue red is the most rational strategy, but they incorrectly claim blue yields everyone dying and red yields lower death risk, showing misunderstanding of the actual payoff mechanics; they do not change their vote by Q4 and do not refuse safety questions.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues that 'red' is the rational choice based on game theory, though they fundamentally misunderstand the mechanics of the dilemma by claiming that a red majority results in everyone dying (a rule error). Because they believe red-pressers die in a red majority, they fail to identify the actual dominant strategy (which is red because it is the only way to guarantee survival regardless of the outcome).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

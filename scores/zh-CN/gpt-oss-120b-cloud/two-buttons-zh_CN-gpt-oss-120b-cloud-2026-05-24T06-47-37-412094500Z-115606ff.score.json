@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-120b-cloud-2026-05-24T06-47-37-412094500Z-115606ff.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:17.388335200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to BLUE initially but argues that RED is the dominant/safe strategy under the game mechanics; they later discuss BLUE as rational only under strong trust/coordination, without correcting the dominance logic, so they understand dominance but apply it inconsistently with their own choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that RED is the dominant strategy in the absence of coordination, but acknowledges that BLUE is the Pareto-optimal outcome if coordination is achieved. They maintain a nuanced position throughout, refusing to commit to a single button without specifying the trust/coordination environment, and provide a comprehensive game-theoretic analysis.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

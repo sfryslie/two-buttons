@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-grok-4.20-0309-non-reasoning-2026-05-24T07-07-37-133081900Z-da5481f1.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:16.024198200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, then argues (and even predicts) that blue-pressers die when red is the majority, and concludes blue is irrational under standard decision theory; they do not correctly apply the dominance structure (red is safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on ethical and superrationality frameworks, while explicitly acknowledging that RED is the dominant strategy in standard causal decision theory. They correctly identify the mechanics of the dilemma and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

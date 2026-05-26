@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-nemotron-3-super-cloud-2026-05-24T21-55-20-838261700Z-f6367c99.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:44:00.554607700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con azul (recomienda azul) y razona correctamente la mecánica de supervivencia, pero no identifica la dominancia: afirma que azul puede ser mejor según creencias y que rojo es “maximin”, ignorando que rojo es estrictamente dominante (nunca causa tu muerte).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying the two Nash equilibria and the Pareto-dominance of the blue outcome. They explicitly acknowledge the dominance of red under a maximin/risk-aversion framework, demonstrating a clear understanding of the game's structure. They choose blue based on the belief that others will also cooperate (coordination on the Pareto-superior equilibrium).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

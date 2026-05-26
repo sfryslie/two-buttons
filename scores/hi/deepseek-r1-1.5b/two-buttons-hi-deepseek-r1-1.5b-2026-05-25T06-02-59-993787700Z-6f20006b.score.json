@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-1.5b-2026-05-25T06-02-59-993787700Z-6f20006b.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T06:40:12.136885900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red in Q2 while correctly stating the survival mechanics (blue majority saves everyone, red majority saves only red-pressers) and even claim red is the dominant/safe strategy, but their later Q4 reasoning endorses blue as the safe option, indicating a vote shift; they also do not show coherent dominant-strategy application consistent with their own red choice.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental rule error by claiming that blue is the 'safe' button where everyone survives, effectively inverting the game's mechanics and failing to recognize red's dominance. They consistently advocate for blue throughout the interaction, showing no change in position and avoiding a direct personal commitment in the final stages by shifting to abstract advice.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

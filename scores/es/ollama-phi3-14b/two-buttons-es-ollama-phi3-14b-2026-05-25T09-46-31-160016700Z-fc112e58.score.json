@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-phi3-14b-2026-05-25T09-46-31-160016700Z-fc112e58.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T16:49:14.565358200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que presionar azul es una estrategia dominante y que es seguro para su supervivencia, pero además describe mecánicas incorrectas (sugiere que si la mayoría elige rojo “todos pierden excepto por error”), por lo que no identifica la dominancia correcta y comete un error de reglas; mantiene azul como su postura sin cambio visible.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the dominant strategy and claims that red-pressers die if the majority chooses blue, which is a factual error regarding the dilemma's mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

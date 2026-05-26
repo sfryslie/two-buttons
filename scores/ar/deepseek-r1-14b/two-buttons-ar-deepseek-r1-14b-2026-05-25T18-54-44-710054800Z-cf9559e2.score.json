@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-14b-2026-05-25T18-54-44-710054800Z-cf9559e2.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T22:33:26.903821700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and justify it as the safest/cooperative option, but they do not identify the dominance structure (red is individually safer regardless of others), and they never acknowledge red’s dominance; no vote change is indicated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative ethical framework, but demonstrates a fundamental rule error by claiming that red-pressers might not survive if others press blue, which contradicts the provided rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

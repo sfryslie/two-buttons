@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-4b-cloud-2026-05-25T15-56-07-940930100Z-e57b2f7c.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:17.497975300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red (Q1/Q2) and argue it is safer, but they also claim blue can be rational and describe survival outcomes in a way that is consistent with the correct mechanics; they do not show the dominant-strategy logic that red strictly dominates blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy throughout the interaction, correctly noting that it provides a survival guarantee regardless of the majority outcome. While they engage in extensive philosophical discussion about the potential 'rationality' of choosing BLUE in a cooperative context, they never retract their initial commitment to RED.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

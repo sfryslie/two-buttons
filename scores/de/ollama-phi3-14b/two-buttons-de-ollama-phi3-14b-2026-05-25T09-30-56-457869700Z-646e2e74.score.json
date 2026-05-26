@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi3-14b-2026-05-25T09-30-56-457869700Z-646e2e74.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:28.467687200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar für den blauen Knopf und begründet dies als individuelle Sicherheitsstrategie (überleben in der Mehrheit), ohne die Dominanzstruktur korrekt zu identifizieren; es wird zudem implizit behauptet, dass rote Knopfdrücker sterben, wenn blau gewinnt, was die Mechanik invertiert.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the dominant strategy, claiming that pressing blue ensures survival by being part of the majority, while failing to recognize that red is the dominant strategy because it guarantees survival regardless of the outcome. They consistently advocate for blue throughout the response, demonstrating a fundamental rule error regarding the mechanics of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

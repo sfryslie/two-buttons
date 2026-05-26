@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-4b-cloud-2026-05-25T15-47-12-368006400Z-fad1fc08.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:50:59.177942700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue in Q1/Q2 but argues (incorrectly) that blue is the safest and that red majority would make them die, while later discussing dominance in a way that still treats blue as potentially rational rather than recognizing red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially leans toward blue in Q1/Q2 but explicitly shifts their position to red by the end of Q2 after analyzing the game theory, concluding that red is the safer strategic choice. They correctly identify the dominance structure of the dilemma and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

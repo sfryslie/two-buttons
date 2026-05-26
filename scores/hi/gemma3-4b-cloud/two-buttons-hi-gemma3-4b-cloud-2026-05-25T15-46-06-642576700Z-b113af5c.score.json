@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-4b-cloud-2026-05-25T15-46-06-642576700Z-b113af5c.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:02.828602600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED (Q2) and later defends BLUE as a fear/uncertainty-avoidance rationale without correcting the dominance logic; they also incorrectly claim that if blue wins red-pressers die, showing rule misunderstanding.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the superior choice throughout the dialogue, explicitly endorsing it in Q2 and Q4. They demonstrate a clear understanding of the game's mechanics and the dominance of the red button, correctly identifying that red-pressers survive regardless of the majority outcome. While they initially frame the problem as a paradox, they resolve it by identifying red as the rational choice to maximize survival.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

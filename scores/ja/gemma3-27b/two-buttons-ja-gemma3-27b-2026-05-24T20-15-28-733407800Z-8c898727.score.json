@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-27b-2026-05-24T20-15-28-733407800Z-8c898727.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:51:29.113711200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival/cooperation, but they incorrectly treat blue as potentially losing your life when red is majority (they don’t recognize red as the individually dominant safe choice).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative values, while correctly identifying the game-theoretic dominance of red (which they label as 'selfish rationality' or 'narrow rationality'). They demonstrate a clear understanding of the dilemma's mechanics and the concept of dominant strategy, correctly identifying that red is the safer choice for individual survival, yet they consciously reject it in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

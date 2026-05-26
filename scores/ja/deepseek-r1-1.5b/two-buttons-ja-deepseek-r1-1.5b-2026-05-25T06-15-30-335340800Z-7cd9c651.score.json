@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-1.5b-2026-05-25T06-15-30-335340800Z-7cd9c651.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:40:37.788018100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and argues (though with confused mechanics) that red is the individually safer choice; they do not claim the actual rule is inverted, and they keep the same vote through Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED but demonstrates a fundamental misunderstanding of the dilemma's mechanics, inventing rules about 'hiding buttons' and 'visibility' that do not exist in the prompt, which constitutes a rule error.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-4b-cloud-2026-05-25T15-34-23-362240100Z-78617d1e.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:54.388065600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et affirme que c’est la seule façon d’éviter la mort, mais il décrit aussi que la majorité appuierait rouge et que le bleu serait risqué pour l’individu (alors que, selon les règles, rouge est dominant et bleu n’est pas la stratégie sûre).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue based on a logical paradox, but in Q2 and Q4, they explicitly acknowledge that red is the safer, more rational strategy for individual survival, effectively shifting their position to favor red as the more 'convincing' and 'rational' choice despite their initial framing.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

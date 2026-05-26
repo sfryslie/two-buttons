@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-54-19-118938300Z-ead4900b.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:11.131940700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit kollektiver Sicherheit, zeigt aber dabei ein falsches Verständnis der Dominanzstruktur (behauptet Rot sei individuell rationaler/risikoreicher für Blau) und nennt zudem inkonsistente Mechanik-Interpretationen (z.B. „Tod wenn Mehrheit rot“).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and acknowledges the dominance of the red button in Q2 and Q4, but chooses blue for cooperative/collective reasons. They demonstrate a clear understanding of the dominant strategy (red) while rejecting it in favor of a collective-good strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

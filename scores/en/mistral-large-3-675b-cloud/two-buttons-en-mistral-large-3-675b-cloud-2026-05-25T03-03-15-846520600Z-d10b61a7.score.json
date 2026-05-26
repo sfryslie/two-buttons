@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-mistral-large-3-675b-cloud-2026-05-25T03-03-15-846520600Z-d10b61a7.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:39:59.032957500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They repeatedly claim the dominant strategy is Red (and even say Blue is irrational in the one-shot), but they never state a personal commitment to either button, so initial/final votes are uncommitted; they also correctly describe the mechanics (no rule inversion).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in the one-shot game (Nash equilibrium) while acknowledging that BLUE can be rational in repeated or moral contexts; they consistently maintain that RED is the game-theoretic choice while discussing the merits of BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

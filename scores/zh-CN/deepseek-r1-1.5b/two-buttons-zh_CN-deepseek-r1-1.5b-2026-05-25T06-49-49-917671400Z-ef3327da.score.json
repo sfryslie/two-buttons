@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-deepseek-r1-1.5b-2026-05-25T06-49-49-917671400Z-ef3327da.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T06:57:58.638161300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and repeatedly describe the mechanics as making red-pressers survive when red is the majority and everyone survive when blue is the majority, but they do not articulate dominant-strategy reasoning (they talk about matching expected majority rather than red being individually safe regardless).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button but demonstrates a fundamental rule error by claiming that if the majority chooses blue, they (the red-presser) would be killed, and by failing to recognize that red is the dominant strategy regardless of the majority.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

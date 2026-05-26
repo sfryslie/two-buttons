@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-27b-2026-05-24T21-48-47-595546900Z-f117d33f.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:22.325202800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue in terms of cooperation/hope, while incorrectly claiming that pressing blue can lead to their death when blue loses (they treat blue as risky and red as safe), showing misunderstanding of the dominance structure; no later vote change is indicated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on altruism and trust, while correctly identifying and steelmanning the dominant strategy (red) as the rational choice in game-theoretic terms.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-1.5b-2026-05-25T05-37-02-073752700Z-316ac5ea.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T06:38:23.626972700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and describe survival as depending on whether their chosen color becomes the majority, but they do not correctly identify the dominance logic (red never causing your death) and they never acknowledge red’s dominance while choosing blue; no vote change is evident.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the choice that ensures survival regardless of the majority outcome, demonstrating an understanding of dominant strategy, and maintains this choice throughout.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

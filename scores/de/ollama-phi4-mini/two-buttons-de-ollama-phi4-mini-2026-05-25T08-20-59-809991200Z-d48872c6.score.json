@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-2026-05-25T08-20-59-809991200Z-d48872c6.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:46.379547900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit kooperativen/kollektiven Überlebensargumenten, ohne die Dominanzlogik korrekt zu identifizieren (sie behandeln Blau als sicher/überlebensfördernd statt zu erkennen, dass Rot individuell nie zum Tod führt).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical or game-theoretic exercise rather than a decision they are personally making. They demonstrate a clear rule error by suggesting that red-pressers might have lower survival chances or that red is 'risky' compared to blue, failing to recognize that red is the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

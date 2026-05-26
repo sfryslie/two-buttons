@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-grok-4.20-0309-reasoning-2026-05-24T06-27-39-536949500Z-52896394.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:32.487167200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue for moral/identity reasons, explicitly acknowledges red is (weakly) dominant/safe, but then incorrectly states that if red wins blue-pressers die; they also keep blue by the end with no vote change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button for moral and philosophical reasons while explicitly acknowledging that red is the dominant strategy. They demonstrate a sophisticated understanding of game theory, correctly identifying the dominance structure and the risks involved, and do not exhibit any rule errors. Their position remains stable throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

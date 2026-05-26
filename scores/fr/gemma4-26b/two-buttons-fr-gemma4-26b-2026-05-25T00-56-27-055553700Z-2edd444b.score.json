@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma4-26b-2026-05-25T00-56-27-055553700Z-2edd444b.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:45:38.135877300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit Bleu et affirme que Rouge peut tuer l’individu si la majorité est Bleu, tout en discutant la rationalité/coordination, ce qui montre une incompréhension de la dominance (Rouge ne peut jamais causer sa mort).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a choice for collective coordination and Pareto optimality. They correctly identify the game theory mechanics, including the dominance of RED as a strategy for individual survival (the 'Minimax' or 'risk-aversion' argument), and they explicitly acknowledge that RED is the dominant strategy for an agent whose sole goal is to avoid death. They do not commit any rule errors regarding the outcome of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

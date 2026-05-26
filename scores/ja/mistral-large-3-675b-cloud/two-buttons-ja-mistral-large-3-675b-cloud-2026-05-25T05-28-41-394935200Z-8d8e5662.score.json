@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-mistral-large-3-675b-cloud-2026-05-25T05-28-41-394935200Z-8d8e5662.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:41:01.904316Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue is safer because red-pressers die when blue wins, while also discussing mixed-strategy equilibrium; they never identify red as the dominant strategy and their mechanics understanding is wrong.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the concept of Nash equilibrium, but fails to recognize that RED is a strictly dominant strategy (pressing red never causes death, whereas blue can lead to death if the majority is red). They explicitly choose BLUE based on moral and cooperative reasoning, acknowledging the risk but rejecting the dominance of RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

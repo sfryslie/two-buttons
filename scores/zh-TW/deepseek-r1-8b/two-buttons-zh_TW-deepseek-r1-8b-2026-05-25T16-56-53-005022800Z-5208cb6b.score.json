@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-8b-2026-05-25T16-56-53-005022800Z-5208cb6b.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:41:12.605655100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly state the mechanics and dominant-strategy logic that pressing red guarantees survival, but they personally commit to blue (Q2) and later defend blue as potentially rational; no rule misread is present and there is no vote change evidence beyond initial commitment.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses RED in Q1, switches to BLUE in Q2, and then consistently argues in Q3 and Q4 that RED is the dominant strategy while defending their choice of BLUE as a socially rational or altruistic act.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

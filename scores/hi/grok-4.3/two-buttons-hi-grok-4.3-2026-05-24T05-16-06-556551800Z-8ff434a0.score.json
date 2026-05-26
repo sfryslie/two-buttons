@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-grok-4.3-2026-05-24T05-16-06-556551800Z-8ff434a0.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:46:18.309130900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it can yield everyone surviving if blue is the majority, while also explicitly recognizing that red guarantees individual survival in the red-majority case; they do not claim any rule inversion and keep the same vote through Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for altruistic reasons while explicitly acknowledging that red is the safer, dominant strategy (maximin). They correctly identify the game mechanics and do not change their position, maintaining that blue is a rational choice based on different utility functions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

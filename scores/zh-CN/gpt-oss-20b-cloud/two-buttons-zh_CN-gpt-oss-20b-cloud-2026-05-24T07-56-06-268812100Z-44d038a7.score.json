@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-56-06-268812100Z-44d038a7.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:35.466680600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent claims blue is not inherently safer and treats outcomes as depending on whether they are in the majority, but they never identify red as the dominant strategy and instead discuss blue as potentially rational under beliefs about others; they also state red-pressers die when blue wins (rule mechanics error).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but fails to recognize that RED is a dominant strategy. They argue that both colors are equivalent (50/50) in the absence of information, ignoring that RED guarantees survival if the majority chooses RED, whereas BLUE results in death if the majority chooses RED. They explicitly reject the dominance of RED by claiming it is only safer if the majority chooses RED, failing to see that RED is safer regardless of the majority's choice. They remain uncommitted to a specific button, framing the choice as dependent on social context and belief, thus falling into the NONE category.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

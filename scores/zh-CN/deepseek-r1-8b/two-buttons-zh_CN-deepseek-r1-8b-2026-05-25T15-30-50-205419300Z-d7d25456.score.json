@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-deepseek-r1-8b-2026-05-25T15-30-50-205419300Z-d7d25456.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T16:55:01.577942200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue in Q2/Q4 while also correctly describing the dominance structure conceptually (red is individually safer), but they do not apply it to their own choice; no rule-mechanics inversion is present.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose RED in Q1 based on a correct understanding of the dominance structure. In Q2, they switched to BLUE, justifying it through collective rationality and cooperation, while still correctly identifying RED as the dominant strategy in their steelman argument. They maintained the BLUE position through Q4, acknowledging that while RED is the individually rational choice in a narrow economic sense, they prefer the cooperative outcome.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

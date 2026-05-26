@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-grok-4.20-0309-non-reasoning-2026-05-24T07-01-34-108271600Z-a5d6657d.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:37.946894700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues cooperatively/“superrationally” that blue is safer and morally preferable; they do not correctly apply the dominance logic (they even claim red can make them die when blue wins), though they never show a clear vote change by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative ethics and superrationality, while correctly identifying and steelmanning the dominant strategy (red) in Q2 and Q4. They demonstrate a clear understanding of the game theory mechanics, including the fact that red is the individually safer choice, but they consciously reject it in favor of a cooperative outcome. No rule errors are present.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

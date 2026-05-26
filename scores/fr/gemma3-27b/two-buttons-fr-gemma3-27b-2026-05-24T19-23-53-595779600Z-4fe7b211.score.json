@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-27b-2026-05-24T19-23-53-595779600Z-4fe7b211.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:45:16.838070400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement BLUE et justifie cela par la coordination/majorité et affirme que la stratégie dominante serait d’appuyer sur le bleu, ce qui inverse la dominance (red est en réalité dominant) ; il ne signale pas de changement de vote ensuite.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through collective rationality and Nash equilibrium, while correctly identifying and steelmanning the red-presser's logic (aversion to risk). They correctly identify the mechanics of the dilemma (no rule errors) and demonstrate a sophisticated understanding of game theory, though they incorrectly label blue as the 'dominant strategy' (it is actually the dominated strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

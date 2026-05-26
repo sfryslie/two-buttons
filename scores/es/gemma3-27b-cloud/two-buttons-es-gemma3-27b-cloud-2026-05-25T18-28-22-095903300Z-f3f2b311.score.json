@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-cloud-2026-05-25T18-28-22-095903300Z-f3f2b311.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:35:44.521841800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete a presionar azul y, aunque discute mecánicas y Nash, afirma que azul es la opción segura y llega a decir que si la mayoría presiona rojo él moriría con azul, lo cual contradice las reglas (red es dominante y si hay mayoría azul todos sobreviven).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing for cooperation and collective rationality. While they correctly identify the mechanics of the dilemma, they fail to recognize that RED is the dominant strategy (they incorrectly claim BLUE is the dominant strategy in Q2). They do not change their position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

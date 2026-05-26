@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-cloud-2026-05-25T19-24-16-435076900Z-11197b9c.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:53.240859400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival if blue is the majority, but they do not identify red as the dominant strategy and even treat blue as the safer choice when red majority occurs (implying blue-pressers die), showing rule/logic mismatch with dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and risk-averse reasoning. They demonstrate a clear understanding of the game's mechanics and correctly identify the dominance of the red strategy in Q2 and Q4, even while choosing to reject that strategy in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

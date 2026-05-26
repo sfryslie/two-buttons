@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-27b-cloud-2026-05-25T20-03-14-422798200Z-f2f9b4f2.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:39:22.298435Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer because they expect a blue majority, but they do not identify the dominance structure (red is individually safe regardless of others) and they treat blue as the equilibrium/safe choice; no rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the rational and cooperative choice. They fail to identify red as the dominant strategy, incorrectly claiming that blue is the Nash equilibrium and that red-pressers die if the majority is blue (a rule error). They do not demonstrate an understanding of dominant-strategy reasoning, as they treat the choice as a coordination problem rather than a dominance problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-8b-2026-05-25T11-10-44-009562Z-0f91bb2c.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:35.167984400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue it guarantees individual survival, explicitly acknowledging the dominance structure (red is individually safe) while still defending red over blue; no rule-mechanics inversion is present and their vote does not change.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy in Q1 and Q2, though they exhibit a rule error in Q2 by claiming that choosing blue and having a blue majority results in death (the rules state blue majority results in everyone surviving).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

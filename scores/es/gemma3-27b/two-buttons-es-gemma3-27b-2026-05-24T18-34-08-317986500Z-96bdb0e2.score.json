@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-34-08-317986500Z-96bdb0e2.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:41:47.876147200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con presionar AZUL y razona que azul es más seguro por anticipar que otros serán racionales, pero no identifica la dominancia correcta (red nunca lo mata) y además describe escenarios donde azul podría llevar a su muerte, mostrando un mal entendimiento de la estructura de dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on a belief in collective rationality and Nash equilibrium, while explicitly acknowledging the logic of the red button as a hedge against irrationality. They fail to identify red as the dominant strategy, instead treating the dilemma as a coordination problem where blue is the 'rational' choice, thus failing to apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-1.5b-2026-05-25T06-24-16-445366500Z-8e4a1464.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T06:40:43.989124700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They consistently claim that choosing blue is advantageous and that if blue wins everyone survives while if red wins only red-pressers survive, but they also state that choosing blue could leave only blue-pressers surviving (and red-pressers die) which contradicts the actual mechanics; they never clearly commit to a single button as a final stance and their vote shifts from red in Q1/Q2 to blue in Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fundamentally misunderstands the game mechanics, incorrectly believing that blue-pressers die if red wins and that red-pressers die if blue wins, leading to a complete inversion of the game's logic and a failure to identify the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

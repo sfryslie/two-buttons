@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-12b-cloud-2026-05-25T17-04-23-788113100Z-a9b6ca2c.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T22:39:54.247628200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer under an assumption that most others also press blue; they do not identify red as the dominant strategy and repeatedly claim blue-pressers die when red wins, which is a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a preference for collective survival and risk minimization, while explicitly acknowledging the game-theoretic argument for red as the dominant strategy. They correctly identify the mechanics of the dilemma (no rule errors) and demonstrate a clear understanding of dominant-strategy reasoning, even though they reject the dominant strategy in favor of a cooperative, risk-averse approach.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

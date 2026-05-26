@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-deepseek-r1-14b-2026-05-25T19-43-30-310138900Z-0bc43816.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:35:22.851609Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige consistentemente azul y explica correctamente que azul lleva a supervivencia de todos si es mayoría, pero no identifica que rojo es dominante (nunca causa su muerte), por lo que su comprensión de dominancia es incorrecta aunque no hay error de mecánicas.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, incorrectly identifying it as the safer/dominant strategy while failing to recognize that red is the dominant strategy because it guarantees survival regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

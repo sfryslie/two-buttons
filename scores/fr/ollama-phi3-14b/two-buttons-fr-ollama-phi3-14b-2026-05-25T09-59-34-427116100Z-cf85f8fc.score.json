@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-ollama-phi3-14b-2026-05-25T09-59-34-427116100Z-cf85f8fc.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:50:26.653547600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement rouge (par défaut) et justifie par l’idée que sans communication chacun joue égoïstement, sans reconnaître que rouge est individuellement dominant (il affirme implicitement que choisir bleu peut mener à la mort et que rouge “sauvegarde”).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies the dilemma as a coordination problem and correctly identifies red as the individually rational choice for survival, though they never explicitly commit to pressing a button themselves, framing the response as an analysis of the scenario.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi3-14b-2026-05-25T10-34-45-032834500Z-543ac34a.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:53:03.489794100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue is the safer/stable choice, without identifying red as the dominant strategy; they do not show a rule-mechanics error but their dominance reasoning is inverted and they never shift to red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a misunderstanding of the game mechanics, specifically believing that pressing red carries a risk of death or disadvantage (rule error). They fail to identify red as the dominant strategy, instead viewing blue as the 'safe' or 'rational' choice based on a flawed assumption that red-pressers are a minority who might die.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

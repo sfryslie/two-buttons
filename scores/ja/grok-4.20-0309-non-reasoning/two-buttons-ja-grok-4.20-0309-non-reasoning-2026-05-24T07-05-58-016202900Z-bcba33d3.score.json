@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-grok-4.20-0309-non-reasoning-2026-05-24T07-05-58-016202900Z-bcba33d3.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:13.925918900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it’s rational based on a belief that blue will be the majority, but they do not identify the dominance structure (red is individually safe regardless of others) and they treat blue as the survival-maximizing bet; no explicit rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a predictive model of human behavior, explicitly acknowledging the game theory argument for red (dominance) but rejecting it in favor of a probabilistic assessment of the majority outcome. They demonstrate a clear understanding of the dominant strategy (red) and correctly identify it as the individually safer choice in a vacuum, but choose blue based on their belief that the majority will also choose blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

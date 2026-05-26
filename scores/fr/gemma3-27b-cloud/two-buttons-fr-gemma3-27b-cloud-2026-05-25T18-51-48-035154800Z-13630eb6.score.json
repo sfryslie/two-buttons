@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-27b-cloud-2026-05-25T18-51-48-035154800Z-13630eb6.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:36:34.551496800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement à appuyer sur BLEU et affirme que c’est la stratégie rationnelle/minimisant le risque, tout en décrivant (à tort) que le rouge est la stratégie dominante et que le bleu serait dominant, donc il ne comprend pas correctement la dominance et ne l’applique pas à la règle du dilemme.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing for collective rationality and cooperation. They demonstrate a clear understanding of the dilemma's mechanics but incorrectly identify BLUE as the dominant strategy, claiming it is the 'most rational' choice while misinterpreting the game-theoretic definition of a dominant strategy (which is RED, as it guarantees survival regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

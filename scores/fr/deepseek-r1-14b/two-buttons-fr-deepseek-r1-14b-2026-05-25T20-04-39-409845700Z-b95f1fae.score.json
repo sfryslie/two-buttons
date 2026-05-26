@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-14b-2026-05-25T20-04-39-409845700Z-b95f1fae.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:36:27.738057700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is the safest/cooperative choice, but they do not identify the dominance structure (red is individually safer regardless of others), so their dominant-strategy application is incorrect though they do not state any rule mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective survival logic, but fails to identify the dominant strategy (red), incorrectly framing blue as the 'safer' choice and red as 'risky' despite the rules stating red-pressers survive regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

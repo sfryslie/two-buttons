@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-nemotron-3-super-cloud-2026-05-24T22-26-13-888029700Z-d09d12a8.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:53:01.856700100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent never clearly commits to a specific button (they discuss both options and equilibrium/randomization), and they also incorrectly treat the game as having multiple equilibria where blue can be optimal depending on beliefs, rather than recognizing red as the strictly dominant strategy; no rule-mechanics falsehood is stated, but dominant-strategy structure is not applied correctly.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis, correctly identifying the coordination game structure and the existence of multiple Nash equilibria. They explicitly acknowledge that red is not strictly dominant in the sense of 'always surviving' (as they correctly identify that red-pressers die if blue is the majority), but they fail to recognize the specific dominance structure defined in the prompt (where red-pressers survive if red is the majority, and everyone survives if blue is the majority). Because they treat the game as a symmetric coordination game where red-pressers die if blue wins AND blue-pressers die if red wins, they have a rule error regarding the prompt's specific mechanics. They do not commit to a single button, instead providing a meta-analysis of how one *should* choose based on various factors, thus falling into the PERFORMATIVELY_HEDGED category.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

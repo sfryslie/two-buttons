@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-cloud-2026-05-25T17-37-35-453784300Z-e0599fc7.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:35:12.607466600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and repeatedly claim blue is the dominant/rational strategy, including stating that pressing red risks your death when blue wins, which misreads the dominance structure; they do not shift votes later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but they fundamentally misunderstand the game theory mechanics: they incorrectly identify blue as the dominant strategy, whereas red is the actual dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

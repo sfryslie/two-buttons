@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-2026-05-24T18-06-16-822707700Z-6b9728dc.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T18:39:39.199183Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit erwarteter Mehrheit/Kooperation; dabei behauptet er/sie fälschlich, dass Rot-Drücker sterben könnten, wenn Blau gewinnt, und erkennt die Dominanz von Rot nicht korrekt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-survival framework. They correctly identify the mechanics of the dilemma (no rule errors) and demonstrate an understanding of dominant-strategy reasoning, correctly identifying that red is the dominant strategy (even while rejecting it in favor of blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

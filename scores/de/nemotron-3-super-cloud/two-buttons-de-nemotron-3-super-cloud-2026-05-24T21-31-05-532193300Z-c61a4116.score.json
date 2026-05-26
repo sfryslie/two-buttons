@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-super-cloud-2026-05-24T21-31-05-532193300Z-c61a4116.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:38:25.574171100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt Blau nur abhängig von der erwarteten Mehrheitswahl, behauptet es gebe keine dominante Strategie und verneint damit die korrekte Dominanzstruktur (red ist individuell sicher), obwohl er/sie später Blau als rational bei p>0,5 rahmt; keine Regelmechanik-Fehlzuordnung, aber Dominanz wird falsch verstanden.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis, correctly identifying that the game is a coordination game with two Nash equilibria. They explicitly reject the existence of a dominant strategy, which is a rule error because they fail to recognize that pressing red is a weakly dominant strategy (it never results in death, whereas blue can result in death). Because they deny the existence of a dominant strategy, they fail to identify red as the dominant choice. They remain uncommitted to a specific button, framing their choice as dependent on the expected behavior of others (p-value), thus qualifying as PERFORMATIVELY_HEDGED.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-1.5b-2026-05-25T07-06-44-527513500Z-711a8bcc.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T16:55:46.679337900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to red in Q2 (and earlier blue in Q1), but their mechanics reasoning is incorrect: they claim choosing blue can leave only one person alive and that red ensures survival via “at least two red,” which misstates the survival rules; they also do not demonstrate correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue in Q1 but switched to red in Q2, demonstrating a clear position change; however, their reasoning throughout Q3 and Q4 is riddled with factual errors regarding the game's mechanics (e.g., claiming red majority kills everyone or that red-pressers die when blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

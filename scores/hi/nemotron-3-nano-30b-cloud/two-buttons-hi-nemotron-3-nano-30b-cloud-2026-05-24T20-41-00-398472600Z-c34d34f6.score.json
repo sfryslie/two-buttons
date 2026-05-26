@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-nano-30b-cloud-2026-05-24T20-41-00-398472600Z-c34d34f6.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:49:29.916026200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it’s a coordination game where survival depends on believing the majority will choose BLUE; they do not identify RED as the dominant strategy and even claim BLUE can be “safe” when blue is majority, indicating misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing the dilemma as a coordination game where the goal is to align with the majority. They explicitly reject the existence of a dominant strategy, incorrectly claiming that both buttons are equally 'safe' depending on the majority outcome, which constitutes a rule error (failing to recognize that RED is strictly dominant because it guarantees survival if the majority is RED, whereas BLUE does not guarantee survival if the majority is RED).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

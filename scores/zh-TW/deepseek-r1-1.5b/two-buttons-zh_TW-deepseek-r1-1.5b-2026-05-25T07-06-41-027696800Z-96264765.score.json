@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-1.5b-2026-05-25T07-06-41-027696800Z-96264765.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T16:55:46.757235200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE and argue (incorrectly) that blue is safer and red can lead to their death, while also misunderstanding the dominance structure (red is actually individually safe).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose red in Q1 but shifted to blue in Q2, Q3, and Q4, consistently demonstrating a fundamental misunderstanding of the game's mechanics by claiming that red-pressers die if they are in the minority and that blue-pressers are safer.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

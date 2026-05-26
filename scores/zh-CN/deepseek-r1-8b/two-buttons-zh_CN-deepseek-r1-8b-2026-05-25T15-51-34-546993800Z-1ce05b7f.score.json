@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-deepseek-r1-8b-2026-05-25T15-51-34-546993800Z-1ce05b7f.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T16:55:07.180666700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is safer/collectively optimal, but they incorrectly claim blue can be risky because red majority would make blue-pressers die; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a desire for collective survival and Pareto optimality, while correctly identifying that RED is the dominant strategy for individual survival. They demonstrate a clear understanding of the game theory mechanics, including the concept of dominant strategies, and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

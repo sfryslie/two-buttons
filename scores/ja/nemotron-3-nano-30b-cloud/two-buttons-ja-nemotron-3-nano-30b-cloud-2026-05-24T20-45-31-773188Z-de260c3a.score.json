@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-nemotron-3-nano-30b-cloud-2026-05-24T20-45-31-773188Z-de260c3a.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:52:32.559477500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer because red only saves red-pressers when red is the majority, while they also acknowledge that red could be rational only under special information; they do not make any rule-mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for BLUE based on a misunderstanding of the game's mechanics, specifically claiming that red-pressers face a 'double risk' or 'two conditions' (red majority AND being in the majority) and that red-pressers die if they are in the minority, which contradicts the provided rule that red-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

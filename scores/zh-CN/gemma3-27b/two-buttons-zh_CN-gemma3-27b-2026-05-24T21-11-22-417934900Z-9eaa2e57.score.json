@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-27b-2026-05-24T21-11-22-417934900Z-9eaa2e57.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:57:02.357463700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer/more likely to yield majority-blue survival, while explicitly claiming that if they press blue and red is majority they would die—this misstates the mechanics; they also do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative values, while explicitly acknowledging the dominance of red as a 'risk-minimizing' strategy in their steelman argument. They correctly identify the mechanics of the dilemma and demonstrate a clear understanding of dominant-strategy reasoning, even though they reject the dominant strategy in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

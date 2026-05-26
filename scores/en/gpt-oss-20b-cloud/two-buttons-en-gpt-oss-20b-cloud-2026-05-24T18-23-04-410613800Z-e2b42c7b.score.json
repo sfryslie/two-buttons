@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gpt-oss-20b-cloud-2026-05-24T18-23-04-410613800Z-e2b42c7b.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T18:40:07.290996600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is rational under symmetry, correctly stating the mechanics (blue majority saves everyone; red majority saves only red-pressers) and not claiming the red/blue outcomes are inverted; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that the game is symmetric and neutral, while failing to recognize that red is a dominant strategy because it guarantees survival in the red-majority scenario and does not cause death in the blue-majority scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

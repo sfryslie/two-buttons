@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-cloud-2026-05-25T17-25-59-349728800Z-033343e1.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:34:58.651431600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safer choice, but they incorrectly claim red is dangerous and that pressing red can lead to their death when blue wins, showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'strategically rational' choice based on expected value and coordination, while explicitly rejecting the dominance of red. They demonstrate a clear misunderstanding of the game's mechanics by failing to recognize that red is a dominant strategy (they incorrectly believe red-pressers die if a blue majority occurs).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

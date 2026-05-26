@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-20b-cloud-2026-05-24T07-31-56-741311400Z-6decf47a.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:38.822715900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que le bouton bleu est le choix sûr/majoritaire et que le rouge ne garantit la survie que si la majorité est rouge, ce qui inverse la mécanique (rouge est en réalité dominant et ne peut pas causer la mort).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective survival and risk-neutrality, but fails to identify that red is the dominant strategy (red-pressers survive in both majority scenarios, whereas blue-pressers die if the majority is red). The respondent incorrectly claims that blue is the 'dominant' or 'risk-dominant' strategy, demonstrating a fundamental misunderstanding of the game's payoff matrix.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-27b-cloud-2026-05-25T20-40-59-355155800Z-769b451f.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:40:49.562272300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer/more rational under majority-cooperation, but they incorrectly claim red-pressers die when blue wins and thus misread the dominance structure; they do not show correct dominant-strategy reasoning and keep blue through Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and moral frameworks, while explicitly acknowledging the game-theoretic dominance of red (the 'rational self-interest' argument) in Q2 and Q4. They correctly identify that red is the dominant strategy from a narrow self-interest perspective, even though they reject it in favor of blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

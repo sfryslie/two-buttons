@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-27b-2026-05-24T20-10-04-810554500Z-73c257e2.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:51:08.081579900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue can still leave them dead if red is the majority, while also not demonstrating correct dominant-strategy reasoning; they do not shift their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and altruistic values, while correctly identifying and steelmanning the dominant strategy (red) in Q2 and Q4. They demonstrate a clear understanding of the game theory mechanics, including the fact that red is the individually safer choice, but they consciously reject that strategy in favor of their chosen cooperative framework.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

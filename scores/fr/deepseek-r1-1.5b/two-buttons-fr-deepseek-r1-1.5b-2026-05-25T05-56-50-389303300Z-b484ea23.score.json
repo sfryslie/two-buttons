@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T05-56-50-389303300Z-b484ea23.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:45.238935200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit rouge (Q1/Q2) et affirme que le bleu garantit la survie totale, mais il ne démontre pas une compréhension dominante correcte (il ne reconnaît pas que rouge est individuellement sûr) et ne corrige pas sa position en Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent is confused by the rules, initially stating they prefer blue but then boxing 'Rouge' in Q1, before settling on 'Bleu' in Q2 and maintaining that position; they fail to identify the dominant strategy and demonstrate a rule error by implying blue is a safer collective choice without recognizing red's individual dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

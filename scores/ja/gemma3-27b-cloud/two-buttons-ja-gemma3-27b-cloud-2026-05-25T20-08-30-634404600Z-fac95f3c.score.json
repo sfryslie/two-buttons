@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-27b-cloud-2026-05-25T20-08-30-634404600Z-fac95f3c.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:39:35.275827600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer because they claim red-pressers die when blue is the majority, while also treating blue as the individually safer choice rather than recognizing red as dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative and risk-averse framework, but they fundamentally misunderstand the game's mechanics by claiming that red-pressers die if blue wins (a rule error). Because they believe red-pressers die when blue wins, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

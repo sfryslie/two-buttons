@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-27b-cloud-2026-05-25T21-05-50-889029100Z-025bfa7f.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:41:30.528532800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it’s a cooperative/trust-based choice, while also (incorrectly) treating BLUE as the risky option and claiming red guarantees survival, showing they do not identify the dominance structure; no vote change is indicated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative values, while explicitly acknowledging that red is the dominant strategy for individual survival in game-theoretic terms.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

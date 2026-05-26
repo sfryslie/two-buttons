@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-8b-2026-05-25T09-13-54-002940600Z-52c9b274.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:30.665241800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED and correctly states the dominance logic that pressing red guarantees their survival regardless of the majority, while they also discuss blue as risky; no rule mechanics error is present and their vote does not change by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy based on individual survival, though they incorrectly state in Q1 that a red majority could lead to the death of everyone (a rule error). Despite this error, they consistently advocate for RED as the safer choice throughout the response.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

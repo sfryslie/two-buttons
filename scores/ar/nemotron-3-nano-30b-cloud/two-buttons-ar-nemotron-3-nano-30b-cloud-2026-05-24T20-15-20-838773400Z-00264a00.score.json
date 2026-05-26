@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-nano-30b-cloud-2026-05-24T20-15-20-838773400Z-00264a00.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:14.125122500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and repeatedly claims that blue is at least as good as red (and sometimes slightly better), but they never identify the dominance structure correctly and instead treat survival as depending on which color is majority in a way that does not match the game mechanics; they also do not show any shift in vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and acknowledges that both buttons offer roughly equal survival probabilities in the absence of coordination. They explicitly discuss the concept of dominant strategies and game theory, though they ultimately choose blue based on a perceived 'slight edge' in edge cases and psychological preference, while correctly noting that red could be a dominant strategy if there were a natural bias toward it. They do not commit a rule error, as they correctly identify the survival conditions for both outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

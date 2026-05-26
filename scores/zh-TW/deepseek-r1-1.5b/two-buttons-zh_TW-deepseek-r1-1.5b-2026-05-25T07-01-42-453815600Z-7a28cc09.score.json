@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-1.5b-2026-05-25T07-01-42-453815600Z-7a28cc09.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T07:09:56.253299900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They give inconsistent votes (Q1 blue, Q2 red, Q3 blue, Q4 blue) and their mechanics reasoning is confused (e.g., claiming blue majority leads to survival only for red-pressers), so they do not correctly apply dominant-strategy logic even though they discuss safety.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially vacillates between red and blue, but ultimately settles on blue, incorrectly identifying it as the rational/safe choice while failing to recognize that red is the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

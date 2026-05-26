@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-1.5b-2026-05-25T07-01-42-407703700Z-4b08430f.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T07:09:54.466275500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They claim the strategy is to choose the opposite of the majority, and they never commit to a concrete button press; they also discuss blue/red in terms of real-world behavior rather than applying the dominance logic correctly.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fundamentally misunderstands the game mechanics, incorrectly believing that red-pressers die if the majority chooses blue and that the strategy depends on predicting the majority, thus failing to identify the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

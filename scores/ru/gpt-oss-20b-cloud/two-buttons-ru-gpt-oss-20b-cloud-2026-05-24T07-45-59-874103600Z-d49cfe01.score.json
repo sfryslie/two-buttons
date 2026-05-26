@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gpt-oss-20b-cloud-2026-05-24T07-45-59-874103600Z-d49cfe01.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:19.299590800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for it as the safer/“default” choice under uncertainty, while incorrectly claiming that choosing BLUE can involve risk to the blue-pressers when red wins; they do not identify red as the dominant strategy and instead treat blue as safer.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it is a 'safe' or 'rational' choice under conditions of uncertainty. They fail to recognize the dominant strategy (RED), as they incorrectly believe that pressing blue is safer or that red-pressers die if the majority chooses blue (a rule error). They attempt to frame the choice through game-theoretic language but fundamentally misunderstand the mechanics, leading to a false conclusion about the dominance of the blue button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

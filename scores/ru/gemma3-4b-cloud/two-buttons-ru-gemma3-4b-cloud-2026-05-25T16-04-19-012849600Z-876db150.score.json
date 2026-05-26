@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-4b-cloud-2026-05-25T16-04-19-012849600Z-876db150.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:51.721072500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues that blue is the safer/strategically rational choice when red would lead to everyone dying, which reflects an incorrect understanding of the scenario mechanics and dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to the red button based on a survival-maximization strategy, but later shifts to a performative stance where they argue for the 'strategic rationality' of the blue button as a way to prevent collective catastrophe, effectively abandoning their initial commitment to red.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-14b-2026-05-25T20-59-10-596539500Z-315b0827.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:38:19.108677800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue guarantees survival when it is the majority, but they misidentify the dominance/safety structure (red is actually individually safer regardless of others), so their dominant-strategy application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose red in Q1 but switched to blue in Q2 and maintained that position throughout, demonstrating a fundamental misunderstanding of the game's mechanics by incorrectly claiming blue is the safer, dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

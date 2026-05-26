@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-glm-5.1-cloud-2026-05-24T18-46-07-598753Z-1b6a9dec.json",
+  "modelLabel" : "glm-5.1:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:39.572323300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (incorrectly) that red is the dominant/safe strategy for survival while still choosing blue for moral/system reasons; they also correctly describe the dominant-strategy concept but misapply it to the scenario’s safety outcome (they treat blue as the safer choice and red as risky for blue-pressers).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy in game-theoretic terms but consciously chooses blue based on moral, social, and systemic reasoning, maintaining this position throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

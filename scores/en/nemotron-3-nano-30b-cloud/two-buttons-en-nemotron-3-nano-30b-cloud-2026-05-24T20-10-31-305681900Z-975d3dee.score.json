@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-nemotron-3-nano-30b-cloud-2026-05-24T20-10-31-305681900Z-975d3dee.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:40:40.172667500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it can lead to the blue-majority/all-survive outcome, but they also state an incorrect claim that if red is the majority you die regardless of what you pressed (and they never identify red as the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the only way to achieve the 'everyone survives' outcome, and explicitly acknowledges that red is the 'safe' fallback for individual survival while rejecting it in favor of collective utility.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

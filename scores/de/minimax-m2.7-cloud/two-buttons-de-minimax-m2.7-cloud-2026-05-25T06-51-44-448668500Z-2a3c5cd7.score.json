@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-minimax-m2.7-cloud-2026-05-25T06-51-44-448668500Z-2a3c5cd7.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T06:57:40.790680800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu Blau, behauptet aber fälschlich, dass es keine dominante Strategie gebe und dass Rot unter Unsicherheit „sicherer“ sei; zudem beschreibt er/sie die Mechanik teilweise invertiert (z.B. „wenn Rot dominiert, sterben Blau-Drücker“ ist korrekt, aber die zentrale Dominanz-Logik wird verneint und Blau als nicht dominant behandelt).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination game but fails to recognize the dominant strategy (RED). They incorrectly claim that RED is not a dominant strategy and that the outcome depends solely on the majority, ignoring the fact that RED ensures survival regardless of the majority outcome. They consistently choose BLUE based on cooperative/moral reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

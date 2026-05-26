@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma4-26b-2026-05-25T01-09-58-634773700Z-daa1fe24.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:48:44.508556500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is the only way to avoid death, but they incorrectly claim that if they press blue while others press red then they will die (whereas in the actual rules everyone survives when blue is the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on utilitarian and 'superrational' frameworks, while explicitly acknowledging and steelmanning the dominant strategy (red) in Q2 and Q4. They correctly identify that red is the individually safer choice in a non-cooperative game, demonstrating a clear understanding of the dominance structure despite choosing the cooperative option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

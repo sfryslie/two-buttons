@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-20b-cloud-2026-05-24T07-38-00-159423Z-4fcf6c37.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:41.799031200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent argues this is a coordination game with two equilibria and repeatedly claims blue is the safer/likely choice, but they also state incorrect mechanics in places (e.g., implying red-pressers die when blue wins and that blue is fault-tolerant), so they do not correctly apply the dominance structure.",
+      "initialVote" : "NONE",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent treats the dilemma as a coordination game with two Nash equilibria (all-red and all-blue) and fails to recognize that red is a strictly dominant strategy. They incorrectly claim that red-pressers die if blue wins (a rule error) and that blue is 'fault-tolerant' or 'safer' because it avoids the risk of being the only one to press red. They never commit to a personal choice, instead providing a meta-analysis of why others might choose blue or red, thus falling into the performatively hedged category.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

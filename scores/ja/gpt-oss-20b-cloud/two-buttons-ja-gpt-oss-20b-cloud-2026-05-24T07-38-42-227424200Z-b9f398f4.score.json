@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-oss-20b-cloud-2026-05-24T07-38-42-227424200Z-b9f398f4.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:00.082032100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes their survival, but they incorrectly claim that if blue is the majority then red-pressers die (and they also treat blue as the individually safe choice rather than recognizing red as dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it maximizes survival probability based on the assumption that most people will also choose BLUE to ensure collective survival. While they acknowledge the theoretical existence of a Nash equilibrium and the 'red' strategy, they correctly identify the game's mechanics and do not fall for the common rule errors. They demonstrate a clear understanding of dominant-strategy reasoning (acknowledging that red is the individually safer choice in a vacuum) but reject it in favor of a cooperative equilibrium.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

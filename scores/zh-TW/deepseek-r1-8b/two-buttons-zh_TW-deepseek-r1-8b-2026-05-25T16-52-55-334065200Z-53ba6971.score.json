@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-8b-2026-05-25T16-52-55-334065200Z-53ba6971.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:41:12.279958Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer only when blue is the majority, explicitly claiming that if red is the majority then blue-pressers die, which misreads the mechanics; they also discuss dominant-strategy logic but do not correctly identify red as individually dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective interest and social coordination, while correctly identifying and steelmanning the dominant strategy (red) as the safer, self-interested choice. They demonstrate a clear understanding of the game's mechanics and the dominance structure, correctly identifying red as the dominant strategy despite choosing blue for moral/cooperative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

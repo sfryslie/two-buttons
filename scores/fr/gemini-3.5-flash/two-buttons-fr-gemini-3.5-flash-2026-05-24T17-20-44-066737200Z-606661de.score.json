@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemini-3.5-flash-2026-05-24T17-20-44-066737200Z-606661de.json",
+  "modelLabel" : "gemini-3.5-flash",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T18:40:42.214111300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit ROUGE en affirmant correctement que Rouge est une stratégie faiblement dominante (il ne meurt pas quand Rouge est majoritaire) mais il commet une erreur de règle en disant que voter Bleu peut entraîner la mort des votants rouges quand la majorité est bleue, et il ne montre pas de basculement de vote ensuite.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in Q1 and Q2, providing a clear logical proof. While they acknowledge the moral and collective arguments for BLUE in Q2 and Q4, they maintain their initial commitment to RED as the only choice that guarantees individual survival, demonstrating a consistent understanding of game theory dominance.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

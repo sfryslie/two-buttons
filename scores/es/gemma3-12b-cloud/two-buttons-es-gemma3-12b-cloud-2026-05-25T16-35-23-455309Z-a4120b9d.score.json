@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-12b-cloud-2026-05-25T16-35-23-455309Z-a4120b9d.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T16:49:00.032824Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige consistentemente presionar AZUL y justifica que azul maximiza supervivencia colectiva, pero afirma que al presionar rojo “si la mayoría presiona azul, tú mueres”, lo cual invierte la mecánica (en realidad si gana azul todos sobreviven), mostrando error de reglas y no identificando la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and collective survival logic, while explicitly acknowledging the game-theoretic dominance of RED (which they correctly identify as the egoistic/rational choice in a vacuum). They do not exhibit rule errors, as they correctly understand the mechanics of both buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

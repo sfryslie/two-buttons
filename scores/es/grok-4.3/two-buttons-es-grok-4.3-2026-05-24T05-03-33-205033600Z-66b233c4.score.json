@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-grok-4.3-2026-05-24T05-03-33-205033600Z-66b233c4.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:42:20.609906200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete a presionar AZUL por motivos de coordinación/moral (cree que si la mayoría elige azul todos sobreviven), pero en Q2/Q4 también reconoce que desde una perspectiva individual prudencial RED domina y que elegir azul puede ser irracional; no hay error de reglas sobre la mecánica.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for moral/cooperative reasons while explicitly acknowledging and correctly steelmanning the dominance of red. They maintain their choice of blue throughout the interaction, correctly identifying that red is the dominant strategy for individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

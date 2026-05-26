@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-nano-30b-cloud-2026-05-24T20-36-15-814032200Z-8314d6a9.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:19.811285600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues (incorrectly) that BLUE is the dominant/safe choice by claiming it guarantees their survival when BLUE is not the majority; they also do not demonstrate correct dominant-strategy reasoning and keep BLUE through Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it maximizes collective survival and can be rationalized through an utility function that includes a preference for the survival of others. They correctly identify the mechanics of the dilemma and acknowledge the dominance of RED in a purely egoistic framework, but they do not commit to RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

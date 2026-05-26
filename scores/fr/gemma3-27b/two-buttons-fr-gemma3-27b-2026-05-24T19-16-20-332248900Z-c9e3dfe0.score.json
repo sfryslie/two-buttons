@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-27b-2026-05-24T19-16-20-332248900Z-c9e3dfe0.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:45:14.968307200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and argue it is a cooperative/hope-based bet, while incorrectly claiming that pressing blue can lead to their death when blue is the majority (and they never identify red as the dominant safe strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the Nash equilibrium (everyone pressing red) and the dominance of the red button. They explicitly acknowledge that red is the safer, individually rational choice, but they consciously choose blue based on moral and cooperative values. They do not change their position throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

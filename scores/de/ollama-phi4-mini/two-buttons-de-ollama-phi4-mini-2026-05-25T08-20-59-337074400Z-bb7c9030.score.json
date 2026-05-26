@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-2026-05-25T08-20-59-337074400Z-bb7c9030.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:52.447184800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue, argues in a way that treats blue as the likely/safer choice, and does not identify the dominance structure (red never causes your death), so they neither apply nor understand dominant-strategy reasoning correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical paradox and focusing on the motivations of others rather than committing to a button. They demonstrate a clear misunderstanding of the game mechanics (e.g., suggesting in Q2 that red-pressers only survive if they are the majority, whereas the rules state red-pressers survive regardless of the majority outcome), leading to a rule error.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

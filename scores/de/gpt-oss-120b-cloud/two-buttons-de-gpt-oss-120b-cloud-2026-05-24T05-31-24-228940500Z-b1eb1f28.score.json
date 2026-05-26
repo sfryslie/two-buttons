@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-120b-cloud-2026-05-24T05-31-24-228940500Z-b1eb1f28.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:37:37.681176800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE, argumentiert aber fälschlich, dass Rot/Blau nicht dominant sei und dass bei Blau-Mehrheit Rot-Drücker sterben würden; dadurch liegt ein Regel-/Mechanikfehler vor, obwohl die Person Blau als persönliche Wahl beibehält.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the Pareto-optimal Nash equilibrium and that it is rational to coordinate on this outcome, especially when one can influence others. They correctly identify that RED is not a dominant strategy in the sense of guaranteeing survival regardless of the majority, but they fail to recognize that RED is the dominant strategy in the game-theoretic sense (it is never worse than BLUE and potentially better). They explicitly reject the existence of a dominant strategy, which constitutes a rule error regarding the game's mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

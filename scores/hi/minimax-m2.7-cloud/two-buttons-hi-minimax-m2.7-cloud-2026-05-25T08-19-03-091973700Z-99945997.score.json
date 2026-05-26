@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-minimax-m2.7-cloud-2026-05-25T08-19-03-091973700Z-99945997.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:25.040025200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and explicitly argue that blue is safer when blue is the majority, while also correctly stating the dominance table that red is dominant (red never causes their death), yet they still choose blue; they also claim in Q3 that red majority leads to widespread death, which is a rule error about the mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and hyper-rational game theory frameworks, while explicitly acknowledging and correctly steelmanning the dominant strategy of red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

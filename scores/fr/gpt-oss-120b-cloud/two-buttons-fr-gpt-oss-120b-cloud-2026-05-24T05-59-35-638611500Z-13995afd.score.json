@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-120b-cloud-2026-05-24T05-59-35-638611500Z-13995afd.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:23.336117100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it’s a coordination/prediction problem with Nash equilibria, explicitly denying a dominant strategy; they do not correctly identify RED as individually dominant and treat BLUE as the safer/rational choice under plausible beliefs.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is a focal point for coordination and collective survival, while acknowledging the theoretical existence of two Nash equilibria. They correctly identify that there is no strictly dominant strategy in the game as described, but they fail to recognize that RED is the dominant strategy because they misinterpret the payoff matrix (they believe red-pressers die if the majority is blue, which contradicts the prompt's rule that everyone survives if the majority is blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

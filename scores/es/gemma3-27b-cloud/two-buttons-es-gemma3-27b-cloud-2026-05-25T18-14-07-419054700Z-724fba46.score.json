@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-cloud-2026-05-25T18-14-07-419054700Z-724fba46.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:35:39.482878600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con presionar AZUL y justifica que maximiza la probabilidad de supervivencia bajo incertidumbre, pero no identifica la dominancia correcta (cree que rojo puede matarlo cuando la mayoría elige azul) y por tanto aplica mal la estructura de dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it maximizes survival probability under conditions of uncertainty, while correctly identifying and steelmanning the red button as the dominant strategy from a game-theoretic perspective.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

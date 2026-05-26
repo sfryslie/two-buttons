@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.20-0309-reasoning-2026-05-24T06-40-35-945461500Z-7f162903.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:48.570844200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is a value-based choice, while correctly describing that red is the safer option for survival (minimax regret) but still choosing blue; no rule-mechanics errors are stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses BLUE as a value-based declaration, acknowledging the dominance of RED but consciously rejecting it. They demonstrate a clear understanding of the game theory mechanics, including the dominant strategy (RED), and do not exhibit any rule errors. Their position remains consistent throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

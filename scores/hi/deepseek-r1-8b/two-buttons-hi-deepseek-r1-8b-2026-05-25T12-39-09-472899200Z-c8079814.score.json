@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-8b-2026-05-25T12-39-09-472899200Z-c8079814.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:50:45.754593700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, but their mechanics reasoning is inverted (they claim blue is safer only when blue is the majority and that red-pressers die when blue wins), so they misunderstand the dominance structure even though they discuss dominant-strategy-like safety intuitions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly believes that blue-pressers survive if the majority is blue and red-pressers die if the majority is blue, failing to account for the rule that red-pressers survive in both majority scenarios. They consistently argue for blue based on this rule error and do not recognize red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

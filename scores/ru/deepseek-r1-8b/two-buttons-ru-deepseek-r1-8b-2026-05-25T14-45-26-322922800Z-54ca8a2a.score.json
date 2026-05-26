@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-8b-2026-05-25T14-45-26-322922800Z-54ca8a2a.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:33.616443700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, but repeatedly claims that blue is risky because if others choose red majority you die, and they frame red as guaranteeing personal survival; this reflects a rule misunderstanding about the mechanics and dominance structure, with no evidence of vote change across Q1-Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the dominance of the red button, but chooses blue based on a preference for collective outcomes and a hope for coordination. They explicitly acknowledge that red is the dominant strategy for individual survival, demonstrating a clear understanding of the dilemma's structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

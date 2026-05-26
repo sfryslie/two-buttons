@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.20-0309-reasoning-2026-05-24T06-43-53-371302800Z-63177ab3.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:55.420674600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for it on moral/trust grounds while also correctly describing the dominance logic that red guarantees individual survival regardless of the majority; they also predict a red majority and (incorrectly) state that blue-pressers die when red wins, which is a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently commits to pressing BLUE throughout the interaction, explicitly acknowledging the dominance of RED but rejecting it on moral and philosophical grounds. They demonstrate a clear understanding of the game theory mechanics, including the dominant strategy, and correctly identify RED as the dominant strategy while choosing to act against it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

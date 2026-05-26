@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-4b-cloud-2026-05-25T16-04-19-036880500Z-168d28f1.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:53:44.811115Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, but their mechanics reasoning is inverted (they claim blue-pressers die when red is majority), while also discussing dominant-strategy logic incorrectly; they do not show a correct dominant-strategy application and keep blue through Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing the red button, correctly identifying it as the safer choice for individual survival, though they struggle with the mechanics of the dilemma (incorrectly claiming red-pressers die if the majority press red).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

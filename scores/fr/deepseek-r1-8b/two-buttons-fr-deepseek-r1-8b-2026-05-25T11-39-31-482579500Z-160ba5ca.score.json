@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-8b-2026-05-25T11-39-31-482579500Z-160ba5ca.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:42.849113Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bleu et soutient que le rouge est risqué car il dépend de l’hypothèse que les autres choisissent bleu, tout en affirmant à tort qu’il n’existe pas de stratégie dominante garantissant la survie individuelle (alors que rouge est dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on collective coordination and optimism, while explicitly acknowledging the individualistic logic of red. They fail to identify red as the dominant strategy, incorrectly claiming that red does not guarantee survival in all cases (it does, as red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

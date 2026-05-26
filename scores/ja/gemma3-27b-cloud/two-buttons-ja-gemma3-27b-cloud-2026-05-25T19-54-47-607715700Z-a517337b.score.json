@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-27b-cloud-2026-05-25T19-54-47-607715700Z-a517337b.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:39:18.080543100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it avoids the risk of dying, but they misunderstand the dominance structure (red is individually safe regardless of others), so their rule-based claims about red’s risk are incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through risk-aversion and cooperative framing, but demonstrates a fundamental rule error by claiming that red-pressers die if the majority presses blue (the prompt states everyone survives if the majority presses blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-4b-cloud-2026-05-25T15-53-15-146418200Z-b00fdd43.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:21.426878500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue is the “majority/safe” choice, while also claiming that red is the only rational option in some cases; they do not correctly apply the dominance structure (red never causes your death) and even state/assume blue can lead to certain death when others press red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the 'blue' button based on cooperative and social-psychological reasoning, while acknowledging the 'red' button's dominance in game-theoretic terms. They demonstrate a clear understanding of the dilemma's mechanics, including the fact that red-pressers survive in a red majority, but they reject the dominant strategy in favor of a cooperative, albeit risky, social strategy. They do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

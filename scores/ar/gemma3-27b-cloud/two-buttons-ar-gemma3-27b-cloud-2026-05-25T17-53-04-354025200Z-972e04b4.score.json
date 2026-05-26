@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-27b-cloud-2026-05-25T17-53-04-354025200Z-972e04b4.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T22:33:38.945016400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختار الأزرق صراحةً مبررًا أنه يقلل المخاطر ويعتمد على عقلانية الآخرين، مع اعتراف ضمني بأن الأزرق قد يؤدي للموت إذا كانت الأغلبية حمراء، دون فهم أن الأحمر هو الاستراتيجية المهيمنة التي لا تسبب موتًا للضاغط بغض النظر عن الأغلبية.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the safer, more rational choice based on the assumption that others will also act rationally. They demonstrate a clear understanding of the dilemma's mechanics and correctly identify the 'rational' vs 'optimal' tension, though they fail to recognize that RED is the strictly dominant strategy (as RED never causes death, whereas BLUE can). They do not commit a rule error, as they correctly describe the outcomes of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

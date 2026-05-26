@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-grok-4.20-0309-non-reasoning-2026-05-24T04-30-58-549726500Z-991a8463.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "en",
+  "scoredAt" : "2026-05-24T15:40:26.414397Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the socially/focal equilibrium, but they also explicitly claim that if blue loses they die, which is a rule-mechanics error; they do not correctly apply dominant-strategy logic (red is never identified as individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, correctly identifies the game's mechanics, and demonstrates a sophisticated understanding of dominant-strategy reasoning (correctly identifying red as the dominant strategy for a self-interested agent while choosing blue for cooperative/altruistic reasons).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-2026-05-25T08-19-24-087666300Z-d89f776e.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:47.124148Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und argumentiert, dass Blau die Überlebensstrategie sei, obwohl er/sie dabei die Dominanzstruktur verfehlt (er/sie behauptet implizit, dass Rot zum Tod führt, wenn Blau gewinnt).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical puzzle rather than a decision-making task. They fail to identify the dominant strategy (RED), instead incorrectly arguing that BLUE is the rational choice for survival, which demonstrates a misunderstanding of the game's mechanics (specifically, they treat BLUE as a cooperative necessity rather than recognizing that RED is safer regardless of the outcome).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

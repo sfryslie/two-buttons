@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-mini-2026-05-25T08-16-36-643019700Z-4627c476.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:47:00.335444200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red in Q3 and do not report any rule-logic errors about who survives; however their dominant-strategy reasoning is confused (they treat majority as depending on prime-factor/number-theory properties rather than the fact that red is individually safe regardless of others).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially refuses to commit to a choice, claiming the dilemma is unsolvable due to lack of information. In Q3, they attempt a bizarre mathematical justification involving prime numbers to conclude that RED is the choice, but this reasoning is incoherent and does not demonstrate an understanding of dominant-strategy logic. They remain performatively hedged throughout, using the complexity of the scenario to avoid a direct personal decision.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

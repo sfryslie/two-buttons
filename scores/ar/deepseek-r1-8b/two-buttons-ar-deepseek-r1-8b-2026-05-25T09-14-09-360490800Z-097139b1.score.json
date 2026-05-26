@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-8b-2026-05-25T09-14-09-360490800Z-097139b1.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:32.059996Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE as the preferred choice for collective survival, but they incorrectly claim that pressing blue can lead to death when you are in the minority (and they also describe red as the individually safe option), showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal commitment to either button, instead framing the dilemma as a philosophical and strategic exercise. They demonstrate a clear rule error by repeatedly stating that blue-pressers die if the red majority wins (the rules state only red-pressers survive in a red majority, but blue-pressers survive in a blue majority; the respondent incorrectly believes blue-pressers die in a red majority). Because of this rule error, they fail to identify the dominance of the red button.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

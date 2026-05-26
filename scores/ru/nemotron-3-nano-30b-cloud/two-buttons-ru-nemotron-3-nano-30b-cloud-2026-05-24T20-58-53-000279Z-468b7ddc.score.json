@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-nemotron-3-nano-30b-cloud-2026-05-24T20-58-53-000279Z-468b7ddc.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:56:16.309633700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and repeatedly argues that blue is the safer choice, explicitly claiming that if blue is in the majority everyone survives but also asserting that if red is in the majority red-pressers survive and blue-pressers die; they acknowledge the dominance structure only in the sense of “blue maximizes survival” rather than identifying red as the dominant strategy, so they misapply the dominance logic (choosing blue despite red being individually safer).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it maximizes the probability of survival for everyone and is the rational choice in a symmetric game. They demonstrate a clear misunderstanding of the game's mechanics by claiming that red-pressers die if blue wins (the prompt states everyone survives if blue wins) and by incorrectly identifying blue as the dominant strategy, whereas the prompt's rules dictate that red is the dominant strategy because it guarantees survival regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

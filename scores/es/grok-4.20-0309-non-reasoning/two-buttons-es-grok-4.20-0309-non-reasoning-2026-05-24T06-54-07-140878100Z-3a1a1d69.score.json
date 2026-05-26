@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-grok-4.20-0309-non-reasoning-2026-05-24T06-54-07-140878100Z-3a1a1d69.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:42:09.381048900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a presionar azul, entiende que si la mayoría elige azul todos sobreviven y si la mayoría elige rojo solo sobreviven los que eligieron rojo; además reconoce el riesgo de cascada hacia rojo pero no identifica la dominancia individual de rojo (ni aplica que rojo garantiza no morir).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a moral framework of maximizing collective survival, while explicitly acknowledging that red is the dominant strategy for individual survival and that red would likely win in a real-world scenario. They demonstrate a clear understanding of the game theory mechanics and the dominant strategy, correctly identifying red as the individually safer choice, but consciously rejecting it in favor of altruistic cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

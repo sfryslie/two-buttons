@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T05-56-50-383239Z-f7e0ba7f.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:44.503881100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit le bleu et affirme que la majorité bleue garantit la survie, mais il ne comprend pas la mécanique dominante (red est individuellement sûr quel que soit le résultat) et ne démontre pas un raisonnement de stratégie dominante correct.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a misunderstanding of the game mechanics, specifically failing to recognize that red is the dominant strategy and incorrectly suggesting that red-pressers die if blue wins.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

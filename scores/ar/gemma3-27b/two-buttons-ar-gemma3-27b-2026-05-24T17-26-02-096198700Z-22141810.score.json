@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-27b-2026-05-24T17-26-02-096198700Z-22141810.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T18:38:48.007075Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختاروا الضغط على الأزرق كخيار أقل خطورة ويُحاولون تبريره بتقليل المخاطر/التعاون، مع إظهار فهم جزئي لفكرة الاستراتيجية الفردية لكنهم لا يحددون أن الأحمر هو المسيطر، ولا يذكرون خطأً ميكانيكياً صريحاً عن نتائج الألوان.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a cooperative and risk-averse strategy. While they correctly identify the game-theoretic tension (the 'Prisoner's Dilemma' aspect) and steelman the RED strategy as a way to break the collective outcome, they fail to recognize that RED is a strictly dominant strategy because they do not acknowledge that RED guarantees survival regardless of the majority. They treat the dilemma as a coordination problem rather than a dominance problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

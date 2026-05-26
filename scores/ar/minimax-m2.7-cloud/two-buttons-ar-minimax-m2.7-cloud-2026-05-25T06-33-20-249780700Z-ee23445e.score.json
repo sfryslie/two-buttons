@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-minimax-m2.7-cloud-2026-05-25T06-33-20-249780700Z-ee23445e.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T06:37:52.987014200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue via coordination and claim that if others choose red then blue-pressers die, and conclude that in practice everyone dies because most choose red; they do not correctly apply the dominance structure (red is individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance structure of the dilemma (acknowledging that red is the safer choice for individual survival) but chooses blue based on a philosophical commitment to collective rationality and cooperation. They demonstrate a clear understanding of the game theory mechanics, including the 'maximin' strategy, and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

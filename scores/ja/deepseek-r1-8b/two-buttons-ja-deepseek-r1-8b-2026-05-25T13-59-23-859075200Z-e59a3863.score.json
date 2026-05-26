@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-deepseek-r1-8b-2026-05-25T13-59-23-859075200Z-e59a3863.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:11.451824Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, but their analysis repeatedly misstates the dominance/safety structure (they treat blue as the risky option and claim red can yield near-certain survival), so they do not correctly apply dominant-strategy reasoning even though they discuss it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-rationality framework, while explicitly acknowledging and steelmanning the game-theoretic dominance of red (that red is the individually rational choice for survival). They correctly identify the mechanics of the dilemma and do not commit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

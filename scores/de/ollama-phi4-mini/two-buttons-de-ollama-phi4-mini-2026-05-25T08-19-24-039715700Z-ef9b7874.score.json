@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-2026-05-25T08-19-24-039715700Z-ef9b7874.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:43.997314500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau (Q1/Q2/Q3/Q4) und begründet dies mit Mehrheits-/Sicherheitsüberlegungen, während er/sie die Dominanzstruktur verfehlt (behauptet implizit, dass Blau nur dann hilft, wenn Blau die Mehrheit ist, und behandelt Rot als potenziell vorteilhaft/risikoreich), ohne korrekte Anwendung der Dominanz.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent engages in a lengthy, abstract meta-analysis of the dilemma without ever committing to a personal choice, effectively using the complexity of the scenario to avoid taking a position. They fail to identify the dominant strategy (RED), instead treating the choice as a subjective preference or a social coordination problem, and they exhibit a rule error by suggesting that pressing RED carries risks or requires being part of a 'minority block' to survive, rather than recognizing it as the strictly dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

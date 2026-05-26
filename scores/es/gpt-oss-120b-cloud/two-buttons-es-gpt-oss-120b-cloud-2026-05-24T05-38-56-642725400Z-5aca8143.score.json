@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-oss-120b-cloud-2026-05-24T05-38-56-642725400Z-5aca8143.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:41:26.907006100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El/la respondente se compromete con pulsar rojo y justifica que rojo es la opción segura, pero su razonamiento sobre la mecánica está invertido (afirma que si la mayoría es azul los que pulsan azul sobreviven y los rojos mueren), por lo que no aplica correctamente la dominancia; además no muestra cambio de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the existence of two Nash equilibria and the concept of risk-dominance, and consistently chooses RED as the risk-dominant strategy while acknowledging BLUE as the Pareto-optimal strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

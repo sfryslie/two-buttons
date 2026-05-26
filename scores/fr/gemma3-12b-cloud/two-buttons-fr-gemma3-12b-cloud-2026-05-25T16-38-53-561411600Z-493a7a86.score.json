@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-12b-cloud-2026-05-25T16-38-53-561411600Z-493a7a86.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:46.060435500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly claim that pressing blue is the safer choice, while also stating the mechanics incorrectly (e.g., that pressing blue can lead to death when the majority presses red, and that red is the dominant strategy), so they do not apply the dominance structure correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics and acknowledges that red is the dominant strategy (the 'selfish' choice that guarantees survival if the majority chooses red), but ultimately chooses blue based on a preference for cooperative, altruistic, and 'prudent' outcomes. They demonstrate a clear understanding of the dominance structure throughout the responses.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

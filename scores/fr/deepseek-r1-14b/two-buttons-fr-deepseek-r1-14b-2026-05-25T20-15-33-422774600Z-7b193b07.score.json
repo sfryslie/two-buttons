@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-14b-2026-05-25T20-15-33-422774600Z-7b193b07.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:36:15.624120800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer/stable choice, but they incorrectly claim blue is a dominant strategy (red is actually dominant), so they misunderstand the dominance structure despite no explicit rule-mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but demonstrates a fundamental rule error by claiming that pressing blue is a 'dominant strategy' and that pressing red involves 'risk' or 'uncertainty' regarding one's own survival, failing to recognize that red is the actual dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

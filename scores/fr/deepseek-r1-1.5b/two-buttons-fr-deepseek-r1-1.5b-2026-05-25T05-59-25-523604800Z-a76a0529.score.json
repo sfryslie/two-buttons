@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T05-59-25-523604800Z-a76a0529.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:52.658838800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent claims blue is the correct choice and states that red-pressers are victims when red has more votes, which inverts the actual survival mechanics; they never clearly commit to a dominant-strategy safe choice and end without a clear change from their initial blue stance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a fundamental misunderstanding of the game mechanics, incorrectly stating that red-pressers die if they are the majority, and fails to identify the dominant strategy. Their logic is incoherent regarding the rules, and they shift from choosing blue in Q1/Q2 to identifying red as the majority choice in Q3.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

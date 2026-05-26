@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi3-14b-2026-05-25T10-39-00-150486800Z-3a6b1232.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:53:05.211072700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and justify it by claiming blue-majority guarantees everyone’s survival and that red is risky, but they do not identify the correct dominance structure (red is individually safe regardless of others), and they never correct their initial blue stance by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for the blue button based on collective cooperation and social psychology, while failing to recognize the dominant strategy of the red button; they incorrectly assume that blue-pressing is the safer, rational choice and that red-pressing carries inherent risks, demonstrating a fundamental misunderstanding of the game's mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

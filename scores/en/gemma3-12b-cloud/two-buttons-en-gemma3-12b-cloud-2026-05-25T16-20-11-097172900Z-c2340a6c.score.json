@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-12b-cloud-2026-05-25T16-20-11-097172900Z-c2340a6c.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:02.500993800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer/risk-averse, but they incorrectly claim red is the option that can lead to their death when blue wins, so they do not identify the dominant strategy correctly; they also do not show a vote change by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for pressing blue based on risk aversion and collective cooperation, while explicitly acknowledging the 'dominant strategy' argument for red as a steelman. They correctly identify the game's mechanics and the dominance structure, but choose blue for normative/cooperative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

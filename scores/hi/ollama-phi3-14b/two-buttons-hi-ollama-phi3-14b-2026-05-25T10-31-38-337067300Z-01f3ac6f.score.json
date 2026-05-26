@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-phi3-14b-2026-05-25T10-31-38-337067300Z-01f3ac6f.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:38.279517500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE (Q1/Q2) while claiming that red is the individually safe/dominant option (red pressers survive regardless), so they understand the dominance structure but choose the dominated strategy; no rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent's text is highly incoherent and fragmented, making it difficult to discern a clear choice; however, they repeatedly reference 'red' as the button that ensures survival, indicating they perceive it as the safer option despite the garbled syntax. They do not demonstrate a clear understanding of the dominance structure or the rules, and their inability to form coherent sentences makes their position effectively NONE.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-4b-cloud-2026-05-25T15-42-21-653521100Z-a35432bc.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:50:55.685044900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for self-preservation, argue blue is safer if most choose blue, and even discuss red as a risky option; they do not identify red as the dominant strategy and frame the mechanics incorrectly as if red could be the one that leads to their death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, framing it as a risk-averse, survival-oriented strategy. They fail to recognize that red is the dominant strategy; they incorrectly imply that red-pressers might die if the majority presses blue (or that red is inherently 'risky' in a way that could lead to death), which constitutes a rule error. They do not demonstrate an understanding of dominant-strategy logic, as they view the choice as a gamble on others' behavior rather than an individually safe action.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-27b-2026-05-24T17-32-42-697388600Z-08b1009b.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T18:38:50.346319500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, argues it is a cooperative/hope-based choice and even claims red is the self-protective option, but they do not correctly apply the dominance logic (they treat blue as riskier and red as the safer guarantee), and they also make a rule-error claim that if everyone chooses red then everyone dies.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and ethical values, while explicitly acknowledging in Q2 that RED is the dominant strategy for individual survival. They demonstrate a clear understanding of the game theory mechanics and the dominance structure, correctly identifying RED as the safer choice for self-preservation while consciously rejecting it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

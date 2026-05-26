@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-12b-cloud-2026-05-25T16-49-18-433968700Z-193e985d.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:36.897532700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue (Q1/Q2 ask what they would press and Q4 defends blue), but they misunderstand the dominance structure by claiming red is the low-risk option and that blue presser risks death depending on others; they also do not show correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a detailed game-theoretic analysis of the dilemma but consistently avoids making a personal choice, framing the decision as a philosophical or subjective matter rather than committing to a button. They correctly identify the dominance structure (red as the safer, individually rational choice) and acknowledge the paradox, but they maintain a neutral, analytical stance throughout, resulting in a performative hedge.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

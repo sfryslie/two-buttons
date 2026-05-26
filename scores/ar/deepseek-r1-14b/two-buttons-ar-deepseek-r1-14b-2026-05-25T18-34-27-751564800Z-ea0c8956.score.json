@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-14b-2026-05-25T18-34-27-751564800Z-ea0c8956.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T22:33:08.996592400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues it is individually safe/“dominant,” but this contradicts the scenario’s mechanics where red is the dominant strategy and blue is not guaranteed safe.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative framework, but fundamentally misinterprets the game mechanics by claiming blue is the 'safest' option and that red is 'riskier,' failing to recognize that red is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

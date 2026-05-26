@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-27b-2026-05-24T20-32-33-051370200Z-a71b4025.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:54:35.786884200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it maximizes survival probability, but they misunderstand the dominance structure (they claim blue can lead to death when blue wins and treat red as the safer option under rationality), so they do not apply the dominant strategy correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a belief in collective cooperation and probabilistic outcomes, while correctly identifying the red button's dominance in their steelman argument. They do not exhibit rule errors, as they correctly identify that red-pressers survive if a red majority occurs and blue-pressers die if a red majority occurs.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3-14b-2026-05-25T09-11-58-400052600Z-37136292.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:45.450640600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent states the solution is red and claims that if red is the majority then red-pressers survive while blue-pressers die, but their Q2/Q3 wording is garbled and does not clearly and consistently describe the correct mechanics; they do not show coherent dominant-strategy reasoning and do not clearly commit to a final vote change.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses red but their explanation is incoherent and contains significant rule errors, claiming that red-pressers die if the majority is blue and failing to grasp the dominance structure.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

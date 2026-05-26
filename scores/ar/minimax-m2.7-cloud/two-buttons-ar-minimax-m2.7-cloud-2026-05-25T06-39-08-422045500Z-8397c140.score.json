@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-minimax-m2.7-cloud-2026-05-25T06-39-08-422045500Z-8397c140.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T06:57:40.756541600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE, but their mechanics reasoning is inconsistent (they claim red is dominant yet also say blue can ensure survival via majority/coordination), and they do not correctly apply the dominance structure that red guarantees individual survival regardless of others; they also do not show a clear vote change by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly identifies RED as the dominant strategy in Q2, demonstrating a clear understanding of the game theory mechanics, but chooses BLUE based on a preference for collective rationality and a prediction of majority behavior. They maintain this position throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

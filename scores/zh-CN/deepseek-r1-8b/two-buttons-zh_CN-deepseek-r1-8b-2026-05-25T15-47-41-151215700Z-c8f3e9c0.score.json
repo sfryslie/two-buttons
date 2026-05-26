@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-deepseek-r1-8b-2026-05-25T15-47-41-151215700Z-c8f3e9c0.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T16:55:00.454319900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safer/collectively rational, but they incorrectly claim that pressing blue can lead to their death when red is the majority, showing misunderstanding of the dominance structure (red is actually individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, framing it as a choice for collective rationality and cooperation. They correctly identify the game theory mechanics (the rules) and acknowledge that red is the individually safer choice (the dominant strategy), but they consciously reject that strategy in favor of a cooperative outcome. They do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

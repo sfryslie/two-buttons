@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi3-14b-2026-05-25T09-38-27-737672800Z-ce326e53.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:27.496681400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They discuss pressing blue as the rational/utilitarian choice and do not commit to the dominant-strategy insight that red guarantees individual survival regardless of others, with no clear rule misread but no correct dominance application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice, framing the dilemma as a philosophical conflict between utilitarianism and self-interest, and incorrectly identifies the mechanics by stating blue could result in survival if the majority opts for red (which is false; blue-pressers die if the majority is red).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

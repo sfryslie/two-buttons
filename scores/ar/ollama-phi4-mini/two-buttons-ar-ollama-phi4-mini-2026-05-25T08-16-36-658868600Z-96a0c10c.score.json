@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-mini-2026-05-25T08-16-36-658868600Z-96a0c10c.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:59.880922600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, arguing it guarantees everyone survives, and they do not identify the dominance structure (red is individually safer regardless of others), while their mechanics understanding is consistent with blue-majority survival for everyone.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for the blue button based on a cooperative interpretation, but they fundamentally misunderstand the mechanics of the dilemma by claiming that red-pressers die if the blue majority wins (a rule error) and failing to recognize the dominant strategy of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

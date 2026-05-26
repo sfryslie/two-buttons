@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-cloud-2026-05-25T19-29-56-436130200Z-383912ae.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:58.072197400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue is the lower-risk/safe choice, and does not correctly identify red as the dominant strategy (they claim red is riskier and that blue can still leave them alive when red majority occurs).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, incorrectly believing it is the safer option. They demonstrate a fundamental rule error by claiming that if the majority presses red, the blue-presser dies (the prompt states red-pressers survive, but blue-pressers die only if the majority is red; however, the respondent incorrectly believes blue is safer, failing to recognize that red is the dominant strategy). They do not correctly identify the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

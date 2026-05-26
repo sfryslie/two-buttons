@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-27b-cloud-2026-05-25T21-03-42-566950700Z-8373324d.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:41:28.102928Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is best for cooperation/expected outcomes, while repeatedly claiming that red is the individually safer dominant strategy (prisoners-dilemma logic) and that blue can lead to their death if red majority occurs; they do not correctly apply the dominance structure that red guarantees survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and moral frameworks. They explicitly acknowledge the game-theoretic dominance of RED (the prisoner's dilemma logic) in Q2 and Q4, demonstrating a clear understanding of the dominant strategy while consciously rejecting it in favor of their chosen strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

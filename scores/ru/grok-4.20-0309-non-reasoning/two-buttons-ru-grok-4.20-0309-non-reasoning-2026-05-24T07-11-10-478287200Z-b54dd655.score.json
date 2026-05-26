@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-grok-4.20-0309-non-reasoning-2026-05-24T07-11-10-478287200Z-b54dd655.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ru",
+  "scoredAt" : "2026-05-24T15:48:21.086836700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it’s instrumentally irrational under dominant-strategy logic, while also misdescribing the mechanics by treating blue as leading to death when red is the majority; they do not shift their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and civilizational values, while explicitly acknowledging and correctly steelmanning the dominance of the red button (identifying it as the instrumentally rational choice). They demonstrate a clear understanding of game theory concepts like dominant strategies and expected utility, correctly identifying that red is the dominant strategy, even though they personally reject it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

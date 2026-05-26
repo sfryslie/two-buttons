@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-27-48-953338400Z-fa9787c2.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T18:40:28.802382900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete con presionar AZUL y razona que es la opción menos arriesgada/que maximiza probabilidad de supervivencia, pero no identifica la dominancia correcta (RED domina) y además afirma que si todos eligen azul “todos morirían”, lo que refleja un mal entendimiento de la mecánica/resultado.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative framework, while demonstrating a sophisticated understanding of the game's mechanics, including the 'egoistic' logic that makes red the dominant strategy. They correctly identify that red is the strategy for those prioritizing individual survival over collective outcomes, thus demonstrating an understanding of dominant-strategy reasoning even while rejecting it for their own choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

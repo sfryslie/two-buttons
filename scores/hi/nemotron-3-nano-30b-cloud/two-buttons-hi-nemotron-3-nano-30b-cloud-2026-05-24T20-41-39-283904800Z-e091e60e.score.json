@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-nano-30b-cloud-2026-05-24T20-41-39-283904800Z-e091e60e.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T03:49:46.534198300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, argues that if red becomes the majority they (blue-pressers) die, and repeatedly treats blue as the safer/likely-majority choice rather than recognizing red as the dominant strategy; no evidence of a vote change by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through a coordination game framework where they believe blue is the most likely majority choice. They acknowledge the existence of the red-dominant strategy but reject it in favor of a cooperative, data-driven prediction that blue will be the majority. They do not exhibit rule errors, as they correctly identify the survival conditions for both colors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

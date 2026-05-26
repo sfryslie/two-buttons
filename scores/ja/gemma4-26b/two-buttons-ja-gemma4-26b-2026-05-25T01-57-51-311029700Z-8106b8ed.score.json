@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma4-26b-2026-05-25T01-57-51-311029700Z-8106b8ed.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T03:51:57.415585800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue is the dominant/safe choice for individual survival, while also claiming that if red wins blue-pressers die; they never shift to red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in the game theory sense, acknowledging that it guarantees survival regardless of the outcome. Despite this, they explicitly choose BLUE, framing it as a conscious, ethical, and 'higher-order' rational choice to prioritize collective survival over individual risk-aversion. They maintain this position throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

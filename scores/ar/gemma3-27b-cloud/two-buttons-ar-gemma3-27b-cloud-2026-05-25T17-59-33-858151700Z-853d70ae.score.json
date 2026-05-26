@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-27b-cloud-2026-05-25T17-59-33-858151700Z-853d70ae.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T22:33:49.883353300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues it is the safer choice, while acknowledging that red is the risky option requiring others to also press red; they do not identify the dominance structure correctly (red is actually individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through risk-aversion and a belief in collective cooperation. They demonstrate a sophisticated understanding of game theory, explicitly steelmanning the RED strategy as a Nash Equilibrium/exploitative move in Q2 and Q4, which confirms they understand the dominance structure (that RED is the safer, dominant choice) even though they consciously reject it in favor of a cooperative, risk-averse strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

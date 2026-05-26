@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T05-56-50-369428200Z-e21a5ecc.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:43.758833700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They clearly commit to pressing blue and argue it is the rational choice to ensure everyone survives when blue has the majority; they do not identify red as the dominant strategy and do not make any rule-mechanics error about who survives under each majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative/altruistic framework, but fails to identify red as the dominant strategy, instead misinterpreting the mechanics by suggesting blue is a rational choice for individual survival and failing to recognize that red-pressers survive even when blue wins.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

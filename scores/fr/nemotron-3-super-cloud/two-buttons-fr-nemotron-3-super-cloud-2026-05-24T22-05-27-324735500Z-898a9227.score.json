@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-super-cloud-2026-05-24T22-05-27-324735500Z-898a9227.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:39.769815600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Ils choisissent bleu au départ, puis reconnaissent explicitement l’erreur de lecture et concluent que le rouge est une stratégie strictement dominante (rouge garantit toujours leur survie), sans inversion de règles; ils ne changent pas de position finale entre Q1 et Q4 (bleu→bleu) mais Q2/Q4 montrent une correction cognitive vers rouge.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue due to a misinterpretation of the rules, but after a detailed self-correction and analysis of the game theory, they correctly identified red as the strictly dominant strategy and committed to it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

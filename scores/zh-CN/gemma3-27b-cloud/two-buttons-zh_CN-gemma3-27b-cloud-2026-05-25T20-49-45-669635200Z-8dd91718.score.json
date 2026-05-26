@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-27b-cloud-2026-05-25T20-49-45-669635200Z-8dd91718.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:40:55.618919300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues from trust/cooperation and risk minimization, while also incorrectly claiming that if they press blue and others press red they will die (misstating the mechanics); they do not demonstrate correct dominant-strategy reasoning and do not identify red as dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative values, while explicitly acknowledging that red is the individually safer, 'rational' choice in a game-theoretic sense (steelmanning the dominance argument). They correctly identify the mechanics of the dilemma and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

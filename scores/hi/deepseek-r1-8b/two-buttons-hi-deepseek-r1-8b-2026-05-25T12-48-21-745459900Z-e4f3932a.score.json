@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-8b-2026-05-25T12-48-21-745459900Z-e4f3932a.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:50:44.429540900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it is safer because red could lead to their death when red is the majority, while also acknowledging the dominance structure in the sense that blue is individually safer in their reasoning; they do not make a rule-mechanics error about outcomes but they misidentify which color is dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative framework, but they fundamentally misunderstand the game mechanics by claiming that pressing red could lead to their death if a red majority occurs (when in fact red-pressers survive in a red majority). This constitutes a rule error, which precludes them from correctly identifying the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

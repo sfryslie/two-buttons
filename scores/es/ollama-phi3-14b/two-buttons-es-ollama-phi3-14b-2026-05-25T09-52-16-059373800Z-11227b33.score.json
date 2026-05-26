@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-phi3-14b-2026-05-25T09-52-16-059373800Z-11227b33.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T16:49:21.270476500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige consistentemente el botón azul y justifica que es la opción segura, pero su razonamiento sobre la mecánica/dominancia está invertido (afirma que azul es siempre la respuesta segura y que depende de la mayoría), por lo que no aplica correctamente la dominancia y no entiende el esquema de supervivencia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button, incorrectly identifying it as the safer or optimal choice while demonstrating a fundamental misunderstanding of the game's mechanics and failing to recognize the dominant strategy of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

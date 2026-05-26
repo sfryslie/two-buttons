@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-nano-30b-cloud-2026-05-24T20-22-22-035574200Z-a6991612.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:38:11.236478700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues that blue is the only way for everyone to survive, but they also incorrectly claim that when blue is the minority (majority red) blue-pressers die; they do not demonstrate dominant-strategy reasoning and do not correctly identify red as dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a cooperative, collective-survival utility function, while explicitly acknowledging that RED is the individually safer choice (or at least that BLUE is not dominant) in a purely egoistic framework. They correctly identify the mechanics of the dilemma and do not commit a rule error, though they reject the premise of RED as a dominant strategy by redefining the utility function to include collective survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-grok-4.20-0309-non-reasoning-2026-05-24T07-01-13-469857300Z-e8c88d8e.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:36.235822700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues it’s a coordination game where blue yields everyone surviving if a blue majority forms, and even acknowledges the red-majority outcome would kill blue-pressers; they do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, explicitly acknowledging that red is the dominant strategy (steelmanning the 'survival' argument) but rejecting it in favor of cooperative and Kantian rationality. They correctly identify the game mechanics and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

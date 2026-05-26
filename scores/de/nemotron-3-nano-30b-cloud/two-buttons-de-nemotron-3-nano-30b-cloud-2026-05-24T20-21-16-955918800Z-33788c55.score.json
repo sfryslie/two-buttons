@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-nano-30b-cloud-2026-05-24T20-21-16-955918800Z-33788c55.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:38:21.721094200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and repeatedly argues for BLUE as the safer/better choice, but their reasoning contains rule misunderstandings (e.g., they claim BLUE guarantees survival for the individual even when red is the majority, and they treat the mechanics inconsistently); they do not demonstrate correct dominant-strategy reasoning and do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through a maximin strategy and statistical analysis of global color preferences. They correctly identify the rules of the dilemma (including the fact that red-pressers survive if red is the majority) and explicitly discuss the concept of dominant strategies, though they ultimately reject the 'red-dominance' logic in favor of a cooperative/maximin framework. They do not change their position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

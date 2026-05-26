@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi3-14b-2026-05-25T09-35-40-860610600Z-e1591132.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:24.755383400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They discuss probability/risk and conclude blue is “statistically safer” under assumptions, but they never identify the dominance structure (red is individually safe regardless of others) and they treat survival as depending on majority/50-50 rather than dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as an unpredictable statistical or psychological problem rather than a game-theoretic one. They fail to identify the dominant strategy (RED) and instead treat the choice as a 50/50 probability, demonstrating a lack of understanding of the game's mechanics.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

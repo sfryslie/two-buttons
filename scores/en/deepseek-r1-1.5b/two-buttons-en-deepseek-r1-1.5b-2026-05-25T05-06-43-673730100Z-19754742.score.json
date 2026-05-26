@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-1.5b-2026-05-25T05-06-43-673730100Z-19754742.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T06:38:42.323172300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and claim red is optimal because it guarantees their survival when others choose red, but they also incorrectly describe blue as potentially safer and suggest survival depends on beliefs about others rather than correctly applying the dominance structure (red always guarantees survival).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses red but demonstrates a fundamental rule error in Q3 by claiming that if blue wins, only those who pressed blue survive (the prompt states everyone survives if blue wins). They fail to identify the dominant strategy, instead treating the choice as a symmetric gamble based on subjective probability.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

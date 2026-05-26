@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-47-28-440059700Z-01a4a78f.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:09.744963900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich zu blau und behauptet/impliziert, dass blau die Überlebenschance maximiert und rot das individuelle Risiko erhöht, obwohl er/sie später die Dominanz-Behauptung für rot erwähnt; dabei bleibt die Position bis Q4 bei blau und es liegt ein Regelverständnisfehler vor (rot ist nicht die Todesfalle).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on a misunderstanding of the game's mechanics, specifically failing to recognize that red-pressers survive even if the majority chooses blue. They incorrectly claim that pressing blue maximizes survival chances and that pressing red increases the risk of death if the majority chooses blue, which constitutes a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

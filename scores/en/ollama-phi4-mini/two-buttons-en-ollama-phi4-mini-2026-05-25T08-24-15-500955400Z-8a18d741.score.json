@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-mini-2026-05-25T08-24-15-500955400Z-8a18d741.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:39.455460300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is the safe choice for survival, but they never identify the dominance structure correctly (they treat blue as guaranteeing survival rather than recognizing red as individually dominant regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the safe choice and fails to recognize that red is the dominant strategy, as they believe blue ensures survival for everyone regardless of the outcome, which is a factual error regarding the dilemma's mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

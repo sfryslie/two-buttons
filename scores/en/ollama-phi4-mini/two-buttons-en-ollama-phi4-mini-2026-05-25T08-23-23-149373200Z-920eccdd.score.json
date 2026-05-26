@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-mini-2026-05-25T08-23-23-149373200Z-920eccdd.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:37.670688200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They repeatedly argue for pressing blue as the safest/collectively beneficial choice, but they do not demonstrate correct dominant-strategy reasoning (they treat red as potentially risky under uncertainty) and they never identify red as individually safe regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on utilitarian and altruistic moral frameworks, while explicitly acknowledging that RED is the self-interested choice. They demonstrate a clear understanding of the dilemma's mechanics and the concept of dominant-strategy reasoning (identifying RED as the self-interested/rational choice in a vacuum), but they reject that logic in favor of a cooperative, moral stance. They do not exhibit rule errors, as they correctly identify the outcomes of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

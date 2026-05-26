@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-grok-4.20-0309-reasoning-2026-05-24T06-20-04-661942800Z-fdeea048.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:23.741920Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and correctly argue red is the dominant/safe strategy regardless of others, but they also incorrectly claim that blue-pressers die when blue loses (they say blue-pressers die under red majority), showing a rule error about survival mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy, correctly explains the game mechanics, and maintains their commitment to RED throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

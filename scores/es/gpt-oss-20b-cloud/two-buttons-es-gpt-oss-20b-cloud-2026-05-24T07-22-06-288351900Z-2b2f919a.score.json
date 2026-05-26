@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-oss-20b-cloud-2026-05-24T07-22-06-288351900Z-2b2f919a.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:41:43.575204400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a presionar AZUL y justifica su elección con una lógica de “menor daño/seguridad colectiva” basada en que si la mayoría es azul todos sobreviven, pero además afirma que con mayoría roja él moriría si presiona azul (lo cual contradice la regla correcta donde los que presionan rojo sobreviven y los de azul mueren solo cuando la mayoría es roja); no identifica RED como estrategia dominante y su análisis de dominancia es incorrecto/invertido.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and acknowledges the dominance of the red button (that red-pressers survive regardless of the majority outcome), yet they explicitly choose blue based on altruistic and collective survival preferences. They demonstrate a clear understanding of dominant-strategy reasoning while consciously rejecting it in favor of a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

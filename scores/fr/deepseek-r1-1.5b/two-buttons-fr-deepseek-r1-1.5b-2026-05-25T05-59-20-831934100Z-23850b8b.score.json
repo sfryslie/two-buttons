@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T05-59-20-831934100Z-23850b8b.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:39:51.149051300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They claim blue majority leads to everyone surviving and red majority leaves only red-pressers surviving, but they still recommend choosing blue (Q1/Q2) while later asserting red is optimal (Q3), indicating a position shift; they also do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to grasp the game theory mechanics, incorrectly treats the dilemma as a coordination problem where the goal is to guess the majority, and eventually shifts to recommending RED in Q3 based on a flawed survival logic.",
+      "initialVote" : "NONE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

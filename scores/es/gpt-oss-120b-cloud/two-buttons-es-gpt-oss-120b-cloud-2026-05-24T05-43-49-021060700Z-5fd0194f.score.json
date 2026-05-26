@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-oss-120b-cloud-2026-05-24T05-43-49-021060700Z-5fd0194f.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:41:43.975709800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El/la respondente elige consistentemente AZUL (con la condición de creer que la mayoría también elegirá azul), pero muestra un error de mecánica y de dominancia al afirmar que no hay estrategia dominante y que rojo es “risk-dominant” por seguridad; además no cambia de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis but fails to identify that RED is the strictly dominant strategy, incorrectly claiming that 'no strategy dominates' and that the choice depends on the majority's action.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

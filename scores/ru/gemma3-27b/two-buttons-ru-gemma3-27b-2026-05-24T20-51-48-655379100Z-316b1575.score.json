@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-27b-2026-05-24T20-51-48-655379100Z-316b1575.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T03:54:36.807542800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues it minimizes risk and assumes most will choose blue; they do not identify red as the dominant strategy and treat blue as safer, though they do not state any incorrect mechanics about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a belief in collective cooperation and risk minimization, while correctly identifying that red is the 'strictly rational' choice in game-theoretic terms (even though they misinterpret the mechanics by suggesting red-pressers might die if blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

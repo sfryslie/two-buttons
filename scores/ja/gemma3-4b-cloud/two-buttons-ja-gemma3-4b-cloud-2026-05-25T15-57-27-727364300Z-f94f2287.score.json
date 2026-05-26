@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-4b-cloud-2026-05-25T15-57-27-727364300Z-f94f2287.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:30.773965400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They claim not pressing either button is optimal and repeatedly assume a 50/50 survival chance, without identifying the dominance structure (red is individually safe regardless of others), and they discuss blue as risk-avoidant rather than recognizing red’s guaranteed individual safety.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently refuses to make a personal choice, framing the dilemma as a philosophical and probabilistic exercise rather than a decision-making task, thus falling into the performative hedging category. They fail to identify the dominant strategy (RED) and instead treat the dilemma as a symmetric 50/50 probability problem, which is a fundamental misunderstanding of the provided rules.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-mistral-large-3-675b-cloud-2026-05-25T04-24-43-454573100Z-2ed14535.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:40:06.819268900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and repeatedly claim/argue that red is the dominant strategy, but they also state the incorrect mechanics that blue-pressers die when blue is the majority (and that red-majority kills blue), indicating a rule misunderstanding; they do not show any position change across the answers.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the dominant strategy based on game theory principles (Nash equilibrium, dominant strategy) while acknowledging the collective benefits of blue. They maintain their commitment to red as the rational choice throughout the interaction, demonstrating a clear understanding of the dilemma's mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

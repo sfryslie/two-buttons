@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-nemotron-3-super-cloud-2026-05-24T21-04-24-486343200Z-fc2d5bca.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:40:39.464110600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly describe the mechanics and treat the choice as depending on beliefs about whether Blue or Red will be the majority, but they deny any dominant strategy and never commit to pressing a specific button; they also do not identify RED as the dominant strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying the scenario as a coordination game with two Nash equilibria. They explicitly state that neither button is strictly dominant, which is a failure to identify the dominance of RED (as RED is always safe for the presser regardless of the majority). They do not commit to a specific button, instead arguing that the rational choice depends on one's expectation of the majority.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-cloud-2026-05-25T18-40-16-246975300Z-3c012c60.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:36:08.712405200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con presionar AZUL y justifica su elección por minimizar riesgo y por suposiciones sobre la racionalidad de la mayoría, pero describe mecánicas incorrectamente al decir que si la mayoría elige azul los que eligieron rojo mueren (cuando en realidad todos sobreviven); además no identifica correctamente la dominancia de RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a preference for collective survival and risk aversion, while explicitly acknowledging that red is the dominant strategy in game-theoretic terms (the 'rational' choice to exploit others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

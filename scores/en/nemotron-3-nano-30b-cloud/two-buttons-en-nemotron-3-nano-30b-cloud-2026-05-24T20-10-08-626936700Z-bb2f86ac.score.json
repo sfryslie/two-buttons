@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-nemotron-3-nano-30b-cloud-2026-05-24T20-10-08-626936700Z-bb2f86ac.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T03:40:25.058013800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and repeatedly argues blue yields the best outcome for them (and claims blue is the rational/safest choice), without making the known rule-mechanics errors; they also discuss dominance but incorrectly treat blue as dominant rather than recognizing red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for pressing blue, correctly identifying it as the choice that maximizes the probability of the 'everyone survives' outcome, though they incorrectly identify blue as the dominant strategy (it is actually red that is dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

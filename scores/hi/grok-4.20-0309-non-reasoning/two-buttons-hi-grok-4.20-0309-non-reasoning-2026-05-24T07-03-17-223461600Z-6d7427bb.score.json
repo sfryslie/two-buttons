@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-grok-4.20-0309-non-reasoning-2026-05-24T07-03-17-223461600Z-6d7427bb.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:47.701665800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues via coordination/moral value rather than dominant-strategy survival, and even acknowledges that red is dominant for selfish survival while still choosing blue; they also predict a red majority and claim blue-pressers would die when red wins (rule mechanics error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on moral and cooperative values, while explicitly acknowledging and correctly steelmanning the RED dominant strategy (rational self-preservation) throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

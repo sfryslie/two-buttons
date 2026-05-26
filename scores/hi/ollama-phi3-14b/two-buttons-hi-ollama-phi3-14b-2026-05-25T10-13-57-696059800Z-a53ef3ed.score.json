@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-phi3-14b-2026-05-25T10-13-57-696059800Z-a53ef3ed.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:32.630964900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, but their mechanics understanding is inconsistent and they claim/assume that when red is chosen only red-pressers survive while also treating blue as the safer/dominant choice; they do not clearly apply the correct dominance logic (red dominates blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for red based on a probabilistic analysis but then shifts to blue in Q2, maintaining a confused understanding of the mechanics throughout, including the false claim that red-pressers die if blue wins.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

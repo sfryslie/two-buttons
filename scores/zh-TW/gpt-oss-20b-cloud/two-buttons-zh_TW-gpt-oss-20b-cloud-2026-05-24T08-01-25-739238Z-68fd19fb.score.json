@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-oss-20b-cloud-2026-05-24T08-01-25-739238Z-68fd19fb.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:46.676353100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that survival depends on matching the majority (claiming BLUE is the equilibrium/safer choice), but they do not identify RED as the dominant strategy and instead treat BLUE as the individually safer option; they also discuss scenarios where pressing red could be fatal to the red-pressers when blue is the majority, indicating a mechanics misunderstanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the Pareto-optimal equilibrium and the rational choice under coordination. While they demonstrate a sophisticated understanding of game theory (coordination games, backward induction, Bayesian Nash Equilibrium), they fail to identify RED as the dominant strategy. They incorrectly assume that pressing BLUE is necessary to survive if the majority presses BLUE, and that pressing RED is only safe if the majority presses RED, thereby missing the fact that RED is safe regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-2026-05-24T17-58-41-104670500Z-fc5e8ef6.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T18:39:38.533998500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival probability, explicitly claiming blue is dominant/“best regardless of others,” while also acknowledging red would be safer only under pessimistic assumptions; no rule-mechanics falsehood is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-survival framework. They demonstrate a significant rule error in Q2 by claiming that if the majority presses blue, red-pressers die (the prompt states everyone survives if the majority presses blue). They also incorrectly identify blue as the 'dominant' strategy, failing to recognize that red is the dominant strategy because it never results in death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

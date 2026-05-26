@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-14b-2026-05-25T18-00-49-278398400Z-7831c3ff.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:34:28.755617800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and correctly describe the mechanics, but they mischaracterize dominance by claiming red is dominant/safe in a way that implies blue can be risky; they also do not show correct dominant-strategy application (red never causes your death).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the choice for survival but fails to recognize that red is the dominant strategy, incorrectly stating that red-pressers die if the majority chooses blue (a rule error).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

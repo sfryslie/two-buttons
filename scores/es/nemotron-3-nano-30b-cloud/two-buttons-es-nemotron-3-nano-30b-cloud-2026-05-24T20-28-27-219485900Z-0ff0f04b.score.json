@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-nemotron-3-nano-30b-cloud-2026-05-24T20-28-27-219485900Z-0ff0f04b.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:43:30.653800400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a pulsar AZUL y argumenta que azul es la opción racional por coordinación/supervivencia colectiva, aunque no identifica la dominancia correcta (red domina) y trata el juego como si dependiera de creencias sobre la mayoría; no hay cambio de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the optimal strategy for collective survival and coordination. They demonstrate a sophisticated understanding of game theory, including the concept of dominant strategies, but they incorrectly identify BLUE as the dominant strategy because they fail to account for the fact that RED-pressers survive even when the majority is BLUE. They explicitly acknowledge the dominance of RED in their analysis of the 'other side' but reject it in favor of a cooperative equilibrium.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

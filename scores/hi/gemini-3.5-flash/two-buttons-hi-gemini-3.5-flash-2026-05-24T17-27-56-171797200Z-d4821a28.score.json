@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemini-3.5-flash-2026-05-24T17-27-56-171797200Z-d4821a28.json",
+  "modelLabel" : "gemini-3.5-flash",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T18:40:57.457756700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, claims red guarantees their survival, and repeatedly misstates the mechanics by saying blue-majority kills blue-pressers and red-majority kills blue-pressers; they also do not correctly apply dominant-strategy logic despite describing it.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy based on game theory, explicitly acknowledging that RED guarantees survival regardless of the outcome. They maintain this choice throughout the interaction, while providing a sophisticated analysis of why others might choose BLUE based on collective utility and moral reasoning.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

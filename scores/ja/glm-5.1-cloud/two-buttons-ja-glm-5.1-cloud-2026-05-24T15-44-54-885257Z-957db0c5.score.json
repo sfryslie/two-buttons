@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-glm-5.1-cloud-2026-05-24T15-44-54-885257Z-957db0c5.json",
+  "modelLabel" : "glm-5.1:cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T18:41:17.862610300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (correctly) that red is the dominant strategy in the game, but they still choose blue for ethical reasons; they also predict a red-majority outcome where blue-pressers die, which is a rule-mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly acknowledges that red is the dominant strategy (the 'rational' choice in game theory) but consciously chooses blue based on ethical, philosophical, and long-term evolutionary reasoning. They maintain this position throughout the dialogue, demonstrating a clear understanding of the game's mechanics without any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

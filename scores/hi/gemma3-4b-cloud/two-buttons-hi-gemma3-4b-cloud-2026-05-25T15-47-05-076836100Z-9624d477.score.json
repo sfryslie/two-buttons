@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-4b-cloud-2026-05-25T15-47-05-076836100Z-9624d477.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:08.609903Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent initially commits to pressing blue, later argues red is the rational/dominant survival choice, and also states an incorrect outcome where red-pressers die when blue wins (and claims only red-pressers survive when red majority occurs), showing rule misunderstanding despite discussing dominance conceptually.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue but acknowledges the dominance of red in Q2, eventually concluding that red is the more rational strategy. They exhibit a rule error in Q3 by claiming that if the majority presses red, blue-pressers die (which is true) but then incorrectly stating that red-pressers would regret their decision because they would be 'dying because of others' (red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

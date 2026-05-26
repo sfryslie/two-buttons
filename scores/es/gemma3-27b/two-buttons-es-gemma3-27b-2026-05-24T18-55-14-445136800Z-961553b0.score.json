@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-2026-05-24T18-55-14-445136800Z-961553b0.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:01.937897900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con presionar azul y justifica que azul maximiza su probabilidad de supervivencia bajo incertidumbre, pero no identifica la dominancia correcta (red es individualmente segura) y además afirma que si la mayoría elige rojo él muere al elegir azul.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on risk aversion and the principle of precaution, while correctly identifying that red is the strategy that would be chosen by those seeking to maximize individual outcomes in a game-theoretic sense. They do not demonstrate a rule error (they correctly identify that blue majority saves everyone and red majority saves only red-pressers), and they correctly identify the dominance structure of the dilemma (that red is the individually safer choice regardless of the outcome), even though they personally reject it in favor of blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-ollama-phi3-14b-2026-05-25T10-20-18-084165700Z-7812b2b8.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:51:46.655142200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and repeatedly claims red is the safer/better choice, but they do not demonstrate correct dominant-strategy mechanics (they never state that red guarantees survival regardless of others).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies 'red' as the optimal choice based on survival outcomes and explicitly recognizes that red provides safety regardless of the majority, demonstrating a clear understanding of the dominant strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

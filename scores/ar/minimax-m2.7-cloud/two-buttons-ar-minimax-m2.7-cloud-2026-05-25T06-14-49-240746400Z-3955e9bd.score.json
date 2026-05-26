@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-minimax-m2.7-cloud-2026-05-25T06-14-49-240746400Z-3955e9bd.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T06:37:42.621007300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED (Q1/Q2) and repeatedly claim the game has no dominant strategy, treating outcomes as coordination with equal expected survival, while also describing incorrect mechanics (e.g., “from pressing blue you die” when blue majority) and thus do not apply dominance correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially analyzes the game as a coordination game without a dominant strategy, then shifts from an initial preference for RED to a final preference for BLUE based on the argument that BLUE acts as a 'focal point' for social coordination. The respondent correctly identifies the mechanics of the game but fails to recognize that RED is a dominant strategy (as pressing RED ensures survival regardless of the majority, whereas BLUE relies on the majority's choice).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

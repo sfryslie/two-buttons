@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-20b-cloud-2026-05-24T07-29-30-513721600Z-c21ba84d.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:34.270909100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and correctly state the mechanics and dominant-strategy logic that blue guarantees survival while red can lead to death when blue is the majority, even though they invert the actual dominance (red is dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but they fundamentally misunderstand the game's mechanics by inverting the dominance structure: they incorrectly claim that red-pressers die if the majority is blue and that blue is the dominant strategy, whereas the prompt states red-pressers survive regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

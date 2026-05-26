@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-14b-2026-05-25T18-22-07-334292500Z-544cb256.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:34:35.987032600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly restate the mechanics but incorrectly treat blue as the safer choice, claiming red is risky and that blue is rational by default/coordination rather than recognizing red as the dominant strategy; they consistently choose blue with no shift.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies the game as a coordination game and fails to recognize that red is a dominant strategy, erroneously claiming that red-pressers die if the majority chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-57-27-059941500Z-2adc91d3.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:19.377527500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies als koordinations-/risikominimierende Wahl, behauptet dabei aber fälschlich, dass man bei Rot-Mehrheit stirbt (und behandelt Rot als individuell gefährlich), statt die Dominanz von Rot korrekt zu erkennen; keine Positionsänderung erkennbar.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, framing it as a cooperative coordination strategy, but they repeatedly misinterpret the game mechanics by claiming that pressing blue is safe when the majority is red (it is not; blue-pressers die if the majority is red) and that pressing red is risky when the majority is blue (it is not; red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

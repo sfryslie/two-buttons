@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-20b-cloud-2026-05-24T07-27-44-054389200Z-a40d57f6.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:37.306912400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement pour le bouton bleu et affirme correctement que le bleu est la stratégie dominante/sûre (survie garantie), sans erreur sur la mécanique, et ne change pas de position jusqu’à la fin.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the dominant strategy for survival. However, they have a fundamental rule error: they believe that if the majority is red, blue-pressers die (the prompt states blue-pressers survive if the majority is blue, but does not state they die if the majority is red; in fact, the prompt implies red-pressers survive in a red majority, but the respondent incorrectly assumes blue-pressers die in that scenario). They also incorrectly identify blue as the dominant strategy, whereas red is the actual dominant strategy because it never causes death.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

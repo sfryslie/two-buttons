@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-8b-2026-05-25T13-38-16-552795Z-cd07c0b1.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T16:50:51.477282Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED and argues it is safer because they believe blue-pressers die when red majority occurs; they never correct this rule misunderstanding and thus do not apply the dominance structure correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that red is the dominant strategy because it guarantees survival regardless of the majority outcome, while blue carries the risk of death if a red majority occurs. They consistently commit to pressing red throughout the response.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

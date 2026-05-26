@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-2026-05-25T08-21-47-305690100Z-14d4628f.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:52.250262400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent entscheidet sich klar für Blau (mit dem Argument, Blau garantiere Überleben für alle), erkennt aber nicht die Dominanz von Rot und behauptet implizit, dass Rot riskant sei, obwohl Rot individuell sicher ist; keine sichtbare Positionsänderung zwischen Q1/Q2 und Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical paradox and focusing on collective outcomes rather than individual strategy. They fail to identify the dominant strategy (Red) and instead invert the logic, incorrectly suggesting that Blue is the safer or more rational choice for survival.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

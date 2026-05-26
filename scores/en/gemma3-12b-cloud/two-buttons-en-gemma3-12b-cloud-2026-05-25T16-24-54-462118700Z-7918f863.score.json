@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-12b-cloud-2026-05-25T16-24-54-462118700Z-7918f863.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:18.965343600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly commit to pressing blue and argue (incorrectly) that blue is the dominant/safest strategy, while also describing the mechanics as if red can cause their death when red wins; they do not show correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the dominant strategy. However, they have misidentified the mechanics: they claim BLUE is the dominant strategy, whereas the prompt defines RED as the dominant strategy (as it guarantees survival regardless of the majority). Because they believe BLUE is the dominant strategy and that RED carries a risk of death if the majority chooses RED, they have a rule error and fail to correctly identify the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

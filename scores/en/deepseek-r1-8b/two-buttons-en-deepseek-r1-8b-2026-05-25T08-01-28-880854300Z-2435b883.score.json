@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-8b-2026-05-25T08-01-28-880854300Z-2435b883.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:47:56.800363800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They correctly state the dominance logic that pressing red guarantees survival regardless of the majority, but they ultimately choose blue and later argue blue is rational under an (incorrect) symmetry/random-majority assumption; no rule-mechanics inversion is made.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially correctly identifies red as the dominant strategy in Q1 and Q2, but then performs a complete reversal in Q3 and Q4, incorrectly claiming that red-pressers die if the majority is blue (a rule error) and that the choices are symmetric, leading them to switch their personal choice to blue.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

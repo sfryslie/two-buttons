@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3-14b-2026-05-25T09-12-02-731111700Z-4149c7dd.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:46.661391500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent claims that regardless of which button is pressed, everyone survives, and then concludes that blue is the dominant/safe choice, explicitly treating red as risky/less safe; this shows misunderstanding of the actual mechanics and dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits a full inversion of the game theory logic, incorrectly identifying blue as the dominant strategy and failing to grasp the safety of the red button, while also struggling with coherent logical expression in Arabic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-4b-cloud-2026-05-25T15-55-09-237997500Z-e3c743fe.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:16.587453100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it maximizes survival probability, but they also claim that if red is the minority then blue-pressers die, which misreads the mechanics; they do not demonstrate correct dominant-strategy reasoning and do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, but demonstrates a fundamental rule error by repeatedly claiming that red-pressers die if blue wins (the prompt states everyone survives if blue wins) and that blue-pressers survive if red wins (the prompt states only red-pressers survive). Because of these rule errors, they fail to identify the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-12b-cloud-2026-05-25T16-38-01-446420300Z-6f0a33c9.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T16:49:45.898505700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safer/optimal choice, but they incorrectly claim red is risky and that red-pressers die when blue wins, showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for the 'blue' button, framing it as the rational choice for collective survival. They fail to recognize that 'red' is the dominant strategy because they incorrectly believe that pressing 'red' carries a risk of death if the majority chooses 'blue' (whereas the rules state everyone survives if the majority chooses blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

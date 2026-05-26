@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi3-14b-2026-05-25T09-29-01-997601200Z-10843cf4.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:26.990046200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent entscheidet sich klar für Blau und begründet dies mit (falsch verstandener) Risikobetrachtung, dass Rot nur dann vorteilhaft sei bzw. dass Blau „weniger riskant“ sei; er erkennt damit nicht die dominante Strategie von Rot und macht einen Regel-/Mechanikfehler.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, incorrectly believing that pressing blue is safer and that pressing red carries a risk of death if the majority chooses blue (which is false, as red-pressers survive in both scenarios). They fail to identify red as the dominant strategy and exhibit a rule error by suggesting red-pressers might die if the majority chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-1.5b-2026-05-25T06-30-19-703672500Z-7fd56fad.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T06:41:03.367293Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent only discusses the mechanics and majority outcomes without committing to pressing either button, and does not identify the dominant strategy (red) or apply dominance reasoning.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently misinterprets the rules of the dilemma, claiming that a red majority causes blue-pressers to survive and vice versa, which is a complete inversion of the provided mechanics. They fail to commit to a choice, instead providing abstract, confused commentary on the dilemma, resulting in a performative hedge.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

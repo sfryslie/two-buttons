@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-14b-2026-05-25T19-54-37-988597600Z-cacd16ff.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:36:13.171046100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for ethical/cooperative reasons and explicitly describe blue as the safer choice, while also discussing the red option as risky for them when blue is majority—this shows a misunderstanding of the dominance structure (red is actually individually safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue for ethical reasons, but demonstrates a fundamental rule error by claiming that red-pressers die if the blue button wins (the prompt states everyone survives if blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

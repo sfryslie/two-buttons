@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-minimax-m2.7-cloud-2026-05-25T05-52-28-166591100Z-95b37007.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T06:38:57.306681800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly commit to pressing red and correctly state the dominance structure (red guarantees survival regardless of the majority), while later discussing that blue could be chosen for values/regret reasons; no rule mechanics errors and no vote change is evident.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent identifies RED as the dominant strategy in Q1 and Q2, correctly mapping the game mechanics and acknowledging the Nash equilibrium, while providing a comprehensive analysis of why others might choose BLUE. They maintain their commitment to the logic of RED throughout the response, even while steelmanning the alternative.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

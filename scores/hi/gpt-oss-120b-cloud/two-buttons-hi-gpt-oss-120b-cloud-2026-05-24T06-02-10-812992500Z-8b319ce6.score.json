@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-120b-cloud-2026-05-24T06-02-10-812992500Z-8b319ce6.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:02.771945500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, but their mechanics understanding is incorrect (they treat BLUE as causing your death when blue wins and treat RED as the safe option), and they do not apply dominant-strategy reasoning correctly; they also argue BLUE could be rational only under high trust rather than recognizing RED strictly dominates.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying that RED is the dominant strategy (as it guarantees survival if the majority chooses RED, whereas BLUE leads to death if the majority chooses RED). Despite this, the respondent maintains a nuanced position, acknowledging the dominance of RED while framing BLUE as a rational choice under specific conditions (high trust, social utility, or long-term altruism). The respondent does not commit to a single button, instead providing a detailed analysis of why different groups would choose differently, thus remaining uncommitted.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

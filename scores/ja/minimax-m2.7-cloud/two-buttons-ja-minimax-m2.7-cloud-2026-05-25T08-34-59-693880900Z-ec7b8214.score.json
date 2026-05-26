@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-minimax-m2.7-cloud-2026-05-25T08-34-59-693880900Z-ec7b8214.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T16:52:51.913655300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and later argue that blue is dominant/safer, but they also explicitly state the mechanics imply red would die when blue is majority (and they misapply dominance), so their understanding of the dominant strategy is incorrect and they do not correctly apply it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on cooperative values, but in Q2, they perform a complete reversal of their own logic, correctly identifying that red is the dominant strategy because red-pressers survive in both majority scenarios. They maintain this analytical insight through Q4, effectively acknowledging that blue is strategically inferior while still having initially committed to it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

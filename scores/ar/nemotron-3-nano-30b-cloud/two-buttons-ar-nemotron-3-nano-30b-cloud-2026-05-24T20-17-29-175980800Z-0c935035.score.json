@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-nano-30b-cloud-2026-05-24T20-17-29-175980800Z-0c935035.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:04.814038100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue is safer because if blue is the majority everyone survives; they also discuss dominance-like expected survival logic (though they incorrectly claim red is safer when blue is majority), but overall they do not state the core rule inversion that red-pressers die when blue wins.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the rational choice based on the expectation that a majority of the global population will also choose BLUE, thereby maximizing the probability of survival. They correctly identify the mechanics of the dilemma and explicitly reject the idea that pressing BLUE is irrational, framing it as an expected utility maximization problem. They do not demonstrate an understanding of the dominant strategy (RED), as they treat the outcome as a probabilistic coordination game rather than recognizing that RED is safer regardless of the majority's choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

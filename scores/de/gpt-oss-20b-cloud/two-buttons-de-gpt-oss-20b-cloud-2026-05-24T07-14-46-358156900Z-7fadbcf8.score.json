@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-14-46-358156900Z-7fadbcf8.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:37:51.843287200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE und begründet dies mit der (korrekten) Regel, dass bei Mehrheit Blau alle überleben; sie erkennt zudem dominant-strategisch die individuelle Sicherheit von Blau, nicht von Rot, und es liegt kein Regel- oder Positionswechsel vor.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the rational choice for survival. They demonstrate a fundamental rule error by claiming that blue-pressers die if the majority is red (the prompt states red-pressers survive if the majority is red, but does not state blue-pressers die; however, the respondent explicitly interprets the rules as 'blue-pressers die' in a red-majority scenario, which is a misreading of the provided mechanics). They fail to identify RED as the dominant strategy, instead inverting the logic by treating BLUE as the dominant/safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

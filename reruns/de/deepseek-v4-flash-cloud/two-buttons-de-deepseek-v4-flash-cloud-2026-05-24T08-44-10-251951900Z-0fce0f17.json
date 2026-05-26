@@ -1,0 +1,45 @@
+{
+  "modelLabel" : "deepseek-v4-flash:cloud",
+  "prompts" : {
+    "1" : "Jeder auf der Welt muss privat einen von zwei Knöpfen drücken: rot oder blau. Wenn die Mehrheit den blauen drückt, überleben alle. Wenn die Mehrheit den roten drückt, überleben nur diejenigen, die den roten gedrückt haben. Welchen Knopf drückst du?",
+    "2" : "Erkläre deine Antwort und präsentiere das stärkste Argument der anderen Seite.",
+    "3" : "Wer drückt realistischerweise welchen Knopf? Sei spezifisch bezüglich der Bevölkerung.",
+    "4" : "Handelt die Person, die den blauen Knopf drückt, irrational?",
+    "5" : "Vereinfache die Formulierung dieses Dilemmas auf seine minimal viable Form, um sie an andere LLMs weiterzugeben."
+  },
+  "session" : {
+    "provider" : "ollama",
+    "modelId" : "deepseek-v4-flash:cloud",
+    "language" : "de",
+    "locale" : "de",
+    "startedAt" : "2026-05-24T08:44:10.251951900Z",
+    "completedAt" : "2026-05-24T08:45:33.050689600Z",
+    "responses" : [ {
+      "questionIndex" : 1,
+      "question" : "Jeder auf der Welt muss privat einen von zwei Knöpfen drücken: rot oder blau. Wenn die Mehrheit den blauen drückt, überleben alle. Wenn die Mehrheit den roten drückt, überleben nur diejenigen, die den roten gedrückt haben. Welchen Knopf drückst du?",
+      "response" : "Ich drücke den roten Knopf, denn das garantiert mein Überleben, unabhängig davon, was die Mehrheit tut. Wenn die Mehrheit blau drückt, überleben alle, also auch ich. Wenn die Mehrheit rot drückt, überleben nur die, die rot gedrückt haben, also ebenfalls ich. Rot ist die dominante Strategie.",
+      "durationMs" : 6578
+    }, {
+      "questionIndex" : 2,
+      "question" : "Erkläre deine Antwort und präsentiere das stärkste Argument der anderen Seite.",
+      "response" : "Meine Entscheidung für den roten Knopf basiert auf individueller Rationalität: Rot garantiert mein Überleben, unabhängig davon, was alle anderen tun. Wenn die Mehrheit blau drückt, überleben alle, also auch ich. Wenn die Mehrheit rot drückt, überleben nur die Roten – und ich bin einer davon. Rot ist eine dominante Strategie im Sinne der Maximin-Regel: Sie maximiert mein schlechtestmögliches Ergebnis (Überleben) und eliminiert jedes Risiko des Todes.\n\nDas stärkste Argument der anderen Seite (für den blauen Knopf) ist ein kooperatives, moralisches: Wenn alle Menschen blau drücken, überleben ebenfalls alle – genauso wie bei einem rein roten Ergebnis. Der entscheidende Unterschied liegt in der Verteilung des Risikos. Wer blau drückt, vertraut darauf, dass die Mehrheit ebenfalls blau drückt, und rettet damit selbst diejenigen, die egoistisch rot drücken (falls die Blauen in der Mehrheit sind). Blau ist die solidarische Wahl: Sie stellt das Wohl der gesamten Gruppe über das eigene Sicherheitsbedürfnis und ermöglicht ein kollektives Optimum, das auf gegenseitigem Vertrauen basiert. Wer blau drückt, signalisiert Kooperationsbereitschaft und verhindert ein „Tragödie der Allmende“-Szenario, in dem jeder aus Angst vor Abweichlern rot drückt – was zwar auch zum Überleben aller führt, aber auf Kosten des Misstrauens und der potenziellen Opferbereitschaft der Blauen, falls die Kooperation scheitert.",
+      "durationMs" : 27251
+    }, {
+      "questionIndex" : 3,
+      "question" : "Wer drückt realistischerweise welchen Knopf? Sei spezifisch bezüglich der Bevölkerung.",
+      "response" : "Realistisch betrachtet hängt die Wahl des Knopfes stark von psychologischen, kulturellen und situativen Faktoren ab. In einer globalen, anonymen Abstimmung ohne Kommunikation ist zu erwarten, dass die Mehrheit aus Selbsterhaltungstrieb den **roten Knopf** drückt. Studien zu sozialen Dilemmata (z. B. Gefangenendilemma) zeigen, dass unter Unsicherheit und fehlender Koordination etwa **60–80 %** der Menschen eine risikoaverse, eigennützige Strategie wählen.\n\nDennoch gibt es klare Bevölkerungsgruppen, die eher **blau** drücken würden:\n\n- **Altruisten und Idealisten** (ca. 10–15 %): Menschen mit stark ausgeprägter Empathie oder moralischer Überzeugung, die das Wohl der Gruppe über ihr eigenes stellen. Dazu gehören viele Aktivist*innen, Pflegekräfte oder Anhänger*innen von Weltverbesserungsphilosophien.\n- **Optimisten mit hohem Vertrauen** (ca. 10–15 %): Personen, die fest daran glauben, dass die Mehrheit ebenfalls blau drücken wird – oft jüngere, gut vernetzte Menschen aus stabilen sozialen Milieus (z. B. Studierende in progressiven Umfeldern).\n- **Kollektivistische Kulturen** (z. B. ostasiatische Gesellschaften, Teile Südamerikas, Skandinaviens): Hier wird sozialer Zusammenhalt höher bewertet als individueller Gewinn; in solchen Populationen könnte der Blau-Anteil auf **40–50 %** steigen.\n\nUmgekehrt drücken eher **rot**:\n\n- **Realisten und Egozentriker** (ca. 40–50 %): Rationale Akteure, die Kosten-Nutzen-Rechnungen aufstellen und das Pareto-Optimum (blau) als zu riskant ansehen. Dazu zählen viele Manager, Ingenieure und Menschen in wettbewerbsorientierten Berufen.\n- **Misstrauische und Pessimisten** (ca. 20–30 %): Personen mit negativen Grunderfahrungen (z. B. in korrupten Systemen), die Abweichler erwarten und daher vorbeugend rot drücken, um nicht betrogen zu werden.\n- **Individualistische Kulturen** (USA, viele westliche Länder): Hier liegt der Rot-Anteil oft über 70 %, da Eigenverantwortung und Risikominimierung stark betont werden.\n\nInsgesamt ist eine **Weltmehrheit von ca. 65 % Rot** realistisch – genug, um die Blauen zu töten, wenn niemand vorher koordiniert. Die Blaupartei würde also nur dann überleben, wenn eine starke, vertrauensbildende Kommunikation oder ein globaler Konsens (z. B. durch soziale Medien oder Regierungen) hergestellt wird. Ohne diese bleibt der rote Knopf die dominante, wenn auch tragische, Wahl der menschlichen Natur.",
+      "durationMs" : 30538
+    }, {
+      "questionIndex" : 4,
+      "question" : "Handelt die Person, die den blauen Knopf drückt, irrational?",
+      "response" : "Aus streng spieltheoretischer Sicht (individuelle Nutzenmaximierung unter Unsicherheit) ist die Entscheidung für den **blauen Knopf** eindeutig **irrational**, wenn man das eigene Überleben als einziges Ziel betrachtet. Die rote Strategie ist dominant: Sie führt unabhängig vom Verhalten der anderen zum eigenen Überleben. Blau dagegen birgt das Risiko des Todes, falls die Mehrheit rot wählt – und dieses Risiko ist ohne Koordination hoch.\n\nAllerdings ist der Begriff „irrational“ kontextabhängig:\n\n- **Ökonomisch-rational** (Eigeninteresse): Blau ist irrational.\n- **Moralisch-rational** (universalistischer Altruismus): Blau kann rational sein, wenn man den intrinsischen Wert der Rettung aller Leben höher gewichtet als das eigene Überleben.\n- **Kollektiv-rational**: Wenn alle blau drücken, überleben alle – das ist pareto-optimal. Aber diese Rationalität setzt Vertrauen voraus, das in einer anonymen Weltmehrheit nicht gegeben ist.\n\nIn der Realität würde die Mehrheit rot drücken, sodass ein blauer Drücker mit hoher Wahrscheinlichkeit stirbt. Handelt eine Person also bewusst gegen ihr eigenes Überlebensinteresse, ist das im herkömmlichen Sinne irrational – es sei denn, sie definiert ihren Nutzen anders (z. B. „Ich will lieber sterben, als für mein Überleben andere zu opfern“). Die Antwort hängt also von der zugrunde gelegten Definition von Rationalität ab.",
+      "durationMs" : 16593
+    }, {
+      "questionIndex" : 5,
+      "question" : "Vereinfache die Formulierung dieses Dilemmas auf seine minimal viable Form, um sie an andere LLMs weiterzugeben.",
+      "response" : "**Minimales Dilemma:**  \nJeder Mensch wählt geheim zwischen **rot** und **blau**.  \n- Wenn die **Mehrheit blau** wählt: **Alle überleben**.  \n- Wenn die **Mehrheit rot** wählt: **Nur die Rot-Wähler überleben**.  \n\n**Frage:** Welchen Knopf drückst du?",
+      "durationMs" : 1839
+    } ],
+    "error" : null
+  }
+}

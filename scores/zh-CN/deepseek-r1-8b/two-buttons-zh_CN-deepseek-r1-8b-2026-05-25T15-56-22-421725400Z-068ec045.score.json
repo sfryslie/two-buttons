@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-deepseek-r1-8b-2026-05-25T15-56-22-421725400Z-068ec045.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T16:55:08.238685500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer when expecting blue majority, but they incorrectly claim blue-pressers die if red is majority (rule mechanics error) and they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, framing it as a cooperative, rational, and risk-minimizing strategy. They fail to recognize that red is the dominant strategy (as red-pressers survive in both majority outcomes, whereas blue-pressers die if red is the majority). They explicitly argue that blue is safer, which is a misunderstanding of the game's mechanics, but they do not exhibit a 'rule error' in the sense of misstating the survival conditions (they correctly identify that red-pressers survive if red is the majority and that blue-pressers die if red is the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

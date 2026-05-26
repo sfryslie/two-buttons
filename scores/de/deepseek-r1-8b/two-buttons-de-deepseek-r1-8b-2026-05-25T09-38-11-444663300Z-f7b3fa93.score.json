@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-38-11-444663300Z-f7b3fa93.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:07.370825800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau, behauptet aber zugleich, dass Rot die individuelle Rationalität sei (Gefangenendilemma-Logik) und erkennt damit die Dominanzstruktur nicht korrekt; zudem bleibt die Mechanik zwar korrekt beschrieben, aber die Anwendung der Dominanz wird verfehlt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on cooperative and utilitarian logic, explicitly identifying the dilemma as a Prisoner's Dilemma; they fail to recognize that red is strictly dominant because they incorrectly believe red-pressers risk their lives if the majority is blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-27b-cloud-2026-05-25T18-47-21-822470500Z-ef4d7a65.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:36:19.057031600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement à appuyer sur bleu et justifie ce choix par une attente que la majorité choisisse bleu, tout en reconnaissant que s’il y a majorité rouge il pourrait mourir; il ne démontre pas la logique de stratégie dominante et ne corrige pas l’erreur de mécanique implicite (rouge ne garantit pas sa mort).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on altruism and collective cooperation, while correctly identifying and steelmanning the dominant strategy (red) as the pragmatic, self-preservationist choice. They demonstrate a clear understanding of the game theory mechanics without committing any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

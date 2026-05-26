@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-12b-cloud-2026-05-25T16-58-31-533549500Z-a81370fb.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T22:39:43.767793900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues blue is safer because red is risky, and even discusses Nash equilibrium in a way that inverts the dominance logic (they treat blue as the individually safer choice), without any rule-correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it as a risk-reduction strategy. They demonstrate a high level of understanding of the game theory mechanics, correctly identifying the Nash Equilibrium (RED) and the dominance structure, but they explicitly reject the dominant strategy in favor of cooperative/social rationality. They do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

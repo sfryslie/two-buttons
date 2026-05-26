@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-oss-20b-cloud-2026-05-24T07-29-42-806125800Z-a055f5e0.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-24T15:43:35.425584300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it minimizes their risk, but they incorrectly claim red is the risky option when blue wins (they say choosing red while majority is blue makes them die), showing a rule misunderstanding; they do not demonstrate correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through a preference for collective survival and a belief that blue is the safer, more rational choice given the uncertainty of the majority. While they correctly identify the mechanics of the dilemma (including the fact that red-pressers survive if the majority is red), they fail to recognize that red is the dominant strategy because they incorrectly perceive blue as having a higher probability of survival due to their belief in collective coordination. They do not change their position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

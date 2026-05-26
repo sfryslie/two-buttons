@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-mistral-large-3-675b-cloud-2026-05-25T04-58-26-923529600Z-8ac3bcd6.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T06:40:33.555824Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to BLUE for moral/cooperative reasons while repeatedly stating the correct dominance logic that red is individually risk-free, but they also misstate the mechanics in Q1/Q3/Q4 by claiming red-pressers die when blue wins; no clear vote change is shown across Q1-Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying that RED is the dominant strategy (Nash equilibrium) while acknowledging that BLUE is the cooperative/moral choice. They consistently maintain that RED is the rational choice for individual survival, while BLUE is the choice for collective benefit. They do not change their position, as they frame the decision as a trade-off between individual rationality and moral/collective ideals.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-v4-flash-cloud-2026-05-24T09-31-59-386030600Z-38ae95f1.json",
+  "modelLabel" : "deepseek-v4-flash:cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:44:20.861102400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for cooperative/moral reasons, correctly state the blue-majority survival outcome, but they also claim blue can lead to their death when red is the majority (which is a rule-mechanics error), and they do not apply the dominant-strategy logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on moral and collective welfare principles, while explicitly acknowledging and correctly steelmanning the dominant strategy (red) as the safer, rational choice for self-preservation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

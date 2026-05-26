@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-38-59-279470300Z-e670d37c.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:09.104091200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar für Blau und argumentiert kooperativ/risikoreduzierend, erkennt aber nicht die dominante Strategie korrekt (er/sie behauptet Blau sei die sichere Wahl und behandelt Rot als individuell riskant), daher liegt ein Regel-/Dominanzverständnisfehler vor; keine erkennbare Positionsänderung zwischen Q1/Q2 und Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing for collective survival. They fail to identify the dominant strategy (red), incorrectly labeling blue as the 'rational' or 'dominant' choice while misinterpreting the game's mechanics by suggesting that red-pressers die in a blue majority (which contradicts the prompt's rule that everyone survives if blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

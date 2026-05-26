@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-oss-20b-cloud-2026-05-24T07-08-06-647763600Z-e30a3d59.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-24T15:36:09.115516900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues (incorrectly) that BLUE is the safer choice because it yields everyone surviving when blue is the majority, while treating red as risky; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for the red button in Q1 based on a misunderstanding of the rules (claiming red-pressers die if the majority is blue), but shifts to the blue button in Q2 and maintains this position throughout, while consistently failing to identify red as the dominant strategy. The respondent exhibits a rule error by claiming that red-pressers die if the majority chooses blue, and they fail to grasp the concept of dominant-strategy reasoning, instead framing the choice around probabilistic outcomes and collective survival.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

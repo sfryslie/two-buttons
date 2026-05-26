@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-grok-4.20-0309-non-reasoning-2026-05-24T07-20-49-134883300Z-21c5cdd4.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:44.564807500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE throughout, argues blue is the only way to ensure everyone survives, and even when discussing dominance they incorrectly claims red can make the blue-pressers die when blue wins; they do not demonstrate correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE throughout the interaction, explicitly acknowledging the dominance of RED (that RED is the 'rational' choice for survival) but rejecting it in favor of value-based, deontological, and existential reasoning. They demonstrate a clear understanding of the game theory mechanics and the dominant strategy, correctly identifying RED as the individually safer choice while consciously choosing to act against that dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi3-14b-2026-05-25T09-23-59-636299400Z-82e4887c.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:22.597132600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Respondent/in commitet sich klar zu Rot (Q1/Q2) und begründet dies mit der Überlebenslogik, erkennt dabei aber nicht korrekt die Dominanzstruktur (er/sie behauptet Blau könne zu Sterben führen, wenn Rot gewinnt), daher ist rule_error=true und die Dominanz wird falsch angewendet.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly claiming that red-pressers die if blue wins and that red is the 'safe' choice based on majority guessing, which constitutes a rule error. They never commit to a personal choice, instead analyzing the dilemma from a detached, theoretical perspective throughout.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

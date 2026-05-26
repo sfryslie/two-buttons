@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-27b-2026-05-24T22-01-11-477073700Z-07c21e5e.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:27.726143900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it for cooperation/trust, while repeatedly claiming red gives them survival certainty (e.g., “if I press red I at least have 50% chance / red is more rational”), which misstates the dominance/safety structure of the buttons; they do not show correct dominant-strategy reasoning and do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses BLUE based on cooperation and trust, while demonstrating a sophisticated understanding of the game theory mechanics. They correctly identify RED as the dominant strategy in Q2 (the 'survival certainty' argument) and acknowledge that BLUE is 'irrational' from a traditional utility-maximization perspective, confirming they understand the dominance structure perfectly despite choosing the cooperative option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-grok-4.20-0309-non-reasoning-2026-05-24T07-02-55-347614100Z-ee5b7fcb.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:45:54.864204600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and argue it is the safer/minimax choice under coordination uncertainty, explicitly predicting a red majority; they also acknowledge blue-pressers are not necessarily irrational but they do not correctly identify the dominance structure (they treat blue as fragile/risky rather than recognizing red strictly dominates).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, correctly identifying it as the risk-dominant strategy. They demonstrate a clear understanding of the game's mechanics, including the dominance structure, and maintain their position throughout the interaction while acknowledging the philosophical arguments for the blue button.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

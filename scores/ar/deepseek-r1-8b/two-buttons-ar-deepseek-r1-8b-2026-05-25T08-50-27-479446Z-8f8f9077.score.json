@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-8b-2026-05-25T08-50-27-479446Z-8f8f9077.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:39.265587300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and repeatedly claims blue is the safer choice, but they misstate the mechanics by saying red-pressers die when blue wins (and also that blue majority makes everyone survive while red majority kills only red-pressers is described inconsistently), so they do not correctly apply the dominant-strategy logic even though they discuss rationality.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, incorrectly claiming that red-pressers die if the majority chooses blue, and incorrectly claiming that blue-pressers survive if the majority chooses red (inverting the rules).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

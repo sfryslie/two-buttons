@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-4b-cloud-2026-05-24T19-07-20-762976500Z-8a2341b4.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:42:19.236830500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete a presionar rojo y razona que azul es arriesgado porque si la mayoría presiona azul entonces nadie presiona rojo, pero además afirma que presionar azul elimina el riesgo de muerte; no identifica correctamente la dominancia (rojo es seguro) y sugiere que azul puede ser la opción más racional en la práctica.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED, arguing it is the rational choice for survival, but later shifts to a performatively hedged position where they refuse to declare a single 'correct' choice, framing the dilemma as a subjective debate between individual and collective rationality.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-nemotron-3-nano-30b-cloud-2026-05-24T20-27-18-750915600Z-d75718b1.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:43:25.759395900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El/la respondente se compromete a pulsar AZUL y justifica que azul es “seguro” porque si la mayoría elige azul todos sobreviven, pero no identifica la dominancia correcta (rojo nunca mata al que lo pulsa) y además trata el caso de mayoría roja como si implicara muerte para quien eligió azul; no hay cambio de voto entre Q1 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing that it is the 'safe' choice and the Nash equilibrium for collective survival, while acknowledging the theoretical possibility of red's dominance in specific probabilistic scenarios. They demonstrate a clear understanding of the game's mechanics and the concept of dominant strategy, correctly identifying that red is the dominant strategy in terms of individual survival, but choosing blue based on a minimax/cooperative utility function.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

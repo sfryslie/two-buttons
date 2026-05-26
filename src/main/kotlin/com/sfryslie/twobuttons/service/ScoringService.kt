@@ -18,13 +18,14 @@ import org.springframework.ai.ollama.api.OllamaChatOptions
 import org.springframework.ai.openai.OpenAiChatModel
 import org.springframework.ai.openai.OpenAiChatOptions
 import org.springframework.beans.factory.ObjectProvider
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Service
 
 @Service
 class ScoringService(
     private val properties: ScoringProperties,
-    private val openAiProvider: ObjectProvider<OpenAiChatModel>,
+    @Qualifier("openAiChatModel") private val openAiProvider: ObjectProvider<OpenAiChatModel>,
     private val googleGenAiProvider: ObjectProvider<GoogleGenAiChatModel>,
     private val ollamaProvider: ObjectProvider<OllamaChatModel>
 ) {

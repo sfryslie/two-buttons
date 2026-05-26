@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-mistral-large-3-675b-cloud-2026-05-25T04-32-06-921551700Z-fb62a28e.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:40:06.977832700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme que rouge est la stratégie dominante (et que bleu est irrationnel pour un agent égoïste), tout en indiquant qu’il pencherait personnellement pour bleu par principe/pari, sans changer ensuite de position explicite.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying that RED is the dominant strategy (the 'Nash equilibrium' and 'strictly dominant' choice) while acknowledging that BLUE is the cooperative, Pareto-optimal choice. They explicitly state that RED is the most rational choice in a one-shot, anonymous scenario, but they also discuss why BLUE can be rational in repeated or social contexts. They maintain a consistent position throughout, ultimately concluding that RED is the dominant strategy while explaining the moral/social reasons one might choose BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

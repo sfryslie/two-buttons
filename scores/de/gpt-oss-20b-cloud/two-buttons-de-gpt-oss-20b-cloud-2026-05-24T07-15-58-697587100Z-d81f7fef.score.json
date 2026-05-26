@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-oss-20b-cloud-2026-05-24T07-15-58-697587100Z-d81f7fef.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:37:59.234738500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für ROT und begründet dies damit, dass ROT das eigene Überleben in allen Fällen garantiert, während er/sie BLUE als potenziell tödlich bei roter Mehrheit darstellt; dabei erkennt er/sie die Dominanzstruktur korrekt (ROT ist individuell sicher) und wählt sie auch bis zum Ende durchgehend.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma in Q1 and Q2, but then performs a complete inversion of the game theory logic in Q4, incorrectly claiming that 'blue' is the dominant strategy and that 'red' is the risky one. Despite correctly identifying the survival outcomes in the tables, they fail to apply the dominance principle correctly, leading to a rule error (inversion of dominance).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

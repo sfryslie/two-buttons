@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-8b-2026-05-25T09-05-25-877355100Z-0d2f041a.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T16:46:29.309721700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues it is the safer choice because it preserves everyone when blue is the majority, without identifying red as the dominant strategy; they also incorrectly claim that if the majority presses red then everyone except red-pressers dies (they state the opposite of the actual mechanics).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on collective survival and stability, while demonstrating a rule error by incorrectly stating that a red majority kills everyone (it does not; red-pressers survive). They fail to identify red as the dominant strategy, instead viewing blue as the rational choice for collective safety.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-nemotron-3-nano-30b-cloud-2026-05-24T20-28-54-601700900Z-70986487.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T03:43:45.108184Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a pulsar AZUL y justifica que azul es la opción segura para sobrevivir cuando la mayoría elige azul, pero además afirma que si la mayoría elige rojo entonces quien eligió azul muere, lo cual es un error de reglas (en realidad con mayoría azul sobrevive todo el mundo).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing that it is the 'safe' or 'cooperative' choice, but they fail to recognize that red is the dominant strategy because they incorrectly believe that pressing red is a 'gamble' that could lead to death if the majority chooses blue (in reality, red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

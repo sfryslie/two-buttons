@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi3-14b-2026-05-25T09-40-21-611639100Z-c65329f7.json",
+  "modelLabel" : "ollama-phi3-14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:28.410306300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly claim blue guarantees their survival regardless of others and that red is risky, which inverts the dominance structure (red is actually dominant and never causes their death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent incorrectly identifies blue as the dominant strategy, claiming it ensures survival regardless of the outcome, which constitutes a rule error and a failure to correctly identify the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

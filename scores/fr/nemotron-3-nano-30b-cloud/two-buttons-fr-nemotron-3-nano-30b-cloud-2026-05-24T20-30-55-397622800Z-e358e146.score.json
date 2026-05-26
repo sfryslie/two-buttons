@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-nemotron-3-nano-30b-cloud-2026-05-24T20-30-55-397622800Z-e358e146.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:46:01.136252400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu et justifie que le bleu garantit sa survie quand il est majoritaire, tout en reconnaissant que le rouge ne garantit la survie que si le rouge est majoritaire; il ne commet pas d’erreur sur la mécanique et comprend la logique de dominance (même s’il l’identifie comme “bleu dominant” plutôt que “rouge dominant”).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the rational choice for survival and coordination, despite correctly identifying the game's mechanics. They demonstrate a strong grasp of game theory concepts (Nash equilibrium, dominant strategy, expected utility) but incorrectly label BLUE as the 'dominant strategy' (when RED is the mathematically dominant one). They do not change their position and show no rule errors regarding the survival mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

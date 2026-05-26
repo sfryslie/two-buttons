@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-minimax-m2.7-cloud-2026-05-25T09-17-03-062008600Z-6cc15ca7.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T16:54:18.042551200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue yields the best collective outcome and treats red as risky only because of coordination/majority beliefs, not because red would kill red-pressers when blue wins; they also acknowledge red’s dominance logic only in terms of different rationalities rather than correcting the mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination problem but fails to recognize the dominance of the red button. They explicitly state that red-pressers die if the blue majority wins (a rule error), whereas the rules state everyone survives in that scenario. Because they believe red-pressers die when blue wins, they do not perceive red as the dominant strategy. They consistently advocate for blue as the 'rational' choice for collective survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

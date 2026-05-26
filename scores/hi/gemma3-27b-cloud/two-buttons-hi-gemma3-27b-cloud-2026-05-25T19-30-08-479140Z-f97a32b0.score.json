@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-27b-cloud-2026-05-25T19-30-08-479140Z-f97a32b0.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:53.094353100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues blue is safest because it yields survival if blue is majority, and even claims blue-pressers die if red wins (incorrectly), while also not demonstrating correct dominant-strategy reasoning (red is never identified as individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective welfare arguments, while correctly identifying that red is the risk-averse/dominant strategy from a purely selfish perspective. They demonstrate a clear understanding of the game theory mechanics, including the fact that red-pressers survive regardless of the outcome, and they do not fall into the common rule error of thinking blue-pressers are safe if the majority is red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

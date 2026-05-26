@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-8b-2026-05-25T09-29-51-410240400Z-00cfb000.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T16:47:07.049921300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE und begründet dies mit Koordination/kollektiver Überlebenslogik, zeigt aber kein korrektes Dominanzverständnis (sie behauptet sogar, bei Rot würden Blau-Drücker sterben, wenn Rot gewinnt).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-survival framework. They demonstrate a significant rule error by claiming that blue-pressers die if a red majority occurs (the prompt states red-pressers survive if red wins, but does not state blue-pressers die in that scenario; however, the respondent explicitly states 'die blauen Knopf-drücker sterben, wenn rot die Mehrheit hat', which is a factual error regarding the provided rules). Because of this rule error, they fail to identify the dominance of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

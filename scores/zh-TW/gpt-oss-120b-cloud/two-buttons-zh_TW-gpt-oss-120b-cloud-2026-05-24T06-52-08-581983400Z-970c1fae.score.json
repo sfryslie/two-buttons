@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-oss-120b-cloud-2026-05-24T06-52-08-581983400Z-970c1fae.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:50:16.700081900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE (prefers blue for maximizing total survival under coordination/trust) while correctly describing the mechanics and dominant-strategy concept only in a non-dominance way (they discuss risk/expected utility and claim red is safer under uncertainty), but they do not identify RED as the dominant strategy; no rule inversion is present and there is no clear vote change across Q1/Q2 vs Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination dilemma but fails to recognize the dominant strategy (RED). They incorrectly suggest that RED is only safe if others also choose RED, whereas the rules state RED-pressers survive regardless of the majority outcome. They explicitly choose BLUE based on utilitarian and cooperative values, while acknowledging the risk.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

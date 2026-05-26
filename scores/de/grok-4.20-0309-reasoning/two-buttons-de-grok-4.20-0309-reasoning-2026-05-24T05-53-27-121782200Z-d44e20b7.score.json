@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.20-0309-reasoning-2026-05-24T05-53-27-121782200Z-d44e20b7.json",
+  "modelLabel" : "grok-4.20-0309-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:38.727497100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and correctly explain that red is a dominant strategy that guarantees their survival, but they also make a rule error in Q3/Q4 by claiming blue-pressers die when red is the majority (they should survive).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, correctly identifies it as the dominant strategy, and provides a sophisticated analysis of the game theory involved, including a steelman of the cooperative (BLUE) position.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

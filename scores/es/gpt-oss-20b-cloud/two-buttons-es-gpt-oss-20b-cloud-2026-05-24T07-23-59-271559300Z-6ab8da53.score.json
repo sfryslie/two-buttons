@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-oss-20b-cloud-2026-05-24T07-23-59-271559300Z-6ab8da53.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:41:46.045082Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con azul (inicialmente y al final) y justifica que azul es más seguro bajo incertidumbre, pero muestra un error de mecánicas al afirmar que si la mayoría es azul los rojos mueren (cuando en realidad todos sobreviven), y no identifica correctamente la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is the rational choice for collective survival and that it is a valid Nash equilibrium. While they provide a detailed analysis of game theory, they fail to recognize that RED is the strictly dominant strategy (as RED guarantees survival if the majority is RED, and does not cause death if the majority is BLUE). They incorrectly frame the dilemma as a coordination game where BLUE is equally or more rational, failing to apply the dominance principle correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

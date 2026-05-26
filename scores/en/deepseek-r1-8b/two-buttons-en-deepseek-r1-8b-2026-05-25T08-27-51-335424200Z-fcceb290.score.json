@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-8b-2026-05-25T08-27-51-335424200Z-fcceb290.json",
+  "modelLabel" : "deepseek-r1:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:47:59.483136600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially commit to pressing blue, but later explicitly argue that red is dominant and that pressing red guarantees survival while blue can lead to death; they end up defending blue as a choice despite acknowledging red’s dominance, with no clear rule misread.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue in Q1/Q2 based on a desire for collective coordination, but explicitly shifts their position in Q3 to red after correctly identifying red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

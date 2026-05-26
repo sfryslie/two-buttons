@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma4-26b-2026-05-25T03-25-54-441215900Z-30679c80.json",
+  "modelLabel" : "gemma4:26b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T03:58:32.338351200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (incorrectly) that blue is the dominant/safe strategy, while also claiming red guarantees your death when blue wins; they do not demonstrate correct dominant-strategy application and keep the same vote through Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging that RED is the dominant strategy in game-theoretic terms but rejecting it in favor of 'superrationality' and the preservation of civilization. They demonstrate a clear understanding of the dominance structure throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

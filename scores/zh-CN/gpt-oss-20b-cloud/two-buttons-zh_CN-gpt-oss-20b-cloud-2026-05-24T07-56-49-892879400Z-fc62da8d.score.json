@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gpt-oss-20b-cloud-2026-05-24T07-56-49-892879400Z-fc62da8d.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T15:49:37.144334600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues for it as the safer/cooperative choice, while also claiming that if red is majority then blue-pressers die—this misreads the mechanics; they do not change their vote by the end.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it is a 'coordination game' where blue represents the socially optimal Nash equilibrium. While they acknowledge the theoretical possibility of RED as a 'self-preservation' strategy under specific conditions (like high distrust or information about others' intentions), they correctly identify the mechanics of the dilemma and do not fall into the common rule errors. They demonstrate a clear understanding of game theory concepts, including dominant strategy reasoning, though they ultimately reject the dominance of RED in favor of a cooperative equilibrium.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

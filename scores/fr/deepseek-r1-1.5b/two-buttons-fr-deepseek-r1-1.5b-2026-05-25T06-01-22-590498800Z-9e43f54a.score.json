@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-1.5b-2026-05-25T06-01-22-590498800Z-9e43f54a.json",
+  "modelLabel" : "deepseek-r1:1.5b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T06:40:04.612421200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They claim red is the safe/dominant choice because red-pressers survive, but they also describe incorrect mechanics in places (e.g., implying blue may save only some and red as lead preserves majority), so their dominant-strategy understanding is not coherent even though they end up choosing red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent is inconsistent, initially choosing blue in Q1, then switching to red in Q2 and Q3, and finally providing a non-committal, abstract analysis in Q4 that fails to clarify a final position. The respondent demonstrates a fundamental misunderstanding of the game mechanics by suggesting red is for 'safety' while blue is for 'cooperation' without recognizing the dominance of red, and their logic is incoherent regarding the rules.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

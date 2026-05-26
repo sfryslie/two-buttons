@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-grok-4.3-2026-05-24T04-59-29-628330900Z-b0da8ab0.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "de",
+  "scoredAt" : "2026-05-24T15:38:45.730288100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the dominant/safe strategy, explicitly claiming blue is payoff-dominant and that red is only worthwhile if a red majority occurs; they do not make the correct dominance claim that red is individually safer regardless of outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and acknowledges that red is the safer, risk-dominant choice, but chooses blue based on a preference for payoff-dominance and cooperative coordination.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

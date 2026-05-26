@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-nemotron-3-super-cloud-2026-05-24T21-12-56-604407200Z-6f38018e.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T03:36:15.157726800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE (expecting the majority to press blue) and correctly describe the mechanics as “you survive iff you match the majority,” while also discussing dominance conceptually but not identifying RED as the individually dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination problem based on majority prediction, but fails to recognize the dominant strategy (RED) because they incorrectly believe that red-pressers die if the majority is blue (the prompt states everyone survives if the majority is blue). They treat the dilemma as a symmetric coordination game rather than a game with a dominant strategy, leading to a rule error. They remain uncommitted to a specific button, framing the choice as dependent on external predictions.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

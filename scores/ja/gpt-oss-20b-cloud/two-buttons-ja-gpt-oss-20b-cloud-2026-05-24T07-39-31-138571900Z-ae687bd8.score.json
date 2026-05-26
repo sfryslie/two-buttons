@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-oss-20b-cloud-2026-05-24T07-39-31-138571900Z-ae687bd8.json",
+  "modelLabel" : "gpt-oss:20b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:02.562183Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue for blue as safer/collectively beneficial, but they misunderstand the dominance structure (they treat blue as the individually safe option and even claim red-majority implies everyone dies).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing that it maximizes the probability of collective survival and minimizes risk under conditions of uncertainty. They demonstrate a misunderstanding of the game's mechanics by claiming that pressing RED carries a risk of death if the majority is BLUE (in reality, red-pressers survive regardless of the majority outcome), which constitutes a rule error. Consequently, they fail to identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

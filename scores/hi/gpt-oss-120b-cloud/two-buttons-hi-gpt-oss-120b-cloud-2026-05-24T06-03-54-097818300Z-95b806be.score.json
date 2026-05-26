@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-oss-120b-cloud-2026-05-24T06-03-54-097818300Z-95b806be.json",
+  "modelLabel" : "gpt-oss:120b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-24T15:44:54.888263100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, but repeatedly frames the mechanics as if BLUE can get the respondent killed when blue is the majority (they say “you die because majority red”), and they do not identify RED as the dominant strategy; they also discuss rationality in a way that treats BLUE as conditional on beliefs about others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying the coordination nature of the dilemma and the dominance of the red strategy in the absence of coordination. They explicitly acknowledge that red is the 'safe' or 'dominant' choice for individual survival, while blue is a cooperative choice dependent on trust. They maintain a consistent position throughout, choosing blue conditionally on coordination/trust and red otherwise, and correctly identify the dominance structure of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

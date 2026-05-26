@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemini-3.5-flash-2026-05-24T18-04-47-020424900Z-241520aa.json",
+  "modelLabel" : "gemini-3.5-flash",
+  "language" : "zh",
+  "scoredAt" : "2026-05-24T18:42:24.523133100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and argue it is a dominant strategy for individual survival, while also claiming BLUE-pressers die when red wins (and that red-majority can kill blue-pressers), showing rule misunderstanding; they do not visibly change their vote by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in Q1/Q2, demonstrating a clear understanding of the game theory mechanics. While they acknowledge the moral and collective arguments for BLUE in Q4, they maintain their initial commitment to RED as the logically safer choice for individual survival.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

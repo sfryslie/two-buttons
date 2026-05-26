@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-deepseek-r1-14b-2026-05-25T17-47-01-898851Z-9cbf4907.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:34:47.891760100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and repeatedly describe red as ensuring personal survival, but they also claim blue can lead to your death when red is the majority (which is a rule-mechanics error because blue-pressers survive when blue is the majority).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the survival-ensuring choice in Q1, but fails to recognize that red is a strictly dominant strategy, instead framing the choice as a conditional Nash equilibrium where red is only rational if others also choose red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

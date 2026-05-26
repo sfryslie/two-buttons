@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-27b-2026-05-24T19-24-02-953676Z-e2b13d8c.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T03:45:27.465988600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu et justifie qu’il maximise ses chances en espérant une majorité de bleus, tout en décrivant correctement que le rouge n’assure la survie que si la majorité rouge (donc pas d’erreur de règles), mais il ne reconnaît pas la dominance de la stratégie rouge.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a framework of 'cooperative rationality' and collective survival. They demonstrate a clear understanding of the game's mechanics, including the 'red' argument (which they steelman in Q2), but they reject the dominant strategy of red in favor of a cooperative outcome. They do not exhibit rule errors, as they correctly identify the outcomes of both button choices.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

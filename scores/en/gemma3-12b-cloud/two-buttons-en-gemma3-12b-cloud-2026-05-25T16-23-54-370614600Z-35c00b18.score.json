@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-12b-cloud-2026-05-25T16-23-54-370614600Z-35c00b18.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:13.327887600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and repeatedly argue Blue is the individually safest/robust choice, explicitly claiming Red would lead to their death when the majority presses Red, which is a rule-mechanics error; they also do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for pressing Blue based on a misunderstanding of the game's mechanics, specifically claiming that pressing Red offers no survival advantage and that Blue is the only way to guarantee survival, which ignores the fact that Red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

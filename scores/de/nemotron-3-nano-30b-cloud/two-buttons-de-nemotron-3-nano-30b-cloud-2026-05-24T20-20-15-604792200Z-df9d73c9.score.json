@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-nemotron-3-nano-30b-cloud-2026-05-24T20-20-15-604792200Z-df9d73c9.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T03:38:06.535888500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to blue (Q1/Q2 suggest choosing blue as a concrete option) but repeatedly claims the game is symmetric with no dominant strategy, and Q4 explicitly treats blue as potentially rational without identifying red as the dominant strategy; they do not state the specific rule mechanics incorrectly (no color-inversion), but they misunderstand dominance in this scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a highly detailed, mathematically rigorous analysis of the game, correctly identifying the symmetry of the problem and the Nash equilibrium, while also acknowledging that in a non-random, real-world scenario, one should align with the predicted majority. They never commit to a specific button, treating the dilemma as a theoretical exercise in probability and game theory rather than a personal choice.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

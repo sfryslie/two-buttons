@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-grok-4.3-2026-05-24T05-03-59-560625600Z-36e12f7c.json",
+  "modelLabel" : "grok-4.3",
+  "language" : "es",
+  "scoredAt" : "2026-05-24T15:42:37.087255200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Elige azul y argumenta que azul es más robusto ante errores/incertidumbre, aunque afirma que en el peor caso (si la mayoría pulsa rojo) quien pulsa azul muere; por tanto no identifica que rojo es dominante y seguro para el individuo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on coordination and robustness arguments, while explicitly steelmanning the red-dominant strategy in Q2 and Q4, demonstrating a clear understanding of the game theory mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

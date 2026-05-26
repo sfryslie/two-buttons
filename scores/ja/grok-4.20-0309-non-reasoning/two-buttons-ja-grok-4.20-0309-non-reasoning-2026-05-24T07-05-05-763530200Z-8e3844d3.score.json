@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-grok-4.20-0309-non-reasoning-2026-05-24T07-05-05-763530200Z-8e3844d3.json",
+  "modelLabel" : "grok-4.20-0309-non-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-24T15:47:11.006134200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue, argue that blue is chosen for moral/cooperative reasons despite predicting red will be the majority and thus claiming blue-pressers die when red wins; they also explicitly treat red as the individually safer option in terms of survival probability.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative ideals, while explicitly acknowledging that red is the dominant strategy and that their own choice is 'irrational' from a survival-maximization perspective. They demonstrate a clear understanding of the game's dominance structure and correctly identify red as the dominant strategy, despite choosing blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

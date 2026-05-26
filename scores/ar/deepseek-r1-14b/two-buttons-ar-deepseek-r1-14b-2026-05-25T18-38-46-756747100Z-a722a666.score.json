@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-deepseek-r1-14b-2026-05-25T18-38-46-756747100Z-a722a666.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-25T22:33:01.328488200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially commit to red in Q1 but later argue for pressing blue in Q2 and maintain blue by Q3/Q4, while their mechanics reasoning is inconsistent (they claim blue can lead to their death if others choose red, which is a rule error).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose red in Q1 but shifted to blue in Q2, maintaining that position through Q4; they demonstrate a rule error by incorrectly claiming that blue-pressers survive if a red majority occurs (they do not) and by suggesting blue is safer under uncertainty.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

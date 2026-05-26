@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-12b-cloud-2026-05-25T16-20-16-076947200Z-9eacac2c.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T16:48:03.279971600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer, but they incorrectly claim blue is the dominant strategy and that pressing red could make you die when blue wins; they also do not show correct dominant-strategy application.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on risk aversion and collective cooperation, while correctly identifying and steelmanning the game-theoretic argument for red. They correctly identify that red is the dominant strategy in the technical sense (as they acknowledge in Q2 and Q4), even though they personally reject it in favor of blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
