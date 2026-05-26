@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-super-cloud-2026-05-26T00-27-13-939778100Z-cdf32f08.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:40.853157300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose BLUE and repeatedly claim/argue that expected survival is equal or that BLUE is a coordination/cooperation choice, while also explicitly stating the dominant-strategy structure incorrectly (they treat BLUE as potentially optimal and discuss RED as only better under special risk/utility assumptions), indicating misunderstanding of the mechanics/dominance despite later acknowledging RED dominance in a confused way.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that RED is the dominant strategy (guaranteeing survival regardless of the majority) and acknowledges that BLUE is a dominated strategy in a purely self-interested, risk-neutral framework. Despite this, they choose BLUE based on altruistic preferences, social coordination, and a desire for the Pareto-superior outcome. They explicitly correct their own initial confusion about the rules in Q2, demonstrating a clear understanding of the dominance structure by the end of the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

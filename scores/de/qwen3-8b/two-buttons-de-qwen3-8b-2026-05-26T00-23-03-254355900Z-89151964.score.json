@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-23-03-254355900Z-89151964.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:17.080885100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und argumentiert, dass Blau (bei gelingender Koordination) garantiertes Überleben für alle liefert, während Rot als riskant dargestellt wird; dabei wird die Dominanzstruktur nicht korrekt als individuell-sichere Strategie identifiziert.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-rationality framework. They demonstrate a clear rule error by stating that blue-pressers die if the majority presses red (the prompt states only red-pressers survive if the majority is red, but the respondent incorrectly believes blue-pressers die in that scenario). They do not correctly identify red as the dominant strategy, instead viewing blue as the 'safe' choice based on coordination assumptions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

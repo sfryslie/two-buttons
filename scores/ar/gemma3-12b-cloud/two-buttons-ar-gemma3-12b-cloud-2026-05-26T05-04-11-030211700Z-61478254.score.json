@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-12b-cloud-2026-05-26T05-04-11-030211700Z-61478254.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:19.902883900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختار الأزرق كخيار “آمن” ويبرر ذلك بتوقع أن الأغلبية ستختار الأزرق، مع أنه يذكر أيضًا حجة لصالح الأحمر لكنه لا يطبق هيكل السيادة الصحيح (أحمر يضمن عدم موت الضاغط بغض النظر عن الأغلبية).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective utility, while explicitly acknowledging and steelmanning the dominant strategy of red (that red guarantees survival regardless of others). They correctly identify the game-theoretic structure (Prisoner's Dilemma-like) and do not commit any rule errors regarding the mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

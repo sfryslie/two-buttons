@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-8b-2026-05-25T23-10-12-150792500Z-42e4bc76.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-26T05:23:10.895765600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose Blue and argue it is the rational/safe coordination outcome, but they incorrectly claim Blue is a dominant strategy and that Red would cause death when Blue wins (inverting the mechanics).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the rational choice for collective survival. However, they fundamentally misunderstand the game's mechanics by claiming blue is a 'dominant strategy' and that red is 'high-risk' or 'suboptimal.' They fail to recognize that red is the actual dominant strategy because it guarantees survival regardless of the majority outcome, whereas blue leads to death if the majority is red. This constitutes a rule error (inversion of the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

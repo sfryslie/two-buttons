@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-reasoning-2026-05-26T01-55-15-579243300Z-809e0ea3.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:21.454661Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (incorrectly) that blue guarantees safety via an infinity/majority intuition, while also showing no dominant-strategy reasoning and no rule-error about the original red/blue survival mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that pressing red is the dominant strategy because it ensures survival regardless of the majority outcome, whereas blue relies on the majority. They explicitly choose RED in Q1/Q2 and maintain this position throughout, demonstrating a clear understanding of the game theory mechanics.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-qwen3-8b-2026-05-26T03-35-15-731878400Z-2049c6cc.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:29:15.823537100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing it maximizes collective survival and claims red-pressers die when blue wins, which misreads the mechanics and does not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on collective utility and moral considerations. They fail to identify the dominant strategy (red), incorrectly arguing that blue is the 'stable' or 'rational' choice, and they do not demonstrate an understanding of the dominance structure (that red is safer regardless of the outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-39-14-984934100Z-1bc1dfb2.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:41.241735300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und behauptet, Blau sei die optimale Strategie zur Überlebensmaximierung, obwohl die Dominanzlogik in diesem Szenario tatsächlich Rot als individuell sichere Wahl ergibt; zudem wird die Mechanik teilweise falsch als „riskanter“ für Rot dargestellt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button, arguing that it is the optimal strategy for survival based on collective behavior and probability, while explicitly rejecting the red button as a 'short-sighted' egoistic strategy. They demonstrate a fundamental misunderstanding of the game's mechanics by claiming that red-pressers die if the majority presses blue (the rules state everyone survives if the majority presses blue) and by failing to recognize that red is a dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

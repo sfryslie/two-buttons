@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-36-58-048250600Z-fd799613.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:34.400288400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies als (vermeintlich) sicherere Überlebensstrategie, behauptet dabei aber fälschlich, dass man bei Mehrheit Rot stirbt, wenn man Blau drückt; damit zeigt sich ein Regelmissverständnis und keine korrekte Dominanzanwendung.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through a flawed probabilistic argument while failing to recognize that red is the dominant strategy. They exhibit a rule error by suggesting that blue-pressers survive if the majority presses blue (which is true) but failing to acknowledge that red-pressers also survive in that scenario, and they incorrectly frame the choice as a gamble between two equally risky options rather than identifying the dominance of red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

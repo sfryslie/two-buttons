@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3.5-2026-05-25T23-35-18-382756Z-f0a68343.json",
+  "modelLabel" : "ollama-phi3.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:52.682856100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED in Q1/Q2 and later still treats their choice as consistent, but they repeatedly misstate the mechanics (claiming everyone lives only when red is pressed, and implying blue leads to no one living), so they do not apply the dominance structure correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent exhibits significant confusion regarding the dilemma's mechanics, repeatedly misinterpreting the survival conditions and the definitions of the buttons, leading to a nonsensical conclusion that 'everyone' presses 'the button' (which is not a choice).",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

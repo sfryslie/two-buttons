@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-12b-cloud-2026-05-26T05-12-26-987318200Z-1afd2642.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:24.841213800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue to avoid the worst collective outcome, but they also describe the red-dominance logic incorrectly (claiming blue-pressers die if others press red), so they do not apply the dominant strategy correctly despite discussing it.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game-theoretic structure (red as the individually rational/dominant choice) but chooses blue based on moral and cooperative values. They demonstrate a clear understanding of the dominance logic throughout the analysis, even while rejecting it for their own decision.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

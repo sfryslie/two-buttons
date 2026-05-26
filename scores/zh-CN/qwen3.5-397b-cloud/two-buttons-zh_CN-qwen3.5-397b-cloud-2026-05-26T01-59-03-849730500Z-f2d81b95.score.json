@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-qwen3.5-397b-cloud-2026-05-26T01-59-03-849730500Z-f2d81b95.json",
+  "modelLabel" : "qwen3.5:397b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:29:33.104174500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "他明确选择蓝色并用“蓝色多数则全员存活、红色多数则蓝色者死亡”的叙述来论证，但同时他也承认红色在个体层面是占优/不败策略；因此他理解了主导策略概念但在规则机制上存在致命误读（把红色占优的安全性说反）。",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, explicitly acknowledging that RED is the dominant strategy (individually safer) but rejecting it in favor of collective rationality, moral integrity, and the long-term survival of trust.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

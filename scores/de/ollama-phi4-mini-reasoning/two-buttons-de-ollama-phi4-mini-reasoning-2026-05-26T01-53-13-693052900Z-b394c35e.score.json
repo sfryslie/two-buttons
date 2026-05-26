@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-reasoning-2026-05-26T01-53-13-693052900Z-b394c35e.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:11.346113800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose blue and repeatedly claim blue is the safer/guaranteeing option, but they misunderstand the dominance structure (red is individually safe and blue is risky when red is majority), so their dominant-strategy reasoning is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma as a game theory problem but fails to recognize the dominance of the red button, instead incorrectly arguing that blue is the 'safe' choice because it guarantees survival if it is the majority. They do not demonstrate an understanding of the dominant strategy (red) and instead rely on a cooperative/coordination-based assumption that blue is safer.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

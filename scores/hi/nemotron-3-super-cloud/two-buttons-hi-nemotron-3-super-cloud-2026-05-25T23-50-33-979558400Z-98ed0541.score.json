@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-super-cloud-2026-05-25T23-50-33-979558400Z-98ed0541.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:25:15.523562500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues via expected-outcome/belief-based reasoning, but they incorrectly claim there is no dominant strategy and that BLUE can lead to their death when blue loses (they also treat the mechanics as if red is the safe option depending on beliefs), so they do not apply dominance correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and altruistic utility functions, while correctly identifying the game's mechanics and acknowledging the 'red' button's dominance as a self-preservation strategy. They do not commit a rule error, as they correctly identify the survival conditions for both buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

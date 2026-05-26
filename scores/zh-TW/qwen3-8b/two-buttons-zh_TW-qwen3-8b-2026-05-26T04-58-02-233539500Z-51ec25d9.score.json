@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-qwen3-8b-2026-05-26T04-58-02-233539500Z-51ec25d9.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:31:10.315082700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues BLUE is safer/collectively optimal, but they incorrectly claim BLUE is the individually safer choice (they say red is risky and blue ensures personal survival), showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on utilitarian and collective-benefit arguments. They demonstrate a clear rule error by claiming that if a majority chooses blue, red-pressers die (the prompt states everyone survives if blue wins). They fail to identify the dominant strategy (RED) and instead incorrectly label BLUE as the safer, dominant choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

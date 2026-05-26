@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-super-cloud-2026-05-25T23-48-53-074328200Z-bfb6a852.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:25:10.329834300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues via expected survival that BLUE is chosen when they believe blue-majority probability p>0.5, while also discussing that red is risk-dominant under p<0.5; they do not claim the mechanics are inverted.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination dilemma but fails to recognize that RED is a dominant strategy. They incorrectly believe that pressing RED carries a risk of death if the majority presses BLUE (the prompt states red-pressers survive if the majority presses blue). Because they believe RED is risky, they fail to identify it as the dominant strategy and instead treat the choice as a symmetric coordination problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

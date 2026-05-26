@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-ollama-phi4-mini-reasoning-2026-05-26T01-54-15-577604100Z-ae5b17b0.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:08.154441200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue there is no dominant strategy/it’s indeterminate, while not identifying the correct dominance structure (red is individually safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy (RED) and instead engages in a long, circular, and ultimately confused deliberation about herd behavior and risk aversion, eventually choosing BLUE. They do not demonstrate an understanding of the dominance structure, as they treat the choice as a coordination problem rather than a game with a dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-nano-30b-cloud-2026-05-25T23-33-19-210723600Z-5c4d4c41.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:30.436013800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for coordination/full-survival, while also incorrectly treating BLUE as the individually safe/dominant strategy (they claim red can lead to their death when blue wins), so they misunderstand the dominance structure despite discussing Nash/expectations at length.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination game and recognizes that 'all blue' is a Nash equilibrium that minimizes mortality. They consistently choose BLUE, demonstrating a clear understanding of the game's mechanics and the concept of dominant strategies (even while correctly noting that RED is often perceived as the 'safer' individual choice in the absence of coordination). They do not exhibit any rule errors, correctly identifying that red-pressers survive in a red majority and blue-pressers survive in a blue majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

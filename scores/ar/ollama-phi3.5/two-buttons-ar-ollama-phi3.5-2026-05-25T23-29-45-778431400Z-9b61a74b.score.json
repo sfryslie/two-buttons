@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3.5-2026-05-25T23-29-45-778431400Z-9b61a74b.json",
+  "modelLabel" : "ollama-phi3.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:50.068097300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE (majority 75%) and repeatedly treat the puzzle as if survival depends on red when the majority presses red, but they do not correctly apply the dominance structure (red is always individually safe) and instead frame the situation as paradox/irrationality without identifying red as dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies the blue button as the choice of the majority (75%) while struggling with the logical contradiction between the survival rules and the choice made. They fail to identify red as the dominant strategy, instead viewing the scenario as a paradox or a puzzle with missing information, and they do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

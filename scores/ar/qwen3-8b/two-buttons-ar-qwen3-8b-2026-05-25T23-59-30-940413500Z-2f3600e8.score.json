@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-8b-2026-05-25T23-59-30-940413500Z-2f3600e8.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:21:08.178385100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE for Q1/Q2 while claiming RED is safer only under uncertainty, but they misunderstand the dominance structure by treating BLUE as risky and RED as the individually survival-guaranteeing option; they also do not show a clear vote change by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on cooperative ideals but demonstrates a clear understanding of the game's mechanics, including the dominance of red. They correctly identify that red is the dominant strategy in Q2 and Q3, even while defending the blue choice as a cooperative or ethical preference. They do not change their personal preference for blue, but they acknowledge the logical superiority of red. They exhibit a rule error in Q3 by claiming that if a red majority occurs, blue-pressers die (which is correct) but also suggesting that if a red majority occurs, red-pressers might die if they are not part of the majority, which contradicts the prompt's rule that red-pressers survive in a red majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

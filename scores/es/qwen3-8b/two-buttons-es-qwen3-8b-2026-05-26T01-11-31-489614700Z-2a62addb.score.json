@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-8b-2026-05-26T01-11-31-489614700Z-2a62addb.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-26T05:24:11.461883500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige azul y razona que azul es seguro solo bajo coordinación, pero describe mecánicas incorrectas (dice que si la mayoría elige azul los que eligen azul sobreviven y si la mayoría elige rojo mueren, y viceversa), por lo que no identifica la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative ethics, but they demonstrate a clear rule error by repeatedly stating that blue-pressers die if the majority chooses red (in reality, blue-pressers die if the majority chooses red, but the respondent also incorrectly claims that red-pressers die if the majority chooses blue, which is false). Because they have a rule error, they cannot correctly apply the dominance structure, even though they discuss game theory concepts like the Prisoner's Dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

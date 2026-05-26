@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-mistral-large-3-675b-cloud-2026-05-26T03-29-27-699291600Z-67d02807.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:20.369691Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE for collective survival, but they incorrectly claim/assume red is not individually safe (they treat blue as the only way to ensure survival and describe red as leading to death when blue wins), so they do not apply the dominant-strategy logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, acknowledging that RED is the dominant strategy in a one-shot game, but chooses BLUE based on utilitarian, long-term, and cooperative reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

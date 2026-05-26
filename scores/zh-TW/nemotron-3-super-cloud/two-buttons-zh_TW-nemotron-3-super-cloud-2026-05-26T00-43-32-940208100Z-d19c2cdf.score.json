@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-super-cloud-2026-05-26T00-43-32-940208100Z-d19c2cdf.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:56.386476800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue via expected-value/maximin-style reasoning that depends on beliefs about others, while also explicitly claiming that pressing BLUE can lead to their death when red is the majority (which is consistent with the rules) and they do not identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses BLUE based on a cooperative framework, but provides a comprehensive, high-level steelman of the RED strategy, correctly identifying it as the 'maximin' and 'risk-dominant' choice in a single-shot, anonymous game. They demonstrate a sophisticated understanding of game theory, including Nash equilibria, ESS, and the distinction between expected utility and maximin strategies. They do not change their personal choice of BLUE, but they acknowledge the logical superiority of RED in the absence of trust or communication.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

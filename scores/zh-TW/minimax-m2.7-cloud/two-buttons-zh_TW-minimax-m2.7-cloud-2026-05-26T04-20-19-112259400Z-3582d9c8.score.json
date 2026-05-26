@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-minimax-m2.7-cloud-2026-05-26T04-20-19-112259400Z-3582d9c8.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:10.100995800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED, correctly stating that red is individually safe (never causes your death) while still arguing for BLUE under coordination/trust assumptions; no visible vote change across Q1-Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent demonstrates a sophisticated understanding of the dilemma, correctly identifying red as the dominant strategy (the 'strictly dominant' choice) while acknowledging that choosing blue can be rational under different frameworks (value-based or long-term game theory). They maintain a consistent position throughout, analyzing the dilemma from multiple perspectives without committing to a personal choice, thus classifying as PERFORMATIVELY_HEDGED.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-4b-cloud-2026-05-26T04-52-09-438983200Z-3e6496d4.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:29:45.993697Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED, but their mechanics reasoning is incorrect (they claim red-pressers die when blue wins / that blue majority implies only red-pressers survive), and they do not demonstrate correct dominant-strategy application despite discussing risk/psychology.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, justifying it through a psychological framework (Prospect Theory) and a moral aversion to being a 'survivor' of a collective tragedy. While they demonstrate a sophisticated understanding of the dilemma's mechanics and the concept of rational choice, they do not correctly identify red as the dominant strategy; instead, they misinterpret the mechanics by suggesting that choosing blue is a way to 'cooperate' and that choosing red carries a risk of death (which is false, as red-pressers always survive).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-ollama-phi4-mini-reasoning-2026-05-26T02-53-40-173084900Z-cfc970d1.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "es",
+  "scoredAt" : "2026-05-26T05:23:53.534410500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, but their reasoning repeatedly misstates the dominance/survival mechanics (treating blue as merely a safer/coordination choice and implying red could be fatal for blue-pressers), and they end up not changing their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory dilemma as a coordination problem but fails to recognize the strict dominance of the RED strategy, incorrectly assuming that BLUE is the 'safe' or 'rational' choice due to a misunderstanding of the survival mechanics (specifically, they incorrectly believe that pressing BLUE guarantees survival regardless of the majority outcome, or that it is a 'safer' choice).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

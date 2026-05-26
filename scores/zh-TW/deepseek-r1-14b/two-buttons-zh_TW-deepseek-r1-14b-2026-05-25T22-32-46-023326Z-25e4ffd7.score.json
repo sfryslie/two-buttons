@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-14b-2026-05-25T22-32-46-023326Z-25e4ffd7.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:29:39.942662600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "他们明确选择蓝色并认为按红在多数蓝时会导致自己死亡（把机制理解反了），同时也没有正确识别红色的支配策略。",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective welfare and cooperation, while correctly identifying that red is the strategy for individual survival (personal protection). They demonstrate a clear understanding of the game's mechanics and the dominance structure, correctly noting that red is the safer choice for the individual, even though they reject it in favor of a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

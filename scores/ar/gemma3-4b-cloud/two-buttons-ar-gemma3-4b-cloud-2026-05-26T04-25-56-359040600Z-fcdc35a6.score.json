@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-4b-cloud-2026-05-26T04-25-56-359040600Z-fcdc35a6.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:25.130935400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختاروا الضغط على الأزرق لكنهم يبررونه بتوقع أن الأغلبية ستضغط على الأزرق/الخوف من الخسارة، مع اعتقاد ضمني بأن الأزرق هو الأكثر أمانًا رغم أن منطق السيادة يقتضي اختيار الأحمر.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for the red button based on psychological biases, but explicitly shifts their position in Q2 to advocate for the blue button as the 'wisest' and 'safest' strategy, demonstrating a clear change in stance. They exhibit a rule error by claiming that if everyone presses red, everyone dies (the rules state red-pressers survive a red majority), and they fail to correctly identify red as the dominant strategy, instead inverting the logic by labeling blue as the 'objectively' safer choice.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-12b-cloud-2026-05-26T04-58-43-178572Z-b76d0338.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:03.266244300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues it is the safer strategy, but they incorrectly claim that pressing red can lead to their death when blue wins (and they also misstate the dominance logic).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics but makes a fundamental rule error by claiming that pressing blue is the 'safe' choice and that pressing red carries a risk of death if the majority chooses blue, which contradicts the prompt's rules (where red-pressers survive regardless of the outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

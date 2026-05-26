@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-12b-cloud-2026-05-26T05-17-47-811619400Z-6b520889.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:44.290920900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, explicitly acknowledge that BLUE can lead to their death if others press RED, and they do not claim any rule inversion; they also discuss dominance conceptually but do not identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and moral values, while explicitly acknowledging that RED is the safer, risk-averse, and individually rational strategy. They correctly identify the dominance structure of the dilemma (that RED guarantees survival regardless of the outcome) and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

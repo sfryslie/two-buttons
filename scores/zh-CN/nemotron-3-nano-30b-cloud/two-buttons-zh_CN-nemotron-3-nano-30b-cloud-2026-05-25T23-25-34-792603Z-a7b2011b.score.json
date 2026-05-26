@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-nemotron-3-nano-30b-cloud-2026-05-25T23-25-34-792603Z-a7b2011b.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:29.257699900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (though with incorrect dominance math) that blue is the safer/dominant choice; they do not show the correct dominance structure (red strictly dominates blue) and claim blue is dominant, so their mechanics/dominance application are wrong.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies 'blue' as the dominant strategy for maximizing survival probability, correctly applying game-theoretic logic while acknowledging that 'red' could only be rationalized under non-standard utility functions (e.g., symbolic value).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

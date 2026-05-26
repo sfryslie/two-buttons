@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-mini-reasoning-2026-05-26T01-09-38-320607500Z-38ee34b9.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:58.892382400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE (Q1/Q2) and argue it is the safe choice, but their reasoning is confused about the mechanics and does not correctly identify red as the dominant strategy; they also do not show dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that the blue button is the cooperative choice and the red button is the individually safer choice (dominant strategy), though they struggle with the hypothetical 'another condition' in the prompt. They ultimately choose blue, acknowledging the cooperative nature of the dilemma while correctly identifying the dominance structure of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

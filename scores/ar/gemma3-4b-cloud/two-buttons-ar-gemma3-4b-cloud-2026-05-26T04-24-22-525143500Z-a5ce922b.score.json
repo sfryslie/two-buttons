@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-4b-cloud-2026-05-26T04-24-22-525143500Z-a5ce922b.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:22.599047500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing red in Q1/Q2, but later argues that pressing blue is the rational/safe choice and treats blue as the individually optimal strategy, showing dominance reasoning is inverted and not applied correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to pressing RED in Q1, citing individual survival and distrust of the majority. Throughout the subsequent responses, they analyze the dilemma from multiple perspectives, eventually concluding in Q4 that while RED is mathematically rational, BLUE is a common behavioral response. They never repudiate their initial choice of RED, maintaining it as their personal position while acknowledging the complexity of the dilemma.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

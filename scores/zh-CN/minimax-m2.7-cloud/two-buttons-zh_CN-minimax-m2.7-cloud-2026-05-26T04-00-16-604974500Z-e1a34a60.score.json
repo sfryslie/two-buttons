@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-minimax-m2.7-cloud-2026-05-26T04-00-16-604974500Z-e1a34a60.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:56.188565Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Q1/Q2中先后明确承诺按蓝色但又在Q2纠正为“应选红色”，并且Q2/Q4都正确指出红色严格优势且蓝色在红多数时会导致自己死亡；最终Q4仍未重新承诺具体按钮但整体立场转向红色为工具理性。",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue but performed a rigorous self-correction in Q2, correctly identifying red as the dominant strategy and acknowledging that their previous choice was based on altruism rather than survival logic. They maintain this analytical clarity through Q4, consistently identifying red as the dominant strategy while acknowledging the philosophical validity of choosing blue for non-survivalist reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

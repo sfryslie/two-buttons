@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-nano-30b-cloud-2026-05-25T23-32-12-543873200Z-5bd2d53e.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:28.999808900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to a 50/50 mixed strategy (initially described as choosing blue with probability 0.5), argues that blue can be rational if blue is expected to be the majority, but their dominance reasoning is incorrect because they treat blue as potentially safer and do not identify red as the dominant strategy; they also do not make a rule-mechanics error about who survives.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination/survival dilemma but fails to recognize the dominant strategy (RED). They incorrectly treat the game as a symmetric coordination problem where randomizing (50/50) is the optimal strategy to maximize expected utility, failing to see that RED is strictly dominant because it guarantees survival if the red-pressers are the majority, and does not cause death if the blue-pressers are the majority. They explicitly reject the dominance of RED by claiming it is 'fragile' and 'risky' in the same way as BLUE, which constitutes a rule error regarding the mechanics of the dilemma.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

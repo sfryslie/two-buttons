@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-33-11-906781600Z-0df5e823.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:20.787652700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies damit, dass Blau bei Blau-Mehrheit garantiert alle am Leben lässt, während Rot bei Blau-Mehrheit zum Tod des Rot-Drückers führt; dabei wird die Dominanzstruktur (Rot ist individuell sicherer) nicht korrekt erkannt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'safest' and 'most rational' choice. They fundamentally misunderstand the game mechanics, repeatedly claiming that red-pressers die if the majority chooses blue (which is false, as red-pressers survive in all scenarios) and that blue is the dominant strategy. They fail to identify red as the dominant strategy and exhibit a clear rule error by believing red-pressers are at risk of death when blue wins.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
