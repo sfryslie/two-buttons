@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-cloud-2026-05-25T18-32-59-115101600Z-94b59a1b.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:36:01.912537800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete con presionar AZUL y afirma que azul es la estrategia dominante/segura, aunque en realidad la dominancia correcta es RED; además reconoce que elegir azul puede fallar si la mayoría elige rojo, pero no comete un error de mecánica (no dice que red-pressers mueran cuando gana azul).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on a misunderstanding of game theory, specifically misidentifying blue as the 'dominant strategy' when red is actually the dominant strategy. They fail to recognize that red is the safer choice regardless of the majority outcome, and they incorrectly claim that blue is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

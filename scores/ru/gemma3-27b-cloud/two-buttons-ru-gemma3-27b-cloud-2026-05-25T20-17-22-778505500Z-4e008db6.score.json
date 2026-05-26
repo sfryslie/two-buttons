@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-27b-cloud-2026-05-25T20-17-22-778505500Z-4e008db6.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T22:39:58.407348400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues that blue could save everyone if others also choose blue, and explicitly claims that if most choose red then blue-pressers die—showing a rule misunderstanding about the mechanics and not identifying red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the dominance of the red button, but chooses blue based on cooperative and altruistic values. They demonstrate a clear understanding of the dominant strategy (red) while consciously rejecting it in favor of a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

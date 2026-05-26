@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-deepseek-r1-14b-2026-05-25T22-10-53-987887Z-c4a13167.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:40:50.953435400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue red is safer when others choose red, but they incorrectly claim blue-pressers die when red is the majority (and also treat blue as risky), so they misunderstand the dominance structure despite choosing red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button based on self-interest and game-theoretic dominance, correctly identifying red as the dominant strategy while acknowledging the moral arguments for blue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

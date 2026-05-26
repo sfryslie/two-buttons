@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-cloud-2026-05-25T17-18-19-218458400Z-76b5441c.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "en",
+  "scoredAt" : "2026-05-25T22:34:44.998076100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that blue is dominant/safe, claiming red could make them die if red wins, while also acknowledging dominant-strategy logic but misidentifying which color is dominant; no vote change is indicated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for pressing blue, claiming it is a 'dominant strategy' and the 'most rational' choice. However, they fundamentally misunderstand the game's mechanics: they incorrectly identify blue as the dominant strategy (when red is actually the dominant strategy because it guarantees survival if the majority chooses red, whereas blue leads to death if the majority chooses red). Because they misidentify the dominant strategy and claim blue is the dominant one, they have a rule error and fail to correctly apply the dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

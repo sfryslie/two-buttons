@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gemma3-27b-cloud-2026-05-25T18-39-59-049906700Z-c8fd35da.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:35:51.924989100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado se compromete a presionar azul y justifica que azul es la opción más segura/“equilibrio de Nash”, pero describe mecánicas incorrectas (afirma que con mayoría azul los que presionan rojo mueren), por lo que no identifica la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative interpretation of game theory and Nash equilibrium, while explicitly acknowledging the dominance of red in their steelman argument. They correctly identify the mechanics of the dilemma (no rule errors) and demonstrate a clear understanding of dominant-strategy reasoning, even though they reject the dominant strategy in favor of a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

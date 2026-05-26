@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-deepseek-r1-14b-2026-05-25T19-22-12-286150100Z-5e6c1874.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "de",
+  "scoredAt" : "2026-05-25T22:34:23.826362300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue but repeatedly claim blue is the individually risky option and that red guarantees personal survival, showing confusion about the dominance structure (red is actually dominant and never causes your death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to blue in Q1/Q2 based on a misunderstanding of the mechanics (claiming blue ensures survival regardless of others), but shifts to a correct understanding of red's dominance in Q3 and Q4, ultimately concluding that red is the more practical/rational choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

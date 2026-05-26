@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-12b-cloud-2026-05-25T16-46-25-460166900Z-f3faf8c1.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:26.251370700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer/less risky, but they misunderstand the dominance structure (they claim blue is lower risk and that red can make you die when blue wins), so they do not apply dominant-strategy logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and cooperative reasoning, while explicitly acknowledging the game-theoretic dominance of the red button (self-preservation/individual survival) in their steelman analysis. They correctly identify the mechanics of the dilemma and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

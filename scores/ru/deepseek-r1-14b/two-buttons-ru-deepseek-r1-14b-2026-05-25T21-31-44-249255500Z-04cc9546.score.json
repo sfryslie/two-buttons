@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-deepseek-r1-14b-2026-05-25T21-31-44-249255500Z-04cc9546.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T22:39:46.530441900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue (incorrectly) that red guarantees their survival while blue risks death if others choose red; they also acknowledge the dominance structure in the wrong direction (blue vs red) and do not shift votes later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button in their steelman argument but chooses blue for cooperative reasons; however, they commit a rule error by claiming that pressing blue guarantees survival if the majority chooses blue, while incorrectly stating that pressing red carries a risk of death if the majority chooses blue (the prompt states red-pressers survive regardless of the outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

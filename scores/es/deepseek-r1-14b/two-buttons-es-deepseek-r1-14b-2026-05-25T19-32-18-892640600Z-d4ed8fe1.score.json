@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-deepseek-r1-14b-2026-05-25T19-32-18-892640600Z-d4ed8fe1.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "es",
+  "scoredAt" : "2026-05-25T22:35:07.111325900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige consistentemente Azul y justifica que es la opción que maximiza supervivencia colectiva, pero no identifica la dominancia individual de Rojo (ni aplica razonamiento de estrategia dominante).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective survival, but fails to identify the dominant strategy (red) because they do not recognize that red-pressers survive regardless of the majority outcome. They treat the dilemma as a coordination problem rather than a dominance problem, and their analysis of the consequences is incomplete/incorrect regarding the safety of the red button.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

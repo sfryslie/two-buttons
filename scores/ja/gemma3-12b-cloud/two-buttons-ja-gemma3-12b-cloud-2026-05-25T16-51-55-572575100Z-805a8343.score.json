@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-12b-cloud-2026-05-25T16-51-55-572575100Z-805a8343.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:38:38.802855900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They recommend a mixed/random strategy and argue that blue can be rational via trust/altruism, but they also state that pressing blue can lead to their death when red is the majority, showing misunderstanding of the dominance structure; they never clearly commit to pressing red or blue.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent avoids making a personal choice, instead proposing a 'probabilistic strategy' (mixing red and blue) as the optimal solution. They fail to identify that red is the dominant strategy, instead treating the dilemma as a symmetric coordination problem where both buttons carry equal risk of death.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

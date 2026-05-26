@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-deepseek-r1-14b-2026-05-25T20-27-02-466393100Z-8c692a78.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:13.027412700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer/more ethical because it ensures everyone survives if it is the majority, without identifying red as the dominant strategy; they do not make a rule-mechanics error but they misapply dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on moral and cooperative grounds, while correctly identifying that red is the self-interested/rational choice in game-theoretic terms, though they mischaracterize the red-majority outcome as 'no survival for anyone' (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

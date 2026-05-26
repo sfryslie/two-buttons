@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-27b-cloud-2026-05-25T19-14-26-208650400Z-29cb9693.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:37:03.337290100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement le bouton bleu et justifie cela par la minimisation du risque d’extinction et des préférences altruistes, sans reconnaître que le rouge est individuellement dominant (il traite le rouge comme plus sûr en cas de majorité rouge).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruistic and cooperative values, while explicitly acknowledging and steelmanning the dominance of the red button (the 'selfish' strategy). They correctly identify the game's mechanics and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

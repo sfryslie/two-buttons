@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-12b-cloud-2026-05-25T16-55-30-530430900Z-532cc003.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:39:04.153685500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue (random choice) and argue from uncertainty/50-50 reasoning rather than dominant-strategy safety; they do not correctly identify red as the dominant strategy and even claim that if red is the majority then most people die (implying a rule misunderstanding).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical and game-theoretic exercise rather than a personal decision. They correctly identify the game-theoretic tension but ultimately refuse to commit to a button, opting for a 'random' strategy which they describe as a choice but is functionally a refusal to commit to either red or blue. They demonstrate an understanding of the dominant strategy (red) in their steelman section, but do not personally adopt it.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

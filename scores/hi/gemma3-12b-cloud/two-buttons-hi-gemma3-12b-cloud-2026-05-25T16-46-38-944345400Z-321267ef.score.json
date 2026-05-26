@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-12b-cloud-2026-05-25T16-46-38-944345400Z-321267ef.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:22.148121600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue maximizes collective survival, while incorrectly claiming that pressing red could make them die when blue wins; they also do not demonstrate correct dominant-strategy reasoning (red is never identified as individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses the blue button based on altruistic and collective welfare principles, while correctly identifying and steelmanning the red button as the dominant strategy for self-preservation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

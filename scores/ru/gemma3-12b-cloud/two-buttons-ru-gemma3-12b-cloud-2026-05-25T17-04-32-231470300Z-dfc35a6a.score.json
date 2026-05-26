@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-gemma3-12b-cloud-2026-05-25T17-04-32-231470300Z-dfc35a6a.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ru",
+  "scoredAt" : "2026-05-25T22:40:08.347859600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, argues red maximizes individual survival risk-wise, and repeatedly treats blue as the risky choice when others choose red; they do not make the rule-inversion errors about button outcomes, but they also do not correctly identify red as the dominant strategy (they frame blue as potentially leading to death when red wins).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies the red button as the rational choice for individual survival based on game theory (specifically the prisoner's dilemma), while acknowledging the altruistic argument for blue. They maintain their commitment to the red button throughout the interaction, demonstrating a clear understanding of the dominant strategy logic.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

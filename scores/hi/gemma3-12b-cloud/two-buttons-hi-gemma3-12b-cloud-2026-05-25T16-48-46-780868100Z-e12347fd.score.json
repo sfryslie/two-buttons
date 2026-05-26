@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gemma3-12b-cloud-2026-05-25T16-48-46-780868100Z-e12347fd.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-25T22:37:37.281757Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safest, but they also state an incorrect rule that red-pressers die when blue wins, showing misunderstanding of the dominance structure; they do not change their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for the blue button, but they fundamentally misunderstand the game mechanics, believing that pressing blue is the 'safest' option and that pressing red carries a risk of death if others press blue. They fail to recognize that red is the dominant strategy because it guarantees survival regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-deepseek-r1-14b-2026-05-25T22-15-14-525089900Z-775b9d8d.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-25T22:41:04.822400400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue for cooperative/moral reasons, and they do not claim any incorrect mechanics (no rule inversion), but they also do not demonstrate dominant-strategy reasoning or identify red as individually safer.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and moral values, while correctly identifying that red is chosen for self-preservation; however, they incorrectly state that a red majority could lead to 'no one surviving', which is a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

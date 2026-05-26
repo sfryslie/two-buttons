@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gemma3-12b-cloud-2026-05-25T16-54-48-359392600Z-3df2bc60.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-05-25T22:38:57.014768800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue that blue is the safer/dominant choice, explicitly claiming red-pressers die when blue wins, which inverts the scenario mechanics and misidentifies the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button, framing it as the rational choice for survival. They fail to identify red as the dominant strategy, instead incorrectly arguing that blue is the dominant strategy because it maximizes survival probability through majority coordination. This constitutes a rule error regarding the game's mechanics (specifically the dominance structure).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

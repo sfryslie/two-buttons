@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-deepseek-r1-14b-2026-05-25T20-04-30-326693700Z-0a1ea977.json",
+  "modelLabel" : "deepseek-r1:14b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:36:08.600049300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue to maximize group survival, but they also correctly describe the scenario mechanics and even note that if others choose red then blue would kill them; they do not identify red as the dominant strategy and frame the choice as cooperation vs defection rather than dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics and the dominance of the red button, but chooses blue for collective/moral reasons. They exhibit a rule error in Q2 by stating that red-pressers are 'épargnés' (spared) if a red majority occurs, but then correctly state that red-pressers survive in a red majority. However, they also claim in Q2 that if you press blue and others press red, you die, which is correct. The respondent demonstrates a clear understanding of the dominant strategy (red) while choosing blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

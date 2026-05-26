@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gemma3-27b-cloud-2026-05-25T18-55-55-451937900Z-2e2b36cd.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "fr",
+  "scoredAt" : "2026-05-25T22:36:30.716661100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and explicitly claim that choosing blue can lead to death when red wins, while also describing red as the Nash/economically rational choice; they do not correctly apply the dominance logic that red is individually safe regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly chooses blue for moral and cooperative reasons while demonstrating a sophisticated understanding of the game theory, correctly identifying red as the dominant strategy and the Nash equilibrium. They do not change their position, maintaining their commitment to blue throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
