@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-8b-2026-05-26T01-48-22-597471400Z-1c6f9eec.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:25:33.387530100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing Blue and argue Blue ensures everyone survives when it is the majority, while claiming Red is risky because red-pressers would die if Blue is the majority (a correct mechanics claim about survival under Blue majority, but they do not identify Red as the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, social-utility framework. They demonstrate a clear rule error by repeatedly claiming that if the majority presses blue, red-pressers will die (the prompt states red-pressers survive if the majority is blue). Because they believe red-pressers die when blue wins, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

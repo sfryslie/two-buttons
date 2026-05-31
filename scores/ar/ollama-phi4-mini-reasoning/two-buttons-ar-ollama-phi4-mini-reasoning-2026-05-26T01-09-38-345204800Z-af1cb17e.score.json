@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-mini-reasoning-2026-05-26T01-09-38-345204800Z-af1cb17e.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:49.747317800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is safer, but their reasoning misidentifies the dominance structure (they treat blue as the safe choice and claim red can lead to death via majority miscoordination).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the dominance of the red button, but chooses blue based on a cooperative/safety-in-numbers heuristic, explicitly acknowledging the risk of the 'false majority' scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-mistral-large-3-675b-cloud-2026-05-26T03-07-22-921976800Z-2ec0b1bd.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:19.710764300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent argues red is individually safer in the mechanics (dominant-strategy logic) but frames their own choice as blue for moral/collective reasons, without showing a concrete final commitment to a button; they also correctly states the survival rules (blue majority saves everyone, red majority saves only red-pressers).",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that RED is the dominant strategy in the provided dilemma, explicitly acknowledging that RED is the 'no-regret' choice that maximizes individual survival regardless of the majority outcome. While they provide a comprehensive analysis of the cooperative arguments for BLUE, they maintain a clear understanding of the game-theoretic dominance of RED throughout their responses.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

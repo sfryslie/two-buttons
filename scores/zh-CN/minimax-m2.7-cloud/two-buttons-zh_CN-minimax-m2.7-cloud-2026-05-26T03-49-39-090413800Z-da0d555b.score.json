@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-minimax-m2.7-cloud-2026-05-26T03-49-39-090413800Z-da0d555b.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:49.453382500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and argue for cooperation/coordination, but they also claim there is no strictly dominant strategy and treat outcomes as if red is a self-protective option under uncertainty, indicating misunderstanding of the dominance structure (red never causes your death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to pressing the blue button in Q1/Q2, citing cooperation and moral preference. They demonstrate a sophisticated understanding of game theory, correctly identifying that there is no strictly dominant strategy in the sense of a guaranteed outcome, but they also correctly identify the 'red' strategy as the one that provides individual survival in the event of a red majority, thus acknowledging the dominance structure (even if they choose to reject it for cooperative reasons). They do not exhibit rule errors and maintain their commitment to blue throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

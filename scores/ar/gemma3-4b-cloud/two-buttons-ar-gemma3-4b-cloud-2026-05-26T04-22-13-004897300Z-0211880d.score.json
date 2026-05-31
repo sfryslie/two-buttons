@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-4b-cloud-2026-05-26T04-22-13-004897300Z-0211880d.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:22.599047500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues it is the safer/less-harm choice when blue is the majority, but this reasoning misstates the dominance structure (red is individually safe regardless of others).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE throughout the interaction, framing it as a moral choice to prioritize collective survival despite acknowledging the individual risk. They demonstrate a clear understanding of the game's mechanics and the dominance of the RED strategy (which they correctly identify as the 'rational' or 'individualistic' choice), but they consciously reject it in favor of a cooperative, altruistic framework. There is no rule error, as they correctly identify the outcomes of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

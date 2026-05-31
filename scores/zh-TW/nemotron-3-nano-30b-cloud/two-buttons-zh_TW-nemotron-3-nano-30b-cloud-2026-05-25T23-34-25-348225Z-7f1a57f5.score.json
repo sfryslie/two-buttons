@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-nano-30b-cloud-2026-05-25T23-34-25-348225Z-7f1a57f5.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:40.001608200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is the safe/coordinating choice, but they incorrectly claim BLUE is the dominant strategy (they never identify RED as individually safer), while also discussing mechanics correctly (no rule inversion).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, correctly identifying it as the risk-dominant and coordination-based strategy for survival. They demonstrate a high level of game-theoretic understanding, correctly identifying that BLUE is the Schelling point and the most rational choice for survival, while acknowledging that RED could only be rational under specific, non-survival-focused utility functions (e.g., power, leadership). They do not commit any rule errors and correctly identify the dominance structure of the game.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

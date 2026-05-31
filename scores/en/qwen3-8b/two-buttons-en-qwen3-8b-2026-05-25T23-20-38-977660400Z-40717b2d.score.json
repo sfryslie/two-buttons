@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-8b-2026-05-25T23-20-38-977660400Z-40717b2d.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-26T05:23:10.894694Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safer/rational choice under coordination assumptions, but they incorrectly claim red is risky and that blue minimizes death risk, showing misunderstanding of the dominant strategy mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a desire for collective survival and a belief in coordination, but they fail to identify the dominant strategy. They incorrectly state that pressing blue is 'safe' if others choose blue and 'risky' if others choose red, while failing to recognize that red is the dominant strategy because it never results in death regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-8b-2026-05-26T01-11-25-548590900Z-77122da2.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-26T05:23:58.995547Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige consistentemente azul y razona que es la opción segura si los demás eligen azul, sin identificar la dominancia correcta (red) y además describe que azul puede llevar a muerte cuando gana azul/rojo según supuestos, mostrando comprensión incompleta de la mecánica/dominancia.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but chooses BLUE based on a preference for collective rationality and Nash equilibrium, while explicitly acknowledging that RED is the safer, more pragmatic choice in conditions of uncertainty or individualistic behavior. They demonstrate a clear understanding of the dominance structure (that RED is the safer individual choice) but reject it in favor of a cooperative outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

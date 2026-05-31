@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-12b-cloud-2026-05-26T05-00-54-831846400Z-372a6c4f.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:17.497880700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue that blue yields everyone’s survival if others cooperate, and they do not claim the mechanics are inverted; they also acknowledge red’s “individual survival” appeal but still defend blue, without showing correct dominant-strategy identification.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective rationality and cooperation. They acknowledge the 'mercenary' or individualistic argument for red but reject it in favor of a cooperative strategy. They do not demonstrate an understanding of the dominant strategy (that red is safer regardless of the outcome), as they frame the choice as a coordination problem where red is only chosen out of fear or selfishness, failing to recognize that red is mathematically safer even if everyone else chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

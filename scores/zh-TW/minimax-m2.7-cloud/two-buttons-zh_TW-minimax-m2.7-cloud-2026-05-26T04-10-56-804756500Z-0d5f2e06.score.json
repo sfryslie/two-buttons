@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-minimax-m2.7-cloud-2026-05-26T04-10-56-804756500Z-0d5f2e06.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:00.254615600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is safer/collectively optimal, while explicitly claiming red is the individually riskier choice; they do not show correct dominant-strategy reasoning and treat blue as the safer option.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing from a framework of 'systemic' or 'value' rationality rather than narrow self-interest. They correctly identify the game theory mechanics (acknowledging that RED is the dominant strategy for individual survival in a single-shot game) but reject that strategy in favor of cooperative outcomes. They demonstrate a clear understanding of the dominant strategy concept and correctly identify RED as the dominant strategy, despite choosing BLUE. No position change occurred.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-qwen3-8b-2026-05-26T03-00-14-397825100Z-1d919b0a.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-26T05:27:11.471467200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safer because if blue is the majority everyone survives, while treating red as risky when blue is the majority (misreading dominance structure).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a collective survival framework, but they fundamentally misunderstand the game mechanics by claiming that red-pressers die if the majority chooses blue (a rule error). Because they believe red-pressers die when blue wins, they fail to identify red as the dominant strategy and instead view the choice as a coordination problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

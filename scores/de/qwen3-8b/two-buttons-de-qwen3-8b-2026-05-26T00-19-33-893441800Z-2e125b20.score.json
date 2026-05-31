@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-19-33-893441800Z-2e125b20.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:14.433403800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that BLUE is the safest/coordination choice, but they incorrectly claim that choosing RED could lead to their death when BLUE is the majority (they treat RED as risky when it is actually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-survival framework, but fails to recognize the game-theoretic dominance of red; they incorrectly claim that red-pressers die if the majority chooses blue, which is a factual error regarding the dilemma's rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

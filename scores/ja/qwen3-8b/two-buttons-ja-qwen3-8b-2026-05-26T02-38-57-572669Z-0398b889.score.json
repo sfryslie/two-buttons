@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-8b-2026-05-26T02-38-57-572669Z-0398b889.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:37.359418500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safest because if blue is the majority everyone survives, but they also state that if red is the majority then blue-pressers die—this misreads the mechanics; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on cooperative logic, but explicitly shifts their final position to red in Q3/Q4, citing the dominance of self-interest and the risk of non-cooperation in a large population. They correctly identify the mechanics of the dilemma throughout, including the fact that red-pressers survive if red is the majority, and they demonstrate an understanding of dominant-strategy reasoning by acknowledging that red is the individually safer choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

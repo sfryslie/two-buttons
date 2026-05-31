@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-nemotron-3-nano-30b-cloud-2026-05-25T23-19-11-253158800Z-ff617655.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:21.947448300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (correctly) that blue majority yields everyone survives, while also claiming red is only viable if red becomes the majority; they do not make the known rule-error and do not shift their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through expected utility, cooperation, and game theory (public goods game). They correctly identify the mechanics of the dilemma and explicitly reject the red strategy as inferior in terms of survival probability. They demonstrate a clear understanding of dominant strategy reasoning by acknowledging the theoretical possibility of red as a 'selfish' gamble but rejecting it in favor of the cooperative, higher-utility blue outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

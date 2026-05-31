@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-16-22-682893100Z-5ab362ee.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:15.943856600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safe/optimal choice when blue is the majority, but they also claim blue is the only way to ensure their survival when the majority is blue and they never identify red as the dominant strategy; they correctly describe the blue-majority outcome (everyone survives) but misapply dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, group-oriented framework. They fail to identify red as the dominant strategy, instead viewing the dilemma as a coordination problem where blue is the 'optimal' choice for the group. They do not demonstrate an understanding of dominant-strategy reasoning, as they incorrectly frame the choice of red as 'risky' or 'uncoordinated' rather than recognizing it as the strategy that guarantees survival regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

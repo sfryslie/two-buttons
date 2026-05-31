@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-nemotron-3-nano-30b-cloud-2026-05-25T23-23-12-266229100Z-3984380a.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:26.511408600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (though with incorrect game-theory mechanics) that blue is safer because it maximizes survival probability when blue is the majority; they do not identify red as the dominant strategy and never correct that misconception.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through expected utility maximization and statistical probability based on global color preferences. They correctly identify that BLUE is the safer choice in their model, though they fail to recognize the game-theoretic dominant strategy (RED) because they incorrectly assume that pressing RED could lead to death in a RED-majority scenario (a rule error). They do not change their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

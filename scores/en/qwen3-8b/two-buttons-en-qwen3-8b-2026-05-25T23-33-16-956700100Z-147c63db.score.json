@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-8b-2026-05-25T23-33-16-956700100Z-147c63db.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-26T05:23:08.584693600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the dominant/risk-minimized choice, explicitly stating the correct survival mechanics and acknowledging red’s dominance while still choosing blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'rational' choice for collective survival, but they fundamentally misunderstand the game's mechanics by claiming blue is the 'dominant strategy' and that pressing blue is 'safe' if the majority is blue while ignoring that red is the actual dominant strategy (as red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-8b-2026-05-25T23-10-12-128751600Z-ef79a942.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-26T05:22:56.776683100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They choose Blue and treat the game as having no dominant strategy, claiming blue is the safer default under coordination assumptions, without recognizing red’s dominance; they also incorrectly say blue can lead to death when blue wins (they frame miscoordination as if blue were unsafe even though red dominates).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination problem but fails to recognize that red is a dominant strategy because they incorrectly believe that pressing red leads to death if the majority chooses blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

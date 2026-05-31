@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-32-33-180336500Z-cdde2b2d.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:29.947970200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit Minimax/Unsicherheit, obwohl er/sie zugleich korrekt beschreibt, dass bei roter Mehrheit nur Rot-Drücker überleben (und damit Rot als individuell sichere Wahl nahelegt), ohne die Dominanzstruktur korrekt zu identifizieren.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button while demonstrating a clear understanding of the game theory mechanics, including the fact that red is the dominant strategy. They explicitly acknowledge that red is the 'rational' choice for maximizing survival, but they choose blue based on a 'minimax' strategy and a belief that others might act irrationally. They do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-40-01-434708200Z-466282ca.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:23.958293900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der Respondent entscheidet sich klar für Blau und begründet dies damit, dass Blau die einzige garantierte Überlebensoption ist; er erkennt dabei die Mechanik korrekt, aber verfehlt die Dominanzlogik (rot ist individuell sicherer).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the safest strategy for collective survival. They fail to recognize that red is the dominant strategy because they incorrectly believe that if the majority presses red, blue-pressers die (which is true), but they also incorrectly imply that red-pressers are only safe if the majority is red (they are safe regardless of the majority). They do not demonstrate an understanding of dominant-strategy reasoning, as they view the choice as a coordination problem rather than an individual optimization problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

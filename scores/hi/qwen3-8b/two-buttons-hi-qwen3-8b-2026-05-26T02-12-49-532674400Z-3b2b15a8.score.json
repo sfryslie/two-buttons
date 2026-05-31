@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-8b-2026-05-26T02-12-49-532674400Z-3b2b15a8.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:25:42.046660600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer because red risks death if blue is the majority, showing correct mechanics but they do not identify red as the dominant strategy (they treat blue as the safe option).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and social logic, but repeatedly commits a rule error by claiming that red-pressers die if the majority chooses blue (when in fact everyone survives regardless of the majority if blue wins).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

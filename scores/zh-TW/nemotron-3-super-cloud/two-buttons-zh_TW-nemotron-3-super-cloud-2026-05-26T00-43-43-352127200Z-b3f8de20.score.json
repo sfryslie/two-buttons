@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-super-cloud-2026-05-26T00-43-43-352127200Z-b3f8de20.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:50.507057700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE conditionally on believing others will coordinate on blue, but they repeatedly claim the mechanics imply red is risk-dominant/safe and that blue can lead to your death when blue wins, which misreads the dominance structure (red is actually strictly dominant and never causes your death).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying the dominance of the red button (risk-dominant) while acknowledging that blue can be a rational choice under specific conditions like social norms, repeated games, or altruism. They explicitly state their choice is conditional on their belief about others' actions, which constitutes a hedged commitment.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

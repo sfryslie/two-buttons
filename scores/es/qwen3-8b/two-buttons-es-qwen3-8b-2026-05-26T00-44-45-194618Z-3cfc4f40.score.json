@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-8b-2026-05-26T00-44-45-194618Z-3cfc4f40.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-26T05:23:50.518451700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul y razona que azul es “más seguro” bajo coordinación, pero describe mecánicas incorrectas (afirma que si la mayoría elige rojo, los que eligieron azul mueren), por lo que no identifica la dominancia de rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative Nash equilibrium framework, while acknowledging the individualistic logic of red. They fail to identify red as the dominant strategy, incorrectly claiming that both colors carry the same risk of death depending on the majority, and they do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

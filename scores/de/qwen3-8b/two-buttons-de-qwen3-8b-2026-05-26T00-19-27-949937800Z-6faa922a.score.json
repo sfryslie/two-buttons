@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-19-27-949937800Z-6faa922a.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:14.558298400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE und begründet korrekt, dass BLUE die sichere Wahl ist, während er/sie dabei die Dominanzstruktur nicht erkennt (er/sie behauptet, BLUE sei garantiert sicher unabhängig vom Verhalten der anderen).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently argues for blue based on a misunderstanding of the game's mechanics, specifically claiming that red-pressers die if the majority presses blue (which contradicts the prompt's rule that everyone survives if the majority presses blue). Because they believe red is risky and blue is safe, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

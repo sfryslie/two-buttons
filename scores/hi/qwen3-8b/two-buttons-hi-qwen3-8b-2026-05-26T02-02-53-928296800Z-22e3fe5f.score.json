@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-8b-2026-05-26T02-02-53-928296800Z-22e3fe5f.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:25:40.047555500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safe when others also choose blue, but they incorrectly claim red is unsafe because they say red-pressers die when blue wins, showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on cooperative and collective survival, while acknowledging the red button as a 'personal defense strategy'. They fail to recognize that red is the dominant strategy because they incorrectly believe that pressing red requires being in the majority to survive, whereas the rules state red-pressers survive regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

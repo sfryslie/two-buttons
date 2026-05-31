@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-nemotron-3-nano-30b-cloud-2026-05-25T23-20-42-613016600Z-7c754f1b.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:24.722376200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is the safer/risk-dominant choice, but they repeatedly misapply the dominance structure (they treat BLUE as the safe option and claim red would kill the red-pressers when blue is majority), so their dominant-strategy understanding and application are incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the risk-dominant and expectation-maximizing strategy in a coordination game, while correctly identifying that RED is the dominant strategy only if one can guarantee being part of a decisive majority or possesses private information. The respondent demonstrates a sophisticated understanding of game theory, including Nash equilibria and pivotal voter logic, and correctly identifies the dominance structure of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

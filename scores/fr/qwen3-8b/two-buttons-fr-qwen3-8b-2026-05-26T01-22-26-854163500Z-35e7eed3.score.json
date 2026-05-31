@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-qwen3-8b-2026-05-26T01-22-26-854163500Z-35e7eed3.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-26T05:24:41.730554600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement BLEU et affirme que le bleu maximise la survie collective, tout en décrivant correctement que si la majorité est bleue alors tout le monde survit (donc pas d’erreur de règles), et il comprend la logique de minimisation du risque même s’il ne formule pas la dominance individuelle de façon explicite.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the rational choice for collective survival. They fail to identify red as the dominant strategy, incorrectly claiming that blue-pressers die if the majority is red (which is true) but also incorrectly implying that red-pressers die if the majority is blue (which is false, as the rules state everyone survives if the majority is blue). They demonstrate a fundamental misunderstanding of the game's mechanics by suggesting red-pressers die when the majority is blue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

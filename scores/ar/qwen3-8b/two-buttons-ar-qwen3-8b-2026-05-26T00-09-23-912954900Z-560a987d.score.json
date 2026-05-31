@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-8b-2026-05-26T00-09-23-912954900Z-560a987d.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:21:16.463691Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختار الأزرق كخيار شخصي ويبرر ذلك بالتنسيق/التعاون، مع وجود خطأ في فهم ميكانيكا اللعبة عند ادعائه أن اختيار الأزرق قد يؤدي إلى موته إذا ضغط الآخرون الأحمر (مع أن الجميع يعيش عند أغلبية الأزرق).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-survival framework, but they fundamentally misunderstand the game's mechanics by claiming that red-pressers die if the majority presses blue (the rules state everyone survives if blue wins) and by failing to recognize that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-qwen3-8b-2026-05-26T01-19-25-567680500Z-3b310be9.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-26T05:24:53.290637800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit bleu et justifie par une coordination/Nash sur le fait que si la majorité est bleue tout le monde survit, sans identifier la dominance de red (il affirme que rouge est risqué et que bleu est la meilleure stratégie).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative equilibrium argument, but they demonstrate a rule error by claiming that blue-pressers die if the majority chooses red (the prompt states only red-pressers survive in a red majority, but the respondent incorrectly implies blue-pressers die in that scenario). They do not correctly identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

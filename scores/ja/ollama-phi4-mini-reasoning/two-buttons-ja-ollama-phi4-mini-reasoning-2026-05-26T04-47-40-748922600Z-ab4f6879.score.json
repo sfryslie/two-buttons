@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-mini-reasoning-2026-05-26T04-47-40-748922600Z-ab4f6879.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:14.262266300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE (Q1/Q2) and argue blue is the safe choice, but they do not identify the dominance structure (red is individually safe regardless of others), and Q4 is off-topic about “red button” reasonableness rather than the dilemma mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies the blue button as the correct choice based on a misunderstanding of the game mechanics (believing that blue-pressers are safe regardless of the majority, or that they must coordinate to survive), but later shifts to a more complex analysis of 'red' as a symbol of danger or irrationality. They fail to identify the dominant strategy (RED) and instead treat the dilemma as a coordination problem where BLUE is the 'cooperative' or 'safe' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

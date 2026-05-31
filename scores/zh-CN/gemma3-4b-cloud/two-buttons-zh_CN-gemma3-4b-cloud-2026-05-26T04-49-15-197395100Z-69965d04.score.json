@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-4b-cloud-2026-05-26T04-49-15-197395100Z-69965d04.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:46.353159100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red and argues it minimizes their death risk, but they incorrectly claim red-pressers die when blue wins (and also misstate outcomes in several cases), so they do not apply the dominance structure correctly despite understanding the idea of individual risk minimization.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, correctly identifying it as the strategy that maximizes personal survival regardless of the majority outcome. They demonstrate a clear understanding of dominant-strategy reasoning and correctly apply it to the scenario, despite acknowledging the moral/cooperative arguments for BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

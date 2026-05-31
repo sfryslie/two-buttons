@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3.5-2026-05-25T23-29-45-763166900Z-2f3b0ca8.json",
+  "modelLabel" : "ollama-phi3.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:37.276507700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent consistently commits to pressing BLUE and argues that BLUE yields survival for everyone, correctly matching the scenario mechanics and not claiming the red-pressers die when blue wins.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, operating under the mistaken belief that the rules require a majority to press blue for everyone to survive, and failing to recognize that RED is a dominant strategy that guarantees survival regardless of the majority. They do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

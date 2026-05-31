@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-4b-cloud-2026-05-26T04-48-40-016989300Z-4b3a9cd3.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:45.374837600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is individually safer regardless of others, while also acknowledging red’s “sacrifice” framing; they do not state any rule-mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through a mix of risk-aversion and altruism. They demonstrate a fundamental rule error by claiming that if a majority press red, the blue-presser survives (the prompt states blue-pressers die in a red majority). They also incorrectly identify BLUE as the dominant strategy, failing to recognize that RED is the only choice that guarantees survival regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

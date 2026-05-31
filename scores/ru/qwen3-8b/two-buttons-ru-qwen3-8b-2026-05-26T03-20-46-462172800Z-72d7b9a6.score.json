@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-qwen3-8b-2026-05-26T03-20-46-462172800Z-72d7b9a6.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-26T05:27:21.376506400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue is safe because it yields everyone’s survival when it is the majority, explicitly stating that red-pressers die only when red is the majority; they also acknowledge red’s risklessness is not the case and do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative/collective survival framework. They fail to identify the dominant strategy (red), as they incorrectly believe that red-pressers die if a blue majority occurs (a rule error). They do not demonstrate an understanding of dominant-strategy reasoning, as they frame the choice entirely around coordination and collective outcomes rather than individual safety regardless of others' actions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

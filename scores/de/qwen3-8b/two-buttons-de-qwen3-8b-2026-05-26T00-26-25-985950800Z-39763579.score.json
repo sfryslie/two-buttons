@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-26-25-985950800Z-39763579.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:17.038961200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt klar Blau und begründet es als garantierte sichere Strategie, obwohl er/sie die Dominanzstruktur korrekt als „blau ist sicher“ statt „rot ist dominant“ einordnet; dabei liegt kein Regelmechanik-Fehler vor.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'safest' option. They exhibit a fundamental rule error by claiming that red-pressers die if the majority chooses blue, which contradicts the provided rules (where red-pressers survive regardless of the outcome). Because of this rule error, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

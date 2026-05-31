@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-qwen3-8b-2026-05-26T03-17-25-538341700Z-264639ee.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-26T05:27:29.373420800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it’s rational under coordination, while also acknowledging that choosing RED could be rational under low trust, but they never identify RED as the dominant individually safe strategy and they incorrectly treat BLUE as the optimal choice; no rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective coordination and social trust, while acknowledging the individualistic logic of the red button. They fail to identify red as the dominant strategy, incorrectly suggesting that a red majority could lead to everyone dying (a rule error), and they do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

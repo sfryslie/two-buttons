@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-8b-2026-05-26T02-42-20-244162700Z-cfef1f02.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:41.833565800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue for blue as the safe/cooperative choice, while also claiming red is the self-defensive option; however they misapply the dominance logic by treating blue as the individually safer strategy and describing red as risking their death when blue wins.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE in Q1/Q2 based on a cooperative Nash equilibrium, but shifts their position in Q3 to RED, arguing that in a large-scale population, RED is the more realistic and safer strategy for self-preservation. They demonstrate an understanding of the dilemma's mechanics and the concept of dominant strategy (acknowledging the 'self-defense' argument for RED), though they ultimately prioritize a pragmatic/probabilistic approach over the strict game-theoretic dominance of RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

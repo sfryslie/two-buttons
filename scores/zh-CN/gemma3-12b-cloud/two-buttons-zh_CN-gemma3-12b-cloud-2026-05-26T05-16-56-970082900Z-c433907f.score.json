@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-12b-cloud-2026-05-26T05-16-56-970082900Z-c433907f.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:31.994420200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, arguing it is individually safer, but they incorrectly claim that pressing blue leads to your death when blue loses and that red/blue outcomes are “deterministic death” in some cases; they also later discuss blue as moral without changing their vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory structure, acknowledges that RED is the dominant strategy for individual survival, and maintains this position throughout the discussion while acknowledging the moral/collective arguments for BLUE.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

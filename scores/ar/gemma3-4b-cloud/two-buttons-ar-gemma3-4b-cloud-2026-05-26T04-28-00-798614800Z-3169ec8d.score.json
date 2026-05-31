@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-4b-cloud-2026-05-26T04-28-00-798614800Z-3169ec8d.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:29.087912900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing RED, but their explanation contains incorrect mechanics (they claim red-pressers die when blue wins / when blue is majority), and they do not apply the dominant-strategy logic correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to the red button based on strategic self-interest, but their reasoning contains a significant rule error: they claim that if everyone presses red, only the individual survives (which is true), but they also imply that if everyone presses blue, the outcome is somehow less certain or that red is needed to 'guarantee' survival, failing to acknowledge that blue majority results in universal survival. They demonstrate an understanding of strategic game theory but misapply the dominance logic by failing to see that blue is a cooperative choice rather than a 'risky' one in the context of the provided rules. They remain consistent in their preference for red throughout the dialogue.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

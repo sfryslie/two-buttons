@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-8b-2026-05-26T01-53-13-799325400Z-5e2c9525.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:25:36.564423200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and repeatedly claims blue is the safer choice while asserting that if blue is pressed and red is the majority then the blue-pressers die, which misreads the mechanics; they do not demonstrate correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative framework, but they fundamentally misunderstand the game mechanics by claiming that blue-pressers die if the majority is red (which is true) while failing to recognize that red-pressers survive regardless of the majority outcome, thus missing the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

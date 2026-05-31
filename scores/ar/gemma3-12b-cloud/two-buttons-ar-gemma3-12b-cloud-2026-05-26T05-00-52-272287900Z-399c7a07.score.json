@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-12b-cloud-2026-05-26T05-00-52-272287900Z-399c7a07.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:17.245796600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختار الأزرق واعتبره الأكثر أمانًا/عقلانية عبر زيادة احتمال فوز الأزرق، لكنه لم يطبق منطق الاستراتيجية المهيمنة بشكل صحيح (اعتبر أن الأزرق قد يؤدي للموت إذا انتصر الأحمر) مع عدم وجود تغيير واضح في الموقف.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective reasoning and altruism, while explicitly acknowledging and steelmanning the dominant strategy (red) in Q2 and Q4. They correctly identify the game theory mechanics without rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

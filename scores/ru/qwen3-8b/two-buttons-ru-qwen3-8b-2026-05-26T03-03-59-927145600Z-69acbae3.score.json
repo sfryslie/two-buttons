@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-qwen3-8b-2026-05-26T03-03-59-927145600Z-69acbae3.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-26T05:27:14.062406200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safer only under coordination assumptions, but they do not identify red as the dominant strategy and they incorrectly claim red can make blue-pressers die when red wins (they say “if majority presses red, blue-pressers die”).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-good framework. While they acknowledge the risk of non-coordination, they fail to identify that the red button is a dominant strategy (it guarantees survival regardless of the majority). They do not demonstrate an understanding of dominant-strategy logic, instead framing the choice as a coordination game dependent on cultural assumptions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

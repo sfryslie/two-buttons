@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-nano-30b-cloud-2026-05-25T23-32-19-639495Z-928c9b5c.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:30.598810400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to BLUE (Q1/Q2/Q4 repeatedly argue for choosing blue to survive when expecting blue majority), but they misunderstand the dominance structure by claiming blue is the safer/“guaranteed” choice and treating red as only safe when it is majority; they also do not show correct dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive game-theoretic analysis, correctly identifying the coordination game structure and the two Nash equilibria. They acknowledge that red is often perceived as a 'self-protection' strategy but correctly identify that blue is a cooperative strategy. They do not commit to a single button, instead arguing that the choice depends on one's prediction of the majority, thus classifying as NONE. They demonstrate a sophisticated understanding of dominant strategy reasoning, correctly noting that red is often seen as safer in the absence of coordination, but they do not fall into the trap of claiming red is a strictly dominant strategy in the game-theoretic sense (as they correctly identify the coordination nature).",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

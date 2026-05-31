@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-19-23-130945800Z-58775a32.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:13.119656Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies damit, dass Blau das garantierte Überleben bei Mehrheits-Blau liefert und Rot als riskant dargestellt wird; dabei wird die Dominanzstruktur korrekt als „blau ist die einzige sichere Wahl“ interpretiert, aber die konkrete Dominanz (rot ist individuell sicher) wird verfehlt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'safe' choice based on a coordination assumption. They fail to recognize that red is the dominant strategy because they incorrectly believe that pressing red carries a risk of death if the majority chooses blue (a rule error). They do not demonstrate an understanding of dominant-strategy reasoning, as they view the dilemma purely as a coordination problem.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

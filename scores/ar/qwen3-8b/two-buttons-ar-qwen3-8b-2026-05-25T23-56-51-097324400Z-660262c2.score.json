@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-8b-2026-05-25T23-56-51-097324400Z-660262c2.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:21:09.610480400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue guarantees everyone survives while red is risky because it depends on an uncertain red majority; they correctly describe the mechanics and dominant-strategy logic (red is safe) is not identified, but no rule error is made.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing it is the 'safe' and 'rational' choice. They fundamentally misunderstand the game mechanics, believing that pressing red leads to death if the majority does not press red, and failing to recognize that red-pressers survive regardless of the outcome. Because they invert the safety of the buttons and believe red is risky, they fail to identify the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

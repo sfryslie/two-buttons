@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-8b-2026-05-26T02-27-58-722039700Z-c12165fe.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:30.676483400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is best under coordination, but they also claim blue-pressers may die when red is the majority (misreading the mechanics), while not identifying red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses blue based on cooperative ideals but shifts to red by Q3/Q4 after analyzing the game theory and risk, correctly identifying that red is the dominant strategy for individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

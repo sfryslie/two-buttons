@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-38-35-298054800Z-edfe9b8a.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:51.442488500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für BLUE und begründet dies mit Risiko-Minimierung/Mehrheit, zeigt aber einen Regelmechanik-Fehler (behauptet, dass bei blauer Mehrheit rote-Drücker sterben bzw. dass blaue Wahl zu Tod führen kann), während er/sie die Dominanzstruktur nicht korrekt erkennt.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative/probabilistic framework, but they fundamentally misunderstand the game's mechanics by claiming that red-pressers die if the blue button wins (a rule error) and failing to recognize that red is the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

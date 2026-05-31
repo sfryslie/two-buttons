@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-8b-2026-05-26T01-58-07-229158800Z-5068583d.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:25:38.805707500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues that blue is safe when expecting others to press blue, but they incorrectly claim that pressing blue can get you killed when others press red (and they never identify red as the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-benefit framework, while explicitly acknowledging the red button's strategic advantage in their steelman argument. They demonstrate an understanding of the game's structure (the risk of blue if others choose red) but prioritize the collective outcome, thus failing to apply the dominance principle to their own choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

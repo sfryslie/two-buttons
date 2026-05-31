@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-8b-2026-05-26T00-12-34-776079200Z-a4d1de07.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:21:17.372569300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and repeatedly claim BLUE guarantees their survival while RED is risky, which inverts the dominance structure (RED is actually individually safe).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing it is the 'safe' and 'rational' choice. They fundamentally misunderstand the game mechanics, believing that pressing blue guarantees survival regardless of the outcome, whereas the prompt explicitly states that if a red majority occurs, blue-pressers die. Because they believe blue is the safe choice and red is the risky one, they have inverted the dominance structure and committed a rule error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

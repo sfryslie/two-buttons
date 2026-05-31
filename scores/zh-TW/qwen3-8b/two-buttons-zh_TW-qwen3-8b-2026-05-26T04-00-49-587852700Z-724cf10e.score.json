@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-qwen3-8b-2026-05-26T04-00-49-587852700Z-724cf10e.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:31:06.179516400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is safer/collectively optimal, but they incorrectly claim red can cause their death when blue is the majority (and they frame equilibria in a way that conflicts with dominant-strategy logic).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a preference for collective survival and Pareto optimality, while correctly identifying that red is the individually safer strategy (risk minimization) in the absence of coordination. They demonstrate a clear understanding of the game's dominance structure (acknowledging red as the 'self-preservation' choice) but reject it in favor of cooperative outcomes. No rule errors were made; the respondent correctly identified the outcomes of both button choices.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

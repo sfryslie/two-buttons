@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-12b-cloud-2026-05-26T05-12-47-218085400Z-29e6dac9.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:26.142713600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und argumentiert dabei mit Kooperation/Erwartungen über andere, erkennt aber nicht die dominante Strategie korrekt (sie behauptet, Rot sei riskant und könne bei Blau-Mehrheit zum Tod führen).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative ethics and a belief in collective rationality, while explicitly acknowledging the dominance of RED as the 'guaranteed self-preservation' strategy. They correctly identify the mechanics of the dilemma and do not exhibit rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

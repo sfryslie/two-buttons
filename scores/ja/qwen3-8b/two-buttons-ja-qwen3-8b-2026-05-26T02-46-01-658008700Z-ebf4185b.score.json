@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-8b-2026-05-26T02-46-01-658008700Z-ebf4185b.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:47.812535800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is safer because blue majority yields everyone’s survival, but they do not identify the dominant-strategy structure (red never causes your death) and instead treat blue as the safer choice based on majority expectations.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, risk-averse, and collective-benefit framework, while failing to recognize that red is the dominant strategy (they incorrectly believe blue is safer/more rational). They demonstrate a fundamental misunderstanding of the game's mechanics by treating blue as the 'safe' choice and red as the 'risky' one, despite the prompt's clear rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

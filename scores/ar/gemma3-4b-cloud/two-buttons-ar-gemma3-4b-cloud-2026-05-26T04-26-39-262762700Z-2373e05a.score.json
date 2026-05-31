@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-4b-cloud-2026-05-26T04-26-39-262762700Z-2373e05a.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:35.034724200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "اختاروا الزر الأحمر صراحةً ويبررونه بتوقعات تعاونية/إقناع، مع اعتقادهم أن الأزرق يؤدي لموت من يضغط عليه (وهو خطأ في قواعد السيناريو)، كما أنهم يناقشون الهيمنة بشكل غير صحيح ويظلون غير متسقين مع منطق الاستراتيجية المهيمنة.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to the red button, arguing it is a strategic choice for survival. However, they demonstrate a fundamental rule error by claiming that if everyone presses blue, they die (which is true), but then suggesting that if the majority presses red, they must convince the minority to change to red to survive, implying they believe red-pressers are at risk if the majority is blue or that red-pressers need the minority to switch to ensure their own survival. They also invert the dominance logic in Q2 by claiming blue is the 'self-protective' choice, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the outcome. They remain committed to the red button throughout the discussion.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

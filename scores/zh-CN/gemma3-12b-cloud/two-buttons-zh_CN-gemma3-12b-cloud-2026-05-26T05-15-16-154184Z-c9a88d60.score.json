@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-12b-cloud-2026-05-26T05-15-16-154184Z-c9a88d60.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:36.603930Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, arguing it avoids the worst case and requires trust, but they do not identify the dominance structure (they treat red as risky for red-pressers), so their dominant-strategy application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective interest and risk aversion, while correctly identifying that red is the individually rational (dominant) strategy in a game-theoretic sense. They do not exhibit rule errors and clearly distinguish between their chosen cooperative strategy and the dominant strategy of defection.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

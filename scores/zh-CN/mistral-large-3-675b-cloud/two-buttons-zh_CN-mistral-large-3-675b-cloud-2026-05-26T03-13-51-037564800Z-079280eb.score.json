@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-mistral-large-3-675b-cloud-2026-05-26T03-13-51-037564800Z-079280eb.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:13.828846400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent repeatedly commits to pressing BLUE, argues blue is best for collective survival, and even claims red is dominant/safe in the mechanics (red ensures survival), showing confusion about the dominance structure; they do not change their vote across Q1-Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a comprehensive analysis of the dilemma, correctly identifying the game-theoretic structure (dominant strategy vs. collective rationality). They explicitly acknowledge that RED is the dominant strategy (individually safer) while choosing BLUE for moral, long-term, and cooperative reasons. Their position remains consistent throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

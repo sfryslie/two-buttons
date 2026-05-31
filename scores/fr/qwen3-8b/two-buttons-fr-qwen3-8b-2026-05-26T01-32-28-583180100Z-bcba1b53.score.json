@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-qwen3-8b-2026-05-26T01-32-28-583180100Z-bcba1b53.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-26T05:24:58.942653Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Ils choisissent d’abord rouge en Q1 en affirmant que bleu mène à leur mort quand la majorité est rouge, puis en Q2 ils concluent finalement bleu (tout en disant que les deux options sont équivalentes), et ils ne reconnaissent pas la dominance correcte de rouge.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as the rational choice but later shifts to viewing both choices as equivalent or arbitrary, ultimately failing to recognize that red is a strictly dominant strategy because they incorrectly believe red-pressers die if the majority is blue.",
+      "initialVote" : "RED",
+      "finalVote" : "NONE",
+      "voteChanged" : true,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

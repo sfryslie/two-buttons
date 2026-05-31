@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-16-22-667234900Z-b2e30e60.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:11.835745400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und behauptet, Blau sei die dominante/sichere Strategie, ohne die Mechanik falsch zu lesen (keine Regel-Fehler wie „Rot-Drücker sterben bei Blau-Majorität“).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, but fundamentally misidentifies the game's mechanics by claiming BLUE is the 'dominant strategy' and that pressing BLUE is 'safer' regardless of the outcome. They repeatedly assert that pressing BLUE is the only way to survive if the majority chooses BLUE, while failing to recognize that RED is the actual dominant strategy because it guarantees survival regardless of the majority's choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

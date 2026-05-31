@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-39-09-509402300Z-e02d61eb.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:47.155039200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für den blauen Knopf und behauptet dabei, dass blau garantiert überleben lässt, während er/sie gleichzeitig die Dominanzlogik durcheinanderbringt (er/sie sagt, blau sei die einzige sichere Strategie, obwohl im Szenario rot individuell sicherer ist).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing it is the 'safe' strategy, but they demonstrate a fundamental rule error by claiming that red-pressers die if the majority chooses blue (the prompt states everyone survives if the majority chooses blue). They also incorrectly identify the blue button as the dominant strategy, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-8b-2026-05-25T23-37-05-235444100Z-98857f83.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "en",
+  "scoredAt" : "2026-05-26T05:23:16.019050Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They consistently choose blue and argue it is the safer coordination outcome, but they incorrectly treat blue as the safer option rather than recognizing that red is the dominant strategy that guarantees individual survival regardless of others.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-good framework, but fails to identify that red is the dominant strategy because they incorrectly believe that pressing blue is safer and that red-pressers die if the majority is blue (or that red is only safe if others also choose red).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-4b-cloud-2026-05-26T04-41-06-153893300Z-e6189033.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:37.490640400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red, but their analysis repeatedly claims blue is safer/collectively optimal and that red can lead to death when blue wins, showing misunderstanding of the dominance structure; they do not shift votes later.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to pressing RED in Q2, demonstrating a clear understanding of the game's mechanics and the dominant strategy (that red ensures survival regardless of the majority). They correctly identify that red is the dominant strategy and maintain this position throughout the discussion.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

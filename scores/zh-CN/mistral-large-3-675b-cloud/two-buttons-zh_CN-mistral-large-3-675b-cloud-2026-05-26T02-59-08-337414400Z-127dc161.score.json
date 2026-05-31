@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-mistral-large-3-675b-cloud-2026-05-26T02-59-08-337414400Z-127dc161.json",
+  "modelLabel" : "mistral-large-3:675b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:00.735668600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent correctly identifies red as the dominant strategy (pressing red never causes their death) but argues for blue on moral/long-term grounds, and they do not show any rule-mechanics error; they never clearly commit to a personal button choice, so initial/final votes remain NONE.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in both Q1 and Q2, citing game theory principles like Nash equilibrium and dominant strategy. They acknowledge the moral and cooperative arguments for BLUE but maintain that RED is the rational choice for an individual in a one-shot game. Their position remains consistent throughout the response.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

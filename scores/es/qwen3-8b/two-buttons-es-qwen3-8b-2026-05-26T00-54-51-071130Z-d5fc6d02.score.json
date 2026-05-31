@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-8b-2026-05-26T00-54-51-071130Z-d5fc6d02.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-26T05:23:53.923566300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul y justifica que azul garantiza supervivencia si la mayoría elige azul, pero describe incorrectamente que al ganar azul los que presionan rojo mueren (y que rojo es la opción segura), mostrando confusión con la dominancia; no hay cambio explícito de voto.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to BLUE based on collective survival, but throughout the analysis, they correctly identify RED as the dominant strategy (autoconservación/Nash equilibrium). They acknowledge that RED is safer because it guarantees survival if the majority chooses RED, whereas BLUE leads to death if the majority chooses RED. Despite this, they maintain their initial choice of BLUE as a cooperative/altruistic stance, demonstrating a clear understanding of the dominance structure while rejecting it for normative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

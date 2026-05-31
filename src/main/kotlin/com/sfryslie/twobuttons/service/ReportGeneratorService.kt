@@ -443,8 +443,14 @@ function getFamily(m){
 }
 function getWeight(m){
   m=m.toLowerCase();
-  if(m.startsWith('ollama-')||m.includes('-cloud')||m.includes(':cloud')||m.includes('gpt-oss')||m.includes('gpt:oss'))return'open';
-  return'proprietary';
+  // Explicitly proprietary API-only models
+  if(m.startsWith('claude'))return'proprietary';
+  if(m.startsWith('gpt-')&&!m.includes('oss'))return'proprietary';
+  if(m.startsWith('o1')||m.startsWith('o3')||m.startsWith('o4'))return'proprietary';
+  if(m.startsWith('gemini'))return'proprietary';
+  if(m.startsWith('grok'))return'proprietary';
+  // Everything else is open weight (local ollama, cloud-served open models, etc.)
+  return'open';
 }
 
 const ALL_FAMILIES=[...new Set(DATA.map(d=>getFamily(d.model)))].sort();

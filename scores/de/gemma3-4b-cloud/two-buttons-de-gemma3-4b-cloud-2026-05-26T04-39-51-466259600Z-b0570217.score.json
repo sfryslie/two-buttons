@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-39-51-466259600Z-b0570217.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:42.700827300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für den roten Knopf und begründet dies mit (falsch verstandener) Worst-Case-Logik, während er/sie gleichzeitig die Dominanzstruktur nicht korrekt anwendet (behauptet, bei blau sterbe man, und behandelt blau als riskant).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies the red button as the rational choice based on game-theoretic dominance, correctly articulating that red is the safer option regardless of the majority outcome. They maintain this position throughout the dialogue, acknowledging the moral arguments for blue without shifting their own commitment.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

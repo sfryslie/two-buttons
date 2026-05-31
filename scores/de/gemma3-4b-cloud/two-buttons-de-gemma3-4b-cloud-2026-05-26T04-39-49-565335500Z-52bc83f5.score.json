@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-39-49-565335500Z-52bc83f5.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:42.327494100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und behauptet korrekt, dass bei Mehrheit Blau alle überleben (bei Mehrheit Rot stirbt nur der/die Blau-Drücker), erkennt damit die Dominanzstruktur nicht als RED-dominant, sondern hält Blau für die sichere Wahl.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the 'safest' strategy based on a misunderstanding of the game's mechanics. They incorrectly believe that pressing RED leads to death if the majority presses BLUE (the prompt states everyone survives if the majority presses BLUE, regardless of their own choice). Because they believe RED is risky/lethal in certain scenarios, they fail to identify RED as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

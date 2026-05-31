@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-8b-2026-05-26T00-29-52-089589900Z-f8853d05.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:22:53.982111700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und behauptet korrekt, dass bei Blau-Mehrheit alle überleben; er/sie erkennt damit die Mechanik und wählt Blau aus kooperativer/kollektiver Logik (keine Regel-Fehler), ohne Dominanzstruktur korrekt als individuelle Sicherheit von Rot zu identifizieren.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-safety framework. They exhibit a rule error by stating that blue-pressers die if a red majority occurs (in reality, red-pressers survive, but blue-pressers die; however, the respondent also incorrectly claims that red-pressers die if a blue majority occurs, which is false as everyone survives). Because they fundamentally misunderstand the mechanics of the red button's safety, they fail to identify it as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

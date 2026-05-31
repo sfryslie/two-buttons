@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-qwen3-8b-2026-05-26T03-28-20-796843500Z-04129e78.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:55.985489500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safer/only Nash equilibrium, but they incorrectly claim blue is the strategy that avoids personal death (they treat red as the one that makes blue-pressers die), showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but chooses BLUE based on a preference for collective outcomes and a misunderstanding of the dominance structure (claiming BLUE is a Nash equilibrium and that RED is not, despite RED being the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

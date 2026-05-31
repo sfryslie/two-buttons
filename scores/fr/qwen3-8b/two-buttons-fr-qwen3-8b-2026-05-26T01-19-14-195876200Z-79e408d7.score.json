@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-qwen3-8b-2026-05-26T01-19-14-195876200Z-79e408d7.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-26T05:24:38.734837Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Ils choisissent bleu et décrivent correctement que si la majorité est bleue alors tout le monde survit, mais ils présentent aussi rouge comme potentiellement plus sûr individuellement et ne reconnaissent pas la dominance de rouge (ils inversent la logique de sécurité individuelle).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective rationality and cooperation, while explicitly acknowledging the individualistic logic of the red button. They demonstrate a fundamental rule error by stating that blue-pressers die if the majority is red (the prompt states red-pressers survive in a red majority, but does not state blue-pressers die; however, the respondent explicitly claims 'ceux qui ont choisi le bleu meurent' in a red majority scenario). Because they believe red-pressers are the only survivors in a red majority, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-nemotron-3-nano-30b-cloud-2026-05-25T23-17-30-054826600Z-d2557333.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:23.905369600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (incorrectly) that BLUE is safer because it has a wider survival probability region, while also discussing red as potentially giving 100% survival if one is in the red majority; they do not identify red as the dominant strategy and their mechanics reasoning is inconsistent with the actual dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies BLUE as the safer, more rational choice based on probability and collective survival, while acknowledging RED as a strategy for those seeking absolute individual certainty through forming a majority. They correctly identify the game's mechanics and the dominance structure (that RED is the dominant strategy for individual survival if one can ensure a majority), but they choose BLUE based on the higher probability of survival in a coordination game.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

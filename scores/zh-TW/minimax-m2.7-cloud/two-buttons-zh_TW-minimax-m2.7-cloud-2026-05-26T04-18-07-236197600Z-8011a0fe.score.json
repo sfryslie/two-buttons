@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-minimax-m2.7-cloud-2026-05-26T04-18-07-236197600Z-8011a0fe.json",
+  "modelLabel" : "minimax-m2.7:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:04.997655300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue blue is chosen for cooperation/moral reasons, while also (incorrectly) claiming red is the risk-dominant strategy and that blue can be “必死” when red is majority; they do not identify red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the dominance of the red button, but chooses blue based on moral and cooperative values. They demonstrate a clear understanding of the dominant strategy (risk-dominant vs. payoff-dominant) and do not change their position.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

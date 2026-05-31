@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-4b-cloud-2026-05-26T04-48-56-138105300Z-3a945a7e.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:47.233210400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to a random choice (not clearly red or blue), argues that randomization avoids “actively causing death,” and later claims red would be chosen by most people and that only red-pressers survive, while also framing blue as potentially “contextually rational” without identifying red as the dominant safe strategy.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to identify the dominant strategy, instead treating the dilemma as a paradox requiring random choice to avoid 'causing' death. They exhibit a rule error by suggesting that if a majority presses blue, red-pressers might die (or that their own choice determines the outcome for others), and they fail to recognize that red is strictly dominant because it guarantees survival regardless of the majority. They remain uncommitted to a specific button, opting for a 'random' strategy throughout.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

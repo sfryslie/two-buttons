@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-12b-cloud-2026-05-26T05-11-51-534962800Z-55be6ce3.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:24.666982700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt Blau und begründet dies mit Hoffnung auf Kooperation/Altruismus, erkennt zwar das Nash-Gleichgewicht und behauptet, Rot sei individuell sicher, verkennt aber die Mechanik (bei Rot-Mehrheit sterben nicht die Blau-Drücker) und damit die Dominanzstruktur.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on altruism and social cooperation, while explicitly acknowledging and correctly identifying the red button as the dominant strategy (Nash equilibrium) from a purely egoistic perspective.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

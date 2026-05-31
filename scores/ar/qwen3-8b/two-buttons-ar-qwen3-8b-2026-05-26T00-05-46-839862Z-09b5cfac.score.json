@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-8b-2026-05-26T00-05-46-839862Z-09b5cfac.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:21:10.413534900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safe/“dominant” choice under uncertainty, while also claiming red can be a dominant strategy in some cases; they do not correctly apply the dominance structure (red is actually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the 'safe' and 'rational' choice. They demonstrate a fundamental rule error by claiming that red-pressers die if the blue majority wins (the prompt states everyone survives if blue wins). They also incorrectly identify blue as the 'dominant strategy' in game-theoretic terms, failing to recognize that red is the dominant strategy because it guarantees survival regardless of the outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

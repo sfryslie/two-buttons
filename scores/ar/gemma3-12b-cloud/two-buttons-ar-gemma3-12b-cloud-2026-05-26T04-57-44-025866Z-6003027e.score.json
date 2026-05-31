@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gemma3-12b-cloud-2026-05-26T04-57-44-025866Z-6003027e.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:20:03.199159Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue it is the safe option because it guarantees their survival, and later discuss rationality in a way that still defends BLUE; they do not claim any rule inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, arguing it is the safest option. They demonstrate a fundamental rule error by claiming that if the majority presses red, blue-pressers die (the prompt states blue-pressers die only if the majority presses red, but the respondent fails to recognize that red is the dominant strategy because they believe blue is the only way to guarantee survival regardless of the outcome). They do not correctly identify the dominance structure, as they view blue as the 'safe' choice and red as the 'risky' one, which is the inverse of the actual game mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

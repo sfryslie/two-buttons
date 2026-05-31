@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-4b-cloud-2026-05-26T04-51-38-136424100Z-6d2105fe.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:29:44.273894600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "他明确选择红色，并认为蓝色在多数情况下更安全、红色至少能确保自己活下去；但他把机制理解成“红色在蓝色多数时会导致死亡/或红色多数导致所有人死亡”的反向逻辑，因此既不理解优势策略也存在规则错误。",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, correctly identifying it as a strategy to ensure personal survival regardless of the majority outcome. While they engage in extensive psychological and sociological analysis, they maintain their commitment to RED throughout the interaction and demonstrate a clear understanding of the dominance structure (that RED is safer than BLUE).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

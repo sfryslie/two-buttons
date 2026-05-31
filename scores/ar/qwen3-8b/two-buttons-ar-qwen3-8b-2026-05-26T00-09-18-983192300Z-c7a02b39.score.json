@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-8b-2026-05-26T00-09-18-983192300Z-c7a02b39.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-26T05:21:16.624104800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue ensures everyone survives when it is the majority, with no rule inversion; they also discuss that red could be rational under alternative beliefs but still treat blue as the optimal choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-survival framework, while explicitly misinterpreting the game mechanics by claiming that blue-pressers die if a red majority occurs (the rules state red-pressers survive in a red majority, but blue-pressers die; the respondent incorrectly frames the blue choice as the only way to avoid death in all scenarios).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-qwen3-8b-2026-05-26T03-28-20-812186300Z-d5b5b6cf.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:28:56.152885700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, but repeatedly states the incorrect mechanics that blue-pressers die when red is the majority, and frames blue as the safer/collectively rational choice despite this rule misunderstanding.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on collective interest and Pareto optimality, while correctly identifying that RED is the individually rational (dominant) strategy in game-theoretic terms. They demonstrate a clear understanding of the dilemma's mechanics and do not commit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

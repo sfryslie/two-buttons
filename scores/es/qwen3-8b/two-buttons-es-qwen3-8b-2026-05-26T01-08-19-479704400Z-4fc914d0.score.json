@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-8b-2026-05-26T01-08-19-479704400Z-4fc914d0.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-26T05:24:09.003209500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul y razona que azul es la mejor opción colectiva si se coordina, pero afirma incorrectamente que si la mayoría elige rojo entonces los que eligen azul mueren (cuando en realidad todos sobreviven si hay mayoría azul).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on cooperative game theory and Nash equilibrium, while acknowledging the red button as a potential individualistic strategy. They fail to identify the dominant strategy (red) because they incorrectly believe that red-pressers die if the majority chooses blue, which is a factual error regarding the dilemma's rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

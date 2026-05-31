@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-4b-cloud-2026-05-26T04-34-47-130873300Z-8ed05b04.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:29.787862200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE und behauptet dabei, dass BLUE die dominante Strategie sei, obwohl er/sie zugleich fälschlich sagt, dass man beim blauen Knopf sterben könne, wenn die Mehrheit rot drückt (Regelmechanikfehler).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button throughout the dialogue, framing it as the 'rational' choice for collective survival despite acknowledging the game-theoretic dominance of red. They demonstrate a clear understanding of the dilemma's mechanics, though they initially misidentify the dominant strategy (claiming blue is dominant in Q1/Q2, which is a rule error/inversion). They do not change their position, maintaining their preference for blue as a cooperative/socially rational act.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

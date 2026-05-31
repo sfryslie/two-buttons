@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-nemotron-3-super-cloud-2026-05-25T23-40-10-049905200Z-501a1749.json",
+  "modelLabel" : "nemotron-3-super:cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-05-26T05:24:55.304693400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it’s rational when they believe blue will be the majority, explicitly treating the dilemma as a coordination game with no dominant strategy; they also state blue can be irrational if their belief about majority is wrong, and they do not make any rule-mechanics inversion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as a coordination game but fails to recognize the dominant strategy (RED). They incorrectly treat the game as having two symmetric Nash equilibria (All-Blue and All-Red) and argue that BLUE is a rational choice based on social norms and coordination, while failing to acknowledge that RED is strictly dominant because it guarantees survival regardless of the majority outcome. They consistently choose BLUE throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

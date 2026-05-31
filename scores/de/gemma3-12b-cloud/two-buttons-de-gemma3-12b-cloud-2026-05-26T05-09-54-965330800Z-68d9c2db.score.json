@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-12b-cloud-2026-05-26T05-09-54-965330800Z-68d9c2db.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-26T05:21:20.637850300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für BLUE und behauptet dabei, dass bei Mehrheit blau alle überleben, aber bei Mehrheit rot der blaue Knopf-Drücker stirbt; damit verkennt er/sie die Dominanzstruktur (red ist individuell sicher) und wählt dennoch blau aus moralisch-kooperativen Gründen.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and cooperative values, while correctly identifying and steelmanning the dominant strategy (red) as the rational choice for self-interest. They demonstrate a clear understanding of the game theory mechanics without committing any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

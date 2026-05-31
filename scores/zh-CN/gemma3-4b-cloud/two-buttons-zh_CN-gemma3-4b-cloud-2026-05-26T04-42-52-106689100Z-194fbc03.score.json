@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-4b-cloud-2026-05-26T04-42-52-106689100Z-194fbc03.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:41.288585900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing a random button (not clearly red or blue), argues that blue can be risky if others choose red, and frames blue as a “socially rational” choice while not identifying red as the dominant strategy; they also correctly describe that outcomes depend on others’ choices but their dominance reasoning is incorrect.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dilemma but fails to recognize the dominant strategy, instead opting for a 'random' choice to avoid the dilemma's complexity. They exhibit a rule error by claiming that if others press red, the blue-presser dies (which is true), but they also imply that if others press blue, the red-presser dies (which is false, as everyone survives if the majority is blue). They do not demonstrate an understanding of dominant-strategy reasoning, as they treat the choice as a symmetric risk rather than identifying that red is strictly dominant.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "NONE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-qwen3-8b-2026-05-26T01-39-36-264381100Z-21075c81.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-26T05:25:02.413427200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant choisit clairement bleu et justifie correctement que bleu garantit la survie si la majorité est bleue, mais il décrit à tort que le rouge peut faire mourir les rouge-pressers quand le bleu gagne (alors que dans ce cas tout le monde survit), tout en reconnaissant une logique de stratégie dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, arguing it is the rational choice for collective survival. They demonstrate a significant rule error by repeatedly claiming that red-pressers die if the majority is blue (the rules state everyone survives if the majority is blue) and by incorrectly identifying blue as the dominant strategy. Because they have a rule error, they cannot correctly apply the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

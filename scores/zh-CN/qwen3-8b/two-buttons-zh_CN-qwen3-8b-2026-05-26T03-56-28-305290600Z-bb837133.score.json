@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-qwen3-8b-2026-05-26T03-56-28-305290600Z-bb837133.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:29:14.346071200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues blue is safer/collectively optimal, while also incorrectly claiming that choosing blue can lead to the blue-pressers dying when red is the majority (they treat blue as risky rather than red being dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective rationality and moral considerations, while explicitly acknowledging that red is the safer individual strategy (the dominant strategy) in the face of uncertainty. They correctly identify the game's mechanics and the dominance of red, even though they choose to reject that dominance in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

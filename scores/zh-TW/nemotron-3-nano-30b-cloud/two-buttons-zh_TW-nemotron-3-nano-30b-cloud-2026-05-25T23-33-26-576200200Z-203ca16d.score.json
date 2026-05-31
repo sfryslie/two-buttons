@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-nano-30b-cloud-2026-05-25T23-33-26-576200200Z-203ca16d.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:30.457244900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues that BLUE is the (dominant/safe) strategy, while also claiming that red is only safe when red is the majority; they do not identify RED as the dominant strategy and thus misapply dominance logic.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, arguing it is the Pareto-optimal and risk-dominant strategy in a symmetric, rational environment. They demonstrate a sophisticated understanding of game theory, including Nash equilibrium and Pareto optimality, and correctly identify that RED is the dominant strategy in a purely self-interested, non-cooperative framework, while choosing BLUE based on a cooperative utility function.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

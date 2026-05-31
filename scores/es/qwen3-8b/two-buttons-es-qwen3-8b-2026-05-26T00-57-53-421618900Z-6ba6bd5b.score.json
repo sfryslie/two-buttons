@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-8b-2026-05-26T00-57-53-421618900Z-6ba6bd5b.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "es",
+  "scoredAt" : "2026-05-26T05:23:53.548943200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul y razona que azul es la opción para maximizar supervivencia colectiva si la mayoría también coopera, pero afirma que azul puede implicar morir cuando la mayoría elige rojo (lo cual contradice la mecánica donde con mayoría azul sobreviven todos y con mayoría roja sobreviven solo los rojos).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics and the dominance of the red button, even while personally choosing blue for ethical/cooperative reasons. They demonstrate a clear understanding of the dominant strategy (red) and correctly apply it, noting that blue is a 'risk' or 'hope' that lacks the safety of red. They do not change their position, maintaining that blue is their choice based on collective values despite acknowledging the rational superiority of red for individual survival.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

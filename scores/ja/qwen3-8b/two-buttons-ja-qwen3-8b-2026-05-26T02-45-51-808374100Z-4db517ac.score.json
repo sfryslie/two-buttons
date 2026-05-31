@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-8b-2026-05-26T02-45-51-808374100Z-4db517ac.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:41.451063700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the safe/collectively optimal choice, but they incorrectly treat red as the strategy that guarantees their survival when others choose blue, showing misunderstanding of the dominance/survival mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on collective benefit and cooperation, while acknowledging the individualistic logic of RED. They correctly identify the mechanics of the dilemma (Blue majority = everyone survives; Red majority = only red-pressers survive) and do not exhibit rule errors. They demonstrate an understanding of dominant-strategy reasoning by correctly identifying that RED is the safer choice for individual survival, even though they personally reject that strategy in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

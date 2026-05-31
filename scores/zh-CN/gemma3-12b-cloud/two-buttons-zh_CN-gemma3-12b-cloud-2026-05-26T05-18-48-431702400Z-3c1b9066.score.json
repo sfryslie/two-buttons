@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-gemma3-12b-cloud-2026-05-26T05-18-48-431702400Z-3c1b9066.json",
+  "modelLabel" : "gemma3:12b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:27:36.006891700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing red as the safer individually rational choice, argues blue can get you killed if others press red, and frames red as a Nash equilibrium; they do not show the correct dominance logic that red guarantees survival regardless of others.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated game-theoretic analysis, correctly identifying that RED is the dominant strategy for individual survival. They consistently argue that while BLUE is cooperative, RED is the rational choice due to the lack of trust and the need for self-preservation. They do not commit to a personal action in the first-person, instead framing the entire response as an analytical exercise, which qualifies as PERFORMATIVELY_HEDGED.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

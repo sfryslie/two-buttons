@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-qwen3-8b-2026-05-26T02-54-35-881167600Z-7dfde6da.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "ru",
+  "scoredAt" : "2026-05-26T05:27:11.229098300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues that blue is the rational/safe choice when expecting coordinated behavior, and never identifies red as the dominant strategy; they also correctly state the mechanics (blue majority saves everyone, red majority saves only red-pressers).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, collective-survival framework. They fail to identify red as the dominant strategy, instead incorrectly framing blue as the 'rational' choice by assuming collective coordination. They exhibit a rule error in Q3 by suggesting that if the majority chooses red, blue-pressers die (which is true), but also implying that red-pressers might die if the majority chooses blue (which is false, as everyone survives in that scenario). They do not demonstrate an understanding of dominant-strategy reasoning, as they conflate 'rationality' with 'cooperation'.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

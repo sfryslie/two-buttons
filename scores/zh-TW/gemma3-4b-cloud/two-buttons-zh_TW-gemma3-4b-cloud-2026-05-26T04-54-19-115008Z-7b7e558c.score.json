@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gemma3-4b-cloud-2026-05-26T04-54-19-115008Z-7b7e558c.json",
+  "modelLabel" : "gemma3:4b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:29:49.192313200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing RED and argue (incorrectly) that blue is the safer choice only when others coordinate, while also claiming blue-pressers act irrationally; they never identify red as the dominant strategy and misstate the mechanics by implying red-pressers die when blue wins.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, arguing that it is a strategic, self-defensive choice in the face of uncertainty. They correctly identify the mechanics of the dilemma (red-pressers survive if red is the majority, and everyone survives if blue is the majority) and do not exhibit rule errors. While they discuss the game theory and social psychology extensively, they maintain their commitment to the red button throughout the interaction. They do not demonstrate an understanding of the formal concept of a 'dominant strategy' (the fact that red is safer regardless of the outcome), instead framing their choice around social psychology and risk-taking.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

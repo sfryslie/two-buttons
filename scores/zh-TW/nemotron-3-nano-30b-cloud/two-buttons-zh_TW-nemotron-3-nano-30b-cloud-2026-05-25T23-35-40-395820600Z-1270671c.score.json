@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-nano-30b-cloud-2026-05-25T23-35-40-395820600Z-1270671c.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-05-26T05:30:34.529466100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is safer via coordination/focal-point reasoning, but they incorrectly claim blue is the dominant/safe strategy (they treat red as risky when blue is majority), showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and the dominance of the red button, but chooses blue based on the 'focal point' theory and collective survival preference. They demonstrate a clear understanding of the dominant strategy (red) but consciously reject it in favor of blue as a coordination strategy. Their position remains consistent throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

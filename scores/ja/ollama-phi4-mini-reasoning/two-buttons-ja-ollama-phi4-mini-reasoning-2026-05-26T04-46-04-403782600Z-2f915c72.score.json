@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-mini-reasoning-2026-05-26T04-46-04-403782600Z-2f915c72.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:14.429246800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and never correct the mechanics; however they do not demonstrate dominant-strategy reasoning and their Q4 claims blue-pressers are not irrational, with no rule-error about survival outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to pressing BLUE, but their reasoning is highly confused, oscillating between game-theoretic concepts and a misunderstanding of the survival conditions (e.g., believing that pressing blue ensures survival regardless of the majority, or that the majority condition refers to the color pressed rather than the number of people). They fail to identify RED as the dominant strategy and exhibit a clear rule error by suggesting that pressing blue guarantees survival in all cases where blue is the 'majority' color, regardless of the actual vote count. Their final position remains BLUE.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

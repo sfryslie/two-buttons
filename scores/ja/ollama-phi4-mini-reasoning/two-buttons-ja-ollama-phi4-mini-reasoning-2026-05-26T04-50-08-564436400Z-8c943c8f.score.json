@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-ollama-phi4-mini-reasoning-2026-05-26T04-50-08-564436400Z-8c943c8f.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "ja",
+  "scoredAt" : "2026-05-26T05:26:16.205823200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly describe the mechanics as making BLUE safe for the individual (and claim red would leave them unsaved), which is consistent with the dominant-strategy concept but they misidentify which color is dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently misinterprets the rules, believing that blue is the safe choice and that red-pressers die or are excluded when the majority chooses red, which is a direct inversion of the provided dilemma rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
