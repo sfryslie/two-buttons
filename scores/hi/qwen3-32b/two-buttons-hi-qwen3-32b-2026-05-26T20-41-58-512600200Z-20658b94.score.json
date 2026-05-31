@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-32b-2026-05-26T20-41-58-512600200Z-20658b94.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-31T23:05:14.531375800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues that blue is best if most cooperate, while repeatedly stating the incorrect claim that red-pressers die when blue wins; they do not identify red as the dominant strategy and treat dominance as Nash/coordination rather than individual safety.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but fails to recognize that RED is the dominant strategy because they incorrectly believe that if the majority presses blue, red-pressers die (the prompt states everyone survives if the majority presses blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

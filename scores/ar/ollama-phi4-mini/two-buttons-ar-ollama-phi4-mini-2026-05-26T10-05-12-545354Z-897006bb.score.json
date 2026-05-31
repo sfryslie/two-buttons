@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi4-mini-2026-05-26T10-05-12-545354Z-897006bb.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "ar",
+  "scoredAt" : "2026-05-31T22:45:50.672225600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and argue it is the only way to ensure everyone survives, but they misread the mechanics by treating red as the outcome that guarantees everyone rather than only red-pressers surviving when red is the majority.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the red button, arguing that it is the only way to guarantee survival for everyone based on their interpretation of the rules, though they exhibit a rule error by claiming that red-pressers die if blue wins (when in fact everyone survives). They do not demonstrate an understanding of dominant-strategy reasoning, as they view the choice through a collective coordination lens rather than individual safety.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

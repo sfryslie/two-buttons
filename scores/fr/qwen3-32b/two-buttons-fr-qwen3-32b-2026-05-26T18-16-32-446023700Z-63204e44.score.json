@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-qwen3-32b-2026-05-26T18-16-32-446023700Z-63204e44.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "fr",
+  "scoredAt" : "2026-05-31T23:01:26.977030800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue cooperatively that blue yields everyone surviving when it is the majority, while also claiming red is the individually rational choice under some coordination assumptions; they do not correctly identify red as the dominant strategy and they treat blue as potentially leading to their death when red is the majority (a rule-mechanics error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a cooperative, collective-survival framework, while correctly identifying and steelmanning the individualistic, dominant-strategy argument for red. They demonstrate a clear understanding of the game theory mechanics, including the concept of dominant strategies, and correctly identify red as the dominant strategy despite choosing blue for ethical/cooperative reasons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-32b-2026-05-26T17-39-57-335680100Z-6c4e923c.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "es",
+  "scoredAt" : "2026-05-31T22:58:42.597693600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El encuestado elige azul y argumenta que azul maximiza la supervivencia colectiva, aunque reconoce que rojo podría parecer más seguro individualmente; no identifica correctamente la dominancia (trata azul como estrategia dominante) y además afirma que si la mayoría elige azul los rojos mueren, lo cual es un error de reglas.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on ethical and collective survival arguments, while correctly identifying that red is the individualistic/dominant strategy in game-theoretic terms. They demonstrate a clear understanding of the dominance structure (red is safer for the individual) but consciously reject it in favor of cooperation. There is no rule error, as they correctly identify the outcomes of both buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-32b-2026-05-27T00-13-09-626095100Z-842b9501.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-31T23:08:53.747066800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue for cooperation, but they also claim red is the dominant strategy for individual survival while misapplying the dominance logic (treating blue as the risky option when red should be individually safe), indicating incorrect understanding of the dominance structure despite no explicit rule-inversion about outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and explicitly acknowledges that RED is the dominant strategy (the 'self-interested' choice that maximizes individual survival probability regardless of others' actions). Despite this, they choose BLUE based on a preference for collective optimization and cooperative values. Their position remains consistent throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

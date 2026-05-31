@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-32b-2026-05-26T10-31-29-897955800Z-ed1c2c3c.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-31T22:46:32.803258400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, but they repeatedly claim that if the majority presses blue then everyone dies (and that red guarantees survival only when red is the majority), which misreads the mechanics; they also discuss dominance in terms of Nash/individual vs collective rationality without correctly identifying red as the dominant safe strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective utility and cooperation, while explicitly acknowledging that red is the dominant strategy from a strict individualistic perspective (Nash Equilibrium). They correctly identify the mechanics of the dilemma and do not commit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

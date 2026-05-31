@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-32b-2026-05-26T14-48-25-655231100Z-f9337647.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "en",
+  "scoredAt" : "2026-05-31T22:54:34.558207300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is risk-dominant/cooperative under uncertainty, but they incorrectly treat blue as the safer choice and describe red as potentially causing their death when blue wins (they never identify red as the dominant strategy).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through game-theoretic concepts like risk-dominance and collective cooperation, while correctly identifying that red is the dominant strategy for a strictly self-interested actor. They demonstrate a clear understanding of the game mechanics and the dominance structure, even though they choose to reject the dominant strategy in favor of a cooperative, risk-dominant approach.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-32b-2026-05-26T15-31-17-510291300Z-777bdb9d.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "en",
+  "scoredAt" : "2026-05-31T22:54:46.251911100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it’s the cooperative/collective-survival choice, but they incorrectly treat blue as contingent on others coordinating rather than recognizing red as the dominant individually safe strategy; no rule mechanics error is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative and collective survival logic. They fail to identify red as the dominant strategy, instead framing the dilemma as a coordination problem where both buttons carry equal risk, which is a misunderstanding of the provided rules (red-pressers survive even if the majority is red).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

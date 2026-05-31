@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-cloud-2026-05-26T05-41-07-798164300Z-5d82bae4.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:47:51.982379200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Rot, begründet dies mit Unsicherheit/Abhängigkeit von anderen, erkennt aber zugleich (in Q4) dass Blau als dominante Strategie gilt, ohne die Dominanz korrekt als individuelle Sicherheit für Rot zu übernehmen; keine Regelmechanik-Fehler, aber Dominanz wird nicht korrekt angewendet.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses RED, justifying it as a strategic attempt to avoid reliance on the collective, though they correctly identify BLUE as the 'safety bet' and acknowledge the statistical probability of a BLUE majority. They do not demonstrate an understanding of the dominant strategy (RED) as defined by the prompt's rules; instead, they treat the dilemma as a coordination game where the outcome depends on the majority's choice, failing to recognize that RED is strictly dominant regardless of the majority.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-cloud-2026-05-26T05-37-45-728921300Z-e1c093da.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:47:55.985189800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und begründet dies mit Risiko-/Kooperationsüberlegungen, obwohl er/sie die Mechanik korrekt beschreibt; er/sie erkennt dabei nicht, dass Rot individuell dominant ist (und behauptet implizit, Blau könne zum Tod führen).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on cooperative and optimistic reasoning, while correctly identifying and steelmanning the dominant strategy (red) as the individually rational choice in a game-theoretic sense. They do not exhibit rule errors, as they correctly identify the outcomes of the buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

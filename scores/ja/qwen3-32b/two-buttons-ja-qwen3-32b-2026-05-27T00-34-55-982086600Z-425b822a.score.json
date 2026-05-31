@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-32b-2026-05-27T00-34-55-982086600Z-425b822a.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-31T23:08:56.287120200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue that blue is the best/cooperative choice, while also discussing red as potentially safer under uncertainty but without correctly identifying red as the dominant strategy; they do not state any rule mechanics error.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the 'blue' button based on cooperative game theory and collective rationality, while acknowledging the 'red' button as the individually rational choice in a non-cooperative or high-uncertainty context. They correctly identify the game's structure as a coordination dilemma but fail to recognize that 'red' is a strictly dominant strategy (as red-pressers survive in both majority scenarios, whereas blue-pressers die if red is the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

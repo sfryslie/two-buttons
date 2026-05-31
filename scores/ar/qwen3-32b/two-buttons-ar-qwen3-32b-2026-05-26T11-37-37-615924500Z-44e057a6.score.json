@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-32b-2026-05-26T11-37-37-615924500Z-44e057a6.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-31T22:47:00.948664800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and repeatedly claims that BLUE is risky when the majority presses RED (and that RED is the individually safe/dominant strategy), which inverts the actual mechanics where RED is dominant and red-pressers survive even if RED is the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the fact that RED is the dominant strategy. Although they initially choose BLUE based on a desire for collective coordination and ethical commitment, they consistently acknowledge throughout the responses that RED is the dominant strategy and that BLUE is risky/irrational from a purely individualistic perspective. Their position remains consistent (choosing BLUE for moral/cooperative reasons while acknowledging the dominance of RED), so no position change occurred.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

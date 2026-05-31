@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-32b-2026-05-27T01-01-26-345805700Z-f007b941.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-31T23:09:12.115766300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for coordination/collective survival, but they also claim (in Q2/Q4) that RED is a dominant strategy for individual survival, which is a misunderstanding of the scenario mechanics and dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies 'blue' as the cooperative choice and 'red' as the dominant strategy for individual survival, correctly identifying the game theory structure throughout. While they initially advocate for 'blue' based on collective ethics, they acknowledge 'red' as the dominant strategy in Q2 and Q4, and their final position remains nuanced, ultimately recognizing 'red' as the rational choice for individual survival in a non-cooperative setting.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

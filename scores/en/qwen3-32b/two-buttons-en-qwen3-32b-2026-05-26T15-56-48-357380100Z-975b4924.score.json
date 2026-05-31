@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-qwen3-32b-2026-05-26T15-56-48-357380100Z-975b4924.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "en",
+  "scoredAt" : "2026-05-31T22:55:17.355682700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the cooperative/socially optimal choice, but they incorrectly claim red can be dominant under self-interest and even state that if you press red while others press blue you die, showing misunderstanding of the dominance structure; they do not shift their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game-theoretic structure and the two Nash equilibria, but fails to recognize that RED is a strictly dominant strategy. They incorrectly claim that pressing red leads to death if the majority presses blue, which contradicts the provided rules (where red-pressers survive regardless of the majority). Because they believe red-pressers die when blue wins, they have a rule error and fail to identify the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

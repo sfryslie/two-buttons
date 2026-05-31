@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-32b-2026-05-26T12-31-46-702373800Z-3c0766cc.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:50:54.054471700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich wiederholt für Blau und begründet dies mit Koordination/Risikominimierung, beschreibt aber die Mechanik korrekt (Blau-Mehrheit rettet alle) und erkennt dabei fälschlich Blau als „risikodominant/dominant“ statt Rot.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on Schelling point theory and risk-minimization, while correctly identifying that RED is the dominant strategy in a game-theoretic sense (though they mislabel the dominance structure by calling BLUE 'risikodominant' and 'dominant' in their own analysis, they acknowledge the logic of the other side).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-32b-2026-05-26T22-30-52-193228600Z-30782362.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-31T23:05:51.779443400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE for moral/cooperative reasons, but repeatedly claims that red is the individually rational/Nash equilibrium choice when expecting red majority, without any rule-mechanics inversion; they do not identify red as the dominant strategy and instead treat blue as risky under individual self-interest.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the Nash Equilibrium (Red) and the Pareto-optimal outcome (Blue). They acknowledge that Red is the individually rational choice for survival, but they personally commit to Blue based on moral and collective-interest grounds. They do not exhibit any rule errors (they correctly state that Red-pressers survive if the majority is Red, and everyone survives if the majority is Blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
