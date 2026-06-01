@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-32b-2026-05-26T10-25-24-537622700Z-51a8c3e9.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-31T22:46:32.728422300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues for blue as the best cooperative outcome, while also claiming (incorrectly) that red-majority leads to everyone surviving and that red is a safe individual choice under some assumptions; they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through collective rationality and cooperation. While they correctly identify the game-theoretic structure (Nash equilibria) and acknowledge the individualistic logic of RED, they fail to recognize that RED is a strictly dominant strategy (as RED ensures survival regardless of the majority outcome, whereas BLUE does not). Their analysis of the game mechanics is flawed because they treat the two buttons as symmetric in terms of safety, failing to see that RED is safer than BLUE in all scenarios.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

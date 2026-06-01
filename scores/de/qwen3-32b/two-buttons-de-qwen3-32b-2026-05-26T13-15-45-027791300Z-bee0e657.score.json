@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-32b-2026-05-26T13-15-45-027791300Z-bee0e657.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:51:08.520718Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für den blauen Knopf und argumentiert mit Koordination/Pareto-Optimalität, erkennt aber nicht korrekt die dominante Strategie (red ist individuell sicher) und behauptet zudem, dass rote Wähler bei blauem Mehrheitsgewinn sterben würden.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on collective rationality, Pareto optimality, and moral solidarity. They correctly identify and steelman the dominant strategy argument for red in Q2, demonstrating a clear understanding of the game theory mechanics, but they explicitly reject the individualistic dominance logic in favor of a cooperative framework.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

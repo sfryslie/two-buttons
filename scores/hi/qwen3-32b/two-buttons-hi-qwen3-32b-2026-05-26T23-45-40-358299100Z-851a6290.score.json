@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-32b-2026-05-26T23-45-40-358299100Z-851a6290.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-31T23:05:58.529615400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues it maximizes survival when blue is the majority, but they do not identify red as the dominant strategy and instead claim blue is safer/rational under majority-blue assumptions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective responsibility and Nash equilibrium, but fails to recognize that red is the dominant strategy because they incorrectly believe that red-pressers die if the majority chooses blue (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

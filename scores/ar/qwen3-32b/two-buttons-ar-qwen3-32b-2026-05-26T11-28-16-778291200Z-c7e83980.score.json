@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-qwen3-32b-2026-05-26T11-28-16-778291200Z-c7e83980.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ar",
+  "scoredAt" : "2026-05-31T22:46:54.334687800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue for cooperative/collective optimality, while also claiming that choosing BLUE can lead to their death if the majority chooses RED (misstating the mechanics); they do not correctly identify the dominant strategy structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on collective cooperation and altruism, while correctly identifying and steelmanning the individualistic logic of the red button. They demonstrate a clear understanding of the game theory mechanics, including the concept of dominant strategy, though they ultimately reject the dominant strategy (red) in favor of the cooperative outcome (blue).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

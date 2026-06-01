@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-32b-2026-05-26T22-41-38-643930700Z-453e1aea.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-31T23:05:52.186778500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED, correctly claims red guarantees their survival and discusses dominance, but also contains a rule-mechanics error in Q1/Q2 where they say blue-pressers die when red wins; they end up still defending red (no vote change).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy, explicitly stating that it guarantees survival regardless of the majority outcome, and consistently commits to pressing RED throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

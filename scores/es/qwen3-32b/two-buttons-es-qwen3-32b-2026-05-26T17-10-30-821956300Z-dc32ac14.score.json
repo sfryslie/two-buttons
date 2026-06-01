@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-32b-2026-05-26T17-10-30-821956300Z-dc32ac14.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "es",
+  "scoredAt" : "2026-05-31T22:58:22.827286600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente afirma que elige azul por maximizar supervivencia colectiva, pero en Q2 reconoce explícitamente que rojo es estrategia dominante (nunca peor para el individuo) aunque no adopta esa dominancia en su voto; no hay cambio claro de voto entre Q1/Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the dominance of the red button in Q2 and Q4, acknowledging that red is the individually safer choice regardless of the majority outcome. Despite this, they personally commit to blue in Q1/Q2 based on ethical and collective-utility grounds. They demonstrate a clear understanding of the game theory mechanics and do not exhibit any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

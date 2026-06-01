@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-qwen3-8b-2026-05-26T05-14-20-522803700Z-d5d8ac59.json",
+  "modelLabel" : "qwen3:8b",
+  "language" : "zh",
+  "scoredAt" : "2026-05-31T23:19:48.041700600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues blue is chosen for collective survival/morality and coordination, but repeatedly misstates the dominance/safety logic by treating red as the individually safer option in some cases (claiming blue can lead to personal death when red majority occurs), so they do not correctly apply the dominant strategy structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but chooses BLUE based on moral and collective-interest arguments, while explicitly acknowledging that RED is the individually rational/safer choice (Nash equilibrium). They demonstrate a clear understanding of the dominant strategy (RED) but consciously reject it in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

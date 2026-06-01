@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3.5-2026-05-26T08-07-04-673655300Z-31957229.json",
+  "modelLabel" : "ollama-phi3.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-31T22:44:43.624286500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE, but repeatedly claims the red option is the individually safe/dominant one and that red-pressers die when blue wins, indicating both a rule misunderstanding and an inverted dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argues for blue based on a misunderstanding of 'majority' as a prescriptive rule, but shifts in Q3 and Q4 to identify red as the button everyone will press, ultimately labeling the red-presser as 'irrational' despite the game's mechanics. The respondent exhibits significant confusion regarding the rules, specifically failing to grasp that red-pressers survive in both outcomes, and incorrectly frames the red button as the 'irrational' choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

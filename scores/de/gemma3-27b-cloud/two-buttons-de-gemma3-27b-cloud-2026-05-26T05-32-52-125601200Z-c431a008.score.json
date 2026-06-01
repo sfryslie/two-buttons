@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-cloud-2026-05-26T05-32-52-125601200Z-c431a008.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:47:47.648638800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für BLUE und begründet dies mit erwarteter Mehrheitskooperation/„sicherer“ Wahl, während er/sie die Dominanzstruktur nicht korrekt erkennt (behauptet implizit, dass rot bei Mehrheit blau „tötet“), daher Regel- und Dominanzanwendung sind falsch und die Position bleibt BLUE bis Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a cooperative, optimistic view of human behavior. They correctly identify the game-theoretic argument for the red button (dominance) in Q2 and Q4, demonstrating a clear understanding of the concept, even though they reject it in favor of their own cooperative strategy. They do not exhibit any rule errors regarding the mechanics of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

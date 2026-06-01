@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-ollama-phi4-mini-2026-05-26T10-12-21-059993700Z-be00de48.json",
+  "modelLabel" : "ollama-phi4-mini",
+  "language" : "en",
+  "scoredAt" : "2026-05-31T22:53:52.763592700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent repeatedly argues that blue is the safer choice for collective survival and does not identify red as the dominant strategy, while also describing the mechanics in a way that implies red can be risky for red-pressers (contrary to the actual rules).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button as the 'safer' and 'rational' choice, failing to recognize that red is the dominant strategy. They exhibit a rule error by implying that pressing red carries a risk of death (e.g., 'pressing red alone puts your own life at risk'), which contradicts the prompt's rules. They do not demonstrate an understanding of dominant-strategy reasoning.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

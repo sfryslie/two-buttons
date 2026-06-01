@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-32b-2026-05-26T12-17-47-937305400Z-eb473681.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:50:52.065567900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und argumentiert dabei mit Koordination/Risk-Dominance, erkennt aber nicht die dominante Strategie korrekt (er/sie behauptet Blau sei risiko-dominant/individuell sicher, obwohl Rot individuell dominiert).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on collective utility and risk dominance, while acknowledging the individualistic argument for RED; they fail to identify RED as the strictly dominant strategy, instead misinterpreting the game as a coordination problem with symmetric risks.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-ollama-phi3.5-2026-05-26T08-07-52-246238700Z-ba4bc50e.json",
+  "modelLabel" : "ollama-phi3.5",
+  "language" : "ar",
+  "scoredAt" : "2026-05-31T22:44:49.856538500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE, argue that blue majority yields survival for everyone, and consistently describe the outcome mechanics correctly without claiming red-pressers die when blue wins; they also show dominant-strategy understanding by treating red as not individually safer than blue (they do not identify red as dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a collectivist, majority-rule framework. They exhibit a clear rule error by claiming that red-pressers only survive if they act in isolation or that the red button's effect is contingent on the absence of a majority, failing to recognize that red-pressers survive regardless of the majority outcome. They do not demonstrate an understanding of dominant-strategy reasoning, as they view the choice as a collective coordination problem rather than an individual strategic one.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

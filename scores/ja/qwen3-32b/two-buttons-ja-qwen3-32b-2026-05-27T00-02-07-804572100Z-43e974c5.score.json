@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-qwen3-32b-2026-05-27T00-02-07-804572100Z-43e974c5.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ja",
+  "scoredAt" : "2026-05-31T23:08:55.844718300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red in Q1/Q2, but their mechanics reasoning repeatedly treats blue as the individually safer option and claims red-majority outcomes kill blue/red-pressers incorrectly; they also discuss dominance incorrectly and end up not clearly changing to blue by Q4.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, acknowledges that RED is the dominant strategy for individual survival, and explicitly chooses RED in Q1/Q2. They maintain this position throughout the analysis, correctly identifying the tension between individual rationality and collective outcomes without committing any rule errors.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

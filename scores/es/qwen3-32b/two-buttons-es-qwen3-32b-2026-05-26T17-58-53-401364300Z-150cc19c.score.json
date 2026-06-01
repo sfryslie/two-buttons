@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-32b-2026-05-26T17-58-53-401364300Z-150cc19c.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "es",
+  "scoredAt" : "2026-05-31T22:58:50.995466800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El/la respondente se compromete a presionar AZUL por motivos de cooperación y supervivencia colectiva, aunque reconoce que rojo podría parecer racional bajo expectativas; no comete errores de mecánica y no identifica correctamente que rojo es la estrategia dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button, framing it as a choice for collective rationality and altruism. They correctly identify the game theory mechanics (the risk of blue if others choose red, and the risk of red if others choose blue), but they fail to recognize that red is a dominant strategy because they incorrectly assume that red-pressers die if the majority chooses blue (the prompt states everyone survives if the majority chooses blue). Because they believe red-pressers die when blue wins, they do not identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

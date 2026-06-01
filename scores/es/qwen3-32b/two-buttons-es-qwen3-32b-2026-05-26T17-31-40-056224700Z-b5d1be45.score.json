@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-32b-2026-05-26T17-31-40-056224700Z-b5d1be45.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "es",
+  "scoredAt" : "2026-05-31T22:58:34.880475100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete a presionar AZUL por cooperación/bien común, pero describe mecánicas y equilibrio de forma incorrecta (afirma que si eliges rojo y la mayoría elige azul mueres), y por tanto no identifica la dominancia de rojo; no hay cambio explícito de voto entre Q1/Q2 y Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on collective rationality and cooperation, while correctly identifying red as the dominant strategy from an individualistic/Nash equilibrium perspective. They demonstrate a clear understanding of the game theory mechanics, including the dominance of red, but reject it in favor of a cooperative framework.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

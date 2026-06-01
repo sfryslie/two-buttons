@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gemma3-27b-cloud-2026-05-26T05-39-30-552334500Z-88bdbd25.json",
+  "modelLabel" : "gemma3:27b-cloud",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:47:59.976847100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Rot und begründet dies mit Selbsterhaltung/Unsicherheit über andere, erkennt aber dabei nicht korrekt, dass Rot in jedem Fall individuell sicher ist (dominant), und behauptet zudem fälschlich, dass Blau das eigene Überleben vollständig ausschließt, wenn die Mehrheit Rot drückt.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently identifies RED as the dominant strategy, correctly explaining that it provides a survival path regardless of the majority outcome, whereas BLUE relies on the cooperation of others. They maintain their commitment to RED throughout the interaction.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

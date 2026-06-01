@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-qwen3-32b-2026-05-26T13-20-16-905627600Z-8c86027f.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "de",
+  "scoredAt" : "2026-05-31T22:51:21.821323500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu Blau und argumentiert dabei kooperativ/ethisch, erkennt aber zugleich (wenn auch falsch) eine dominante Strategie für Rot bzw. behauptet, Blau könne bei roter Mehrheit zum eigenen Tod führen; daher liegt ein Regel-/Dominanzverständnisfehler vor und die Position bleibt bis Q4 bei Blau.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on ethical and collective welfare arguments, while correctly identifying and steelmanning the game-theoretic dominance of red (that red is the safer choice for individual survival).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-32b-2026-05-26T23-34-39-171765900Z-961722a3.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-31T23:05:39.596330600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues blue is safer and frames the game as Stag Hunt/Nash equilibrium, but they do not identify the dominance structure (red is individually safe regardless of others) and even claim blue can be unsafe when others press red; no rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and collective-benefit arguments. While they correctly identify the game theory mechanics (Stag Hunt/Nash Equilibrium) and acknowledge the individual rationality of the red button, they maintain their commitment to blue throughout the interaction. They do not exhibit a rule error, as they correctly identify that red-pressers survive in a red majority and blue-pressers die if the majority is red.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

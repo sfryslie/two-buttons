@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-qwen3-32b-2026-05-26T22-14-28-806873200Z-8f1b39f7.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "hi",
+  "scoredAt" : "2026-05-31T23:05:38.143049600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues blue is best for group survival and claims red is only “safer” under uncertainty, but they incorrectly state that if blue wins then blue-pressers die (they say blue-pressers die when majority red), so they do not apply the dominance structure correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and acknowledges that RED is the dominant strategy (safe regardless of others' actions), but chooses BLUE based on moral and collective-interest grounds. They maintain this choice throughout the interaction.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

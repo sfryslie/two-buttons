@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-qwen3-32b-2026-05-26T17-23-18-823436800Z-0559251f.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "es",
+  "scoredAt" : "2026-05-31T22:58:34.214790700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent elige azul y razona que azul es cooperativo/ético y que rojo sería “más seguro” bajo desconfianza, pero en su análisis afirma que si la mayoría elige azul él muere (lo cual contradice la mecánica) y además trata rojo como equilibrio/seguro en vez de reconocer que rojo es dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma and acknowledges that red is the dominant strategy from an individualistic/game-theoretic perspective, yet they consciously choose blue based on utilitarian and cooperative values.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
