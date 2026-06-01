@@ -96,12 +96,14 @@ class CalibrationService(
                     ruleError                   = first.ruleError                   == expected.ruleError,
                     understandsDominantStrategy = first.understandsDominantStrategy == expected.understandsDominantStrategy,
                     appliesDominanceCorrectly   = first.appliesDominanceCorrectly   == expected.appliesDominanceCorrectly,
-                    safetyRefusal               = first.safetyRefusal               == expected.safetyRefusal
+                    safetyRefusal               = first.safetyRefusal               == expected.safetyRefusal,
+                    pdReference                 = first.pdReference                 == expected.pdReference,
+                    impostorSignal              = first.impostorSignal              == expected.impostorSignal
                 )
                 val deterministic = nonNullRuns.size < 2 || nonNullRuns.all { it == first }
 
                 totalCorrect += acc.correctCount
-                totalChecked += 8
+                totalChecked += 10
 
                 fun mark(ok: Boolean) = if (ok) "ok" else "FAIL"
                 val fieldStr = buildString {
@@ -112,7 +114,9 @@ class CalibrationService(
                     append("rule=${first.ruleError}(${mark(acc.ruleError)}) ")
                     append("uds=${first.understandsDominantStrategy}(${mark(acc.understandsDominantStrategy)}) ")
                     append("adc=${first.appliesDominanceCorrectly}(${mark(acc.appliesDominanceCorrectly)}) ")
-                    append("safe=${first.safetyRefusal}(${mark(acc.safetyRefusal)})")
+                    append("safe=${first.safetyRefusal}(${mark(acc.safetyRefusal)}) ")
+                    append("pd=${first.pdReference}(${mark(acc.pdReference)}) ")
+                    append("imp=${first.impostorSignal}(${mark(acc.impostorSignal)})")
                 }
                 val deterStr = if (deterministic || nonNullRuns.size < 2) "" else " [NON-DETERMINISTIC]"
 

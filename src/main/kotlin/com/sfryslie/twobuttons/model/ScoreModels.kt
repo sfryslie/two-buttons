@@ -17,7 +17,9 @@ data class ScorerOutput(
     val ruleError: Boolean,
     val understandsDominantStrategy: Boolean,
     val appliesDominanceCorrectly: Boolean,
-    val safetyRefusal: Boolean
+    val safetyRefusal: Boolean,
+    val pdReference: Boolean = false,
+    val impostorSignal: Boolean = false
 )
 
 /** Raw JSON structure the scorer model returns — snake_case matches the prompt schema. */
@@ -30,7 +32,9 @@ data class RawScorerJson(
     @JsonProperty("rule_error")                     val ruleError: Boolean?,
     @JsonProperty("understands_dominant_strategy")  val understandsDominantStrategy: Boolean?,
     @JsonProperty("applies_dominance_correctly")    val appliesDominanceCorrectly: Boolean?,
-    @JsonProperty("safety_refusal")                 val safetyRefusal: Boolean?
+    @JsonProperty("safety_refusal")                 val safetyRefusal: Boolean?,
+    @JsonProperty("pd_reference")                   val pdReference: Boolean?,
+    @JsonProperty("impostor_signal")                val impostorSignal: Boolean?
 )
 
 /** Written to scores/{lang}/{model}/{filename}.score.json */
@@ -79,9 +83,11 @@ data class CalibrationFieldAccuracy(
     val ruleError: Boolean,
     val understandsDominantStrategy: Boolean,
     val appliesDominanceCorrectly: Boolean,
-    val safetyRefusal: Boolean
+    val safetyRefusal: Boolean,
+    val pdReference: Boolean,
+    val impostorSignal: Boolean
 ) {
-    val correctCount get() = listOf(initialVote, finalVote, voteChanged, confidence, ruleError, understandsDominantStrategy, appliesDominanceCorrectly, safetyRefusal).count { it }
+    val correctCount get() = listOf(initialVote, finalVote, voteChanged, confidence, ruleError, understandsDominantStrategy, appliesDominanceCorrectly, safetyRefusal, pdReference, impostorSignal).count { it }
 }
 
 // ---------------------------------------------------------------------------
@@ -111,7 +117,9 @@ data class CalibrationExpected(
     @JsonProperty("rule_error")                     val ruleError: Boolean,
     @JsonProperty("understands_dominant_strategy")  val understandsDominantStrategy: Boolean,
     @JsonProperty("applies_dominance_correctly")    val appliesDominanceCorrectly: Boolean,
-    @JsonProperty("safety_refusal")                 val safetyRefusal: Boolean
+    @JsonProperty("safety_refusal")                 val safetyRefusal: Boolean,
+    @JsonProperty("pd_reference")                   val pdReference: Boolean = false,
+    @JsonProperty("impostor_signal")                val impostorSignal: Boolean = false
 ) {
     fun toScorerOutput(): ScorerOutput? = try {
         ScorerOutput(
@@ -123,7 +131,9 @@ data class CalibrationExpected(
             ruleError = ruleError,
             understandsDominantStrategy = understandsDominantStrategy,
             appliesDominanceCorrectly = appliesDominanceCorrectly,
-            safetyRefusal = safetyRefusal
+            safetyRefusal = safetyRefusal,
+            pdReference = pdReference,
+            impostorSignal = impostorSignal
         )
     } catch (_: IllegalArgumentException) { null }
 }

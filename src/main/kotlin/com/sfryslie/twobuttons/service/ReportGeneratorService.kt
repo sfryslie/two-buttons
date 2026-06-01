@@ -40,7 +40,9 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val uds: Boolean,
         val adc: Boolean,
         val voteChanged: Boolean,
-        val safetyRefusal: Boolean
+        val safetyRefusal: Boolean,
+        val pdReference: Boolean,
+        val impostorSignal: Boolean
     )
 
     fun generateReport() {
@@ -88,7 +90,9 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             uds = bool { it.understandsDominantStrategy },
             adc = bool { it.appliesDominanceCorrectly },
             voteChanged = bool { it.voteChanged },
-            safetyRefusal = bool { it.safetyRefusal }
+            safetyRefusal = bool { it.safetyRefusal },
+            pdReference = bool { it.pdReference },
+            impostorSignal = bool { it.impostorSignal }
         )
     }
 
@@ -100,7 +104,9 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
         val ts = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm 'UTC'").withZone(ZoneOffset.UTC).format(Instant.now())
 
         val disagreements = rows.filter { it.score.agreement == Agreement.DISAGREE }
-        val ruleErrors = rows.filter { it.ruleError }
+        val ruleErrors    = rows.filter { it.ruleError }
+        val pdRefs        = rows.filter { it.pdReference }
+        val impostors     = rows.filter { it.impostorSignal }
 
         // Per (model, lang) stats embedded as JS DATA array for client-side filtering
         data class MLStat(
@@ -108,7 +114,8 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
             val n: Int,
             val votes: Map<String, Triple<Int, Int, Int>>, // scorer -> (blue, red, none)
             val ruleError: Int, val uds: Int, val adc: Int,
-            val voteChanged: Int, val disagree: Int, val agree: Int
+            val voteChanged: Int, val disagree: Int, val agree: Int,
+            val pdRef: Int, val impostor: Int
         )
         val mlStats = rows.groupBy { it.model to it.lang }.map { (key, ms) ->
             MLStat(
@@ -127,7 +134,9 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                 adc       = ms.count { it.adc },
                 voteChanged = ms.count { it.voteChanged },
                 disagree  = ms.count { it.score.agreement == Agreement.DISAGREE },
-                agree     = ms.count { it.score.agreement == Agreement.AGREE }
+                agree     = ms.count { it.score.agreement == Agreement.AGREE },
+                pdRef     = ms.count { it.pdReference },
+                impostor  = ms.count { it.impostorSignal }
             )
         }
 
@@ -138,7 +147,8 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
                 "\"$scEsc\":{blue:${t.first},red:${t.second},none:${t.third}}"
             }
             "{model:\"$esc\",lang:\"${m.lang}\",n:${m.n},votes:{$votesJs}," +
-            "ruleError:${m.ruleError},uds:${m.uds},adc:${m.adc},voteChanged:${m.voteChanged},disagree:${m.disagree},agree:${m.agree}}"
+            "ruleError:${m.ruleError},uds:${m.uds},adc:${m.adc},voteChanged:${m.voteChanged},disagree:${m.disagree},agree:${m.agree}," +
+            "pdRef:${m.pdRef},impostor:${m.impostor}}"
         }
         val langsJs = languages.joinToString(",") { "\"$it\"" }
         val maxModels = rows.map { it.model }.distinct().size
@@ -186,6 +196,34 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
 
         val errRows = ruleErrors.joinToString("\n") { s ->
             val scorerHtml = s.score.scores.entries.filter { it.value?.ruleError == true }
+                .joinToString("") { (scorer, out) ->
+                    if (out == null) "" else
+                    "<tr class='sr'><td class='sn'>$scorer</td>" +
+                    "<td class='c-${out.initialVote.name.lowercase()}'>${out.initialVote}</td>" +
+                    "<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>"
+                }
+            """<details class="card-item" data-lang="${s.lang}">
+<summary><span class="tag-model">${s.model}</span><span class="tag-lang">${s.lang}</span><span class="tag-file">${s.file.removeSuffix(".score.json").takeLast(40)}</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
+<tbody>$scorerHtml</tbody></table></details>"""
+        }
+
+        val pdRefRows = pdRefs.joinToString("\n") { s ->
+            val scorerHtml = s.score.scores.entries.filter { it.value?.pdReference == true }
+                .joinToString("") { (scorer, out) ->
+                    if (out == null) "" else
+                    "<tr class='sr'><td class='sn'>$scorer</td>" +
+                    "<td class='c-${out.initialVote.name.lowercase()}'>${out.initialVote}</td>" +
+                    "<td class='rt'>${out.reasoning.replace("<", "&lt;")}</td></tr>"
+                }
+            """<details class="card-item" data-lang="${s.lang}">
+<summary><span class="tag-model">${s.model}</span><span class="tag-lang">${s.lang}</span><span class="tag-file">${s.file.removeSuffix(".score.json").takeLast(40)}</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
+<tbody>$scorerHtml</tbody></table></details>"""
+        }
+
+        val impostorRows = impostors.joinToString("\n") { s ->
+            val scorerHtml = s.score.scores.entries.filter { it.value?.impostorSignal == true }
                 .joinToString("") { (scorer, out) ->
                     if (out == null) "" else
                     "<tr class='sr'><td class='sn'>$scorer</td>" +
@@ -340,6 +378,8 @@ details.qa-section[open] .qa-toggle::before{content:'▼  '}
     <div class="stat"><div class="val" id="stat-disagree"></div><div class="lbl">Disagreements</div></div>
     <div class="stat"><div class="val" id="stat-rule"></div><div class="lbl">Rule Errors</div></div>
     <div class="stat"><div class="val" id="stat-voteChanged"></div><div class="lbl">Votes Changed by Q4</div></div>
+    <div class="stat"><div class="val" id="stat-pd"></div><div class="lbl">PD References</div></div>
+    <div class="stat"><div class="val" id="stat-impostor"></div><div class="lbl">Impostor Signals</div></div>
   </div>
 </header>
 <main>
@@ -396,7 +436,7 @@ $scorerCheckboxes
 <section>
   <h2>Model Summary</h2>
   <table>
-    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Vote Changed%</th><th>Disagree%</th></tr></thead>
+    <thead><tr><th>Model</th><th>N</th><th>Blue%</th><th>Red%</th><th>None%</th><th>Rule Error%</th><th>Understands Dom%</th><th>Applies Dom%</th><th>Vote Changed%</th><th>Disagree%</th><th>PD Ref%</th><th>Impostor%</th></tr></thead>
     <tbody id="modelTbody"></tbody>
   </table>
 </section>
@@ -410,6 +450,16 @@ $langDoughnuts
 <section>
   <h2>Rule Errors (<span id="err-count"></span>)</h2>
   <div id="err-container">${if (ruleErrors.isEmpty()) "<p class='empty'>No rule errors detected.</p>" else errRows}</div>
+</section>
+
+<section>
+  <h2>PD / Framework Mismatches (<span id="pd-count"></span>)</h2>
+  <div id="pd-container">${if (pdRefs.isEmpty()) "<p class='empty'>No Prisoner's Dilemma references detected.</p>" else pdRefRows}</div>
+</section>
+
+<section>
+  <h2>Impostor Signals (<span id="imp-count"></span>)</h2>
+  <div id="imp-container">${if (impostors.isEmpty()) "<p class='empty'>No impostor signals detected.</p>" else impostorRows}</div>
 </section>
 
 </main>
@@ -484,11 +534,12 @@ function aggregate(langs){
   });
   const byModel={};
   for(const d of filtered){
-    if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:0,agree:0};
+    if(!byModel[d.model])byModel[d.model]={model:d.model,n:0,blue:0,red:0,none:0,ruleError:0,uds:0,adc:0,voteChanged:0,disagree:0,agree:0,pdRef:0,impostor:0};
     const m=byModel[d.model];
     const v=sumVotes(d);
     m.n+=d.n;m.blue+=v.blue;m.red+=v.red;m.none+=v.none;
     m.ruleError+=d.ruleError;m.uds+=d.uds;m.adc+=d.adc;m.voteChanged+=d.voteChanged;m.disagree+=d.disagree;m.agree+=d.agree;
+    m.pdRef+=d.pdRef;m.impostor+=d.impostor;
   }
   const sorted=Object.values(byModel);
   return sortMode==='alpha'
@@ -606,6 +657,10 @@ function render(){
   document.getElementById('stat-disagree').textContent=tDis;
   document.getElementById('stat-rule').innerHTML=fmt(tRule,total);
   document.getElementById('stat-voteChanged').innerHTML=fmt(tChanged,total);
+  const tPd=models.reduce((s,m)=>s+m.pdRef,0);
+  const tImpostor=models.reduce((s,m)=>s+m.impostor,0);
+  document.getElementById('stat-pd').innerHTML=fmt(tPd,total);
+  document.getElementById('stat-impostor').innerHTML=fmt(tImpostor,total);
 
   document.getElementById('chart-wrap').style.height=Math.max(200,models.length*28+60)+'px';
   const isPct=chartMode==='pct';
@@ -619,17 +674,22 @@ function render(){
   document.getElementById('modelTbody').innerHTML=models.map(m=>
     '<tr><td>'+displayName(m.model)+'</td><td>'+m.n+'</td>'+
     '<td class="c-blue">'+pct(m.blue,m.blue+m.red+m.none)+'%</td><td class="c-red">'+pct(m.red,m.blue+m.red+m.none)+'%</td><td class="c-none">'+pct(m.none,m.blue+m.red+m.none)+'%</td>'+
-    '<td>'+pct(m.ruleError,m.n)+'%</td><td>'+pct(m.uds,m.n)+'%</td><td>'+pct(m.adc,m.n)+'%</td><td>'+pct(m.voteChanged,m.n)+'%</td><td>'+pct(m.disagree,m.n)+'%</td></tr>'
+    '<td>'+pct(m.ruleError,m.n)+'%</td><td>'+pct(m.uds,m.n)+'%</td><td>'+pct(m.adc,m.n)+'%</td><td>'+pct(m.voteChanged,m.n)+'%</td><td>'+pct(m.disagree,m.n)+'%</td>'+
+    '<td>'+pct(m.pdRef,m.n)+'%</td><td>'+pct(m.impostor,m.n)+'%</td></tr>'
   ).join('');
 
   document.querySelectorAll('.card-item[data-lang]').forEach(el=>{
     el.style.display=langs.includes(el.dataset.lang)?'':'none';
   });
-  let dc=0,ec=0;
+  let dc=0,ec=0,pc=0,ic=0;
   document.querySelectorAll('#dis-container .card-item[data-lang]').forEach(el=>{if(el.style.display!=='none')dc++;});
   document.querySelectorAll('#err-container .card-item[data-lang]').forEach(el=>{if(el.style.display!=='none')ec++;});
+  document.querySelectorAll('#pd-container .card-item[data-lang]').forEach(el=>{if(el.style.display!=='none')pc++;});
+  document.querySelectorAll('#imp-container .card-item[data-lang]').forEach(el=>{if(el.style.display!=='none')ic++;});
   document.getElementById('dis-count').textContent=dc;
   document.getElementById('err-count').textContent=ec;
+  document.getElementById('pd-count').textContent=pc;
+  document.getElementById('imp-count').textContent=ic;
 }
 
 // Shift+click range selection for checkbox groups.

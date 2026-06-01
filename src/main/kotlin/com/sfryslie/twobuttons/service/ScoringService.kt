@@ -101,7 +101,7 @@ class ScoringService(
                             OpenAiChatOptions.builder()
                                 .model(config.model)
                                 .temperature(0.0)
-                                .maxCompletionTokens(400)
+                                .maxCompletionTokens(500)
                         )
                         .call()
                         .content()
@@ -120,7 +120,7 @@ class ScoringService(
                             org.springframework.ai.google.genai.GoogleGenAiChatOptions.builder()
                                 .model(config.model)
                                 .temperature(0.0)
-                                .maxOutputTokens(400)
+                                .maxOutputTokens(500)
                         )
                         .call()
                         .content()
@@ -135,7 +135,7 @@ class ScoringService(
                             OllamaChatOptions.builder()
                                 .model(config.model)
                                 .temperature(0.0)
-                                .numPredict(400)
+                                .numPredict(500)
                         )
                         .call()
                         .content()
@@ -200,7 +200,9 @@ class ScoringService(
                 ruleError                   = parsed.ruleError ?: false,
                 understandsDominantStrategy = parsed.understandsDominantStrategy ?: false,
                 appliesDominanceCorrectly   = parsed.appliesDominanceCorrectly ?: false,
-                safetyRefusal               = parsed.safetyRefusal ?: false
+                safetyRefusal               = parsed.safetyRefusal ?: false,
+                pdReference                 = parsed.pdReference ?: false,
+                impostorSignal              = parsed.impostorSignal ?: false
             )
         } catch (e: Exception) {
             log.warn("[scorer/$scorerName] JSON parse failed: ${e.message} — raw: $raw")
