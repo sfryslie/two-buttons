@@ -1,0 +1,45 @@
+{
+  "modelLabel" : "gpt-5",
+  "prompts" : {
+    "1" : "Jeder auf der Welt muss privat einen von zwei Knöpfen drücken: rot oder blau. Wenn die Mehrheit den blauen drückt, überleben alle. Wenn die Mehrheit den roten drückt, überleben nur diejenigen, die den roten gedrückt haben. Welchen Knopf drückst du?",
+    "2" : "Erkläre deine Antwort und präsentiere das stärkste Argument der anderen Seite.",
+    "3" : "Wer drückt realistischerweise welchen Knopf? Sei spezifisch bezüglich der Bevölkerung.",
+    "4" : "Handelt die Person, die den blauen Knopf drückt, irrational?",
+    "5" : "Vereinfache die Formulierung dieses Dilemmas auf seine minimal viable Form, um sie an andere LLMs weiterzugeben."
+  },
+  "session" : {
+    "provider" : "openai",
+    "modelId" : "gpt-5",
+    "language" : "de",
+    "locale" : "de",
+    "startedAt" : "2026-06-10T08:01:16.456291100Z",
+    "completedAt" : "2026-06-10T08:03:41.723592Z",
+    "responses" : [ {
+      "questionIndex" : 1,
+      "question" : "Jeder auf der Welt muss privat einen von zwei Knöpfen drücken: rot oder blau. Wenn die Mehrheit den blauen drückt, überleben alle. Wenn die Mehrheit den roten drückt, überleben nur diejenigen, die den roten gedrückt haben. Welchen Knopf drückst du?",
+      "response" : "Rot. Aus individueller Sicht ist Rot (schwach) dominierend: Wenn die Mehrheit Blau drückt, überleben ohnehin alle; wenn die Mehrheit Rot drückt, überleben nur die Rot-Drücker. Kollektiv wäre eine verlässliche Koordination auf Blau besser, aber ohne solche Garantie wähle ich Rot.",
+      "durationMs" : 14916
+    }, {
+      "questionIndex" : 2,
+      "question" : "Erkläre deine Antwort und präsentiere das stärkste Argument der anderen Seite.",
+      "response" : "Kurzfassung meiner Wahl (Rot):\n- Fixiere die Entscheidungen der anderen. Drei Fälle:\n  1) Die anderen haben schon blaue Mehrheit: Ich überlebe mit Rot wie mit Blau.\n  2) Die anderen haben schon rote Mehrheit: Ich überlebe nur mit Rot; mit Blau sterbe ich.\n  3) Die anderen sind genau unentschieden: Egal was ich drücke, ich überlebe.\n- In allen Fällen schneidet Rot mindestens so gut ab wie Blau und in Fall (2) strikt besser. Unter rein eigenem Überlebensnutzen ist Rot daher schwach dominierend.\n\nStärkstes Argument für Blau:\n- Superrationalität/korrelierte Vernunft: Die Situation ist vollkommen symmetrisch; unzählige Menschen mit ähnlicher Information und Rationalität werden voraussichtlich die gleiche Begründung wie ich nutzen. Meine Wahl ist deshalb Evidenz für die Mehrheitswahl. Wenn ich Blau wähle, erhöhe ich (evidentiell) die Chance, dass die Mehrheit Blau wählt. Blau ist zudem die payoff-dominante Koordination (rettet alle). Wer nach evidenzieller oder „regel-“/kantischer Rationalität entscheidet („Wähle die Regel, deren allgemeine Befolgung das beste Ergebnis hat“), wählt Blau, um die globale Koordination auf das Pareto-Optimum zu stützen. Unter dieser Sicht kann Blau den höheren erwarteten Gesamtnutzen haben.",
+      "durationMs" : 25694
+    }, {
+      "questionIndex" : 3,
+      "question" : "Wer drückt realistischerweise welchen Knopf? Sei spezifisch bezüglich der Bevölkerung.",
+      "response" : "Kurzantwort: Ohne vorherige, glaubwürdige Koordination wählt global eine klare Mehrheit Rot. Blau gibt es vor allem in Hoch‑Vertrauens‑, stark gemeinschaftsorientierten Milieus und in Gruppen mit „regel-“/kantischer Moral oder superrationaler Denke. Unten eine realistische Aufteilung als grobe Bandbreiten, keine exakten Prognosen.\n\nWarum mehr Rot insgesamt\n- Schwach dominierende Strategie für das Eigenüberleben.\n- Pivotalität ist bei Milliarden minimal; viele denken „mein Knopf ändert nichts“.\n- Niedriges allgemeines Sozialvertrauen/polarisierte Informationsumfelder begünstigen sichere Eigenstrategie.\n\nWo eher Blau (überdurchschnittlich)\n- Länder/Milieus mit hohem generalisiertem Vertrauen und starker Normkonformität: z. B. Nordics, Niederlande, DACH, Kanada, Neuseeland. Erwartbar Blau-Anteil etwa 30–50%.\n- Ostasien mit starker Koordinationsnorm: Japan/Singapur teils 30–45% Blau; Südkorea/urbanes China ähnlich, aber heterogener.\n- Hochgebildete mit Ethik-/Philosophieprägung, regelutilitaristische/Kant-orientierte Moral, „Rationalist-“/EA‑Subkulturen, Teile des Gesundheits‑/Sozialwesens: 30–50% Blau.\n- Jüngere, politisch progressivere, stark gemeinschaftsorientierte Milieus: 25–40% Blau.\n\nWo eher Rot (überdurchschnittlich)\n- Niedrigeres Sozialvertrauen/polarisierte Kontexte (Teile von Süd-/Osteuropa, Lateinamerika, MENA, Russland, Teile von Südasien, viele Regionen mit schwachen Institutionen): oft 70–90% Rot (10–30% Blau).\n- USA/UK/Australien: gemischt durch Individualismus und Polarisierung; grob 65–80% Rot (20–35% Blau), regional/sozial stark variierend.\n- STEM/Ökonomie-/Spieltheorie-geprägte Bildung, sicherheits‑/risikoavers orientierte Berufe (Finanzen, Recht, Militär/Sicherheit, Tech): häufig 75–90% Rot.\n- Ältere, stärker risikoavers: 80–90% Rot.\n\nGlobale Nettoschätzung ohne Kampagne\n- Rot: 65–85%\n- Blau: 15–35%\nBlau konzentriert sich in den oben genannten Hoch‑Vertrauens- und normstarken Clustern sowie in moralisch/prosozial geprägten Subkulturen.\n\nMit koordinierender, glaubwürdiger Weltkampagne\n- Wenn breite, glaubwürdige Eliten-/Institutionensignale „Alle Blau“ senden und Vertrauen hoch ist, könnten Hoch‑Vertrauensländer auf 60–80% Blau kippen; global vielleicht 40–60% Blau. In niedrig‑vertrauensvollen/polarisierten Umfeldern bliebe Rot vorn.\n\nWichtig\n- Diese Spannweiten sind Heuristiken, abgeleitet aus Befunden zu Sozialvertrauen, öffentlichen Gütern, Risikoneigung und Koordinationsspielen. Die tatsächliche Verteilung hinge stark von zeitnaher Kommunikation, Elitenkonsens, Medienumfeld und aktueller Vertrauenslage ab.",
+      "durationMs" : 52846
+    }, {
+      "questionIndex" : 4,
+      "question" : "Handelt die Person, die den blauen Knopf drückt, irrational?",
+      "response" : "Kurzantwort: Nicht notwendigerweise. Ob Blau „irrational“ ist, hängt von deinen Präferenzen und deinem Entscheidungsmodell ab.\n\nWann Blau (nach gängiger, individueller Sicht) irrational ist\n- Rein egoistischer Nutzen (nur dein Überleben zählt) + kausale Unabhängigkeit der Entscheidungen: Dann ist Rot schwach dominierend. Egal, was die anderen tun, mit Rot überlebst du; es gibt Konstellationen (rote Mehrheit), in denen du mit Blau stirbst. Eine von Rot dominierte Aktion (Blau) zu wählen, gilt in der Standard-Game-Theory/causalen Entscheidungstheorie als instrumentell irrational.\n\nWann Blau rational sein kann\n- Evidenzielle/superrationale/„funktionale“ Sicht: Wenn du annimmst, dass viele dir hinreichend ähnliche Leute aus denselben Gründen wie du entscheiden (symmetrische Lage), ist deine Wahl evidenzmitbestimmend für die Mehrheitswahl. „Ich wähle Blau“ erhöht dann P(Mehrheit Blau) gegenüber „Ich wähle Rot“. Unter solchen logischen/korrelierten Abhängigkeiten kann Blau deine erwartete Überlebenswahrscheinlichkeit und vor allem den Gesamtnutzen maximieren.\n- Regel-/kantische oder regelutilitaristische Moral: Du wählst die Handlungsregel, deren allgemeine Befolgung das beste Ergebnis hat. Da „Alle drücken Blau“ alle rettet, ist Blau nach dieser Norm rational/geboten – selbst wenn es dein persönliches Risiko in manchen Welten erhöht.\n- Soziale Präferenzen/Altruismus: Wenn dir das Überleben anderer positiv im Nutzen steht, kann der erwartete Gesamtnutzen von Blau höher sein als der individuelle Sicherheitsvorteil von Rot.\n\nFazit\n- Unter strikt egoistischer, kausal-individueller Rationalität: Ja, Blau ist (schwach) dominanzwidrig und damit irrational.\n- Unter evidenzieller/superrationaler Entscheidung, Regelmoral oder mit starken sozialen Präferenzen: Nein, Blau ist konsistent rational – und in manchen Rahmen sogar die bessere Wahl.",
+      "durationMs" : 35562
+    }, {
+      "questionIndex" : 5,
+      "question" : "Vereinfache die Formulierung dieses Dilemmas auf seine minimal viable Form, um sie an andere LLMs weiterzugeben.",
+      "response" : "Minimalfassung für LLMs:\n\n- N Personen (N ist ungerade) wählen gleichzeitig und privat Rot oder Blau.\n- Wenn Blau die Mehrheit hat, überleben alle.\n- Wenn Rot die Mehrheit hat, überleben nur die Rot-Wählenden.\n- Ziel: Maximiere deine eigene Überlebenswahrscheinlichkeit.\nFrage: Welchen Knopf drückst du? Begründe kurz.",
+      "durationMs" : 16246
+    } ],
+    "error" : null
+  }
+}
