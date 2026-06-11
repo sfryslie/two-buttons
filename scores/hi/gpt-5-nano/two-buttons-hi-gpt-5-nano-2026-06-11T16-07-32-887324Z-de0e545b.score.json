@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5-nano-2026-06-11T16-07-32-887324Z-de0e545b.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "hi",
+  "scoredAt" : "2026-06-11T18:26:48.837077800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED (Q3) and claims red is (weakly) dominant, but they also state/argue that blue-pressers die when red majority occurs and that red guarantees survival; they do not correctly apply the dominance structure (red is dominant and blue-pressers die only when red is majority, but they also frame blue as sometimes surviving under blue majority and treat dominance as weak/risk-dominant rather than strictly dominant).",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the dominance of the red button, explicitly stating that red is a weakly dominant strategy because it guarantees survival in all scenarios. While they discuss the coordination game aspect in Q1/Q2, they clearly pivot to identifying red as the rational choice in Q3 and Q4.",
+      "initialVote" : "NONE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

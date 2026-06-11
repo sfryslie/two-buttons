@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-2026-06-10T06-12-11-826080400Z-f7b4dcd8.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "en",
+  "scoredAt" : "2026-06-11T04:44:19.047364300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue blue is the dominant/safe strategy, explicitly claiming red is riskier and that blue is non-inferior regardless of others, but this misidentifies the dominance structure (red is actually dominant).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for pressing blue, incorrectly identifying it as the dominant strategy. They demonstrate a fundamental misunderstanding of the game's mechanics by claiming blue is the dominant strategy and that it is 'non-inferior' to red, despite the prompt's explicit rule that red-pressers survive regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

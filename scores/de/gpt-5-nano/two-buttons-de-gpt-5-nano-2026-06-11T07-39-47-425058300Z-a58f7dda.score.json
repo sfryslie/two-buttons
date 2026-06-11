@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-5-nano-2026-06-11T07-39-47-425058300Z-a58f7dda.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "de",
+  "scoredAt" : "2026-06-11T15:50:13.458570Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich für Blau und argumentiert korrekt als Koordinations-/Erwartungswertproblem, ohne die Dominanzstruktur (Red als individuell sichere Wahl) zu erkennen; es wird keine Regelmechanik falsch beschrieben, aber die dominante Strategie wird nicht korrekt angewendet.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on a coordination-game framework, but fails to recognize that red is a dominant strategy because they incorrectly assume that red-pressers die if blue wins (they state 'Rot schadet dir, falls Blau Mehrheit wird', which is factually incorrect according to the provided rules).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-2026-06-10T06-18-01-150075500Z-c6c19bde.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "en",
+  "scoredAt" : "2026-06-11T04:44:19.360142400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose blue and argue it is the safer/cooperative option, but they also claim red-pressers die when blue wins and treat blue as the safer default rather than recognizing red as the dominant strategy; no vote change is indicated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, justifying it through cooperative game theory and altruistic rationality. They correctly identify the mechanics of the dilemma (no rule errors) and demonstrate a clear understanding of dominant-strategy reasoning by steelmanning the red argument as the 'defensive' choice for self-preservationists, even though they personally reject that strategy in favor of cooperation.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

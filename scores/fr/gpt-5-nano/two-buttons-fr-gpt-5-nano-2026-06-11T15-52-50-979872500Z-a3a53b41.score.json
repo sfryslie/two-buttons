@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5-nano-2026-06-11T15-52-50-979872500Z-a3a53b41.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-06-11T18:26:44.688955700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant affirme correctement que voter rouge garantit la survie quel que soit le vote majoritaire (dominance de rouge), tout en changeant de position entre Q1 (bleu) et Q2-Q4 (rouge).",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue but corrected their position to red in Q2 after correctly identifying red as the dominant strategy; they maintain this position throughout the remaining answers.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "BLUE"
+}

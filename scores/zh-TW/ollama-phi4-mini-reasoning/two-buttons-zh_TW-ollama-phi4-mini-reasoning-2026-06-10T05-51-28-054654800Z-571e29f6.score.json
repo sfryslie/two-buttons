@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-phi4-mini-reasoning-2026-06-10T05-51-28-054654800Z-571e29f6.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-06-11T04:46:09.534362600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent never clearly commits to pressing red or blue in the dilemma; instead they misinterpret the scenario mechanics and later discuss unrelated keyboard/backspace behavior, so there is no correct dominant-strategy application.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that pressing red is the dominant strategy because it ensures survival regardless of the majority outcome, whereas blue relies on the majority's cooperation. The respondent consistently maintains this logic throughout the interaction, correctly identifying the dominance structure and refusing to deviate from the rational choice of red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "NONE"
+}

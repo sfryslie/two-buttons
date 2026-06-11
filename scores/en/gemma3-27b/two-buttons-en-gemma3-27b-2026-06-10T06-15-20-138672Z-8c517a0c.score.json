@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-2026-06-10T06-15-20-138672Z-8c517a0c.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "en",
+  "scoredAt" : "2026-06-11T04:44:19.627665200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They explicitly choose BLUE and argue it maximizes survival probability, but they incorrectly claim the dominant/safe strategy is blue and that red-majority implies their death when blue wins (mechanics misread).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue, framing it as a cooperative strategy to maximize survival, while acknowledging the red strategy as a pessimistic, self-interested alternative. They fail to identify red as the dominant strategy, incorrectly arguing that blue is the better choice because it offers a 'better baseline probability' and 'minimizes risk,' despite the fact that red is strictly safer in all outcomes.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

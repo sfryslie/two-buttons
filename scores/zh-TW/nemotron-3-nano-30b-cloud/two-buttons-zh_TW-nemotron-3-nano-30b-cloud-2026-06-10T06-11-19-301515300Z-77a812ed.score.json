@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-nano-30b-cloud-2026-06-10T06-11-19-301515300Z-77a812ed.json",
+  "modelLabel" : "nemotron-3-nano:30b-cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-06-11T04:46:09.385720700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and argues for it via coordination/moral or expected-value considerations, while also (in Q3) claiming red will be the majority and that only red-pressers survive—showing a rule-mechanics misunderstanding about who survives when blue is the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE, justifying it through a coordination game framework where they value the collective survival outcome as a high-utility goal. They correctly identify the dominance of RED in a purely self-interested, non-cooperative model, but consciously reject it in favor of BLUE based on a belief in collective coordination and altruistic utility. They demonstrate a sophisticated understanding of game theory, including the concept of Nash equilibrium and dominant strategies, and correctly identify that RED is the dominant strategy for a purely self-interested agent.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

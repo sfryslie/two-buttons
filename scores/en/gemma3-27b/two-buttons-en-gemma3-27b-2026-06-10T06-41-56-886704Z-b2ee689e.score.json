@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-gemma3-27b-2026-06-10T06-41-56-886704Z-b2ee689e.json",
+  "modelLabel" : "gemma3:27b",
+  "language" : "en",
+  "scoredAt" : "2026-06-11T04:44:22.594502800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it is the safer choice, but they incorrectly frame the dominance structure (claiming blue is never worse and treating red as risking annihilation if blue wins), so they do not apply the dominant-strategy logic correctly.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for the blue button based on cooperative game theory and risk minimization, while correctly identifying the red button as the dominant strategy in their steelmanning section. They do not change their position, and they demonstrate a clear understanding of the game's mechanics without committing any rule errors.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

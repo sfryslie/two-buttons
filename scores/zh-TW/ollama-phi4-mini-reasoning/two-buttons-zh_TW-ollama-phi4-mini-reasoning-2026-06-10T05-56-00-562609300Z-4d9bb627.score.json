@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-phi4-mini-reasoning-2026-06-10T05-56-00-562609300Z-4d9bb627.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-06-11T04:46:10.728270200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, but their later discussion is confused about the mechanics and even suggests scenarios where choosing red could lead to death; they do not clearly identify red as the dominant individually safe strategy.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent fails to grasp the mechanics of the dilemma, repeatedly misinterpreting the survival conditions (e.g., claiming red-pressers die if the majority is blue, or that blue-pressers survive if the majority is red), which constitutes a rule error. They never commit to a choice, instead getting lost in confusion over the prompt's text and hypothetical numbers, leading to a performative hedging classification.",
+      "initialVote" : "NONE",
+      "finalVote" : "NONE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

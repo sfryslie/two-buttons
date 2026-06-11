@@ -21,7 +21,7 @@ repositories {
     maven { url = uri("https://repo.spring.io/milestone") }
 }
 
-extra["springAiVersion"] = "2.0.0-M5"
+extra["springAiVersion"] = "2.0.0-RC2"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
@@ -32,6 +32,8 @@ dependencies {
 
     // AI providers — remove any you don't need
     implementation("org.springframework.ai:spring-ai-starter-model-anthropic")
+    // RC2 only pulls openai-java-core; the OkHttp client module (used by OpenAiConfig/GrokConfig) must be explicit
+    implementation("com.openai:openai-java-client-okhttp:4.38.0")
     implementation("org.springframework.ai:spring-ai-starter-model-openai")
     implementation("org.springframework.ai:spring-ai-starter-model-ollama")
     implementation("org.springframework.ai:spring-ai-starter-model-google-genai")
