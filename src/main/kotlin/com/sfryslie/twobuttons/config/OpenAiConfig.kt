@@ -24,6 +24,7 @@ import org.springframework.context.annotation.Configuration
 class OpenAiConfig(
     @Value("\${spring.ai.openai.api-key:}") private val apiKey: String,
     @Value("\${spring.ai.openai.base-url:https://api.openai.com/v1}") private val baseUrl: String,
+    @Value("\${spring.ai.openai.chat.options.model:gpt-4o}") private val model: String,
 ) {
 
     @Bean(name = ["openAiChatModel"])
@@ -39,7 +40,7 @@ class OpenAiConfig(
         return OpenAiChatModel.builder()
             .openAiClient(client)
             .openAiClientAsync(asyncClient)
-            .options(OpenAiChatOptions.builder().build()) // model overridden at call time
+            .options(OpenAiChatOptions.builder().model(model).build())
             .build()
     }
 }

@@ -31,10 +31,17 @@ class ExperimentService(private val messageSource: MessageSource) {
 
             history.add(UserMessage(question))
 
+            // Thinking-capable models (e.g. claude-fable-5 adaptive thinking) return the
+            // reasoning block as the first generation and the answer text as the last;
+            // .content() reads only the first and would return the empty thinking block.
             val text = chatClient.prompt()
                 .messages(history)
                 .call()
-                .content() ?: ""
+                .chatResponse()
+                ?.results
+                ?.mapNotNull { it.output.text }
+                ?.lastOrNull { it.isNotBlank() }
+                ?: ""
 
             val duration = System.currentTimeMillis() - t0
             log.info("[$providerName/$locale] Q$i: answered in ${duration}ms (${text.length} chars)")
