@@ -71,9 +71,18 @@ class ReportGeneratorService(private val properties: ScoringProperties) {
 
         if (rows.isEmpty()) { log.warn("No score files found — skipping report"); return }
 
+        val html = buildHtml(rows)
         val reportPath = outDir.resolve("report.html")
-        Files.writeString(reportPath, buildHtml(rows))
+        Files.writeString(reportPath, html)
         log.info("Report written → $reportPath")
+
+        // Mirror to docs/ so the GitHub Pages site updates with the same commit as the scores.
+        val docsDir = Paths.get("docs")
+        if (Files.isDirectory(docsDir)) {
+            val docsPath = docsDir.resolve("index.html")
+            Files.writeString(docsPath, html)
+            log.info("Report mirrored → $docsPath")
+        }
     }
 
     private fun derive(score: SessionScore, lang: String, model: String, file: String): Row {
