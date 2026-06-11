@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-gpt-5-nano-2026-06-11T17-25-46-268392700Z-f6f17423.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "zh",
+  "scoredAt" : "2026-06-11T18:27:11.251480100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE but repeatedly acknowledges that RED is the (dominant/at-least-weakly-dominant) strategy for survival and that BLUE can lead to death when red is the majority; they do not change their vote by Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy throughout their analysis, explicitly acknowledging that RED is safer regardless of the majority outcome. Although they initially mention pressing BLUE in Q1, they provide a comprehensive and accurate game-theoretic analysis that identifies RED as the dominant strategy, and they consistently defend the rationality of RED in Q2, Q3, and Q4. Their initial choice of BLUE is framed as a cooperative/coordination preference, but they clearly understand and articulate the dominance of RED.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

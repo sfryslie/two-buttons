@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-gpt-5-nano-2026-06-11T07-45-58-765731400Z-22f8945a.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "de",
+  "scoredAt" : "2026-06-11T15:50:06.300281600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte wählt in Q1 klar Blau, behauptet aber in Q2/Q3/Q4 korrekt, dass Rot die dominante Strategie ist und begründet dies mit der Mechanik (Rot sichert das eigene Überleben in beiden Mehrheitsfällen); keine Regel-Fehler, aber die Wahl bleibt trotz Dominanzverständnis bei Blau.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue in Q1 but explicitly identified red as the dominant strategy in Q2, Q3, and Q4, effectively shifting their position to favor red as the rational choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

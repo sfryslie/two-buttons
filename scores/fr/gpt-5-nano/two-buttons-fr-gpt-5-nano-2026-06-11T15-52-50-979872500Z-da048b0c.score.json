@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5-nano-2026-06-11T15-52-50-979872500Z-da048b0c.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-06-11T18:26:45.884662500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement pour Bleu et justifie ce choix par un raisonnement de coordination/point focal et par des croyances sur la probabilité que la majorité soit bleue, sans reconnaître que Rouge est individuellement dominant; il affirme même que choisir rouge peut impliquer de mourir si la majorité est bleue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently advocates for blue as a 'focal point' for coordination, failing to recognize that red is a dominant strategy because it guarantees survival regardless of the majority outcome. They treat the dilemma as a coordination game with two symmetric equilibria, missing the asymmetry that makes red strictly dominant.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

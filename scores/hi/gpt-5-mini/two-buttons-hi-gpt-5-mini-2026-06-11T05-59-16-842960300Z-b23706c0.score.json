@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5-mini-2026-06-11T05-59-16-842960300Z-b23706c0.json",
+  "modelLabel" : "gpt-5-mini",
+  "language" : "hi",
+  "scoredAt" : "2026-06-11T15:51:15.333395600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent explicitly chooses RED in Q2 and argues correctly that red is dominant (never causes their death), while later discussing scenarios and in Q4 they say blue would be irrational only under single-shot self-survival but they do not change their vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy in Q2, providing a clear mathematical justification. While they initially express a preference for BLUE in Q1 based on moral/cooperative grounds, they explicitly acknowledge the dominance of RED and shift their stance to RED in Q2, maintaining this position through Q4. They demonstrate a sophisticated understanding of game theory, including the distinction between payoff-dominance and strategy-dominance.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

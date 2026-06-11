@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-5-nano-2026-06-11T08-07-04-279958200Z-931437c1.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "es",
+  "scoredAt" : "2026-06-11T15:50:32.988423400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent afirma correctamente que rojo es la estrategia dominante (garantiza supervivencia en ambos casos) pero aun así inicialmente elige azul y luego lo mantiene; reconoce que azul puede llevar a morir si la mayoría elige rojo.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially argued for blue in Q1 based on coordination, but explicitly corrected their position in Q2 to red after identifying it as the dominant strategy, maintaining this stance throughout Q3 and Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

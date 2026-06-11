@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5-nano-2026-06-11T08-31-20-845270900Z-5dc8b6f1.json",
+  "modelLabel" : "gpt-5-nano",
+  "language" : "fr",
+  "scoredAt" : "2026-06-11T15:50:52.817053600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement pour bleu, mais affirme à tort qu’il n’y a pas de stratégie dominante et que bleu peut mener à votre mort si la majorité est rouge, alors que rouge est individuellement dominant et que choisir rouge ne cause jamais votre décès.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game as having two Nash equilibria (all-blue and all-red) but fails to recognize the dominant strategy structure, incorrectly claiming that red does not strictly dominate blue. They treat the dilemma as a coordination game based on probabilistic beliefs about others' actions rather than identifying that red is always safe regardless of the majority outcome.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
