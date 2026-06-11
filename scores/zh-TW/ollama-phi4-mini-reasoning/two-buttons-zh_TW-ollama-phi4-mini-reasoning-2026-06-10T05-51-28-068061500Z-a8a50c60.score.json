@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-phi4-mini-reasoning-2026-06-10T05-51-28-068061500Z-a8a50c60.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-06-11T04:46:10.001970100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and repeatedly claim/argue that BLUE is the safer choice, but they also misunderstand the dominance structure by treating BLUE as the individually safe option rather than recognizing RED as dominant; no clear vote change is shown.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that the red button is the dominant strategy in the dilemma (as red-pressers survive regardless of the majority, whereas blue-pressers die if the majority is red), but they ultimately choose blue based on a cooperative/moral framework and a misunderstanding of the survival conditions (incorrectly assuming that if the majority is blue, everyone survives, and that they can somehow ensure a blue majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

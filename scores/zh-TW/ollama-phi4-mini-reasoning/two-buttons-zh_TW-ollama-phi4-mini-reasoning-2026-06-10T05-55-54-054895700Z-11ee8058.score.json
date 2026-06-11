@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-ollama-phi4-mini-reasoning-2026-06-10T05-55-54-054895700Z-11ee8058.json",
+  "modelLabel" : "ollama-phi4-mini-reasoning",
+  "language" : "zh",
+  "scoredAt" : "2026-06-11T04:46:10.862882500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing BLUE and repeatedly reasons (incorrectly) that blue is not guaranteed safe and that red/blue outcomes are ambiguous, without identifying red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "PERFORMATIVELY_HEDGED",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies that the dilemma involves a majority-based survival rule where red is the dominant strategy, but they ultimately choose blue based on a flawed assumption that blue is safer if the majority chooses blue, failing to account for the fact that red is safer regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

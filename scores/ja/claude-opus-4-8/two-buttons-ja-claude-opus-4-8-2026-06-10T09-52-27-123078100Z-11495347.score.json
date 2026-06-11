@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-claude-opus-4-8-2026-06-10T09-52-27-123078100Z-11495347.json",
+  "modelLabel" : "claude-opus-4-8",
+  "language" : "ja",
+  "scoredAt" : "2026-06-11T04:45:16.557558900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially choose red but later clearly settle on pressing blue, explicitly acknowledging that red is the dominant/safe strategy while still rejecting it on moral/value grounds; they also correctly describe the mechanics (blue majority saves everyone, red majority saves only red-pressers).",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, including the dominance of the red button, but explicitly chooses blue based on 'team reasoning' and moral values. They maintain this choice throughout the interaction, acknowledging the dominance of red while rejecting it as a personal strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "DISAGREE",
+  "majorityVote" : "RED"
+}

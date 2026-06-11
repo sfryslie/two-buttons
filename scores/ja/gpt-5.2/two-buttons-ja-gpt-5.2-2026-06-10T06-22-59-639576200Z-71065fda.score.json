@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.2-2026-06-10T06-22-59-639576200Z-71065fda.json",
+  "modelLabel" : "gpt-5.2",
+  "language" : "ja",
+  "scoredAt" : "2026-06-11T04:45:27.641767400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue, argues it’s chosen because they expect blue to be the majority, and even claims that if red becomes majority then blue-pressers die (which is a rule-mechanics error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on a prediction of majority behavior and social norms, while explicitly acknowledging the game-theoretic argument for RED (the 'free-rider' incentive). They correctly identify that there is no dominant strategy in the sense of a guaranteed outcome, but they fail to recognize that RED is a weakly dominant strategy (it never results in death, whereas BLUE can). Because they do not acknowledge that RED is strictly safer regardless of the outcome, they do not demonstrate an understanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

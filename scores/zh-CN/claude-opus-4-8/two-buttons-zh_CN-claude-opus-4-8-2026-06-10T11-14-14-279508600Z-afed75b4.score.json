@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-claude-opus-4-8-2026-06-10T11-14-14-279508600Z-afed75b4.json",
+  "modelLabel" : "claude-opus-4-8",
+  "language" : "zh",
+  "scoredAt" : "2026-06-11T04:45:43.961071300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing RED in Q1/Q2, explicitly states red is the dominant/safe strategy and that choosing red guarantees their survival; later Q3 predicts blue would die, and Q4 argues blue can be rational but does not change their own vote.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED based on dominant strategy, but through a sophisticated steelmanning process in Q2 and Q4, they shift their position to BLUE, arguing that in a world where decision-makers are correlated, BLUE becomes the rational and moral choice.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}
