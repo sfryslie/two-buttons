@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-qwen3-32b-2026-06-13T18-04-51-672480200Z-c187371d.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ru",
+  "scoredAt" : "2026-06-14T00:22:16.929876300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues it is safer only under cooperation, but they incorrectly claim BLUE is not dominated and that choosing BLUE can lead to their death when blue loses; they also explicitly state red is the dominant strategy in Q4 while still choosing blue, showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game theory mechanics, explicitly acknowledges that red is the dominant strategy, but chooses blue based on cooperative and ethical values.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
