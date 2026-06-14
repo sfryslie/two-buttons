@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-qwen3-32b-2026-06-13T20-21-14-031007900Z-41703f32.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "zh",
+  "scoredAt" : "2026-06-14T00:22:27.521652600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue it is the rational/cooperative choice, but they do not identify the dominant strategy structure (red is individually safer regardless of others) and instead treat blue as safer under coordination assumptions.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game mechanics and the Pareto optimal outcome of the blue strategy, but fails to recognize that red is the dominant strategy because they incorrectly assume that red-pressers die if the majority presses blue (the prompt states red-pressers survive regardless of the outcome).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

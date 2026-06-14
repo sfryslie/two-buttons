@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_CN-qwen3-32b-2026-06-13T20-03-25-879150500Z-846067a0.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "zh",
+  "scoredAt" : "2026-06-14T00:22:26.047768200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to BLUE and argues it is a coordination/collective-optimal Nash equilibrium, while explicitly claiming red is the individually safer option under uncertainty (implying they do not identify red as the dominant strategy); no rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the game's mechanics and the concept of Nash equilibrium, but fails to recognize that RED is a strictly dominant strategy (pressing red never causes death, whereas blue can lead to death if the majority chooses red). They treat the dilemma as a coordination game where both choices are symmetric in risk, leading to a failure to apply dominance correctly. They consistently choose BLUE based on moral and collective-rationality arguments.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

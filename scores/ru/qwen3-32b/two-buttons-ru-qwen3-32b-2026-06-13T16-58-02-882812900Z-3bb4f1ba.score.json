@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ru-qwen3-32b-2026-06-13T16-58-02-882812900Z-3bb4f1ba.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "ru",
+  "scoredAt" : "2026-06-14T00:22:12.900260500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE, argues it maximizes collective survival when blue is the majority, and even discusses Nash equilibria but does not identify red as the dominant individually-safe strategy; no rule-mechanics inversion is stated.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on a preference for collective cooperation and social coordination, while explicitly acknowledging the game-theoretic argument for red as the 'safer' or 'egoistic' choice. They correctly identify the dilemma as a coordination problem but fail to recognize that red is a strictly dominant strategy because they incorrectly assume that if they choose red and the majority chooses blue, they would die (the prompt states red-pressers survive regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

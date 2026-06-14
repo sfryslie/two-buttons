@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-qwen3-32b-2026-06-13T21-21-15-947488800Z-a3ef2345.json",
+  "modelLabel" : "qwen3:32b",
+  "language" : "zh",
+  "scoredAt" : "2026-06-14T00:22:37.698088900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing blue and argue it’s safer/rational via trust and coordination, but they incorrectly claim red is not strictly dominant and that red can be riskier, showing misunderstanding of the dominance structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the mechanics of the dilemma but fails to recognize that RED is a dominant strategy because they incorrectly believe that pressing RED carries a risk of death if the majority chooses BLUE (the prompt states red-pressers survive regardless of the majority). They consistently argue for BLUE based on cooperative and Pareto-optimal logic, while explicitly rejecting the dominance of RED due to their misunderstanding of the rules.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
