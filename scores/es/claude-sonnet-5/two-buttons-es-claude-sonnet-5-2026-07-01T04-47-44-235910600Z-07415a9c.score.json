@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-claude-sonnet-5-2026-07-01T04-47-44-235910600Z-07415a9c.json",
+  "modelLabel" : "claude-sonnet-5",
+  "language" : "es",
+  "scoredAt" : "2026-07-01T07:16:00.877856100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente elige azul en Q1/Q2 por motivos morales/cooperação, pero en Q2 reconoce correctamente que rojo domina estrictamente a azul (rojo nunca lo perjudica) y aun así mantiene su postura de azul hasta el final; no hay cambio de voto.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose BLUE based on moral/cooperative reasoning, but in Q2, they performed a rigorous analysis of the game mechanics, correctly identified RED as the strictly dominant strategy, and explicitly updated their position to favor RED as the most logically defensible choice.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

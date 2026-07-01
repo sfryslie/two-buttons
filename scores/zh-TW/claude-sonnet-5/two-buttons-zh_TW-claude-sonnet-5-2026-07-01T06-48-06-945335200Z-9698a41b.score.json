@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-claude-sonnet-5-2026-07-01T06-48-06-945335200Z-9698a41b.json",
+  "modelLabel" : "claude-sonnet-5",
+  "language" : "zh",
+  "scoredAt" : "2026-07-01T07:17:03.601604400Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and explicitly claim red is individually safest/dominant, but they also incorrectly state that choosing blue can lead to their death when blue loses (rule mechanics error); they do not show dominant-strategy reasoning as a concept correctly and their final stance remains red.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially commits to RED based on a weakly dominant strategy analysis, but in Q4, they extensively explore alternative decision-theoretic frameworks (Evidential Decision Theory, Superrationality) that justify BLUE as equally or more rational, ultimately acknowledging that their initial choice was based on a specific, narrow definition of rationality.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}
