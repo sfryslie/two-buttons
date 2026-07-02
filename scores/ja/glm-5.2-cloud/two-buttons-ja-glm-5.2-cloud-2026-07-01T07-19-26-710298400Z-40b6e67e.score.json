@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-glm-5.2-cloud-2026-07-01T07-19-26-710298400Z-40b6e67e.json",
+  "modelLabel" : "glm-5.2:cloud",
+  "language" : "ja",
+  "scoredAt" : "2026-07-02T05:38:23.546589900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (incorrectly) that red is the dominant/safe strategy for the individual, while also predicting red-majority leads to blue-pressers dying; they never change their vote.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies RED as the dominant strategy and acknowledges the game theory mechanics, but chooses BLUE based on ethical, Kantian, and collective-utility frameworks. They maintain this position throughout the dialogue.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
