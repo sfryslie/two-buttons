@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-claude-sonnet-5-2026-07-01T05-23-20-911258200Z-e10b217a.json",
+  "modelLabel" : "claude-sonnet-5",
+  "language" : "hi",
+  "scoredAt" : "2026-07-01T07:16:26.943098900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue cooperatively, but in Q2/Q4 they explicitly claim the dominant-strategy logic implies BLUE can be irrational while also describing RED as a “dominant/insurance” option; however they also contain a rule-mechanics error in Q2/Q4 tables where they say BLUE-pressers die when red is the majority (they should survive), so their dominance application is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE based on cooperative and ethical frameworks (Kantian, Superrationality), while explicitly acknowledging and steelmanning the RED dominant strategy throughout the text. They correctly identify RED as the dominant strategy in game-theoretic terms but reject it in favor of collective rationality. There is no position change.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

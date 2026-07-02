@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-glm-5.2-cloud-2026-07-01T06-23-50-052702400Z-2b7dbc27.json",
+  "modelLabel" : "glm-5.2:cloud",
+  "language" : "hi",
+  "scoredAt" : "2026-07-01T07:16:32.324625500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue from moral/superrationality, while correctly stating that red is a dominant strategy with 0% death risk, yet they still choose blue; they also predict a red majority and claim blue-pressers die when red wins (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses the blue button based on moral and philosophical frameworks (Kant, superrationality), while explicitly acknowledging and correctly steelmanning the red button as the dominant strategy in game theory. They demonstrate a clear understanding of the dominance structure (red = 0% risk, blue = 50%+ risk) and correctly identify red as the dominant strategy, even though they personally reject it for altruistic reasons. There is no rule error; they correctly describe the outcomes of both buttons.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

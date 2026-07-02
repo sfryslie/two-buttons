@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-glm-5.2-cloud-2026-07-01T05-04-18-396364500Z-7808ab23.json",
+  "modelLabel" : "glm-5.2:cloud",
+  "language" : "de",
+  "scoredAt" : "2026-07-01T07:15:32.285215800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte entscheidet sich klar für Blau und behauptet dabei, Rot sei dominant und Blau sei moralisch/kooperativ sinnvoll; er/sie erkennt zwar die Dominanzstruktur als Konzept, identifiziert aber die dominante Strategie inhaltlich falsch (behauptet Rot sei sicher), und es liegt ein Regel-/Mechanikfehler vor, da Blau-Drücker bei Rot-Mehrheit sterben würden (laut Antwort) statt zu überleben.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly identifies red as the dominant strategy and correctly explains the game theory mechanics, but chooses blue based on ethical and value-rational frameworks.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

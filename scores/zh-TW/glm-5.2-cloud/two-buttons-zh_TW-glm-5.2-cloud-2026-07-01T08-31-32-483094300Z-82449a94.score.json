@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-glm-5.2-cloud-2026-07-01T08-31-32-483094300Z-82449a94.json",
+  "modelLabel" : "glm-5.2:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-07-02T05:38:51.750584500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing BLUE and argue (incorrectly) that BLUE is the rational/collectively optimal choice while claiming red is the individually dominant strategy, despite also acknowledging the dominance structure in places; they do not make a rule-mechanics error about who survives.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly identifies RED as the dominant strategy (the 'strictly dominant strategy') and correctly explains the mechanics of the dilemma, including the fact that red-pressers survive regardless of the outcome. Despite this, they choose BLUE based on an explicit moral and altruistic framework, acknowledging that this choice is 'irrational' from a purely individualistic, game-theoretic perspective. Their position remains consistent throughout the response.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

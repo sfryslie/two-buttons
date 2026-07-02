@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-claude-sonnet-5-2026-07-01T04-02-14-626771300Z-09a1cebb.json",
+  "modelLabel" : "claude-sonnet-5",
+  "language" : "ar",
+  "scoredAt" : "2026-07-01T07:15:17.112846300Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue and argues cooperatively, explicitly claiming red is the dominant strategy but still choosing blue; they also misstate the mechanics in Q1/Q2 (saying red-majority makes blue-pressers die and red-pressers always survive), so their understanding of the dominance structure is incorrect.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly commits to pressing BLUE in Q1 and maintains this position throughout the discussion. They demonstrate a sophisticated understanding of game theory, correctly identifying RED as the dominant strategy (the 'dominant strategy' steelman in Q2 and Q4), but consciously reject it in favor of 'superrationality' and Kantian ethics. They do not exhibit any rule errors regarding the mechanics of the dilemma.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
