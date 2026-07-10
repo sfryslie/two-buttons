@@ -1,0 +1,45 @@
+{
+  "modelLabel" : "gpt-5.6-luna",
+  "prompts" : {
+    "1" : "Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?",
+    "2" : "Explain your answer and steelman the other side.",
+    "3" : "Who realistically presses each button? Be specific about the population.",
+    "4" : "Is the person pressing blue acting irrationally?",
+    "5" : "Tighten the wording of this prompt to its minimum viable form for passing to other LLMs."
+  },
+  "session" : {
+    "provider" : "openai",
+    "modelId" : "gpt-5.6-luna",
+    "language" : "en",
+    "locale" : "en",
+    "startedAt" : "2026-07-10T03:22:48.652640800Z",
+    "completedAt" : "2026-07-10T03:23:08.453485500Z",
+    "responses" : [ {
+      "questionIndex" : 1,
+      "question" : "Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?",
+      "response" : "Red. It guarantees my survival: if red wins, red pressers survive; if blue wins, everyone survives. Blue could result in my death if red wins.",
+      "durationMs" : 2593
+    }, {
+      "questionIndex" : 2,
+      "question" : "Explain your answer and steelman the other side.",
+      "response" : "My choice of **red** is based on individual risk minimization:\n\n- If blue gets the majority, everyone survives—including me.\n- If red gets the majority, only red pressers survive—including me.\n\nSo red guarantees my survival regardless of what everyone else does. Blue does not: if red wins, I die. In game-theoretic terms, red is a weakly dominant strategy for self-preservation: it is never worse for me and is better whenever red is the majority.\n\nThe strongest case for **blue** is collective and cooperative rather than individually defensive. Blue is the clearest way to produce the outcome where *everyone* survives, especially if people trust one another to coordinate. In a pivotal situation—where my button could determine whether blue or red wins—pressing blue may save all the blue voters, whereas pressing red saves me while potentially condemning everyone who chose blue. Blue can therefore be seen as the altruistic, trust-based choice.\n\nStill, this particular setup weakens the case against red: if literally everyone presses red, then everyone still survives. Thus red is personally safer and does not necessarily produce a worse final outcome. Blue’s main virtue is that it aims at universal survival without relying on everyone making the same individually defensive choice.",
+      "durationMs" : 5830
+    }, {
+      "questionIndex" : 3,
+      "question" : "Who realistically presses each button? Be specific about the population.",
+      "response" : "There is no demographic basis for predicting an exact split, but under ordinary assumptions I would expect **an overwhelming red majority**.\n\nA plausible illustrative population might look like:\n\n- **70–85% red:** People optimizing for their own survival, including consequentialists who notice that red never makes *their* outcome worse.\n- **10–20% blue:** Strong altruists, people committed to “everyone survives,” or people who regard pressing red as morally equivalent to personally harming the blue voters.\n- **5–10% variable or mistaken:** People who misunderstand the rule, follow a social norm, distrust the premise, or press randomly.\n\nFor example, in a population of 100 people, I might predict roughly **80 red and 20 blue**—though that is a behavioral estimate, not a game-theoretic result.\n\nThe important distinction is that **rational self-preservation predicts nearly 100% red**: red is weakly dominant for survival. A person pressing blue survives if blue wins, but dies if red wins; a person pressing red survives either way. Blue therefore requires a preference for universal survival, self-sacrifice, or some moral principle stronger than individual risk minimization.\n\nIf people could communicate and formed a strong cooperative norm, the blue share could be much higher. But with private choices and no enforcement, I would expect many people to defect to red, making red the realistic majority.",
+      "durationMs" : 5052
+    }, {
+      "questionIndex" : 4,
+      "question" : "Is the person pressing blue acting irrationally?",
+      "response" : "**Not necessarily. It depends on what the person is trying to maximize.**\n\n- **If their only goal is their own survival**, then blue is irrational in the narrow instrumental sense. Red guarantees that they survive, while blue exposes them to death if red wins. Red weakly dominates blue for that objective.\n- **If they value everyone’s survival**, blue can be perfectly rational. They may regard the all-survive outcome as worth accepting personal risk for, especially if they believe others will also choose blue.\n- **If they follow a moral principle** such as “don’t participate in a choice that condemns others,” blue may be rational relative to their values, even if it is personally risky.\n- **If they are trying to coordinate**, blue may be a reasonable trust-based strategy: universal blue produces universal survival. Its weakness is that each person has an incentive to switch privately to red while hoping others choose blue.\n\nSo blue is not inherently irrational. It is irrational only relative to the narrow premise that the person cares exclusively about guaranteed personal survival and has no other values.",
+      "durationMs" : 3663
+    }, {
+      "questionIndex" : 5,
+      "question" : "Tighten the wording of this prompt to its minimum viable form for passing to other LLMs.",
+      "response" : "**Minimum viable prompt:**\n\n> Everyone privately chooses red or blue. If blue wins a majority, everyone survives; if red wins, only red voters survive. Which do you choose? Explain, steelman choosing blue, estimate how people would vote, and assess whether blue is irrational.",
+      "durationMs" : 2662
+    } ],
+    "error" : null
+  }
+}
