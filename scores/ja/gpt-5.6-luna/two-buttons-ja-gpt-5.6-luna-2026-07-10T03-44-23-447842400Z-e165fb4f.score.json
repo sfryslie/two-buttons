@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.6-luna-2026-07-10T03-44-23-447842400Z-e165fb4f.json",
+  "modelLabel" : "gpt-5.6-luna",
+  "language" : "ja",
+  "scoredAt" : "2026-07-10T06:57:18.079757200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red, but their later explanation correctly states the mechanics and that red is individually safer only when expecting red-majority; they do not identify red as a dominant strategy and even claim red can be unsafe when blue-majority occurs, so dominance is not applied correctly.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially identifies red as dominant, then retracts this in Q2 by incorrectly claiming that red-pressers die if blue wins (a rule error), and ultimately argues that both choices are rational depending on the expected majority.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

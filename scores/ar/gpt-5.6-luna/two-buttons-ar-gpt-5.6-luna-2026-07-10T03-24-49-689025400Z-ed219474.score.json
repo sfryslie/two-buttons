@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ar-gpt-5.6-luna-2026-07-10T03-24-49-689025400Z-ed219474.json",
+  "modelLabel" : "gpt-5.6-luna",
+  "language" : "ar",
+  "scoredAt" : "2026-07-10T06:55:29.596542500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "The respondent commits to pressing blue for social/cooperative reasons, explicitly notes that if they expect a red majority then choosing blue could mean their death, and they also argue there is no dominant strategy; they therefore misunderstand the dominance structure even though they discuss it at length.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses BLUE for cooperative reasons while correctly identifying that RED is the safer individual choice in a non-cooperative scenario, though they incorrectly claim there is no dominant strategy because they misinterpret the mechanics of the red button (they believe choosing red is only safe if the majority is red, failing to realize red is safe regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

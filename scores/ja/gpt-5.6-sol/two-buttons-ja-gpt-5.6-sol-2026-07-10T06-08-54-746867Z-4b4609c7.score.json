@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-ja-gpt-5.6-sol-2026-07-10T06-08-54-746867Z-4b4609c7.json",
+  "modelLabel" : "gpt-5.6-sol",
+  "language" : "ja",
+  "scoredAt" : "2026-07-10T06:57:22.839752800Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They initially commit to pressing blue, correctly describe that red is individually safe (dominant) in Q2/Q4, but then explicitly reverse to endorsing red by Q4; they also make a rule-mechanics error in Q4 claiming all-red leads to everyone surviving (which is correct) but they also state 'all red is not mass death'—their earlier dominance conclusion is consistent, yet the explicit correction indicates confusion about the scenario outcome framing; overall they misapply the scenario in Q4 by asserting 'all red means everyone survives' rather than the correct 'only red-pressers survive'—so rule_error=true.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chose blue based on cooperative ethics, but after correctly identifying red as the dominant strategy and realizing that a red majority does not lead to mass death, they explicitly changed their position to red in Q4.",
+      "initialVote" : "BLUE",
+      "finalVote" : "RED",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
