@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-hi-gpt-5.6-luna-2026-07-10T03-40-45-913397900Z-ca4cdf01.json",
+  "modelLabel" : "gpt-5.6-luna",
+  "language" : "hi",
+  "scoredAt" : "2026-07-10T06:57:02.785308500Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing blue and argues blue can yield everyone surviving, but they incorrectly claim blue is not individually always safer and describe dominance as depending on others, showing misunderstanding of the dominant strategy structure.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on collective welfare and moral preference, while correctly identifying that the choice depends on others' actions. They fail to recognize that red is a dominant strategy because they incorrectly believe that pressing red carries a risk of death if blue wins (a rule error).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-5.6-luna-2026-07-10T03-32-51-585013400Z-f99879d3.json",
+  "modelLabel" : "gpt-5.6-luna",
+  "language" : "es",
+  "scoredAt" : "2026-07-10T06:56:25.805270200Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete con presionar AZUL y reconoce que no hay estrategia dominante (aunque discute que rojo podría ser racional si cree que la mayoría elegirá rojo), pero no identifica correctamente que RED es dominante y que presionar rojo nunca causa su muerte; por tanto su comprensión de dominancia es incorrecta y no hay cambio de voto.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue for collective/moral reasons but demonstrates a rule error by claiming that pressing blue results in death if the majority chooses red (which is true) AND that pressing red results in death if the majority chooses blue (which is false, as red-pressers survive in both scenarios). Because they believe red-pressers die when blue wins, they fail to identify red as the dominant strategy.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

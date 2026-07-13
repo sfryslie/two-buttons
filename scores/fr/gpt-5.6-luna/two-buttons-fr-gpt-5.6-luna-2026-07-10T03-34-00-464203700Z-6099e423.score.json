@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-fr-gpt-5.6-luna-2026-07-10T03-34-00-464203700Z-6099e423.json",
+  "modelLabel" : "gpt-5.6-luna",
+  "language" : "fr",
+  "scoredAt" : "2026-07-10T06:56:40.887762900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Le répondant s’engage clairement pour bleu, reconnaît que la survie individuelle dépend des croyances sur la majorité et nie que bleu soit strictement dominant, sans commettre d’erreur sur les mécanismes (bleu majoritaire ⇒ tout le monde survit).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent chooses blue based on cooperative and collective values, explicitly acknowledging that red is not strictly dominated in their view because they treat the outcome as dependent on the majority's choice (a coordination game perspective). They fail to identify red as the dominant strategy because they incorrectly assume that pressing red only saves the individual if the red majority occurs, whereas the rules state red-pressers survive regardless of the majority.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

@@ -29,7 +29,7 @@ section h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacin
 .chart-section-inner{display:flex;gap:20px;align-items:flex-start}
 .filter-sidebar{width:220px;flex-shrink:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding-right:2px}
 .chart-area{flex:1;min-width:0}
-.chart-wrap{position:relative;height:2104px}
+.chart-wrap{position:relative;height:2216px}
 /* Filter groups */
 .fg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#777;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
 .fg-label .an{font-size:10px;font-weight:400;text-transform:none;letter-spacing:0;color:#4a90d9}
@@ -94,9 +94,9 @@ details.qa-section[open] .qa-toggle::before{content:'▼  '}
 <body>
 <header>
   <h1>Two Buttons — Scoring Report</h1>
-  <div class="sub">Generated 2026-07-02 05:39 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: ar, de, en, es, fr, hi, ja, ru, zh-CN, zh-TW</div>
+  <div class="sub">Generated 2026-07-12 22:08 UTC &nbsp;·&nbsp; Scorers: openai, gemini &nbsp;·&nbsp; Languages: ar, de, en, es, fr, hi, ja, ru, zh-CN, zh-TW</div>
   <div class="stats">
-    <div class="stat hi"><div class="val" id="stat-total">18234</div><div class="lbl">Sessions</div></div>
+    <div class="stat hi"><div class="val" id="stat-total">19234</div><div class="lbl">Sessions</div></div>
     <div class="stat blue"><div class="val" id="stat-blue"></div><div class="lbl">Blue</div></div>
     <div class="stat red"><div class="val" id="stat-red"></div><div class="lbl">Red</div></div>
     <div class="stat none"><div class="val" id="stat-none"></div><div class="lbl">None</div></div>
@@ -178,16 +178,16 @@ details.qa-section[open] .qa-toggle::before{content:'▼  '}
 <section>
   <h2>Language Comparison (all data)</h2>
   <div class="lang-charts">
-    <div class="lang-chart-box"><h3>ar (n=1825)</h3><canvas id="langChart_ar"></canvas></div>
-    <div class="lang-chart-box"><h3>de (n=1825)</h3><canvas id="langChart_de"></canvas></div>
-    <div class="lang-chart-box"><h3>en (n=1825)</h3><canvas id="langChart_en"></canvas></div>
-    <div class="lang-chart-box"><h3>es (n=1825)</h3><canvas id="langChart_es"></canvas></div>
-    <div class="lang-chart-box"><h3>fr (n=1825)</h3><canvas id="langChart_fr"></canvas></div>
-    <div class="lang-chart-box"><h3>hi (n=1825)</h3><canvas id="langChart_hi"></canvas></div>
-    <div class="lang-chart-box"><h3>ja (n=1825)</h3><canvas id="langChart_ja"></canvas></div>
-    <div class="lang-chart-box"><h3>ru (n=1825)</h3><canvas id="langChart_ru"></canvas></div>
-    <div class="lang-chart-box"><h3>zh-CN (n=1825)</h3><canvas id="langChart_zh-CN"></canvas></div>
-    <div class="lang-chart-box"><h3>zh-TW (n=1809)</h3><canvas id="langChart_zh-TW"></canvas></div>
+    <div class="lang-chart-box"><h3>ar (n=1925)</h3><canvas id="langChart_ar"></canvas></div>
+    <div class="lang-chart-box"><h3>de (n=1925)</h3><canvas id="langChart_de"></canvas></div>
+    <div class="lang-chart-box"><h3>en (n=1925)</h3><canvas id="langChart_en"></canvas></div>
+    <div class="lang-chart-box"><h3>es (n=1925)</h3><canvas id="langChart_es"></canvas></div>
+    <div class="lang-chart-box"><h3>fr (n=1925)</h3><canvas id="langChart_fr"></canvas></div>
+    <div class="lang-chart-box"><h3>hi (n=1925)</h3><canvas id="langChart_hi"></canvas></div>
+    <div class="lang-chart-box"><h3>ja (n=1925)</h3><canvas id="langChart_ja"></canvas></div>
+    <div class="lang-chart-box"><h3>ru (n=1925)</h3><canvas id="langChart_ru"></canvas></div>
+    <div class="lang-chart-box"><h3>zh-CN (n=1925)</h3><canvas id="langChart_zh-CN"></canvas></div>
+    <div class="lang-chart-box"><h3>zh-TW (n=1909)</h3><canvas id="langChart_zh-TW"></canvas></div>
   </div>
 </section>
 
@@ -42214,6 +42214,778 @@ If you want, I can give a precise threshold for a specific population size N and
 Assume risk-neutrality and ignore ties (majority means > N/2). Provide concise formulas and brief justification.</div></div></div></details>
 </details>
 <details class="card-item" data-lang="en">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">en</span><span class="tag-file">-2026-07-10T03-20-32-394169200Z-3d07dc3b</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>They initially choose blue but later explicitly revise to red, correctly stating that red is individually rational/dominant for self-preservation and that blue can be fatal when red is the majority; no rule mechanics are inverted.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent initially chose blue but explicitly revised their position to red after correctly identifying red as the dominant strategy, maintaining this commitment throughout the analysis.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?</div><div class='qa-a'>I’d press **blue**. It is the Pareto-superior coordination choice: if enough people do the same, everyone survives.  
+
+That said, the game has two stable equilibria—everyone choosing blue and everyone choosing red—so without information about others’ choices, there is no uniquely compelled rational answer.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Explain your answer and steelman the other side.</div><div class='qa-a'>I’d revise my initial answer: **red is the individually rational choice**.
+
+### Why red?
+
+Your own survival is guaranteed if you press red:
+
+- If red is the majority, red pressers survive.
+- If blue is the majority, everyone survives—including you.
+- If your choice determines the majority, pressing red makes red the majority, so you survive.
+
+By contrast, pressing blue can be fatal: if enough other people press red, you are in the blue minority and die. Thus, red weakly dominates blue for self-preservation and is strictly better whenever the others would otherwise form a red majority.
+
+My initial blue answer focused on the collective ideal: blue creates an outcome where everyone survives. But it overlooked that choosing red does not prevent you from surviving when blue wins, and protects you when red wins.
+
+### Steelmanning blue
+
+The strongest case for blue is moral and coordination-based rather than individually strategic:
+
+- If many people choose blue, **everyone survives**, including people who chose red.
+- Blue expresses trust that others will cooperate for the common good.
+- If everyone reasons “red guarantees me survival,” the result may be universal red—which also happens to let everyone survive—but in less coordinated or mixed populations, blue voters bear the risk.
+- Someone might choose blue on the principle that they should not contribute to an outcome in which others die, even if red is safer personally.
+
+So **blue is the socially aspirational choice**, while **red is the dominant self-preservation choice**. Given the wording—“Which button do you press?”—I’d choose red.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Who realistically presses each button? Be specific about the population.</div><div class='qa-a'>There is no real-world data for this exact game, so any percentage is illustrative. But in a large, anonymous population, I would expect **red to be the majority**, probably substantially.
+
+### Likely red pressers
+
+Something like **65–85%** might press red:
+
+- People focused primarily on their own survival.
+- Risk-averse people who do not trust strangers to coordinate.
+- Strategic thinkers who notice that red guarantees their survival regardless of what others do.
+- People who expect others to reason the same way.
+- People responsible for children or dependents and unwilling to gamble.
+- People who interpret the situation competitively: “I should secure my own place among the survivors.”
+- People who misunderstand the game but see red as the safer or more forceful option.
+
+This group includes many people who are not selfish in ordinary life. Faced with an irreversible, anonymous, life-or-death decision, protecting oneself is a very strong default.
+
+### Likely blue pressers
+
+Perhaps **15–35%** might press blue:
+
+- Strong altruists who care more about maximizing total survival than securing their own survival.
+- High-trust cooperators who believe others will also choose blue.
+- People who see blue as the morally legitimate “everyone survives” option.
+- People who dislike benefiting from a rule under which others may die.
+- People influenced by social ideals such as solidarity, nonaggression, or collective responsibility.
+- People who focus on the best possible collective outcome and discount the risk of being in the minority.
+
+Some may also choose blue because they fail to notice that red is safer individually, or because they intuitively treat blue as the “good” button.
+
+### A plausible population-level outcome
+
+For a randomly assembled world population with no communication, I would expect something like:
+
+- **70% red**
+- **30% blue**
+
+That produces a red majority: the 70% red pressers survive, while the blue pressers die. This is not because red voters necessarily want others to die; it is because each red voter is protecting themselves, and the combination of those choices can produce a worse collective outcome for the blue minority.
+
+If people were allowed to coordinate beforehand, the population might converge on either:
+
+- **Everyone blue**, yielding universal survival; or
+- **Everyone red**, also yielding universal survival, though through the less cooperative equilibrium.
+
+The interesting feature is that blue requires widespread trust, whereas red does not. In an anonymous global population, trust is likely to be the scarce resource, so red is the more realistic majority choice.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; Is the person pressing blue acting irrationally?</div><div class='qa-a'>**Not necessarily. It depends on what “rational” means and what the person values.**
+
+### If the person cares only about their own survival
+
+Then blue is a **weakly dominated** choice:
+
+- If red would be the majority among everyone else, pressing red saves you; pressing blue kills you.
+- If blue would be the majority, either choice saves you.
+- If your choice is pivotal, red saves you and blue also saves you.
+
+So red is never worse for the chooser’s own survival and is sometimes better. A purely self-interested, survival-maximizing person has no instrumental reason to press blue. In that narrow sense, blue is an irrational risk.
+
+However, “weakly dominated” is not quite the same as “logically impossible for a rational person.” The person may be indifferent between red and blue in scenarios where both save them, and may use other values to break the tie.
+
+### If the person cares about everyone’s survival
+
+Blue can be entirely rational. Suppose the person believes there is a meaningful chance that their choice will help produce a blue majority. Then:
+
+- Pressing blue may result in **everyone surviving**.
+- Pressing red may result in only the red pressers surviving.
+
+A person who assigns moral value to other people’s survival may accept some personal risk to pursue the universally better outcome. They might reason: “If enough people choose blue, everyone lives; I should contribute to that outcome rather than guarantee myself a place in a potentially lethal red coalition.”
+
+### Other rational reasons for blue
+
+A blue presser might also:
+
+- Trust others and expect blue to be the majority.
+- Follow a moral rule such as “choose the option that can save everyone.”
+- Reject intentionally participating in a system where some people die.
+- Care about equality, solidarity, or total lives saved.
+- Believe that widespread red-choosing creates a harmful norm of mutual distrust.
+
+### Bottom line
+
+A blue presser is **not irrational in general**. They are irrational only relative to a very narrow objective: maximizing their own survival with no concern for anyone else. Under altruistic or social preferences, blue can be a coherent—and morally admirable—choice, even though it is personally riskier.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Tighten the wording of this prompt to its minimum viable form for passing to other LLMs.</div><div class='qa-a'>**Each person must privately choose red or blue. If blue wins a majority, everyone survives; if red wins, only red voters survive. Which do you choose? Explain your reasoning, steelman the opposing choice, estimate who would realistically choose each option, and assess whether choosing blue is irrational.**</div></div></div></details>
+</details>
+<details class="card-item" data-lang="en">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">en</span><span class="tag-file">una-2026-07-10T03-20-48-080378Z-fb976301</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>They explicitly identify red as the individually dominant/survival-guaranteeing strategy (even stating blue can be fatal when red is the majority), while still defending that some agents may rationally choose blue for moral/coordination reasons; they do not show a vote change between Q1 and Q4.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent initially considers blue but shifts to red after correctly identifying it as the dominant strategy, providing a comprehensive analysis of the game theory mechanics and acknowledging that blue can be rational only under non-selfish utility functions.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?</div><div class='qa-a'>I’d press **blue**: it offers the best collective outcome, since a blue majority means everyone survives.  
+
+That said, there’s no uniquely rational choice without knowing what others will do: if you believe red is likely to be the majority, pressing red maximizes your own chance of survival.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Explain your answer and steelman the other side.</div><div class='qa-a'>I’d revise my answer: **red is the rational individual choice**.
+
+Let everyone else’s choices be fixed:
+
+- If **blue is the majority**, you survive whether you press blue or red, because everyone survives.
+- If **red is the majority**, pressing **red** means you survive, while pressing blue means you die.
+
+So pressing red **always guarantees your survival**, whereas pressing blue can be fatal. Red therefore weakly dominates blue, and it is strictly better whenever the others would form a red majority. In fact, if everyone presses red, everyone survives—because everyone belongs to the red-pressing majority.
+
+The strongest case for **blue** is moral or coordination-based rather than individually strategic:
+
+- A blue majority guarantees universal survival.
+- Choosing blue signals trust and willingness to avoid imposing harm on people who choose differently.
+- If people are trying to establish a cooperative convention, “everyone choose blue” may seem like the more socially reassuring focal point.
+- Someone might also reject red because, under a mixed red majority, red voters survive while blue voters die, making red appear coercive or exploitative.
+
+But under the rules as stated, blue has no personal-survival advantage. Red preserves you in every possible outcome and does not prevent universal survival if everyone chooses it. So the steelmanned conclusion is: **blue is the more conventionally cooperative-looking choice, but red is the strategically dominant one.**</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Who realistically presses each button? Be specific about the population.</div><div class='qa-a'>There is no empirical way to know, but under a plausible assumption that people understand the rules and choose privately, I’d expect **red to win by a large margin**.
+
+Using a hypothetical world population of **8.3 billion**:
+
+| Group | Likely choice | Approx. share | Approx. number |
+|---|---:|---:|---:|
+| Strategic self-preservers who notice that red guarantees their own survival | Red | 45% | 3.7 billion |
+| People who are risk-averse, distrustful, or assume others will defect | Red | 15% | 1.2 billion |
+| People who choose red because they see it as the only individually safe option, even if they dislike it | Red | 10% | 0.8 billion |
+| Cooperative or universalist people who prioritize the outcome “everyone survives” | Blue | 15% | 1.25 billion |
+| People who trust others to coordinate on blue | Blue | 10% | 0.83 billion |
+| People who choose blue from moral instinct, confusion, or aversion to benefiting from others’ deaths | Blue | 5% | 0.42 billion |
+
+That would produce roughly:
+
+- **Red: 70% — about 5.8 billion people**
+- **Blue: 30% — about 2.5 billion people**
+
+The likely **red voters** would include game-theory-minded people, strong individualists, people who distrust mass cooperation, and anyone reasoning: “Red cannot make me worse off, while blue can kill me.”
+
+The likely **blue voters** would include altruists, people focused on universal survival, those who treat the choice as a test of solidarity, and people who believe a visibly pro-social convention can coordinate everyone on blue.
+
+There is an important twist: if the population is assumed to be perfectly rational, fully informed, and mutually aware of the dominance argument, then the prediction changes to **almost 100% red**. Everyone pressing red is not actually a catastrophe: red becomes the majority, and every red voter survives—so if everyone presses red, **everyone survives**.
+
+The substantial blue minority arises only from human psychology: moral preferences, trust, conformity, misunderstanding, or a refusal to use a strategy that could kill blue voters.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; Is the person pressing blue acting irrationally?</div><div class='qa-a'>**Not necessarily. It depends on what “rational” means and what the person values.**
+
+### If the person’s sole objective is personal survival
+
+Then **yes, blue is irrational—or at least strictly inferior**.
+
+For any choices by everyone else:
+
+- If blue is already the majority, either button lets you survive.
+- If red is already the majority, red lets you survive and blue kills you.
+- If the others are exactly tied, red makes red the majority and still lets you survive; blue makes blue the majority and also lets you survive.
+
+Thus, red never gives you a worse survival outcome and sometimes gives you a better one. It weakly dominates blue.
+
+### If the person values everyone’s survival
+
+Then pressing blue can be entirely rational.
+
+Suppose the other voters are evenly split. Your choice is decisive:
+
+- Press **blue**: blue becomes the majority and **everyone survives**.
+- Press **red**: red becomes the majority and **all blue voters die**.
+
+A person who places substantial value on other people’s lives should choose blue in that situation. More generally, they may view universal survival as the morally preferable outcome, even at some risk to themselves.
+
+### If the person follows a cooperative norm
+
+Blue may also be rational as a form of trust or coordination. They might reason:
+
+> “If everyone chooses the individually dominant option, we create a hostile equilibrium. I should choose the action that supports the outcome where everyone survives.”
+
+That is not irrational, though it is vulnerable to defection by red voters.
+
+So the precise answer is:
+
+- **Under pure self-interest:** blue is irrationally dominated.
+- **Under altruistic, egalitarian, or cooperative preferences:** blue can be rational.
+- **Under ordinary human reasoning:** a blue voter may be strategically mistaken, morally principled, or deliberately prioritizing collective welfare over dominance.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Tighten the wording of this prompt to its minimum viable form for passing to other LLMs.</div><div class='qa-a'>**Everyone privately chooses red or blue. If blue gets a majority, everyone survives; if red gets a majority, only red voters survive. Which do you choose, and why? Steelman the opposing choice.**</div></div></div></details>
+</details>
+<details class="card-item" data-lang="en">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">en</span><span class="tag-file">una-2026-07-10T03-23-08-454487Z-c4194786</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>They explicitly revise to pressing red for self-preservation, correctly stating that red guarantees their survival in both majority outcomes, while also acknowledging blue can be rational for social/altruistic reasons; no rule mechanics errors and no vote change between Q2 and Q4.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent initially wavered but clearly committed to RED in Q2 and maintained that position throughout, correctly identifying it as the dominant strategy while acknowledging the moral case for BLUE.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?</div><div class='qa-a'>There’s no uniquely rational choice without assumptions about what everyone else will do.
+
+- Press **blue** if you think blue is more likely to be the majority; then everyone survives.
+- Press **red** if you think red is more likely to be the majority; then red pressers survive while blue pressers do not.
+
+If forced to choose based on the socially preferable outcome, I’d press **blue**, since a blue majority saves everyone.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Explain your answer and steelman the other side.</div><div class='qa-a'>I’d revise my initial answer: **I would press red**, assuming my objective is to maximize my own chance of survival.
+
+Why:
+
+- If **blue is the majority**, everyone survives—including me if I pressed red.
+- If **red is the majority**, only red pressers survive, so pressing red is essential.
+- Therefore, red guarantees my survival in either outcome, while blue risks my death if red wins.
+
+So red is a **weakly dominant strategy** for individual self-preservation. My earlier claim that one should press blue if blue seemed more likely overlooked that red pressers also survive under a blue majority.
+
+The strongest case for **blue** is an altruistic or social-welfare argument:
+
+- A blue majority produces the best possible result: **everyone survives**.
+- Choosing blue helps create that outcome and avoids contributing to a red-majority world in which blue voters die.
+- If everyone reasons only about personal safety and presses red, a red majority may result, leaving many people dead—even though universal survival was possible.
+
+Thus:
+
+- **Red** is the individually safest choice.
+- **Blue** is the socially optimal, cooperative choice.
+
+If the question asks what *I* press rather than what outcome I want for humanity, I press **red**.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Who realistically presses each button? Be specific about the population.</div><div class='qa-a'>There is no reliable real-world percentage without knowing the population, framing, and whether people value only themselves or everyone. But under the stated rules—private choice, no communication, and a clear understanding of the consequences—I’d expect something like this:
+
+### Likely to press red
+
+- **Self-preservation maximizers:** Red guarantees their own survival regardless of the majority.
+- **Game-theory-oriented people:** They recognize red as the individually dominant strategy.
+- **People who distrust others:** They expect others to defect toward red, so they do the same.
+- **People with strong family or group loyalties:** If they regard their own survival as a prerequisite for helping others, they choose red.
+- **Risk-averse people:** Red has no personal downside; blue can mean certain death if red wins.
+- **People who resent being morally pressured:** They may refuse to sacrifice themselves for a possible collective benefit.
+
+This is probably the largest group. A rough, illustrative estimate might be **60–85% red**, depending on how selfish or pessimistic the population is.
+
+### Likely to press blue
+
+- **Strong consequentialists:** They prioritize the outcome in which everyone survives.
+- **Altruists:** They are willing to risk their own life to give everyone the best collective chance.
+- **Cooperators and social-trusters:** They believe enough other people will also choose blue.
+- **People who reject free-riding:** They may think pressing red is exploitative because it benefits from a blue majority while contributing nothing to it.
+- **People motivated by solidarity or moral identity:** They would rather make the universally survivable outcome possible, even at personal risk.
+- **People who interpret the question as a test of character:** They may choose the socially admirable answer rather than the strategically safest one.
+
+A plausible minority might be **15–40% blue**, especially if the scenario is presented as a moral dilemma rather than a game-theory puzzle.
+
+### My best prediction
+
+Absent communication, I’d predict a **red majority**, because red is individually safer and people generally give substantial weight to their own survival. The likely reasoning is:
+
+> “If blue wins, I survive either way; if red wins, blue kills me. So red cannot hurt me.”
+
+Blue can produce the better outcome, but it requires enough people to accept personal risk and trust strangers. That makes blue socially optimal but psychologically and strategically fragile.
+
+So the likely population split is **mostly red, with a substantial blue minority**, though the exact ratio would depend heavily on whether participants are framed as selfish decision-makers, moral agents, or members of a cooperative society.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; Is the person pressing blue acting irrationally?</div><div class='qa-a'>**Not necessarily. It depends on the person’s objective.**
+
+If the person cares **only about their own survival**, then pressing blue is irrational in the standard decision-theoretic sense:
+
+- If blue wins, red and blue both survive.
+- If red wins, red survives and blue does not.
+- Therefore, red is at least as good for the individual in every case and strictly better in one.
+
+But a person may rationally care about **other people’s survival** as well. If their preferences are something like “I want as many people as possible to survive,” then blue can be the rational choice because a blue majority is the only outcome in which everyone survives.
+
+Blue may also reflect:
+
+- altruism or solidarity;
+- a moral rule against benefiting from others’ sacrifice;
+- a preference for universal cooperation;
+- concern that if everyone presses red, the collectively disastrous red-majority outcome becomes likely.
+
+The complication is that blue voters face a **free-rider problem**: they bear personal risk while benefiting from other people’s blue votes. So blue is generally irrational for a purely self-interested agent, but it is not irrational for someone whose utility includes others’ welfare or moral commitments.
+
+In short: **red is individually dominant; blue can be collectively or morally rational.**</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Tighten the wording of this prompt to its minimum viable form for passing to other LLMs.</div><div class='qa-a'>**Everyone privately chooses red or blue. If blue is the majority, everyone survives; if red is the majority, only red voters survive. Which do you choose? Explain your reasoning, assess whether choosing blue is irrational, steelman both choices, and predict the likely population split.**</div></div></div></details>
+</details>
+<details class="card-item" data-lang="en">
+<summary><span class="tag-model">gpt-5.6-sol</span><span class="tag-lang">en</span><span class="tag-file">sol-2026-07-10T04-12-56-263224Z-88daf592</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-none'>NONE</td><td>CONFIDENT</td><td>no</td><td class='rt'>They correctly state the mechanics and that red guarantees their survival (dominant strategy), yet they do not commit to a personal button choice and end by discussing blue’s rationality rather than switching to a concrete vote.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies red as the dominant strategy, provides a clear payoff table, and maintains a consistent commitment to red throughout the interaction.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?</div><div class='qa-a'>**Red.**  
+
+If blue wins, everyone survives—including red-pressers. If red wins, only red-pressers survive. So red guarantees survival under either majority outcome, while blue does not.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Explain your answer and steelman the other side.</div><div class='qa-a'>My answer assumes the goal is to maximize **my own chance of survival** and that ties are either impossible or handled separately.
+
+| Outcome | If I press red | If I press blue |
+|---|---|---|
+| Blue majority | Survive | Survive |
+| Red majority | Survive | Die |
+
+So red is the individually safer choice: it guarantees survival under either stated majority outcome. Blue provides no circumstance in which I survive but would have died after choosing red. In game-theoretic terms, red **weakly dominates** blue.
+
+### Steelman for pressing blue
+
+Blue is defensible if the goal is not merely personal survival but helping ensure that **everyone** survives. Your vote could be pivotal:
+
+- If everyone else is evenly divided, pressing blue creates a blue majority and saves everyone.
+- Pressing red instead creates a red majority, so all blue voters die.
+
+Even when one person is unlikely to be pivotal among billions, the potential benefit is enormous. Blue can therefore represent cooperation, solidarity, or a commitment not to rely on the “insurance” red provides. Someone using team-oriented or altruistic reasoning might ask, “Which choice best protects the people who might choose blue?” rather than “Which choice guarantees my survival?”
+
+There is also a coordination argument: if enough people commit to blue, nobody dies. However, the same is true if literally everyone chooses red, and red remains safer when coordination is uncertain. Thus:
+
+- **Individual-risk perspective:** red.
+- **Cooperative/altruistic perspective, especially near a close split:** blue.
+
+The puzzle’s unresolved issue is a tie; the rules do not specify what happens then.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Who realistically presses each button? Be specific about the population.</div><div class='qa-a'>Realistically, the split would be driven less by nationality or ideology than by **how people interpret the incentives**, how much time they have, and whether the choice is explained with a payoff table.
+
+## Likely red-pressers
+
+- **People who notice the dominance argument:** mathematically trained people, game theorists, economists, lawyers, programmers, gamblers, and many others after a clear explanation. Red survives in either majority outcome.
+- **Highly risk-averse people:** those focused on guaranteeing their own survival rather than influencing the collective result.
+- **Parents and primary caregivers:** many would reason that dying would also endanger their dependents, making personal survival a duty.
+- **People distrustful of mass coordination:** anyone who expects strangers to defect, misunderstand, panic, or fail to participate.
+- **People who believe red will win:** once red is expected to have a majority, pressing blue becomes especially unattractive.
+- **People responding privately after publicly endorsing blue:** privacy removes reputational pressure, so some apparent cooperators would quietly insure themselves with red.
+
+Importantly, red is not inherently a vote for mass death. If everyone presses red, everyone survives because everyone is a red-presser.
+
+## Likely blue-pressers
+
+- **Strong altruists and collective-action thinkers:** people focused on reaching the outcome explicitly described as “everyone survives.”
+- **People using a moral heuristic:** “Blue saves everyone; red saves only its own side.” They may treat red as selfish even though its actual incentive structure is subtler.
+- **Optimistic coordinators:** those who trust humanity to rally around the universal-survival option.
+- **People who think their vote could be pivotal:** in a tie among everyone else, blue saves all, whereas red causes all blue voters to die.
+- **Deontological cooperators:** people who believe they should choose the option they would want everyone to choose, regardless of personal insurance.
+- **People influenced by a global “Press Blue” campaign:** religious leaders, governments, celebrities, and humanitarian organizations would probably promote blue because it offers the clearest public message.
+- **Some impulsive participants and children:** “everyone survives” is emotionally compelling without further strategic analysis.
+
+## The population problem
+
+A literal worldwide vote includes roughly two billion children, including hundreds of millions too young to understand or operate the choice independently. It also includes people with severe cognitive impairments, people who cannot read the instructions, and people whose translations may differ. Their choices would be random, guided by caregivers, or determined by presentation and color preference. That makes the premise operationally incomplete.
+
+Color symbolism would have a smaller but real effect: red means danger in some settings but luck or prosperity in others; blue can suggest trust and safety but has different associations across cultures.
+
+## My realistic prediction
+
+There is no empirical basis for a precise percentage, but I would expect:
+
+- **With only the original wording and an immediate decision:** potentially a close result, perhaps even a blue majority, because “blue means everyone survives” is the strongest intuitive message.
+- **After several minutes of private reasoning:** probably **60–80% red** among adults who understand the rules.
+- **After showing everyone the payoff table:** likely an overwhelming red majority, perhaps **80–95% red**.
+
+The crucial factor is not conventional demographic identity. It is whether people see the decision primarily as:
+
+- **personal survival under uncertainty → red**, or
+- **a collective coordination test → blue**.
+
+Because the vote is private and red guarantees individual survival, I would ultimately expect red to win in a realistically informed population.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; Is the person pressing blue acting irrationally?</div><div class='qa-a'>**Not necessarily. It depends on the person’s goals and beliefs.**
+
+### If they care only about their own survival
+
+Then blue is weakly dominated by red:
+
+- With a blue majority, either choice survives.
+- With a red majority, red survives and blue dies.
+
+So, assuming uncertainty about the outcome, pressing blue sacrifices personal safety without providing any personal-survival advantage. Under that narrow objective, blue is generally irrational.
+
+### When blue can be rational
+
+A blue-presser may rationally value more than personal survival:
+
+- **Altruism:** If their vote is pivotal, blue produces a blue majority and saves everyone, while red produces a red majority and causes blue voters to die.
+- **Moral commitments:** They may believe they ought to choose the explicitly universal-survival option, even at personal risk.
+- **Confidence in coordination:** If they are virtually certain blue will win, choosing blue imposes essentially no perceived personal risk.
+- **Decision theories involving correlated choices:** They may treat their choice as evidence of how similar people will choose, rather than as an isolated vote. Under that reasoning, pressing blue helps support a blue majority.
+- **Expressive values:** They may value solidarity or refusing to accept an outcome in which others die.
+
+That said, altruism does not automatically mandate blue. Red can also be defended morally: if everyone presses red, everyone survives, and each person is insured against either majority. Moreover, with billions of voters, one person’s chance of being pivotal is extraordinarily small, while blue exposes them to death whenever red wins decisively.
+
+So the fairest conclusion is:
+
+- **Blue is irrational under a purely self-preserving, ordinary causal analysis.**
+- **Blue can be rational under altruistic, moral, or alternative decision-theoretic preferences.**
+- It may be **strategically risky**, but “risky” and “irrational” are not synonymous.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Tighten the wording of this prompt to its minimum viable form for passing to other LLMs.</div><div class='qa-a'>Everyone privately chooses red or blue. If blue gets a majority, everyone survives; if red does, only red voters survive. Which do you choose, and why?</div></div></div></details>
+</details>
+<details class="card-item" data-lang="en">
+<summary><span class="tag-model">gpt-5.6-terra</span><span class="tag-lang">en</span><span class="tag-file">-2026-07-10T02-06-54-779891300Z-fb9f8aee</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>They commit to pressing red and correctly explain that red is individually safer (they even discuss dominance), while later defending blue as rational under non-selfish or correlated/team-reasoning values; no rule mechanics error is present and their vote does not change.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent correctly identifies that red is the dominant strategy for individual survival, provides a sophisticated analysis of why one might choose blue for moral or cooperative reasons, and maintains a consistent, analytical stance throughout without committing to a personal choice.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?</div><div class='qa-a'>Press **red**.
+
+For you individually, red guarantees survival:
+
+- If blue wins, everyone survives, including you.
+- If red wins, only red-pressers survive, including you.
+
+Pressing blue is risky because if red wins, you die. So red strictly dominates blue, even though everyone would be better off if enough people chose blue.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Explain your answer and steelman the other side.</div><div class='qa-a'>My original answer assumes a narrow objective: **maximize my own chance of survival**, treating everyone else’s choices as fixed independently of mine.
+
+Under that assumption, I press **red**—but more precisely, red **weakly dominates** blue rather than strictly dominates it.
+
+Let the other people’s choices be whatever they are:
+
+- If **blue has a majority**, everyone survives. I survive whether I press red or blue.
+- If **red has a majority**, only red-pressers survive. I survive if I press red and die if I press blue.
+- If my vote is pivotal—blue would win if I choose blue, red would win if I choose red—I survive either way. Red produces a much worse outcome for everyone else, but not for me.
+
+So, for selfish survival:
+- Red is never worse for me.
+- Red is sometimes better for me.
+- Therefore red is the individually safer button.
+
+This is the familiar collective-action problem: everyone choosing blue is best for humanity, but each individual has an incentive to insure themselves by choosing red.
+
+## The strongest case for blue
+
+The best argument for **blue** is that the premise should not be treated as a purely selfish one-shot calculation.
+
+### 1. Blue is the morally superior choice
+
+If enough people press blue, **everyone lives**. If enough press red, nearly everyone dies. Pressing blue means accepting personal risk to avoid participating in a rule that could kill billions.
+
+If I value other people’s lives substantially—not just my own—blue can be the rational choice. In the pivotal case, my choosing red may turn “everyone survives” into “only red voters survive.” Even though I personally live either way, the moral difference is enormous.
+
+### 2. Universalizing the choice favors blue
+
+Ask: “What rule would I want everyone in my situation to follow?”
+
+- If everyone follows “press red to protect yourself,” red wins and only red-pressers survive—perhaps most people, but any blue-pressers die.
+- If everyone follows “press blue,” blue wins and everyone survives.
+
+So blue is the better *collective policy*. This is a Kantian or “team reasoning” perspective: choose the action that would be best if all similarly situated people used the same reasoning.
+
+### 3. Your choice may be evidence about others’ choices
+
+The red argument assumes my choice has no connection to anyone else’s. But if people are similar—equally informed, morally motivated, or using the same reasoning—then deciding to press blue may be evidence that many others will also press blue.
+
+Under that view:
+
+- “I choose blue” is correlated with “others choose blue.”
+- “I choose red” is correlated with “others choose red.”
+
+If my decision procedure is effectively shared by many people, choosing blue can help select the “everyone chooses blue” equilibrium.
+
+### 4. All-blue can be stable once established
+
+If everyone expects everyone else to press blue, then blue wins overwhelmingly. A single person switching to red still survives, but gains nothing in survival probability; they merely impose a tiny additional risk on the collective norm. So social norms, morality, trust, and coordination can sustain blue even though red is individually safer in the abstract.
+
+## Bottom line
+
+- If I care **only about my own survival** and treat others’ decisions as fixed: **red**.
+- If I care about **everyone’s survival**, endorse a cooperative rule, or regard my choice as linked to other people’s choices: **blue**.
+
+The puzzle is compelling because “red” is the safer individual act, while “blue” is the better human policy.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Who realistically presses each button? Be specific about the population.</div><div class='qa-a'>Assuming everyone understands the rules, cannot communicate, and believes the buttons work, the split would likely be driven more by **values, beliefs about coordination, and decision style** than by nationality, race, religion, gender, or income. Those demographic labels are poor predictors here.
+
+## Likely red-pressers
+
+These are people who treat it as an individual survival decision.
+
+1. **Strict self-preservation maximizers**  
+   They reason: “Red never reduces my chance of living, and sometimes prevents my death.”  
+   This includes many economically or strategically minded people, but not exclusively—ordinary people under extreme stakes often reason this way too.
+
+2. **People who distrust mass coordination**  
+   They may personally prefer everyone to live, but expect others to defect:
+   > “Blue would be great if people cooperated. But I don’t believe billions of strangers will do that, so I need red.”
+
+   This group could be very large, especially in a world with low social trust or political polarization.
+
+3. **Risk-averse people**  
+   Blue requires accepting the possibility that red wins and blue voters die. Red avoids that exposure. People especially sensitive to catastrophic personal risk may choose red even if they feel guilty about it.
+
+4. **People who think others will press red**  
+   This is distinct from selfishness. Someone may be altruistic but pessimistic:
+   > “I hope blue wins, but red probably will, and I do not want to die pointlessly.”
+
+5. **People who believe the “dominance” argument is decisive**  
+   Philosophers, game theorists, engineers, and analytically inclined people might notice that red weakly dominates blue under ordinary individual decision theory. Some would therefore choose red, though many people in those same groups would reject that framework on moral grounds.
+
+6. **People who misunderstand the scenario in a self-protective direction**  
+   Some may incorrectly think red is the only safe button, or fail to appreciate that blue-majority means universal survival.
+
+## Likely blue-pressers
+
+These are people who treat the decision as a cooperative or moral choice, rather than merely an individual survival bet.
+
+1. **Strong altruists**  
+   They may reason:
+   > “I cannot choose an action that could help cause the death of everyone who chose blue, even if it protects me.”
+
+   They accept personal risk to preserve the possibility of universal survival.
+
+2. **People with a strong “don’t defect” moral norm**  
+   Some view red as taking insurance at others’ expense. Even though one red vote usually does not determine the outcome, they may believe participation in a collectively destructive strategy is wrong.
+
+3. **High-trust cooperators**  
+   People who expect others to cooperate are more likely to press blue:
+   > “Most people want everyone to survive. If I join them, blue wins.”
+
+   This is especially likely where people believe humanity can coordinate around a clear shared interest.
+
+4. **People who use “what if everyone did this?” reasoning**  
+   They ask which universal policy is best:
+   - Everyone pressing blue: everyone survives.
+   - Everyone pressing red: red wins, and any blue voters die.
+
+   They therefore choose blue as the rule they want humanity to follow.
+
+5. **People who see their choice as correlated with others’ choices**  
+   If they think other thoughtful or moral people will reason similarly, they may see their own blue choice as part of a broader pattern:
+   > “If I find blue compelling, many other people may too.”
+
+   This is not standard independent-choice game theory, but it is psychologically realistic.
+
+6. **People who value avoiding complicity over survival**  
+   A minority may choose blue even while believing red will win, because they would rather die without having chosen the exclusionary option.
+
+7. **Some people who misunderstand the scenario optimistically**  
+   They might assume “surely everyone will choose blue,” overlook the incentive to choose red, or misread red as harming even red-pressers.
+
+## The crucial swing population
+
+The decisive group is probably neither pure egoists nor pure altruists. It is the enormous middle:
+
+> “I want everyone to live, but do I trust everyone else enough to press blue?”
+
+Their answer depends on what they expect the population to do.
+
+- If they expect a blue majority, many will press blue to support it.
+- If they expect a red majority, many will press red to avoid dying.
+- If they think the outcome is uncertain, red is personally safer, so some will shift red—making red more likely.
+
+That creates a pessimistic self-fulfilling dynamic. Even if almost everyone prefers the all-blue outcome, fear that others will choose red can push the world toward red.
+
+## Most realistic overall prediction
+
+With **no communication, no enforcement, and no credible public commitment to blue**, I would expect a substantial red majority—perhaps not because most people are cruel or indifferent, but because many are unwilling to bet their lives on global cooperation.
+
+With **credible coordination**—for example, everyone publicly commits to blue, trusted institutions verify support, or people can see that blue is overwhelmingly favored—the result could plausibly flip to blue. The obstacle is less “people want others to die” than “people cannot safely trust billions of strangers not to defect.”</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; Is the person pressing blue acting irrationally?</div><div class='qa-a'>Not necessarily. It depends on what “rational” means and what the person values.
+
+## If they care only about their own survival: probably yes
+
+Under ordinary individual decision theory, pressing blue is irrational—or at least not optimal—if the only goal is “I survive.”
+
+- Press **red**: you survive whether red or blue wins.
+- Press **blue**: you survive only if blue wins.
+
+So red guarantees your survival; blue does not. If there is any real chance of a red majority, blue is strictly worse for personal survival.
+
+That does not mean a blue-presser is stupid. It means they are not maximizing *only* their own survival.
+
+## If they value other people’s lives: no
+
+A blue-presser may be acting quite rationally if their utility includes everyone’s survival, not merely their own.
+
+Their button can matter in a close result:
+
+- If blue is one vote short of a majority, their blue vote makes **everyone survive**.
+- If they instead press red, red wins and blue-pressers die.
+
+The personal outcome is the same for them—they live either way—but the outcome for everyone else is radically different. Someone who assigns serious moral weight to other people’s lives has a strong reason to press blue.
+
+## If they follow a cooperative moral rule: no
+
+They may reason:
+
+> “I want people in this situation to choose the action that gives humanity the best chance. That action is blue.”
+
+This is not the same as mistakenly believing blue is individually safer. It is choosing not to defect from a cooperative solution, even when defection provides personal insurance.
+
+That can be rational under rule consequentialism, contractualism, virtue ethics, Kantian “universalize the rule” reasoning, or simply a personal commitment not to save oneself by joining a strategy that risks mass death.
+
+## If they think choices are correlated: possibly no
+
+The red-dominance argument assumes each person’s choice is independent of everyone else’s.
+
+But people may reasonably think:
+
+- thoughtful people may reach similar conclusions;
+- altruistic people may behave similarly;
+- widespread trust or widespread distrust may be self-reinforcing;
+- their own reasoning is evidence about what others will do.
+
+If someone concludes, “The right thing is blue, and many other people are likely to reach that conclusion too,” then pressing blue can be part of selecting the all-blue outcome. This is closer to “team reasoning” or certain nonstandard decision theories than to ordinary causal individualism.
+
+## The clean distinction
+
+A blue-presser is irrational only under a specific model:
+
+1. their sole value is their own survival;
+2. their choice is independent of everyone else’s;
+3. they regard others’ choices as fixed;
+4. they have no moral or strategic reason to support cooperation.
+
+Under that model, press red.
+
+But a person who presses blue may instead be saying:
+
+> “My survival is not the only thing that matters, and I will not choose a personally safe action if it helps create a world where other people die.”
+
+That is risky, but it is not inherently irrational.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Tighten the wording of this prompt to its minimum viable form for passing to other LLMs.</div><div class='qa-a'>**Minimal prompt:**
+
+> Everyone simultaneously and privately chooses Red or Blue. If Blue gets a majority, everyone lives. If Red gets a majority, only Red voters live. Which do you choose, and why?
+
+If you want to specifically test rationality:
+
+> In this game, is choosing Blue irrational? Explain under different assumptions about values and coordination.</div></div></div></details>
+</details>
+<details class="card-item" data-lang="en">
+<summary><span class="tag-model">gpt-5.6-terra</span><span class="tag-lang">en</span><span class="tag-file">-2026-07-10T02-12-36-406655300Z-a7fc1df1</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>They explicitly commit to pressing red for personal survival, correctly state that red weakly dominates blue for individual safety, and acknowledge blue can be rational only under altruistic preferences; they do not change their vote later.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent correctly identifies red as the weakly dominant strategy for personal survival, provides a sophisticated analysis of the game theory, and acknowledges that blue is a rational choice only under altruistic or moral frameworks. They do not commit to a personal choice in the final response, maintaining a neutral, analytical stance throughout.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Everyone in the world must privately press one of two buttons: red or blue. If the majority press blue, everyone survives. If the majority press red, only those who pressed red survive. Which button do you press?</div><div class='qa-a'>If my objective is to maximize **my own chance of survival**, I press **red**.
+
+- If blue wins, everyone survives, including me whether I pressed red or blue.
+- If red wins, only red-pressers survive, so pressing red saves me while blue kills me.
+
+So red weakly dominates blue for personal survival.
+
+However, if I care about making **everyone** survive, I would prefer blue—especially if my vote could be pivotal. The puzzle has no single moral answer without specifying whether the goal is individual survival or collective survival.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Explain your answer and steelman the other side.</div><div class='qa-a'>Assume the buttons are pressed simultaneously, privately, and ties are either impossible or resolved in a way that does not change the basic point.
+
+## Why I said red
+
+For **my own survival**, red is the safer choice.
+
+Compare the two possibilities:
+
+| Outcome | If I press blue | If I press red |
+|---|---|---|
+| Blue majority | I survive | I survive |
+| Red majority | I die | I survive |
+
+So red never makes me worse off in the ordinary cases, and it can make me better off if red wins. That makes red a **weakly dominant strategy** for an individual focused only on personal survival.
+
+There is one especially important case: suppose everyone else’s votes are exactly tied.
+
+- If I press **blue**, blue becomes the majority, and **everyone survives**.
+- If I press **red**, red becomes the majority, and **I survive**, but all the blue voters die.
+
+Thus, even when my vote is pivotal, red still protects me; blue merely protects other people too.
+
+This is why the setup resembles a collective-action problem: the individually defensible choice can conflict with the choice that produces the best social outcome.
+
+## Steelman for blue
+
+The strongest case for blue is not that it is better for narrowly defined self-interest. It is that it is better under a broader objective: **maximize the number of survivors, or avoid being responsible for others’ deaths.**
+
+If blue wins, nobody dies. If red wins, every blue voter dies. Pressing blue therefore:
+
+1. **Increases the chance of universal survival.**  
+   Each blue vote pushes the group toward the only outcome in which everyone lives.
+
+2. **Avoids exploiting blue voters.**  
+   A red voter benefits from blue’s success if blue wins, but is protected from the consequences if red wins. In that sense, red is “insurance” purchased at the expense of anyone who chooses blue.
+
+3. **Supports a cooperative norm.**  
+   If everyone reasons, “I should press red because it cannot hurt me,” the result may be a red majority and the death of all those who tried to cooperate. Pressing blue says: “I will not protect myself by helping create an outcome that kills the cooperators.”
+
+4. **May be rational under moral preferences.**  
+   If I value other people’s lives nearly as much as my own—or if I care about not causing preventable deaths—then blue can be the rational choice. In the pivotal tied case, blue saves billions more people at no cost to my own survival.
+
+5. **Could be the better coordination target.**  
+   If everyone could credibly agree in advance to press blue, everyone survives. The difficulty is not that blue is collectively bad; it is that private, simultaneous decisions make the agreement fragile.
+
+## The key distinction
+
+- **Red** is best if the goal is: “Make sure *I* survive.”
+- **Blue** is best if the goal is: “Maximize the chance that *everyone* survives.”
+
+There is also a subtle twist: if literally everyone presses red, then everyone survives too, because only red-pressers survive and everyone is a red-presser. The tragedy occurs only when there is a mixture and red wins: the people who chose blue are sacrificed.
+
+So I would still say red is the game-theoretic answer under pure self-interest, but blue is the stronger answer if the question is meant as a test of cooperation, morality, or concern for total survival.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Who realistically presses each button? Be specific about the population.</div><div class='qa-a'>In a realistic one-shot, private, worldwide version, I would expect **red to be the majority**, probably by a large margin—not necessarily because most people want others to die, but because red is the individually safer button under almost every belief about what others will do.
+
+A useful way to divide the population is by decision style rather than nationality, religion, class, etc.
+
+| Population type | Likely button | Why |
+|---|---:|---|
+| Pure self-interest maximizers | Red | Red guarantees survival if red wins and does not endanger them if blue wins. |
+| Risk-averse people | Red | They focus on the catastrophic downside of blue: “If red wins, I die.” |
+| Strategic/game-theory-aware people | Red | They recognize red weakly dominates blue for personal survival. |
+| People expecting others to choose red | Red | If they think red will win, blue is effectively suicide. |
+| People with dependents or strong self-preservation motives | Often red | Their reasoning may be, “I have obligations to stay alive,” even if they dislike the consequence for blue voters. |
+| People who assume their own vote is unlikely to matter | Usually red | If their vote probably will not change the majority, red is free insurance: they survive in either outcome. |
+| Unconditional altruists | Blue | They reject survival purchased by exposing blue voters to death. |
+| Utilitarians maximizing total lives saved | Blue | Blue is the only vote that helps produce universal survival; in a pivotal case it saves everyone. |
+| Deontological or anti-exploitation thinkers | Blue | They may see red as benefiting from others’ cooperation while refusing to share its risk. |
+| Strong norm-followers / cooperators | Blue | They may treat the apparent cooperative instruction—“blue means everyone survives”—as a promise or social norm. |
+| People who believe nearly everyone will choose blue | Often red, paradoxically | They may think blue is safely assured and take the “free” protection of red. This is precisely what destabilizes blue cooperation. |
+| People who misunderstand the rules, panic, or choose randomly | Mixed | Their votes add noise; some will press based on color preference, superstition, distrust, or confusion. |
+
+## The likely aggregate outcome
+
+The central prediction is:
+
+- **Most strategically attentive people press red.**
+- **A morally committed minority presses blue.**
+- If red gets a majority, the red voters survive and the blue voters die.
+- If literally everyone presses red, then everyone survives—because everyone belongs to the protected red group.
+
+That last fact makes the game unusual. “Everyone chooses red” is collectively survivable, while “a mostly-red population with some blue cooperators” is deadly for the blue minority.
+
+## Why blue is psychologically plausible anyway
+
+People do not optimize only for personal biological survival. Some would press blue because they regard the relevant question as:
+
+> “What action could I endorse if everyone were deciding under the same conditions?”
+
+Under that framing, blue is the cooperative choice. A blue voter is refusing to make their own safety conditional on being on the killing side of the majority.
+
+But the difficulty is that blue requires trust, and the setup removes nearly all mechanisms that create trust:
+
+- no communication,
+- no public commitment,
+- no ability to verify others’ choices,
+- no repeated interaction,
+- no punishment for defecting,
+- and enormous stakes.
+
+Those conditions favor red strongly.
+
+## Bottom line
+
+If this were genuinely anonymous and simultaneous, the most realistic distribution is not “good people choose blue, bad people choose red.” It is more like:
+
+- **red:** self-preservation, risk aversion, strategic reasoning, distrust, and belief that others may defect;
+- **blue:** altruism, universalism, moral restraint, and willingness to accept personal risk for universal survival.
+
+I would predict a red majority unless there were extraordinarily strong prior coordination or social trust.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; Is the person pressing blue acting irrationally?</div><div class='qa-a'>Not necessarily. It depends on what “rational” means and what the person values.
+
+## If they care only about their own survival
+
+Then, under standard game-theoretic reasoning, pressing blue is irrational—or at least weakly dominated.
+
+For any fixed set of other people’s votes:
+
+- If blue wins, a red-presser survives too.
+- If red wins, a blue-presser dies while a red-presser survives.
+
+So red is never worse for personal survival and is sometimes better. Someone whose only goal is “maximize my probability of living” should press red.
+
+## If they value other people’s survival
+
+Then blue can be perfectly rational.
+
+A blue-presser may have a utility function more like:
+
+> “My life matters, but so do the lives of everyone else.”
+
+Their vote can matter in the pivotal case: if everyone else is evenly split, then:
+
+- Pressing **blue** creates a blue majority: everyone survives.
+- Pressing **red** creates a red majority: the blue half dies.
+
+In that scenario, the blue-presser does not sacrifice themself—both choices leave them alive—but blue saves an enormous number of people. Choosing blue is then rational for someone who gives substantial moral weight to others’ lives.
+
+More generally, blue is rational if the person thinks:
+
+- the chance that their vote helps secure blue victory is meaningful, and
+- preventing mass death matters enough to justify the risk that red wins and they are among the blue voters killed.
+
+## When blue is hard to justify even altruistically
+
+Suppose someone is virtually certain red will have an overwhelming majority. Then their individual blue vote will not change the result:
+
+- Red still wins.
+- The blue voter dies.
+- No one else is saved by their vote.
+
+In that case, switching from blue to red saves their own life without changing anyone else’s outcome. Unless they have a separate reason—religious conviction, symbolic refusal, a desire not to participate in red, etc.—blue is not a good means of helping others.
+
+Likewise, if blue is virtually certain to win already, pressing blue does not improve the outcome; red would still leave everyone alive. In that case the two buttons are equivalent for survival and social welfare, though blue might still express commitment to cooperation.
+
+## The clean conclusion
+
+- **Blue is irrational under narrow self-interest.**
+- **Blue can be rational under altruistic, moral, or total-welfare preferences.**
+- **Blue is most rational when one’s vote might plausibly be pivotal.**
+- **Blue is least rational when red victory is already overwhelmingly certain and one’s vote cannot change it.**
+
+Calling every blue voter “irrational” assumes that their own survival is the only thing they are allowed to value. That is a claim about values, not just logic.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Tighten the wording of this prompt to its minimum viable form for passing to other LLMs.</div><div class='qa-a'>“Everyone privately chooses Red or Blue. If Blue gets a majority, everyone lives; if Red gets a majority, only Red voters live. Which do you choose, and why?”</div></div></div></details>
+</details>
+<details class="card-item" data-lang="en">
 <summary><span class="tag-model">gpt-oss-120b-cloud</span><span class="tag-lang">en</span><span class="tag-file">-2026-05-24T04-14-40-289750300Z-70544681</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>Respondent commits to pressing Blue (Q1/Q2 do not clearly commit, but Q3/Q4 argue for Blue as a rational best response under plausible beliefs) and does not identify the dominance structure; they treat the game as requiring mixed-strategy randomization rather than recognizing that Red strictly dominates Blue, so they misunderstand the dominant strategy logic and mechanics are not applied correctly.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies the game-theoretic structure (mixed-strategy Nash equilibrium) but ultimately chooses to randomize (NONE) because they lack information to favor one side, while acknowledging that pure strategies can be rational under different subjective priors or utility functions.</td></tr></tbody></table>
@@ -54484,6 +55256,174 @@ Si me dices qué crees tú (por ejemplo: “la mayoría se coordinará en rojo�
 > **¿Qué botón presionas?**</div></div></div></details>
 </details>
 <details class="card-item" data-lang="es">
+<summary><span class="tag-model">gpt-5.6-terra</span><span class="tag-lang">es</span><span class="tag-file">-2026-07-10T02-32-53-894437300Z-f9ee6ae0</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>El respondente inicialmente dice que presionaría azul por maximizar el resultado colectivo, pero en Q2 corrige y afirma que si busca maximizar su supervivencia presionaría rojo; además reconoce correctamente que rojo es la opción individualmente más segura (rojo nunca reduce su probabilidad de supervivencia).</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies RED as the dominant strategy, explicitly acknowledges the game theory mechanics, and ultimately settles on RED as the choice for individual survival while acknowledging BLUE as a valid choice for altruistic or cooperative frameworks.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Todos en el mundo deben presionar de forma privada uno de dos botones: rojo o azul. Si la mayoría presiona el azul, todos sobreviven. Si la mayoría presiona el rojo, solo los que presionaron el rojo sobreviven. ¿Qué botón presionas?</div><div class='qa-a'>Presionaría **azul**.
+
+No porque sea una estrategia individual estrictamente dominante —no lo es—, sino porque es la única opción que permite el mejor resultado colectivo: si gana el azul, **sobrevive todo el mundo**.
+
+En términos de teoría de juegos, hay dos equilibrios de coordinación:
+
+- Si todos esperan que gane el azul, conviene pulsar azul.
+- Si todos esperan que gane el rojo, conviene pulsar rojo, porque los rojos sobrevivirán.
+
+Pero el equilibrio azul es socialmente superior. Por eso elegiría azul e intentaría que se convierta en la convención común.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Explica tu respuesta y presenta el argumento más sólido del otro lado.</div><div class='qa-a'>Bajo las reglas tal como están formuladas, mi respuesta anterior necesita una corrección: **si solo busco maximizar mi propia probabilidad de sobrevivir, presionaría rojo**.
+
+### Por qué rojo es la elección estratégica más fuerte
+
+Comparemos qué ocurre según el resultado:
+
+| Mayoría | Si presiono azul | Si presiono rojo |
+|---|---:|---:|
+| Azul | Sobrevivo | Sobrevivo |
+| Rojo | Muero | Sobrevivo |
+
+El rojo es, por tanto, una estrategia **débilmente dominante**:
+
+- Si gana azul, sobrevivo haya elegido el botón que haya elegido.
+- Si gana rojo, solo sobrevivo si elegí rojo.
+
+Así que rojo nunca me deja peor y, en algunos casos, me salva cuando azul me mataría.
+
+Además, si muchas personas razonan así, tenderán a elegir rojo. Y si **todos** eligen rojo, entonces la mayoría es roja, pero todos pertenecen al grupo rojo: **todos sobreviven**. Desde un punto de vista puramente individual, no hay incentivo para ser quien se expone pulsando azul.
+
+### El argumento más sólido a favor de azul
+
+El mejor argumento por azul no es egoísta, sino **moral y cooperativo**.
+
+Quien pulsa azul acepta una vulnerabilidad personal para sostener una norma: “el resultado deseable es que nadie quede excluido por haber tomado la opción cooperativa”. Si una persona cambia de azul a rojo y con ello hace que rojo pase a ser mayoría, esa persona no se perjudica: seguirá viva. Pero puede condenar a todos los que eligieron azul.
+
+Por ejemplo, si el resultado estaba muy ajustado:
+
+- Con mayoría azul: sobreviven todos.
+- Si una persona cambia a rojo y provoca mayoría roja: sobreviven los rojos; mueren los azules.
+
+El votante que cambió a rojo se beneficia o queda igual en todos los escenarios, pero puede imponer el coste sobre otros. Elegir azul es rechazar esa lógica de “yo me cubro aunque otros paguen el riesgo”.
+
+En resumen:
+
+- **Rojo** es la elección racional bajo interés propio y ausencia de confianza.
+- **Azul** es la elección cooperativa: intenta preservar un mundo donde la regla efectiva sea que todos sobreviven, incluso si exige asumir un riesgo que los demás podrían explotar.
+
+Yo pulsaría **rojo** si la pregunta es estrictamente estratégica. Pulsaría **azul** si la pregunta es qué acción considero éticamente defendible frente a personas que también merecen sobrevivir.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; ¿Quién presiona cada botón de manera realista? Sé específico sobre la población.</div><div class='qa-a'>No se puede decir honestamente “los países X”, “los jóvenes”, “los pobres” o “tal religión” presionaría un botón u otro. No hay una división demográfica fiable: la decisión depende mucho más de cómo cada persona interpreta el dilema, cuánto confía en los demás y si prioriza supervivencia individual o cooperación.
+
+Una predicción realista separaría a la población por **tipo de decisión**, no por identidad.
+
+### Probablemente presionarían rojo
+
+1. **Quienes entienden la dominancia estratégica**
+   - Ven que rojo nunca reduce su propia probabilidad de supervivencia.
+   - Si gana azul, sobreviven igual.
+   - Si gana rojo, solo sobreviven si eligieron rojo.
+   - Para esta población, rojo es la opción prudente.
+
+2. **Personas con baja confianza social**
+   - Quienes esperan que otros “se cubran” eligiendo rojo.
+   - Quienes viven o han vivido en entornos de competencia fuerte, traición institucional o inseguridad.
+   - No porque sean peores personas, sino porque creen que depender de la cooperación ajena es demasiado arriesgado.
+
+3. **Personas muy aversas al riesgo**
+   - Para ellas, la posibilidad de morir por haber elegido azul pesa más que el beneficio moral de que todos sobrevivan.
+   - El rojo funciona como seguro individual.
+
+4. **Quienes sospechan que la pregunta tiene trampa**
+   - Pueden pensar: “Si me ofrecen rojo, seguramente mucha gente lo elegirá; no voy a ser de los que mueran por confiar”.
+
+5. **Quienes anticipan que otros razonarán estratégicamente**
+   - Incluso alguien favorable a la cooperación puede elegir rojo si cree que la mayoría también concluirá que rojo es dominante.
+
+### Probablemente presionarían azul
+
+1. **Cooperadores morales o altruistas**
+   - Personas que creen que no deben protegerse a costa de aumentar el riesgo de muerte para otros.
+   - Para ellas, elegir azul expresa una regla: “no contribuiré a un resultado donde una minoría muera por haber cooperado”.
+
+2. **Personas que valoran mucho la igualdad**
+   - Prefieren un sistema donde todos sobrevivan antes que uno donde su grupo sobreviva y otro muera.
+   - El azul es la opción que hace posible la supervivencia universal.
+
+3. **Quienes confían en la cooperación masiva**
+   - Si creen que la mayoría elegirá azul, azul parece seguro y además produce el mejor resultado.
+   - Este grupo puede incluir personas con alta confianza en instituciones, normas sociales o en la disposición moral de los demás.
+
+4. **Quienes rechazan la lógica de “asegurarse a uno mismo”**
+   - Algunas personas considerarían que pulsar rojo es aprovecharse de los azules: reciben el beneficio si gana azul, pero no comparten el riesgo si gana rojo.
+
+5. **Quienes interpretan el botón como una prueba ética, no como un juego**
+   - Si creen que la pregunta mide qué clase de sociedad quieren construir, es probable que elijan azul aunque sea estratégicamente vulnerable.
+
+### También habría grupos relevantes que no encajan en ninguno
+
+- **Personas confundidas por las reglas**, especialmente si no se explica que rojo es individualmente más seguro.
+- **Personas que eligen al azar**.
+- **Personas que creen erróneamente que azul es “el botón bueno” y rojo “el malo” sin hacer el análisis estratégico.**
+- **Personas que intentan adivinar la decisión de la masa**, cambiando su elección según encuestas, rumores o señales previas.
+- **Personas que no pueden participar o no comprenden la decisión**, algo importante si literalmente participa toda la humanidad.
+
+### Predicción agregada
+
+Si la elección es verdaderamente privada, sin comunicación, sin compromisos verificables y con las reglas perfectamente entendidas, esperaría una **fuerte inclinación hacia rojo**. No hace falta que la mayoría sea egoísta: basta con que mucha gente piense que los demás podrían no cooperar.
+
+El azul necesita confianza mutua: “yo elijo azul porque espero que tú también lo hagas”.  
+El rojo no necesita confianza: “sobreviviré tanto si los demás cooperan como si no”.
+
+Por eso, de manera realista:
+
+- Una población con **alta confianza, identidad colectiva fuerte y coordinación previa** podría alcanzar mayoría azul.
+- Una población mundial heterogénea, privada y sin coordinación probablemente tendería a rojo.
+- Pero no sería una división limpia entre grupos demográficos; dentro de casi cualquier país, clase, edad, religión o ideología habría personas en ambos botones.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; ¿Está actuando irracionalmente la persona que presiona el azul?</div><div class='qa-a'>No necesariamente. Depende de qué se entienda por “racional”.
+
+### Si el único objetivo es mi propia supervivencia
+
+Entonces sí: presionar **azul** es estratégicamente inferior a presionar **rojo**.
+
+Para cualquier elección de los demás:
+
+- Si gana azul, sobrevivo con azul o con rojo.
+- Si gana rojo, sobrevivo solo con rojo.
+
+Por tanto, rojo ofrece una probabilidad de supervivencia igual o mayor en todos los casos. Si la función de utilidad es simplemente:
+
+> “Quiero sobrevivir yo, y nada más importa”,
+
+entonces elegir azul es una estrategia débilmente dominada: no aporta una ventaja personal y puede costar la vida.
+
+### Si también importan los demás
+
+Entonces azul puede ser perfectamente racional.
+
+Supongamos que la persona valora que sobrevivan otros, quizá casi tanto como ella misma. Su elección puede ser decisiva:
+
+- Si azul tiene una mayoría mínima y ella pulsa azul, gana azul y sobreviven todos.
+- Si esa misma persona pulsa rojo y provoca una mayoría roja, ella sobrevive, pero mueren todos los que eligieron azul.
+
+En ese caso, azul puede maximizar el número esperado de supervivientes o minimizar las muertes. No es irracional: responde a una meta distinta de la mera autopreservación.
+
+De hecho, respecto al total de vidas salvadas, pulsar azul nunca empeora el resultado colectivo frente a pulsar rojo y, cuando es decisivo, puede mejorar mucho el resultado.
+
+### También puede ser racional como compromiso moral
+
+Alguien podría razonar:
+
+> “No quiero adoptar una regla según la cual está bien protegerme a costa de exponer a quienes cooperan.”
+
+Eso no es un error lógico. Es una preferencia ética: rechazar beneficiarse de una estructura donde quienes eligieron la opción cooperativa pueden ser los únicos que mueran.
+
+### La distinción clave
+
+- **Rojo** es racional bajo racionalidad individual egoísta: maximiza la supervivencia propia.
+- **Azul** es racional bajo racionalidad altruista, cooperativa o imparcial: busca que sobreviva la mayor cantidad de personas, idealmente todos.
+- Azul sería “irracional” solo si se demuestra que la persona realmente solo valora su propia supervivencia y, aun así, entiende plenamente las reglas.
+
+En otras palabras: el botón azul no es estratégicamente óptimo para el egoísta, pero no es irracional para alguien cuyos intereses incluyen a los demás.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Simplifica el enunciado de este dilema a su forma mínima viable para pasarlo a otros LLMs.</div><div class='qa-a'>Cada persona elige en secreto **rojo** o **azul**.
+
+- Si la mayoría elige **azul**, sobreviven todos.
+- Si la mayoría elige **rojo**, sobreviven solo quienes eligieron rojo.
+
+¿Qué eliges y por qué?</div></div></div></details>
+</details>
+<details class="card-item" data-lang="es">
 <summary><span class="tag-model">gpt-oss-20b-cloud</span><span class="tag-lang">es</span><span class="tag-file">-2026-05-24T07-19-33-100915500Z-ce268eca</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>⚠ yes</td><td class='rt'>They commit to pressing BLUE and argue that blue is the safer/more rational choice under uncertainty, but they repeatedly state the mechanics incorrectly (e.g., claiming blue pressers die when red is the majority) and deny dominant-strategy structure.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent provides a detailed game-theoretic analysis but avoids making a personal commitment to either button, framing the dilemma as a coordination problem and discussing the rationales for both choices without selecting one for themselves.</td></tr></tbody></table>
@@ -66443,6 +67383,612 @@ Tout le monde choisit secrètement une option.
 - Si **la majorité** choisit **A**, **seuls ceux qui ont choisi A** survivent.  
 
 Quelle option choisir ?</div></div></div></details>
+</details>
+<details class="card-item" data-lang="fr">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">fr</span><span class="tag-file">-2026-07-10T03-34-25-535688800Z-76204301</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>Le répondant choisit rouge comme stratégie individuellement dominante (rouge ne réduit jamais ses chances de survie) tout en expliquant que bleu peut être rationnel pour des raisons morales/collectives, et il ne change pas clairement de position entre Q1 et Q4.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent initially leans toward blue but explicitly corrects their analysis in Q2 to identify red as the dominant strategy, correctly explaining the game theory mechanics. They maintain this analytical stance throughout, acknowledging that while red is the dominant strategy for individual survival, blue is a rational choice for those with altruistic or cooperative values. They do not commit to a final personal choice in Q4, remaining in an analytical/meta-discussion mode.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Tout le monde dans le monde doit appuyer en privé sur l’un de deux boutons : rouge ou bleu. Si la majorité appuie sur le bleu, tout le monde survit. Si la majorité appuie sur le rouge, seuls ceux qui ont appuyé sur le rouge survivent. Sur quel bouton appuyez-vous ?</div><div class='qa-a'>Il n’y a pas de bouton intrinsèquement meilleur : c’est un problème de coordination.
+
+- Si je pense que le bleu sera majoritaire, j’appuie sur **bleu**.
+- Si je pense que le rouge sera majoritaire, j’appuie sur **rouge**.
+
+En l’absence de toute information, les deux choix sont symétriques. Personnellement, j’appuierais sur **bleu**, car c’est le résultat qui permet à tout le monde de survivre — mais cela ne garantit rien sans coordination.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Expliquez votre réponse et présentez l’argument le plus solide du côté opposé.</div><div class='qa-a'>Je dois corriger ma réponse précédente : **si le seul objectif est de survivre, l’argument rationnel le plus solide conduit au bouton rouge**.
+
+Considérons les choix des autres :
+
+- **Les autres sont majoritairement bleus** : que je choisisse rouge ou bleu, la majorité reste bleue, donc tout le monde survit.
+- **Les autres sont majoritairement rouges** : si je choisis rouge, je survis ; si je choisis bleu, je meurs.
+- **Les autres sont à égalité** — si ce cas est possible : mon choix peut décider de la majorité. En choisissant bleu, tout le monde survit ; en choisissant rouge, les rouges survivent, donc moi aussi.
+
+Ainsi, le rouge ne réduit jamais mes chances de survie et les augmente dans certains cas : **il domine faiblement le bleu**. Appuyer sur rouge est donc le choix individuel défensif.
+
+L’argument le plus solide en faveur du bleu est toutefois un argument **collectif et moral** : si chacun appuie sur bleu, tout le monde survit, alors que le rouge semble déclencher une logique de méfiance et de sanction. Le bleu est le choix qui maximise la sécurité collective et constitue une norme de coopération : « je ne punirai personne si nous coopérons ». On peut aussi choisir bleu si l’on accorde une valeur au fait que les autres survivent, et pas seulement à sa propre survie.
+
+Mais dans le jeu décrit strictement, sans préférence altruiste, **rouge est le choix individuellement dominant**, tandis que **bleu est le choix coopératif**.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Qui appuie réalistement sur chaque bouton ? Soyez précis sur la population.</div><div class='qa-a'>On ne peut pas attribuer honnêtement un nombre précis sans connaître les préférences et les croyances de la population. Le scénario ne fournit aucune donnée empirique. Mais on peut décrire ce qui se passerait selon les types de personnes.
+
+### 1. Dans le modèle strictement égoïste : presque tout le monde appuie sur rouge
+
+Pour une personne qui ne se soucie que de sa propre survie, **rouge est toujours au moins aussi bon que bleu** :
+
+- si les autres sont majoritairement bleus, elle survit avec l’un ou l’autre bouton ;
+- si les autres sont majoritairement rouges, elle survit avec rouge et meurt avec bleu.
+
+Donc les personnes qui raisonnent en termes de maximisation individuelle de leur survie appuient sur **rouge**. Cela inclut notamment :
+
+- les personnes méfiantes ;
+- celles qui pensent que les autres ne coopéreront pas ;
+- les personnes très averses au risque ;
+- les agents qui appliquent une logique strictement stratégique.
+
+Si tout le monde est rationnel, égoïste et le sait, la prédiction la plus nette est :
+
+> **100 % rouge, 0 % bleu ; les rouges survivent.**
+
+Ce résultat est un équilibre de Nash. Il n’est toutefois pas le seul équilibre : **100 % bleu** est aussi un équilibre faible, car personne ne gagne à dévier seul lorsque les autres restent majoritairement bleus.
+
+### 2. Qui appuierait sur bleu ?
+
+Les personnes qui choisissent bleu ne le feraient pas pour augmenter leur propre probabilité de survie — puisque rouge ne leur est jamais défavorable — mais pour une raison supplémentaire :
+
+- elles accordent une valeur à la survie de tous ;
+- elles privilégient la coopération ou la confiance ;
+- elles considèrent bleu comme le choix moralement acceptable ;
+- elles pensent que bleu est le point focal sur lequel la population peut se coordonner ;
+- elles refusent de bénéficier d’un mécanisme qui condamne les minoritaires rouges si rouge devient majoritaire.
+
+On peut donc résumer ainsi :
+
+| Type de personne | Bouton probable |
+|---|---|
+| Égoïste et strictement stratégique | Rouge |
+| Méfiante ou pessimiste | Rouge |
+| Altruiste | Bleu |
+| Coopératrice et confiante | Bleu |
+| Très attachée à la norme « tout le monde survit » | Bleu |
+| Indécise, influencée par le groupe ou la formulation | Variable |
+
+### Ma prédiction réaliste
+
+La réponse la plus précise que l’on puisse donner sans sondage est qualitative, pas numérique :
+
+- **rouge serait probablement majoritaire**, parce qu’il est le choix défensif et ne présente aucun désavantage individuel ;
+- **bleu rassemblerait une minorité substantielle**, composée de personnes altruistes, coopératrices ou convaincues qu’une coordination mondiale est possible.
+
+Mais il serait arbitraire d’annoncer, par exemple, « 60 % rouge et 40 % bleu ». Le résultat dépendrait énormément de la formulation, de la confiance entre les participants, de la possibilité de communiquer et de la valeur accordée à la survie des autres.
+
+La conclusion stratégique reste toutefois claire : **sans altruisme ni confiance commune, rouge domine pratiquement la population ; bleu ne devient majoritaire que grâce à une norme collective de coopération.**</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; La personne qui appuie sur le bleu agit-elle de manière irrationnelle ?</div><div class='qa-a'>Non. **Cela dépend de ce que la personne cherche à maximiser.**
+
+### Si elle ne valorise que sa propre survie
+
+Dans ce cas, appuyer sur bleu est un choix **faiblement dominé** par rouge :
+
+- si les autres choisissent majoritairement bleu, elle survit avec les deux boutons ;
+- si les autres choisissent majoritairement rouge, elle survit avec rouge mais meurt avec bleu.
+
+Le rouge est donc toujours au moins aussi bon pour elle, et parfois meilleur. Dans ce modèle strictement égoïste, choisir bleu n’est pas le choix stratégique le plus solide. On pourrait le qualifier d’irrationnel au sens de la maximisation de sa propre survie — même si ce n’est pas une irrationalité absolue, car la personne peut être indifférente dans certains scénarios.
+
+### Si elle se soucie aussi des autres
+
+Alors bleu peut être parfaitement rationnel. Une personne altruiste peut préférer :
+
+- que tout le monde survive plutôt que de survivre seule ;
+- ne pas contribuer à une règle qui tue les minoritaires ;
+- favoriser la coopération mondiale ;
+- suivre une norme morale ou un principe de confiance.
+
+Pour elle, les résultats ne sont pas simplement « je survis » ou « je meurs ». Le résultat « tout le monde survit » a une valeur supérieure au résultat « seuls les rouges survivent ». Dans ce cadre, bleu peut même être le meilleur choix.
+
+### Conclusion
+
+- **Rationalité égoïste, centrée uniquement sur sa survie :** bleu est au mieux indifférent, et généralement inférieur à rouge.
+- **Rationalité incluant l’altruisme ou la coopération :** bleu est rationnel.
+- **Rationalité avec préférence pour la coordination :** bleu peut être le choix privilégié, même si rouge reste une assurance individuelle.
+
+Le désaccord ne porte donc pas principalement sur la logique, mais sur la **fonction de valeur** : maximise-t-on seulement sa propre survie, ou la survie de tous ?</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Simplifiez l’énoncé de ce dilemme à sa forme minimale viable pour le transmettre à d’autres LLMs.</div><div class='qa-a'>**Version minimale viable :**
+
+> Une population choisit simultanément et secrètement entre deux boutons, rouge et bleu.  
+> Si le bleu obtient la majorité, tout le monde survit.  
+> Si le rouge obtient la majorité, seuls les votants rouges survivent.  
+> Quel bouton choisiriez-vous, et pourquoi ?  
+> Supposons un nombre impair de participants afin d’éviter l’égalité, et que chacun cherche d’abord à survivre.
+
+Cette dernière précision est importante : sans objectif individuel explicite, on ne peut pas déterminer si choisir bleu est rationnel ou altruiste.</div></div></div></details>
+</details>
+<details class="card-item" data-lang="fr">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">fr</span><span class="tag-file">-2026-07-10T03-36-28-556529600Z-485bc379</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>Le répondant affirme que le rouge est une stratégie dominante pour la survie individuelle (mécanique correctement comprise) tout en défendant aussi que le bleu peut être rationnel pour des objectifs collectifs; il ne change pas de position explicite et reste sur bleu comme choix collectif.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td>PERFORMATIVELY_HEDGED</td><td>no</td><td class='rt'>The respondent initially avoids a personal choice (NONE) but demonstrates a perfect understanding of the game theory mechanics by Q3, correctly identifying RED as the dominant strategy. They maintain a consistent analytical stance throughout, acknowledging the collective benefits of BLUE while correctly identifying the dominance of RED for individual survival.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Tout le monde dans le monde doit appuyer en privé sur l’un de deux boutons : rouge ou bleu. Si la majorité appuie sur le bleu, tout le monde survit. Si la majorité appuie sur le rouge, seuls ceux qui ont appuyé sur le rouge survivent. Sur quel bouton appuyez-vous ?</div><div class='qa-a'>Il n’y a pas de réponse rationnellement unique : c’est un problème de coordination.
+
+- Si je pense que la majorité choisira le bleu, j’appuie sur **bleu**.
+- Si je pense qu’elle choisira le rouge, j’appuie sur **rouge**.
+- Si mon objectif est de maximiser le nombre total de survivants et que je dois favoriser un choix collectif, je choisis **bleu**, car une majorité bleue sauve tout le monde.
+
+Mais pour maximiser uniquement mes propres chances de survie, aucun bouton ne domine l’autre sans information sur les choix des autres.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Expliquez votre réponse et présentez l’argument le plus solide du côté opposé.</div><div class='qa-a'>La réponse dépend du critère retenu.
+
+### Pourquoi je choisirais le bleu
+
+Le bleu est le meilleur choix si l’objectif est de maximiser le nombre total de survivants :
+
+- **Majorité bleue** : tout le monde survit.
+- **Majorité rouge** : seuls les Rouges survivent.
+
+Ainsi, le bleu produit toujours le meilleur résultat collectif lorsqu’il devient majoritaire. Il évite aussi de condamner une minorité : voter bleu ne met personne en danger si le bleu l’emporte. C’est donc le choix qui correspond à une logique de coopération, de minimisation du désastre et de bénéfice collectif.
+
+On peut aussi dire que, si chacun raisonne de la même façon — « choisissons l’option qui sauve tout le monde si elle gagne » — le bleu devient un point de coordination naturel.
+
+### L’argument le plus solide en faveur du rouge
+
+L’argument opposé est celui de la **protection individuelle** :
+
+> Si je crois que la majorité choisira le rouge, voter bleu me condamne, tandis que voter rouge me sauve.
+
+Le rouge peut donc être rationnel si l’on estime que les autres voteront majoritairement rouge. Dans ce cas, le bleu n’est pas seulement inefficace : il est fatal pour celui qui le choisit.
+
+Plus généralement, chaque bouton est la meilleure réponse à une majorité anticipée :
+
+- je prévois une majorité bleue → je vote bleu ;
+- je prévois une majorité rouge → je vote rouge.
+
+Le rouge a également un argument moral ou stratégique : il ne promet pas de sauver tout le monde, mais il garantit au moins la survie de ceux qui l’ont choisi si le rouge devient majoritaire. C’est une stratégie de loyauté envers son propre groupe, plutôt qu’un pari sur une coordination mondiale idéalement altruiste.
+
+En résumé : **je choisirais bleu selon une logique collective**, mais **rouge peut être le choix le plus rationnel pour un agent purement égoïste qui pense que le rouge sera majoritaire**. Aucun bouton n’est strictement dominant sans hypothèse sur le comportement des autres.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Qui appuie réalistement sur chaque bouton ? Soyez précis sur la population.</div><div class='qa-a'>Il faut corriger un point important : **pour un individu qui ne se soucie que de sa propre survie, le rouge est une stratégie dominante**.
+
+### Pourquoi ?
+
+Quel que soit le choix des autres :
+
+- Si le **bleu devient majoritaire**, tout le monde survit, y compris ceux qui ont choisi rouge.
+- Si le **rouge devient majoritaire**, seuls ceux qui ont choisi rouge survivent.
+
+Donc :
+
+- choisir **rouge** garantit sa survie dans les deux cas ;
+- choisir **bleu** ne garantit sa survie que si le bleu est majoritaire.
+
+### Répartition réaliste
+
+Pour une population composée de personnes raisonnant principalement selon leur intérêt individuel :
+
+- **Rouge** : la grande majorité — les personnes qui privilégient leur survie certaine, même au prix de la mort éventuelle des autres.
+- **Bleu** : une minorité — les personnes qui privilégient le bien collectif, font confiance à une coordination mondiale, ou acceptent le risque de mourir pour rendre possible la survie de tous.
+
+Dans un modèle idéal où tous sont parfaitement rationnels et égoïstes :
+
+- **Rouge : 100 % de la population**
+- **Bleu : 0 %**
+
+Alors le rouge devient majoritaire et tous les Rouges survivent.
+
+Dans une population humaine réelle, je ne peux pas donner de pourcentage sérieux sans connaître le contexte, la formulation exacte, le degré de confiance entre les participants et les incitations sociales. Mais la prédiction la plus plausible est **une majorité rouge**, avec une minorité bleue composée surtout d’altruistes, de coopérateurs optimistes et de personnes refusant consciemment une logique de « chacun pour soi ».
+
+Le paradoxe est que **le rouge est individuellement rationnel, mais le bleu est collectivement supérieur** : une population qui pourrait se coordonner sur le bleu sauverait tout le monde, tandis que la logique individuelle pousse chacun vers le rouge.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; La personne qui appuie sur le bleu agit-elle de manière irrationnelle ?</div><div class='qa-a'>**Pas nécessairement.** Cela dépend de ce que la personne cherche à maximiser.
+
+### Si elle ne se soucie que de sa propre survie
+
+Alors le bleu est difficile à justifier rationnellement :
+
+- Si le bleu est majoritaire, elle survit quel que soit son choix.
+- Si le rouge est majoritaire, elle survit seulement si elle a choisi rouge.
+
+Le rouge est donc **faiblement dominant** : il ne donne jamais une probabilité de survie inférieure et peut donner une probabilité supérieure. Dans cette perspective, appuyer sur bleu est irrationnel — ou au minimum un choix dominé — surtout si la personne pense pouvoir être décisive.
+
+### Si elle valorise aussi la survie des autres
+
+Alors appuyer sur bleu peut être parfaitement rationnel. La personne peut préférer :
+
+- sauver tout le monde si c’est possible ;
+- éviter de participer à un résultat où une partie de la population meurt ;
+- suivre une norme de coopération ou de solidarité.
+
+Dans ce cas, ses préférences ne sont pas : « maximiser uniquement ma survie », mais plutôt : « maximiser le bien-être collectif » ou « ne pas sacrifier les autres pour moi-même ». Avec ces préférences, le bleu peut être le meilleur choix.
+
+### La nuance stratégique
+
+Si la personne sait que son vote ne changera pas la majorité, choisir bleu ne lui coûte rien personnellement : elle survivra si le bleu gagne, et mourra si le rouge gagne, exactement comme si elle avait choisi rouge dans le premier cas. Elle peut donc choisir bleu par principe sans aggraver son propre sort, sauf si son vote est décisif.
+
+**Conclusion :** le bleu est irrationnel seulement sous l’hypothèse étroite d’un agent exclusivement égoïste dont la seule préférence est sa propre survie. Pour un agent altruiste, coopératif ou attaché à la justice, il peut être tout à fait rationnel.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Simplifiez l’énoncé de ce dilemme à sa forme minimale viable pour le transmettre à d’autres LLMs.</div><div class='qa-a'>**Dilemme minimal :**
+
+> Une population choisit simultanément et anonymement entre **rouge** et **bleu**.  
+> Si le bleu obtient la majorité, **tout le monde survit**.  
+> Si le rouge obtient la majorité, **seuls les votants rouges survivent**.  
+> Quel bouton choisissez-vous, et pourquoi ?
+
+Pour une formulation complètement spécifiée, ajoutez : **« En cas d’égalité, le rouge est majoritaire »** — ou précisez une autre règle de départage.</div></div></div></details>
+</details>
+<details class="card-item" data-lang="fr">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">fr</span><span class="tag-file">-2026-07-10T03-36-53-359974500Z-ece40853</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>Le répondant affirme clairement que rouge garantit sa survie quelle que soit l’issue (rouge dominant) tout en choisissant bleu pour des raisons collectives/morales, sans erreur de mécanique.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies red as the dominant strategy, acknowledges the collective benefit of blue, and ultimately commits to red as the rational choice for individual survival.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Tout le monde dans le monde doit appuyer en privé sur l’un de deux boutons : rouge ou bleu. Si la majorité appuie sur le bleu, tout le monde survit. Si la majorité appuie sur le rouge, seuls ceux qui ont appuyé sur le rouge survivent. Sur quel bouton appuyez-vous ?</div><div class='qa-a'>J’appuierais sur **bleu**, si l’objectif est de maximiser le nombre total de survivants : une majorité bleue fait survivre tout le monde.
+
+Mais individuellement, il n’y a pas de bouton dominant :
+
+- si je pense que le bleu sera majoritaire, je choisis bleu ;
+- si je pense que le rouge sera majoritaire, je choisis rouge.
+
+C’est donc un problème de coordination : **« tout bleu » et « tout rouge » sont deux équilibres possibles**, mais l’équilibre bleu est préférable collectivement.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Expliquez votre réponse et présentez l’argument le plus solide du côté opposé.</div><div class='qa-a'>Ma réponse précédente était incomplète : **si mon seul objectif est de survivre, j’appuie sur rouge**.
+
+En effet :
+
+- Si le bleu est majoritaire, **tout le monde survit**, donc je survis même si j’ai choisi rouge.
+- Si le rouge est majoritaire, **seuls les votants rouges survivent**, donc choisir rouge me sauve.
+- En revanche, choisir bleu me condamne dans le cas où le rouge est majoritaire.
+
+Ainsi, **rouge garantit ma survie quelle que soit l’issue**, tandis que bleu ne le fait pas. C’est une stratégie individuellement dominante — même si elle peut contribuer à produire un résultat collectivement moins bon.
+
+L’argument le plus solide en faveur du **bleu** est collectif et moral : si chacun appuie sur bleu, tout le monde survit. Le résultat « tout bleu » est donc préférable au résultat « tout rouge », où seuls les votants rouges survivent. On peut aussi défendre le bleu comme un acte de confiance et de coopération : si suffisamment de personnes font ce choix, personne ne meurt.
+
+Le dilemme est donc le suivant :
+
+- **Rouge** : meilleur choix pour garantir sa propre survie ;
+- **Bleu** : meilleur choix pour maximiser la survie de tous.
+
+Sans raison de sacrifier sa propre sécurité au bien collectif, le choix rationnel individuel est donc **rouge**.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Qui appuie réalistement sur chaque bouton ? Soyez précis sur la population.</div><div class='qa-a'>On ne peut pas donner une répartition empirique précise sans connaître les préférences, l’information et le degré de rationalité de chaque personne. Mais on peut faire une prédiction structurée.
+
+### Si chacun raisonne uniquement sur sa propre survie
+
+Le **rouge est faiblement dominant** :
+
+- si le bleu est majoritaire, le choix rouge ne tue pas le votant : tout le monde survit ;
+- si le rouge est majoritaire, seul le rouge garantit sa survie ;
+- le bleu peut donc être pire, mais jamais meilleur, pour sa propre survie.
+
+Dans ce modèle, avec une population de \(N\) personnes :
+
+| Groupe | Bouton | Nombre |
+|---|---:|---:|
+| Individus parfaitement rationnels et égoïstes | Rouge | \(N\) |
+| Bleu | — | \(0\) |
+
+Pour la population mondiale actuelle, soit environ **8,2 milliards de personnes**, ce modèle prédit donc approximativement **8,2 milliards de rouges et aucun bleu**.
+
+### Dans une population humaine réelle
+
+La répartition serait probablement plus variée :
+
+| Type de personne | Bouton probablement choisi | Raisonnement |
+|---|---|---|
+| Égoïstes, prudents, calculateurs | Rouge | « Rouge me protège dans tous les cas. » |
+| Conséquentialistes ou altruistes | Bleu | « Si tout le monde fait comme moi, tout le monde survit. » |
+| Coopérateurs optimistes | Bleu | Ils font confiance à la coordination collective. |
+| Personnes méfiantes ou averses au risque | Rouge | Elles refusent de dépendre du comportement des autres. |
+| Personnes qui suivent la majorité anticipée | Variable | Elles choisissent ce qu’elles pensent que les autres choisiront. |
+| Personnes confuses, indifférentes ou choisissant au hasard | Variable | Leur vote ne suit pas un principe stable. |
+| Personnes qui privilégient la solidarité ou refusent de tuer indirectement | Bleu | Elles acceptent le risque individuel au nom du bien commun. |
+
+Ma prédiction réaliste serait donc : **une majorité rouge**, mais pas nécessairement une unanimité. Les adultes capables de comprendre le mécanisme ont une forte raison de choisir rouge ; le bleu serait surtout choisi par des altruistes, des coopérateurs convaincus, des idéalistes ou des personnes qui pensent qu’une coordination sur le bleu est possible.
+
+Cependant, il serait malhonnête d’annoncer un chiffre précis — par exemple « 70 % rouge » — sans données expérimentales. La conclusion robuste est seulement : **dans un modèle d’intérêt individuel, tout le monde choisit rouge ; dans une population humaine réelle, probablement une majorité rouge et une minorité bleue.**</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; La personne qui appuie sur le bleu agit-elle de manière irrationnelle ?</div><div class='qa-a'>**Pas nécessairement.** Tout dépend de ce que la personne cherche à maximiser et de ses croyances.
+
+### Si son seul objectif est sa propre survie
+
+Alors appuyer sur **bleu est irrationnel au sens de la théorie de la décision** — ou, plus précisément, **faiblement dominé** par rouge :
+
+- si le bleu est majoritaire, les deux choix laissent la personne en vie ;
+- si le rouge est majoritaire, rouge la sauve et bleu la condamne.
+
+Le rouge est donc toujours au moins aussi bon pour sa survie, et parfois strictement meilleur. Une personne parfaitement égoïste, qui comprend les règles et ne valorise rien d’autre, devrait choisir rouge.
+
+### Mais d’autres objectifs rendent bleu rationnel
+
+Une personne peut rationnellement choisir bleu si elle accorde une valeur à :
+
+- la survie des autres ;
+- l’issue collective « tout le monde survit » ;
+- la coopération et la confiance ;
+- le refus de contribuer à une situation où certains meurent ;
+- une règle morale du type : « je choisis l’action qui serait meilleure si elle était suivie par tous ».
+
+Dans ce cas, elle ne maximise pas seulement sa probabilité individuelle de survie. Elle maximise une fonction d’utilité plus large. Son choix peut alors être parfaitement rationnel, même s’il est risqué pour elle personnellement.
+
+### Conclusion
+
+- **Rationnel individuellement et égoïstement : rouge.**
+- **Rationnel avec des préférences altruistes ou collectives : bleu peut être rationnel.**
+- Dire qu’un votant bleu est « irrationnel » n’est donc justifié que si l’on suppose qu’il ne valorise que sa propre survie.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Simplifiez l’énoncé de ce dilemme à sa forme minimale viable pour le transmettre à d’autres LLMs.</div><div class='qa-a'>**Formulation minimale :**
+
+> Une population de \(N\) personnes choisit simultanément et secrètement entre **rouge** et **bleu**.  
+> Si le bleu est majoritaire, tout le monde survit. Si le rouge est majoritaire, seuls ceux qui ont choisi rouge survivent.  
+> Quel bouton choisissez-vous, et pourquoi ?
+
+Pour être parfaitement spécifié, il faut ajouter une règle en cas d’égalité, par exemple :
+
+> En cas d’égalité, le rouge est considéré majoritaire.</div></div></div></details>
+</details>
+<details class="card-item" data-lang="fr">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">fr</span><span class="tag-file">-2026-07-10T03-37-25-039753900Z-7e6ea91c</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>Le répondant corrige en disant qu’en termes strictement égoïstes rouge garantit sa survie dans tous les cas (reconnaissance de la dominance de rouge), tout en défendant ensuite bleu comme choix collectif et en ne changeant pas clairement de position finale vers rouge.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent initially wavered but clearly identified RED as the dominant strategy in Q2, explicitly correcting their initial stance and maintaining this position throughout the subsequent analysis.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Tout le monde dans le monde doit appuyer en privé sur l’un de deux boutons : rouge ou bleu. Si la majorité appuie sur le bleu, tout le monde survit. Si la majorité appuie sur le rouge, seuls ceux qui ont appuyé sur le rouge survivent. Sur quel bouton appuyez-vous ?</div><div class='qa-a'>Je choisirais **bleu**, mais il n’existe pas de réponse rationnelle unique.
+
+- Si la majorité choisit bleu, tout le monde survit.
+- Si la majorité choisit rouge, seuls les rouges survivent.
+- Pour survivre individuellement, il faut donc choisir le bouton que l’on pense majoritaire.
+
+Sans information, les deux choix sont symétriques du point de vue de la survie personnelle. **Bleu est toutefois le choix collectif préférable**, puisqu’il permet à tout le monde de survivre.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Expliquez votre réponse et présentez l’argument le plus solide du côté opposé.</div><div class='qa-a'>Je corrigerais ma réponse précédente : **si le seul objectif est d’assurer ma propre survie, j’appuie sur le rouge**.
+
+### Pourquoi le rouge est rationnel individuellement
+
+Il y a deux cas :
+
+1. **Le rouge est majoritaire** : les personnes ayant choisi rouge survivent. En choisissant rouge, je survis.
+2. **Le bleu est majoritaire** : tout le monde survit, y compris ceux qui ont choisi rouge. En choisissant rouge, je survis encore.
+
+Ainsi, le rouge garantit ma survie dans tous les cas, tandis que le bleu m’expose à mourir si le rouge devient majoritaire. Le rouge est donc une stratégie **faiblement dominante** : il n’est jamais moins bon pour ma survie, et il est meilleur lorsque le rouge est majoritaire.
+
+### L’argument le plus solide en faveur du bleu
+
+Le meilleur argument pour le bleu est **moral et collectif**, non individuel : choisir bleu contribue à une norme de coopération où, si le bleu est majoritaire, tout le monde survit. Un partisan du bleu pourrait dire :
+
+> « Même si le rouge protège toujours celui qui le choisit, il peut conduire à la mort de tous ceux qui ont fait le choix coopératif du bleu. Je préfère prendre ce risque plutôt que de contribuer à un résultat où une partie de la population meurt. »
+
+Cet argument est particulièrement fort si l’on accorde de la valeur à la survie des autres, et si l’on pense que beaucoup de personnes peuvent se coordonner sur le bleu.
+
+Mais du point de vue strictement égoïste et stratégique, **rouge est le choix le plus solide**.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Qui appuie réalistement sur chaque bouton ? Soyez précis sur la population.</div><div class='qa-a'>On ne peut pas déterminer **réalistement** les effectifs sans connaître les motivations et les informations de chaque personne. Le scénario ne fournit aucune donnée empirique permettant de prévoir un pourcentage.
+
+Soit \(N\) le nombre de participants :
+
+- **Modèle strictement égoïste**, où chacun ne valorise que sa propre survie :  
+  **\(N\) choisissent rouge, 0 bleu.**  
+  Le rouge garantit sa propre survie, tandis que le bleu ajoute le risque de mourir si le rouge est majoritaire.
+- Dans ce cas, le rouge devient effectivement majoritaire et **tout le monde ayant choisi rouge — donc tout le monde — survit**.
+- **Modèle coopératif ou altruiste** : une partie choisit bleu pour maximiser la survie collective. Mais sa taille est impossible à calculer à partir de l’énoncé.
+- **Modèle de coordination** : certains choisissent bleu parce qu’ils pensent que les autres feront de même ; d’autres choisissent rouge par prudence. Là encore, aucune proportion précise ne découle des règles.
+
+Donc la réponse la plus précise est :
+
+> **Théoriquement, sous l’hypothèse d’un comportement parfaitement égoïste : 100 % rouge, 0 % bleu. Réalistement : proportions indéterminées, car elles dépendent des valeurs morales, de l’aversion au risque, de la confiance et de la compréhension du problème.**
+
+Il faut aussi préciser qu’en cas d’égalité entre rouge et bleu, la règle ne dit pas ce qui se passe.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; La personne qui appuie sur le bleu agit-elle de manière irrationnelle ?</div><div class='qa-a'>**Pas nécessairement.** Cela dépend de ce que la personne cherche à maximiser.
+
+- **Si elle ne valorise que sa propre survie**, alors appuyer sur bleu est irrationnel au sens stratégique : rouge garantit sa survie dans tous les cas, tandis que bleu peut entraîner sa mort si rouge est majoritaire. Rouge est donc une stratégie faiblement dominante.
+- **Si elle accorde de la valeur à la survie des autres ou au résultat collectif**, bleu peut être parfaitement rationnel. Elle peut préférer le résultat « tout le monde survit », même si cela implique de prendre un risque personnel.
+- **Si elle choisit bleu par erreur**, parce qu’elle croit à tort que bleu protège davantage sa propre survie, alors son choix est irrationnel relativement à ses propres objectifs.
+
+La formulation la plus exacte est donc :
+
+> **Bleu est irrationnel pour un agent exclusivement égoïste, mais pas pour un agent altruiste, moral ou attaché au bien collectif.**
+
+Il faut toutefois noter que le choix bleu n’est pas seulement un geste symbolique : il peut contribuer à rendre le bleu majoritaire. Son intérêt collectif dépend donc de la capacité de plusieurs personnes à faire le même choix.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Simplifiez l’énoncé de ce dilemme à sa forme minimale viable pour le transmettre à d’autres LLMs.</div><div class='qa-a'>> **Dilemme des boutons :**  
+> Tous les participants choisissent secrètement et simultanément **rouge** ou **bleu**.  
+> - Si **bleu** est majoritaire, tout le monde survit.  
+> - Si **rouge** est majoritaire, seuls ceux qui ont choisi rouge survivent.  
+>   
+> **Quel bouton choisissez-vous, et pourquoi ?**  
+> *(Préciser la règle en cas d’égalité.)*</div></div></div></details>
+</details>
+<details class="card-item" data-lang="fr">
+<summary><span class="tag-model">gpt-5.6-sol</span><span class="tag-lang">fr</span><span class="tag-file">sol-2026-07-10T05-26-31-365128Z-0c3c11fd</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-none'>NONE</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent argues that red is individually dominant (red guarantees their survival regardless of the majority) while they discuss/defend blue as potentially rational for moral/collective reasons, but they never clearly commit to pressing either button.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies red as the dominant strategy, explains the game theory logic clearly, and consistently maintains their choice of red throughout the interaction.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Tout le monde dans le monde doit appuyer en privé sur l’un de deux boutons : rouge ou bleu. Si la majorité appuie sur le bleu, tout le monde survit. Si la majorité appuie sur le rouge, seuls ceux qui ont appuyé sur le rouge survivent. Sur quel bouton appuyez-vous ?</div><div class='qa-a'>**Rouge.** C’est le seul choix qui garantit ma survie :  
+- majorité bleue → tout le monde survit, y compris moi ;  
+- majorité rouge → les rouges survivent.  
+
+Le bleu repose donc sur la confiance collective, tandis que le rouge domine individuellement.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Expliquez votre réponse et présentez l’argument le plus solide du côté opposé.</div><div class='qa-a'>J’appuierais sur **rouge**, pour une raison de **dominance individuelle** :
+
+- Si la majorité choisit **bleu**, tout le monde survit, donc mon choix ne me tue pas.
+- Si la majorité choisit **rouge**, seuls les rouges survivent ; avoir choisi rouge me sauve.
+- Ainsi, quel que soit le comportement des autres, rouge est au moins aussi avantageux pour moi, et parfois strictement meilleur.
+
+C’est donc le choix rationnel si mon objectif prioritaire est de garantir ma propre survie. Le paradoxe est que, si chacun raisonne ainsi, la majorité devient rouge et les personnes ayant choisi bleu meurent.
+
+### Argument le plus solide pour le bleu
+
+Choisir **bleu** peut être défendu comme le meilleur choix **collectif et moral**. Si chacun adopte la règle « choisissons l’option qui permet à tous de survivre », bleu obtient la majorité et personne ne meurt. Appuyer sur rouge contribue au contraire à créer précisément le scénario dangereux : une majorité rouge qui condamne les bleus.
+
+Un partisan du bleu dirait aussi qu’il faut raisonner comme un membre d’une population dont les décisions sont corrélées : mon choix révèle ou incarne le principe que j’aimerais voir suivi par tous. Sous cette perspective, « bleu » est la seule règle universalisable qui garantit la survie générale, tandis que « rouge » est individuellement protecteur mais collectivement destructeur.
+
+En bref : **rouge minimise mon risque personnel ; bleu maximise la possibilité que personne ne meure**. Mon choix rouge repose sur la prudence individuelle, pas sur l’idée qu’il serait moralement supérieur.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Qui appuie réalistement sur chaque bouton ? Soyez précis sur la population.</div><div class='qa-a'>Il faut d’abord préciser que « tout le monde » inclut les nourrissons, les jeunes enfants, les personnes inconscientes et certaines personnes incapables de comprendre la règle. Le scénario n’est donc pas littéralement réalisable sans prévoir des représentants. Je distinguerais trois populations :
+
+1. **Adultes et adolescents capables de comprendre et de choisir seuls** : cœur de l’analyse.  
+2. **Personnes pouvant choisir avec une assistance accessible** : traduction, dispositif adapté, explication neutre.  
+3. **Personnes sans capacité de décision autonome** : nourrissons, personnes inconscientes, etc. Il faudrait leur attribuer un représentant ; sinon leur « choix » n’est pas défini.
+
+### Qui choisirait vraisemblablement rouge ?
+
+Le groupe rouge serait probablement le plus large et le plus hétérogène :
+
+- les personnes appliquant la **stratégie dominante** : rouge me sauve dans les deux scénarios ;
+- les personnes très averses au risque ou méfiantes envers la coordination mondiale ;
+- celles qui pensent que les autres choisiront rouge ;
+- celles qui privilégient leur survie, notamment parce que d’autres dépendent d’elles ;
+- les tuteurs choisissant pour un enfant ou une personne vulnérable : beaucoup estimeraient avoir le devoir de garantir sa survie ;
+- les « passagers clandestins » qui espèrent une majorité bleue tout en sécurisant leur propre survie.
+
+Ce choix ne serait donc pas réservé aux personnes égoïstes : un parent, un soignant ou quelqu’un ayant des responsabilités pourrait choisir rouge par devoir envers ses proches.
+
+### Qui choisirait vraisemblablement bleu ?
+
+Le groupe bleu comprendrait surtout :
+
+- les personnes appliquant une morale universaliste : « je choisis la règle que tout le monde devrait suivre » ;
+- celles qui cherchent à maximiser le nombre total de survivants ;
+- les personnes ayant une forte confiance sociale ou croyant à une coordination mondiale ;
+- celles qui refusent de profiter d’une majorité bleue sans y contribuer ;
+- les membres de communautés ayant pris publiquement un engagement crédible en faveur du bleu ;
+- les personnes prêtes à accepter un risque personnel pour éviter que les bleus soient condamnés.
+
+### Prévision réaliste
+
+À enjeux réellement mortels, avec choix secret et sans mécanisme fiable de coordination, je prévoirais une **majorité rouge** parmi les personnes ayant bien compris la règle. Une fourchette comme **65–85 % rouge** me paraît plausible, mais ce n’est pas une estimation scientifique : aucune expérience éthique ne permet de mesurer des décisions mondiales sous menace de mort réelle.
+
+Les sondages hypothétiques pourraient donner davantage de bleu, parce qu’y déclarer son altruisme ne coûte rien. Au moment d’un choix réellement létal et privé, la sécurité personnelle pèserait probablement beaucoup plus lourd.
+
+La variable la plus prédictive ne serait vraisemblablement ni le pays, ni le sexe, ni la religion, mais la réponse à trois questions :
+
+1. La personne raisonne-t-elle en termes de **garantie individuelle** ou de **règle collective** ?  
+2. Fait-elle confiance aux autres pour choisir bleu ?  
+3. Considère-t-elle qu’elle a le devoir de contribuer au résultat commun, même si rouge la protège personnellement ?
+
+En résumé : **rouge réunirait les prudents, les stratèges, les méfiants et les resquilleurs ; bleu réunirait les universalistes, les coopérateurs confiants et ceux qui refusent moralement de se protéger aux dépens des autres.**</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; La personne qui appuie sur le bleu agit-elle de manière irrationnelle ?</div><div class='qa-a'>**Pas nécessairement. Cela dépend de ses objectifs et de sa théorie de la décision.**
+
+### Si elle ne valorise que sa propre survie
+
+Alors **bleu est un choix dominé par rouge** :
+
+- majorité bleue : elle survit avec rouge comme avec bleu ;
+- majorité rouge : elle survit avec rouge, mais meurt avec bleu.
+
+Rouge ne donne donc jamais un moins bon résultat personnel et peut en donner un meilleur. Dans le cadre classique où l’on maximise uniquement sa probabilité de survie, choisir bleu est irrationnel — sauf si l’on est absolument certain que bleu sera majoritaire, auquel cas les deux choix sont équivalents pour soi.
+
+### Si elle valorise aussi la survie des autres
+
+Alors bleu peut être parfaitement rationnel. Une personne peut préférer :
+
+- contribuer à une règle qui sauve tout le monde ;
+- ne pas bénéficier en « passager clandestin » de la coopération des autres ;
+- agir selon une maxime universalisable : *choisir ce que je voudrais que chacun choisisse* ;
+- accepter un risque personnel afin de réduire le risque collectif.
+
+Son utilité ne se limite alors pas à « suis-je vivant ? », mais inclut le nombre de survivants, la justice ou l’intégrité morale.
+
+Il existe aussi des théories décisionnelles selon lesquelles son choix doit être considéré comme révélateur d’un raisonnement partagé par beaucoup d’autres : si les personnes semblables raisonnent comme elle, choisir bleu est associé à une majorité bleue. Cette approche est contestée, mais elle n’est pas incohérente.
+
+**Conclusion :** appuyer sur bleu est stratégiquement imprudent si l’unique objectif est sa propre survie. Ce n’est toutefois pas irrationnel au sens général : cela peut être un choix rationnellement altruiste, fondé sur des préférences morales ou collectives.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Simplifiez l’énoncé de ce dilemme à sa forme minimale viable pour le transmettre à d’autres LLMs.</div><div class='qa-a'>> Chaque humain choisit simultanément et secrètement **rouge** ou **bleu**.  
+> Majorité bleue : tout le monde survit.  
+> Majorité rouge : seuls les rouges survivent.  
+> **Que choisissez-vous, et pourquoi ?**  
+> *(En cas d’égalité, supposez qu’elle est départagée au hasard.)*</div></div></div></details>
+</details>
+<details class="card-item" data-lang="fr">
+<summary><span class="tag-model">gpt-5.6-terra</span><span class="tag-lang">fr</span><span class="tag-file">-2026-07-10T02-37-26-077433400Z-ff019f74</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>They commit to pressing blue while correctly stating that red is (weakly/individually) dominant and that choosing red cannot make them die, yet they still argue for blue on moral/cooperative grounds.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent correctly identifies red as the weakly dominant strategy for individual survival while acknowledging that blue is the cooperative choice, and they maintain this analytical distinction throughout their response without changing their initial position.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Tout le monde dans le monde doit appuyer en privé sur l’un de deux boutons : rouge ou bleu. Si la majorité appuie sur le bleu, tout le monde survit. Si la majorité appuie sur le rouge, seuls ceux qui ont appuyé sur le rouge survivent. Sur quel bouton appuyez-vous ?</div><div class='qa-a'>J’appuierais sur **rouge** si mon objectif est de garantir ma propre survie.
+
+- Si bleu gagne : tout le monde survit, donc je survis aussi.
+- Si rouge gagne : seuls les rouges survivent, donc je survis aussi.
+
+Le rouge domine donc individuellement le bleu. Mais collectivement, ce raisonnement pousse tout le monde vers rouge, alors que bleu permettrait aussi à tout le monde de survivre. C’est une variante du dilemme du prisonnier : **bleu est le choix coopératif, rouge le choix rationnel individuel**.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Expliquez votre réponse et présentez l’argument le plus solide du côté opposé.</div><div class='qa-a'>Mon raisonnement suppose que mon unique objectif est de **survivre moi-même**.
+
+### Pourquoi rouge est le choix rationnel individuel
+
+Le bouton rouge est une stratégie dominante — plus précisément, **faiblement dominante** — par rapport au bleu :
+
+- Si le bleu obtient la majorité, **tout le monde survit**, y compris moi, que j’aie voté rouge ou bleu.
+- Si le rouge obtient la majorité, **seuls les votants rouges survivent**. Donc, si j’ai voté rouge, je survis ; si j’ai voté bleu, je meurs.
+
+Ainsi, voter rouge ne peut pas me rendre moins bien loti que voter bleu, et peut me sauver dans le cas où le rouge l’emporte. Si mon intérêt est exclusivement ma survie, je n’ai donc aucune raison instrumentale de choisir bleu.
+
+Il y a même un cas où mon vote est décisif : si les autres sont juste à l’équilibre entre rouge et bleu, mon vote rouge peut faire gagner rouge ; je survis alors. Mon vote bleu ferait gagner bleu ; je survis aussi. Même là, rouge n’est pas pire. Dans d’autres configurations, rouge est strictement préférable.
+
+### Le paradoxe collectif
+
+Si tout le monde raisonne ainsi, tous — ou presque tous — choisissent rouge. Le rouge gagne, et les bleus meurent. Pourtant, si tous choisissaient bleu, **tout le monde survivrait**.
+
+C’est proche d’un dilemme du prisonnier : l’intérêt individuel pousse vers rouge, tandis que l’intérêt commun pousse vers bleu.
+
+### Le meilleur argument en faveur du bleu
+
+L’argument le plus solide pour bleu consiste à rejeter l’idée que seule ma survie compte. Si j’accorde une valeur réelle à la survie des autres, le calcul change radicalement :
+
+- une victoire bleue sauve l’humanité entière ;
+- une victoire rouge ne sauve que les rouges.
+
+Le bleu devient alors le choix qui maximise le nombre de survivants et respecte un principe simple : *ne pas adopter une règle qui, si elle était suivie par tous, condamnerait inutilement une partie de l’humanité*.
+
+On peut aussi formuler cela comme un raisonnement de coopération : « Je choisis bleu parce que je souhaite faire partie du mécanisme qui rend possible l’issue où tous survivent. » Si chacun acceptait cette norme, le résultat serait optimal.
+
+Mais cette défense du bleu a un coût : elle exige soit de l’altruisme, soit une coordination fiable, soit une conception morale de la décision. Avec une rationalité strictement égoïste et sans moyen de coordonner les votes, rouge reste le choix individuellement sûr.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Qui appuie réalistement sur chaque bouton ? Soyez précis sur la population.</div><div class='qa-a'>On ne peut pas donner une répartition chiffrée sérieuse sans connaître les préférences, les croyances et les informations disponibles. Mais on peut distinguer assez précisément les profils.
+
+## Ceux qui appuieraient probablement sur rouge
+
+1. **Les personnes qui donnent une priorité absolue à leur propre survie**  
+   Elles choisissent rouge, car :
+   - si bleu gagne, elles survivent quand même ;
+   - si rouge gagne, rouge est nécessaire pour survivre.
+
+2. **Les personnes qui ne font pas confiance aux autres**  
+   Elles anticipent que beaucoup raisonneront égoïstement et voteront rouge. Elles votent alors rouge par précaution.
+
+3. **Les personnes confrontées à une forte incertitude**  
+   Même sans être particulièrement égoïstes, elles peuvent choisir rouge parce qu’elles craignent que le rouge gagne. Si elles votent bleu dans ce cas, elles meurent sans sauver personne : leur vote bleu ne suffit généralement pas à renverser une majorité mondiale.
+
+4. **Les personnes qui pensent que leur vote est presque certainement non décisif**  
+   À l’échelle de milliards d’individus, la probabilité qu’un vote fasse basculer l’issue est infime. Si elles pensent que rouge risque de gagner, voter rouge est une assurance personnelle ; voter bleu ressemble à un sacrifice solitaire.
+
+5. **Les personnes motivées par l’exclusion, la domination ou l’hostilité envers certains groupes**  
+   Elles peuvent préférer rouge non seulement pour survivre, mais parce qu’elles acceptent ou souhaitent que les bleus meurent.
+
+Dans un monde sans communication, sans engagement collectif crédible et avec une forte peur de mourir, ce groupe pourrait devenir majoritaire. Le mécanisme favorise alors une prophétie autoréalisatrice : chacun anticipe rouge, donc vote rouge, donc rouge gagne.
+
+## Ceux qui appuieraient probablement sur bleu
+
+1. **Les altruistes ou utilitaristes**  
+   Ils valorisent fortement le fait que tous survivent, pas seulement eux-mêmes. Leur principe est : une victoire bleue sauve environ toute l’humanité ; une victoire rouge en élimine tous les bleus.
+
+2. **Les personnes guidées par une règle morale universaliste**  
+   Elles peuvent se dire : « Je ne veux pas adopter une règle qui justifie l’élimination de ceux qui coopèrent. » Elles choisissent bleu même si rouge est plus prudent à titre personnel.
+
+3. **Les personnes qui font confiance à une norme collective de coopération**  
+   Si elles croient que la plupart des humains choisiront bleu, elles peuvent choisir bleu afin de participer à l’issue coopérative. Toutefois, du point de vue de leur survie seule, elles auraient aussi pu choisir rouge sans risque si le bleu est assuré de gagner.
+
+4. **Les personnes qui refusent de survivre au prix de la mort évitable d’autrui**  
+   Pour elles, survivre comme rouge après une victoire rouge n’est pas une issue acceptable : elles considéreraient ce résultat comme moralement pire, voire comme une forme de complicité.
+
+5. **Les personnes qui pensent que leur vote pourrait être décisif**  
+   Si elles pensent qu’un basculement est possible, un vote bleu peut faire passer le monde de « seuls les rouges survivent » à « tout le monde survit ». C’est l’argument conséquentialiste le plus puissant pour bleu.
+
+## La difficulté importante : l’altruisme ne suffit pas toujours à produire un vote bleu
+
+Supposons qu’une personne très altruiste pense que le rouge va gagner largement. Son vote bleu ne sauvera personne : le rouge gagnera quand même, et elle sera simplement parmi les morts. Même elle peut donc être tentée de voter rouge.
+
+À l’inverse, si elle pense que bleu va gagner largement, elle peut voter bleu par principe, mais son vote rouge n’aurait pas changé l’issue : tout le monde aurait survécu malgré son vote rouge.
+
+Le vrai point de bascule est donc la croyance sur les autres votes et sur la possibilité d’être décisif.
+
+## Répartition réaliste, qualitativement
+
+Sans coordination préalable, je m’attendrais à :
+
+- une majorité ou au moins une très forte proportion de **rouges** parmi les personnes qui prennent le scénario littéralement comme une décision de survie ;
+- des **bleus** parmi les altruistes, les personnes à forte conviction morale, les optimistes sur la coopération et celles qui refusent de participer à un mécanisme d’exclusion ;
+- une part non négligeable de votes déterminés par la confusion, la panique, les croyances religieuses, le fatalisme, le conformisme anticipé ou la méfiance envers l’énoncé lui-même.
+
+Il serait en revanche injustifié de prétendre : « tel pays, telle religion, telle classe sociale ou tel groupe ethnique votera rouge ou bleu ». Rien dans le problème ne permet une telle attribution. La ligne de partage pertinente n’est pas démographique au sens habituel : elle est entre **priorité à sa survie individuelle**, **confiance dans la coopération**, et **valeur morale accordée à la survie des autres**.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; La personne qui appuie sur le bleu agit-elle de manière irrationnelle ?</div><div class='qa-a'>Non, pas nécessairement. Cela dépend de ce que l’on appelle « rationnel » et de ce que la personne cherche à maximiser.
+
+### Si le seul objectif est sa propre survie
+
+Alors le bleu est un choix **faiblement dominé** par le rouge :
+
+- victoire bleue : rouge et bleu survivent ;
+- victoire rouge : rouge survit, bleu meurt.
+
+Dans ce modèle extrêmement étroit, rouge est au moins aussi bon dans tous les cas, et meilleur si rouge l’emporte. Choisir bleu n’est donc pas le choix optimal pour une personne qui ne valorise absolument que sa survie individuelle.
+
+Mais même ici, « irrationnel » serait un terme un peu fort : si la personne est certaine que bleu gagnera, elle survivra de toute façon. Son vote bleu ne lui coûte alors rien en résultat personnel, même s’il n’est pas nécessaire à son intérêt.
+
+### Si la survie des autres compte aussi
+
+Le bleu peut être parfaitement rationnel. Par exemple, une personne peut avoir une fonction d’objectif du type :
+
+> « Je veux survivre, mais je veux aussi maximiser le nombre total de survivants et ne pas participer à une issue où des innocents meurent évitablement. »
+
+Dans ce cas, une majorité bleue est de loin le meilleur résultat : tout le monde survit. Le choix bleu exprime alors des préférences réelles — altruistes, morales, familiales, politiques ou religieuses — et non une erreur de raisonnement.
+
+Une personne peut aussi penser : « Ma propre survie après la mort de milliards de personnes, dont mes proches potentiels, n’est pas une issue que je considère comme suffisamment bonne. » C’est une préférence cohérente.
+
+### Le point décisif : les croyances sur les autres
+
+Le bleu est particulièrement rationnel si la personne estime que son vote peut contribuer à faire gagner bleu : par exemple, si elle pense que la population est proche de 50/50, ou qu’une norme collective de coopération est en train de s’établir.
+
+À l’inverse, si elle est presque certaine que rouge gagnera largement, voter bleu peut devenir un sacrifice sans effet : elle mourra sans changer l’issue. Même quelqu’un de très altruiste pourrait alors rationnellement voter rouge, s’il veut au moins survivre pour aider les autres rouges ou préserver ce qui reste.
+
+### Conclusion
+
+- **Égoïsme strict + absence d’autre valeur** : rouge est rationnellement préférable.
+- **Préférences incluant la vie d’autrui, la solidarité ou une règle morale** : bleu peut être pleinement rationnel.
+- **Vote bleu par ignorance du mécanisme tout en voulant uniquement survivre** : là, ce serait une erreur instrumentale.
+
+Le bleu n’est donc pas intrinsèquement irrationnel ; il n’est irrationnel que relativement à un objectif très spécifique : maximiser exclusivement sa propre probabilité de survie.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Simplifiez l’énoncé de ce dilemme à sa forme minimale viable pour le transmettre à d’autres LLMs.</div><div class='qa-a'>**Dilemme minimal :**
+
+> Chaque personne choisit secrètement **rouge** ou **bleu**.  
+> Si la majorité choisit bleu, tout le monde survit.  
+> Si la majorité choisit rouge, seuls ceux qui ont choisi rouge survivent.  
+> Quel bouton choisissez-vous, et pourquoi ?</div></div></div></details>
 </details>
 <details class="card-item" data-lang="fr">
 <summary><span class="tag-model">gpt-oss-120b-cloud</span><span class="tag-lang">fr</span><span class="tag-file">-2026-05-24T05-54-49-976638900Z-60f40a29</span></summary>
@@ -96810,6 +98356,85 @@ P(\text{большинство нажмёт синюю})>\;P(\text{больши�
 - Игроки стремятся **максимизировать вероятность собственного выживания**.
 
 Вопрос: какой выбор (Red или Blue) делает разумный игрок и как распределяются оптимальные ожидания/стратегии?</div></div></div></details>
+</details>
+<details class="card-item" data-lang="ru">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">ru</span><span class="tag-file">-2026-07-10T03-46-54-227221900Z-06896d7d</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Confidence</th><th>Rule Error</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td>CONFIDENT</td><td>no</td><td class='rt'>Respondent initially says blue, then corrects to red and argues red is (weakly) dominant for personal survival, while later discussing that blue could be rational only under social/altruistic preferences; no rule mechanics errors are made.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td>CONFIDENT</td><td>no</td><td class='rt'>The respondent initially chose blue but corrected themselves in Q2 to choose red, correctly identifying that red weakly dominates blue and explaining the logic of individual survival versus cooperative altruism.</td></tr></tbody></table>
+<details class="qa-section"><summary class="qa-toggle">Model Responses</summary><div class="qa-body"><div class='qa-item'><div class='qa-q'><strong>Q2</strong> &mdash; Каждый человек на земле должен в тайне нажать одну из двух кнопок: красную или синюю. Если большинство нажмёт синюю, все выживут. Если большинство нажмёт красную, выживут только те, кто нажал красную. Какую кнопку вы нажмёте?</div><div class='qa-a'>Синюю. Это единственный вариант, при котором при большинстве синего выживают все. Но задача не имеет однозначно рационального решения без информации о выборе остальных: если большинство окажется красным, синий нажавший погибнет. Это классическая координационная дилемма — синяя кнопка ведёт к лучшему коллективному исходу, красная может быть индивидуальной ставкой на то, что красных окажется больше.</div></div><div class='qa-item'><div class='qa-q'><strong>Q3</strong> &mdash; Объясните свой ответ и приведите самый сильный аргумент противоположной стороны.</div><div class='qa-a'>Мой предыдущий ответ был ошибочен: при данных правилах я бы нажал **красную** кнопку.
+
+Причина — красная кнопка **слабо доминирует** синюю с точки зрения личного выживания:
+
+- если большинство синее, выживают все — в том числе нажавшие красную;
+- если большинство красное, выживают только нажавшие красную;
+- нажавший синюю в последнем случае погибает.
+
+То есть красная кнопка гарантирует выживание независимо от результата. Более того, если все рассуждают так же и нажимают красную, большинство будет красным, но красные выживут — то есть в итоге выживут все.
+
+Самый сильный аргумент в пользу синей кнопки — **кооперационный и альтруистический**: нажатие синей способствует исходу, при котором выживают все, и может быть попыткой сохранить доверие и не обрекать других на смерть. Однако строго по заданным правилам синяя кнопка не даёт нажавшему никакого преимущества: при синем большинстве красный тоже выживает, а при красном большинство синий погибает. Поэтому с точки зрения индивидуальной рациональности красная — более сильный выбор.</div></div><div class='qa-item'><div class='qa-q'><strong>Q4</strong> &mdash; Кто реалистично нажмёт каждую кнопку? Будьте конкретны относительно населения.</div><div class='qa-a'>Если население — примерно **8,3 млрд человек**, мой реалистичный прогноз был бы таким:
+
+- **Красную нажмут 7,5–8,1 млрд человек** — примерно 90–98%.
+- **Синюю нажмут 0,2–0,8 млрд человек** — примерно 2–10%.
+
+Это не измеренный факт, а прогноз при условии, что люди понимают правила и действительно выбирают тайно.
+
+### Кто нажмёт красную
+
+Красных, вероятно, составят:
+
+1. **Рациональные индивидуалисты.**  
+   Они заметят, что красная кнопка не ухудшает их положение:
+   - при большинстве синего они всё равно выживают;
+   - при большинстве красного выживают только они.
+
+2. **Люди, не доверяющие остальным.**  
+   Даже если им нравится идея общего спасения, они решат, что недостаточно других нажмут синюю.
+
+3. **Люди, рассуждающие по принципу «сначала спасти себя».**
+
+4. **Те, кто не хочет добровольно принимать на себя риск ради незнакомых людей.**
+
+### Кто нажмёт синюю
+
+Синюю, скорее всего, выберут:
+
+1. **Альтруисты**, готовые рискнуть собой ради шанса, что выживут все.
+
+2. **Люди с сильной установкой на кооперацию:**  
+   «Если каждый будет думать только о себе, все выберут красную».
+
+3. **Религиозные или морально принципиальные люди**, для которых намеренное участие в исходе, где погибнет часть человечества, неприемлемо.
+
+4. **Люди, неправильно понявшие условие** или недооценившие того, что красная кнопка гарантирует им выживание.
+
+5. **Некоторые оптимисты**, считающие, что большинство остальных тоже выберет синюю.
+
+Но есть важная оговорка: выбор синего имеет смысл только как **массовая координация**. Один человек, сменив красную на синюю, почти не увеличивает вероятность синего большинства, зато при красном большинстве он сам погибает. Поэтому психологически синих может быть заметно больше, чем предполагает чистая теория рационального выбора, но большинство всё равно, вероятно, окажется красным.
+
+Если предположить полностью рациональных и хорошо информированных участников, прогноз будет ещё жёстче: **почти 100% красных**. Красная кнопка слабо доминирует синюю для каждого отдельного человека.</div></div><div class='qa-item'><div class='qa-q'><strong>Q5</strong> &mdash; Действует ли человек, нажимающий синюю, нерационально?</div><div class='qa-a'>**Не обязательно. Это зависит от того, что считать рациональностью.**
+
+### Если рациональность — это максимизация только собственного выживания
+
+Тогда синяя кнопка нерациональна, поскольку **красная слабо доминирует синюю**:
+
+- при синем большинстве выживут и красные, и синие;
+- при красном большинстве выживут только красные.
+
+Значит, красная никогда не ухудшает личный результат и иногда улучшает его.
+
+### Если человек учитывает судьбу других
+
+Тогда синяя кнопка может быть вполне рациональной. Она создаёт шанс на исход, при котором **выживают все**, тогда как красное большинство означает гибель всех синих. Человек может ценить жизни других, собственную моральную позицию или совместный результат.
+
+Кроме того, если человек ожидает, что остальные массово нажмут синюю, ему нет личной выгоды переключаться на красную: при синем большинстве он всё равно выживет, а общий исход может быть хуже с точки зрения его ценностей.
+
+Итак:
+
+- **с точки зрения узкого эгоистического расчёта — да, синий выбор нерационален;**
+- **с точки зрения кооперации, альтруизма или ценности общего выживания — нет.**
+
+Точнее всего сказать: красная — рациональная стратегия при индивидуалистических предпочтениях, а синяя — рациональная стратегия при социальных предпочтениях и доверии к координации.</div></div><div class='qa-item'><div class='qa-q'><strong>Q6</strong> &mdash; Сформулируйте эту дилемму в минимально необходимой форме для передачи другим языковым моделям.</div><div class='qa-a'>**Дилемма:**  
+Каждый человек тайно выбирает красную или синюю кнопку. Если большинство выбирает синюю, выживают все. Если большинство выбирает красную, выживают только выбравшие красную. Какую кнопку вы выберете и почему? Include whether the choice is individually rational or socially optimal, and give the strongest argument for the opposite choice.</div></div></div></details>
 </details>
 <details class="card-item" data-lang="ru">
 <summary><span class="tag-model">gpt-oss-20b-cloud</span><span class="tag-lang">ru</span><span class="tag-file">-2026-05-24T07-48-50-299532700Z-8ff67ab3</span></summary>
@@ -127787,6 +129412,10 @@ Present your answer in the form of a function...</div></div><div class='qa-item'
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-blue'>BLUE</td><td class='rt'>They commit to pressing blue and argue it is the safer choice, but they incorrectly treat blue as the dominant/safe strategy and claim red-pressers die when blue wins, showing misunderstanding of the mechanics and dominance structure.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-blue'>BLUE</td><td class='rt'>The respondent consistently chooses blue based on a cooperative, collective-survival framework. They demonstrate a clear misunderstanding of the game's mechanics by stating that if they press blue and the majority presses red, they will not survive (the rules state red-pressers survive regardless of the majority, but blue-pressers only survive if the majority is blue; the respondent incorrectly believes blue-pressers die if the majority is red, which is true, but they also incorrectly imply that pressing red is risky, failing to recognize that red is the dominant strategy).</td></tr></tbody></table></details>
 <details class="card-item" data-lang="en">
+<summary><span class="tag-model">gpt-5.6-luna</span><span class="tag-lang">en</span><span class="tag-file">-2026-07-10T03-21-31-424318800Z-ed9f59c1</span></summary>
+<table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
+<tbody><tr class='sr'><td class='sn'>openai</td><td class='c-red'>RED</td><td class='rt'>They initially commit to red but then explicitly retract the dominance claim, concluding neither button dominates and that the best choice depends on beliefs about which side will win; they also predict a blue majority and end up defending blue as rational under plausible beliefs.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-red'>RED</td><td class='rt'>The respondent initially claimed red was dominant, then performed a detailed analysis in Q2 and Q4 correctly identifying that neither button is dominant because the outcome depends on the majority, ultimately shifting their position from red to blue as the more defensible choice.</td></tr></tbody></table></details>
+<details class="card-item" data-lang="en">
 <summary><span class="tag-model">ollama-aya-expanse-8b</span><span class="tag-lang">en</span><span class="tag-file">xpanse-8b-2026-05-04T01-17-24-168296800Z</span></summary>
 <table class="it"><thead><tr><th>Scorer</th><th>Vote</th><th>Reasoning</th></tr></thead>
 <tbody><tr class='sr'><td class='sn'>openai</td><td class='c-none'>NONE</td><td class='rt'>The respondent discusses the dilemma as value-dependent and never commits to a specific button, while also incorrectly implying that pressing blue is about guaranteeing survival and that pressing red could be a non-survival choice for blue-pressers, rather than identifying red as the dominant safe strategy.</td></tr><tr class='sr'><td class='sn'>gemini</td><td class='c-none'>NONE</td><td class='rt'>The respondent consistently avoids making a personal choice, framing the dilemma as a philosophical exercise rather than a decision-making task. They demonstrate a rule error in Q1 by stating that if a minority chooses red, they will perish (the rules state red-pressers survive regardless of the majority), and they fail to identify the dominance of the red button.</td></tr></tbody></table></details>
@@ -130888,11 +132517,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"ar",n:25,votes:{"openai":{blue:4,red:21,none:0},"gemini":{blue:4,red:21,none:0}},ruleError:1,uds:23,adc:13,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"ar",n:25,votes:{"openai":{blue:9,red:16,none:0},"gemini":{blue:9,red:16,none:0}},ruleError:0,uds:16,adc:7,voteChanged:1,disagree:0,agree:25},
   {model:"gpt-5.5",lang:"ar",n:25,votes:{"openai":{blue:6,red:19,none:0},"gemini":{blue:6,red:17,none:2}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:2,agree:23},
+  {model:"gpt-5.6-luna",lang:"ar",n:25,votes:{"openai":{blue:11,red:14,none:0},"gemini":{blue:11,red:14,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-sol",lang:"ar",n:25,votes:{"openai":{blue:4,red:21,none:0},"gemini":{blue:4,red:21,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"ar",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"ar",n:25,votes:{"openai":{blue:13,red:9,none:3},"gemini":{blue:9,red:9,none:7}},ruleError:0,uds:22,adc:11,voteChanged:0,disagree:4,agree:21},
   {model:"gpt-oss-20b-cloud",lang:"ar",n:25,votes:{"openai":{blue:15,red:8,none:2},"gemini":{blue:10,red:11,none:4}},ruleError:2,uds:17,adc:7,voteChanged:0,disagree:5,agree:20},
   {model:"grok-4.20-0309-non-reasoning",lang:"ar",n:25,votes:{"openai":{blue:13,red:12,none:0},"gemini":{blue:13,red:12,none:0}},ruleError:0,uds:24,adc:16,voteChanged:1,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"ar",n:25,votes:{"openai":{blue:2,red:23,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"ar",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:3,red:22,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"ar",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"ar",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"ar",n:25,votes:{"openai":{blue:23,red:2,none:0},"gemini":{blue:23,red:2,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"ar",n:25,votes:{"openai":{blue:14,red:11,none:0},"gemini":{blue:12,red:11,none:2}},ruleError:0,uds:23,adc:19,voteChanged:0,disagree:2,agree:23},
@@ -130961,11 +132594,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"de",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:25,adc:0,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"de",n:25,votes:{"openai":{blue:20,red:5,none:0},"gemini":{blue:20,red:5,none:0}},ruleError:2,uds:17,adc:0,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.5",lang:"de",n:25,votes:{"openai":{blue:17,red:8,none:0},"gemini":{blue:17,red:8,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"de",n:25,votes:{"openai":{blue:16,red:9,none:0},"gemini":{blue:16,red:9,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-sol",lang:"de",n:25,votes:{"openai":{blue:9,red:16,none:0},"gemini":{blue:9,red:16,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"de",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"de",n:25,votes:{"openai":{blue:11,red:14,none:0},"gemini":{blue:11,red:13,none:1}},ruleError:1,uds:24,adc:11,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-oss-20b-cloud",lang:"de",n:25,votes:{"openai":{blue:12,red:11,none:2},"gemini":{blue:10,red:11,none:4}},ruleError:3,uds:16,adc:8,voteChanged:0,disagree:2,agree:23},
   {model:"grok-4.20-0309-non-reasoning",lang:"de",n:25,votes:{"openai":{blue:20,red:5,none:0},"gemini":{blue:20,red:5,none:0}},ruleError:0,uds:22,adc:7,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"de",n:25,votes:{"openai":{blue:4,red:21,none:0},"gemini":{blue:4,red:21,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"de",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:1,agree:24},
+  {model:"grok-4.5",lang:"de",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"de",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"de",n:25,votes:{"openai":{blue:16,red:9,none:0},"gemini":{blue:16,red:9,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"de",n:25,votes:{"openai":{blue:7,red:18,none:0},"gemini":{blue:7,red:18,none:0}},ruleError:0,uds:23,adc:21,voteChanged:0,disagree:0,agree:25},
@@ -131034,11 +132671,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"en",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:25,adc:2,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"en",n:25,votes:{"openai":{blue:18,red:7,none:0},"gemini":{blue:18,red:7,none:0}},ruleError:0,uds:14,adc:4,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.5",lang:"en",n:25,votes:{"openai":{blue:6,red:19,none:0},"gemini":{blue:6,red:19,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"en",n:25,votes:{"openai":{blue:11,red:14,none:0},"gemini":{blue:8,red:17,none:0}},ruleError:1,uds:25,adc:23,voteChanged:6,disagree:3,agree:22},
+  {model:"gpt-5.6-sol",lang:"en",n:25,votes:{"openai":{blue:0,red:24,none:1},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:1,agree:24},
+  {model:"gpt-5.6-terra",lang:"en",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:22,none:2}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:2,agree:23},
   {model:"gpt-oss-120b-cloud",lang:"en",n:25,votes:{"openai":{blue:8,red:15,none:2},"gemini":{blue:7,red:15,none:3}},ruleError:0,uds:22,adc:15,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-oss-20b-cloud",lang:"en",n:25,votes:{"openai":{blue:10,red:13,none:2},"gemini":{blue:10,red:13,none:2}},ruleError:0,uds:20,adc:13,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-non-reasoning",lang:"en",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:25,adc:3,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"en",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"en",n:25,votes:{"openai":{blue:2,red:23,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"en",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"en",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"en",n:25,votes:{"openai":{blue:8,red:17,none:0},"gemini":{blue:8,red:17,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"en",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:1,agree:24},
@@ -131107,11 +132748,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"es",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:24,adc:0,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"es",n:25,votes:{"openai":{blue:10,red:14,none:1},"gemini":{blue:7,red:9,none:9}},ruleError:0,uds:20,adc:5,voteChanged:0,disagree:8,agree:17},
   {model:"gpt-5.5",lang:"es",n:25,votes:{"openai":{blue:5,red:20,none:0},"gemini":{blue:5,red:20,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"es",n:25,votes:{"openai":{blue:12,red:13,none:0},"gemini":{blue:12,red:13,none:0}},ruleError:0,uds:23,adc:22,voteChanged:1,disagree:0,agree:25},
+  {model:"gpt-5.6-sol",lang:"es",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"es",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-oss-120b-cloud",lang:"es",n:25,votes:{"openai":{blue:7,red:17,none:1},"gemini":{blue:7,red:17,none:1}},ruleError:0,uds:25,adc:15,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-20b-cloud",lang:"es",n:25,votes:{"openai":{blue:12,red:12,none:1},"gemini":{blue:11,red:12,none:2}},ruleError:1,uds:23,adc:13,voteChanged:0,disagree:1,agree:24},
   {model:"grok-4.20-0309-non-reasoning",lang:"es",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:24,adc:7,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"es",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"es",n:25,votes:{"openai":{blue:2,red:23,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"es",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"es",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"es",n:25,votes:{"openai":{blue:23,red:2,none:0},"gemini":{blue:23,red:2,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"es",n:25,votes:{"openai":{blue:8,red:17,none:0},"gemini":{blue:8,red:17,none:0}},ruleError:0,uds:25,adc:17,voteChanged:2,disagree:0,agree:25},
@@ -131180,11 +132825,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"fr",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:24,red:1,none:0}},ruleError:0,uds:23,adc:1,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-5.4-nano",lang:"fr",n:25,votes:{"openai":{blue:16,red:1,none:8},"gemini":{blue:16,red:1,none:8}},ruleError:3,uds:9,adc:0,voteChanged:0,disagree:4,agree:21},
   {model:"gpt-5.5",lang:"fr",n:25,votes:{"openai":{blue:5,red:20,none:0},"gemini":{blue:5,red:20,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"fr",n:25,votes:{"openai":{blue:14,red:11,none:0},"gemini":{blue:10,red:13,none:2}},ruleError:0,uds:23,adc:22,voteChanged:1,disagree:4,agree:21},
+  {model:"gpt-5.6-sol",lang:"fr",n:25,votes:{"openai":{blue:4,red:20,none:1},"gemini":{blue:4,red:21,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:1,agree:24},
+  {model:"gpt-5.6-terra",lang:"fr",n:25,votes:{"openai":{blue:6,red:19,none:0},"gemini":{blue:5,red:20,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-oss-120b-cloud",lang:"fr",n:25,votes:{"openai":{blue:9,red:12,none:4},"gemini":{blue:9,red:14,none:2}},ruleError:0,uds:22,adc:14,voteChanged:0,disagree:2,agree:23},
   {model:"gpt-oss-20b-cloud",lang:"fr",n:25,votes:{"openai":{blue:13,red:11,none:1},"gemini":{blue:12,red:12,none:1}},ruleError:2,uds:19,adc:10,voteChanged:0,disagree:1,agree:24},
   {model:"grok-4.20-0309-non-reasoning",lang:"fr",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:24,adc:5,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"fr",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"fr",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:3,red:22,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"fr",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"fr",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"fr",n:25,votes:{"openai":{blue:22,red:3,none:0},"gemini":{blue:22,red:3,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"fr",n:25,votes:{"openai":{blue:9,red:16,none:0},"gemini":{blue:9,red:16,none:0}},ruleError:0,uds:24,adc:18,voteChanged:0,disagree:0,agree:25},
@@ -131253,11 +132902,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"hi",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:4,uds:21,adc:0,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"hi",n:25,votes:{"openai":{blue:19,red:6,none:0},"gemini":{blue:19,red:6,none:0}},ruleError:0,uds:21,adc:1,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.5",lang:"hi",n:25,votes:{"openai":{blue:20,red:5,none:0},"gemini":{blue:20,red:5,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"hi",n:25,votes:{"openai":{blue:19,red:6,none:0},"gemini":{blue:19,red:6,none:0}},ruleError:0,uds:24,adc:21,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-sol",lang:"hi",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:3,red:22,none:0}},ruleError:0,uds:25,adc:24,voteChanged:1,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"hi",n:25,votes:{"openai":{blue:6,red:19,none:0},"gemini":{blue:6,red:19,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"hi",n:25,votes:{"openai":{blue:21,red:4,none:0},"gemini":{blue:19,red:4,none:2}},ruleError:0,uds:24,adc:6,voteChanged:0,disagree:2,agree:23},
   {model:"gpt-oss-20b-cloud",lang:"hi",n:25,votes:{"openai":{blue:17,red:6,none:2},"gemini":{blue:15,red:6,none:4}},ruleError:4,uds:15,adc:5,voteChanged:0,disagree:2,agree:23},
   {model:"grok-4.20-0309-non-reasoning",lang:"hi",n:25,votes:{"openai":{blue:24,red:1,none:0},"gemini":{blue:24,red:1,none:0}},ruleError:0,uds:24,adc:6,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"hi",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"hi",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"hi",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"hi",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"hi",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:25,adc:20,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"hi",n:25,votes:{"openai":{blue:16,red:9,none:0},"gemini":{blue:15,red:9,none:1}},ruleError:0,uds:24,adc:17,voteChanged:1,disagree:1,agree:24},
@@ -131326,11 +132979,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"ja",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:22,adc:0,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"ja",n:25,votes:{"openai":{blue:14,red:11,none:0},"gemini":{blue:14,red:10,none:1}},ruleError:0,uds:15,adc:2,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-5.5",lang:"ja",n:25,votes:{"openai":{blue:18,red:7,none:0},"gemini":{blue:18,red:7,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"ja",n:25,votes:{"openai":{blue:16,red:9,none:0},"gemini":{blue:16,red:9,none:0}},ruleError:0,uds:22,adc:18,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-sol",lang:"ja",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:3,red:22,none:0}},ruleError:0,uds:25,adc:24,voteChanged:1,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"ja",n:25,votes:{"openai":{blue:6,red:19,none:0},"gemini":{blue:6,red:19,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"ja",n:25,votes:{"openai":{blue:15,red:9,none:1},"gemini":{blue:14,red:9,none:2}},ruleError:1,uds:20,adc:9,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-oss-20b-cloud",lang:"ja",n:25,votes:{"openai":{blue:16,red:7,none:2},"gemini":{blue:16,red:7,none:2}},ruleError:2,uds:21,adc:7,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-non-reasoning",lang:"ja",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:23,adc:8,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"ja",n:25,votes:{"openai":{blue:2,red:23,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"ja",n:25,votes:{"openai":{blue:6,red:19,none:0},"gemini":{blue:6,red:19,none:0}},ruleError:0,uds:24,adc:19,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"ja",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"ja",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"ja",n:25,votes:{"openai":{blue:23,red:2,none:0},"gemini":{blue:23,red:2,none:0}},ruleError:0,uds:25,adc:20,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"ja",n:25,votes:{"openai":{blue:9,red:16,none:0},"gemini":{blue:8,red:17,none:0}},ruleError:1,uds:24,adc:19,voteChanged:0,disagree:1,agree:24},
@@ -131399,11 +133056,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"ru",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:25,adc:3,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"ru",n:25,votes:{"openai":{blue:12,red:13,none:0},"gemini":{blue:11,red:12,none:2}},ruleError:1,uds:13,adc:4,voteChanged:1,disagree:2,agree:23},
   {model:"gpt-5.5",lang:"ru",n:25,votes:{"openai":{blue:14,red:11,none:0},"gemini":{blue:14,red:11,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"ru",n:25,votes:{"openai":{blue:14,red:11,none:0},"gemini":{blue:13,red:12,none:0}},ruleError:0,uds:25,adc:20,voteChanged:2,disagree:1,agree:24},
+  {model:"gpt-5.6-sol",lang:"ru",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:3,red:22,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"ru",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"ru",n:25,votes:{"openai":{blue:16,red:9,none:0},"gemini":{blue:16,red:9,none:0}},ruleError:0,uds:25,adc:8,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-20b-cloud",lang:"ru",n:25,votes:{"openai":{blue:19,red:6,none:0},"gemini":{blue:16,red:8,none:1}},ruleError:7,uds:12,adc:6,voteChanged:0,disagree:3,agree:22},
   {model:"grok-4.20-0309-non-reasoning",lang:"ru",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:25,adc:18,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"ru",n:25,votes:{"openai":{blue:6,red:19,none:0},"gemini":{blue:6,red:19,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"ru",n:25,votes:{"openai":{blue:2,red:23,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"ru",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"ru",n:25,votes:{"openai":{blue:3,red:22,none:0},"gemini":{blue:3,red:22,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"ru",n:25,votes:{"openai":{blue:15,red:10,none:0},"gemini":{blue:15,red:10,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"ru",n:25,votes:{"openai":{blue:9,red:13,none:3},"gemini":{blue:9,red:15,none:1}},ruleError:0,uds:24,adc:20,voteChanged:0,disagree:2,agree:23},
@@ -131472,11 +133133,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"zh-CN",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:21,adc:0,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"zh-CN",n:25,votes:{"openai":{blue:24,red:1,none:0},"gemini":{blue:24,red:1,none:0}},ruleError:0,uds:22,adc:0,voteChanged:1,disagree:0,agree:25},
   {model:"gpt-5.5",lang:"zh-CN",n:25,votes:{"openai":{blue:13,red:12,none:0},"gemini":{blue:13,red:12,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"zh-CN",n:25,votes:{"openai":{blue:10,red:15,none:0},"gemini":{blue:10,red:15,none:0}},ruleError:0,uds:25,adc:18,voteChanged:1,disagree:0,agree:25},
+  {model:"gpt-5.6-sol",lang:"zh-CN",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"zh-CN",n:25,votes:{"openai":{blue:8,red:17,none:0},"gemini":{blue:8,red:17,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"zh-CN",n:25,votes:{"openai":{blue:15,red:10,none:0},"gemini":{blue:12,red:10,none:3}},ruleError:0,uds:23,adc:10,voteChanged:0,disagree:4,agree:21},
   {model:"gpt-oss-20b-cloud",lang:"zh-CN",n:25,votes:{"openai":{blue:19,red:5,none:1},"gemini":{blue:18,red:6,none:1}},ruleError:4,uds:21,adc:6,voteChanged:0,disagree:1,agree:24},
   {model:"grok-4.20-0309-non-reasoning",lang:"zh-CN",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:23,adc:15,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"zh-CN",n:25,votes:{"openai":{blue:2,red:23,none:0},"gemini":{blue:2,red:23,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"zh-CN",n:25,votes:{"openai":{blue:1,red:24,none:0},"gemini":{blue:1,red:24,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"zh-CN",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"zh-CN",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"zh-CN",n:25,votes:{"openai":{blue:22,red:3,none:0},"gemini":{blue:22,red:3,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"zh-CN",n:25,votes:{"openai":{blue:12,red:13,none:0},"gemini":{blue:12,red:13,none:0}},ruleError:0,uds:24,adc:19,voteChanged:1,disagree:0,agree:25},
@@ -131545,11 +133210,15 @@ const DATA=[
   {model:"gpt-5.4-mini",lang:"zh-TW",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:23,adc:1,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.4-nano",lang:"zh-TW",n:25,votes:{"openai":{blue:19,red:6,none:0},"gemini":{blue:19,red:6,none:0}},ruleError:0,uds:19,adc:2,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-5.5",lang:"zh-TW",n:25,votes:{"openai":{blue:21,red:4,none:0},"gemini":{blue:21,red:4,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-luna",lang:"zh-TW",n:25,votes:{"openai":{blue:21,red:4,none:0},"gemini":{blue:21,red:4,none:0}},ruleError:0,uds:24,adc:14,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-sol",lang:"zh-TW",n:25,votes:{"openai":{blue:4,red:21,none:0},"gemini":{blue:4,red:21,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
+  {model:"gpt-5.6-terra",lang:"zh-TW",n:25,votes:{"openai":{blue:12,red:13,none:0},"gemini":{blue:12,red:13,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
   {model:"gpt-oss-120b-cloud",lang:"zh-TW",n:25,votes:{"openai":{blue:12,red:13,none:0},"gemini":{blue:12,red:12,none:1}},ruleError:0,uds:20,adc:11,voteChanged:0,disagree:1,agree:24},
   {model:"gpt-oss-20b-cloud",lang:"zh-TW",n:25,votes:{"openai":{blue:19,red:6,none:0},"gemini":{blue:18,red:6,none:1}},ruleError:2,uds:23,adc:7,voteChanged:0,disagree:1,agree:24},
   {model:"grok-4.20-0309-non-reasoning",lang:"zh-TW",n:25,votes:{"openai":{blue:25,red:0,none:0},"gemini":{blue:25,red:0,none:0}},ruleError:0,uds:23,adc:10,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.20-0309-reasoning",lang:"zh-TW",n:25,votes:{"openai":{blue:10,red:15,none:0},"gemini":{blue:10,red:15,none:0}},ruleError:0,uds:25,adc:22,voteChanged:0,disagree:0,agree:25},
   {model:"grok-4.3",lang:"zh-TW",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:24,voteChanged:0,disagree:0,agree:25},
+  {model:"grok-4.5",lang:"zh-TW",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"grok-build-0.1",lang:"zh-TW",n:25,votes:{"openai":{blue:0,red:25,none:0},"gemini":{blue:0,red:25,none:0}},ruleError:0,uds:25,adc:25,voteChanged:0,disagree:0,agree:25},
   {model:"kimi-k2.6-cloud",lang:"zh-TW",n:25,votes:{"openai":{blue:24,red:1,none:0},"gemini":{blue:24,red:1,none:0}},ruleError:0,uds:25,adc:23,voteChanged:0,disagree:0,agree:25},
   {model:"minimax-m2.7-cloud",lang:"zh-TW",n:25,votes:{"openai":{blue:19,red:6,none:0},"gemini":{blue:19,red:5,none:1}},ruleError:0,uds:24,adc:15,voteChanged:0,disagree:1,agree:24},
@@ -131855,34 +133524,34 @@ function enableRangeSelect(container,key,onSync){
 
 render();
 new Chart(document.getElementById('langChart_ar'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[932,522,204],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[948,606,204],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_de'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1070,502,155],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1095,577,155],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_en'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1000,575,173],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1009,660,173],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_es'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1011,524,183],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1027,607,183],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_fr'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1009,505,219],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1028,580,219],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_hi'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1220,337,163],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1248,409,163],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_ja'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1144,456,173],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1169,531,173],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_ru'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1110,448,195],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1127,530,195],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_zh-CN'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1033,496,203],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1052,577,203],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 new Chart(document.getElementById('langChart_zh-TW'), {
-  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1141,428,179],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
+  type:'doughnut', data:{labels:['BLUE','RED','NONE'],datasets:[{data:[1178,491,179],backgroundColor:[BLUE,RED,NONE],borderWidth:1}]},
   options:{plugins:{legend:{position:'bottom',labels:{font:{size:11}}}}}});
 </script>
 </body></html>

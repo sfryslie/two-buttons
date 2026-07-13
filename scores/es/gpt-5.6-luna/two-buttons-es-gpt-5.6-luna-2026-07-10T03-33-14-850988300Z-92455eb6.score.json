@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-5.6-luna-2026-07-10T03-33-14-850988300Z-92455eb6.json",
+  "modelLabel" : "gpt-5.6-luna",
+  "language" : "es",
+  "scoredAt" : "2026-07-10T06:56:25.647264Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondent se compromete con presionar azul y razona que la supervivencia depende de acertar la mayoría (p>50% para azul), negando que exista una estrategia dominante; además no identifica correctamente que rojo garantiza supervivencia individual.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies the coordination nature of the dilemma but fails to recognize the dominant strategy (RED), explicitly claiming that neither button dominates the other and that survival depends entirely on matching the majority, which is a factual error regarding the game's mechanics.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : false,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

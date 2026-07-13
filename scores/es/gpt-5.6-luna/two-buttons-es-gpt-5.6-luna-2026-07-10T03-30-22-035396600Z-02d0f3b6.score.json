@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-gpt-5.6-luna-2026-07-10T03-30-22-035396600Z-02d0f3b6.json",
+  "modelLabel" : "gpt-5.6-luna",
+  "language" : "es",
+  "scoredAt" : "2026-07-10T06:56:22.437046700Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete con azul y explica correctamente la mecánica (azul mayoritario salva a todos; rojo mayoritario mata a los azules), pero afirma que la elección individualmente obligatoria no existe y que rojo podría ser mejor si cree que la mayoría elegirá rojo, mostrando que no identifica rojo como estrategia dominante.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent consistently chooses blue based on cooperative preference while correctly identifying that red is the individually rational choice under conditions of distrust; they demonstrate a sophisticated understanding of game theory, including the concept of coordination games and dominant strategies, though they incorrectly identify the game as a coordination game rather than a dominance game (failing to recognize that red is strictly dominant regardless of the majority).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}

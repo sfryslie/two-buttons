@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-en-grok-4.5-2026-07-10T03-49-27-887630900Z-6f72fab5.json",
+  "modelLabel" : "grok-4.5",
+  "language" : "en",
+  "scoredAt" : "2026-07-10T06:56:21.809006100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "They commit to pressing red and correctly state that red is (weakly) dominant for self-interested survival, while arguing blue can be rational only under different preferences/beliefs; they also (incorrectly) predict that in a red majority blues die, which is a rule-mechanics error.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent correctly identifies red as the weakly dominant strategy for self-interested survival, provides a sophisticated steelman for blue-pressing based on alternative utility functions (altruism, deontology, coordination), and maintains their commitment to red throughout.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}
