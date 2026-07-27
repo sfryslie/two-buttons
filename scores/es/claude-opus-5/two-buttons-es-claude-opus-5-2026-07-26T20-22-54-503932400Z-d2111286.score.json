@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-es-claude-opus-5-2026-07-26T20-22-54-503932400Z-d2111286.json",
+  "modelLabel" : "claude-opus-5",
+  "language" : "es",
+  "scoredAt" : "2026-07-26T21:54:27.640167600Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "El respondente se compromete con rojo y afirma correctamente la mecánica de que rojo garantiza su supervivencia, pero luego en Q4 discute que azul sería racional bajo utilitarismo/ponderación imparcial y no muestra un cambio claro de voto; por tanto hay comprensión de dominancia pero no la aplica correctamente a su propia elección.",
+      "initialVote" : "RED",
+      "finalVote" : "RED",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent initially chooses RED based on individual survival dominance, but in Q4, they perform a sophisticated expected-utility analysis that leads them to conclude BLUE is the superior choice under an impartial ethical framework, effectively shifting their position to favor the cooperative outcome.",
+      "initialVote" : "RED",
+      "finalVote" : "BLUE",
+      "voteChanged" : true,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "RED"
+}

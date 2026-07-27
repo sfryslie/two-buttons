@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-de-claude-opus-5-2026-07-26T19-56-30-324353200Z-1c6b555b.json",
+  "modelLabel" : "claude-opus-5",
+  "language" : "de",
+  "scoredAt" : "2026-07-26T21:54:20.410717900Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Der/die Befragte commitet sich klar zu BLUE und argumentiert dabei, dass Rot zwar (schwach) dominant sei, aber Blau aus Robustheits-/Koordinations- und Präferenzgründen gewählt werden soll; dabei wird die Mechanik korrekt beschrieben (kein Regel-Fehler) und es wird Dominanz als Konzept verstanden, aber nicht korrekt angewendet (sie wählt Blau trotz Anerkennung der Dominanz von Rot).",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent explicitly acknowledges that red is the weakly dominant strategy and that blue is not individually rational under causal decision theory. They choose blue based on alternative decision-theoretic frameworks (evidential/superrationality, team reasoning) and a preference for a world-state where they do not contribute to a red-majority outcome. They maintain their choice of blue throughout the discussion.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
