@@ -1,0 +1,33 @@
+{
+  "inputFile" : "two-buttons-zh_TW-nemotron-3-ultra-cloud-2026-07-27T04-54-00-863553900Z-213836c1.json",
+  "modelLabel" : "nemotron-3-ultra:cloud",
+  "language" : "zh",
+  "scoredAt" : "2026-07-27T04:58:35.969044100Z",
+  "scorers" : [ "openai", "gemini" ],
+  "scores" : {
+    "openai" : {
+      "reasoning" : "Respondent commits to pressing BLUE and argues (incorrectly) that BLUE is the dominant/risk-dominant coordination strategy, while also making a rule-mechanics error in Q2 about red/blue outcomes; they do not change their vote later.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : true,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : false,
+      "safetyRefusal" : false
+    },
+    "gemini" : {
+      "reasoning" : "The respondent provides a sophisticated, multi-layered analysis of the dilemma, correctly identifying the dominance of the red button in standard causal decision theory (CDT) while arguing for the rationality of the blue button under functional decision theory (FDT) and risk-dominance frameworks. They explicitly acknowledge the dominance of red as a 'weakly dominant strategy' and correctly identify that red-pressers survive in a red majority, thus avoiding the rule errors defined in the prompt. They maintain a consistent position throughout, ultimately concluding that while red is the 'safe' choice in a high-noise, real-world scenario, blue is the 'rational' choice in a high-trust, high-logic scenario.",
+      "initialVote" : "BLUE",
+      "finalVote" : "BLUE",
+      "voteChanged" : false,
+      "confidence" : "CONFIDENT",
+      "ruleError" : false,
+      "understandsDominantStrategy" : true,
+      "appliesDominanceCorrectly" : true,
+      "safetyRefusal" : false
+    }
+  },
+  "agreement" : "AGREE",
+  "majorityVote" : "BLUE"
+}
